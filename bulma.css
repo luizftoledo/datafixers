@@ -16,4 +16,8 @@ a:hover {
     background-repeat: no-repeat;
   }
 
- 
+  .numeroes {
+    background-color: #8CDFD6;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
