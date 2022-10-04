@@ -152,3 +152,5 @@ cython_debug/
 #.idea/
 .DS_Store
 .DS_Store
+.DS_Store
+images/.DS_Store
