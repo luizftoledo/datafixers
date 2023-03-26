@@ -35,15 +35,34 @@
 
        <br>
 
-       <style>
+<style>
           
-      
+.hidden {
+  display: none;
+}
+
+
+
+#seeMoreButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#seeMoreButton:hover {
+  background-color: #0069d9;
+}
 
 
 
 
-         
-        </style>
+
+
+
+</style>
        
 
 
@@ -677,7 +696,15 @@
     <hr>
     <br>
 
-      <table class="table">
+
+
+ 
+   
+
+
+
+
+      <table class="table" id="myTable" class="table">
         <tbody>
           <tr>
             <th>Outlet</th>
@@ -1378,11 +1405,16 @@
 <td>03/14/23</td>
 <td><a href="https://www.97news.com.br/noticias/imprimir/31463-2023/03/14/rodovias-federais-da-bahia-sao-as-que-mais-arrecadam-em-multas-desde-2018-valor-chega-a-r-400-milhoes
 
-  " target="_blank">ahia é top 3 em valores atribuídos a multas ambientais no Nordeste em 2022; saiba valores</a></td>
+  " target="_blank">Bahia é top 3 em valores atribuídos a multas ambientais no Nordeste em 2022; saiba valores</a></td>
 </tr>
 
 
+<td>Sudoeste Hoje</td>
+<td>03/14/23</td>
+<td><a href="https://www.97news.com.br/noticias/imprimir/31463-2023/03/14/rodovias-federais-da-bahia-sao-as-que-mais-arrecadam-em-multas-desde-2018-valor-chega-a-r-400-milhoes
 
+  " target="_blank">Bahia lidera ranking das multas no Brasi</a></td>
+</tr>
 
 
 
@@ -1425,10 +1457,65 @@
 </tr>
 
 
+<td>BNC Amazonas</td>
+<td>03/24/23</td>
+<td><a href="https://18horas.com.br/amazonas/das-100-empresas-com-maiores-multas-ambientais-44-atuam-na-amazonia-am-e-o-segundo-em-valor-de-multas/
+
+  " target="_blank">Crime ambiental: de 100 empresas mais multadas, 44 estão na Amazônia</a></td>
+</tr>
+
+<td>BNC Amazonas</td>
+<td>03/25/23</td>
+<td><a href="https://radarlitoral.com.br/noticias/21575/litoral-norte-aplica-mais-de-r$-22-milhoes-de-multas-ambientais-no-ano-passado
+
+  " target="_blank">Litoral Norte aplica mais de R$ 2,2 milhões de multas ambientais no ano passado</a></td>
+</tr>
+
+
+
+
 
           
         </tbody>
       </table>
+
+      <button id="seeMoreButton">See 100+ stories</button>
+
+      <script>
+        const table = document.getElementById("myTable");
+        const rows = table.rows;
+        const numRowsToShow = 10;
+        const button = document.getElementById("seeMoreButton");
+        let isShowingMore = false;
+      
+        for (let i = numRowsToShow; i < rows.length; i++) {
+          rows[i].classList.add("hidden");
+        }
+      
+        button.addEventListener("click", function () {
+          if (!isShowingMore) {
+            for (let i = numRowsToShow; i < rows.length; i++) {
+              rows[i].classList.remove("hidden");
+            }
+            button.innerHTML = "Show less";
+            isShowingMore = true;
+            table.scrollIntoView(); // rola para a tabela
+          } else {
+            for (let i = numRowsToShow; i < rows.length; i++) {
+              rows[i].classList.add("hidden");
+            }
+            button.innerHTML = "See more";
+            isShowingMore = false;
+            table.scrollIntoView(); // rola para a tabela
+          }
+        });
+      </script>
+      
+    
+
+
+
+
       <br>
   
       
@@ -1568,7 +1655,7 @@
 
 
 
-NaN
+
 
 
 
