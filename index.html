@@ -124,20 +124,32 @@
                  <hr>
          <br>
          </div>
+
+         <style>
+          @media (max-width: 768px) {
+            .flex-container {
+              flex-direction: column;
+            }
+            .flex-item {
+              flex: none;
+              width: 100%;
+            }
+          }
+        </style>
     
-         <div style="display: flex; align-items: stretch; margin: 0; padding: 0;">
-          <div style="flex: none; margin: 0; padding: 0; width: 250px; height: 250px; border-radius: 50%; overflow: hidden;">
-            <img src="images/boto.jpg" style="height: 100%; width: 100%; object-fit: cover; margin: 0; padding: 0;">
-          </div>
-          <div style="flex: 1; margin: 0; padding: 0;">
-            <iframe
-              src="https://www.chatbase.co/chatbot-iframe/fS6d5rdjyyg2q6PBOVvji"
-              width="100%"
-              style="height: 350px; margin: 0; padding: 0;"
-              frameborder="0">
-            </iframe>
-          </div>
-        </div>
+    <div class="flex-container" style="display: flex; align-items: stretch; margin: 0; padding: 0;">
+      <div class="flex-item" style="flex: none; margin: 0; padding: 0; width: 250px; height: 250px; border-radius: 50%; overflow: hidden;">
+        <img src="images/boto.jpg" style="height: 100%; width: 100%; object-fit: cover; margin: 0; padding: 0;">
+      </div>
+      <div class="flex-item" style="flex: 1; margin: 0; padding: 0;">
+        <iframe
+          src="https://www.chatbase.co/chatbot-iframe/fS6d5rdjyyg2q6PBOVvji"
+          width="100%"
+          style="height: 350px; margin: 0; padding: 0;"
+          frameborder="0">
+        </iframe>
+      </div>
+    </div>
         
         
         
