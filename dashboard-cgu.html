@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html style="height: 100%; margin: 0; padding: 0; overflow: hidden;">
+<html>
 <head>
     <title>Laibot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Remove a rolagem do body */
+            overflow: hidden; /* Previne rolagem */
         }
         iframe {
             width: 100%;
-            height: 100%;
+            height: 100%; /* Altura inicial */
             border: none;
-            display: block; /* Evita espaços indesejados abaixo do iframe */
+            display: block; /* Remove espaços abaixo do iframe */
         }
     </style>
 </head>
 <body>
-    <iframe src="https://lookerstudio.google.com/embed/reporting/f0d61dfd-c568-4e5d-a6a8-b7c95de5605f/page/2cdgD" frameborder="0" allowfullscreen></iframe>
+    <iframe id="laibotIframe" src="https://lookerstudio.google.com/embed/reporting/f0d61dfd-c568-4e5d-a6a8-b7c95de5605f/page/2cdgD" frameborder="0" allowfullscreen></iframe>
+
+    <script>
+        function adjustIframeHeight() {
+            var windowHeight = window.innerHeight;
+            var iframe = document.getElementById('laibotIframe');
+            iframe.style.height = windowHeight + 'px';
+        }
+
+        // Ajusta a altura quando a página é carregada
+        window.onload = adjustIframeHeight;
+
+        // Ajusta a altura quando a janela é redimensionada
+        window.onresize = adjustIframeHeight;
+    </script>
 </body>
 </html>
