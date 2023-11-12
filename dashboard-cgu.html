@@ -11,22 +11,35 @@
         }
         html, body {
             height: 100%;
-            overflow: hidden; /* Evita rolagem desnecessária */
+            overflow: hidden;
         }
         iframe {
             width: 100%;
-            height: 100vh; /* Altura baseada na altura da janela do navegador */
+            height: 100vh; /* Valor inicial */
             border: none;
-        }
-        /* Estilos para dispositivos móveis e telas menores */
-        @media screen and (max-width: 600px) {
-            iframe {
-                height: 100vh; /* Mantém a altura em dispositivos móveis */
-            }
         }
     </style>
 </head>
 <body>
-    <iframe src="https://lookerstudio.google.com/embed/reporting/f0d61dfd-c568-4e5d-a6a8-b7c95de5605f/page/2cdgD" allowfullscreen></iframe>
+    <iframe id="laibotIframe" src="https://lookerstudio.google.com/embed/reporting/f0d61dfd-c568-4e5d-a6a8-b7c95de5605f/page/2cdgD" allowfullscreen></iframe>
+
+    <script>
+        function adjustIframeHeight() {
+            var windowHeight = window.innerHeight;
+            var iframe = document.getElementById('laibotIframe');
+
+            // Aqui você pode subtrair a altura de outros elementos da página, se necessário
+            var otherElementsHeight = 0; // Ajuste este valor conforme necessário
+
+            var newIframeHeight = windowHeight - otherElementsHeight;
+            iframe.style.height = newIframeHeight + 'px';
+        }
+
+        // Ajusta a altura quando a página é carregada
+        window.onload = adjustIframeHeight;
+
+        // Ajusta a altura quando a janela é redimensionada
+        window.onresize = adjustIframeHeight;
+    </script>
 </body>
 </html>
