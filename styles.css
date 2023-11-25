@@ -1,0 +1,153 @@
+.hidden {
+    display: none;
+  }
+  
+  #seeMoreButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #seeMoreButton:hover {
+    background-color: #0069d9;
+  }
+
+  #title_message {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #title_message {
+        clear: both;
+        display: block;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 100%;
+    }
+}
+
+body {
+    margin: 8px;
+}
+
+.buttons-wrapper {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.header-wrapper {
+    margin-bottom: 36px;
+}
+
+.logo {
+    max-width: 300px;
+    margin: 0 auto 24px;
+    justify-content: center;
+    display: flex;
+}
+
+h2.tagline {
+    font-size: 42px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.highlighted {
+    background-position: 0% 100%;
+    background-size: 100% 34%;
+    transition: background-size 0.4s ease, color 0.4s ease;
+    background-image: linear-gradient(to right, #8CDFD6 100%, transparent 100%);
+    background-repeat: no-repeat;
+}
+
+a, a:visited {
+    color: #8CDFD6;
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+h4.section-title {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.carousel {
+    position: relative;
+    margin: auto;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-images img {
+    width: 80%;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #8CDFD6;
+    display: flex;
+    margin: auto;
+  }
+
+  .carousel-images > div {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin-right: 8px;
+  }
+  
+  img.about {
+      background-color: #8CDFD6;
+  }
+
+  h4.item-title {
+      text-align: center;
+      font-size: 22px;
+      margin-top: 8px;
+      font-weight: 500;
+  }
+
+  a.img-link:hover {
+      cursor: pointer;
+      opacity: 0.7;
+  }
+
+  a.item-link {
+      color: black;
+      text-decoration: none;
+  }
+
+  a.item-link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+    h2.tagline {
+        width: unset;
+        font-size: 38px;
+        margin: 0 16px;
+    }
+
+    .carousel-images img {
+        width: 100%;
+      }
+      .carousel-images {
+      flex-wrap: wrap;
+      }
+
+      .carousel-images > div {
+          width: calc(50% - 8px);
+      }
+
+      .carousel-images > div:nth-child(0), .carousel-images > div:nth-child(1){
+        margin-bottom: 16px;
+      }
+}
