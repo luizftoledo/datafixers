@@ -39,7 +39,7 @@ body {
 }
 
 .header-wrapper {
-    margin-bottom: 36px;
+    margin-bottom: 60px;
 }
 
 .logo {
@@ -67,6 +67,11 @@ a, a:visited {
     color: #8CDFD6;
     font-weight: bold;
     text-decoration: underline; 
+}
+
+a:hover {
+    color: white;
+    background-color: #8CDFD6;
 }
 
 h4.section-title {
@@ -116,17 +121,40 @@ h4.section-title {
   a.img-link:hover {
       cursor: pointer;
       opacity: 0.7;
+      background-color: unset;
   }
 
   a.item-link {
       color: black;
       text-decoration: none;
+      background-color: unset;
   }
 
   a.item-link:visited {
     color: black;
     text-decoration: none;
 }
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-evenly;
+}
+
+.dashboard-item {
+    width: 40%;
+}
+
+.dashboard-img {
+    width: 100%;
+}
+
+.dashboard-item > p {
+    margin: 8px 0;
+    line-height: 1.2;
+}
+
 
 
 @media only screen and (max-width: 767px) {
@@ -150,4 +178,8 @@ h4.section-title {
       .carousel-images > div:nth-child(0), .carousel-images > div:nth-child(1){
         margin-bottom: 16px;
       }
+
+      .dashboard-item {
+        width: 100%;
+    }
 }
