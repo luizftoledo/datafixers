@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0; height: 100%; overflow: hidden;">
+<head>
+    <title>Multas do Ibama desde 1996</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="dynamic-iframe" frameborder="0" allowfullscreen></iframe>
+
+    <script>
+        function updateIframeSrc() {
+            var iframe = document.getElementById('dynamic-iframe');
+            if (window.innerWidth <= 600) {
+                // URL para dispositivos móveis
+                iframe.src = "https://lookerstudio.google.com/embed/reporting/d43bef17-5079-4ef8-bc90-2173b2735534/page/aivkD";
+            } else {
+                // URL para dispositivos desktop
+                iframe.src = "https://lookerstudio.google.com/embed/reporting/3994e237-0c01-4848-8ab7-e2d1b0de886b/page/aivkD";
+            }
+        }
+
+        // Atualiza o src ao carregar a página
+        updateIframeSrc();
+
+        // Atualiza o src ao redimensionar a janela
+        window.onresize = updateIframeSrc;
+    </script>
+</body>
+</html>
+
+
