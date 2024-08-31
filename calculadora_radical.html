@@ -16,17 +16,21 @@
             background-position: center;
             background-attachment: fixed;
             color: #000000;
-            position: relative;
-            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
+            width: 100%;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
             padding: 20px;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         h1 {
             color: #ff0000;
@@ -40,11 +44,16 @@
             0% {text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;}
             100% {text-shadow: 0 0 20px #ff8000, 0 0 30px #ff8000, 0 0 40px #ff8000;}
         }
-        label, input, select, button {
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        label, input, select {
             display: block;
             margin-bottom: 10px;
         }
-        input, select, button {
+        input, select {
             padding: 10px;
             width: 100%;
             background-color: rgba(255, 255, 255, 0.9);
@@ -53,18 +62,24 @@
             border-radius: 5px;
             font-size: 1em;
             transition: all 0.3s ease;
+            box-sizing: border-box;
         }
-        input:focus, select:focus, button:focus {
+        input:focus, select:focus {
             outline: none;
             box-shadow: 0 0 10px #ff0000;
         }
         button {
+            padding: 10px;
             background-color: #ff0000;
             color: #000000;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
             text-shadow: 0 0 5px #ff8000;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            margin-top: auto;
         }
         button:hover {
             background-color: #ff8000;
@@ -221,4 +236,3 @@
     </script>
 </body>
 </html>
-    
