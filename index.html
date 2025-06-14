@@ -1,1559 +1,297 @@
-<!doctype html>
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-  <title>Data journalism for investigative stories</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  
-  <meta property="og:title" content="Data Fixers">
-  <meta property="og:description" content="A consulting service to find public records and data">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="http://datafixers.org/images/logo.png">
-
-
-
-
-
-  <link rel="stylesheet" href="bulma.css">
-  <script src="https://kit.fontawesome.com/0ccc624f70.js" crossorigin="anonymous"></script>
-  
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fixers - Data journalism for investigative stories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-       
-
-   <div class="header-wrapper">
-     <a class="img-link" href="https://datafixers.org/"><img src="images/logo.png" alt="Data Fixers logo" class="logo"></a>
-     <h2 class="tagline">An <a href="https://ok.org.br/noticia/os-projetos-vencedores-da-5a-edicao-do-premio-claudio-weber-abramo-de-jornalismo-de-dados/">award-winning</a> consulting project specialized in <span class="highlighted">gathering data and public records</span> to produce <span class="highlighted"> investigative stories. </span></h2>
-    </div>
-
-     <h4 class="section-title">Get to know our work</h4>
-
-     <div id="carousel" class="carousel">
-      <div class="carousel-images">
-
-        <div>
-          <a class="img-link" href="#stories"><img src="images/publications.png" alt="Image 1"></a>
-          <a href="#stories" class="item-link"><h4 class="item-title">Stories</h4></a>
-        </div>
-
-        <div>
-          <a class="img-link" href="#dashboards"><img src="images/dashboards.png" alt="Image 2"></a>
-          <a href="#dashboards" class="item-link"><h4 class="item-title">Dashboards</h4></a>
-        </div>
-
-        <div>
-          <a class="img-link" href="#partnerships"> <img src="images/partnerships.png" alt="Image 3"></a>
-          <a href="#partnerships" class="item-link"><h4 class="item-title">Partnerships</h4></a>
-        </div>
-
-        <div>
-          <a class="img-link" href="#about"><img class="about" src="images/about.png" alt="Image 4"></a>
-          <a href="#about" class="item-link"><h4 class="item-title">About</h4></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- L-AI Bot Section -->
-    <section class="laibot-section">
-      <div class="container">
-        <h4 class="section-title">Meet <span class="highlighted">L-AI Bot</span></h4>
-        <div class="laibot-content">
-          <div class="laibot-video-wrapper">
-            <video class="laibot-video" controls>
-              <source src="laibot_video_com_legendas.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="laibot-description">
-            <p style="font-size: 20px; line-height: 1.4; margin-bottom: 20px;">
-              Your intelligent assistant for accessing public information through Brazil's Access to Information Law (LAI). 
-              Discover how our AI-powered tool can help you navigate government transparency and find the data you need.
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <p class="site-tagline">
+                <span class="site-name">Data Fixers</span> is an <a href="https://premio.jornalismodedados.org.br/edicoes/2023/" class="highlight-link">award-winning</a> consulting project specialized in 
+                <span class="highlight">gathering data and public records</span> to foster 
+                <span class="highlight">environmental investigations</span>
             </p>
-            <div class="buttons-wrapper">
-              <a class="button is-rounded" href="https://datafixers.org/laibot" style="background-color: #8CDFD6; color: black; font-weight: bold;">
-                <i class="fas fa-robot"></i>&nbsp; Try L-AI Bot Now
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
+    </header>
+
+    <!-- Navigation Carousel -->
+    <section class="nav-section">
+        <div class="container">
+            <div class="nav-grid">
+                <div class="nav-item">
+                    <div class="nav-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Stories</h3>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Dashboards</h3>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Partnerships</h3>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>About</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
-<section class="section">
-
-  <div class=container style="text-align: center">
-    <a id="published"> </a>
-    
-    <p class="title"><span class="highlighted">Interactive dashboards</span></span></p> 
-
-    <br>
-    </div>
-
-    <div id="dashboards" class="section">
-
-  <div class="dashboard-container">
-    
-    <div class="dashboard-item">
-      <img src="images/emenda.png" alt="Congresso Nacional" class="dashboard-img">
-      <p style="font-size:20px";>A dashboard to explore how brazilian congressmen spend their legislative amendments in their electoral bases.</p>
-      <a class="button is-rounded is-small" href="https://datafixers.org/emendas_parlamentares">CHECK</a>
-    </div>
-    
-    <section class="section">
-
-      <div id="stories" class="section">
-      <div class=container style="text-align: center">
-        <a id="published"> </a>
-        
-        <p class="title"><span class="highlighted">Projects</span> and <span class="highlighted">investigative stories:</span></p> 
-
-        <br>
-        </div>
-
-      <div class="columns is-multiline content">
-
-
-
-        <div class="column is-full">
-
-
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-
-          <h3 class="title is-5">Unknown deforestation agents
-        </h3>
-        <div class="card-image has-text-centered">
-        <figure class="image is-inline-block">
-        <img src="images/deforicmbio.png" alt="A map of the 12 cities mentioned in this article" style="width:50vw;">
-        </figure>
-        </div>
-
-        <p style="font-size:20px";>We found out that almost half environmental embargoes in Brazil have no name on it, meaning that the government didn't know who was responsible for deforestation in that area. By cross-referencing public datasets, we were able to identify some of these agents.</p>
-        <a class="button is-rounded is-small"
-          href="https://piaui.folha.uol.com.br/desmatamento-amazonia-embargos-icmbio/">Read the story (Portuguese only)</a>
-
-
-          <div class="column is-full">
-
-
-            <span class="tag is-primary is-light is-large"><strong>MONGABAY</strong></span>
-
-        <h3 class="title is-5">The harsh, dangerous gig of seizing thousands of illegal cattle in the Amazon</h3>
-      <div class="card-image has-text-centered">
-      <figure class="image is-inline-block">
-      <img src="images/mongaba24.png" alt="A map of the 12 cities mentioned in this article" style="width:50vw;">
-      </figure>
-      </div>
-
-      <p style="font-size:20px";> This story explains how tracking illegal cattle in the Amazon is possible through GTA, a document issued by state agencies, and why they try to hide those documents from civil society.</p>
-      <a class="button is-rounded is-small"
-        href="https://news.mongabay.com/2024/06/the-harsh-dangerous-gig-of-seizing-thousands-of-illegal-cattle-in-the-amazon"/>Read the story (English)</a>
-  
-  
-  
-
-
-
-        <div class="column is-full">
-
-
-          <span class="tag is-primary is-light is-large"><strong>AMBIENTAL MEDIA</strong></span>
-
-          <h3 class="title is-5">Majority of Amazon fire and deforestation fines in 12 Brazilian cities
-        </h3>
-        <div class="card-image has-text-centered">
-        <figure class="image is-inline-block">
-        <img src="images/ambi.png" alt="A map of the 12 cities mentioned in this article" style="width:50vw;">
-        </figure>
-        </div>
-
-        <p style="font-size:20px";>This significant concentration of environmental infractions in a small 
-          fraction of the region highlights critical areas of concern in the Amazon.
-           The data reveals patterns and hotspots of environmental violations, offering insights for further 
-           investigation and policy action.</p>
-        <a class="button is-rounded is-small"
-          href="https://ambiental.media/mais-da-metade-das-multas-por-fogo-e-desmatamento-na-amazonia-aconteceram-em-apenas-12-municipios/">Read the story (Portuguese only)</a>
-
-
-
-
-
-          <div class="column is-full">
-
-
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-      
-      
-
-          <h3 class="title is-5">Land Grabbing in the heart of Brasília
-          </h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/gril_df.jpeg" alt="Piaui magazine visualization about crime in the Distrito Federal" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>We investigated how, with the support of politicians, individuals are invading 
-            Brazil's conservation units, deforesting, and profiting from the sale of plots in the Distrito Federal, near the Congress and Palácio do Planalto​​. </p>
-          <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/distrito-federal-grileiros-car-brasilia/">Read the story (Portuguese only)</a>
-      
-
-
-
-
-
-
-
-
-
-
-
-          <h3 class="title is-5">Land Grabbing, Gold Mining, and Cocaine Trade in the Amazon
-          </h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/pogado.jpeg" alt="Piaui graphic art about crime in the Amazon region" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>This investigation, written in Portuguese, uncovers a scheme in the 
-            Amazon region called "agropó" that combines land grabbing, illegal mining, and international 
-            cocaine trafficking. The investigation reveals that wealthy landowners, such as Janio Oliveira, 
-            have been involved in this lucrative criminal network.</p>
-          <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/quero-meter-dinheiro-e-no-agropo/">Read the story (Portuguese only)</a>
-      
-
-
-
-
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>INFOAMAZONIA</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>PULITZER CENTER</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>ARMANDO.INFO</strong></span>
-      
-
-
-
-          <h3 class="title is-5">Amazon Underworld</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/soldier.jpeg" alt="Violin bows sold at a UK store and made of an endangered species of brazilwood" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>A 1-year cross-border series of articles that mapped the presence of organized crime groups 
-            in the Amazon region and reported on the field about the impacts of their actions. Data Fixers coordinated 
-             the data analysis and obtained the documents needed for the stories.</p>
-          <a class="button is-rounded is-small"
-            href="https://amazonunderworld.org/">Visit the project page</a>
-      
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>ICIJ</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>PODER 360</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>AGÊNCIA PÚBLICA</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-
-
-
-          <h3 class="title is-5">Deforestation Inc.</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/defor.jpeg" alt="Violin bows sold at a UK store and made of an endangered species of brazilwood" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>An International Consortium of Investigative Journalists (ICIJ)-led cross-border investigation 
-            exposes how a lightly regulated sustainability industry overlooks forest destruction
-             and human rights violations when granting environmental certifications. Data Fixers coordinated 
-             the data analysis and obtained the documents needed for the Brazilian stories.</p>
-          <a class="button is-rounded is-small"
-            href="https://www.icij.org/investigations/deforestation-inc/">Visit the project page</a>
-            <a class="button is-rounded is-small"
-            href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/">Read more about this project (English)</a>
-            <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/madeireiras-com-selo-de-sustentabilidade-receberam-multas-milionarias-do-ibama/">Read the story (Portuguese)</a>
-        </div>
-
-        
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>GLOBAL WITNESS</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>REPÓRTER BRASIL</strong></span>
-          
-
-
-          <h3 class="title is-5">How public agencies hinder access to information about the beef cattle chain</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/gadao.jpg" alt="Cattle in Brazil." style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>In partnership with NGO Global Witness, Data Fixers has investigated how government agencies use several 
-            strategies to withhold data about the cattle chain in Brazil, making it harder to investigate companies. </p>
-          <a class="button is-rounded is-small"
-           
-            href="https://reporterbrasil.org.br/2023/07/how-public-agencies-hinder-access-to-information-about-the-beef-cattle-chain/">Read an english version</a>
-            <a class="button is-rounded is-small"
-            href="https://reporterbrasil.org.br/2023/07/como-orgaos-publicos-dificultam-o-acesso-a-informacoes-sobre-o-caminho-do-gado/">Read
-            the story in Portuguese</a>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-        <div class="column is-full">
-    
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-          
-
-
-          <h3 class="title is-5">The worst land grabber in the Amazon</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/masson.jpeg" alt="A land ilegally used by a land grabber in the Amazon" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>The Brazilian magazine Piauí has published a 
-            profile on Altino Masson, a man who has ilegally seized 458,000 hectares of public lands,
-             an area equivalent to three times the size of the city of São Paulo. This story 
-             is based on a data analysis conducted by Data Fixers and the Center for Climate Crime Analysis (CCCA), 
-             which used data from the Cadastro Ambiental Rural (CAR), as well as Ibama's environmental fines data and other sources.
-          </p>
-          <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/materia/como-maior-grileiro-altino-masson-se-apossou-de-terra-publica-amazonia/">Read the article in Portuguese</a>
-          
-        </div>
-
-
-        
-
-
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>OCCRP</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-
-
-
-          <h3 class="title is-5">A world heritage site under attack in Brazil</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/madeire.jpeg" alt="Violin bows sold at a UK store and made of an endangered species of brazilwood" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>This story was supported by Earth News Network/Internews. Brazilwood is being driven to extinction 
-            by an industry not often associated with organized crime: classical music. 
-            Known for its density and strength, the wood is crafted into bows that are used to play 
-            stringed instruments such as violins and cellos around the world. Forensic tests
-             on a sample of the confiscated wood, obtained by reporters, show it was logged in the Pau Brazil National Park.
-
-          </p>
-          <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/um-parque-no-coracao-do-contrabando-de-pau-brasil/?">Read the article in Portuguese</a>
-            <a class="button is-rounded is-small"
-            href="https://www.occrp.org/en/37-ccblog/ccblog/17611-criminal-gangs-are-logging-the-worlds-last-brazilwood-trees-to-make-violin-bows">English version</a>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>OCCRP</strong></span>
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-
-
-
-          <h3 class="title is-5">The Brazilian Bow Makers Under Investigation For Dealing in Endangered Wood</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/marco.jpg" alt="Violin bows sold at a UK store and made of an endangered species of brazilwood" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>A 2-month cross-border investigation in the US, UK and Brazil about a group of bowmakers suspicious of trafficking an endangered brazilian wood to make violin and cello bows. </p>
-          <a class="button is-rounded is-small"
-            href="https://www.occrp.org/en/investigations/operation-do-re-mi-the-brazilian-bow-makers-under-investigation-for-dealing-in-endangered-wood">Read
-            the English version</a>
-            <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/como-o-pau-brasil-arvore-ameacada-de-extincao-e-simbolo-nacional-acaba-em-arcos-de-violino-na-europa/">Read
-            the story in Portuguese (part 1)</a>
-            <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/nova-batalha-do-pau-brasil/"">Read
-            the story in Portuguese (part 2)</a>
-        </div>
-
-
-
-        <div class="column is-full">
-
-          <span class="tag is-primary is-light is-large"><strong>BRAZILIAN REPORT</strong></span>
-
-          <span class="tag is-primary is-light is-large"><strong>REVISTA PIAUÍ</strong></span>
-
-
-
-          <h3 class="title is-5">How Brazil's environmental agency lost R$ 1 billion in environmental fines</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/papelada.jpeg" alt="Thousands of documents have disappeared from Ibama offices." style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>An investigation about how environmental fines disappeared from Brazil's environmental agency office, Ibama, helping several environmental offenders save money and continue deforestation in the Amazon. </p>
-      
-
-          <a class="button is-rounded is-small"
-          href="https://brazilian.report/environment/2023/03/07/environmental-agency-ibama-money/">Read
-          the story in English</a>
-
-
-
-            <a class="button is-rounded is-small"
-            href="https://piaui.folha.uol.com.br/como-o-ibama-perdeu-mais-de-1-bilhao-de-reais/">Read
-            the story in Portuguese</a>
-  
-        </div>
-
-
-
-
-
-
-
-
-
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>BBC</strong></span>
-          <h3 class="title is-5">Brazil might lose R$ 300 million in environmental fines</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/ibama1.jpeg" alt="Brazil's environmental agency agents" style="width:50vw;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";> A story Data Fixers found through a database of expired fines. Brazil's Federal Court of Accounts <a href="https://pesquisa.apps.tcu.gov.br/#/documento/acordao-completo/3868520213.PROC/%2520/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/0/%2520">released a report</a>
-            mentioning the same documents and conclusions revealed in this story and recommended policy changes to the environmental agency a few months later. </p>
-          <a class="button is-rounded is-small"
-            href="https://www.bbc.com/portuguese/brasil-62429583">Read
-            the story in Portuguese</a>
-        </div>
-  
-        <div class="column is-full">
-          <span class="tag is-primary is-light is-large"><strong>THE WASHINGTON POST</strong></span>
-          <h3 class="title is-5">A failure of enforcement</h3>
-          <div class="card-image has-text-centered">
-          <figure class="image is-inline-block">
-          <img src="images/postexpiredfines.jpeg" alt="Brazil's environmental agency agents" style="width:100%;height:100%;">
-          </figure>
-          </div>
-
-          <p style="font-size:20px";>This story was <a href="https://www.pulitzer.org/finalists/terrence-mccoy-washington-post"> nominated</a> for a Pulitzer Prize in the Explanatory Journalism category. The Washington Post used our expired fines dataset and support to investigate how Brazil is struggling to enforce environmental crimes. Their reporter <a href="https://twitter.com/terrence_mccoy/status/1564775337283784705">praised</a> the project on his Twitter.</p>
-          <a class="button is-rounded is-small"
-            href="https://www.washingtonpost.com/world/interactive/2022/brazil-amazon-deforestation-enforcement/">Read
-            the story</a>
-        </div>
-       
-
-
-       
-
-
-<section class="section">
-  <div id="partnerships" class="section">
-
-  <div class=container style="text-align: center">
-    <a id="publications"> </a>
-    <p class="title">Data Fixers has been <span class="highlighted">mentioned as source</span> more than 100 times by several news organizations</p>
-    <br>
-
-
-
- 
-   
-
-
-
-
-      <table class="table" id="myTable" class="table">
-        <tbody>
-          <tr>
-            <th>Outlet</th>
-            <th>Date</th>
-            <th>Story</th>
-          </tr>
-          <tr>
-            <td>Agência Pública</td>
-            <td>19/05/24</td>
-            <td><a href="https://apublica.org/2024/05/exportacao-de-armas-de-fogo-dobrou-durante-os-anos-bolsonaro-revela-levantamento-inedito/" target="_blank">Exportação de armas de fogo dobrou durante os anos Bolsonaro, revela levantamento inédito</a></td>
-          </tr>
-          <tr>
-          <tr>
-            <td>Estadão (newspaper)</td>
-            <td>22/03/24</td>
-            <td><a href="https://www.estadao.com.br/politica/governo-lula-impoe-sigilo-de-100-anos-de-visitas-a-janja-a-telegramas-sobre-robinho/" target="_blank">Governo Lula impõe sigilo de 100 anos a 1.339 pedidos</a></td>
-          </tr>
-          <tr>
-            <tr>
-              <td>Carta Capital</td>
-              <td>22/03/24</td>
-              <td><a href="https://www.cartacapital.com.br/politica/cgu-rebate-reportagem-do-estadao-que-aponta-imposicao-de-sigilo-de-100-anos-a-informacoes/" target="_blank">CGU rebate reportagem sobre sigilo de 100 anos no Estadão</a></td>
-            </tr>
-            <tr>
-          <tr>
-            <td>BBC</td>
-            <td>8/12/22</td>
-            <td><a href="https://www.bbc.com/portuguese/brasil-62429583" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>
-          </tr>
-          <tr>
-            <td>UOL</td>
-            <td>8/12/22</td>
-            <td><a href="https://noticias.uol.com.br/ultimas-noticias/bbc/2022/08/12/quase-r-300-mi-em-multas-ambientais-podem-prescrever-em-2022-valor-perdido-vem-subindo-desde-2017.htm" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>      
-          <tr>
-            <td>Yahoo News</td>
-            <td>8/12/22</td>
-            <td><a href="https://esportes.yahoo.com/quase-r-300-mi-em-091248741.html" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>      
-          </tr>
-          <tr>
-            <td>G1 - Globo</td>
-            <td>8/12/22</td>
-            <td><a href="https://g1.globo.com/meio-ambiente/noticia/2022/08/12/quase-r-300-milhoes-em-multas-ambientais-podem-prescrever-em-2022-valor-perdido-vem-subindo-desde-2017.ghtml" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>      
-          </tr>
-          <tr>
-            <td>Terra</td>
-            <td>8/12/22</td>
-            <td><a href="https://www.terra.com.br/noticias/brasil/quase-r-300-mi-em-multas-ambientais-podem-prescrever-em-2022-valor-perdido-vem-subindo-desde-2017,580610b521463c3a26affd303b79ad46vvmftt3x.html" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>      
-          </tr>
-          <tr>
-            <td>ClimaInfo</td>
-            <td>8/12/22</td>
-            <td><a href="https://climainfo.org.br/2022/08/14/mais-de-22-mil-multas-ambientais-quase-r-300-mi-podem-prescrever-em-2022/" target="_blank">Mais de 2,2 mil multas ambientais – quase R$ 300 mi – podem prescrever em 2022</a></td>      
-          </tr>
-          <tr>
-            <td>Brasil Amazonia Agora (blog)</td>
-            <td>8/12/22</td>
-            <td><a href="https://brasilamazoniaagora.com.br/2022/multas-ambientais-em-2022/" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022</a></td>      
-          </tr>
-          <tr>
-            <td>BNC Amazonas</td>
-            <td>8/12/22</td>
-            <td><a href="https://bncamazonas.com.br/ta_na_midia/politica-ambiental-bolsonaro-r-300-milhoes-multas/" target="_blank">Política ambiental de Bolsonaro faz país perder R$ 300 milhões em multas</a></td>      
-          </tr>
-          <tr>
-            <td>Fiquem Sabendo</td>
-            <td>8/16/22</td>
-            <td><a href="https://fiquemsabendo.substack.com/p/as-multas-ambientais-com-risco-de" target="_blank">Newsletter: as multas com prescrições no Ibama</a></td>      
-          </tr>
-          <tr>
-            <td>Campo Grande News</td>
-            <td>8/16/22</td>
-            <td><a href="https://www.campograndenews.com.br/meio-ambiente/em-ms-r-253-mil-em-multas-aplicadas-pelo-ibama-correm-risco-de-caducar" target="_blank">Em MS, R$ 253 mil em multas aplicadas pelo Ibama correm risco de caducar </a></td>      
-          </tr>
-          <tr>
-            <td>PNB Online</td>
-            <td>8/16/22</td>
-            <td><a href="https://www.pnbonline.com.br/geral/multas-ambientais-com-risco-de-prescria-a-o-ultrapassam-r-8-mi-em-mt/86271" target="_blank">Multas ambientais com risco de prescrição ultrapassam R$8 mi em MT</a></td>      
-          </tr>
-          <tr>
-            <td>Expresso MS</td>
-            <td>8/16/22</td>
-            <td><a href="https://expressoms.com.br/em-ms-r-253-mil-em-multas-aplicadas-pelo-ibama-correm-risco-de-vencer-55845.html" target="_blank">Em MS, R$ 253 mil em multas aplicadas pelo Ibama correm risco de vencer</a></td>      
-          </tr>
-          <tr>
-            <td>CBN (Radio)</td>
-            <td>8/16/22</td>
-            <td><a href="https://cbn.globoradio.globo.com/default.htm?url=%2Fmedia%2Faudio%2F384051%2Fmais-de-2-mil-multas-ambientais-podem-prescrever-n.htm&ref=https://www.google.com/" target="_blank">Mais de 2 mil multas ambientais podem prescrever neste ano</a></td>      
-          </tr>
-          <tr>
-            <td>Folha do Progresso</td>
-            <td>8/12/22</td>
-            <td><a href="https://www.folhadoprogresso.com.br/quase-r-300-milhoes-em-multas-ambientais-podem-prescrever-em-2022-valor-vem-subindo/" target="_blank">Quase R$ 300 milhões em multas ambientais podem prescrever em 2022; Valor vem subindo</a></td>      
-          </tr>
-          <tr>
-            <td>Racismo Ambiental</td>
-            <td>8/14/22</td>
-            <td><a href="https://racismoambiental.net.br/2022/08/14/quase-r-300-mi-em-multas-ambientais-podem-prescrever-em-2022-valor-perdido-vem-subindo-desde-2017/" target="_blank">Quase R$ 300 mi em multas ambientais podem prescrever em 2022; valor perdido vem subindo desde 2017</a></td>      
-          </tr>
-          <tr>
-            <td>OCCRP (dataset)</td>
-            <td>8/17/22</td>
-            <td><a href="https://aleph.occrp.org/datasets/6277#mode=overview" target="_blank">Expired environmental fines in Brazil (login needed)</a></td>      
-          </tr>
-          <tr>
-            <td>Costa Rica em Foco</td>
-            <td>8/16/22</td>
-            <td><a href="http://www.costaricaemfoco.com.br/noticia/34830-em-ms-r--253-mil-em-multas-aplicadas-pelo-ibama-correm-risco-de-vencer-.html" target="_blank">Em MS, R$ 253 mil em multas aplicadas pelo Ibama correm risco de vencer</a></td>      
-          </tr>
-          <tr>
-            <td>Um Só Planeta - Globo</td>
-            <td>8/16/22</td>
-            <td><a href="https://umsoplaneta.globo.com/sociedade/noticia/2022/08/18/mais-de-2000-multas-ambientais-podem-prescrever-neste-ano.ghtml " target="_blank">Mais de 2.000 multas ambientais podem prescrever neste ano</a></td>      
-          </tr>
-          <tr>
-            <td>Bahia Notícias</td>
-            <td>8/19/22</td>
-            <td><a href="https://www.bahianoticias.com.br/noticia/271533-ibama-pode-deixar-de-arrecadar-mais-de-r-100-mil-em-multas-aplicadas-na-bahia-entenda.html" target="_blank">Ibama pode deixar de arrecadar mais de R$ 100 mil em multas aplicadas na Bahia; entenda</a></td>      
-          </tr>
-          <tr>
-            <td>Diamantina FM (Radio)</td>
-            <td>8/19/22</td>
-            <td><a href="https://www.diamantinafm.com.br/noticia/482178/ibama-pode-deixar-de-arrecadar-mais-de-r-100-mil-em-multas-aplicadas-na-bahia-entenda" target="_blank">Ibama pode deixar de arrecadar mais de R$ 100 mil em multas aplicadas na Bahia; entenda</a></td>      
-          </tr>
-          <tr>
-            <td>The Washington Post</td>
-            <td>8/30/22</td>
-            <td><a href="https://www.washingtonpost.com/world/interactive/2022/brazil-amazon-deforestation-enforcement/?itid=hp-top-table-main" target="_blank">Deforestation enforcement: Deforesters are plundering the Amazon. Brazil is letting them get away with it.
-            </a></td>      
-          </tr>
-          <tr>
-            <td>Vocativo</td>
-            <td>9/12/22</td>
-            <td><a href="https://vocativo.com/amazonas/filha-de-menezes-recebeu-verba-de-doadora-multada-por-infracao-ambiental/" target="_blank">Filha de Menezes recebeu verba de doadora multada por infração ambiental</a></td>      
-          </tr>
-          <tr>
-            <td>Correio do Povo</td>
-            <td>9/12/22</td>
-            <td><a href="https://www.correiodopovo.com.br/not%C3%ADcias/pol%C3%ADtica/projeto-mostra-que-169-candidatos-j%C3%A1-foram-multados-por-infra%C3%A7%C3%B5es-ambientais-1.888629" target="_blank">Projeto mostra que 169 candidatos já foram multados por infrações ambientais</a></td>      
-          </tr>
-          <tr>
-            <td>R7 (Record)</td>
-            <td>9/12/22</td>
-            <td><a href="https://noticias.r7.com/eleicoes-2022/projeto-mostra-que-169-candidatos-ja-foram-multados-por-infracoes-ambientais-12092022" target="_blank">Projeto mostra que 169 candidatos já foram multados por infrações ambientais</a></td>
-          </tr>
-          <tr>
-            <td>Mais Brasil (Radio)</td>
-            <td>9/13/22</td>
-            <td><a href="https://maisbrasil.news/2022/09/13/levantamento-aponta-que-169-candidatos-acumulam-mais-de-r83-milhoes-em-multas-ambientais/" target="_blank">Levantamento aponta que 169 candidatos acumulam mais de R$83 milhões em multas ambientais</a></td>
-          </tr>
-          <tr>
-            <td>Bahia Notícias</td>
-            <td>9/15/22</td>
-            <td><a href="https://www.bahianoticias.com.br/noticia/272473-bahia-tem-16-candidatos-ao-legislativo-multados-pelo-ibama-entre-2005-e-2022.html" target="_blank">Bahia tem 16 candidatos ao legislativo multados pelo Ibama entre 2005 e 2022</a></td>
-          </tr>
-          <tr>
-            <td>Acorda Cidade</td>
-            <td>9/15/22</td>
-            <td><a href="https://www.acordacidade.com.br/noticias/eleicoes/bahia-tem-16-candidatos-ao-legislativo-multados-pelo-ibama-entre-2005-e-2022/" target="_blank">Bahia tem 16 candidatos ao legislativo multados pelo Ibama entre 2005 e 2022</a></td>
-          </tr>
-          <tr>
-            <td>Acaopopular.net</td>
-            <td>9/15/22</td>
-            <td><a href="https://acaopopular.net/jornal/bahia-tem-16-candidatos-ao-legislativo-multados-pelo-ibama-entre-2005-e-2022-dentre-eles-marcelo-nilo-e-robinho/" target="_blank">Bahia tem 16 candidatos ao legislativo multados pelo Ibama entre 2005 e 2022, dentre eles Marcelo Nilo e Robinho</a></td>
-          </tr>
-          <td>Aragao Notícias (blog)</td>
-          <td>9/15/22</td>
-          <td><a href="https://www.aragaonoticias.com.br/2022/09/bahia-tem-16-candidatos-ao-legislativo.html" target="_blank">Bahia tem 16 candidatos multados pelo Ibama</a></td>
-        </tr>
-        <tr>
-          <td>Nexo</td>
-          <td>9/21/22</td>
-          <td><a href="https://www.nexojornal.com.br/grafico/2022/09/21/PL-concentra-405-das-doa%C3%A7%C3%B5es-de-autuados-por-crime-ambiental" target="_blank">PL concentra 40,5% das doações de autuados por crime ambiental</a></td>
-        </tr>
-        <td>Metrópoles</td>
-        <td>9/26/22</td>
-        <td><a href="https://www.metropoles.com/brasil/apos-mortes-de-bruno-e-dom-governo-cortou-r-82-milhoes-da-funai" target="_blank">Após mortes de Bruno e Dom, governo cortou R$ 8,2 milhões da Funai</a></td>
-      </tr>
-    </tr>
-    <td>BNC Amazonas</td>
-    <td>9/26/22</td>
-    <td><a href="https://bncamazonas.com.br/municipios/bolsonaro-tira-mais-de-r-8-milhoes-da-funai-no-vale-do-javari/" target="_blank">Bolsonaro tira mais de R$ 8 milhões da Funai no Vale do Javari</a></td>
-  </tr>
-<td>Hora do Povo</td>
-<td>9/26/22</td>
-<td><a href="https://horadopovo.com.br/mesmo-apos-morte-de-bruno-e-dom-governo-bolsonaro-corta-r-82-milhoes-da-funai/" target="_blank">Mesmo após morte de Bruno e Dom, governo Bolsonaro corta R$ 8,2 milhões da Funai</a></td>
-</tr>
-</tr>
-<td>Em Tempo</td>
-<td>9/26/22</td>
-<td><a href="https://emtempo.com.br/97377/opiniao/na-reta-final-wilson-lima-abre-102-pontos-sobre-amazonino-mendes/" target="_blank">Javari sem nada</a></td>
-</tr>
-
-</tr>
-<td>ClimaInfo</td>
-<td>9/26/22</td>
-<td><a href="https://climainfo.org.br/2022/09/27/governo-bolsonaro-corta-r-82-milhoes-da-funai/" target="_blank">Governo Bolsonaro corta R$ 8 milhões da FUNAI</a></td>
-</tr>
-
-</tr>
-<td>Racismo Ambiental</td>
-<td>9/26/22</td>
-<td><a href="https://racismoambiental.net.br/2022/09/27/governo-bolsonaro-corta-r-82-milhoes-da-funai/" target="_blank">Governo Bolsonaro corta R$ 8,2 milhões da FUNAI</a></td>
-</tr>
-
-</tr>
-<td>Ecos da Notícia</td>
-<td>9/27/22</td>
-<td><a href="https://ecosdanoticia.net.br/2022/09/apos-mortes-bruno-e-dom-governo-cortou-r-82-milhoes-da-funai/" target="_blank">Governo Bolsonaro corta R$ 8,2 milhões da FUNAI</a></td>
-</tr>
-
-</tr>
-<td>Fiquem Sabendo</td>
-<td>9/26/22</td>
-<td><a href="https://fiquemsabendo.substack.com/i/74627727/data-fixers-governo-cortou-r-milhoes-em-despesas-da-funai-mesmo-apos-mortes-no-vale-do-javari" target="_blank">Mesmo após mortes, governo Bolsonaro corta R$ 8,2 milhões da FUNAI (newsletter)</a></td>
-</tr>
-
-
-</tr>
-<td>Toda Hora</td>
-<td>9/27/22</td>
-<td><a href="https://todahora.com/governo-cortou-r-8-milhoes-em-despesas-da-funai-mesmo-apos-mortes-no-vale-do-javari/" target="_blank">Governo cortou R$ 8 milhões em despesas da Funai, mesmo após mortes no Vale do Javari</a></td>
-</tr>
-
-</tr>
-<td>InfoAmazonia</td>
-<td>9/28/22</td>
-<td><a href="https://infoamazonia.org/2022/09/28/60-candidatos-da-amazonia-tem-campanhas-financiadas-por-desmatadores/" target="_blank">60 candidatos da Amazônia têm campanha financiada por desmatadores</a></td>
-</tr>
-
-</tr>
-<td>ClimaInfo</td>
-<td>9/30/22</td>
-<td><a href="https://climainfo.org.br/2022/09/29/agro-se-aproxima-de-bancada-da-bala-para-aumentar-influencia-no-legislativo/" target="_blank">Agro se aproxima de “bancada da bala” para aumentar influência no Legislativo</a></td>
-</tr>
-
-</tr>
-<td>Conexão Tocantins</td>
-<td>9/30/22</td>
-<td><a href="https://conexaoto.com.br/2022/09/30/agencia-aponta-candidatos-do-tocantins-incluindo-wanderlei-barbosa-que-tem-campanhas-financiadas-por-desmatadores" target="_blank">Candidatos no Tocantins foram financiados por desmatadores</a></td>
-</tr>
-
-
-</tr>
-<td>Al Jazeera</td>
-<td>9/30/22</td>
-<td><a href="https://www.aljazeera.com/news/2022/9/30/brazil-votes-bolsonaro-allies-stand-firm-in-amazon-bastion" target="_blank">Brazil votes: Bolsonaro allies stand firm in Amazon bastion</a></td>
-</tr>
-
-</tr>
-<td>InfoAmazonia</td>
-<td>10/5/22</td>
-<td><a href="https://infoamazonia.org/2022/10/05/campanha-de-bolsonaro-recebeu-r-31-milhoes-de-infratores-ambientais/?utm_source=rss&utm_medium=rss&utm_campaign=campanha-de-bolsonaro-recebeu-r-31-milhoes-de-infratores-ambientais
-  " target="_blank">Campanha de Bolsonaro recebeu R$ 3,1 milhões de infratores ambientais</a></td>
-</tr>
-
-
-</tr>
-<td>InfoAmazonia</td>
-<td>10/5/22</td>
-<td><a href="https://observamt.org.br/noticia/campanhas-passam-a-lupa-no-passado-de-candidatos-de-mt/" target="_blank">Observatório Socioambiental de Mato Grosso</a></td>
-</tr>
-
-
-</tr>
-<td>Metrópoles</td>
-<td>10/12/22</td>
-<td><a href="https://www.metropoles.com/colunas/guilherme-amado/senador-bolsonarista-eleito-foi-multado-4-vezes-por-crimes-ambientais" target="_blank">Senador bolsonarista foi multado quatro vezes por crimes ambientais</a></td>
-</tr>
-
-</tr>
-<td>Fiquem Sabendo</td>
-<td>10/11/22</td>
-<td><a href="https://fiquemsabendo.substack.com/i/77105338/data-fixers-eleitos-suplentes-ou-candidatos-que-foram-para-o-segundo-com-multas-ambientais
-  " target="_blank">Newsletter: Os candidatos eleitos que receberam multas ambientais (newsletter)</a></td>
-</tr>
-
-
-</tr>
-<td>Alagoas 24 Horas</td>
-<td>10/12/22</td>
-<td><a href="https://www.alagoas24horas.com.br/1470204/senador-eleito-em-rondonia-foi-multado-4-vezes-por-crimes-ambientais/" target="_blank">Senador eleito em Rondônia foi multado 4 vezes por crimes ambientais</a></td>
-</tr>
-
-
-</tr>
-<td>Fiquem Sabendo</td>
-<td>10/24/22</td>
-<td><a href="https://fiquemsabendo.substack.com/p/abrimos-mais-dados-do-cadastro-ambiental
-  " target="_blank">Abrimos os dados do Cadastro Ambiental Rural (newsletter)</a></td>
-</tr>
-
-</tr>
-<td>Bahia Notícias</td>
-<td>10/25/22</td>
-<td><a href="https://www.bahianoticias.com.br/noticia/273828-bahia-lidera-n-de-registros-oficiais-de-imoveis-rurais-no-pais-diz-ministerio-da-agricultura.html
-
-  " target="_blank">Bahia lidera número de registros oficiais de imóveis rurais no país</a></td>
-</tr>
-
-</tr>
-<td>Bahia Notícias</td>
-<td>10/25/22</td>
-<td><a href="https://www.bahianoticias.com.br/municipios/noticia/31684-oeste-da-bahia-tem-7-das-10-cidades-com-maior-area-registrada-no-cadastro-ambiental-rural.html
-
-  " target="_blank">Oeste da Bahia tem 7 das 10 cidades com maior área registrada no CAR</a></td>
-</tr>
-
-
-</tr>
-<td>Portal do Cerrado</td>
-<td>10/26/22</td>
-<td><a href="https://portaldocerrado.com/bahia-tem-o-maior-numero-de-registros-de-imoveis-rurais-no-pais-diz-mapa/" target="_blank">Bahia tem o maior número de registros de imóveis rurais do país, diz MAPA</a></td>
-</tr>
-
-</tr>
-<td>De Olho nos Ruralistas (english version)</td>
-<td>10/26/22</td>
-<td><a href="https://deolhonosruralistas.com.br/2022/10/26/dossier-shows-bolsonaros-attacks-against-public-transparency-and-access-to-environmental-data/
-  " target="_blank">Interview: Dossier shows Bolsonaro’s attacks against public transparency and access to environmental data</a></td>
-</tr>
-
-
-</tr>
-<td>Diário Catarinense</td>
-<td>10/28/22</td>
-<td><a href="https://www.nsctotal.com.br/noticias/comercio-ilegal-de-madeira-gera-quase-r-4-milhoes-em-multas-em-sc
-  " target="_blank">Comércio ilegal de madeira gera quase R$ 4 milhões em multas em SC</a></td>
-</tr>
-
-</tr>
-<td>Terra</td>
-<td>10/28/22</td>
-<td><a href="https://www.terra.com.br/noticias/eleicoes/trabalho-escravo-e-crimes-ambientais-conheca-alguns-doadores-de-campanha-de-bolsonaro,92f61a3f695e5b64afc0db590b432346tcch8tjp.html
-
-  " target="_blank">Trabalho escravo e crimes ambientais: conheça alguns doadores de campanha de Bolsonaro</a></td>
-</tr>
-
-</tr>
-<td>Alma Preta</td>
-<td>10/28/22</td>
-<td><a href="https://almapreta.com/sessao/politica/trabalho-escravo-e-crimes-ambientais-conheca-alguns-apoiadores-de-bolsonaro
-
-  " target="_blank">Trabalho escravo e crimes ambientais: conheça alguns apoiadores de Bolsonaro</a></td>
-</tr>
-
-
-</tr>
-<td>Neomundo</td>
-<td>10/29/22</td>
-<td><a href="https://neomondo.org.br/2022/10/29/campanha-de-bolsonaro-recebeu-r%EF%BC%84-31-milhoes-de-infratores-ambientais-2/
-  " target="_blank">Campanha de Bolsonaro recebeu R＄ 3,1 milhões de infratores ambientais</a></td>
-</tr>
-
-
-</tr>
-<td>Jornal do Brasil</td>
-<td>10/29/22</td>
-<td><a href="https://www.jb.com.br/pais/politica/2022/10/1040429-trabalho-escravo-e-crimes-ambientais-conheca-alguns-apoiadores-de-bolsonaro.html
-  " target="_blank">Trabalho escravo e crimes ambientais: conheça alguns apoiadores de Bolsonaro</a></td>
-</tr>
-</tr>
-<td>Fiquem Sabendo</td>
-<td>11/07/22</td>
-<td><a href="https://fiquemsabendo.substack.com/i/82538135/data-fixers-as-apreensoes-de-peixes-aves-e-outras-infracoes-contra-a-fauna-em-unidades-de-conservacao-veja-os-dados-no-seu-estado
-
-  " target="_blank">As apreensões de peixes, aves e outras infrações contra a fauna (newsletter)</a></td>
-</tr>
-<td>Bahia Notícias</td>
-<td>11/09/22</td>
-<td><a href="https://www.bahianoticias.com.br/noticia/274395-unidades-de-conservacao-desde-2015-ba-e-5-estado-em-numero-de-infracoes-contra-a-fauna.html?utm_source=municipios&utm_medium=link&utm_campaign=destaques
-
-  " target="_blank">Unidades de Conservação: Desde 2015, BA é 5º estado em número de infrações contra a fauna</a></td>
-</tr>
-<td>Bahia Extra</td>
-<td>11/09/22</td>
-<td><a href="https://www.bahiaextra.com/2022/11/unidades-de-conservacao-desde-2015-ba-e.html
-
-  " target="_blank">Unidades de Conservação: Desde 2015, BA é 5º estado em número de infrações contra a fauna</a></td>
-</tr>
-
-<td>Salvadorez</td>
-<td>11/09/22</td>
-<td><a href="https://www.salvadordez.com.br/noticias/unidades-de-conservacao-desde-2015-ba-e-5o-estado-em-numero-de-infracoes-contra-a-fauna-223585
-
-  " target="_blank">Unidades de Conservação: Desde 2015, BA é 5º estado em número de infrações contra a fauna</a></td>
-</tr>
-
-<td>Correio do Lavrado</td>
-<td>11/16/22</td>
-<td><a href="https://correiodolavrado.com.br/2022/11/16/desde-2015-unidades-de-conservacao-em-roraima-registram-31-infracoes-contra-a-fauna/
-
-  " target="_blank">Desde 2015, unidades de conservação de Roraima tiveram 31 infrações contra a fauna</a></td>
-</tr>
-<td>Fiquem Sabendo</td>
-<td>11/21/22</td>
-<td><a href="https://fiquemsabendo.substack.com/p/abuso-de-alcool-tem-alta-em-populacao
-
-  " target="_blank">Abuso de álcool tem alta entre população indígena</a></td>
-</tr>
-<td>Bahia Notícias</td>
-<td>11/22/22</td>
-<td><a href="https://www.bahianoticias.com.br/noticia/274738-bahia-tem-146-registros-de-indicadores-de-saude-mental-da-populacao-indigena-segundo-ministerio-da-saude
-
-
-  " target="_blank">Bahia tem 146 registros de indicadores de saúde mental da população indígena</a></td>
-</tr>
-
-<td>Bahia Extra</td>
-<td>11/22/22</td>
-<td><a href="https://www.bahiaextra.com/2022/11/bahia-tem-146-registros-de-indicadores.html
-
-
-  " target="_blank">Bahia tem 146 registros de indicadores de saúde mental da população indígena, segundo Ministério da Saúde</a></td>
-</tr>
-
-<td>Bahia na Política</td>
-<td>11/22/22</td>
-<td><a href="http://www.bahianapolitica.com.br/noticias/120529/bahia-tem-146-registros-de-indicadores-de-saude-mental-da-populacao-indigena-segundo-ministerio-da-saude.html
-
-
-  " target="_blank">Bahia tem 146 registros de indicadores de saúde mental da população indígena, segundo Ministério da Saúde</a></td>
-</tr>
-<td>Metrópoles</td>
-<td>11/23/22</td>
-<td><a href="https://www.metropoles.com/colunas/guilherme-amado/cresce-o-abuso-de-alcool-entre-indigenas-mostra-ministerio-da-saude
-
-  " target="_blank">Cresce o abuso de álcool entre indígenas, mostra Ministério da Saúde</a></td>
-</tr>
-
-<td>Jornal Floripa</td>
-<td>11/23/22</td>
-<td><a href="https://jornalfloripa.com.br/emcimadahora/2022/11/23/cresce-o-abuso-de-alcool-entre-indigenas-mostra-ministerio-da-saude/
-
-  " target="_blank">Cresce o abuso de álcool entre indígenas, mostra Ministério da Saúde</a></td>
-</tr>
-
-<td>Novo Extra</td>
-<td>11/27/22</td>
-<td><a href="https://issuu.com/jornalextra/docs/edicao1195/16
-
-  " target="_blank">Agressões à fauna e flora de áreas protegidas passam de 4 mil em sete anos em Alagoas</a></td>
-</tr>
-
-<td>Metrópoles</td>
-<td>11/30/22</td>
-<td><a href="https://www.metropoles.com/brasil/meio-ambiente-brasil/uniao-cobra-r-38-bilhoes-em-multas-por-desmatamento-desde-2019
-
-
-  " target="_blank">União cobra R$ 3,8 bilhões em multas por desmatamento desde 2019</a></td>
-</tr>
-
-<td>Portal Mulher Amazônica</td>
-<td>11/30/22</td>
-<td><a href="https://portalmulheramazonica.com.br/site/noticia/uniao-cobra-r--3-8-bilhoes-em-multas-por-desmatamento-desde-2019/
-
-  " target="_blank">União cobra R$ 3,8 bilhões em multas por desmatamento desde 2019</a></td>
-</tr>
-
-
-<td>Fiquem Sabendo</td>
-<td>12/5/22</td>
-<td><a href="https://fiquemsabendo.substack.com/i/88568993/data-fixers-veja-um-balanco-dos-resultados-das-audiencias-de-conciliacao-ibama
-
-  " target="_blank">Veja um balanço dos resultados das audiências de conciliação</a></td>
-</tr>
-
-
-<td>Revista Piauí</td>
-<td>12/7/22</td>
-<td><a href="https://piaui.folha.uol.com.br/como-o-pau-brasil-arvore-ameacada-de-extincao-e-simbolo-nacional-acaba-em-arcos-de-violino-na-europa/
-
-  " target="_blank">Como o pau-brasil, ameaçado de extinção e símbolo nacional, acaba em arcos de violino na Europa</a></td>
-</tr>
-
-<td>Revista Piauí</td>
-<td>12/7/22</td>
-<td><a href="https://piaui.folha.uol.com.br/nova-batalha-do-pau-brasil/
-
-  " target="_blank">A nova batalha do pau-brasil</a></td>
-</tr>
-
-<td>OCCRP</td>
-<td>12/7/22</td>
-<td><a href="https://www.occrp.org/en/investigations/operation-do-re-mi-the-brazilian-bow-makers-under-investigation-for-dealing-in-endangered-wood
-
-  " target="_blank">The Brazilian Bow Makers Under Investigation For Dealing in Endangered Wood</a></td>
-</tr>
-
-<td>The Times (UK)</td>
-<td>12/7/22</td>
-<td><a href="https://www.thetimes.co.uk/article/1c1a3698-797e-11ed-bcd8-855e06175970?shareToken=c5710ad897be73d1133d089909c093b8
-
-  " target="_blank">Brazil cracks down on bows made from rare ‘music trees’</a></td>
-</tr>
-
-<td>ND Mais</td>
-<td>12/29/22</td>
-<td><a href="https://ndmais.com.br/meio-ambiente/florianopolis-tem-a-2a-unidade-de-conservacao-federal-que-mais-registra-infracoes-no-brasil/
-
-  " target="_blank">Florianópolis tem a 2ª Unidade de Conservação federal que mais registra infrações no Brasil</a></td>
-</tr>
-
-<td>Etersec</td>
-<td>01/23/23</td>
-<td><a href="https://etersec.com/pt-br/bolsoagros/
-
-  " target="_blank">Financiadores do Caos - Os Bolsoagros</a></td>
-</tr>
-
-
-<td>Fiquem Sabendo (newsletter)</td>
-<td>01/23/23</td>
-<td><a href="https://fiquemsabendo.substack.com/i/98318109/data-fixers-veja-propriedades-rurais-que-foram-registradas-na-mesma-area-de-terras-indigenas-protegidas
-
-  " target="_blank">Veja propriedades rurais que foram registradas na mesma área de terras indígenas protegidas</a></td>
-</tr>
-
-<td>MidiaJur</td>
-<td>01/28/23</td>
-<td><a href="https://www.midiajur.com.br/meio-ambiente/fazendas-tem-54-mil-hectares-em-conflito-com-terras-indigenas-em-mt/48382
-
-  " target="_blank">Fazendas tem 54 mil hectares em conflito com terras indígenas em MT</a></td>
-</tr>
-
-<td>Newsletter: Fiquem Sabendo</td>
-<td>02/06/23</td>
-<td><a href="https://fiquemsabendo.substack.com/p/apoiador-de-garimpo-autuado-no-entorno
-
-  " target="_blank">As multas na área de garimpo na TI Yanomami</a></td>
-</tr>
-
-<td>O Antagonista</td>
-<td>02/06/23</td>
-<td><a href="https://oantagonista.uol.com.br/brasil/garimpeiro-usou-lei-de-bolsonaro-para-tentar-barrar-operacao-do-icmbio/
-
-  " target="_blank">Garimpeiro usou "lei de Bolsonaro" para tentar barrar operação do ICMBio</a></td>
-</tr>
-
-<td>SBT (TV station)</td>
-<td>02/06/23</td>
-<td><a href="https://www.sbtnews.com.br/noticia/sbt-brasil/238585-pf-envia-agentes-para-investigar-morte-de-tres-yanomami-por-garimpeiros
-
-  " target="_blank">PF envia agentes para investigar morte de três yanomami por garimpeiros</a></td>
-</tr>
-
-
-<td>Bahia Notícias</td>
-<td>02/08/23</td>
-<td><a href="https://www.bahianoticias.com.br/noticia/277189-ex-oas-tem-aviao-em-lista-de-aeronaves-apreendidas-por-relacao-com-crimes-ambientais-na-bahia-segundo-instituto
-
-  " target="_blank">Ex-OAS tem avião apreendido na Bahia</a></td>
-</tr>
-
-<td>O Eco</td>
-<td>02/09/23</td>
-<td><a href="https://oeco.org.br/salada-verde/criminoso-ambiental-na-amazonia-diz-que-se-sentia-protegido-por-lei-de-bolsonaro/
-
-  " target="_blank">Criminoso ambiental na Amazônia diz que se sentia protegido por “Lei de Bolsonaro”</a></td>
-</tr>
-
-<td>Brasil Amazônia Agora</td>
-<td>02/09/23</td>
-<td><a href="https://brasilamazoniaagora.com.br/2023/garimpeiro-protegido-lei-bolsonaro/
-
-  " target="_blank">Criminoso ambiental na Amazônia diz que se sentia protegido por “Lei de Bolsonaro”</a></td>
-</tr>
-
-
-<td>Grafitti News</td>
-<td>02/11/23</td>
-<td><a href="https://grafittinews.com.br/fazendeiros-de-roraima-davam-apoio-logistico-a-garimpeiros-para-atuar-na-reserva-yanomami/
-
-  " target="_blank">Fazendeiros de Roraima davam apoio logístico a garimpeiros para atuar na reserva Yanomami”</a></td>
-</tr>
-
-<td>NSC Total</td>
-<td>02/13/23</td>
-<td><a href="https://www.nsctotal.com.br/noticias/pf-apreendeu-mais-de-r-22-milhoes-em-aeronaves-durante-nove-anos-em-sc
-
-  " target="_blank">PF apreendeu mais de R$ 2,2 milhões em aeronaves em SC</a></td>
-</tr>
-
-
-<td>Guararema News</td>
-<td>02/13/23</td>
-<td><a href="https://www.guararemanews.com.br/policia-federal-apreendeu-mais-de-r-2-milhoes-em-aeronaves-durante-9-anos-em-sc/
-
-
-  " target="_blank">Polícia Federal apreendeu mais de R$ 2 milhões em aeronaves durante 9 anos em SC</a></td>
-</tr>
-
-
-<td>Tropical FM 99 (Radio)</td>
-<td>02/13/23</td>
-<td><a href="https://www.tropicalfm99.com.br/noticia/35648/durante-nove-anos-mais-de-rs-22-milhoes-em-aeronaves-foram-apreendidos-pela-policia-federal-em-santa-catarina
-
-  " target="_blank">Durante nove anos, mais de R$ 2,2 milhões em aeronaves foram apreendidos pela Polícia Federal em Santa Catarina</a></td>
-</tr>
-
-<td>Jornal do Tocantins</td>
-<td>02/14/23</td>
-<td><a href="https://www.jornaldotocantins.com.br/editorias/vida-urbana/tocantins-%C3%A9-o-sexto-do-pa%C3%ADs-em-frota-de-avi%C3%B5es-apreendidos-pela-pf-desde-2009-1.2614379
-
-
-  " target="_blank">As apreensões de aeronaves no Tocantins</a></td>
-</tr>
-
-
-<td>Revista Piauí</td>
-<td>02/17/23</td>
-<td><a href="https://piaui.folha.uol.com.br/como-o-ibama-perdeu-mais-de-1-bilhao-de-reais/
-
-
-  " target="_blank">Como o Ibama perdeu mais de R$ 1 bilhão</a></td>
-</tr>
-
-<td>UOL TV</td>
-<td>02/17/23</td>
-<td><a href="https://www.youtube.com/watch?v=vK8I-ynqxNs
-
-  " target="_blank">Multas ambientais aplicadas pelo Ibama viraram comida para baratas e traças, diz jornalista</a></td>
-</tr>
-
-<td>Revista Piauí</td>
-<td>03/01/23</td>
-<td><a href="https://piaui.folha.uol.com.br/madeireiras-com-selo-de-sustentabilidade-receberam-multas-milionarias-do-ibama/
-
-
-  " target="_blank">Madeireiras com selo de sustentabilidade receberam multas milionárias do Ibama</a></td>
-</tr>
-
-<td>Racismo Ambiental</td>
-<td>03/01/23</td>
-<td><a href="https://racismoambiental.net.br/2023/03/01/madeireiras-com-selo-de-sustentabilidade-tiveram-mais-de-r-100-milhoes-em-multas-do-ibama/
-
-
-  " target="_blank">Madeireiras com selo de sustentabilidade tiveram mais de R$ 100 milhões em multas do Ibama</a></td>
-</tr>
-
-<td>Poder 360</td>
-<td>03/01/23</td>
-<td><a href="https://www.poder360.com.br/deforestation-inc/madeireiras-com-selo-verde-recebem-multas-milionarias-do-ibama/
-
-  " target="_blank">Madeireiras com selo verde recebem multas milionárias do Ibama</a></td>
-</tr>
-
-
-<td>Poder 360</td>
-<td>03/01/23</td>
-<td><a href="https://www.poder360.com.br/deforestation-inc/madeireiras-dizem-que-ha-tentativa-de-criminalizar-o-setor/
-
-  " target="_blank">Madeireiras dizem que há tentativa de criminalizar o setor</a></td>
-</tr>
-
-
-<td>Agência Pública</td>
-<td>03/01/23</td>
-<td><a href="https://apublica.org/2023/03/madeireiras-com-selo-de-sustentabilidade-tiveram-mais-de-r-100-milhoes-em-multas-do-ibama/
-
-  " target="_blank">Madeireiras com selo de sustentabilidade tiveram mais de R$ 100 milhões em multas do Ibama</a></td>
-</tr>
-
-<td>Correio do Lavrado</td>
-<td>03/02/23</td>
-<td><a href="https://correiodolavrado.com.br/2023/03/02/23-das-gravidas-indigenas-realizou-ate-3-consultas-de-pre-natal-em-2022/
-
-  " target="_blank">23% das grávidas indígenas realizou até 3 consultas de pré-natal em 2022</a></td>
-</tr>
-
-
-<td>O Liberal</td>
-<td>03/02/23</td>
-<td><a href="https://www.oliberal.com/economia/em-45-paises-madeireiras-com-selo-verde-sao-acusadas-de-infracoes-ambientais-1.651885
-
-  " target="_blank">Em 45 países, madeireiras com selo verde são acusadas de infrações ambientais</a></td>
-</tr>
-
-<td>Pará Terra Boa</td>
-<td>03/02/23</td>
-<td><a href="ttps://www.paraterraboa.com/meio-ambiente/no-para-madeireiras-com-selo-de-sustentabilidade-tiveram-mais-de-r-100-milhoes-em-multas-do-ibama/
-
-  " target="_blank">No Pará, madeireiras com selo de sustentabilidade tiveram mais de R$ 100 milhões em multas do Ibama</a></td>
-</tr>
-
-<td>O Povo</td>
-<td>03/04/23</td>
-<td><a href="https://mais.opovo.com.br/jornal/cidades/2023/03/04/metade-das-autuacoes-de-trabalho-escravo-no-ceara-e-no-setor-de-extracao-de-carnauba.html
-
-  " target="_blank">Metade das autuações de trabalho escravo no Ceará é no setor de extração de carnaúba</a></td>
-</tr>
-
-<td>Rádio Diamantina FM</td>
-<td>03/14/23</td>
-<td><a href="https://www.diamantinafm.com.br/noticia/546310/bahia-e-top-3-em-valores-atribuidos-a-multas-ambientais-no-nordeste-em-2022-saiba-valores
-
-  " target="_blank">Bahia é top 3 em valores atribuídos a multas ambientais no Nordeste em 2022</a></td>
-</tr>
-
-<td>Bahia Notícias</td>
-<td>03/14/23</td>
-<td><a href="https://www.bahianoticias.com.br/noticia/278246-bahia-e-top-3-em-valores-atribuidos-a-multas-ambientais-no-nordeste-em-2022-saiba-valores
-
-  " target="_blank">As multas ambientais mais caras da Bahia</a></td>
-</tr>
-
-<td>97 News</td>
-<td>03/14/23</td>
-<td><a href="https://www.97news.com.br/noticias/imprimir/31463-2023/03/14/rodovias-federais-da-bahia-sao-as-que-mais-arrecadam-em-multas-desde-2018-valor-chega-a-r-400-milhoes
-
-  " target="_blank">As multas ambientais mais caras da Bahia</a></td>
-</tr>
-
-
-
-<td>Gazeta Baiana</td>
-<td>03/14/23</td>
-<td><a href="https://www.97news.com.br/noticias/imprimir/31463-2023/03/14/rodovias-federais-da-bahia-sao-as-que-mais-arrecadam-em-multas-desde-2018-valor-chega-a-r-400-milhoes
-
-  " target="_blank">Bahia é top 3 em valores atribuídos a multas ambientais no Nordeste em 2022; saiba valores</a></td>
-</tr>
-
-
-<td>Sudoeste Hoje</td>
-<td>03/14/23</td>
-<td><a href="https://www.97news.com.br/noticias/imprimir/31463-2023/03/14/rodovias-federais-da-bahia-sao-as-que-mais-arrecadam-em-multas-desde-2018-valor-chega-a-r-400-milhoes
-
-  " target="_blank">Bahia lidera ranking das multas no Brasi</a></td>
-</tr>
-
-
-
-<td>Revista da Madeira (Remade)</td>
-<td>03/17/23</td>
-<td><a href="http://www.remade.com.br/noticias/19017/no-para--madeireiras-com-selo-de-sustentabilidade-tiveram-mais-de-r$-100-milhoes-em-multas-do-ibama
-
-  " target="_blank">No Pará, madeireiras com selo de sustentabilidade tiveram mais de R$ 100 milhões em multas do Ibama</a></td>
-</tr>
-
-
-<td>MidiaJur</td>
-<td>03/18/23</td>
-<td><a href="https://www.midiajur.com.br/meio-ambiente/fazendeiro-matador-de-onca-foi-multado-em-r-6-milhoes-pelo-ibama/49329
-
-  " target="_blank">Fazendeiro matador de onça foi multado em R$ 6 milhões pelo Ibama</a></td>
-</tr>
-
-
-<td>O Repórter do Araguaia</td>
-<td>03/20/23</td>
-<td><a href="http://jreporterdoaraguaia.com/Publicacao.aspx?id=383561
-
-  " target="_blank">Fazendeiro matador de onça foi multado em R$ 6 milhões pelo Ibama</a></td>
-</tr>
-
-
-<td>Metrópoles</td>
-<td>03/23/23</td>
-<td><a href="https://www.metropoles.com/brasil/44-das-100-empresas-com-maiores-multas-ambientais-em-2022-atuam-na-amazonia
-
-  " target="_blank">Quase metade das maiores multas ambientais foram registradas na Amazônia em 2022</a></td>
-</tr>
-
-<td>18 Horas (Rádio Mix Manaus)</td>
-<td>03/23/23</td>
-<td><a href="https://18horas.com.br/amazonas/das-100-empresas-com-maiores-multas-ambientais-44-atuam-na-amazonia-am-e-o-segundo-em-valor-de-multas/
-
-  " target="_blank">Das 100 empresas com maiores multas ambientais, 44 atuam na Amazônia; AM é o segundo em valor de multas</a></td>
-</tr>
-
-
-<td>BNC Amazonas</td>
-<td>03/24/23</td>
-<td><a href="https://18horas.com.br/amazonas/das-100-empresas-com-maiores-multas-ambientais-44-atuam-na-amazonia-am-e-o-segundo-em-valor-de-multas/
-
-  " target="_blank">Crime ambiental: de 100 empresas mais multadas, 44 estão na Amazônia</a></td>
-</tr>
-
-<td>BNC Amazonas</td>
-<td>03/25/23</td>
-<td><a href="https://radarlitoral.com.br/noticias/21575/litoral-norte-aplica-mais-de-r$-22-milhoes-de-multas-ambientais-no-ano-passado
-
-  " target="_blank">Litoral Norte aplica mais de R$ 2,2 milhões de multas ambientais no ano passado</a></td>
-</tr>
-
-
-
-
-
-          
-        </tbody>
-      </table>
-
-      <button id="seeMoreButton">See 100+ stories</button>
-
-      <script>
-        const table = document.getElementById("myTable");
-        const rows = table.rows;
-        const numRowsToShow = 10;
-        const button = document.getElementById("seeMoreButton");
-        let isShowingMore = false;
-      
-        for (let i = numRowsToShow; i < rows.length; i++) {
-          rows[i].classList.add("hidden");
-        }
-      
-        button.addEventListener("click", function () {
-          if (!isShowingMore) {
-            for (let i = numRowsToShow; i < rows.length; i++) {
-              rows[i].classList.remove("hidden");
-            }
-            button.innerHTML = "Show less";
-            isShowingMore = true;
-            table.scrollIntoView(); // rola para a tabela
-          } else {
-            for (let i = numRowsToShow; i < rows.length; i++) {
-              rows[i].classList.add("hidden");
-            }
-            button.innerHTML = "See more";
-            isShowingMore = false;
-            table.scrollIntoView(); // rola para a tabela
-          }
-        });
-      </script>
-      
-    
-
-
-
-
-      <br>
-  
-      
-            
-    
-    </div>
-
-    <section class="section">
-
-      <div class=container style="text-align: center">
-        <a id="interviews"> </a>
-        
-        <p class="title">Fostering <span class="highlighted">public transparency</span> in Brazil 
-
-        <p><strong>Global Investigative Journalism Conference - Gothenburg/Sweden (Sep.23)</strong> - presentation about Data Fixers and public records Held in English.</p>
-        <br>
-
-        <iframe src="https://www.youtube.com/embed/urDaCInPdvY?si=8kJDdMpYZq-Si5V2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-        <br> 
-        <p><strong>Filecoin Foundation for the Descentralized Web/#FilLisbon2022 (Nov.22)</strong> - presentation about Data Fixers in Lisbon/Portugal in a tech conference. Held in English.</p>
-        <br>
-
-        <iframe src="https://www.youtube.com/embed/dw5q9ZXMaWE?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <br> 
-
-      <br>
-        <p><strong>Jornal da Cultura - interview (Dec.22)</strong> - Our founder Luiz Fernando Toledo was interviewed by Jornal da Cultura, a traditional TV show in Brazil, to explain how Brazil can improve transparency policies in 2023. Held in Portuguese. </p>
-    
-
-        <br> 
-        <iframe src="https://www.youtube.com/embed/j9zzNg8N-BA?start=2503" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br> 
-        <br> 
-
-
-
-        <br>
-        <p><strong>Observatório de Justiça e Conservação - interview (Mar.17 2023)</strong> - Founder Luiz Fernando Toledo and the investigative journalist Allan de Abreu
-          were interviewed by this Youtube channel to explain stories they have published about environmental crimes, including a cross-border project about greenwashing with the International
-        Consortium of Investigative Journalists (ICIJ). </p>
-
-
-        <br>
-        <iframe src="https://www.youtube.com/embed/igNxMWtnW2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <br>
-
-      <br>
-
-
-
-          
-  
-         
-        </div>
-
-
-
-    <section class="section">
-
-      <div class=container style="text-align: center">
-        <a id="partners"> </a>
-        <p class="title">Partners/funding</p>
-        <br>
-        </div>
-
-      <div class="columns is-multiline content">
-
-
-<h3></h3>
-        <div class="column is-half">
-     
-          <img src="images/brown.png" alt="Brown Institute for Media Innovation" style="width:60%px;height:0%px;">
-          </figure>
-          <p style="font-size:20px";><strong>Brown Institute for Media Innovation.</strong> Data Fixers was <a href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/">selected</a> among a pool of global candidates to receive a US$ 100,000 Magic Grant fund from The Brown Institute at the Columbia Journalism School.</p>
-          </div>
-        
-      
-        </h3>
-   
-      </h3>
-  
-
-      <div class="column is-half">
-   
-        <img src="images/ccca.png" alt="CCCA logo" style="width:100%px;height:100%px;">
-        </figure>
-        <p style="font-size:20px";><strong>Center for Climate Crime Analysis (CCCA). </strong>Data Fixers was hired by this European non-profit organization in 2023 and is currently managing some of their data needs and freedom of information requests about environmental issues.</a></p>
-        </div>
-        
-      
-        </h3>
-
-
-
-      </h3>
-  
-
-        <div class="column is-half">
-     
-          <img src="images/nedlogo.jpeg" alt="NED logo" style="width:50%px;height:50%px;">
-          </figure>
-          <p style="font-size:20px";><strong>NED.</strong> Several tools, including a <a href="https://datafixers.org/laibot">chatbot</a> and a <a href="https://datafixers.org/autor_identificado">dashboard</a>, have been developed through their Reagan-Fascell program. <a href="https://www.cima.ned.org/blog/how-artificial-intelligence-can-facilitate-investigative-journalism/"> Read more here.</a></p>
-          </div>
-          
-        
-          </h3>
-  
-
-        <div class="column is-half">
-     
-          <img src="images/muckrock.jpg" alt="Muckrock logo" style="width:50%px;height:50%px;">
-          </figure>
-          <p style="font-size:20px";><strong>Muckrock/Document Cloud (via Filecoin Foundation).</strong> Data Fixers received funding to use DocumentCloud as a platform to share documents and investigate public records for stories. <a href="https://www.muckrock.com/news/archives/2022/dec/06/data-fixers-add-ons-case-study/">Read more here.</a></p>
-          </div>
-          
-        
-          </h3>
-
-            <div class="column is-half">
-     
-              <img src="images/global witness.png" alt="Global Witness logo" style="width:50%px;height:50%px;">
-              </figure>
-              <p style="font-size:20px";><strong>Global Witness.</strong> A non-profit organization that investigates and exposes environmental and human rights abuses. Data Fixers supported their <a href="https://reporterbrasil.org.br/2023/07/how-public-agencies-hinder-access-to-information-about-the-beef-cattle-chain/">work</a> in 2022 and 2023.</p>
-              </div>
-
-              
-              
-            
-              </h3>
-  
-               
-
-             
-  
-              <div class="column is-half">
-   
-                <img src="images/uol_logo.png" alt="UOL" style="width:100%px;height:100%px;">
-                </figure>
-                <p style="font-size:20px";><strong>UOL. </strong> Supporting their investigative stories with data since January 2023.</p>
+      <!-- L-AI Bot Section -->
+    <section class="laibot-section">
+        <div class="container">
+            <h2 class="section-title">Meet L-AI Bot</h2>
+            <div class="laibot-content">
+                <div class="laibot-video">
+                    <video controls>
+                        <source src="laibot_video_com_legendas.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-              
-            
-              </h3>
-
-              <div class="column is-half">
-     
-                <img src="images/piaui_logo.webp" alt="NED logo" style="width:50%px;height:50%px;">
-                </figure>
-                <p style="font-size:20px";><strong>Revista Piauí. </strong>Supporting their investigative projects since 2022.</p>
+                <div class="laibot-text">
+                    <p>Your intelligent assistant for accessing public information through Brazil's Access to Information Law (LAI). Discover how our AI-powered tool can help you navigate government transparency and find the data you need.</p>
+                    <a href="https://datafixers.org/laibot" class="btn-primary">
+                        <i class="fas fa-robot"></i>
+                        Try L-AI bot now
+                    </a>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Transparency Section -->
+    <section class="transparency-section">
+        <div class="container">
+            <h2 class="section-title">Fostering public transparency in Brazil</h2>
+            <p class="section-description">Our commitment to transparency goes beyond data analysis. We actively promote public accountability through educational content and advocacy for open government initiatives.</p>
+            
+            <div class="video-gallery">
+                <div class="video-item active" id="video-0">
+                    <iframe src="https://www.youtube.com/embed/urDaCInPdvY?si=8kJDdMpYZq-Si5V2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+                <div class="video-item" id="video-1">
+                    <iframe src="https://www.youtube.com/embed/dw5q9ZXMaWE?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="video-item" id="video-2">
+                    <iframe src="https://www.youtube.com/embed/j9zzNg8N-BA?start=2503" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="video-item" id="video-3">
+                    <iframe src="https://www.youtube.com/embed/igNxMWtnW2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="video-item" id="video-4">
+                    <iframe src="https://www.youtube.com/embed/lO7l93wyoHI?start=3521" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="video-controls">
+                <button class="video-btn" id="prevVideoBtn" onclick="changeVideo(-1)">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="video-counter">
+                    <span id="currentVideo">1</span> of <span id="totalVideos">5</span>
+                </div>
+                <button class="video-btn" id="nextVideoBtn" onclick="changeVideo(1)">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Stories Gallery -->
+    <section class="stories-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Projects</span> and <span class="highlight">investigative stories:</span></h2>
+            
+            <div class="gallery-container" id="galleryContainer">
+                <!-- Stories will be loaded here by JavaScript -->
+            </div>
+            
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="prevBtn" onclick="changeStory(-1)">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="gallery-counter">
+                    <span id="currentStory">1</span> of <span id="totalStories">15</span>
+                </div>
+                <button class="gallery-btn" id="nextBtn" onclick="changeStory(1)">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Dashboards Section -->
+    <section class="dashboards-section">
+        <div class="container">
+            <h2 class="section-title">Dashboards</h2            <div class="dashboards-grid">
+                <div class="dashboard-item">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Parliamentary Amendments</h3>
+                    <p>A dashboard to explore how brazilian congressmen spend their legislative amendments in their electoral bases.</p>
+                    <a href="https://datafixers.org/emendas_parlamentares" target="_blank" class="dashboard-btn">VIEW DASHBOARD</a>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Palace Visitors</h3>
+                    <p>Interactive dashboard showing visitors to the Presidential Palace and their meeting patterns.</p>
+                    <a href="https://datafixers.org/visitantes_palacio" target="_blank" class="dashboard-btn">VIEW DASHBOARD</a>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-podium"></i>
+                    </div>
+                    <h3>Presidential Speeches</h3>
+                    <p>Analysis of presidential speeches and public statements with data visualization.</p>
+                    <a href="https://datafixers.org/falas_lula" target="_blank" class="dashboard-btn">VIEW DASHBOARD</a>
+                </div>
+            </div>   </section>
 
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Data Fixers</strong> is a data-driven journalism and consulting project created at the <a href="https://brown.columbia.edu" target="_blank">The Brown Institute for Media Innovation</a> — a joint initiative between <a href="https://columbia.edu" target="_blank">Columbia University</a> and <a href="https://stanford.edu" target="_blank">Stanford University</a>. This project received a <a href="https://brown.columbia.edu/magic-grants" target="_blank">Magic Grant</a> to find data and public records to support investigative journalism in Brazil and is coordinated by journalist <a href="#" target="_blank">Luiz Fernando Toledo</a> (Master of Science in Data Journalism 2022). Data Fixers was awarded twice in 2023 by the <a href="https://ok.org.br" target="_blank">Open Knowledge Foundation (Brazil)</a> as the best Brazilian open data project and also for the best investigative project of the year (Amazon Underworld). Read more about the project in <a href="https://www.muckrock.com" target="_blank">this article by Muckrock</a> and <a href="https://brown.columbia.edu" target="_blank">here at the Brown Institute's website</a>. Contact: <a href="mailto:lta2119@columbia.edu">lta2119@columbia.edu</a></p>
+                </div>
+                <div class="author-section">
+                    <a href="https://luizftoledo.github.io" target="_blank" class="author-card-link">
+                        <div class="author-card">
+                            <img src="images/luiz_new.jpeg" alt="Luiz Fernando Toledo" class="author-image">
+                            <h3>Luiz Fernando Toledo</h3>
+                            <p class="author-title">Founder & Data Journalist</p>
+                            <p class="author-description">Award-winning investigative journalist specializing in data-driven stories and public records analysis. Expert in Brazil's Access to Information Law (LAI). <a href="https://www.devstudies.cam.ac.uk/news/luiz-fernando-toledo-2024s-fourth-most-awarded-journalist-brazil" target="_blank">Fourth most awarded journalist in Brazil in 2024</a>.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Partnerships Section -->
+    <section class="partnerships-section">
+        <div class="container">
+            <h2 class="section-title">Partnerships</h2>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="images/piaui_logo.webp" alt="Revista Piauí">
+                    <div class="tooltip">Supporting investigative projects since 2022. Collaboration on environmental and political stories.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/brown_logo.jpeg" alt="Brown Institute">
+                    <div class="tooltip">Magic Grant recipient 2023. Joint initiative between Columbia University and Stanford University.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/occrp.png" alt="OCCRP">
+                    <div class="tooltip">International partnership for cross-border investigations. Collaboration since 2023.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/global witness.png" alt="Global Witness">
+                    <div class="tooltip">Environmental investigations partner. Focus on Amazon deforestation and illegal mining.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/infoamazonia.png" alt="InfoAmazonia">
+                    <div class="tooltip">Data visualization and mapping partner for Amazon region stories since 2022.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/ccca.png" alt="CCCA">
+                    <div class="tooltip">Climate crime analysis partnership. Environmental data investigations since 2023.</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/abraji_logo.png" alt="Abraji">
+                    <div class="tooltip">Supporting Cruzagrafos new environmental data feature through consulting and workshops</div>
+                </div>
+                <div class="partner-item">
+                    <img src="images/earth_journalism_network_logo.png" alt="Earth Journalism Network">
+                    <div class="tooltip">Supported reporting and projects with grants</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Who's Talking About Us Section -->
+    <section class="media-mentions-section">
+        <div class="container">
+            <h2 class="section-title">Who's talking about our work</h2>
+            <div class="mentions-grid">
+                <div class="mention-item">
+                    <div class="mention-tag">BROWN INSTITUTE - COLUMBIA UNIVERSITY</div>
+                    <p>Major investigations published through Data Fixers project</p>
+                    <a href="https://brown.columbia.edu/major-investigations-published-through-data-fixers-project/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">BROWN INSTITUTE - STANFORD UNIVERSITY</div>
+                    <p>Data Fixers wins grant from the Earth Journalism Network</p>
+                    <a href="https://brown.stanford.edu/data-fixers-wins-grant-from-the-earth-journalism-network/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">GROUND TRUTH</div>
+                    <p>Data Fixers: The scientific method of investigative journalism in Brazil</p>
+                    <a href="https://groundtruth.app/data-fixers-the-scientific-method-of-investigative-journalism-in-brazil-2/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">GLOBAL INVESTIGATIVE JOURNALISM NETWORK</div>
+                    <p>Tips for FOIA/RTI requests</p>
+                    <a href="https://gijn.org/stories/tips-foia-rti-requests/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">FILECOIN FOUNDATION</div>
+                    <p>Empowering a more informed, transparent society with decentralized technology</p>
+                    <a href="https://ffdweb.org/blog/empowering-a-more-informed-transparent-society-with-decentralized-technology" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">BROWN INSTITUTE - COLUMBIA UNIVERSITY</div>
+                    <p>After six months, Data Fixers achieves 100 mentions and new cross-border investigations</p>
+                    <a href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">MUCKROCK</div>
+                    <p>Data Fixers add-ons case study</p>
+                    <a href="https://www.muckrock.com/news/archives/2022/dec/06/data-fixers-add-ons-case-study/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">MUCKROCK</div>
+                    <p>L-AI Bot: A chatbot that hones Brazilian information requests before they're filed</p>
+                    <a href="https://www.muckrock.com/news/archives/2024/jan/24/l-ai-bot-a-chatbot-that-hones-brazilian-information-requests-before-theyre-filed/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">GLOBAL INVESTIGATIVE JOURNALISM NETWORK</div>
+                    <p>Tracking organized crime's dirty money illicit operations tips</p>
+                    <a href="https://gijn.org/stories/tracking-organized-crimes-dirty-money-illicit-operations-tips/" target="_blank" class="mention-link">Read more</a>
+                </div>
+                <div class="mention-item">
+                    <div class="mention-tag">INTERNATIONAL JOURNALISTS' NETWORK</div>
+                    <p>Latin American journalists offer advice on investigating organized crime</p>
+                    <a href="https://ijnet.org/en/story/latin-american-journalists-offer-advice-investigating-organized-crime" target="_blank" class="mention-link">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-<div class=container style="text-align: center">
-  <div id="about" class="section">
-  
-  <p class="title">About <span class="highlighted">Data Fixers</span></p>
-  <br>
-  <img src="images/luiz.png" alt="Cattle in Brazil." style="width:40%;height:50%;">
-
-  <p style="font-size:20px";>Data Fixers is a <span class="highlighted">data-driven journalism and consulting project</span> created at the <a href="https://brown.columbia.edu/">The Brown Institute for Media Innovation</a></span> 
-    – a joint initiative between Columbia University and Stanford University.  
-    This project <a href="https://brown.columbia.edu/22-23-magic/">received a 
-    Magic Grant</a> to find data and public records to support investigative journalism in Brazil and is coordinated by <a href="https://www.linkedin.com/in/luizftoledo1/">journalist Luiz Fernando Toledo (Master of Science in Data Journalism 2022). </a> 
-    Data Fixers was awarded twice in 2023 by the Open Knowledge Foundation (Brazil) as the best Brazilian open data project and also for the best investigative project of the year (Amazon Underworld). Read more about 
-    the project <a href="https://www.muckrock.com/news/archives/2022/dec/06/data-fixers-add-ons-case-study/">in this article</a> by Muckrock 
-    and <a href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/">here at the Brown Institute's 
-      website.</a> Contact: lta2119@columbia.edu 
-      
-     
-    
-  
-
-  </p>
-  <br>
-  </div>
-
-  
-  
-  
-</div>
-
-    
-       </div>
-
-       <hr>
-       <div class="content has-text-centered">
-        <p>
-
-         
-        </p>
-      </div>
-     
+    <script src="script.js"></script>
 </body>
-
-
+</html>
 
