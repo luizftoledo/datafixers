@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Autos de Infração - IBAMA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌿 Consulta de Autos de Infração IBAMA</h1>
+            <p>Sistema de consulta aos dados de fiscalização ambiental</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-form">
+                <h2>Buscar Autos de Infração</h2>
+                
+                <div class="form-group">
+                    <label for="searchName">Buscar por Nome/Empresa:</label>
+                    <input type="text" id="searchName" placeholder="Digite o nome da pessoa ou empresa...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="searchDescription">Buscar por Descrição da Infração:</label>
+                    <input type="text" id="searchDescription" placeholder="Digite palavras-chave da infração...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resultLimit">Limite de Resultados:</label>
+                    <select id="resultLimit">
+                        <option value="50">50 resultados</option>
+                        <option value="100" selected>100 resultados</option>
+                        <option value="200">200 resultados</option>
+                        <option value="500">500 resultados</option>
+                    </select>
+                </div>
+                
+                <div class="button-group">
+                    <button id="searchBtn" class="btn btn-primary">🔍 Buscar</button>
+                    <button id="clearBtn" class="btn btn-secondary">🗑️ Limpar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h3>Resultados da Busca</h3>
+                <div class="results-info">
+                    <span id="resultsCount">0 resultados encontrados</span>
+                </div>
+                <div class="action-buttons">
+                    <button id="generateReportBtn" class="btn btn-success">📊 Gerar Relatório</button>
+                    <button id="generateSummaryBtn" class="btn btn-info">📝 Resumo Jornalístico</button>
+                </div>
+            </div>
+            
+            <div class="results-container">
+                <div id="resultsTable"></div>
+            </div>
+        </section>
+
+        <section class="report-section" id="reportSection" style="display: none;">
+            <h3>📊 Relatório Estatístico</h3>
+            <div id="reportContent"></div>
+        </section>
+
+        <section class="summary-section" id="summarySection" style="display: none;">
+            <h3>📝 Resumo Jornalístico</h3>
+            <div id="summaryContent"></div>
+        </section>
+
+        <section class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Carregando...</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Dados fornecidos pelo IBAMA - Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis</p>
+            <p>Sistema desenvolvido para consulta pública dos autos de infração ambiental</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
