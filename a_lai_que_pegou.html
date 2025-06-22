@@ -21,10 +21,89 @@
       justify-content:center;
       padding:1rem 0 .5rem;
     }
-    header img{
-      max-width:40%;
-      height:auto;
+    
+    /* Logo CSS */
+    .logo-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 600px;
+      position: relative;
+      margin: 0 auto;
     }
+    
+    .data-fixers {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: #333;
+      padding: 6px 12px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+    
+    .data-fixers .data-text {
+      text-decoration: underline;
+      text-decoration-color: var(--primary);
+      text-underline-offset: 2px;
+      font-weight: normal;
+    }
+    
+    .data-fixers .fixers-text {
+      font-weight: bold;
+    }
+    
+    .main-title {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .title-a {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #000;
+      line-height: 0.9;
+    }
+    
+    .title-lai {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 0.9;
+    }
+    
+    .subtitle {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #000;
+      line-height: 0.9;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+    
+    .description {
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+    }
+    
+    .description-black {
+      color: #000;
+    }
+    
+    .description-teal {
+      color: var(--primary);
+    }
+    
     h2{
       text-align:center;
       font-size:1.8rem;
@@ -83,21 +162,75 @@
       height:800px;
     }
     @media(max-width:768px){
-      header img{max-width:70%}
+      .logo-container {
+        padding: 1.5rem;
+        max-width: 90%;
+      }
+      
+      .title-a, .title-lai, .subtitle {
+        font-size: 2.5rem;
+      }
+      
+      .description {
+        font-size: 0.9rem;
+      }
+      
+      .data-fixers {
+        font-size: 10px;
+        padding: 4px 8px;
+        top: 10px;
+        right: 10px;
+      }
+      
+      .data-fixers .data-text {
+        text-underline-offset: 1px;
+      }
+      
       a.card{width:90%}
       iframe{height:600px}
+    }
+    
+    @media(max-width:480px){
+      .title-a, .title-lai, .subtitle {
+        font-size: 2rem;
+      }
+      
+      .description {
+        font-size: 0.8rem;
+      }
+      
+      .main-title {
+        flex-direction: column;
+        gap: 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo_lai_que_pegou.png" alt="A LAI que pegou">
+    <div class="logo-container">
+      <div class="data-fixers">
+        <span class="data-text">DATA</span> <span class="fixers-text">FIXERS</span>
+      </div>
+      
+      <div class="main-title">
+        <span class="title-a">A</span>
+        <span class="title-lai">LAI</span>
+      </div>
+      
+      <div class="subtitle">QUE PEGOU</div>
+      
+      <div class="description">
+        <span class="description-black">REPORTAGENS QUE FIZERAM USO DA</span><br>
+        <span class="description-teal">LEI DE ACESSO À INFORMAÇÃO</span>
+      </div>
+    </div>
   </header>
   <h2>Escolha do editor</h2>
   <div class="cards">
     <a class="card" href="https://piaui.folha.uol.com.br/audio-secretario-receita-anvisa-cigarro-eletronico/" target="_blank">
       <span class="tag">revista piauí</span>
-      <h3>“Talvez a gente possa colaborar”</h3>
+      <h3>"Talvez a gente possa colaborar"</h3>
       <p>Resumo: Secretário da Receita Federal pressiona Anvisa para considerar a legalização do cigarro eletrônico.<br><br>Como usou a LAI? a piauí já havia obtido apenas a ata da reunião, mas só conseguiu acesso ao áudio por meio de pedido à Anvisa com base na LAI.</p>
     </a>
     <a class="card" href="https://www.estadao.com.br/politica/rede-anti-fake-news-articulada-pela-secom-de-lula-tem-orcamento-de-r-54-mi-e-banca-viagem-a-cuba/" target="_blank">
@@ -112,7 +245,8 @@
     </a>
   </div>
   <div class="iframe-wrapper">
-    <iframe src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=A%20LAI%20que%20pegou%3A%20men%C3%A7%C3%B5es%20da%20imprensa%20%C3%A0%20Lei%20de%20Acesso%20%C3%A0%20Informa%C3%A7%C3%A3o&l=https%3A%2F%2Fdhg1h5j42swfq.cloudfront.net%2F2020%2F09%2F13080512%2Finfo.png&ta=j&sb=y" tabindex="-1"></iframe>
-  </div>
-</body>
-</html>
+    <iframe width="670" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=Reportagens%20recentes%20que%20citam%20a%20LAI&cs=m&ta=c" frameborder="0" tabindex="-1"></iframe>
+    </html>
+
+
+

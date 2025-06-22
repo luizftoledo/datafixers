@@ -1,0 +1,157 @@
+/* Logo "A LAI QUE PEGOU" - Componente CSS Reutilizável */
+
+.lai-logo {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lai-logo .data-fixers {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: 2px solid #2ec4b6;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.lai-logo .data-fixers .data-text {
+  text-decoration: underline;
+  text-decoration-color: #2ec4b6;
+  text-underline-offset: 2px;
+  font-weight: normal;
+}
+
+.lai-logo .data-fixers .fixers-text {
+  font-weight: bold;
+}
+
+.lai-logo .main-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lai-logo .title-a {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 0.9;
+}
+
+.lai-logo .title-lai {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #2ec4b6;
+  line-height: 0.9;
+}
+
+.lai-logo .subtitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 0.9;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.lai-logo .description {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.lai-logo .description-black {
+  color: #000;
+}
+
+.lai-logo .description-teal {
+  color: #2ec4b6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lai-logo {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  
+  .lai-logo .title-a, 
+  .lai-logo .title-lai, 
+  .lai-logo .subtitle {
+    font-size: 2.5rem;
+  }
+  
+  .lai-logo .description {
+    font-size: 0.9rem;
+  }
+  
+  .lai-logo .data-fixers {
+    font-size: 10px;
+    padding: 4px 8px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .lai-logo .data-fixers .data-text {
+    text-underline-offset: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lai-logo .title-a, 
+  .lai-logo .title-lai, 
+  .lai-logo .subtitle {
+    font-size: 2rem;
+  }
+  
+  .lai-logo .description {
+    font-size: 0.8rem;
+  }
+  
+  .lai-logo .main-title {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Versão compacta para headers */
+.lai-logo.compact {
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.lai-logo.compact .title-a,
+.lai-logo.compact .title-lai,
+.lai-logo.compact .subtitle {
+  font-size: 2rem;
+}
+
+.lai-logo.compact .description {
+  font-size: 0.8rem;
+}
+
+.lai-logo.compact .data-fixers {
+  font-size: 10px;
+  padding: 4px 8px;
+  top: 8px;
+  right: 8px;
+}
+
+.lai-logo.compact .data-fixers .data-text {
+  text-underline-offset: 1px;
+}
+
