@@ -2,25 +2,117 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Leis de Acesso à Informação em Notícias</title>
+  <title>A LAI que pegou – Destaques</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    :root{
+      --primary:#2ec4b6;
+      --bg:#f4f4f4;
+      --shadow:0 2px 12px rgba(0,0,0,.08);
     }
-    iframe {
-      border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:#111;
+    }
+    header{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      padding:1rem 0 .5rem;
+    }
+    header img{
+      max-width:40%;
+      height:auto;
+    }
+    h2{
+      text-align:center;
+      font-size:1.8rem;
+      margin:1rem 0 2rem;
+    }
+    .cards{
+      display:flex;
+      justify-content:center;
+      gap:2rem;
+      flex-wrap:wrap;
+      margin:0 auto 3rem;
+      max-width:1200px;
+      padding:0 1rem;
+    }
+    a.card{
+      text-decoration:none;
+      color:inherit;
+      background:#fff;
+      width:30%;
+      min-width:320px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      padding:1.5rem;
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+    .tag{
+      display:inline-block;
+      background:var(--primary);
+      color:#fff;
+      font-weight:bold;
+      font-size:.75rem;
+      padding:.25rem .6rem;
+      border-radius:4px;
+      text-transform:uppercase;
+    }
+    a.card h3{
+      font-size:1.25rem;
+      line-height:1.3;
+    }
+    a.card p{
+      font-size:1rem;
+      line-height:1.45;
+    }
+    .iframe-wrapper{
+      display:flex;
+      justify-content:center;
+      padding-bottom:3rem;
+    }
+    iframe{
+      border:none;
+      box-shadow:var(--shadow);
+      width:90%;
+      max-width:900px;
+      height:800px;
+    }
+    @media(max-width:768px){
+      header img{max-width:70%}
+      a.card{width:90%}
+      iframe{height:600px}
     }
   </style>
 </head>
 <body>
-  <iframe width="670" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=A%20LAI%20que%20pegou%3A%20men%C3%A7%C3%B5es%20da%20imprensa%20%C3%A0%20Lei%20de%20Acesso%20%C3%A0%20Informa%C3%A7%C3%A3o&l=https%3A%2F%2Fdhg1h5j42swfq.cloudfront.net%2F2020%2F09%2F13080512%2Finfo.png&ta=j&sb=y" frameborder="0" tabindex="-1"></iframe>
+  <header>
+    <img src="logo_lai_que_pegou.png" alt="A LAI que pegou">
+  </header>
+  <h2>Escolha do editor</h2>
+  <div class="cards">
+    <a class="card" href="https://piaui.folha.uol.com.br/audio-secretario-receita-anvisa-cigarro-eletronico/" target="_blank">
+      <span class="tag">revista piauí</span>
+      <h3>“Talvez a gente possa colaborar”</h3>
+      <p>Resumo: Secretário da Receita Federal pressiona Anvisa para considerar a legalização do cigarro eletrônico.<br><br>Como usou a LAI? a piauí já havia obtido apenas a ata da reunião, mas só conseguiu acesso ao áudio por meio de pedido à Anvisa com base na LAI.</p>
+    </a>
+    <a class="card" href="https://www.estadao.com.br/politica/rede-anti-fake-news-articulada-pela-secom-de-lula-tem-orcamento-de-r-54-mi-e-banca-viagem-a-cuba/" target="_blank">
+      <span class="tag">estadão</span>
+      <h3>Rede anti-fake news articulada pela Secom de Lula tem orçamento de R$ 54 mi e banca viagem a Cuba</h3>
+      <p>Resumo: Rede criada para combater desinformação tem orçamento de R$ 54,1 mi e já recebeu R$ 10,5 mi, mas pouco divulga.<br><br>Como usou a LAI? documento obtido via LAI mostra interlocução com a Secom e autoindicação de diretor para bolsa.</p>
+    </a>
+    <a class="card" href="https://reporterbrasil.org.br/2025/06/anvisa-libera-revestimento-lata-bebida-risco-saude/" target="_blank">
+      <span class="tag">repórter brasil</span>
+      <h3>Anvisa libera revestimento de lata de bebida contestado por risco à saúde</h3>
+      <p>Resumo: A Anvisa liberou o uso do Bisfenol F mesmo com estudos que indicam riscos hormonais.<br><br>Como usou a LAI? atas obtidas via LAI mostraram que a Anvisa liderou o processo desde 2022.</p>
+    </a>
+  </div>
+  <div class="iframe-wrapper">
+    <iframe src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=A%20LAI%20que%20pegou%3A%20men%C3%A7%C3%B5es%20da%20imprensa%20%C3%A0%20Lei%20de%20Acesso%20%C3%A0%20Informa%C3%A7%C3%A3o&l=https%3A%2F%2Fdhg1h5j42swfq.cloudfront.net%2F2020%2F09%2F13080512%2Finfo.png&ta=j&sb=y" tabindex="-1"></iframe>
+  </div>
 </body>
 </html>
