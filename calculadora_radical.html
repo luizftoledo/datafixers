@@ -1,0 +1,238 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Radical Futurista</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('images/shadow-about.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            animation: fireAnimation 2s infinite alternate;
+        }
+        @keyframes fireAnimation {
+            0% {text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;}
+            100% {text-shadow: 0 0 20px #ff8000, 0 0 30px #ff8000, 0 0 40px #ff8000;}
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            padding: 10px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000000;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        button {
+            padding: 10px;
+            background-color: #ff0000;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff8000;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        button:hover {
+            background-color: #ff8000;
+        }
+        #resultado {
+            margin-top: 20px;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ff0000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ff0000;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CALCULADORA RADICAL</h1>
+        <form id="calculadora">
+            <label for="valorInicial">Valor Inicial (R$):</label>
+            <input type="number" id="valorInicial" required min="0" step="0.01">
+
+            <label for="depositoMensal">Valor do depósito mensal (R$):</label>
+            <input type="number" id="depositoMensal" min="0" step="0.01" value="0">
+
+            <label for="idade">Sua idade atual:</label>
+            <input type="number" id="idade" required min="0" step="1">
+
+            <label for="mesInicio">Mês de Início:</label>
+            <select id="mesInicio">
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+            </select>
+
+            <label for="anoInicio">Ano de Início:</label>
+            <input type="number" id="anoInicio" required min="2000" step="1">
+
+            <label for="mesFim">Mês de Fim:</label>
+            <select id="mesFim">
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+            </select>
+
+            <label for="anoFim">Ano de Fim:</label>
+            <input type="number" id="anoFim" required min="2000" step="1">
+
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function formatarNumero(numero) {
+            return numero.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function calcularRendimento(valorInicial, depositoMensal, idade, mesInicio, anoInicio, mesFim, anoFim) {
+            const taxaMensal = 0.008; // 0,8% ao mês
+            let saldo = valorInicial;
+            let resultados = [];
+
+            let dataAtual = new Date(anoInicio, mesInicio);
+            const dataFim = new Date(anoFim, mesFim);
+
+            while (dataAtual <= dataFim) {
+                saldo += depositoMensal;
+                let rendimentoMensal = saldo * taxaMensal;
+                saldo += rendimentoMensal;
+
+                let idadeAtual = idade + (dataAtual.getFullYear() - anoInicio) + (dataAtual.getMonth() - mesInicio) / 12;
+
+                resultados.push({
+                    mes: dataAtual.toLocaleString('pt-BR', { month: 'long' }),
+                    ano: dataAtual.getFullYear(),
+                    valorOriginal: valorInicial,
+                    depositoMensal: depositoMensal,
+                    rendimentoMensal: rendimentoMensal,
+                    saldoFinal: saldo,
+                    idade: Math.floor(idadeAtual)
+                });
+
+                dataAtual.setMonth(dataAtual.getMonth() + 1);
+            }
+
+            return resultados;
+        }
+
+        document.getElementById('calculadora').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const valorInicial = parseFloat(document.getElementById('valorInicial').value);
+            const depositoMensal = parseFloat(document.getElementById('depositoMensal').value);
+            const idade = parseInt(document.getElementById('idade').value);
+            const mesInicio = parseInt(document.getElementById('mesInicio').value);
+            const anoInicio = parseInt(document.getElementById('anoInicio').value);
+            const mesFim = parseInt(document.getElementById('mesFim').value);
+            const anoFim = parseInt(document.getElementById('anoFim').value);
+
+            const resultados = calcularRendimento(valorInicial, depositoMensal, idade, mesInicio, anoInicio, mesFim, anoFim);
+            
+            let html = '<h2>Resultados:</h2>';
+            html += '<table border="1" cellpadding="5">';
+            html += '<tr><th>Mês</th><th>Ano</th><th>Idade</th><th>Valor Original</th><th>Depósito Mensal</th><th>Rendimento Mensal</th><th>Valor Acumulado</th></tr>';
+            
+            resultados.forEach(res => {
+                html += `<tr>
+                    <td>${res.mes}</td>
+                    <td>${res.ano}</td>
+                    <td>${res.idade}</td>
+                    <td>R$ ${formatarNumero(res.valorOriginal)}</td>
+                    <td>R$ ${formatarNumero(res.depositoMensal)}</td>
+                    <td>R$ ${formatarNumero(res.rendimentoMensal)}</td>
+                    <td>R$ ${formatarNumero(res.saldoFinal)}</td>
+                </tr>`;
+            });
+            
+            html += '</table>';
+            
+            document.getElementById('resultado').innerHTML = html;
+            document.getElementById('resultado').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
