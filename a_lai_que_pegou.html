@@ -3,478 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A LAI que pegou - Reportagens que usaram a Lei de Acesso à Informação</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary: #2ec4b6;
-      --secondary: #4ecdc4;
-      --accent: #ff6b6b;
-      --text-primary: #2d3748;
-      --text-secondary: #4a5568;
-      --text-muted: #718096;
-      --bg-primary: #f7fafc;
-      --bg-secondary: #edf2f7;
-      --card-bg: rgba(255, 255, 255, 0.9);
-      --border-color: rgba(255, 255, 255, 0.2);
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-      color: var(--text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    /* Header */
-    header {
-      padding: 3rem 0;
-      text-align: center;
-      background: linear-gradient(135deg, rgba(46, 196, 182, 0.1), rgba(78, 205, 196, 0.1));
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .logo-container {
-      position: relative;
-      display: inline-block;
-      padding: 2rem;
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border-color);
-    }
-
-    .logo-text {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-
-    .logo-text .a-text {
-      color: var(--text-primary);
-    }
-
-    .logo-text .lai-text {
-      color: var(--primary);
-    }
-
-    .logo-text .que-pegou-text {
-      color: var(--text-primary);
-    }
-
-    .description {
-      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-      color: var(--text-secondary);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .description-teal {
-      color: var(--primary);
-    }
-
-    /* Content Sections */
-    .content-section {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .info-card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      box-shadow: var(--shadow-md);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border-color);
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin: 3rem 0 2rem 0;
-      color: var(--text-primary);
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      border-radius: 2px;
-    }
-
-    /* Nova Galeria de Destaques */
-    .highlights-section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      overflow: hidden;
-    }
-
-    .highlights-container {
-      position: relative;
-      width: 100%;
-      height: auto;
-      min-height: 500px;
-    }
-
-    .highlights-track {
-      display: flex;
-      width: 400%; /* 4 cards × 100% */
-      height: 100%;
-      transition: transform 0.4s var(--ease);
-    }
-
-    .highlight-card {
-      width: 25%; /* 100% / 4 cards */
-      flex-shrink: 0;
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
-
-    .highlight-content {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-md);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border-color);
-      height: 100%;
-      min-height: 450px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .highlight-tag {
-      background: var(--primary);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--radius-md);
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      align-self: flex-start;
-    }
-
-    .highlight-title {
-      margin: 0 0 1.5rem 0;
-      font-size: 1.6rem;
-      font-weight: 700;
-      line-height: 1.3;
-      flex-grow: 0;
-    }
-
-    .highlight-title a {
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: color 0.3s var(--ease);
-      word-wrap: break-word;
-      hyphens: auto;
-    }
-
-    .highlight-title a:hover {
-      color: var(--primary);
-    }
-
-    .highlight-text {
-      margin: 1.2rem 0;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-
-    .highlight-term {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .highlight-navigation {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem; /* Ajustado para ficar antes dos slides */
-      padding: 1rem 0;
-    }
-
-    .nav-btn {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      border: none;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      font-size: 1.3rem;
-      cursor: pointer;
-      transition: all 0.3s var(--ease);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-sm);
-      user-select: none;
-    }
-
-    .nav-btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .nav-btn:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .highlight-dots {
-      display: flex;
-      gap: 0.6rem;
-    }
-
-    .dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: rgba(46, 196, 182, 0.3);
-      cursor: pointer;
-      transition: all 0.3s var(--ease);
-    }
-
-    .dot.active {
-      background: var(--primary);
-      transform: scale(1.2);
-    }
-
-    .dot:hover {
-      background: var(--secondary);
-    }
-
-    /* Course Section */
-    .course-card {
-      background: linear-gradient(135deg, rgba(46, 196, 182, 0.1), rgba(78, 205, 196, 0.1));
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border-color);
-    }
-
-    .course-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .course-description {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    .course-link {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: var(--radius-md);
-      font-weight: 600;
-      transition: all 0.3s var(--ease);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .course-link:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    /* Iframe Section */
-    .iframe-wrapper {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .iframe-wrapper iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, var(--text-primary), #1a202c);
-      color: white;
-      padding: 3rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    .footer-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    .footer-content p {
-      margin: 0.8rem 0;
-      font-size: 1rem;
-    }
-
-    .footer-content a {
-      color: var(--secondary);
-      text-decoration: none;
-      transition: color 0.3s var(--ease);
-    }
-
-    .footer-content a:hover {
-      color: white;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .content-section {
-        margin: 2rem auto;
-      }
-
-      .highlights-container {
-        min-height: 550px;
-      }
-
-      .highlight-content {
-        padding: 2rem;
-        min-height: 500px;
-      }
-
-      .highlight-title {
-        font-size: 1.4rem;
-      }
-
-      .highlight-text {
-        font-size: 1rem;
-      }
-
-      .nav-btn {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
-      }
-
-      .highlight-navigation {
-        gap: 1.5rem;
-      }
-
-      .course-card {
-        padding: 2rem;
-      }
-
-      .iframe-wrapper iframe {
-        height: 500px;
-      }
-
-      /* Mobile Swipe Support */
-      .highlights-track {
-        transition: transform 0.3s var(--ease);
-      }
-
-      .highlights-section {
-        touch-action: pan-y;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .highlights-container {
-        min-height: 600px;
-      }
-
-      .highlight-content {
-        padding: 1.5rem;
-        min-height: 550px;
-      }
-
-      .highlight-title {
-        font-size: 1.3rem;
-      }
-
-      .highlight-text {
-        font-size: 0.95rem;
-      }
-
-      .nav-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 1.1rem;
-      }
-
-      .highlight-navigation {
-        gap: 1rem;
-      }
-
-      .course-card {
-        padding: 1.5rem;
-      }
-
-      .iframe-wrapper iframe {
-        height: 400px;
-      }
-    }
-  </style>
+  <title>A LAI que pegou – Reportagens que usaram a Lei de Acesso à Informação</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
-  <header>
+  <!-- Popup banner using checkbox to close -->
+  <input type="checkbox" id="hide-banner" hidden>
+  <div class="banner-overlay">
+    <div class="banner-content">
+      <h3>Curso: Aprenda a usar a LAI na prática</h3>
+      <p>De 28 de agosto a 9 de setembro de 2025, participe de um curso online com Ju Faddul e Luiz Fernando Toledo. Serão quatro encontros sobre transparência (LAI), como vender pautas, como financiar investigações e como fazer boas entrevistas nas ruas.</p>
+      <a href="https://www.sympla.com.br/evento-online/jornalismo-investigativo-das-planilhas-as-ruas/3051244" target="_blank" class="btn-primary">Saiba mais e inscreva‑se</a>
+      <label for="hide-banner" class="close-banner">×</label>
+    </div>
+  </div>
+
+  <header class="lai-header">
     <div class="logo-container">
       <div class="logo-text">
-        <span class="a-text">A </span><span class="lai-text">LAI</span><br>
+        <span class="a-text">A&nbsp;</span><span class="lai-text">LAI</span><br>
         <span class="que-pegou-text">QUE PEGOU</span>
       </div>
       <div class="description">
@@ -483,234 +31,59 @@
       </div>
     </div>
   </header>
-  
+
   <div class="content-section">
     <div class="info-card">
       <p>
-        A <strong>LAI</strong> é, como costumamos dizer, uma lei que "pegou". Desde que entrou em vigor, <strong>em 2012,</strong> já foram registrados <strong>mais de 1 milhão de pedidos de informação</strong>. Acompanhe aqui alguns exemplos de como a imprensa tem utilizado essa legislação.      </p>
+        A <strong>LAI</strong> é, como costumamos dizer, uma lei que "pegou". Desde que entrou em vigor, <strong>em 2012</strong>, já foram registrados <strong>mais de 1&nbsp;milhão de pedidos de informação</strong>. Acompanhe aqui alguns exemplos de como a imprensa tem utilizado essa legislação.
+      </p>
     </div>
   </div>
-  
+
   <h2 class="section-title">Destaques</h2>
-  
-  <div class="highlights-section">
-    <div class="highlight-navigation">
-      <button class="nav-btn prev-btn" id="prevBtn">‹</button>
-      <div class="highlight-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-        <span class="dot" data-slide="3"></span>
-      </div>
-      <button class="nav-btn next-btn" id="nextBtn">›</button>
+  <div class="highlight-simple">
+    <!-- Metrópoles highlight -->
+    <div class="highlight-card-simple">
+      <div class="highlight-tag">METRÓPOLES</div>
+      <h3 class="highlight-title"><a href="https://www.metropoles.com/materias-especiais/assedio-sexual-universidades" target="_blank"><strong>“O assédio sexual nos câmpus em 128 atos”</strong> ↗</a></h3>
+      <p class="highlight-text"><strong>Resumo:</strong> Reportagem analisou 128 casos com punições por assédio sexual em universidades e institutos federais, envolvendo 132 acusados e ao menos 265 vítimas.</p>
+      <p class="highlight-text"><strong>Como usou a LAI?</strong> Foram feitos 156 pedidos de acesso a PADs (processos administrativos disciplinares) junto a universidades e institutos. Só entraram no levantamento os casos com punição. Algumas respostas exigiram recursos ou múltiplos pedidos.</p>
     </div>
-    <div class="highlights-container">
-      <div class="highlights-track" id="highlightsTrack">
-        
-        <div class="highlight-card">
-          <div class="highlight-content">
-            <div class="highlight-tag">REVISTA PIAUÍ</div>
-            <h3 class="highlight-title">
-              <a href="https://piaui.folha.uol.com.br/audio-secretario-receita-anvisa-cigarro-eletronico/" target="_blank">
-                "Talvez a gente possa colaborar" ↗
-              </a>
-            </h3>
-            <p class="highlight-text">
-              <span class="highlight-term">📄 Resumo:</span> Secretário da Receita Federal pressiona Anvisa para considerar a legalização do cigarro eletrônico.
-            </p>
-            <p class="highlight-text">
-              <span class="highlight-term">🔍 Como usou a LAI?</span> a piauí já havia obtido apenas a ata da reunião, mas só conseguiu acesso ao áudio por meio de pedido à Anvisa com base na LAI.
-            </p>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="highlight-content">
-            <div class="highlight-tag">ESTADÃO</div>
-            <h3 class="highlight-title">
-              <a href="https://www.estadao.com.br/politica/rede-anti-fake-news-articulada-pela-secom-de-lula-tem-orcamento-de-r-54-mi-e-banca-viagem-a-cuba/" target="_blank">
-                Rede anti-fake news articulada pela Secom de Lula tem orçamento de R$ 54 mi e banca viagem a Cuba ↗
-              </a>
-            </h3>
-            <p class="highlight-text">
-              <span class="highlight-term">📄 Resumo:</span> Rede criada para combater desinformação tem orçamento de R$ 54,1 mi e já recebeu R$ 10,5 mi, mas pouco divulga.
-            </p>
-            <p class="highlight-text">
-              <span class="highlight-term">🔍 Como usou a LAI?</span> documento obtido via LAI mostra interlocução com a Secom e autoindicação de diretor para bolsa.
-            </p>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="highlight-content">
-            <div class="highlight-tag">REPÓRTER BRASIL</div>
-            <h3 class="highlight-title">
-              <a href="https://reporterbrasil.org.br/2025/06/anvisa-libera-revestimento-lata-bebida-risco-saude/" target="_blank">
-                Anvisa libera revestimento de lata de bebida contestado por risco à saúde ↗
-              </a>
-            </h3>
-            <p class="highlight-text">
-              <span class="highlight-term">📄 Resumo:</span> A Anvisa liberou o uso do Bisfenol F mesmo com estudos que indicam riscos hormonais.
-            </p>
-            <p class="highlight-text">
-              <span class="highlight-term">🔍 Como usou a LAI?</span> atas obtidas via LAI mostraram que a Anvisa liderou o processo desde 2022.
-            </p>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="highlight-content">
-            <div class="highlight-tag">BBC BRASIL</div>
-            <h3 class="highlight-title">
-              <a href="https://www.bbc.com/portuguese/articles/c1drv0wkr9ro" target="_blank">
-                Como emenda do 'orçamento secreto' apoiada por Hugo Motta foi parar em obra com produto de trabalho escravo ↗
-              </a>
-            </h3>
-            <p class="highlight-text">
-              <span class="highlight-term">📄 Resumo:</span> Investigação revela que recursos de emenda parlamentar apoiada pelo presidente da Câmara Hugo Motta financiaram obra que utilizou pedras produzidas por trabalhadores em condições análogas à escravidão.
-            </p>
-            <p class="highlight-text">
-              <span class="highlight-term">🔍 Como usou a LAI?</span> BBC identificou origem dos recursos através de resposta da Câmara dos Deputados via LAI, que forneceu ofícios pedindo liberação de recursos da emenda.
-            </p>
-          </div>
-        </div>
-
-      </div>
+    <!-- ESPM highlight -->
+    <div class="highlight-card-simple">
+      <div class="highlight-tag">ESPM JORNALISMO</div>
+      <h3 class="highlight-title"><a href="https://jornalismosp.espm.edu.br/amp/cortes-orcamentarios-e-disputas-governamentais-os-desafios-dos-centros-que-acolhem-e-tratam-animais-silvestres-no-brasil/" target="_blank">Cortes orçamentários e disputas governamentais ↗</a></h3>
+      <p class="highlight-text"><strong>Resumo:</strong> Reportagem mostra como os CETAS, que cuidam de animais silvestres, enfrentam cortes de verba e conflitos entre Ibama e estados.</p>
+      <p class="highlight-text"><strong>Como usou a LAI?</strong> Foram feitos 10 pedidos ao Ibama para obter dados sobre orçamento, apreensões, pessoal e fechamento de unidades.</p>
     </div>
   </div>
 
-  <h2 class="section-title">Reportagens recentes que citaram a LAI (em construção)</h2>
+  <!-- Button linking to full list of highlights -->
+  <div class="highlights-more-btn-wrapper" style="text-align:center; margin: 1.5rem 0;">
+    <a href="lai_highlights.html" class="btn-primary">Veja mais exemplos de como a LAI foi usada</a>
+  </div>
+
+  <h2 class="section-title">Reportagens recentes que citaram a LAI</h2>
+  <!-- Note explaining the source of the links above the recent reports section -->
+  <div class="info-note">
+    <p>Os links abaixo são extraídos automaticamente pelo Google Alerts.</p>
+  </div>
   <div class="iframe-wrapper">
-    <iframe width="670" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=Reportagens%20recentes&cs=m&ta=c" frameborder="0" tabindex="-1"></iframe>  </div>
-  <div class="content-section">
-    <div class="course-card">
-      <h3 class="course-title">📚 Aprenda a usar a LAI na prática (curso gratuito)</h3>
-      <div class="course-content">
-        <h4>Investigue gastos públicos com a Lei de Acesso à Informação</h4>
-        <p class="course-description">
-          Curso completo e gratuito sobre como usar a LAI.
-        </p>
-        <a href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/?fbclid=PAZXh0bgNhZW0CMTEAAafQEwof5ObJeRbr5dKbPIAxI7EB5COSMQgzWzw1foRfYsG1omjbPVZ8KScB9g_aem_0vXnIfP_cTE2jBY3IyUBew" target="_blank" class="course-link">
-          Acessar Curso →
-        </a>
-      </div>
-    </div>
+    <iframe width="670" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=Reportagens%20recentes&cs=m&ta=c" frameborder="0" tabindex="-1"></iframe>
   </div>
-  
-  <footer>
+
+  <!-- Course note after the list of recent reports -->
+  <div class="course-card">
+    <h3>Curso: Aprenda a usar a LAI na prática</h3>
+    <p>De 28 de agosto a 9 de setembro de 2025, participe de um curso online com Ju Faddul e Luiz Fernando Toledo. Serão quatro encontros sobre transparência (LAI), como vender pautas, como financiar investigações e como fazer boas entrevistas nas ruas.</p>
+    <a href="https://www.sympla.com.br/evento-online/jornalismo-investigativo-das-planilhas-as-ruas/3051244" target="_blank" class="btn-primary">Saiba mais e inscreva‑se</a>
+  </div>
+
+  <footer class="lai-footer">
     <div class="footer-content">
       <p>Publicou alguma reportagem com uso da LAI e quer vê-la exposta aqui? Me mande um e-mail contando sobre a apuração, se possível com cópia do pedido de informação registrado: <a href="mailto:lta2119@columbia.edu">lta2119@columbia.edu</a></p>
-      <p>Produzido por Luiz Fernando Toledo | <a href="https://datafixers.org" target="_blank">datafixers.org</a></p>
+      <p>Produzido por Luiz Fernando Toledo | <a href="./index.html">datafixers.org</a></p>
     </div>
   </footer>
-
-  <script>
-    class HighlightGallery {
-      constructor() {
-        this.currentSlide = 0;
-        this.totalSlides = 4;
-        this.track = document.getElementById('highlightsTrack');
-        this.prevBtn = document.getElementById('prevBtn');
-        this.nextBtn = document.getElementById('nextBtn');
-        this.dots = document.querySelectorAll('.dot');
-        
-        this.init();
-      }
-
-      init() {
-        // Button event listeners
-        this.prevBtn.addEventListener('click', () => this.previousSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
-        
-        // Dot event listeners
-        this.dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => this.goToSlide(index));
-        });
-
-        // Touch/swipe support for mobile
-        this.addTouchSupport();
-        
-        // Keyboard support
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') this.previousSlide();
-          if (e.key === 'ArrowRight') this.nextSlide();
-        });
-
-        this.updateGallery();
-      }
-
-      addTouchSupport() {
-        let startX = 0;
-        let startY = 0;
-        let endX = 0;
-        let endY = 0;
-        const minSwipeDistance = 50;
-
-        this.track.addEventListener('touchstart', (e) => {
-          startX = e.touches[0].clientX;
-          startY = e.touches[0].clientY;
-        }, { passive: true });
-
-        this.track.addEventListener('touchend', (e) => {
-          endX = e.changedTouches[0].clientX;
-          endY = e.changedTouches[0].clientY;
-          
-          const deltaX = endX - startX;
-          const deltaY = endY - startY;
-          
-          // Check if horizontal swipe is more significant than vertical
-          if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
-            if (deltaX > 0) {
-              this.previousSlide();
-            } else {
-              this.nextSlide();
-            }
-          }
-        }, { passive: true });
-      }
-
-      goToSlide(slideIndex) {
-        if (slideIndex >= 0 && slideIndex < this.totalSlides) {
-          this.currentSlide = slideIndex;
-          this.updateGallery();
-        }
-      }
-
-      nextSlide() {
-        if (this.currentSlide < this.totalSlides - 1) {
-          this.currentSlide++;
-          this.updateGallery();
-        }
-      }
-
-      previousSlide() {
-        if (this.currentSlide > 0) {
-          this.currentSlide--;
-          this.updateGallery();
-        }
-      }
-
-      updateGallery() {
-        // Move the track
-        const translateX = -this.currentSlide * 25; // 25% per slide (100% / 4 slides)
-        this.track.style.transform = `translateX(${translateX}%)`;
-        
-        // Update navigation buttons
-        this.prevBtn.disabled = this.currentSlide === 0;
-        this.nextBtn.disabled = this.currentSlide === this.totalSlides - 1;
-        
-        // Update dots
-        this.dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === this.currentSlide);
-        });
-      }
-    }
-
-    // Initialize gallery when DOM is loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      new HighlightGallery();
-    });
-  </script>
 </body>
 </html>
-
