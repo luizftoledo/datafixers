@@ -48,7 +48,7 @@ body {
 .nav-links { list-style: none; display: flex; gap: 1.5rem; justify-content: center; flex: 1; }
 .nav-links a { color: var(--text-primary); text-decoration: none; font-weight: 700; padding: .25rem 0; font-size: 1.2rem; }
 .nav-links a:hover { color: var(--primary); text-decoration: underline; }
-.nav-toggle, .theme-toggle { background: var(--bg-light); color: var(--text-primary); border: 1.5px solid var(--border); border-radius: 999px; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; position: relative; }
+.nav-toggle, .theme-toggle { background: var(--bg-light); color: var(--text-primary); border: 1.5px solid var(--border); border-radius: 999px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; position: relative; }
 .nav-toggle i, .theme-toggle i { color: inherit; font-size: 1rem; }
 .nav-toggle:hover, .theme-toggle:hover { background: var(--primary); color: #0b0f14; }
 /* custom hamburger icon */
@@ -59,7 +59,6 @@ body {
 .nav-toggle .hamburger .bar:nth-child(3) { top: 10px; }
 
 @media (max-width: 768px) {
-  .nav-toggle, .theme-toggle { display: inline-flex; }
   .nav-links { position: fixed; left: 1rem; right: 1rem; top: 56px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: .75rem; display: none; flex-direction: column; gap: .75rem; }
   .nav-links a { font-size: 1.05rem; }
   .nav-links.open { display: flex; }
