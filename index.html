@@ -8,8 +8,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6AXFs8FZQqz/SEKI+0i0jpa5IJl0ue1bDkMg7KGUsgxFykWG/FsdLrJhWuZ5o7YkZuT4BwrVaewk5ujhP0UA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
+  <script>
+    (function() {
+      try {
+        const stored = localStorage.getItem('df-theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
+<nav class="top-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">Data Fixers</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Stories</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A LAI que pegou</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+  </div>
+  </nav>
 <!-- Popup banner for home page (English) -->
 <input hidden="" id="hide-banner-home" type="checkbox"/>
 <div class="banner-overlay">
@@ -597,5 +620,24 @@
 <footer class="site-footer">
 <p>© 2025 Data Fixers. All rights reserved.</p>
 </footer>
+<script>
+  // mobile menu
+  (function(){
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle && links) toggle.addEventListener('click', ()=> links.classList.toggle('open'));
+  })();
+  // theme toggle
+  (function(){
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    btn.addEventListener('click', ()=>{
+      const cur = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = cur === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('df-theme', next); } catch(e) {}
+    });
+  })();
+</script>
 </body>
 </html>
