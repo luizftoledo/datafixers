@@ -146,9 +146,9 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 }
 
 /* scroll indicator */
-.scroll-indicator { display: inline-flex; margin-top: 1rem; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); align-items: center; justify-content: center; color: var(--text-secondary); }
+.scroll-indicator { display: inline-flex; margin: 1rem auto 0; width: 32px; height: 52px; border-radius: 999px; border: 2px solid var(--border); align-items: flex-start; justify-content: center; color: var(--text-secondary); padding-top: 6px; position: relative; }
+.scroll-indicator::after { content: '▾'; position: absolute; bottom: 6px; font-size: 1.2rem; color: currentColor; }
 .scroll-indicator:hover { color: var(--primary); border-color: var(--primary); }
-.scroll-indicator i { font-size: 1.2rem; }
 
 /* Increase tagline size to occupy more space */
 .hero-section .tagline {
