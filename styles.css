@@ -45,7 +45,7 @@ body {
   padding: 0.75rem 0;
 }
 .brand { font-weight: 700; color: var(--text-primary); text-decoration: none; }
-.nav-links { list-style: none; display: flex; gap: 1rem; }
+.nav-links { list-style: none; display: flex; gap: 1.25rem; justify-content: center; flex: 1; }
 .nav-links a { color: var(--text-primary); text-decoration: none; font-weight: 500; }
 .nav-toggle, .theme-toggle { background: transparent; border: 1px solid var(--border); border-radius: 999px; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; }
 
@@ -91,7 +91,7 @@ html[data-theme='dark'] {
 }
 .hero-section .site-name {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .hero-section .highlight {
   color: var(--primary);
@@ -156,6 +156,11 @@ html[data-theme='dark'] {
   /* use card background for consistency within the hero */
   background: var(--card-bg);
 }
+
+/* affiliations row under hero */
+.affiliations { margin-top: 1.25rem; display: grid; gap: .5rem; }
+.aff-badge { font-size: .95rem; color: var(--text-secondary); }
+.aff-badge a { color: var(--primary); text-decoration: underline; }
 .nav-item:hover {
   background: var(--primary);
   color: #fff;
@@ -642,14 +647,12 @@ html[data-theme='dark'] {
   margin-bottom: 1rem;
 }
 .about-container {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   gap: 2rem;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: start;
 }
 .about-text {
-  flex: 2;
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -659,24 +662,21 @@ html[data-theme='dark'] {
   border-radius: var(--radius);
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow-sm);
-  text-align: center;
+  text-align: left;
 }
 .author-card {
-  /* make the author card narrower and aligned to the right */
-  flex: 1;
-  max-width: 250px;
-  background: var(--bg-light);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-md);
-  text-align: center;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
 }
 .author-image {
-  width: 100%;
-  max-width: 180px;
+  width: 120px;
   height: auto;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
+  border-radius: var(--radius);
+  margin: 0 0 1rem 0;
 }
 .author-title {
   font-weight: 600;
@@ -945,9 +945,7 @@ html[data-theme='dark'] {
   .laibot-wrapper {
     flex-direction: column;
   }
-  .about-container {
-    flex-direction: column;
-  }
+  .about-container { grid-template-columns: 1fr; }
   .video-item iframe {
     height: 240px;
   }

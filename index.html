@@ -12,10 +12,11 @@
     (function() {
       try {
         const stored = localStorage.getItem('df-theme');
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = stored || (prefersDark ? 'dark' : 'light');
+        const theme = stored || 'light';
         document.documentElement.setAttribute('data-theme', theme);
-      } catch(e) {}
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
     })();
   </script>
 </head>
@@ -28,6 +29,7 @@
       <li><a href="#projects">Stories</a></li>
       <li><a href="#dashboards">Dashboards</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer">LAIBOT</a></li>
       <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A LAI que pegou</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
@@ -69,6 +71,10 @@
 <h3>About</h3>
 </a>
 </div>
+        <div class="affiliations">
+          <div class="aff-badge"><i class="fas fa-trophy"></i> Best open data project (2023) – Open Knowledge Brazil</div>
+          <div class="aff-badge"><i class="fas fa-university"></i> <a href="https://brown.columbia.edu/22-23-magic/" target="_blank" rel="noopener noreferrer">Awarded</a> US$ 100,000 grant in 2022/2023 – Brown Institute & Columbia University</div>
+        </div>
 </div>
 </div>
 </header>
@@ -76,11 +82,7 @@
 <!-- L-AI Bot section -->
 <section class="lai-header">
 <div class="logo-container">
-<h1 class="logo-text">
-<span class="a-text">A</span>
-<span class="lai-text">LAI</span>
-<span class="que-pegou-text">que pegou</span>
-</h1>
+<h1 class="logo-text">Public records in the media</h1>
 <p class="description" style="margin-bottom: 20px;">A collection of journalistic investigations that used Brazil’s Access to Information Law.</p>
 <a class="btn-primary" href="https://datafixers.org/a_lai_que_pegou" target="_blank">Explore the project</a>
 </div>
