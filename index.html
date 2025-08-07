@@ -23,13 +23,13 @@
 <body>
 <nav class="top-nav">
   <div class="container nav-inner">
-    <a class="brand" href="#top">Data Fixers</a>
+    <a class="brand" href="#top">Datafixers.org</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#projects">Stories</a></li>
       <li><a href="#dashboards">Dashboards</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer">LAIBOT</a></li>
+      <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer">L‑AI Bot</a></li>
       <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A LAI que pegou</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
@@ -82,7 +82,11 @@
 <!-- L-AI Bot section -->
 <section class="lai-header">
 <div class="logo-container">
-<h1 class="logo-text">Public records in the media</h1>
+<h1 class="logo-text">
+  <span class="a-text">A</span>
+  <span class="lai-text">LAI</span>
+  <span class="que-pegou-text">que pegou</span>
+</h1>
 <p class="description" style="margin-bottom: 20px;">A collection of journalistic investigations that used Brazil’s Access to Information Law.</p>
 <a class="btn-primary" href="https://datafixers.org/a_lai_que_pegou" target="_blank">Explore the project</a>
 </div>
@@ -115,55 +119,27 @@
         Our commitment to transparency goes beyond data analysis. We actively promote public accountability
         through educational content and advocacy for open government initiatives.
       </p>
-<div class="video-slider">
-<!-- radio selectors for videos -->
-<input checked="" id="video1" name="video-slide" type="radio"/>
-<input id="video2" name="video-slide" type="radio"/>
-<input id="video3" name="video-slide" type="radio"/>
-<input id="video4" name="video-slide" type="radio"/>
-<input id="video5" name="video-slide" type="radio"/>
-<div class="video-slides">
-<!-- slide 1 -->
-<div class="video-item vi1">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/urDaCInPdvY?si=8kJDdMpYZq-Si5V2"></iframe>
-<div class="video-nav">
-<label class="prev" for="video5">‹ Previous</label>
-<label class="next" for="video2">Next ›</label>
-</div>
-</div>
-<!-- slide 2 -->
-<div class="video-item vi2">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/dw5q9ZXMaWE?start=3"></iframe>
-<div class="video-nav">
-<label class="prev" for="video1">‹ Previous</label>
-<label class="next" for="video3">Next ›</label>
-</div>
-</div>
-<!-- slide 3 -->
-<div class="video-item vi3">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/j9zzNg8N-BA?start=2503"></iframe>
-<div class="video-nav">
-<label class="prev" for="video2">‹ Previous</label>
-<label class="next" for="video4">Next ›</label>
-</div>
-</div>
-<!-- slide 4 -->
-<div class="video-item vi4">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/igNxMWtnW2Q"></iframe>
-<div class="video-nav">
-<label class="prev" for="video3">‹ Previous</label>
-<label class="next" for="video5">Next ›</label>
-</div>
-</div>
-<!-- slide 5 -->
-<div class="video-item vi5">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/lO7l93wyoHI?start=3521"></iframe>
-<div class="video-nav">
-<label class="prev" for="video4">‹ Previous</label>
-<label class="next" for="video1">Next ›</label>
-</div>
-</div>
-</div>
+<div class="video-grid">
+  <a class="video-card" href="https://www.youtube.com/watch?v=urDaCInPdvY" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/urDaCInPdvY/hqdefault.jpg" alt="GIJC panel"/>
+    <span class="video-title">GIJC panel on environmental crimes</span>
+  </a>
+  <a class="video-card" href="https://www.youtube.com/watch?v=dw5q9ZXMaWE" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/dw5q9ZXMaWE/hqdefault.jpg" alt="FIL Lisbon talk"/>
+    <span class="video-title">Talk at FIL Lisbon</span>
+  </a>
+  <a class="video-card" href="https://www.youtube.com/watch?v=j9zzNg8N-BA" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/j9zzNg8N-BA/hqdefault.jpg" alt="Training session"/>
+    <span class="video-title">Training session</span>
+  </a>
+  <a class="video-card" href="https://www.youtube.com/watch?v=igNxMWtnW2Q" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/igNxMWtnW2Q/hqdefault.jpg" alt="Transparency talk"/>
+    <span class="video-title">Transparency talk</span>
+  </a>
+  <a class="video-card" href="https://www.youtube.com/watch?v=lO7l93wyoHI" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/lO7l93wyoHI/hqdefault.jpg" alt="Panel discussion"/>
+    <span class="video-title">Panel discussion</span>
+  </a>
 </div>
 <!-- New grid layout for stories -->
 <!-- Section heading for projects and stories moved above the grid -->
