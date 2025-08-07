@@ -137,6 +137,12 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   margin: 0 auto;
 }
 
+/* Mobile: keep tagline within viewport width */
+@media (max-width: 480px) {
+  .hero-section .tagline { font-size: 1.35rem; line-height: 1.35; max-width: 90ch; }
+  .hero-section .site-name { font-size: 2rem; }
+}
+
 /* Navigation grid */
 .nav-section {
   background: var(--card-bg);
