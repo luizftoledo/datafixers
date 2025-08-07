@@ -53,6 +53,10 @@ body {
 .nav-toggle { display: none; }
 .theme-toggle { display: inline-flex; }
 .nav-toggle i, .theme-toggle i { color: inherit; font-size: 1.2rem; }
+/* Always-visible theme icon (emoji fallback) */
+.theme-toggle i { display: none; }
+.theme-toggle::before { content: '🌙'; font-size: 1.15rem; line-height: 1; }
+html[data-theme='dark'] .theme-toggle::before { content: '☀️'; }
 .nav-toggle:hover, .theme-toggle:hover { background: var(--primary); color: #0b0f14; }
 /* custom hamburger icon */
 .nav-toggle .hamburger { display: inline-block; width: 18px; height: 12px; position: relative; }
