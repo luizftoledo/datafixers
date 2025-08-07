@@ -148,7 +148,7 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 
 /* scroll indicator */
 .hero-section { position: relative; }
-.scroll-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: inline-block; color: var(--text-secondary); text-decoration: none; }
+.scroll-indicator { position: absolute; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); display: inline-block; color: var(--text-secondary); text-decoration: none; z-index: 2; }
 .scroll-indicator::after { content: '▾'; font-size: 1.6rem; line-height: 1; }
 .scroll-indicator:hover { color: var(--primary); }
 
@@ -166,7 +166,7 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 @media (max-width: 480px) {
   .top-nav .brand { display: none; }
   .hero-section { padding: .5rem .75rem 1rem; min-height: 100vh; align-items: flex-start; }
-  .scroll-indicator { bottom: 10px; }
+  .scroll-indicator { bottom: calc(22px + env(safe-area-inset-bottom, 0px)); }
   .hero-card { padding: .75rem; margin-top: .25rem; }
   .hero-section .tagline { font-size: 1rem; line-height: 1.35; max-width: 60ch; overflow-wrap: anywhere; }
   .hero-section .site-name { font-size: 1.5rem; }
