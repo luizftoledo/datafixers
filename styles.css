@@ -163,10 +163,10 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 @media (max-width: 480px) {
   .top-nav .brand { display: none; }
   /* Center hero on mobile and let text occupy more space; account for sticky nav height */
-  .hero-section { padding: .75rem .9rem 1.25rem; min-height: calc(100dvh - 56px); align-items: center; justify-content: center; }
+  .hero-section { padding: 1rem .9rem 1.25rem; min-height: calc(100dvh - 56px); display: grid; place-items: center; }
   .scroll-indicator { bottom: calc(22px + env(safe-area-inset-bottom, 0px)); }
-  .hero-card { padding: 1rem; margin-top: 0; }
-  .hero-section .tagline { font-size: 1.3rem; line-height: 1.65; max-width: 34ch; overflow-wrap: anywhere; }
+  .hero-card { padding: 1.1rem; margin: 0 auto; text-align: center; }
+  .hero-section .tagline { font-size: 1.35rem; line-height: 1.7; max-width: 32ch; margin: 0 auto; text-align: center; }
   .hero-section .site-name { font-size: 1.7rem; }
   .affiliations { margin-top: .5rem; gap: .3rem; }
   .aff-badge { font-size: .9rem; padding: .5rem .75rem; width: 100%; }
