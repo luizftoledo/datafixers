@@ -46,7 +46,7 @@ main.section { margin-top: 1rem; }
 .kv { display:flex; flex-direction:column; gap:.25rem; margin-top:.25rem; }
 .kv b { font-size:.8rem; color: var(--secondary-color); }
 .card .actions { margin-top:.5rem; display:flex; gap:.5rem; }
-.btn { display:inline-block; padding:.5rem .75rem; border-radius:999px; text-decoration:none; background: #e6fffe; color: var(--primary-color); border:1px solid var(--primary-color); font-weight:600; }
+.btn { display:inline-block; padding:.35rem .6rem; border-radius:999px; text-decoration:none; background: #e6fffe; color: var(--primary-color); border:1px solid var(--primary-color); font-weight:600; font-size:.85rem; }
 .btn:hover { background: var(--primary-color); color:#fff; border-color: var(--primary-color); }
 
 .muted { color: var(--muted-text); }
