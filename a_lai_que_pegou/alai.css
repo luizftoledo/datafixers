@@ -11,6 +11,9 @@
 
 body { background: #ffffff; }
 
+/* highlight style to match datafixers teal */
+.highlight { color: var(--primary-color); font-weight: 700; }
+
 .lai-nav {
   position: sticky; top: 0; z-index: 50;
   background: var(--card-bg);
@@ -46,5 +49,15 @@ body { background: #ffffff; }
 .cards-academic .card h3 { font-size: 1rem; }
 .cards-academic .meta { font-size: .8rem; }
 .abstract { color: var(--muted-text); font-size: .9rem; margin-top: .25rem; }
+
+/* Popup styles (overlay) */
+.popup { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.popup.show { display: flex; }
+.popup-content { background: var(--card-bg); padding: 2rem; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.2); width: min(640px, 92vw); text-align: left; }
+.popup-content h2 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: .75rem; }
+.popup-content p { color: var(--text-color); margin-bottom: 1rem; line-height: 1.6; }
+.btn-popup { display:inline-block; padding:.6rem 1.1rem; background: var(--primary-color); color:#fff; border-radius:999px; text-decoration:none; font-weight:700; }
+.btn-popup:hover { filter: brightness(0.95); }
+.icon-btn { border: 1px solid var(--border); background: #fff; color: var(--text-color); border-radius: .5rem; }
 
 
