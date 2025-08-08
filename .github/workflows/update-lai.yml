@@ -1,0 +1,38 @@
+name: Update A LAI que pegou data
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fetcher
+        env:
+          LAI_TARGET_DIR: a_lai_que_pegou/data
+        run: |
+          python3 scripts/fetch_lai.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add a_lai_que_pegou/data/feeds.json a_lai_que_pegou/data/academics.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lai): daily data refresh"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+

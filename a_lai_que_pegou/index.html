@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A LAI que pegou – Reportagens e pesquisa acadêmica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="alai.css">
+  <meta name="description" content="Agregador de textos que citam a Lei de Acesso à Informação (LAI), com foco em reportagens e pesquisas acadêmicas.">
+</head>
+<body>
+  <nav class="lai-nav">
+    <div class="container nav-inner">
+      
+      <ul class="nav-links">
+        <li><button class="tab-btn active" data-tab="news">Reportagens</button></li>
+        <li><button class="tab-btn" data-tab="academics">Pesquisa acadêmica</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Popup sobre o curso (mostra uma vez por sessão) -->
+  <div id="lai-course-popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="laiCourseTitle">
+    <div class="popup-content">
+      <h2 id="laiCourseTitle">Curso: Aprenda a usar a LAI na prática</h2>
+      <p>De 28 de agosto a 9 de setembro de 2025, participe de um curso online com <strong>Ju Faddul</strong> e <strong>Luiz Fernando Toledo</strong>. Serão quatro encontros sobre transparência (LAI), como vender pautas, como financiar investigações e como fazer boas entrevistas nas ruas.</p>
+      <a href="https://www.sympla.com.br/evento-online/jornalismo-investigativo-das-planilhas-as-ruas/3051244?referrer=datafixers.org" target="_blank" rel="noopener noreferrer" class="btn-popup">Saiba mais e inscreva‑se</a>
+      <p style="margin-top: 1rem;">
+        <button id="closeLaiCoursePopup" class="icon-btn" style="width:auto;height:auto;padding:.5rem 1rem;border-radius:.5rem;">Fechar</button>
+      </p>
+    </div>
+  </div>
+
+  <header class="hero section">
+    <div class="container">
+      <h1>A <span class="highlight">LAI</span> que pegou</h1>
+      <p>A <strong>LAI</strong> é, como costumamos dizer, uma lei que "pegou". Desde que entrou em vigor, em <strong>2012</strong>, já foram registrados <strong>mais de 1 milhão de pedidos de informação</strong>. Acompanhe aqui alguns exemplos de como a imprensa tem utilizado essa legislação.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <section id="editorPicks" class="featured">
+        <h2 class="section-title">Destaques do editor</h2>
+        <div id="editorGrid" class="cards"></div>
+      </section>
+
+      <section id="filters" class="filters">
+        <div class="filter-row">
+          <input id="searchBox" type="search" placeholder="Buscar por título, veículo ou URL…" />
+          <select id="sortSelect" aria-label="Ordenar">
+            <option value="date_desc">Mais recentes</option>
+            <option value="date_asc">Mais antigas</option>
+            <option value="source_asc">Veículo (A-Z)</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="list">
+        <h2 class="section-title" id="listTitle">Reportagens recentes*</h2>
+        <div id="cardsGrid" class="cards"></div>
+        <div id="pagination" class="pagination" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;"></div>
+        <p id="emptyState" class="muted hidden">Nenhum item encontrado.</p>
+        <p class="footnote">* Esta área é atualizada automaticamente pelo Google Alerts.</p>
+      </section>
+
+      <section id="academics" class="hidden">
+        <h2 class="section-title">Pesquisa acadêmica</h2>
+        <div id="academicGrid" class="cards cards-academic"></div>
+        <p id="academicEmpty" class="muted hidden">Sem resultados no momento.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer section">
+    <div class="container">
+      <p>Site produzido por <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a> | <a href="https://datafixers.org" target="_blank" rel="noopener">Luiz Fernando Toledo</a></p>
+    </div>
+  </footer>
+  <script>
+    // Destaques do editor – 3 exemplos do Datafixers com explicação de como usou a LAI
+    // Fonte: https://datafixers.org/lai_highlights.html
+    window.EDITOR_PICKS = [
+      {
+        source: "REVISTA PIAUÍ · Dez/2024",
+        title: "\"Talvez a gente possa colaborar\"",
+        url: "https://piaui.folha.uol.com.br/talvez-a-gente-possa-colaborar/",
+        category: "news",
+        teaser: "Secretário da Receita Federal pressiona Anvisa para considerar a legalização do cigarro eletrônico.",
+        how_used: "A Piauí já havia obtido apenas a ata da reunião, mas só conseguiu acesso ao áudio por meio de pedido à Anvisa com base na LAI."
+      },
+      {
+        source: "ESTADÃO · Jun/2025",
+        title: "Rede anti‑fake news articulada pela Secom de Lula tem orçamento de R$ 54 mi e banca viagem a Cuba",
+        url: "https://www.estadao.com.br/politica/rede-anti-fake-news-secom-orcamento-54-mi/",
+        category: "news",
+        teaser: "Rede criada para combater desinformação tem orçamento de R$ 54,1 mi e já recebeu R$ 10,5 mi, mas pouco divulga.",
+        how_used: "Documento obtido via LAI mostra interlocução com a Secom e autoindicação de diretor para bolsa."
+      },
+      {
+        source: "METRÓPOLES · Jun/2025",
+        title: "\u201cO ass\u00e9dio sexual nos c\u00e2mpus em 128 atos\u201d",
+        url: "https://www.metropoles.com/brasil/assedio-sexual-campus-128-atos",
+        category: "news",
+        teaser: "Reportagem analisou 128 casos com punições por assédio sexual em universidades e institutos federais, envolvendo 132 acusados e ao menos 265 vítimas.",
+        how_used: "Foram feitos 156 pedidos de acesso a PADs junto a universidades e institutos. Só entraram no levantamento os casos com punição. Algumas respostas exigiram recursos ou múltiplos pedidos."
+      }
+    ];
+  </script>
+  <script>
+    // Popup show once per session
+    (function(){
+      const popup = document.getElementById('lai-course-popup');
+      const closeBtn = document.getElementById('closeLaiCoursePopup');
+      const key = 'laiCoursePopupDismissed';
+      const safeGet = (k) => { try { return window.sessionStorage.getItem(k); } catch { return null; } };
+      const safeSet = (k, v) => { try { window.sessionStorage.setItem(k, v); } catch {} };
+      if (popup && !safeGet(key)) popup.classList.add('show');
+      function hide(){ if (popup){ popup.classList.remove('show'); safeSet(key, '1'); } }
+      if (closeBtn) closeBtn.addEventListener('click', hide);
+      if (popup) popup.addEventListener('click', (e)=>{ if (e.target === popup) hide(); });
+    })();
+  </script>
+  <script src="app.js" defer></script>
+</body>
+</html>
+
+
