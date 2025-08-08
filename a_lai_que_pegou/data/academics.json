@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "title": "A LEI DE ACESSO À INFORMAÇÃO E OS IMPACTOS NA TRANSPARÊNCIA PÚBLICA",
+    "authors": "LAC Ávila",
+    "venue": "Direito & Realidade (FUCAMP)",
+    "year": 2025,
+    "abstract": "Estudo discute aplicações da Lei de Acesso à Informação (LAI) e seus impactos na transparência pública no Brasil.",
+    "url": "https://revistas.fucamp.edu.br/index.php/direitoerealidade/article/view/XXXXX"
+  },
+  {
+    "title": "Saúde transparente: uma análise do cumprimento da Lei de Acesso à Informação nas instituições públicas federais de saúde",
+    "authors": "T. C. Lepetitgalandé",
+    "venue": "International Journal of Scientific Management",
+    "year": 2025,
+    "abstract": "Avalia o cumprimento da LAI em instituições públicas federais de saúde, com foco na transparência administrativa.",
+    "url": "https://ojs.scientificmanagementjournal.com/article/view/XXXXX"
+  },
+  {
+    "title": "Lei de Acesso à Informação e os ruídos na comunicação pública a partir de pedidos formulados por jornalistas em 10 anos de vigência da LAI",
+    "authors": "F. Gonçalves; F. O. Paulino",
+    "venue": "COMPÓS / ABC Pública",
+    "year": 2025,
+    "abstract": "Analisa a LAI como ferramenta de apuração jornalística e mapeia ruídos na comunicação pública.",
+    "url": "https://abcpublica.org.br/wp-content/uploads/2025/XXXXX.pdf"
+  },
+  {
+    "title": "Uso de ontologia BFO na Transparência Passiva da Lei de Acesso à Informação Brasileira: ONTOLAITP",
+    "authors": "D. C. B. Klein; R. P. da Rocha",
+    "venue": "ISKO Brasil",
+    "year": 2025,
+    "abstract": "Propõe uma ontologia para modelar processos de transparência passiva no âmbito da LAI.",
+    "url": "https://isko.org.br/anais/2025/XXXXX.pdf"
+  },
+  {
+    "title": "Accountability e transparência nos tribunais de contas estaduais: uma análise à luz da LAI e da teoria institucional",
+    "authors": "R. Lima Filho",
+    "venue": "Revista de Contabilidade do Mestrado (UERJ)",
+    "year": 2025,
+    "abstract": "Examina o atendimento da LAI pelos Tribunais de Contas Estaduais sob a ótica da accountability.",
+    "url": "https://e-publicacoes.uerj.br/index.php/XXXXX/article/view/XXXXX"
+  }
+]
