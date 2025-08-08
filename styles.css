@@ -162,12 +162,12 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 /* Mobile: keep tagline within viewport width */
 @media (max-width: 480px) {
   .top-nav .brand { display: none; }
-  /* Center hero on mobile and let text occupy more space */
-  .hero-section { padding: .75rem .9rem 1.25rem; min-height: 100vh; align-items: center; justify-content: center; }
+  /* Center hero on mobile and let text occupy more space; account for sticky nav height */
+  .hero-section { padding: .75rem .9rem 1.25rem; min-height: calc(100dvh - 56px); align-items: center; justify-content: center; }
   .scroll-indicator { bottom: calc(22px + env(safe-area-inset-bottom, 0px)); }
   .hero-card { padding: 1rem; margin-top: 0; }
-  .hero-section .tagline { font-size: 1.2rem; line-height: 1.6; max-width: 36ch; overflow-wrap: anywhere; }
-  .hero-section .site-name { font-size: 1.5rem; }
+  .hero-section .tagline { font-size: 1.3rem; line-height: 1.65; max-width: 34ch; overflow-wrap: anywhere; }
+  .hero-section .site-name { font-size: 1.7rem; }
   .affiliations { margin-top: .5rem; gap: .3rem; }
   .aff-badge { font-size: .9rem; padding: .5rem .75rem; width: 100%; }
   .aff-badge .aff-emoji { font-size: 1rem; }
@@ -310,6 +310,17 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   max-width: 800px;
   margin: 0 auto 2rem;
   color: var(--text-secondary);
+}
+/* small promo card under the transparency intro */
+.promo-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 1.25rem;
 }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; text-decoration: none; color: inherit; transition: var(--transition); }
