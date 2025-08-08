@@ -12,8 +12,11 @@
 <body>
   <nav class="lai-nav">
     <div class="container nav-inner">
-      
-      <ul class="nav-links">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="tab-btn" href="https://datafixers.org" target="_self" rel="noopener">Home</a></li>
         <li><button class="tab-btn active" data-tab="news">Reportagens</button></li>
         <li><button class="tab-btn" data-tab="academics">Pesquisa acadêmica</button></li>
       </ul>
@@ -107,6 +110,14 @@
         how_used: "Foram feitos 156 pedidos de acesso a PADs junto a universidades e institutos. Só entraram no levantamento os casos com punição. Algumas respostas exigiram recursos ou múltiplos pedidos."
       }
     ];
+  </script>
+  <script>
+    // Mobile menu toggle
+    (function(){
+      const t = document.getElementById('menuToggle');
+      const nav = document.getElementById('navLinks');
+      if (t && nav) t.addEventListener('click', ()=> nav.classList.toggle('open'));
+    })();
   </script>
   <script>
     // Popup show once per session
