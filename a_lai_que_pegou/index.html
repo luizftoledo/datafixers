@@ -81,6 +81,19 @@
       <p>Site produzido por <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a> | <a href="https://datafixers.org" target="_blank" rel="noopener">Luiz Fernando Toledo</a></p>
     </div>
   </footer>
+  
+  <!-- Banner fixo do curso no rodapé -->
+  <div class="course-fixed" id="courseFixed">
+    <div class="course-inner">
+      <img class="course-img" src="https://www.sympla.com.br/favicon-192x192.png" alt="Curso: Aprenda a usar a LAI na prática"/>
+      <div class="course-text">
+        <strong>Curso: Aprenda a usar a LAI na prática</strong>
+        <span>De 28/08 a 09/09/2025, online com Ju Faddul e Luiz Fernando Toledo.</span>
+      </div>
+      <a class="btn course-btn" href="https://www.sympla.com.br/evento-online/jornalismo-investigativo-das-planilhas-as-ruas/3051244?referrer=datafixers.org" target="_blank" rel="noopener">Saiba mais</a>
+      <button class="course-close" id="courseClose" aria-label="Fechar">×</button>
+    </div>
+  </div>
   <script>
     // Destaques do editor – 3 exemplos do Datafixers com explicação de como usou a LAI
     // Fonte: https://datafixers.org/lai_highlights.html
@@ -131,6 +144,22 @@
       function hide(){ if (popup){ popup.classList.remove('show'); safeSet(key, '1'); } }
       if (closeBtn) closeBtn.addEventListener('click', hide);
       if (popup) popup.addEventListener('click', (e)=>{ if (e.target === popup) hide(); });
+    })();
+  </script>
+  <script>
+    // Banner fixo do curso (salva preferência na sessão)
+    (function(){
+      const el = document.getElementById('courseFixed');
+      const close = document.getElementById('courseClose');
+      const key = 'laiCourseBannerDismissed';
+      const safeGet = (k)=>{ try { return sessionStorage.getItem(k); } catch { return null; } };
+      const safeSet = (k,v)=>{ try { sessionStorage.setItem(k,v); } catch {} };
+      if (el && !safeGet(key)) {
+        el.classList.add('show');
+        document.body.classList.add('with-course-banner');
+      }
+      function hide(){ if (el){ el.classList.remove('show'); document.body.classList.remove('with-course-banner'); safeSet(key,'1'); } }
+      if (close) close.addEventListener('click', hide);
     })();
   </script>
   <script src="app.js" defer></script>
