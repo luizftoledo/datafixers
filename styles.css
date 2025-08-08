@@ -162,13 +162,14 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 /* Mobile: keep tagline within viewport width */
 @media (max-width: 480px) {
   .top-nav .brand { display: none; }
-  .hero-section { padding: .5rem .75rem 1rem; min-height: 100vh; align-items: flex-start; }
+  /* Center hero on mobile and let text occupy more space */
+  .hero-section { padding: .75rem .9rem 1.25rem; min-height: 100vh; align-items: center; justify-content: center; }
   .scroll-indicator { bottom: calc(22px + env(safe-area-inset-bottom, 0px)); }
-  .hero-card { padding: .75rem; margin-top: .25rem; }
-  .hero-section .tagline { font-size: 1rem; line-height: 1.35; max-width: 60ch; overflow-wrap: anywhere; }
+  .hero-card { padding: 1rem; margin-top: 0; }
+  .hero-section .tagline { font-size: 1.2rem; line-height: 1.6; max-width: 36ch; overflow-wrap: anywhere; }
   .hero-section .site-name { font-size: 1.5rem; }
   .affiliations { margin-top: .5rem; gap: .3rem; }
-  .aff-badge { font-size: .75rem; padding: .35rem .5rem; }
+  .aff-badge { font-size: .9rem; padding: .5rem .75rem; width: 100%; }
   .aff-badge .aff-emoji { font-size: 1rem; }
   .about-container { grid-template-columns: 1fr; }
 }
@@ -206,7 +207,8 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 
 /* affiliations row under hero */
 .affiliations { margin-top: 1.5rem; display: grid; gap: .75rem; justify-items: center; }
-.aff-badge { font-size: 1.15rem; color: var(--text-primary); display: flex; align-items: center; gap: .75rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: .8rem 1rem; box-shadow: var(--shadow-sm); width: 100%; max-width: 880px; justify-content: center; }
+/* Desktop: badge hugs content instead of full-width */
+.aff-badge { font-size: 1rem; color: var(--text-primary); display: inline-flex; align-items: center; gap: .5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: .6rem .8rem; box-shadow: var(--shadow-sm); width: auto; max-width: none; justify-content: center; }
 .aff-badge .aff-emoji { font-size: 1.4rem; }
 .aff-badge a { color: var(--primary); text-decoration: underline; }
 .nav-item:hover {
