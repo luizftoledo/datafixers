@@ -13,13 +13,19 @@ INOREADER_SOURCES = [
     {
         "url": "https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?t=%C3%9Altimas%20not%C3%ADcias",
         "force_category": None,
-    }
+    },
+    {
+        # Feed específico para a aba acadêmica (LAI Acadêmico)
+        "url": "https://www.inoreader.com/stream/user/1003985396/tag/LAI%20Acad%C3%AAmico/view/html?cs=m",
+        "force_category": "academic",
+    },
 ]
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET_DIR = os.environ.get("LAI_TARGET_DIR", "a_lai_que_pegou/data")
 OUT = ROOT / TARGET_DIR / "feeds.json"
 OUT_ACADEMICS = ROOT / TARGET_DIR / "academics.json"
+FALLBACK_ACADEMICS = ROOT / TARGET_DIR / "academics_fallback.json"
 
 NS = {"atom":"http://www.w3.org/2005/Atom", "rss":"http://purl.org/rss/1.0/"}
 
@@ -246,10 +252,17 @@ def main():
             "url": it.get("url", ""),
         }
 
-    OUT_ACADEMICS.write_text(
-        json.dumps([to_academic(a) for a in academics], ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    # Se não houver itens acadêmicos do feed, usa fallback manual
+    if not academics and FALLBACK_ACADEMICS.exists():
+        try:
+            OUT_ACADEMICS.write_text(FALLBACK_ACADEMICS.read_text(encoding="utf-8"), encoding="utf-8")
+        except Exception:
+            OUT_ACADEMICS.write_text(json.dumps([], ensure_ascii=False, indent=2), encoding="utf-8")
+    else:
+        OUT_ACADEMICS.write_text(
+            json.dumps([to_academic(a) for a in academics], ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
     print(
         f"Wrote {len(news_like)} news items to {OUT} and {len(academics)} academic items to {OUT_ACADEMICS}"
