@@ -12,7 +12,8 @@ const dom = {
   sortSelect: document.getElementById('sortSelect'),
   academicsSection: document.getElementById('academics'),
   academicGrid: document.getElementById('academicGrid'),
-  academicEmpty: document.getElementById('academicEmpty')
+  academicEmpty: document.getElementById('academicEmpty'),
+  academicNote: document.getElementById('academicNote')
 };
 
 let items = [];
@@ -122,6 +123,9 @@ function setTab(tab) {
     const has = (academics || []).length > 0;
     dom.academicGrid.innerHTML = has ? academics.map(academicHTML).join('') : '';
     dom.academicEmpty.classList.toggle('hidden', has);
+    // Nota: quando o arquivo academics.json vier vazio e houver fallback, ainda exibimos itens.
+    // Para comunicar a origem, mostramos uma nota padrão independente da origem.
+    if (dom.academicNote) dom.academicNote.classList.toggle('hidden', !has && true);
   } else {
     dom.listTitle.textContent = 'Reportagens recentes*';
     applyFilters();
