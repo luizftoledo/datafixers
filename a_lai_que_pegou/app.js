@@ -18,6 +18,7 @@ const dom = {
 
 let items = [];
 let academics = [];
+let summariesByUrl = {};
 let currentTab = 'news';
 let pageSize = 12;
 let currentPage = 1;
@@ -28,6 +29,7 @@ function sourceFromUrl(url) { try { const u = new URL(url); return (u.hostname.r
 function cardHTML(item) {
   const outlet = item.source || sourceFromUrl(item.url) || '';
   const hasDetails = item.context || item.objective || item.result;
+  const summary = summariesByUrl[item.url]?.summary;
   return `
   <article class="card">
     <div class="card-body">
@@ -45,7 +47,9 @@ function cardHTML(item) {
       }
       <div class="actions">
         <a class="btn" href="${item.url}" target="_blank" rel="noopener">Abrir</a>
+        <button class="btn" data-summary-url="${item.url}">Resuma pra mim</button>
       </div>
+      ${summary ? `<p class="muted" data-summary-for="${item.url}" style="margin-top:.5rem; white-space:pre-wrap;">${summary}</p>` : `<p class="muted hidden" data-summary-for="${item.url}" style="margin-top:.5rem; white-space:pre-wrap;"></p>`}
     </div>
   </article>`;
 }
@@ -133,9 +137,14 @@ function setTab(tab) {
 }
 
 async function boot() {
-  const [feedResp, acaResp] = await Promise.all([ fetch('data/feeds.json'), fetch('data/academics.json') ]);
+  const [feedResp, acaResp, sumResp] = await Promise.all([
+    fetch('data/feeds.json'),
+    fetch('data/academics.json'),
+    fetch('data/summaries.json')
+  ]);
   items = await feedResp.json();
   academics = acaResp.ok ? await acaResp.json() : [];
+  summariesByUrl = sumResp.ok ? await sumResp.json() : {};
 
   // Editor picks
   const picks = window.EDITOR_PICKS || [];
@@ -166,6 +175,27 @@ async function boot() {
   dom.searchBox.addEventListener('input', applyFilters);
   dom.sortSelect.addEventListener('change', applyFilters);
   setTab('news');
+
+  // delegate summary button clicks
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-summary-url]');
+    if (!btn) return;
+    const url = btn.getAttribute('data-summary-url');
+    const p = document.querySelector(`[data-summary-for="${CSS.escape(url)}"]`);
+    if (!p) return;
+    if (p.textContent && !p.classList.contains('hidden')) {
+      p.classList.add('hidden');
+      return;
+    }
+    const cached = summariesByUrl[url]?.summary;
+    if (cached) {
+      p.textContent = cached;
+      p.classList.remove('hidden');
+    } else {
+      p.textContent = 'Resumo ainda não disponível. Volte mais tarde.';
+      p.classList.remove('hidden');
+    }
+  });
 }
 boot().catch(err => {
   console.error(err);
