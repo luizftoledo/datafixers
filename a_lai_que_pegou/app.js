@@ -67,8 +67,9 @@ function academicHTML(a) {
 }
 
 function applyFilters() {
-  const q = (dom.searchBox.value || '').toLowerCase();
-  const sort = dom.sortSelect.value;
+  if (!dom.cardsGrid) return; // cards removidos quando usamos apenas o iframe
+  const q = (dom.searchBox ? dom.searchBox.value : '').toLowerCase();
+  const sort = dom.sortSelect ? dom.sortSelect.value : 'date_desc';
   let filtered = items.filter(it => it.category === currentTab || (currentTab === 'news' && it.category === 'news'));
   if (q) {
     filtered = filtered.filter(it => {
@@ -107,7 +108,7 @@ function applyFilters() {
       });
     }
   }
-  dom.emptyState.classList.toggle('hidden', filtered.length > 0);
+  if (dom.emptyState) dom.emptyState.classList.toggle('hidden', filtered.length > 0);
 }
 
 function setTab(tab) {
@@ -163,8 +164,8 @@ async function boot() {
     dom.editorGrid.innerHTML = picks.map(renderPick).join('');
   }
   dom.tabs().forEach(btn => btn.addEventListener('click', () => { currentPage = 1; setTab(btn.dataset.tab); }));
-  dom.searchBox.addEventListener('input', applyFilters);
-  dom.sortSelect.addEventListener('change', applyFilters);
+  if (dom.searchBox) dom.searchBox.addEventListener('input', applyFilters);
+  if (dom.sortSelect) dom.sortSelect.addEventListener('change', applyFilters);
   setTab('news');
 }
 boot().catch(err => {
