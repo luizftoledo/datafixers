@@ -33,10 +33,10 @@
     (function() {
       try {
         const stored = localStorage.getItem('df-theme');
-        const theme = stored || 'light';
+        const theme = stored || 'dark';
         document.documentElement.setAttribute('data-theme', theme);
       } catch(e) {
-        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
     })();
   </script>
@@ -48,7 +48,7 @@
       <ul class="nav-links" style="margin-left:auto">
         <li><a href="l-ai-notebook.html" class="active">L‑AI Notebook</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-lightbulb" aria-hidden="true"></i></button>
     </div>
   </nav>
 
