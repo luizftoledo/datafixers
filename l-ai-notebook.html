@@ -28,6 +28,9 @@
     .source-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: 600; }
     .divider { height: 1px; background: rgba(0,0,0,0.1); margin: 28px 0; }
     [data-theme="dark"] .divider { background: rgba(255,255,255,0.12); }
+    /* Hide native download button in WebKit browsers */
+    video::-webkit-media-controls-enclosure { overflow: hidden; }
+    video::-webkit-media-controls-download-button { display: none; }
   </style>
   <script>
     (function() {
@@ -70,7 +73,7 @@
             <source src="Guia_da_LAI__Vença_seu_Recurso.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo HTML5.
           </video>
-          
+          <p class="note" style="text-align:center; margin-top: 8px;">Vídeo gerado com a ferramenta Google Notebook LM</p>
         </div>
       </section>
 
