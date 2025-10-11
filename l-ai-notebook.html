@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L‑AI Notebook – Datafixers.org</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root { --accent: #10b981; }
+    .page { padding: 56px 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .hero { text-align: center; margin-bottom: 28px; }
+    .hero h1 { font-size: 38px; margin: 0 0 8px; }
+    .hero p { font-size: 18px; color: var(--text-secondary,#6b7280); }
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 9999px; background: var(--accent); color: #00130d; font-weight: 700; text-decoration: none; margin-top: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 18px; margin-top: 28px; }
+    .card { background: var(--card-bg, rgba(0,0,0,0.04)); border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 18px; }
+    [data-theme="dark"] .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+    .step { display: flex; gap: 14px; align-items: flex-start; }
+    .step .icon { flex: 0 0 44px; height: 44px; display: grid; place-items: center; border-radius: 10px; background: rgba(16,185,129,0.15); color: var(--accent); font-size: 20px; }
+    .step h3 { margin: 6px 0 6px; font-size: 18px; }
+    .examples { margin-top: 14px; }
+    .examples li { margin: 6px 0; }
+    .note { margin-top: 16px; font-size: 14px; color: var(--text-secondary,#6b7280); }
+    .credits { margin-top: 36px; text-align: center; font-size: 14px; color: var(--text-secondary,#6b7280); }
+    .source-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: 600; }
+    .divider { height: 1px; background: rgba(0,0,0,0.1); margin: 28px 0; }
+    [data-theme="dark"] .divider { background: rgba(255,255,255,0.12); }
+  </style>
+  <script>
+    (function() {
+      try {
+        const stored = localStorage.getItem('df-theme');
+        const theme = stored || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <a class="btn-secondary" href="index.html" style="text-decoration:none"><i class="fas fa-arrow-left"></i> Voltar à Home</a>
+      <ul class="nav-links" style="margin-left:auto">
+        <li><a href="l-ai-notebook.html" class="active">L‑AI Notebook</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <section class="hero">
+        <h1>L‑AI Notebook</h1>
+        <p>Pergunte tudo o que quiser sobre dados públicos e LAI, e responderemos com base em um repositório com mais de 1 milhão de registros públicos.</p>
+        <a class="cta" href="https://notebooklm.google.com/notebook/524ca406-b5e5-46fe-9a08-ba2a078f704f" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-book-open"></i> Abrir o Notebook
+        </a>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2>Como funciona</h2>
+        <div class="grid">
+          <div class="card step">
+            <div class="icon"><i class="fas fa-database"></i></div>
+            <div>
+              <h3>1) Base de conhecimento</h3>
+              <p>O Google Notebook LM foi alimentado com uma coleção de documentos oficiais, decisões e respostas de órgãos públicos, FAQs e leis sobre a LAI.</p>
+              <p class="note">Fonte principal dos dados: <a href="https://buscalai.cgu.gov.br/" target="_blank" rel="noopener" class="source-link"><i class="fas fa-link"></i>buscalai.cgu.gov.br</a></p>
+            </div>
+          </div>
+
+          <div class="card step">
+            <div class="icon"><i class="fas fa-magnifying-glass"></i></div>
+            <div>
+              <h3>2) Faça uma pergunta</h3>
+              <p>Escreva sua dúvida como se estivesse perguntando a um especialista. O sistema busca trechos relevantes e mostra as fontes utilizadas.</p>
+              <ul class="examples">
+                <li>“Como saber se alguém recebeu o Bolsa Família?”</li>
+                <li>“Como pedir dados sobre acesso a armas no Brasil?”</li>
+                <li>“Me mostre um exemplo de texto para pedir informações sobre sindicância contra um militar.”</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card step">
+            <div class="icon"><i class="fas fa-clipboard-check"></i></div>
+            <div>
+              <h3>3) Revise as fontes</h3>
+              <p>Cada resposta traz referências clicáveis. Verifique os documentos originais, copie trechos e gere um pedido via LAI com segurança.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2>Exemplos práticos</h2>
+        <div class="grid">
+          <div class="card">
+            <h3><i class="fas fa-folder-open"></i> Programas sociais</h3>
+            <p>“Quero checar se uma pessoa recebeu o Bolsa Família em 2023. Qual a base certa e como consultar?”</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-gun"></i> Controle de armas</h3>
+            <p>“Que bases devo usar para pedir dados sobre CACs e registros de armas no Brasil?”</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-user-shield"></i> Integridade disciplinar</h3>
+            <p>“Me dê um modelo de pedido para obter relatório de sindicância de um militar.”</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-tree"></i> Meio ambiente</h3>
+            <p>“Como cruzar embargos ambientais do ICMBio com CPF/CNPJ para identificar responsáveis?”</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="credits">
+        <p>Créditos: <strong>Luiz Fernando Toledo</strong> | <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a></p>
+        <a class="source-link" href="https://buscalai.cgu.gov.br/" target="_blank" rel="noopener"><i class="fas fa-database"></i> Fonte dos dados: buscalai.cgu.gov.br</a>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('df-theme', next); } catch(e){}
+    });
+  </script>
+</body>
+</html>
