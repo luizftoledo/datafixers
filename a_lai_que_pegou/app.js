@@ -118,8 +118,10 @@ function setTab(tab) {
   dom.academicsSection.classList.toggle('hidden', !isAcademics);
   const editorSection = document.getElementById('editorPicks');
   if (editorSection) editorSection.classList.toggle('hidden', isAcademics);
-  document.getElementById('filters').classList.toggle('hidden', isAcademics);
-  document.getElementById('list').classList.toggle('hidden', isAcademics);
+  const filtersEl = document.getElementById('filters');
+  if (filtersEl) filtersEl.classList.toggle('hidden', isAcademics);
+  const listEl = document.getElementById('list');
+  if (listEl) listEl.classList.toggle('hidden', isAcademics);
   if (isAcademics) {
     const has = (academics || []).length > 0;
     dom.academicGrid.innerHTML = has ? academics.map(academicHTML).join('') : '';
@@ -170,7 +172,7 @@ async function boot() {
 }
 boot().catch(err => {
   console.error(err);
-  dom.cardsGrid.innerHTML = '<p class="muted">Erro ao carregar dados.</p>';
+  if (dom.cardsGrid) dom.cardsGrid.innerHTML = '<p class="muted">Erro ao carregar dados.</p>';
 });
 
 

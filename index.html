@@ -33,15 +33,11 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#projects">Stories</a></li>
-      <li><a href="#dashboards">Dashboards</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer">L‑AI Bot</a></li>
       <li><a href="l-ai-notebook.html">L‑AI Notebook</a></li>
       <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A <span class="teal">LAI</span> que pegou</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span id="themeIcon" aria-hidden="true" title="Toggle theme"></span>
-    </button>
   </div>
   </nav>
 <!-- Hero / tagline -->
@@ -65,17 +61,18 @@
 
 <section class="laibot-section">
   <div class="container laibot-wrapper">
-    <img src="images/laibot_foto.jpeg" alt="Meet L-AI Bot" style="width: 320px; height: auto; border-radius: 8px; flex-shrink: 0;" />
+    <video controls playsinline controlsList="nodownload noplaybackrate nofullscreen" disablepictureinpicture disableremoteplayback oncontextmenu="return false;" style="width: 320px; max-width: 100%; height: auto; border-radius: 8px; flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+      <source src="Guia_da_LAI__Vença_seu_Recurso.mp4" type="video/mp4" />
+    </video>
     <div class="laibot-text">
-      <h2>Meet L‑AI Bot</h2>
+      <h2>L‑AI Notebook</h2>
       <p>
-        Your intelligent assistant for accessing public information through Brazil's Access to Information Law (LAI).
-        Discover how our AI‑powered tool can help you navigate government transparency and find the data you need.
+        Ask anything about Brazil's Access to Information Law (LAI) and public records. Our notebook is powered by a curated repository with more than one million official documents and decisions.
       </p>
       <div style="width: fit-content;">
-        <a class="btn-primary" href="https://datafixers.org/laibot" target="_blank" style="white-space: nowrap;">
-          <i class="fas fa-robot"></i>
-          Try L‑AI Bot now
+        <a class="btn-primary" href="l-ai-notebook.html" style="white-space: nowrap;">
+          <i class="fas fa-book-open"></i>
+          Open L‑AI Notebook
         </a>
       </div>
     </div>
@@ -450,39 +447,13 @@
 <a class="back-to-top" href="#top">Back to top ↑</a>
 </div>
 </section>
-<!-- Dashboards -->
-<section class="dashboards-section" id="dashboards">
-<div class="container">
-<h2>Dashboards</h2>
-<div class="dashboards-grid">
-<div class="dashboard-item">
-<div class="dash-icon"><i class="fas fa-university"></i></div>
-<h3>Parliamentary Amendments</h3>
-<p>A dashboard to explore how Brazilian congressmen spend their legislative amendments in their electoral bases.</p>
-<a class="dashboard-btn" href="https://datafixers.org/emendas_parlamentares" target="_blank">View dashboard</a>
-</div>
-<div class="dashboard-item">
-<div class="dash-icon"><i class="fas fa-landmark"></i></div>
-<h3>President visitors</h3>
-<p>Interactive dashboard showing visitors to the Presidential building and their meeting patterns.</p>
-<a class="dashboard-btn" href="https://datafixers.org/visitantes_palacio" target="_blank">View dashboard</a>
-</div>
-<div class="dashboard-item">
-<div class="dash-icon"><i class="fas fa-podium"></i></div>
-<h3>Presidential Speeches</h3>
-<p>Analysis of presidential speeches and public statements with data visualization.</p>
-<a class="dashboard-btn" href="https://datafixers.org/falas_lula" target="_blank">View dashboard</a>
-</div>
-</div>
-<a class="back-to-top" href="#top">Back to top ↑</a>
-</div>
-</section>
+<!-- Dashboards removed by request -->
 <!-- Partnerships -->
 <!-- Partnerships section removed -->
 <!-- Media mentions -->
 <section class="media-mentions-section">
 <div class="container">
-<h2>Who's talking about our work</h2>
+<h2>Who has featured our work</h2>
 <div class="mentions-grid">
 <div class="mention-item">
 <div class="mention-tag">BROWN INSTITUTE – COLUMBIA UNIVERSITY</div>
@@ -563,49 +534,7 @@
     const links = document.getElementById('navLinks');
     if (toggle && links) toggle.addEventListener('click', ()=> links.classList.toggle('open'));
   })();
-  // theme toggle
-  (function(){
-    const btn = document.getElementById('themeToggle');
-    const iconHost = document.getElementById('themeIcon');
-    if (!btn || !iconHost) return;
-
-    function darkraiIcon(){
-      return `
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <title>Dark mode</title>
-          <path d="M12 2c-1.8 0-3.5.6-4.9 1.6 2.9.4 5.1 2.9 5.1 5.9 0 3.3-2.7 6-6 6-1.3 0-2.6-.4-3.6-1.1C3.3 17.8 7.3 21 12 21c5 0 9-4 9-9 0-4.7-3.2-8.7-7.6-9.6C13 2.1 12.5 2 12 2z"/>
-          <path d="M6 19c2.5.5 5.3-.4 7.2-2.3 1.9-1.9 2.8-4.6 2.3-7.2-.1-.3.3-.6.6-.4 2.2 1.3 3.7 3.7 3.7 6.4 0 4.1-3.4 7.5-7.5 7.5-2.7 0-5.1-1.5-6.4-3.7-.2-.3.1-.7.4-.6z" opacity=".55"/>
-        </svg>`;
-    }
-
-    function cresseliaIcon(){
-      return `
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <title>Light mode</title>
-          <path d="M12 4a8 8 0 100 16 6 6 0 006-6c0-3.3-2.7-6-6-6z"/>
-          <path d="M12 2c.7 0 1.3.4 1.6 1 1.1 2.1 3.2 3.5 5.7 3.5.4 0 .7 0 1.1-.1.9-.2 1.7.6 1.5 1.5C20.6 13.7 16 18 10.5 18 6.4 18 3 15.6 1.5 12.3c-.4-.9.4-1.9 1.4-1.6.4.1.9.1 1.3.1 4 0 7.2-3.2 7.3-7.2 0-.2.1-.4.2-.6.2-.4.7-.8 1.3-.8z" opacity=".55"/>
-        </svg>`;
-    }
-
-    function getTheme(){
-      return document.documentElement.getAttribute('data-theme') || 'dark';
-    }
-
-    function applyIcon(theme){
-      iconHost.innerHTML = theme === 'dark' ? darkraiIcon() : cresseliaIcon();
-    }
-
-    // initial icon
-    applyIcon(getTheme());
-
-    btn.addEventListener('click', ()=>{
-      const cur = getTheme();
-      const next = cur === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('df-theme', next); } catch(e) {}
-      applyIcon(next);
-    });
-  })();
+  // theme toggle removed by request; dark is default globally
 </script>
 </body>
 </html>
