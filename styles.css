@@ -328,6 +328,90 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   filter: brightness(1.05);
   box-shadow: var(--glow-green);
 }
+
+/* Transparent inner + animated gradient border, like the L‑AI notebook CTA */
+.btn-animated-border {
+  --h: 120;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    /* top */
+    linear-gradient(90deg,
+      hsl(var(--h) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 40) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 80) 60% 50% / 0.9)
+    ) top / 100% 2px border-box no-repeat,
+    /* right */
+    linear-gradient(180deg,
+      hsl(calc(var(--h) + 20) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 60) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 100) 60% 52% / 0.9)
+    ) right / 2px 100% border-box no-repeat,
+    /* bottom */
+    linear-gradient(270deg,
+      hsl(calc(var(--h) + 40) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 80) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 120) 60% 50% / 0.9)
+    ) bottom / 100% 2px border-box no-repeat,
+    /* left */
+    linear-gradient(0deg,
+      hsl(calc(var(--h) + 60) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 100) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 140) 60% 52% / 0.9)
+    ) left / 2px 100% border-box no-repeat;
+  border: 2px solid transparent;
+  color: #ffffff;
+  animation: df-hue 6s linear infinite;
+}
+.btn-animated-border:hover { filter: brightness(1.05); }
+
+/* When combined with btn-primary, override its solid gradient fill */
+.btn-primary.btn-animated-border {
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(90deg,
+      hsl(var(--h) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 40) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 80) 60% 50% / 0.9)
+    ) top / 100% 2px border-box no-repeat,
+    linear-gradient(180deg,
+      hsl(calc(var(--h) + 20) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 60) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 100) 60% 52% / 0.9)
+    ) right / 2px 100% border-box no-repeat,
+    linear-gradient(270deg,
+      hsl(calc(var(--h) + 40) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 80) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 120) 60% 50% / 0.9)
+    ) bottom / 100% 2px border-box no-repeat,
+    linear-gradient(0deg,
+      hsl(calc(var(--h) + 60) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 100) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 140) 60% 52% / 0.9)
+    ) left / 2px 100% border-box no-repeat;
+  border: 2px solid transparent;
+  color: #ffffff;
+}
+
+/* Small pill for top nav links that need the animated border */
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  line-height: 1.1;
+}
+
+.badge-new {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  color: #04110d;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
 .btn-secondary {
   display: inline-block;
   background: var(--primary);
