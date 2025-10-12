@@ -191,7 +191,7 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   margin: 0 auto;
   text-align: center;
   position: relative;
-  animation: df-hue 6s linear infinite;
+  animation: df-hue 6s linear infinite, df-pulse 2.4s ease-in-out infinite;
 }
 
 @keyframes df-hue {
@@ -202,6 +202,20 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   syntax: '<number>';
   inherits: false;
   initial-value: 120;
+}
+
+/* Reusable pulsing glow animation (used on hero and notebook CTA) */
+@keyframes df-pulse {
+  0%, 100% {
+    box-shadow: var(--shadow-md), var(--glow-green);
+  }
+  50% {
+    box-shadow: var(--shadow-lg), 0 0 28px rgba(16,185,129,0.35), 0 0 64px rgba(16,185,129,0.18);
+  }
+}
+
+.glow-pulse {
+  animation: df-pulse 2.4s ease-in-out infinite;
 }
 
 /* Section separator */

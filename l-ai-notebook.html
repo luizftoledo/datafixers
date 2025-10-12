@@ -9,12 +9,55 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     :root { --accent: var(--primary); }
-    .page { padding: 56px 0; }
+    .page { padding: 56px 0 120px; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     .hero { text-align: center; margin-bottom: 28px; }
     .hero h1 { font-size: 38px; margin: 0 0 8px; }
     .hero p { font-size: 18px; color: var(--text-secondary,#6b7280); }
-    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 9999px; background: var(--accent); color: #ffffff; font-weight: 700; text-decoration: none; margin-top: 16px; box-shadow: 0 0 18px rgba(255,43,43,0.25); }
+    .cta {
+      /* Animated gradient border like the homepage hero-card */
+      --h: 120;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 9999px;
+      background:
+        /* inner semi-transparent panel for translucency */
+        linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+        /* top edge */
+        linear-gradient(90deg,
+          hsl(var(--h) 60% 50% / 0.9),
+          hsl(calc(var(--h) + 40) 70% 60% / 0.8),
+          hsl(calc(var(--h) + 80) 60% 50% / 0.9)
+        ) top / 100% 2px border-box no-repeat,
+        /* right edge */
+        linear-gradient(180deg,
+          hsl(calc(var(--h) + 20) 60% 52% / 0.9),
+          hsl(calc(var(--h) + 60) 70% 60% / 0.8),
+          hsl(calc(var(--h) + 100) 60% 52% / 0.9)
+        ) right / 2px 100% border-box no-repeat,
+        /* bottom edge */
+        linear-gradient(270deg,
+          hsl(calc(var(--h) + 40) 60% 50% / 0.9),
+          hsl(calc(var(--h) + 80) 70% 60% / 0.8),
+          hsl(calc(var(--h) + 120) 60% 50% / 0.9)
+        ) bottom / 100% 2px border-box no-repeat,
+        /* left edge */
+        linear-gradient(0deg,
+          hsl(calc(var(--h) + 60) 60% 52% / 0.9),
+          hsl(calc(var(--h) + 100) 70% 60% / 0.8),
+          hsl(calc(var(--h) + 140) 60% 52% / 0.9)
+        ) left / 2px 100% border-box no-repeat;
+      border: 2px solid transparent;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 16px;
+      box-shadow: var(--glow-green);
+      animation: df-hue 6s linear infinite;
+    }
+    .cta:hover { filter: brightness(1.05); box-shadow: var(--glow-green); }
     .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 18px; margin-top: 28px; }
     .card { background: var(--card-bg, rgba(0,0,0,0.04)); border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 18px; }
     [data-theme="dark"] .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
@@ -28,11 +71,46 @@
     .source-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: 600; color: var(--primary); }
     .divider { height: 2px; background: linear-gradient(90deg, transparent, rgba(255,43,43,0.7), rgba(255,255,255,0.6), transparent); margin: 28px 0; border-radius: 999px; }
     [data-theme="dark"] .divider { background: linear-gradient(90deg, transparent, rgba(255,43,43,0.7), rgba(255,255,255,0.6), transparent); }
-    .method-box { max-width: 820px; margin: 16px auto 0; text-align: left; background: var(--card-bg); border: 1px solid var(--border, rgba(255,255,255,0.12)); border-radius: 12px; padding: 14px 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); color: var(--text-primary); }
+    .method-box { max-width: 820px; margin: 16px auto 0; text-align: left; background: var(--card-bg); border: 1px solid var(--border, rgba(255,255,255,0.12)); border-radius: 12px; padding: 14px 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); color: var(--text-primary); font-size: 0.9rem; }
     .method-box strong { color: var(--primary); }
-    /* Hide native download button in WebKit browsers */
-    video::-webkit-media-controls-enclosure { overflow: hidden; }
-    video::-webkit-media-controls-download-button { display: none; }
+    /* Bottom Udemy banner */
+    .udemy-banner {
+      position: fixed;
+      left: 12px; right: 12px; bottom: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border, rgba(255,255,255,0.12));
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+      padding: 14px 18px;
+      display: flex; align-items: center; gap: 12px;
+      transform: translateY(140%);
+      animation: banner-in 380ms ease-out 200ms forwards;
+      backdrop-filter: blur(8px) saturate(140%);
+      z-index: 60;
+    }
+    .udemy-banner .close {
+      position: absolute; top: 8px; right: 10px;
+      width: 32px; height: 32px; display: grid; place-items: center;
+      border: none; background: transparent; color: var(--text-secondary,#6b7280);
+      cursor: pointer; border-radius: 8px;
+    }
+    .udemy-banner .close:hover { color: var(--primary); background: rgba(255,255,255,0.06); }
+    .udemy-banner .icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: rgba(16,185,129,0.18); color: var(--primary); }
+    .udemy-banner .text { flex: 1; font-size: 0.92rem; color: var(--text-primary); }
+    .udemy-banner .text .hint { display:block; font-size: 0.8rem; color: var(--text-secondary,#6b7280); }
+    .udemy-banner .cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 9999px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #04110d; font-weight: 700; text-decoration: none; box-shadow: var(--glow-green); white-space: nowrap; }
+    @keyframes banner-in { to { transform: translateY(0); } }
+    /* Redesigned steps: larger, alternating sides, full width */
+    .steps-list { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+    .step-row { display: flex; align-items: center; gap: 24px; width: 100%; padding: 20px 24px; border-radius: 14px; background: var(--card-bg); border: 1px solid var(--border, rgba(255,255,255,0.12)); box-shadow: var(--shadow-sm); }
+    .step-row .icon { flex: 0 0 72px; height: 72px; display: grid; place-items: center; border-radius: 16px; background: rgba(16,185,129,0.15); color: var(--primary); font-size: 32px; box-shadow: inset 0 2px 8px rgba(0,0,0,0.12); }
+    [data-theme="dark"] .step-row .icon { background: rgba(255,255,255,0.08); color: var(--primary); }
+    .step-row h3 { margin: 4px 0 6px; font-size: 20px; }
+    .step-row p { margin: 0; color: var(--text-secondary,#6b7280); }
+    @media (max-width: 768px) {
+      .step-row, .step-row:nth-child(even) { flex-direction: column; align-items: flex-start; }
+      .step-row .icon { flex-basis: 56px; height: 56px; font-size: 24px; border-radius: 12px; }
+    }
   </style>
   <script>
     (function() {
@@ -50,9 +128,6 @@
   <nav class="top-nav">
     <div class="container nav-inner">
       <a class="btn-secondary" href="index.html" style="text-decoration:none"><i class="fas fa-arrow-left"></i> Voltar à Home</a>
-      <ul class="nav-links" style="margin-left:auto">
-        <li><a href="l-ai-notebook.html" class="active">L‑AI Notebook</a></li>
-      </ul>
     </div>
   </nav>
 
@@ -61,7 +136,7 @@
       <section class="hero">
         <h1>L‑AI Notebook</h1>
         <p>Pergunte tudo o que quiser sobre dados públicos e LAI, e responderemos com base em um repositório com mais de 1 milhão de registros públicos.</p>
-        <a class="cta" href="https://notebooklm.google.com/notebook/524ca406-b5e5-46fe-9a08-ba2a078f704f" target="_blank" rel="noopener noreferrer">
+        <a class="cta glow-pulse" href="https://notebooklm.google.com/notebook/524ca406-b5e5-46fe-9a08-ba2a078f704f" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-book-open"></i> Abrir o Notebook
         </a>
       </section>
@@ -70,8 +145,8 @@
 
       <section>
         <h2>Como funciona</h2>
-        <div class="grid">
-          <div class="card step">
+        <div class="steps-list">
+          <div class="step-row">
             <div class="icon"><i class="fas fa-database"></i></div>
             <div>
               <h3>1) Base de conhecimento</h3>
@@ -80,7 +155,7 @@
             </div>
           </div>
 
-          <div class="card step">
+          <div class="step-row">
             <div class="icon"><i class="fas fa-magnifying-glass"></i></div>
             <div>
               <h3>2) Faça uma pergunta</h3>
@@ -88,7 +163,7 @@
             </div>
           </div>
 
-          <div class="card step">
+          <div class="step-row">
             <div class="icon"><i class="fas fa-clipboard-check"></i></div>
             <div>
               <h3>3) Revise as fontes</h3>
@@ -112,36 +187,36 @@
 
       <section>
         <h2>Exemplos práticos</h2>
-        <div class="grid">
-          <div class="card">
-            <h3><i class="fas fa-folder-open"></i> Programas sociais</h3>
-            <p>“Quero checar se uma pessoa recebeu o Bolsa Família em 2023. Qual a base certa e como consultar?”</p>
+        <div class="steps-list">
+          <div class="step-row">
+            <div class="icon"><i class="fas fa-folder-open"></i></div>
+            <div>
+              <h3>Programas sociais</h3>
+              <p>“Quero checar se uma pessoa recebeu o Bolsa Família em 2023. Onde está essa informação e como consultar?”</p>
+            </div>
           </div>
-          <div class="card">
-            <h3><i class="fas fa-gun"></i> Controle de armas</h3>
-            <p>“Que bases devo usar para pedir dados sobre CACs e registros de armas no Brasil?”</p>
+          <div class="step-row">
+            <div class="icon"><i class="fas fa-gun"></i></div>
+            <div>
+              <h3>Controle de armas</h3>
+              <p>“Como solicitar dados sobre o número de caçadores, atiradores e colecionadores de armas registrados no Brasil?”</p>
+            </div>
           </div>
-          <div class="card">
-            <h3><i class="fas fa-user-shield"></i> Integridade disciplinar</h3>
-            <p>“Me dê um modelo de pedido para obter relatório de sindicância de um militar.”</p>
+          <div class="step-row">
+            <div class="icon"><i class="fas fa-user-shield"></i></div>
+            <div>
+              <h3>Integridade disciplinar</h3>
+              <p>“Me dê um modelo de pedido para obter relatório de sindicância de um militar do Exército”</p>
+            </div>
           </div>
         </div>
       </section>
 
       <div class="divider"></div>
 
-      <section>
-        <div class="container" style="max-width: 820px; margin: 0 auto;">
-          <div class="card" style="text-align:center; padding: 24px 24px;">
-            <h2 style="margin-top: 0;"><i class="fas fa-graduation-cap"></i> Quer aprender mais?</h2>
-            <p style="margin-bottom:0;"><a class="source-link" href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Udemy: Investigue gastos públicos com a Lei de Acesso à Informação</a></p>
-          </div>
-        </div>
-      </section>
-
       <section class="credits">
         <p>Créditos: <strong>Luiz Fernando Toledo</strong> | <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a></p>
-        <a class="source-link" href="https://buscalai.cgu.gov.br/" target="_blank" rel="noopener"><i class="fas fa-database"></i> Fonte dos dados: buscalai.cgu.gov.br</a>
+        <a class="source-link" href="https://buscalai.cgu.gov.br/" target="_blank" rel="noopener"><i class="fas fa-database"></i> Fonte</a>
         <div class="method-box">
           <p style="margin:0;"><strong>Metodologia:</strong> baixamos todas as decisões sobre transparência publicadas pela Controladoria‑Geral da União (CGU) entre janeiro de 2023 e outubro de 2025. Também transformamos o arquivo em planilha que contém todos os pedidos de informação feitos a órgãos do governo federal, de 2021 a 2025, e transformamos em arquivos de texto em PDF. Todos esses arquivos foram incluídos no repositório final do Google Notebook LM.</p>
         </div>
@@ -150,5 +225,30 @@
   </main>
 
   <!-- Theme toggle removed by request; dark is default -->
+  <div class="udemy-banner" role="region" aria-label="Curso Udemy sobre LAI">
+    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+    <div class="text">
+      <strong>Quer aprender mais?</strong>
+      <span class="hint">Curso em vídeo gravado por Luiz Fernando Toledo sobre como conseguir informações públicas por meio da LAI e dados abertos</span>
+    </div>
+    <a class="cta" href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/" target="_blank" rel="noopener">
+      <i class="fas fa-external-link-alt"></i> Acessar curso
+    </a>
+    <button class="close" aria-label="Fechar banner" title="Fechar">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <script>
+    (function(){
+      var closeBtn = document.querySelector('.udemy-banner .close');
+      var banner = document.querySelector('.udemy-banner');
+      if (closeBtn && banner) {
+        closeBtn.addEventListener('click', function(){
+          banner.style.display = 'none';
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
