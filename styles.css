@@ -180,15 +180,22 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 @media (max-width: 480px) {
   .top-nav .brand { display: none; }
   /* Center hero on mobile and let text occupy more space; account for sticky nav height */
-  .hero-section { padding: 1rem .9rem 1.25rem; min-height: calc(100dvh - 56px); display: grid; place-items: center; }
+  .hero-section { padding: 0.75rem .85rem 1rem; min-height: calc(100dvh - 56px); display: grid; place-items: center; }
   .scroll-indicator { bottom: calc(22px + env(safe-area-inset-bottom, 0px)); }
-  .hero-card { padding: 1.1rem; margin: 0 auto; text-align: center; }
-  .hero-section .tagline { font-size: 1.35rem; line-height: 1.7; max-width: 32ch; margin: 0 auto; text-align: center; }
-  .hero-section .site-name { font-size: 1.7rem; }
+  .hero-card { padding: 0.9rem 1rem; margin: 0 auto; text-align: center; max-height: calc(100dvh - 72px); overflow: auto; }
+  .hero-section .tagline { font-size: 1.15rem; line-height: 1.55; max-width: 28ch; margin: 0 auto; text-align: center; }
+  .hero-section .site-name { font-size: 1.35rem; }
   .affiliations { margin-top: .5rem; gap: .3rem; }
   .aff-badge { font-size: .9rem; padding: .5rem .75rem; width: 100%; }
   .aff-badge .aff-emoji { font-size: 1rem; }
   .about-container { grid-template-columns: 1fr; }
+}
+
+/* Extra-small phones: further tighten */
+@media (max-width: 360px) {
+  .hero-card { padding: 0.8rem 0.9rem; max-height: calc(100dvh - 72px); }
+  .hero-section .tagline { font-size: 1.05rem; line-height: 1.5; max-width: 26ch; }
+  .hero-section .site-name { font-size: 1.25rem; }
 }
 
 /* Navigation grid */
