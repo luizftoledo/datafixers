@@ -143,14 +143,53 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 
 /* Card styling for the hero tagline and navigation */
 .hero-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  /* Two-layer background: inner panel + four animated edges */
+  --h: 120; /* starting hue (green) */
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    /* top edge */
+    linear-gradient(90deg,
+      hsl(var(--h) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 40) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 80) 60% 50% / 0.9)
+    ) top / 100% 2px border-box no-repeat,
+    /* right edge */
+    linear-gradient(180deg,
+      hsl(calc(var(--h) + 20) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 60) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 100) 60% 52% / 0.9)
+    ) right / 2px 100% border-box no-repeat,
+    /* bottom edge */
+    linear-gradient(270deg,
+      hsl(calc(var(--h) + 40) 60% 50% / 0.9),
+      hsl(calc(var(--h) + 80) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 120) 60% 50% / 0.9)
+    ) bottom / 100% 2px border-box no-repeat,
+    /* left edge */
+    linear-gradient(0deg,
+      hsl(calc(var(--h) + 60) 60% 52% / 0.9),
+      hsl(calc(var(--h) + 100) 70% 60% / 0.8),
+      hsl(calc(var(--h) + 140) 60% 52% / 0.9)
+    ) left / 2px 100% border-box no-repeat;
+  border: 2px solid transparent;
   border-radius: var(--radius);
   box-shadow: var(--shadow-md), var(--glow-green);
   padding: 3rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  animation: df-hue 6s linear infinite;
+}
+
+@keyframes df-hue {
+  to { --h: 480; }
+}
+
+@property --h {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 120;
 }
 
 /* Section separator */
@@ -456,8 +495,8 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 
 /* Toggle button to show/hide additional stories */
 .toggle-stories-btn {
-  display: inline-block;
-  margin: 1rem 0;
+  display: block;
+  margin: 1rem auto;
   background: var(--primary);
   color: #fff;
   padding: 0.5rem 1rem;
@@ -976,7 +1015,10 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 @media (max-width: 768px) {
   .laibot-wrapper {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .laibot-section video { display: block; margin: 0 auto; }
   .profile-card { grid-template-columns: 1fr; }
   .video-item iframe {
     height: 240px;
