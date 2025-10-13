@@ -19,8 +19,8 @@
       --h: 120;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 16px 24px;
+      gap: 14px;
+      padding: 30px 48px;
       border-radius: 9999px;
       background:
         /* inner semi-transparent panel for translucency */
@@ -52,13 +52,19 @@
       border: 2px solid transparent;
       color: #ffffff;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       text-decoration: none;
-      margin-top: 16px;
+      margin-top: 20px;
       box-shadow: var(--glow-green);
       animation: df-hue 6s linear infinite;
     }
     .cta:hover { filter: brightness(1.05); box-shadow: var(--glow-green); }
+    @media (max-width: 900px) {
+      .cta { padding: 26px 40px; font-size: 1.1rem; gap: 12px; }
+    }
+    @media (max-width: 520px) {
+      .cta { padding: 20px 28px; font-size: 1.05rem; gap: 12px; }
+    }
     .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 18px; margin-top: 28px; }
     .card { background: var(--card-bg, rgba(0,0,0,0.04)); border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 18px; }
     [data-theme="dark"] .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
@@ -138,7 +144,7 @@
         <h1>L‑AI Notebook</h1>
         <p>Pergunte tudo o que quiser sobre dados públicos e LAI, e responderemos com base em um repositório com mais de 1 milhão de registros públicos.</p>
         <a class="cta glow-pulse" href="https://notebooklm.google.com/notebook/524ca406-b5e5-46fe-9a08-ba2a078f704f" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-book-open"></i> Acesse agora a ferramenta gratuita
+          <i class="fas fa-book-open"></i> Acesse agora a ferramenta gratuita <i class="fas fa-hand-pointer"></i>
         </a>
       </section>
 
@@ -225,7 +231,7 @@
 
       <section class="cta-bottom" style="text-align:center; margin: 24px 0 8px;">
         <a class="cta glow-pulse" href="https://notebooklm.google.com/notebook/524ca406-b5e5-46fe-9a08-ba2a078f704f" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-book-open"></i> Acesse agora a ferramenta gratuita
+          <i class="fas fa-book-open"></i> Acesse agora a ferramenta gratuita <i class="fas fa-hand-pointer"></i>
         </a>
       </section>
 
