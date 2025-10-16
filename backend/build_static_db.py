@@ -23,6 +23,26 @@ NAME_CANDIDATES = [
 CPF_COL = "CPF_CNPJ_INFRATOR"
 NUM_PROCESSO_COL = "NUM_PROCESSO"
 
+# Additional candidates for enrichment
+DATE_CANDIDATES = [
+    "DATA_AUTO_INFRACAO",
+    "DATA_INFRACAO",
+    "DATA_LAVRATURA",
+    "DATA",
+]
+VALUE_CANDIDATES = [
+    "VALOR_MULTA",
+    "VALOR_INFRACAO",
+    "VALOR",
+]
+DESC_CANDIDATES = [
+    "DESCRICAO_AUTO",
+    "DESCRICAO_INFRACAO",
+    "DESCRICAO",
+    "ENQUADRAMENTO",
+    "ENQUADRAMENTO_LEGAL",
+]
+
 
 def download_zip(url: str) -> Path:
     tmp_path = Path(tempfile.gettempdir()) / "ibama_auto_infracao.zip"
@@ -53,12 +73,16 @@ def ensure_tables(conn: sqlite3.Connection):
             id INTEGER PRIMARY KEY,
             name TEXT,
             cpf TEXT,
-            num_processo TEXT
+            num_processo TEXT,
+            data TEXT,
+            valor REAL,
+            descricao TEXT
         );
         """
     )
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_cpf ON autos(cpf);")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_name ON autos(name);")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_data ON autos(data);")
 
 
 def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
@@ -77,9 +101,22 @@ def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
                     )
                 except Exception:
                     continue
-                name_col = find_name_column(df.columns)
+                cols = list(df.columns)
+                name_col = find_name_column(cols)
                 if name_col is None:
                     continue
+                # locate enrichment columns
+                upper = {c.upper(): c for c in cols}
+                def pick(candidates):
+                    for cand in candidates:
+                        if cand in upper:
+                            return upper[cand]
+                    return None
+                date_col = pick(DATE_CANDIDATES)
+                value_col = pick(VALUE_CANDIDATES)
+                desc_col = pick(DESC_CANDIDATES)
+
+                # build output dataframe
                 out = pd.DataFrame(
                     {
                         "name": df[name_col].astype(str).fillna("").str.strip(),
@@ -87,6 +124,31 @@ def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
                         "num_processo": df.get(NUM_PROCESSO_COL, pd.Series([None] * len(df), dtype="object")).astype(str),
                     }
                 )
+                # parse date
+                if date_col and date_col in df:
+                    try:
+                        dt = pd.to_datetime(df[date_col], dayfirst=True, errors="coerce")
+                        out["data"] = dt.dt.strftime("%Y-%m-%d")
+                    except Exception:
+                        out["data"] = None
+                else:
+                    out["data"] = None
+                # parse value (float)
+                if value_col and value_col in df:
+                    try:
+                        # pandas with decimal=',' should already parse, but ensure numeric
+                        val = pd.to_numeric(df[value_col], errors="coerce")
+                        out["valor"] = val
+                    except Exception:
+                        out["valor"] = None
+                else:
+                    out["valor"] = None
+                # description
+                if desc_col and desc_col in df:
+                    out["descricao"] = df[desc_col].astype(str)
+                else:
+                    out["descricao"] = None
+
                 out.to_sql("autos", conn, if_exists="append", index=False, chunksize=50000)
 
 

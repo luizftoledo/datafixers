@@ -44,13 +44,14 @@ function buildQueries(name, cpf, limit, offset) {
   }
   const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : '';
   const countSql = `SELECT COUNT(1) as total FROM autos ${whereSql}`;
-  const dataSql = `SELECT id, name, cpf, num_processo FROM autos ${whereSql} ORDER BY id LIMIT ? OFFSET ?`;
+  const dataSql = `SELECT id, name, cpf, num_processo, data, valor, descricao FROM autos ${whereSql} ORDER BY id LIMIT ? OFFSET ?`;
   const dataParams = params.concat([limit, offset]);
   return { countSql, dataSql, params, dataParams };
 }
 
 function renderRows(rows) {
   elTableBody.innerHTML = '';
+  const fmtBRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
   for (const r of rows) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
@@ -58,6 +59,9 @@ function renderRows(rows) {
       <td>${r.name ?? ''}</td>
       <td>${r.cpf ?? ''}</td>
       <td>${r.num_processo ?? ''}</td>
+      <td>${r.data ?? ''}</td>
+      <td>${(r.valor != null && r.valor !== '') ? fmtBRL.format(Number(r.valor)) : ''}</td>
+      <td>${r.descricao ?? ''}</td>
     `;
     elTableBody.appendChild(tr);
   }
