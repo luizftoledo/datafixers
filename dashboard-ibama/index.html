@@ -9,11 +9,24 @@
 <body>
   <nav class="top-nav">
     <div class="container nav-inner">
-      <a class="brand" href="/">Data Fixers</a>
-      <ul class="nav-links">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/ibama-fines.html">IBAMA fines</a></li>
-        <li><a href="/dashboard-ibama/index.html" class="teal">Dashboard IBAMA</a></li>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span class="hamburger" aria-hidden="true">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#projects">Stories</a></li>
+        <li><a href="/index.html#about">About</a></li>
+        <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer"><span class="teal">L‑AI</span> Bot</a></li>
+        <li>
+          <a class="nav-pill btn-animated-border glow-pulse" href="/l-ai-notebook.html">
+            <span class="teal">L‑AI</span> Notebook
+            <span class="badge-new" aria-label="Novo">NEW</span>
+          </a>
+        </li>
+        <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A <span class="teal">LAI</span> que pegou</a></li>
       </ul>
       <button class="theme-toggle" aria-label="Toggle theme"><i></i></button>
     </div>
@@ -26,10 +39,40 @@
     </section>
 
     <section class="hero-card" style="padding: 1.25rem;">
-      <div class="search" style="display: grid; grid-template-columns: 1fr 1fr auto; gap: .5rem;">
+      <div class="search" style="display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: .5rem;">
         <input id="name" placeholder="Nome (ex.: JOAO SILVA)" class="input" />
         <input id="cpf" placeholder="CPF/CNPJ (somente números)" class="input" />
+        <input id="desc" placeholder="Descrição da multa (palavras)" class="input" />
         <button id="btnSearch" class="btn-primary">Buscar</button>
+      </div>
+
+      <div class="controls" style="display:grid; grid-template-columns: repeat(6, 1fr); gap:.5rem; align-items:end; margin-top:.75rem;">
+        <label>Data (de)
+          <input id="dateFrom" type="date" class="input" />
+        </label>
+        <label>Data (até)
+          <input id="dateTo" type="date" class="input" />
+        </label>
+        <label>Valor mínimo (R$)
+          <input id="valorMin" type="number" step="0.01" class="input" />
+        </label>
+        <label>Valor máximo (R$)
+          <input id="valorMax" type="number" step="0.01" class="input" />
+        </label>
+        <label>Ordenar por
+          <select id="sortBy" class="input">
+            <option value="data">Data</option>
+            <option value="valor">Valor</option>
+            <option value="name">Nome</option>
+            <option value="id">ID</option>
+          </select>
+        </label>
+        <label>Direção
+          <select id="sortDir" class="input">
+            <option value="DESC">Desc</option>
+            <option value="ASC">Asc</option>
+          </select>
+        </label>
       </div>
 
       <div class="controls" style="display:flex; gap:.5rem; align-items:center; margin-top:.75rem;">
@@ -72,11 +115,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js" defer></script>
   <script src="script.js" defer></script>
   <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
     if (navToggle && navLinks) {
       navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     }
   </script>
+
+  <section class="container" style="padding: 1rem 0 2rem 0;">
+    <div class="hero-card" style="padding:1rem;">
+      <h2 style="margin:0 0 .5rem 0;">Metodologia</h2>
+      <p class="muted" style="margin:0 0 .5rem 0;">
+        Os dados são oficiais do IBAMA e foram obtidos de
+        <a class="teal" href="https://dadosabertos.ibama.gov.br/dados/SIFISC/auto_infracao/auto_infracao/auto_infracao_csv.zip" target="_blank" rel="noopener noreferrer">dadosabertos.ibama.gov.br</a>.
+        Esta página consolida e disponibiliza buscas locais a partir do arquivo publicado.
+      </p>
+      <p class="muted" id="metaInfo" style="margin:0;">
+        <span>Última atualização do dataset (gerada por este site): <strong id="lastUpdated">–</strong></span>
+        <span style="margin-left:1rem;">Multa mais recente na base: <strong id="latestFineDate">–</strong></span>
+      </p>
+    </div>
+  </section>
 </body>
 </html>

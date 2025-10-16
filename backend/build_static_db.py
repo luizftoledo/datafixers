@@ -5,6 +5,7 @@ import tempfile
 import sqlite3
 from pathlib import Path
 import pandas as pd
+from datetime import datetime, timezone
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -71,6 +72,7 @@ def ensure_tables(conn: sqlite3.Connection):
     conn.execute("PRAGMA journal_mode=DELETE;")
     conn.execute("PRAGMA synchronous=NORMAL;")
     conn.execute("DROP TABLE IF EXISTS autos;")
+    conn.execute("DROP TABLE IF EXISTS meta;")
     conn.execute(
         """
         CREATE TABLE autos (
@@ -87,6 +89,14 @@ def ensure_tables(conn: sqlite3.Connection):
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_cpf ON autos(cpf);")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_name ON autos(name);")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_data ON autos(data);")
+    conn.execute(
+        """
+        CREATE TABLE meta (
+            key TEXT PRIMARY KEY,
+            value TEXT
+        );
+        """
+    )
 
 
 def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
@@ -165,6 +175,13 @@ def build_static_db():
         with sqlite3.connect(DB_PATH) as conn:
             ensure_tables(conn)
             populate_from_zip(zp, conn)
+            # write meta info
+            cur = conn.cursor()
+            cur.execute("SELECT MAX(data) FROM autos WHERE data IS NOT NULL AND data != ''")
+            max_date = cur.fetchone()[0] or ''
+            built_at = datetime.now(timezone.utc).isoformat()
+            conn.execute("INSERT INTO meta(key,value) VALUES(?,?)", ("built_at_utc", built_at))
+            conn.execute("INSERT INTO meta(key,value) VALUES(?,?)", ("max_date", max_date))
             conn.commit()
     finally:
         try:
