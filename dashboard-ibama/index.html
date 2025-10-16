@@ -46,6 +46,7 @@
       color: var(--text-primary);
       font-weight: 600;
     }
+    .icon-btn { padding: 6px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -87,6 +88,25 @@
         <input id="desc" placeholder="Descrição da multa (palavras)" class="input" />
         <button id="btnSearch" class="btn-primary">Buscar</button>
       </div>
+
+  <!-- Modal Busca Múltipla -->
+  <div id="multiModal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card hero-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-bottom:.5rem;">
+        <h3 style="margin:0;">Busca múltipla</h3>
+        <button class="btn-secondary" data-close>Fechar</button>
+      </div>
+      <p class="muted" style="margin:0 0 .5rem 0;">Insira termos separados por vírgula. Exemplos: nomes: "JOAO SILVA, MARIA SOUZA" • CPFs/CNPJs: "114.751.022-91, 07.345.440/0001-20"</p>
+      <label style="display:block; margin:.5rem 0 .25rem 0;">Nomes (separados por vírgulas)</label>
+      <textarea id="multiNames" class="input" rows="3" style="width:100%; resize:vertical;" placeholder="Ex.: JOAO SILVA, MARIA SOUZA"></textarea>
+      <label style="display:block; margin:.75rem 0 .25rem 0;">CPFs/CNPJs (separados por vírgulas)</label>
+      <textarea id="multiCpfs" class="input" rows="3" style="width:100%; resize:vertical;" placeholder="Ex.: 114.751.022-91, 07.345.440/0001-20"></textarea>
+      <div style="display:flex; gap:.5rem; justify-content:flex-end; margin-top:.75rem;">
+        <button id="multiApply" class="btn-primary">Aplicar busca</button>
+      </div>
+    </div>
+  </div>
 
       <div class="controls" style="display:grid; grid-template-columns: repeat(6, 1fr); gap:.5rem; align-items:end; margin-top:.75rem;">
         <label>Data (de)
@@ -132,8 +152,9 @@
         <span style="flex:1"></span>
         <span id="totalBadge" class="result-badge">0 resultados</span>
         <span style="flex:1"></span>
-        <button id="btnExportCSV" class="btn-secondary">Exportar CSV</button>
-        <button id="btnExportXLSX" class="btn-secondary">Exportar XLSX</button>
+        <button id="btnExportCSV" class="btn-secondary icon-btn" title="Baixar CSV" aria-label="Baixar CSV">⬇︎ CSV</button>
+        <button id="btnExportXLSX" class="btn-secondary icon-btn" title="Baixar XLSX" aria-label="Baixar XLSX">⬇︎ XLSX</button>
+        <button id="btnMulti" class="btn-secondary" title="Busca múltipla" aria-label="Busca múltipla">Busca múltipla</button>
       </div>
 
       <div id="status" class="muted" style="margin-top:.5rem;"></div>
@@ -143,13 +164,13 @@
         <table id="resultsTable" class="table" style="width:100%; border-collapse: collapse;">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Nome</th>
               <th>CPF/CNPJ</th>
               <th>Nº Processo</th>
               <th>Data</th>
               <th>Valor (R$)</th>
               <th>Descrição</th>
+              <th>LAI</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -157,6 +178,26 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal LAI -->
+  <div id="laiModal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card hero-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-bottom:.5rem;">
+        <h3 style="margin:0;">Requisitar cópia via LAI</h3>
+        <button id="laiClose" class="btn-secondary" data-close>Fechar</button>
+      </div>
+      <p class="muted" style="margin:0 0 .5rem 0;">
+        Copie o texto abaixo e registre um pedido ao Ibama no site
+        <a class="teal" href="http://falabr.cgu.gov.br/" target="_blank" rel="noopener noreferrer">FalaBR</a>.
+      </p>
+      <textarea id="laiText" class="input" rows="8" style="width:100%; resize:vertical;"></textarea>
+      <div style="display:flex; gap:.5rem; justify-content:flex-end; margin-top:.5rem;">
+        <button id="laiCopy" class="btn-primary">Copiar texto</button>
+        <a class="btn-secondary" href="http://falabr.cgu.gov.br/" target="_blank" rel="noopener noreferrer">Abrir FalaBR</a>
+      </div>
+    </div>
+  </div>
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js" defer></script>
@@ -188,5 +229,12 @@
       <span class="muted">Multa mais recente na base: <strong id="latestFineDate">–</strong></span>
     </div>
   </footer>
+
+  <style>
+    .modal { position: fixed; inset: 0; z-index: 100; }
+    .modal-backdrop { position:absolute; inset:0; background: rgba(0,0,0,0.5); }
+    .modal-card { position: relative; max-width: 800px; margin: 10vh auto; }
+    .modal[aria-hidden="true"] { display:none; }
+  </style>
 </body>
 </html>

@@ -17,10 +17,13 @@ const elSortBy = document.getElementById('sortBy');
 const elSortDir = document.getElementById('sortDir');
 const elExportCSV = document.getElementById('btnExportCSV');
 const elExportXLSX = document.getElementById('btnExportXLSX');
+const elMultiBtn = document.getElementById('btnMulti');
 
 let page = 1;
 let SQLModule = null;
 let db = null;
+let multiNames = [];
+let multiCpfs = [];
 
 async function initDb() {
   elStatus.textContent = 'Carregando banco...';
@@ -83,12 +86,31 @@ function buildQueries(name, cpf, limit, offset) {
       params.push('%' + cpfDigits + '%');
     }
   }
+  if (multiCpfs.length) {
+    const terms = multiCpfs
+      .map(s => s.replace(/\D+/g, ''))
+      .filter(Boolean);
+    if (terms.length) {
+      where.push(`(${terms.map(() => 'cpf_norm LIKE ?').join(' OR ')})`);
+      params.push(...terms.map(t => `%${t}%`));
+    }
+  }
   if (name) {
     // case-insensitive prefix match per token
     const tokens = name.split(/\s+/).filter(Boolean);
     for (const t of tokens) {
       where.push('UPPER(name) LIKE ?');
       params.push((t.toUpperCase()) + '%');
+    }
+  }
+  if (multiNames.length) {
+    const terms = multiNames
+      .map(s => s.trim().toUpperCase())
+      .filter(Boolean);
+    if (terms.length) {
+      // name contains (case-insensitive). Using LIKE with %term%
+      where.push(`(${terms.map(() => 'UPPER(name) LIKE ?').join(' OR ')})`);
+      params.push(...terms.map(t => `%${t}%`));
     }
   }
   // description contains, case-insensitive, tokens AND
@@ -124,16 +146,30 @@ function buildQueries(name, cpf, limit, offset) {
 function renderRows(rows) {
   elTableBody.innerHTML = '';
   const fmtBRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  const fmtDateBr = (yyyyMmDd) => {
+    if (!yyyyMmDd) return '';
+    const m = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(yyyyMmDd);
+    if (m) return `${m[3]}/${m[2]}/${m[1]}`;
+    const d = new Date(yyyyMmDd);
+    return isNaN(d.getTime()) ? '' : d.toLocaleDateString('pt-BR');
+  };
   for (const r of rows) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${r.id ?? ''}</td>
       <td>${r.name ?? ''}</td>
       <td>${r.cpf ?? ''}</td>
       <td>${r.num_processo ?? ''}</td>
       <td>${r.data ?? ''}</td>
       <td>${(r.valor != null && r.valor !== '') ? fmtBRL.format(Number(r.valor)) : ''}</td>
       <td>${r.descricao ?? ''}</td>
+      <td>
+        <button class="btn-secondary lai-btn" 
+          data-num="${(r.num_processo ?? '').toString().replace(/\"/g,'\"')}" 
+          data-date="${r.data ?? ''}" 
+          data-name="${(r.name ?? '').toString().replace(/\"/g,'\"')}">
+          Requisitar via LAI
+        </button>
+      </td>
     `;
     elTableBody.appendChild(tr);
   }
@@ -196,6 +232,46 @@ initDb().catch(err => {
   elStatus.textContent = '';
 });
 
+// Multi-search handlers
+const multiModalEl = document.getElementById('multiModal');
+const multiNamesEl = document.getElementById('multiNames');
+const multiCpfsEl = document.getElementById('multiCpfs');
+const multiApplyEl = document.getElementById('multiApply');
+
+function openMultiModal() {
+  if (!multiModalEl) return;
+  multiModalEl.style.display = 'block';
+  multiModalEl.setAttribute('aria-hidden', 'false');
+}
+function closeMultiModal() {
+  if (!multiModalEl) return;
+  multiModalEl.style.display = 'none';
+  multiModalEl.setAttribute('aria-hidden', 'true');
+}
+
+elMultiBtn?.addEventListener('click', openMultiModal);
+document.addEventListener('click', (e) => {
+  const t = e.target;
+  if ((t && t.hasAttribute && t.hasAttribute('data-close')) || (t && t.classList && t.classList.contains('modal-backdrop'))) {
+    closeMultiModal();
+  }
+});
+multiApplyEl?.addEventListener('click', () => {
+  const names = (multiNamesEl?.value || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean);
+  const cpfs = (multiCpfsEl?.value || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean);
+  multiNames = names;
+  multiCpfs = cpfs;
+  page = 1;
+  search();
+  closeMultiModal();
+});
+
 function buildFullQueryForExport() {
   // replicate filters used in buildQueries, without LIMIT/OFFSET
   const where = [];
@@ -207,9 +283,27 @@ function buildFullQueryForExport() {
     const cpfDigits = cpf.replace(/\D+/g, '');
     if (cpfDigits) { where.push('cpf_norm LIKE ?'); params.push('%' + cpfDigits + '%'); }
   }
+  if (multiCpfs.length) {
+    const terms = multiCpfs
+      .map(s => s.replace(/\D+/g, ''))
+      .filter(Boolean);
+    if (terms.length) {
+      where.push(`(${terms.map(() => 'cpf_norm LIKE ?').join(' OR ')})`);
+      params.push(...terms.map(t => `%${t}%`));
+    }
+  }
   if (name) {
     const tokens = name.split(/\s+/).filter(Boolean);
     for (const t of tokens) { where.push('UPPER(name) LIKE ?'); params.push((t.toUpperCase()) + '%'); }
+  }
+  if (multiNames.length) {
+    const terms = multiNames
+      .map(s => s.trim().toUpperCase())
+      .filter(Boolean);
+    if (terms.length) {
+      where.push(`(${terms.map(() => 'UPPER(name) LIKE ?').join(' OR ')})`);
+      params.push(...terms.map(t => `%${t}%`));
+    }
   }
   if (desc) {
     const tokens = desc.split(/\s+/).filter(Boolean);
@@ -288,6 +382,60 @@ async function exportXLSX() {
 
 elExportCSV?.addEventListener('click', exportCSV);
 elExportXLSX?.addEventListener('click', exportXLSX);
+
+// LAI modal logic
+const laiModal = document.getElementById('laiModal');
+const laiText = document.getElementById('laiText');
+const laiCopy = document.getElementById('laiCopy');
+
+function openLaiModal(numProcesso, dataIso, nome) {
+  const dataBr = (() => {
+    if (!dataIso) return '';
+    const m = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(dataIso);
+    return m ? `${m[3]}/${m[2]}/${m[1]}` : dataIso;
+  })();
+  const body = [
+    'Solicito, por favor, cópia do auto de infração, bem como do respectivo processo administrativo, do auto de infração de número ',
+    (numProcesso || '___'), ', de ', (dataBr || '___'), ', em nome de ', (nome || '___'),
+    '. Caso haja alguma informação sigilosa, basta tarjá-la e fornecer o restante. ',
+    'Vale ressaltar que este canal é o correto para solicitar cópias de multas ambientais, conforme já decidido pela CGU, ',
+    'e que não se deve indicar o SEI para tal função, já que esse solicitante não é parte do processo mas sim somente um interessado em visualizar as informações. ',
+    'Vale ressaltar que o próprio Ibama já entendeu que autos de infração são documentos públicos, portanto não estão passíveis de sigilo após a conclusão do processo.'
+  ].join('');
+  if (laiText) laiText.value = body;
+  if (laiModal) {
+    laiModal.style.display = 'block';
+    laiModal.setAttribute('aria-hidden', 'false');
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const t = e.target;
+  if (t && t.classList && t.classList.contains('lai-btn')) {
+    const num = t.getAttribute('data-num') || '';
+    const date = t.getAttribute('data-date') || '';
+    const name = t.getAttribute('data-name') || '';
+    openLaiModal(num, date, name);
+  }
+  if ((t && t.hasAttribute && t.hasAttribute('data-close')) || (t && t.classList && t.classList.contains('modal-backdrop'))) {
+    if (laiModal) {
+      laiModal.style.display = 'none';
+      laiModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+});
+
+laiCopy?.addEventListener('click', async () => {
+  try {
+    if (laiText) {
+      await navigator.clipboard.writeText(laiText.value);
+      laiCopy.textContent = 'Copiado!';
+      setTimeout(() => { laiCopy.textContent = 'Copiar texto'; }, 1500);
+    }
+  } catch (err) {
+    elError.textContent = 'Não foi possível copiar o texto. Copie manualmente.';
+  }
+});
 
 function queryRows(sql, params) {
   const rows = [];
