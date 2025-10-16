@@ -28,7 +28,7 @@ async function initDb() {
     locateFile: (file) => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${file}`,
   });
   SQLModule = SQL;
-  const resp = await fetch('/public-data/ibama.sqlite', { cache: 'no-store' });
+  const resp = await fetch(`/public-data/ibama.sqlite?v=${Date.now()}` , { cache: 'no-store' });
   if (!resp.ok) throw new Error(`Falha ao carregar SQLite: HTTP ${resp.status}`);
   const buf = await resp.arrayBuffer();
   db = new SQL.Database(new Uint8Array(buf));
@@ -145,19 +145,8 @@ async function search() {
     const pageSize = parseInt(elPageSize.value, 10) || 25;
     const offset = (page - 1) * pageSize;
     const { countSql, dataSql, params, dataParams } = buildQueries(name, cpf, pageSize, offset);
-
-    let total = 0;
-    const countRes = db.exec(countSql, params);
-    if (countRes.length && countRes[0].values.length) {
-      total = countRes[0].values[0][0];
-    }
-
-    const dataRes = db.exec(dataSql, dataParams);
-    let rows = [];
-    if (dataRes.length) {
-      const cols = dataRes[0].columns;
-      rows = dataRes[0].values.map(v => Object.fromEntries(cols.map((c, i) => [c, v[i]])));
-    }
+    const total = queryCount(countSql, params);
+    const rows = queryRows(dataSql, dataParams);
 
     elStatus.textContent = `Resultados: ${total}`;
     elPageInfo.textContent = `Página ${page} (tamanho ${pageSize})`;
@@ -292,4 +281,20 @@ function queryRows(sql, params) {
     stmt.free();
   }
   return rows;
+}
+
+function queryCount(sql, params) {
+  let total = 0;
+  const stmt = db.prepare(sql);
+  try {
+    stmt.bind(params || []);
+    if (stmt.step()) {
+      const obj = stmt.getAsObject();
+      // supports 'total' alias or first column
+      total = obj.total != null ? Number(obj.total) : Number(Object.values(obj)[0] || 0);
+    }
+  } finally {
+    stmt.free();
+  }
+  return Number.isFinite(total) ? total : 0;
 }
