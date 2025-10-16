@@ -79,8 +79,8 @@ function buildQueries(name, cpf, limit, offset) {
   if (cpf) {
     const cpfDigits = cpf.replace(/\D+/g, '');
     if (cpfDigits) {
-      where.push('cpf_norm = ?');
-      params.push(cpfDigits);
+      where.push('cpf_norm LIKE ?');
+      params.push('%' + cpfDigits + '%');
     }
   }
   if (name) {
@@ -205,7 +205,7 @@ function buildFullQueryForExport() {
   const desc = elDesc?.value.trim() || '';
   if (cpf) {
     const cpfDigits = cpf.replace(/\D+/g, '');
-    if (cpfDigits) { where.push('cpf_norm = ?'); params.push(cpfDigits); }
+    if (cpfDigits) { where.push('cpf_norm LIKE ?'); params.push('%' + cpfDigits + '%'); }
   }
   if (name) {
     const tokens = name.split(/\s+/).filter(Boolean);
