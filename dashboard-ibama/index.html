@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dashboard IBAMA - Datafixers</title>
+  <title>Environmental fines 🇧🇷 - Datafixers</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="/index.html#projects">Stories</a></li>
         <li><a href="/index.html#about">About</a></li>
-        <li><a href="https://datafixers.org/laibot" target="_blank" rel="noopener noreferrer"><span class="teal">L‑AI</span> Bot</a></li>
+        <li><a href="/dashboard-ibama/index.html">Environmental fines 🇧🇷</a></li>
         <li>
           <a class="nav-pill btn-animated-border glow-pulse" href="/l-ai-notebook.html">
             <span class="teal">L‑AI</span> Notebook
@@ -34,8 +34,8 @@
 
   <main class="container" style="padding: 2rem 0;">
     <section class="hero-card" style="margin-bottom: 1.5rem;">
-      <h1 style="margin-bottom: .5rem;">Dashboard IBAMA</h1>
-      <p class="muted">Busque por Nome (prefixos por palavra) ou CPF/CNPJ (exato). Os dados são consultados diretamente em um arquivo SQLite estático hospedado neste site.</p>
+      <h1 style="margin-bottom: .5rem;">Environmental fines 🇧🇷</h1>
+      <p class="muted">Pesquise por nome, cpf/cnpj ou descrição da infração</p>
     </section>
 
     <section class="hero-card" style="padding: 1.25rem;">
@@ -87,6 +87,9 @@
         <button id="prev" class="btn-secondary">Anterior</button>
         <span id="pageInfo" class="muted"></span>
         <button id="next" class="btn-secondary">Próxima</button>
+        <span style="flex:1"></span>
+        <button id="btnExportCSV" class="btn-secondary">Exportar CSV</button>
+        <button id="btnExportXLSX" class="btn-secondary">Exportar XLSX</button>
       </div>
 
       <div id="status" class="muted" style="margin-top:.5rem;"></div>
@@ -113,6 +116,7 @@
 
   <script src="/scripts/theme.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="script.js" defer></script>
   <script>
     const navToggle = document.getElementById('navToggle');
