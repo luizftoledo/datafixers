@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Multas ambientais (Ibama) - Datafixers</title>
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Prefer dark controls inside the card */
+    .hero-card input,
+    .hero-card select,
+    .hero-card .input,
+    .hero-card select.input {
+      background-color: var(--bg-light) !important;
+      color: var(--text-primary) !important;
+      border: 1.5px solid var(--border) !important;
+      border-radius: 8px;
+      padding: 10px;
+      color-scheme: dark;
+    }
+    .hero-card input::placeholder,
+    .hero-card .input::placeholder { color: var(--text-secondary); }
+    .hero-card input:focus,
+    .hero-card select:focus,
+    .hero-card .input:focus,
+    .hero-card select.input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.18);
+    }
+    /* Autofill (Chrome/Safari) */
+    .hero-card input:-webkit-autofill,
+    .hero-card input:-webkit-autofill:hover,
+    .hero-card input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px var(--bg-light) inset;
+      -webkit-text-fill-color: var(--text-primary);
+      caret-color: var(--text-primary);
+      transition: background-color 9999s ease-in-out 0s;
+    }
+    .btn-secondary { border-color: var(--border); }
+  </style>
 </head>
 <body>
   <nav class="top-nav">
