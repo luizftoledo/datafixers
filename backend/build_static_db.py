@@ -79,6 +79,7 @@ def ensure_tables(conn: sqlite3.Connection):
             id INTEGER PRIMARY KEY,
             name TEXT,
             cpf TEXT,
+            cpf_norm TEXT,
             num_processo TEXT,
             data TEXT,
             valor REAL,
@@ -87,6 +88,7 @@ def ensure_tables(conn: sqlite3.Connection):
         """
     )
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_cpf ON autos(cpf);")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_cpf_norm ON autos(cpf_norm);")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_name ON autos(name);")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_autos_data ON autos(data);")
     conn.execute(
@@ -138,6 +140,8 @@ def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
                         "num_processo": df.get(NUM_PROCESSO_COL, pd.Series([None] * len(df), dtype="object")).astype(str),
                     }
                 )
+                # normalized cpf/cnpj: only digits
+                out["cpf_norm"] = out["cpf"].fillna("").astype(str).str.replace(r"\D+", "", regex=True)
                 # parse date
                 if date_col and date_col in df:
                     try:
