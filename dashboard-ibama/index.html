@@ -38,6 +38,14 @@
       transition: background-color 9999s ease-in-out 0s;
     }
     .btn-secondary { border-color: var(--border); }
+    .result-badge {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -62,7 +70,7 @@
         </li>
         <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A <span class="teal">LAI</span> que pegou</a></li>
       </ul>
-      <button class="theme-toggle" aria-label="Toggle theme"><i></i></button>
+      
     </div>
   </nav>
 
@@ -122,6 +130,8 @@
         <span id="pageInfo" class="muted"></span>
         <button id="next" class="btn-secondary">Próxima</button>
         <span style="flex:1"></span>
+        <span id="totalBadge" class="result-badge">0 resultados</span>
+        <span style="flex:1"></span>
         <button id="btnExportCSV" class="btn-secondary">Exportar CSV</button>
         <button id="btnExportXLSX" class="btn-secondary">Exportar XLSX</button>
       </div>
@@ -148,7 +158,7 @@
     </section>
   </main>
 
-  <script src="/scripts/theme.js" defer></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="script.js" defer></script>
@@ -168,11 +178,15 @@
         <a class="teal" href="https://dadosabertos.ibama.gov.br/dados/SIFISC/auto_infracao/auto_infracao/auto_infracao_csv.zip" target="_blank" rel="noopener noreferrer">dadosabertos.ibama.gov.br</a>.
         Esta página consolida e disponibiliza buscas locais a partir do arquivo publicado.
       </p>
-      <p class="muted" id="metaInfo" style="margin:0;">
-        <span>Última atualização do dataset (gerada por este site): <strong id="lastUpdated">–</strong></span>
-        <span style="margin-left:1rem;">Multa mais recente na base: <strong id="latestFineDate">–</strong></span>
-      </p>
+      
     </div>
   </section>
+
+  <footer class="container" style="padding: 1rem 0 2rem 0;">
+    <div class="hero-card" style="padding:1rem; display:flex; gap:1rem; flex-wrap:wrap;">
+      <span class="muted">Última atualização do dataset: <strong id="lastUpdated">–</strong></span>
+      <span class="muted">Multa mais recente na base: <strong id="latestFineDate">–</strong></span>
+    </div>
+  </footer>
 </body>
 </html>

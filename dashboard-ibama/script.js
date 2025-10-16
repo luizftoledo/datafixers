@@ -48,20 +48,26 @@ async function initDb() {
         maxDateVal = q[0].values[0][0] || '';
       }
     }
-    // Format built_at_utc to local time
-    let builtDisplay = builtVal;
+    // Format dates to pt-BR (dd/mm/aaaa)
+    const fmtPtBr = (yyyyMmDd) => {
+      if (!yyyyMmDd) return '';
+      const m = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(yyyyMmDd);
+      if (m) return `${m[3]}/${m[2]}/${m[1]}`;
+      const d = new Date(yyyyMmDd);
+      return isNaN(d.getTime()) ? '' : d.toLocaleDateString('pt-BR');
+    };
+    let builtDisplay = '';
     try {
       if (builtVal) {
         const d = new Date(builtVal);
-        if (!isNaN(d.getTime())) {
-          builtDisplay = d.toLocaleString(undefined, { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-        }
+        builtDisplay = isNaN(d.getTime()) ? '' : d.toLocaleDateString('pt-BR');
       }
     } catch {}
+    const maxDateDisplay = fmtPtBr(maxDateVal);
     const elBuilt = document.getElementById('lastUpdated');
     const elMax = document.getElementById('latestFineDate');
     if (elBuilt) elBuilt.textContent = builtDisplay || '–';
-    if (elMax) elMax.textContent = maxDateVal || '–';
+    if (elMax) elMax.textContent = maxDateDisplay || '–';
   } catch (e) {
     // ignore meta errors
   }
@@ -148,7 +154,21 @@ async function search() {
     const total = queryCount(countSql, params);
     const rows = queryRows(dataSql, dataParams);
 
-    elStatus.textContent = `Resultados: ${total}`;
+    // Debug sanity check: if CPF provided, also count matches using only cpf_norm
+    let cpfOnlyCountInfo = '';
+    if (cpf) {
+      const cpfDigits = cpf.replace(/\D+/g, '');
+      if (cpfDigits) {
+        const cpfOnly = queryCount('SELECT COUNT(1) total FROM autos WHERE cpf_norm = ?', [cpfDigits]);
+        cpfOnlyCountInfo = ` | cpf_matches: ${cpfOnly}`;
+      }
+    }
+
+    elStatus.textContent = `Resultados: ${total}${cpfOnlyCountInfo}`;
+    const totalBadge = document.getElementById('totalBadge');
+    if (totalBadge) {
+      totalBadge.textContent = `${total} resultado${total === 1 ? '' : 's'}`;
+    }
     elPageInfo.textContent = `Página ${page} (tamanho ${pageSize})`;
     renderRows(rows);
   } catch (e) {
