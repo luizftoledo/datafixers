@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard IBAMA - Datafixers</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">Data Fixers</a>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/ibama-fines.html">IBAMA fines</a></li>
+        <li><a href="/dashboard-ibama/index.html" class="teal">Dashboard IBAMA</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle theme"><i></i></button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 2rem 0;">
+    <section class="hero-card" style="margin-bottom: 1.5rem;">
+      <h1 style="margin-bottom: .5rem;">Dashboard IBAMA</h1>
+      <p class="muted">Busque por Nome (prefixos por palavra) ou CPF/CNPJ (exato). Os dados são consultados diretamente em um arquivo SQLite estático hospedado neste site.</p>
+    </section>
+
+    <section class="hero-card" style="padding: 1.25rem;">
+      <div class="search" style="display: grid; grid-template-columns: 1fr 1fr auto; gap: .5rem;">
+        <input id="name" placeholder="Nome (ex.: JOAO SILVA)" class="input" />
+        <input id="cpf" placeholder="CPF/CNPJ (somente números)" class="input" />
+        <button id="btnSearch" class="btn-primary">Buscar</button>
+      </div>
+
+      <div class="controls" style="display:flex; gap:.5rem; align-items:center; margin-top:.75rem;">
+        <label>Page Size
+          <select id="pageSize" class="input">
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option>200</option>
+          </select>
+        </label>
+        <button id="prev" class="btn-secondary">Anterior</button>
+        <span id="pageInfo" class="muted"></span>
+        <button id="next" class="btn-secondary">Próxima</button>
+      </div>
+
+      <div id="status" class="muted" style="margin-top:.5rem;"></div>
+      <div id="error" style="color:#ef4444; margin-top:.25rem;"></div>
+
+      <div style="overflow:auto; margin-top:1rem;">
+        <table id="resultsTable" class="table" style="width:100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>CPF/CNPJ</th>
+              <th>Nº Processo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scripts/theme.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js" integrity="sha512-6W1v0fVt7H4QeICk0w2bQegGJbq0h3L+E+1FJ5g3kqGx7QJ5n5B8qR6yYwWm3b0u3b7kVnV8v0aVbqO5k6T16A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>
