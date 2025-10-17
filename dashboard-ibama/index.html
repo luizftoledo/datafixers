@@ -47,6 +47,8 @@
       font-weight: 600;
     }
     .icon-btn { padding: 6px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+    .col-lai { min-width: 180px; }
+    .lai-btn { padding: 6px 10px; white-space: nowrap; }
   </style>
 </head>
 <body>
@@ -92,16 +94,16 @@
   <!-- Modal Busca Múltipla -->
   <div id="multiModal" class="modal" aria-hidden="true" style="display:none;">
     <div class="modal-backdrop" data-close></div>
-    <div class="modal-card hero-card">
+    <div class="modal-card" role="dialog" aria-modal="true" style="background:#0f1115; border:1px solid #2a2f3a; box-shadow:0 10px 30px rgba(0,0,0,0.6); color:#e5e7eb; padding:16px; border-radius:12px; position:relative; z-index:101;">
       <div style="display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-bottom:.5rem;">
         <h3 style="margin:0;">Busca múltipla</h3>
         <button class="btn-secondary" data-close>Fechar</button>
       </div>
-      <p class="muted" style="margin:0 0 .5rem 0;">Insira termos separados por vírgula. Exemplos: nomes: "JOAO SILVA, MARIA SOUZA" • CPFs/CNPJs: "114.751.022-91, 07.345.440/0001-20"</p>
+      <p class="muted" style="margin:0 0 .5rem 0;">Insira termos separados por vírgula. Exemplos: nomes: "JOAO SILVA, MARIA SOUZA" • CPFs/CNPJs: apenas números (sem pontos, traços ou barras), ex.: "11475102291, 07345440000120"</p>
       <label style="display:block; margin:.5rem 0 .25rem 0;">Nomes (separados por vírgulas)</label>
       <textarea id="multiNames" class="input" rows="3" style="width:100%; resize:vertical;" placeholder="Ex.: JOAO SILVA, MARIA SOUZA"></textarea>
-      <label style="display:block; margin:.75rem 0 .25rem 0;">CPFs/CNPJs (separados por vírgulas)</label>
-      <textarea id="multiCpfs" class="input" rows="3" style="width:100%; resize:vertical;" placeholder="Ex.: 114.751.022-91, 07.345.440/0001-20"></textarea>
+      <label style="display:block; margin:.75rem 0 .25rem 0;">CPFs/CNPJs (apenas números, separados por vírgulas)</label>
+      <textarea id="multiCpfs" class="input" rows="3" style="width:100%; resize:vertical;" placeholder="Ex.: 11475102291, 07345440000120"></textarea>
       <div style="display:flex; gap:.5rem; justify-content:flex-end; margin-top:.75rem;">
         <button id="multiApply" class="btn-primary">Aplicar busca</button>
       </div>
@@ -146,9 +148,6 @@
             <option>200</option>
           </select>
         </label>
-        <button id="prev" class="btn-secondary">Anterior</button>
-        <span id="pageInfo" class="muted"></span>
-        <button id="next" class="btn-secondary">Próxima</button>
         <span style="flex:1"></span>
         <span id="totalBadge" class="result-badge">0 resultados</span>
         <span style="flex:1"></span>
@@ -170,11 +169,17 @@
               <th>Data</th>
               <th>Valor (R$)</th>
               <th>Descrição</th>
-              <th>LAI</th>
+              <th class="col-lai">LAI</th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
+      </div>
+
+      <div class="pager" style="display:flex; justify-content:center; gap:.5rem; align-items:center; margin-top:.75rem;">
+        <button id="prev" class="btn-secondary">Anterior</button>
+        <span id="pageInfo" class="muted"></span>
+        <button id="next" class="btn-secondary">Próxima</button>
       </div>
     </section>
   </main>
@@ -182,7 +187,7 @@
   <!-- Modal LAI -->
   <div id="laiModal" class="modal" aria-hidden="true" style="display:none;">
     <div class="modal-backdrop" data-close></div>
-    <div class="modal-card hero-card">
+    <div class="modal-card" role="dialog" aria-modal="true" style="background:#0f1115; border:1px solid #2a2f3a; box-shadow:0 10px 30px rgba(0,0,0,0.6); color:#e5e7eb; padding:16px; border-radius:12px; position:relative; z-index:101;">
       <div style="display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-bottom:.5rem;">
         <h3 style="margin:0;">Requisitar cópia via LAI</h3>
         <button id="laiClose" class="btn-secondary" data-close>Fechar</button>
@@ -232,8 +237,14 @@
 
   <style>
     .modal { position: fixed; inset: 0; z-index: 100; }
-    .modal-backdrop { position:absolute; inset:0; background: rgba(0,0,0,0.5); }
-    .modal-card { position: relative; max-width: 800px; margin: 10vh auto; }
+    .modal-backdrop { position:absolute; inset:0; background: rgba(0,0,0,0.88); }
+    .modal-card { position: relative; max-width: 1000px; margin: 8vh auto; background: #0f1115 !important; border: 1px solid #2a2f3a; box-shadow: 0 10px 30px rgba(0,0,0,0.6); color: #e5e7eb; opacity: 1 !important; }
+    .modal-card.hero-card { background: #0f1115 !important; opacity: 1 !important; }
+    .modal, .modal * { backdrop-filter: none !important; }
+    .modal .hero-card { background: #0f1115 !important; }
+    .modal-card .muted { color: #9ca3af; }
+    .modal-card .input, .modal-card textarea, .modal-card select { background: #12151b !important; color: #e5e7eb !important; border: 1.5px solid #2a2f3a !important; }
+    .modal-card .input::placeholder, .modal-card textarea::placeholder { color: #94a3b8; }
     .modal[aria-hidden="true"] { display:none; }
   </style>
 </body>

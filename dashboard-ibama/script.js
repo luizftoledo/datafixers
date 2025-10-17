@@ -22,6 +22,13 @@ const elMultiBtn = document.getElementById('btnMulti');
 let page = 1;
 let SQLModule = null;
 let db = null;
+const TODAY = (() => {
+  const d = new Date();
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+})();
 let multiNames = [];
 let multiCpfs = [];
 
@@ -126,7 +133,9 @@ function buildQueries(name, cpf, limit, offset) {
   const dFrom = elDateFrom?.value || '';
   const dTo = elDateTo?.value || '';
   if (dFrom) { where.push('data >= ?'); params.push(dFrom); }
-  if (dTo) { where.push('data <= ?'); params.push(dTo); }
+  // Always clamp to today to avoid future dates in source
+  const clampTo = dTo || TODAY;
+  if (clampTo) { where.push('data <= ?'); params.push(clampTo); }
   // value range
   const vMin = elValorMin?.value ? Number(elValorMin.value) : null;
   const vMax = elValorMax?.value ? Number(elValorMax.value) : null;
@@ -312,7 +321,8 @@ function buildFullQueryForExport() {
   const dFrom = elDateFrom?.value || '';
   const dTo = elDateTo?.value || '';
   if (dFrom) { where.push('data >= ?'); params.push(dFrom); }
-  if (dTo) { where.push('data <= ?'); params.push(dTo); }
+  const clampToExp = dTo || TODAY;
+  if (clampToExp) { where.push('data <= ?'); params.push(clampToExp); }
   const vMin = elValorMin?.value ? Number(elValorMin.value) : null;
   const vMax = elValorMax?.value ? Number(elValorMax.value) : null;
   if (vMin != null && !Number.isNaN(vMin)) { where.push('valor >= ?'); params.push(vMin); }
