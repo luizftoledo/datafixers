@@ -452,7 +452,7 @@ laiCopy?.addEventListener('click', async () => {
 (function setupGuidedTour(){
   const TOUR_KEY = 'ibama_tour_done_v1';
   const steps = [
-    { sel: '#name', text: 'Busque por nome. Dica: use o sobrenome em MAIÚSCULAS para mais precisão.' },
+    { sel: '#name', text: 'Busque por nome. Você pode digitar o nome completo ou parte do nome.' },
     { sel: '#cpf', text: 'Busque por CPF/CNPJ usando apenas números. Aceita pedaços do número.' },
     { sel: '#desc', text: 'Filtre pela descrição da infração. Palavras contidas são aceitas.' },
     { sel: '#btnSearch', text: 'Clique em Buscar para aplicar os filtros.' },
