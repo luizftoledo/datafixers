@@ -151,6 +151,14 @@ def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
                         out["data"] = None
                 else:
                     out["data"] = None
+                # drop rows with future dates (keep nulls)
+                try:
+                    today_str = datetime.now().strftime("%Y-%m-%d")
+                    mask_future = (out["data"].notna()) & (out["data"] > today_str)
+                    if mask_future.any():
+                        out = out.loc[~mask_future]
+                except Exception:
+                    pass
                 # parse value (float)
                 if value_col and value_col in df:
                     try:
@@ -181,7 +189,7 @@ def build_static_db():
             populate_from_zip(zp, conn)
             # write meta info
             cur = conn.cursor()
-            cur.execute("SELECT MAX(data) FROM autos WHERE data IS NOT NULL AND data != ''")
+            cur.execute("SELECT MAX(data) FROM autos WHERE data IS NOT NULL AND data != '' AND date(data) <= date('now')")
             max_date = cur.fetchone()[0] or ''
             built_at = datetime.now(timezone.utc).isoformat()
             conn.execute("INSERT INTO meta(key,value) VALUES(?,?)", ("built_at_utc", built_at))
