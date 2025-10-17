@@ -154,6 +154,7 @@
         <button id="btnExportCSV" class="btn-secondary icon-btn" title="Baixar CSV" aria-label="Baixar CSV">⬇︎ CSV</button>
         <button id="btnExportXLSX" class="btn-secondary icon-btn" title="Baixar XLSX" aria-label="Baixar XLSX">⬇︎ XLSX</button>
         <button id="btnMulti" class="btn-secondary" title="Busca múltipla" aria-label="Busca múltipla">Busca múltipla</button>
+        <button id="btnTour" class="btn-secondary" title="Tutorial" aria-label="Tutorial">Tutorial</button>
       </div>
 
       <div id="status" class="muted" style="margin-top:.5rem;"></div>
@@ -246,6 +247,10 @@
     .modal-card .input, .modal-card textarea, .modal-card select { background: #12151b !important; color: #e5e7eb !important; border: 1.5px solid #2a2f3a !important; }
     .modal-card .input::placeholder, .modal-card textarea::placeholder { color: #94a3b8; }
     .modal[aria-hidden="true"] { display:none; }
+    .tour-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 120; }
+    .tour-tooltip { position: fixed; z-index: 121; max-width: 360px; background: #0f1115; color: #e5e7eb; border: 1px solid #2a2f3a; border-radius: 12px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+    .tour-actions { display:flex; gap:.5rem; justify-content:flex-end; margin-top:.5rem; }
+    .tour-highlight { outline: 3px solid #10b981; box-shadow: 0 0 0 6px rgba(16,185,129,0.25); border-radius: 8px; transition: box-shadow .2s ease, outline .2s ease; }
   </style>
 </body>
 </html>

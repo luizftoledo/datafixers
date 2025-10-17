@@ -18,6 +18,7 @@ const elSortDir = document.getElementById('sortDir');
 const elExportCSV = document.getElementById('btnExportCSV');
 const elExportXLSX = document.getElementById('btnExportXLSX');
 const elMultiBtn = document.getElementById('btnMulti');
+const elTourBtn = document.getElementById('btnTour');
 
 let page = 1;
 let SQLModule = null;
@@ -446,6 +447,91 @@ laiCopy?.addEventListener('click', async () => {
     elError.textContent = 'Não foi possível copiar o texto. Copie manualmente.';
   }
 });
+
+// Guided tour (first-time onboarding)
+(function setupGuidedTour(){
+  const TOUR_KEY = 'ibama_tour_done_v1';
+  const steps = [
+    { sel: '#name', text: 'Busque por nome. Dica: use o sobrenome em MAIÚSCULAS para mais precisão.' },
+    { sel: '#cpf', text: 'Busque por CPF/CNPJ usando apenas números. Aceita pedaços do número.' },
+    { sel: '#desc', text: 'Filtre pela descrição da infração. Palavras contidas são aceitas.' },
+    { sel: '#btnSearch', text: 'Clique em Buscar para aplicar os filtros.' },
+    { sel: '#btnMulti', text: 'Busca múltipla: informe vários nomes e CPFs/CNPJs (apenas números), separados por vírgulas.' },
+    { sel: '#btnExportCSV', text: 'Baixe os resultados filtrados em CSV.' },
+    { sel: '#btnExportXLSX', text: 'Ou baixe em XLSX (Excel).' },
+  ];
+
+  let idx = 0;
+  let overlay, tooltip, currentTarget;
+
+  function endTour(markDone=true){
+    if (currentTarget) currentTarget.classList.remove('tour-highlight');
+    if (overlay) overlay.remove();
+    if (tooltip) tooltip.remove();
+    overlay = tooltip = currentTarget = null;
+    if (markDone) localStorage.setItem(TOUR_KEY, '1');
+  }
+
+  function placeTooltipNear(el){
+    const r = el.getBoundingClientRect();
+    const top = window.scrollY + r.top - 10;
+    const left = Math.min(window.scrollX + r.left, window.scrollX + window.innerWidth - 380);
+    tooltip.style.top = `${top + r.height + 8}px`;
+    tooltip.style.left = `${left}px`;
+  }
+
+  function showStep(){
+    // find next visible target
+    let s = steps[idx];
+    let el = s && document.querySelector(s.sel);
+    let safe = 0;
+    while (s && (!el || el.offsetParent === null) && safe < steps.length){
+      idx++; safe++; s = steps[idx]; el = s ? document.querySelector(s.sel) : null;
+    }
+    if (!s || !el){ endTour(); return; }
+
+    // cleanup prev
+    if (currentTarget) currentTarget.classList.remove('tour-highlight');
+    currentTarget = el;
+    el.classList.add('tour-highlight');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    if (!overlay){
+      overlay = document.createElement('div');
+      overlay.className = 'tour-overlay';
+      overlay.addEventListener('click', () => { idx++; showStep(); });
+      document.body.appendChild(overlay);
+    }
+    if (!tooltip){
+      tooltip = document.createElement('div');
+      tooltip.className = 'tour-tooltip';
+      tooltip.innerHTML = `
+        <div id="tourText" style="line-height:1.4"></div>
+        <div class="tour-actions">
+          <button id="tourSkip" class="btn-secondary">Pular</button>
+          <button id="tourNext" class="btn-primary">Próximo</button>
+        </div>`;
+      document.body.appendChild(tooltip);
+      tooltip.querySelector('#tourSkip').addEventListener('click', () => endTour());
+      tooltip.querySelector('#tourNext').addEventListener('click', () => { idx++; showStep(); });
+    }
+    tooltip.querySelector('#tourText').textContent = s.text;
+    placeTooltipNear(el);
+  }
+
+  function startTour(){ idx = 0; showStep(); }
+
+  // start automatically once per device
+  window.addEventListener('load', () => {
+    try {
+      if (!localStorage.getItem(TOUR_KEY)) {
+        setTimeout(startTour, 600);
+      }
+    } catch {}
+  });
+
+  elTourBtn?.addEventListener('click', () => { endTour(false); startTour(); });
+})();
 
 function queryRows(sql, params) {
   const rows = [];
