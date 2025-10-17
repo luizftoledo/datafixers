@@ -39,11 +39,21 @@ async function initDb() {
     locateFile: (file) => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${file}`,
   });
   SQLModule = SQL;
-  const resp = await fetch(`/public-data/ibama.sqlite?v=${Date.now()}` , { cache: 'no-store' });
-  if (!resp.ok) throw new Error(`Falha ao carregar SQLite: HTTP ${resp.status}`);
-  const buf = await resp.arrayBuffer();
-  db = new SQL.Database(new Uint8Array(buf));
-  const sizeMb = (buf.byteLength / (1024 * 1024)).toFixed(1);
+  let dbBytes = null;
+  try {
+    const gz = await fetch(`/public-data/ibama.sqlite.gz?v=${Date.now()}`, { cache: 'no-store' });
+    if (!gz.ok) throw new Error(`HTTP ${gz.status}`);
+    const gzBuf = new Uint8Array(await gz.arrayBuffer());
+    const inflated = window.pako ? window.pako.ungzip(gzBuf) : null;
+    if (!inflated) throw new Error('pako indisponível');
+    dbBytes = inflated;
+  } catch (e) {
+    const resp = await fetch(`/public-data/ibama.sqlite?v=${Date.now()}`, { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`Falha ao carregar SQLite: HTTP ${resp.status}`);
+    dbBytes = new Uint8Array(await resp.arrayBuffer());
+  }
+  db = new SQL.Database(dbBytes);
+  const sizeMb = (dbBytes.byteLength / (1024 * 1024)).toFixed(1);
   elStatus.textContent = `Banco carregado (${sizeMb} MB)`;
 
   // Load meta info
