@@ -54,10 +54,14 @@ async function initDb() {
     let maxDateVal = (metaMaxDate[0] && metaMaxDate[0].values[0]) ? metaMaxDate[0].values[0][0] : '';
     // Fallbacks if meta missing
     if (!maxDateVal) {
-      const q = db.exec("SELECT MAX(data) FROM autos WHERE data IS NOT NULL AND data != ''");
+      const q = db.exec(`SELECT MAX(data) FROM autos WHERE data IS NOT NULL AND data != '' AND data <= '${TODAY}'`);
       if (q.length && q[0].values.length) {
         maxDateVal = q[0].values[0][0] || '';
       }
+    }
+    // Clamp to today if future date slipped through
+    if (maxDateVal && maxDateVal > TODAY) {
+      maxDateVal = TODAY;
     }
     // Format dates to pt-BR (dd/mm/aaaa)
     const fmtPtBr = (yyyyMmDd) => {
@@ -71,7 +75,14 @@ async function initDb() {
     try {
       if (builtVal) {
         const d = new Date(builtVal);
-        builtDisplay = isNaN(d.getTime()) ? '' : d.toLocaleDateString('pt-BR');
+        if (!isNaN(d.getTime())) {
+          const fmt = new Intl.DateTimeFormat('pt-BR', {
+            timeZone: 'America/Sao_Paulo',
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', hour12: false,
+          });
+          builtDisplay = fmt.format(d) + ' (BRT)';
+        }
       }
     } catch {}
     const maxDateDisplay = fmtPtBr(maxDateVal);
