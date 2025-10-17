@@ -14,7 +14,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO_ROOT / "public-data"
 DB_PATH = OUT_DIR / "ibama.sqlite"
 # Optional local baseline CSV to prefer when fresher than the official ZIP
-BASELINE_CSV = Path("/Users/luizfernandotoledo/Desktop/Code_folder/cursor_testes/multas_ibama_unicas_2025-08-08.csv")
+# 1) Prefer repo copy at backend/baseline/multas_ibama_baseline.csv(.gz)
+# 2) Fallback to user's absolute path if running locally
+REPO_BASELINE_DIR = REPO_ROOT / "backend" / "baseline"
+REPO_BASELINE_CSV = REPO_BASELINE_DIR / "multas_ibama_baseline.csv"
+REPO_BASELINE_GZ = REPO_BASELINE_DIR / "multas_ibama_baseline.csv.gz"
+LOCAL_ABS_BASELINE = Path("/Users/luizfernandotoledo/Desktop/Code_folder/cursor_testes/multas_ibama_unicas_2025-08-08.csv")
 
 NAME_CANDIDATES = [
     "NOME_INFRATOR",
@@ -216,9 +221,21 @@ def build_static_db():
     try:
         # Prepare data candidates
         df_baseline = None
-        if BASELINE_CSV.exists():
+        # Try repo baseline first (.csv.gz or .csv), else local absolute path when available
+        baseline_path = None
+        if REPO_BASELINE_GZ.exists():
+            baseline_path = REPO_BASELINE_GZ
+        elif REPO_BASELINE_CSV.exists():
+            baseline_path = REPO_BASELINE_CSV
+        elif LOCAL_ABS_BASELINE.exists():
+            baseline_path = LOCAL_ABS_BASELINE
+
+        if baseline_path is not None and baseline_path.exists():
             try:
-                df_raw = pd.read_csv(BASELINE_CSV, low_memory=False)
+                if str(baseline_path).endswith('.gz'):
+                    df_raw = pd.read_csv(baseline_path, low_memory=False, compression='gzip')
+                else:
+                    df_raw = pd.read_csv(baseline_path, low_memory=False)
                 df_baseline = _process_generic_df(df_raw)
             except Exception:
                 df_baseline = None
