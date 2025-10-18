@@ -1,11 +1,5 @@
-/* global initSqlJs, XLSX, pako */
-
 (function(){
-  const DB_LOCAL_URL = './multas_ibama.sqlite.gz';
-  let SQL = null;
-  let db = null;
-  let currentPage = 1;
-  let totalRows = 0;
+  const CSV_PATH = 'multas_ibama_2019_2025.csv';
 
   const els = {
     name: document.getElementById('name'),
@@ -19,338 +13,284 @@
     sortDir: document.getElementById('sortDir'),
     pageSize: document.getElementById('pageSize'),
     btnSearch: document.getElementById('btnSearch'),
+    btnPrev: document.getElementById('prev'),
+    btnNext: document.getElementById('next'),
+    pageInfo: document.getElementById('pageInfo'),
     totalBadge: document.getElementById('totalBadge'),
     status: document.getElementById('status'),
     error: document.getElementById('error'),
     tableBody: document.querySelector('#resultsTable tbody'),
-    prev: document.getElementById('prev'),
-    next: document.getElementById('next'),
-    pageInfo: document.getElementById('pageInfo'),
     btnExportCSV: document.getElementById('btnExportCSV'),
     btnExportXLSX: document.getElementById('btnExportXLSX'),
     btnMulti: document.getElementById('btnMulti'),
     multiModal: document.getElementById('multiModal'),
-    multiNames: document.getElementById('multiNames'),
-    multiCpfs: document.getElementById('multiCpfs'),
     multiApply: document.getElementById('multiApply'),
-    laiModal: document.getElementById('laiModal'),
-    laiText: document.getElementById('laiText'),
-    laiCopy: document.getElementById('laiCopy'),
+    multiNames: document.getElementById('multiNames'),
+    multiCpfs: document.getElementById('multiCpfs')
   };
 
-  function setStatus(msg){ if(els.status) els.status.textContent = msg || ''; }
-  function setError(msg){ if(els.error) els.error.textContent = msg || ''; }
+  // Disable XLSX export since the XLSX lib was removed
+  if (els.btnExportXLSX) {
+    els.btnExportXLSX.disabled = true;
+    els.btnExportXLSX.title = 'Desativado';
+    els.btnExportXLSX.style.opacity = '0.5';
+    els.btnExportXLSX.style.pointerEvents = 'none';
+  }
+
+  const state = {
+    rows: [], // full dataset
+    filtered: [],
+    page: 1
+  };
+
+  function setStatus(msg) { if (els.status) els.status.textContent = msg || ''; }
+  function setError(msg) { if (els.error) els.error.textContent = msg || ''; }
 
   function normalize(str){
-    if(!str) return '';
-    return str.normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().replace(/\s+/g,' ').trim();
+    return (str || '').toString().normalize('NFD').replace(/\p{Diacritic}/gu,'').toUpperCase();
   }
 
-  async function initDB(){
-    setStatus('Carregando base local...');
-    SQL = await initSqlJs({ locateFile: (f) => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}` });
-    const res = await fetch(DB_LOCAL_URL);
-    if(!res.ok){ throw new Error(`Falha ao baixar database: ${res.status}`); }
-    const gz = new Uint8Array(await res.arrayBuffer());
-    const dbBytes = pako.ungzip(gz);
-    db = new SQL.Database(dbBytes);
-    setStatus('Base carregada.');
-    await refreshMeta();
+  function parseNumberBR(v){
+    if (v == null) return null;
+    // Some files may come with dot for thousands and comma for decimals, but here seems plain number
+    const s = String(v).replace(/[^0-9.,-]/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(',', '.');
+    const n = parseFloat(s);
+    return Number.isFinite(n) ? n : null;
   }
 
-  async function refreshMeta(){
-    try{
-      const stmt = db.prepare("SELECT key, value FROM meta WHERE key IN ('lastUpdated','latestFineDate')");
-      const meta = {};
-      while(stmt.step()){
-        const row = stmt.getAsObject();
-        meta[row.key] = row.value;
-      }
-      stmt.free();
-      const last = document.getElementById('lastUpdated');
-      const latest = document.getElementById('latestFineDate');
-      if(last) last.textContent = meta.lastUpdated || '–';
-      if(latest) latest.textContent = meta.latestFineDate || '–';
-    }catch(e){ /* ignore */ }
+  function parseDateISO(s){
+    if (!s) return null;
+    // Expecting formats like '2021-03-15 12:34:56' or ISO
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
   }
 
-  function buildWhere(params){
-    const where = [];
-    const args = [];
-
-    // name terms via FTS prefix matching (OR across terms)
-    if(params.nameTerms && params.nameTerms.length){
-      const parts = [];
-      for(const t of params.nameTerms){
-        parts.push("rowid IN (SELECT rowid FROM multas_fts WHERE nome MATCH ?)");
-        args.push(t + '*');
-      }
-      where.push('(' + parts.join(' OR ') + ')');
-    }
-    // description as a single term (keep simple); could be split in the future
-    if(params.desc){
-      where.push("rowid IN (SELECT rowid FROM multas_fts WHERE descricao MATCH ?)\n");
-      args.push(params.desc + '*');
-    }
-    // cpf terms (numeric only), allow partial prefix; OR across terms
-    if(params.cpfTerms && params.cpfTerms.length){
-      const parts = [];
-      for(const c of params.cpfTerms){
-        parts.push("cpf_norm LIKE ?");
-        args.push(c + '%');
-      }
-      where.push('(' + parts.join(' OR ') + ')');
-    }
-    if(params.dateFrom){
-      where.push("data >= ?");
-      args.push(params.dateFrom);
-    }
-    if(params.dateTo){
-      where.push("data <= ?");
-      args.push(params.dateTo);
-    }
-    if(params.valorMin != null){
-      where.push("val_auto_infracao >= ?");
-      args.push(params.valorMin);
-    }
-    if(params.valorMax != null){
-      where.push("val_auto_infracao <= ?");
-      args.push(params.valorMax);
-    }
-
-    const sqlWhere = where.length ? ('WHERE ' + where.join(' AND ')) : '';
-    return { sqlWhere, args };
-  }
-
-  function getInputs(){
-    const pageSize = parseInt(els.pageSize.value || '25', 10) || 25;
-    // Split comma-separated inputs
-    const nameTerms = (els.name.value||'').split(',').map(s=>normalize(s)).filter(Boolean);
-    const cpfTerms = (els.cpf.value||'').split(',').map(s=>s.replace(/\D+/g,'')).filter(Boolean);
-    const params = {
-      nameTerms,
-      cpfTerms,
-      desc: normalize(els.desc.value),
-      dateFrom: els.dateFrom.value || '',
-      dateTo: els.dateTo.value || '',
-      valorMin: els.valorMin.value ? parseFloat(els.valorMin.value) : null,
-      valorMax: els.valorMax.value ? parseFloat(els.valorMax.value) : null,
-      sortBy: els.sortBy.value,
-      sortDir: els.sortDir.value,
-      pageSize,
-    };
-    return params;
-  }
-
-  function sortClause(sortBy, sortDir){
-    const dir = sortDir === 'ASC' ? 'ASC' : 'DESC';
-    switch(sortBy){
-      case 'valor': return `ORDER BY val_auto_infracao ${dir}`;
-      case 'name': return `ORDER BY nome_norm ${dir}`;
-      case 'id': return `ORDER BY id ${dir}`;
-      case 'data':
-      default: return `ORDER BY data ${dir}`;
-    }
-  }
-
-  function queryCount(params){
-    const { sqlWhere, args } = buildWhere(params);
-    const sql = `SELECT COUNT(*) as c FROM multas ${sqlWhere}`;
-    const stmt = db.prepare(sql);
-    stmt.bind(args);
-    let c = 0;
-    if(stmt.step()){
-      const row = stmt.getAsObject();
-      c = row.c|0;
-    }
-    stmt.free();
-    return c;
-  }
-
-  function queryPage(params, page){
-    const { sqlWhere, args } = buildWhere(params);
-    const order = sortClause(params.sortBy, params.sortDir);
-    const limit = params.pageSize;
-    const offset = Math.max(0, (page-1) * limit);
-    const sql = `SELECT id, nome_infrator, cpf_cnpj_infrator, num_processo, data, val_auto_infracao, des_auto_infracao FROM multas ${sqlWhere} ${order} LIMIT ${limit} OFFSET ${offset}`;
-    const stmt = db.prepare(sql);
-    stmt.bind(args);
+  function csvParse(text){
+    const lines = text.split(/\r?\n/);
+    if (!lines.length) return { header: [], rows: [] };
+    const header = parseCSVLine(lines[0]);
     const rows = [];
-    while(stmt.step()){
-      rows.push(stmt.getAsObject());
+    for (let i=1;i<lines.length;i++){
+      const line = lines[i];
+      if (!line) continue;
+      const fields = parseCSVLine(line);
+      if (!fields.length) continue;
+      const row = {};
+      for (let j=0;j<header.length;j++) row[header[j]] = fields[j] ?? '';
+      rows.push(row);
     }
-    stmt.free();
-    return rows;
+    return { header, rows };
   }
 
-  function renderRows(rows){
-    const tb = els.tableBody;
-    tb.innerHTML = '';
-    const frag = document.createDocumentFragment();
-    for(const r of rows){
-      const tr = document.createElement('tr');
-      const tds = [
-        r.nome_infrator || '',
-        r.cpf_cnpj_infrator || '',
-        r.num_processo || '',
-        r.data || '',
-        (r.val_auto_infracao != null ? Number(r.val_auto_infracao).toLocaleString('pt-BR', {style:'currency', currency:'BRL'}) : ''),
-        r.des_auto_infracao || '',
-        // LAI button
-        ''
-      ];
-      for(let i=0;i<tds.length;i++){
-        const td = document.createElement('td');
-        if(i === 6){
-          const btn = document.createElement('button');
-          btn.className = 'btn-secondary lai-btn';
-          btn.textContent = 'Gerar pedido LAI';
-          btn.addEventListener('click', ()=> openLaiModal(r));
-          td.appendChild(btn);
+  function parseCSVLine(line){
+    const out = [];
+    let cur = '';
+    let inQuotes = false;
+    for (let i=0;i<line.length;i++){
+      const ch = line[i];
+      if (inQuotes){
+        if (ch === '"'){
+          if (line[i+1] === '"'){ cur += '"'; i++; }
+          else { inQuotes = false; }
         } else {
-          td.textContent = tds[i];
+          cur += ch;
         }
-        tr.appendChild(td);
+      } else {
+        if (ch === ',') { out.push(cur); cur=''; }
+        else if (ch === '"') { inQuotes = true; }
+        else { cur += ch; }
       }
-      frag.appendChild(tr);
     }
-    tb.appendChild(frag);
+    out.push(cur);
+    return out;
   }
 
-  function openLaiModal(row){
-    const txt = `Solicito, com base na Lei de Acesso à Informação, cópia integral do processo administrativo relacionado ao Auto de Infração ${row.num_processo || '(sem nº)'} e respectiva decisão, referente ao autuado ${row.nome_infrator || ''} (CPF/CNPJ ${row.cpf_cnpj_infrator||''}), lavrado na data ${row.data||''}.`;
-    if(els.laiText) els.laiText.value = txt;
-    if(els.laiModal){ els.laiModal.style.display = 'block'; els.laiModal.setAttribute('aria-hidden','false'); }
+  function applyFilters(){
+    const nameQ = normalize(els.name?.value);
+    const cpfQ = (els.cpf?.value || '').replace(/\D/g, '');
+    const descQ = normalize(els.desc?.value);
+    const dateFrom = els.dateFrom?.value ? new Date(els.dateFrom.value) : null;
+    const dateTo = els.dateTo?.value ? new Date(els.dateTo.value) : null;
+    const vMin = els.valorMin?.value ? parseFloat(els.valorMin.value) : null;
+    const vMax = els.valorMax?.value ? parseFloat(els.valorMax.value) : null;
+
+    const by = els.sortBy?.value || 'data';
+    const dir = (els.sortDir?.value || 'DESC').toUpperCase();
+
+    let arr = state.rows.filter(r => {
+      if (nameQ && !normalize(r.nome_infrator).includes(nameQ)) return false;
+      if (cpfQ && String(r.cpf_cnpj_infrator || '').replace(/\D/g,'') !== cpfQ) return false;
+      if (descQ){
+        const inDesc = normalize(r.des_auto_infracao).includes(descQ) || normalize(r.des_infracao).includes(descQ);
+        if (!inDesc) return false;
+      }
+      if (dateFrom && r._date && r._date < dateFrom) return false;
+      if (dateTo && r._date && r._date > new Date(dateTo.getTime() + 24*3600*1000 - 1)) return false;
+      if (vMin != null && r._valor != null && r._valor < vMin) return false;
+      if (vMax != null && r._valor != null && r._valor > vMax) return false;
+      return true;
+    });
+
+    arr.sort((a,b)=>{
+      let av, bv;
+      if (by === 'valor'){ av = a._valor ?? -Infinity; bv = b._valor ?? -Infinity; }
+      else if (by === 'name'){ av = normalize(a.nome_infrator); bv = normalize(b.nome_infrator); }
+      else if (by === 'id'){ av = String(a.num_processo||''); bv = String(b.num_processo||''); }
+      else { av = a._date ? a._date.getTime() : -Infinity; bv = b._date ? b._date.getTime() : -Infinity; }
+      const cmp = av < bv ? -1 : av > bv ? 1 : 0;
+      return dir === 'ASC' ? cmp : -cmp;
+    });
+
+    state.filtered = arr;
+    state.page = 1;
+    render();
   }
 
-  function closeModal(modal){ if(modal){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); } }
+  function render(){
+    const ps = parseInt(els.pageSize?.value || '25', 10) || 25;
+    const total = state.filtered.length;
+    const pages = Math.max(1, Math.ceil(total / ps));
+    if (state.page > pages) state.page = pages;
+    const start = (state.page - 1) * ps;
+    const pageRows = state.filtered.slice(start, start + ps);
 
-  function updatePager(params){
-    const pageSize = params.pageSize;
-    const totalPages = Math.max(1, Math.ceil(totalRows / pageSize));
-    currentPage = Math.min(currentPage, totalPages);
-    els.pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
-    els.prev.disabled = currentPage <= 1;
-    els.next.disabled = currentPage >= totalPages;
-  }
+    if (els.totalBadge) els.totalBadge.textContent = `${total} resultados`;
+    if (els.pageInfo) els.pageInfo.textContent = `${state.page} / ${pages}`;
+    if (els.btnPrev) els.btnPrev.disabled = state.page <= 1;
+    if (els.btnNext) els.btnNext.disabled = state.page >= pages;
 
-  function updateTotalBadge(){
-    els.totalBadge.textContent = `${totalRows.toLocaleString('pt-BR')} resultados`;
-  }
-
-  async function doSearch(goFirstPage=false){
-    setError('');
-    const params = getInputs();
-    if(goFirstPage) currentPage = 1;
-    setStatus('Buscando...');
-    try{
-      totalRows = queryCount(params);
-      updateTotalBadge();
-      updatePager(params);
-      const rows = queryPage(params, currentPage);
-      renderRows(rows);
-      setStatus('');
-    }catch(e){
-      console.error(e);
-      setError('Erro na consulta: ' + (e && e.message ? e.message : String(e)));
-      setStatus('');
+    if (els.tableBody){
+      const frag = document.createDocumentFragment();
+      for (const r of pageRows){
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${escapeHTML(r.nome_infrator)}</td>
+          <td>${escapeHTML(r.cpf_cnpj_infrator)}</td>
+          <td>${escapeHTML(r.num_processo||'')}</td>
+          <td>${r._date ? r._date.toISOString().slice(0,10) : ''}</td>
+          <td>${r._valor != null ? r._valor.toLocaleString('pt-BR', { style:'currency', currency:'BRL' }) : ''}</td>
+          <td>${escapeHTML(r.des_auto_infracao || r.des_infracao || '')}</td>
+          <td><button class="lai-btn btn-secondary" data-proc="${escapeAttr(r.num_processo||'')}">Copiar LAI</button></td>
+        `;
+        frag.appendChild(tr);
+      }
+      els.tableBody.innerHTML = '';
+      els.tableBody.appendChild(frag);
     }
   }
 
-  function exportCurrentPageToCSV(){
-    const params = getInputs();
-    const rows = queryPage(params, currentPage);
-    const header = ['Nome','CPF/CNPJ','Nº Processo','Data','Valor (R$)','Descrição'];
-    const body = rows.map(r=>[
-      r.nome_infrator || '',
-      r.cpf_cnpj_infrator || '',
-      r.num_processo || '',
-      r.data || '',
-      r.val_auto_infracao != null ? String(r.val_auto_infracao).replace('.',',') : '',
-      (r.des_auto_infracao||'').replace(/\n/g,' ')
-    ]);
-    const csv = [header].concat(body).map(a=>a.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
-    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  function escapeHTML(s){
+    return String(s||'').replace(/[&<>"']/g, m=>({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":"&#39;" }[m]));
+  }
+  function escapeAttr(s){
+    return String(s||'').replace(/["']/g, '_');
+  }
+
+  function exportCurrentAsCSV(){
+    const header = ['nome_infrator','cpf_cnpj_infrator','num_processo','dat_hora_auto_infracao','val_auto_infracao','des_auto_infracao'];
+    const lines = [header.join(',')];
+    for (const r of state.filtered){
+      const row = header.map(k=>csvQuote(r[k] ?? ''));
+      lines.push(row.join(','));
+    }
+    const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = 'multas_page.csv'; a.click();
+    a.href = url;
+    a.download = 'multas_filtradas.csv';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
     URL.revokeObjectURL(url);
   }
 
-  function exportCurrentPageToXLSX(){
-    const params = getInputs();
-    const rows = queryPage(params, currentPage);
-    const data = rows.map(r=>({
-      Nome: r.nome_infrator || '',
-      'CPF/CNPJ': r.cpf_cnpj_infrator || '',
-      'Nº Processo': r.num_processo || '',
-      Data: r.data || '',
-      'Valor (R$)': r.val_auto_infracao || '',
-      Descrição: r.des_auto_infracao || '',
-    }));
-    const ws = XLSX.utils.json_to_sheet(data);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Multas');
-    XLSX.writeFile(wb, 'multas_page.xlsx');
+  function csvQuote(v){
+    const s = String(v);
+    if (/[",\n]/.test(s)) return '"' + s.replace(/"/g,'""') + '"';
+    return s;
   }
 
-  function openMultiModal(){ if(els.multiModal){ els.multiModal.style.display='block'; els.multiModal.setAttribute('aria-hidden','false'); } }
-
-  function applyMulti(){
-    const names = (els.multiNames.value||'').split(',').map(s=>s.trim()).filter(Boolean);
-    const cpfs = (els.multiCpfs.value||'').split(',').map(s=>s.trim()).filter(Boolean);
-    // Push all terms back to main inputs as comma-separated lists
-    if(names.length){ els.name.value = names.join(', '); }
-    if(cpfs.length){ els.cpf.value = cpfs.join(', '); }
-    closeModal(els.multiModal);
-    doSearch(true);
-  }
-
-  function wireEvents(){
-    els.btnSearch.addEventListener('click', ()=> doSearch(true));
-    els.prev.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; doSearch(false); } });
-    els.next.addEventListener('click', ()=>{ currentPage++; doSearch(false); });
-
-    els.pageSize.addEventListener('change', ()=> doSearch(true));
-    els.sortBy.addEventListener('change', ()=> doSearch(true));
-    els.sortDir.addEventListener('change', ()=> doSearch(true));
-
-    els.btnExportCSV.addEventListener('click', exportCurrentPageToCSV);
-    els.btnExportXLSX.addEventListener('click', exportCurrentPageToXLSX);
-
-    if(els.btnMulti){ els.btnMulti.addEventListener('click', openMultiModal); }
-    if(els.multiApply){ els.multiApply.addEventListener('click', applyMulti); }
-
-    // Close modals on backdrop click
-    document.querySelectorAll('[data-close]').forEach(el=>{
-      el.addEventListener('click', (e)=>{
-        const modal = e.target.closest('.modal');
-        closeModal(modal);
-      });
+  // Multi-search modal (names and cpfs)
+  function setupMultiModal(){
+    if (!els.btnMulti || !els.multiModal) return;
+    // open
+    els.btnMulti.addEventListener('click', ()=>{
+      els.multiModal.style.display = 'block';
+      els.multiModal.setAttribute('aria-hidden','false');
     });
-
-    if(els.laiCopy && els.laiText){
-      els.laiCopy.addEventListener('click', ()=>{
-        els.laiText.select();
-        document.execCommand('copy');
+    // close by backdrop or buttons with [data-close]
+    els.multiModal.addEventListener('click', (e)=>{
+      if (e.target.matches('[data-close]') || e.target.classList.contains('modal-backdrop')){
+        els.multiModal.style.display = 'none';
+        els.multiModal.setAttribute('aria-hidden','true');
+      }
+    });
+    if (els.multiApply){
+      els.multiApply.addEventListener('click', ()=>{
+        const names = (els.multiNames?.value || '')
+          .split(',').map(s=>s.trim()).filter(Boolean);
+        const cpfs = (els.multiCpfs?.value || '')
+          .split(',').map(s=>s.trim().replace(/\D/g,'')).filter(Boolean);
+        if (names.length) els.name.value = names[0];
+        if (cpfs.length) els.cpf.value = cpfs[0];
+        els.multiModal.style.display = 'none';
+        els.multiModal.setAttribute('aria-hidden','true');
+        applyFilters();
       });
     }
   }
 
-  async function boot(){
-    try{
-      await initDB();
-      wireEvents();
-      await doSearch(true);
-    }catch(e){
-      console.error(e);
-      setError('Falha ao inicializar: ' + (e && e.message ? e.message : String(e)));
+  async function init(){
+    try {
+      setStatus('Carregando dataset (pode levar alguns segundos)...');
+      const resp = await fetch(CSV_PATH, { cache: 'force-cache' });
+      if (!resp.ok) throw new Error(`Falha ao baixar CSV: ${resp.status}`);
+      const text = await resp.text();
+      const { header, rows } = csvParse(text);
+
+      const need = ['nome_infrator','cpf_cnpj_infrator','num_processo','dat_hora_auto_infracao','val_auto_infracao','des_auto_infracao','des_infracao'];
+      for (const k of need){ if (!header.includes(k)) console.warn('Coluna ausente:', k); }
+
+      for (const r of rows){
+        r._date = parseDateISO(r.dat_hora_auto_infracao);
+        r._valor = parseNumberBR(r.val_auto_infracao);
+      }
+      state.rows = rows;
+      setStatus(`Dataset carregado: ${rows.length} linhas.`);
+      setError('');
+
+      // wire UI
+      els.btnSearch?.addEventListener('click', applyFilters);
+      [els.name, els.cpf, els.desc, els.dateFrom, els.dateTo, els.valorMin, els.valorMax, els.sortBy, els.sortDir, els.pageSize]
+        .forEach(el => el && el.addEventListener('change', applyFilters));
+      els.btnPrev?.addEventListener('click', ()=>{ if (state.page>1){ state.page--; render(); } });
+      els.btnNext?.addEventListener('click', ()=>{ state.page++; render(); });
+      els.btnExportCSV?.addEventListener('click', exportCurrentAsCSV);
+
+      setupMultiModal();
+
+      applyFilters();
+
+      // LAI handler
+      document.addEventListener('click', (e)=>{
+        const b = e.target.closest && e.target.closest('.lai-btn');
+        if (!b) return;
+        const proc = b.getAttribute('data-proc') || '';
+        const text = `Prezados,\n\nSolicito, com base na LAI, cópia integral do processo ${proc}.`;
+        const t = document.getElementById('laiText');
+        if (t) { t.value = text; }
+        const m = document.getElementById('laiModal');
+        if (m){ m.style.display='block'; m.setAttribute('aria-hidden','false'); }
+      });
+
+    } catch (err){
+      console.error(err);
+      setStatus('');
+      setError('Erro ao carregar ou processar o dataset.');
     }
   }
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
-    boot();
-  }
+  // Start
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();
