@@ -14,6 +14,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Setup Git LFS
+        run: |
+          git lfs install
+          git lfs pull
+
+      - name: Sync with remote before build
+        run: |
+          git fetch origin main
+          git checkout -B main
+          git rebase origin/main || true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,16 +41,27 @@ jobs:
 
       - name: Build SQLite from IBAMA ZIP
         run: |
-          python backend/build_static_db.py
+          PYTHONUNBUFFERED=1 python -u -W "ignore:Parsing dates in %Y-%m-%d format.*:UserWarning" backend/build_static_db.py
 
-      - name: Commit updated SQLite if changed
+      - name: Publish build summary
+        if: always()
+        run: |
+          if [ -f build_summary.md ]; then
+            cat build_summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No build_summary.md generated" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit updated SQLite (gzip) if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public-data/ibama.sqlite
+          git add public-data/ibama.sqlite.gz
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "chore: update IBAMA SQLite ($(date -u +'%Y-%m-%dT%H:%M:%SZ'))"
-            git push
+            git fetch origin main
+            git pull --rebase origin main || true
+            git push origin HEAD:main || (git pull --rebase origin main && git push origin HEAD:main)
           fi

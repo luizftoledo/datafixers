@@ -260,37 +260,12 @@ def populate_from_zip(zip_path: Path, conn: sqlite3.Connection):
 
 def build_static_db():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    # If repo baseline exists, prefer to skip downloading source to avoid long runs
-    repo_baseline_available = REPO_BASELINE_GZ.exists() or REPO_BASELINE_CSV.exists()
-    if repo_baseline_available:
-        print("[builder] repo baseline found; will build from baseline and compare only if needed later.")
-        zp = None
-    else:
-        zp = download_zip(URL)
+    # Always use the official ZIP source
+    zp = download_zip(URL)
     try:
-        # Prepare data candidates
+        # Collect only from official source
         df_baseline = None
-        # Try repo baseline first (.csv.gz or .csv), else local absolute path when available
-        baseline_path = None
-        if REPO_BASELINE_GZ.exists():
-            baseline_path = REPO_BASELINE_GZ
-        elif REPO_BASELINE_CSV.exists():
-            baseline_path = REPO_BASELINE_CSV
-        elif LOCAL_ABS_BASELINE.exists():
-            baseline_path = LOCAL_ABS_BASELINE
-
-        if baseline_path is not None and baseline_path.exists():
-            try:
-                if str(baseline_path).endswith('.gz'):
-                    df_raw = pd.read_csv(baseline_path, low_memory=False, compression='gzip')
-                else:
-                    df_raw = pd.read_csv(baseline_path, low_memory=False)
-                df_baseline = _process_generic_df(df_raw)
-            except Exception:
-                df_baseline = None
-        df_source = pd.DataFrame()
-        if zp is not None:
-            df_source = collect_from_zip(zp)
+        df_source = collect_from_zip(zp)
 
         # Compute max dates (ignore nulls)
         def max_date_of(df: pd.DataFrame) -> str:
@@ -305,18 +280,12 @@ def build_static_db():
 
         max_base = max_date_of(df_baseline)
         max_src = max_date_of(df_source)
-        print(f"[builder] baseline max_date={max_base or '-'} rows={0 if df_baseline is None else len(df_baseline)}")
+        print(f"[builder] baseline max_date={'-' } rows={0}")
         print(f"[builder] source   max_date={max_src or '-'} rows={0 if df_source is None else len(df_source)}")
 
-        # TEMP: Force baseline when available to stabilize site data
-        use_df = None
+        # Use only the source dataset (official ZIP)
+        use_df = df_source
         source_choice = 'source'
-        if df_baseline is not None and not df_baseline.empty:
-            use_df = df_baseline
-            source_choice = 'baseline'
-        else:
-            use_df = df_source
-            source_choice = 'source'
         print(f"[builder] using dataset: {source_choice} with rows={0 if use_df is None else len(use_df)}")
 
         if DB_PATH.exists():
@@ -326,11 +295,8 @@ def build_static_db():
             if use_df is not None and not use_df.empty:
                 use_df.to_sql("autos", conn, if_exists="append", index=False, chunksize=50000)
             else:
-                # Fallback to legacy ZIP streaming if for some reason use_df is empty
-                if zp is not None:
-                    populate_from_zip(zp, conn)
-                else:
-                    print("[builder] WARNING: no dataset to write (baseline missing and no ZIP).")
+                # Fallback: stream directly from ZIP if something went wrong assembling the DataFrame
+                populate_from_zip(zp, conn)
             # write meta info
             cur = conn.cursor()
             # summary metrics
