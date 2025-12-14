@@ -1152,3 +1152,33 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
 .story-card a:not(.btn-secondary):not(.dashboard-btn) { color: inherit; }
 .story-card .btn-secondary { color: #04110d; background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; }
 .story-card .btn-secondary:hover { filter: brightness(1.05); }
+
+/* Language Switcher Button (Standalone) */
+.nav-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px; /* Pill shape */
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  background: rgba(255, 255, 255, 0.05); /* Subtle background */
+}
+
+.nav-lang-btn:hover {
+  border-color: var(--primary);
+  background: rgba(16, 185, 129, 0.1); /* Light green tint */
+  color: var(--text-primary);
+}
+
+/* Ensure it stays distinct on mobile */
+@media (max-width: 768px) {
+  .nav-lang-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
