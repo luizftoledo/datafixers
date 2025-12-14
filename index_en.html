@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Data Fixers – Data journalism for investigative stories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-xh6AXFs8FZQqz/SEKI+0i0jpa5IJl0ue1bDkMg7KGUsgxFykWG/FsdLrJhWuZ5o7YkZuT4BwrVaewk5ujhP0UA=="
+    referrerpolicy="no-referrer" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        const stored = localStorage.getItem('df-theme');
+        const theme = stored || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="container nav-inner">
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span class="hamburger" aria-hidden="true">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projects">Stories</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a class="nav-pill btn-animated-border glow-pulse" href="index.html">
+            <span class="teal">Ler em</span> Português 🇧🇷
+          </a>
+        </li>
+        <li>
+          <a class="nav-pill btn-animated-border glow-pulse" href="l-ai-notebook.html">
+            <span class="teal">L‑AI</span> Notebook
+            <span class="badge-new" aria-label="Novo">NEW</span>
+          </a>
+        </li>
+        <li><a href="https://datafixers.org/a_lai_que_pegou" target="_blank" rel="noopener noreferrer">A <span
+              class="teal">LAI</span> que pegou</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero / tagline -->
+  <header class="hero-section" id="top">
+    <div class="container">
+      <div class="hero-card">
+        <p class="tagline">
+          <span class="site-name">Data Fixers</span> is an <span class="highlight">award‑winning</span> consulting
+          project specialized in
+          <span class="highlight">gathering data and public records</span>
+          to foster
+          <span class="highlight">environmental investigations</span>.
+        </p>
+        <!-- hero nav removed per new top navigation -->
+        <div class="affiliations">
+          <div class="aff-badge"><span class="aff-emoji" aria-hidden="true">🏆</span>
+            <div><strong><a href="https://brown.columbia.edu/22-23-magic/" target="_blank"
+                  rel="noopener noreferrer">Awarded US$ 100,000 grant</a></strong><br />Columbia University (Brown
+              Institute)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Navigation buttons moved under the hero tagline -->
+
+  <section class="current-projects-section" style="padding: 4.5rem 0; background: var(--bg-alt);">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Current Projects</h2>
+      <div class="dashboards-grid"> <!-- Reusing existing grid class for 3 columns -->
+
+        <!-- L-AI Notebook -->
+        <div class="dashboard-item"
+          style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-book-open"></i></div>
+            <h3>L‑AI Notebook</h3>
+            <p>Ask anything about Brazil's Access to Information Law (LAI) and public records. Our notebook is powered
+              by a curated repository with more than one million official documents and decisions.</p>
+          </div>
+          <a class="dashboard-btn" href="l-ai-notebook.html">Open L-AI Notebook</a>
+        </div>
+
+        <!-- Course -->
+        <div class="dashboard-item"
+          style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Curso de LAI</h3>
+            <p>Investigate public spending with the Access to Information Law. (Course in Portuguese)</p>
+          </div>
+          <a class="dashboard-btn"
+            href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/"
+            target="_blank">Access the course</a>
+        </div>
+
+        <!-- A LAI que Pegou -->
+        <div class="dashboard-item"
+          style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-file-invoice"></i></div>
+            <h3>A LAI que pegou</h3>
+            <p>A collection of journalistic investigations that used Brazil’s Access to Information Law.</p>
+          </div>
+          <a class="dashboard-btn" href="https://datafixers.org/a_lai_que_pegou" target="_blank">Explore the project</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-separator"></div>
+
+  <!-- Transparency video gallery only -->
+  <section class="transparency-section" id="transparency">
+    <div class="container">
+      <h2>Fostering public transparency in Brazil</h2>
+      <p class="section-description">
+        Our commitment to transparency goes beyond data analysis. We actively promote public accountability
+        through educational content and advocacy for open government initiatives.
+      </p>
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/urDaCInPdvY"
+            title="Global Investigative Journalism Conference (Sweden) speech"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <span class="video-title">Global Investigative Journalism Conference (Sweden) speech</span>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dw5q9ZXMaWE" title="Presentation at a tech conference in Lisbon"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <span class="video-title">Presentation at a tech conference in Lisbon</span>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/j9zzNg8N-BA?start=2629"
+            title="Interviewed by a Brazilian prime time show"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <span class="video-title">Interviewed by a Brazilian prime time show</span>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/lO7l93wyoHI"
+            title="Workshop on how to investigate deforestation with public records"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <span class="video-title">Workshop on how to investigate deforestation with public records</span>
+        </div>
+      </div>
+      <!-- New grid layout for stories -->
+      <!-- Section heading for projects and stories moved above the grid -->
+      <!-- Hidden checkbox to toggle extra stories -->
+      <input hidden="" id="toggle-stories" type="checkbox" />
+      <h2 class="section-title" id="projects"><span class="highlight">Projects</span> and <span
+          class="highlight">investigative stories</span></h2>
+      <div class="stories-grid">
+        <!-- Each story is displayed as a card in a two‑column grid -->
+        <div class="story-card">
+          <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+          <div class="story-image"><img alt="Unknown deforestation agents" src="images/deforicmbio.png" /></div>
+          <h3>Unknown deforestation agents</h3>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://piaui.folha.uol.com.br/desmatamento-amazonia-embargos-icmbio/"
+              target="_blank" rel="noopener noreferrer">Read the story</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>MONGABAY</span></div>
+          <div class="story-image"><img alt="illegal cattle in the Amazon" src="images/mongaba24.png" /></div>
+          <h3>The harsh, dangerous gig of seizing thousands of illegal cattle in the Amazon</h3>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://news.mongabay.com/2024/06/the-harsh-dangerous-gig-of-seizing-thousands-of-illegal-cattle-in-the-amazon"
+              target="_blank" rel="noopener noreferrer">Read the story</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>AMBIENTAL MEDIA</span></div>
+          <h3>Majority of Amazon fire and deforestation fines in 12 Brazilian cities</h3>
+          <div class="story-image"><img alt="Amazon fire fines" src="images/ambi.png" /></div>
+          <p>This significant concentration of environmental infractions in a small fraction of the region highlights
+            critical areas of concern in the Amazon. The data reveals patterns and hotspots of environmental violations,
+            offering insights for further investigation and policy action.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://ambiental.media/mais-da-metade-das-multas-por-fogo-e-desmatamento-na-amazonia-aconteceram-em-apenas-12-municipios/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+          <h3>Land Grabbing in the heart of Brasília</h3>
+          <div class="story-image"><img alt="Land grabbing in Brasília" src="images/gril_df.jpeg" /></div>
+          <p>We investigated how, with the support of politicians, individuals are invading Brazil's conservation units,
+            deforesting, and profiting from the sale of plots in the Distrito Federal, near the Congress and Palácio do
+            Planalto.</p>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://piaui.folha.uol.com.br/distrito-federal-grileiros-car-brasilia/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+          <h3>Land Grabbing, Gold Mining, and Cocaine Trade in the Amazon</h3>
+          <div class="story-image"><img alt="Agropó criminal network" src="images/pogado.jpeg" /></div>
+          <p>This investigation uncovers a scheme in the Amazon region called “agropó” that combines land grabbing,
+            illegal mining, and international cocaine trafficking. The investigation reveals that wealthy landowners,
+            such as Janio Oliveira, have been involved in this lucrative criminal network.</p>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://piaui.folha.uol.com.br/quero-meter-dinheiro-e-no-agropo/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>INFOAMAZONIA</span><span>PULITZER CENTER</span><span>ARMANDO.INFO</span></div>
+          <h3>Amazon Underworld</h3>
+          <div class="story-image"><img alt="Amazon Underworld" src="images/soldier.jpeg" /></div>
+          <p>A one‑year cross‑border series of articles that mapped the presence of organized crime groups in the Amazon
+            region and reported on‑the‑ground about the impacts of their actions. Data Fixers coordinated the data
+            analysis and obtained the documents needed for the stories.</p>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://amazonunderworld.org/" target="_blank">Visit the project page</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags">
+            <span>ICIJ</span><span>PODER 360</span><span>AGÊNCIA PÚBLICA</span><span>REVISTA PIAUÍ</span></div>
+          <h3>Deforestation Inc.</h3>
+          <div class="story-image"><img alt="Deforestation Inc" src="images/defor.jpeg" /></div>
+          <p>An International Consortium of Investigative Journalists (ICIJ)‑led cross‑border investigation exposes how
+            a lightly regulated sustainability industry overlooks forest destruction and human rights violations when
+            granting environmental certifications. Data Fixers coordinated the data analysis and obtained the documents
+            needed for the Brazilian stories.</p>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://www.icij.org/investigations/deforestation-inc/" target="_blank">Visit
+              the project page</a>
+            <a class="btn-secondary"
+              href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/"
+              target="_blank">Read more about this project (English)</a>
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/madeireiras-com-selo-de-sustentabilidade-receberam-multas-milionarias-do-ibama/"
+              target="_blank">Read the story (Portuguese)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>GLOBAL WITNESS</span><span>REPÓRTER BRASIL</span></div>
+          <h3>How public agencies hinder access to information about the beef cattle chain</h3>
+          <div class="story-image"><img alt="Beef cattle chain" src="images/gadao.jpg" /></div>
+          <p>In partnership with NGO Global Witness, Data Fixers investigated how government agencies use several
+            strategies to withhold data about the cattle chain in Brazil, making it harder to investigate companies.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://reporterbrasil.org.br/2023/07/how-public-agencies-hinder-access-to-information-about-the-beef-cattle-chain/"
+              target="_blank">Read an English version</a>
+            <a class="btn-secondary"
+              href="https://reporterbrasil.org.br/2023/07/como-orgaos-publicos-dificultam-o-acesso-a-informacoes-sobre-o-caminho-do-gado/"
+              target="_blank">Read the story in Portuguese</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+          <h3>The worst land grabber in the Amazon</h3>
+          <div class="story-image"><img alt="Worst land grabber" src="images/masson.jpeg" /></div>
+          <p>The Brazilian magazine Piauí has published a profile on Altino Masson, a man who has illegally seized
+            458,000 hectares of public lands, an area equivalent to three times the size of the city of São Paulo. This
+            story is based on a data analysis conducted by Data Fixers and the Center for Climate Crime Analysis (CCCA).
+          </p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/materia/como-maior-grileiro-altino-masson-se-apossou-de-terra-publica-amazonia/"
+              target="_blank">Read the article in Portuguese</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>OCCRP</span><span>REVISTA PIAUÍ</span></div>
+          <h3>A world heritage site under attack in Brazil</h3>
+          <div class="story-image"><img alt="Brazilwood endangered" src="images/madeire.jpeg" /></div>
+          <p>This story was supported by Earth News Network/Internews. Brazilwood is being driven to extinction by an
+            industry not often associated with organized crime: classical music. Known for its density and strength, the
+            wood is crafted into bows that are used to play stringed instruments such as violins and cellos around the
+            world. Forensic tests on a sample of the confiscated wood, obtained by reporters, show it was logged in the
+            Pau Brazil National Park.</p>
+          <div class="story-links">
+            <a class="btn-secondary" href="https://piaui.folha.uol.com.br/materia/pau-brasil-extincao-arcos-violino/"
+              target="_blank">Read the article in Portuguese</a>
+            <a class="btn-secondary"
+              href="https://www.occrp.org/en/investigations/a-world-heritage-site-under-attack-in-brazil"
+              target="_blank">English version</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>OCCRP</span><span>REVISTA PIAUÍ</span></div>
+          <h3>The Brazilian Bow Makers Under Investigation For Dealing in Endangered Wood</h3>
+          <div class="story-image"><img alt="Bow makers investigation" src="images/madeire.jpeg" /></div>
+          <p>A two‑month cross‑border investigation in the US, UK and Brazil about a group of bowmakers suspected of
+            trafficking an endangered Brazilian wood to make violin and cello bows.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://www.occrp.org/en/investigations/the-brazilian-bow-makers-under-investigation-for-dealing-in-endangered-wood"
+              target="_blank">Read the English version</a>
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/materia/arcos-de-violino-feitos-com-pau-brasil-contrabandeado/"
+              target="_blank">Read the story in Portuguese (part 1)</a>
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/materia/como-madeira-brasileira-protegida-vira-arco-de-violino-nos-eua/"
+              target="_blank">Read the story in Portuguese (part 2)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>BRAZILIAN REPORT</span><span>REVISTA PIAUÍ</span></div>
+          <h3>How Brazil's environmental agency lost R$ 1 billion in environmental fines</h3>
+          <div class="story-image"><img alt="Ibama fines" src="images/ibama.jpeg" /></div>
+          <p>An investigation about how environmental fines disappeared from Brazil's environmental agency office,
+            Ibama, helping several offenders save money and continue deforestation in the Amazon.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://brazilian.report/liveblog/2022/04/07/brazil-environmental-agency-lost-billion-fines/"
+              target="_blank">Read the story in English</a>
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/materia/como-o-ibama-perdeu-r-1-bilhao-em-multas-ambientais/"
+              target="_blank">Read the story in Portuguese</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+          <h3>As artimanhas criminais de um austríaco</h3>
+          <div class="story-image"><img alt="Gold laundering" src="images/austriaco_gold_laundering.jpeg" /></div>
+          <p>We did web scraping of government and judicial data to support investigation into gold laundering.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://piaui.folha.uol.com.br/materia/as-artimanhas-criminais-de-um-austriaco/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>AGÊNCIA PÚBLICA</span></div>
+          <h3>Autorização de limpeza de pasto mascara e legaliza desmatamento ilegal</h3>
+          <div class="story-image"><img alt="Pasture cleaning authorization" src="images/deforestation_generic.jpg" />
+          </div>
+          <p>We elaborated all information requests and organized the data to support investigation into illegal
+            deforestation authorized by local governments.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://apublica.org/2025/04/autorizacao-de-limpeza-de-pasto-mascara-e-legaliza-desmatamento-ilegal/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-tags"><span>REPÓRTER BRASIL</span></div>
+          <h3>Autuados por trabalho escravo receberam mais de R$ 1 bilhão em isenções fiscais</h3>
+          <div class="story-image"><img alt="Slave labor tax exemptions" src="images/slave_labor_tax_exemptions.jpeg" />
+          </div>
+          <p>We analyzed data showing tax exemptions from the Brazilian government to companies prosecuted for slave
+            labor.</p>
+          <div class="story-links">
+            <a class="btn-secondary"
+              href="https://reporterbrasil.org.br/2024/07/autuados-trabalho-escravo-1-bilhao-isencoes-fiscais/"
+              target="_blank">Read the story (Portuguese only)</a>
+          </div>
+        </div>
+      </div>
+      <!-- Toggle button to show more or fewer stories -->
+      <label class="toggle-stories-btn" data-less="Show fewer stories" data-more="Show more stories"
+        for="toggle-stories"></label>
+    </div>
+  </section>
+
+  <div class="section-separator"></div>
+
+  <!-- Stories / Projects gallery -->
+  <section class="stories-section" id="stories">
+    <div class="container">
+      <div class="stories-slider">
+        <!-- radio selectors for stories -->
+        <input checked="" id="story1" name="story-slide" type="radio" />
+        <input id="story2" name="story-slide" type="radio" />
+        <input id="story3" name="story-slide" type="radio" />
+        <input id="story4" name="story-slide" type="radio" />
+        <input id="story5" name="story-slide" type="radio" />
+        <input id="story6" name="story-slide" type="radio" />
+        <input id="story7" name="story-slide" type="radio" />
+        <input id="story8" name="story-slide" type="radio" />
+        <input id="story9" name="story-slide" type="radio" />
+        <input id="story10" name="story-slide" type="radio" />
+        <input id="story11" name="story-slide" type="radio" />
+        <input id="story12" name="story-slide" type="radio" />
+        <input id="story13" name="story-slide" type="radio" />
+        <input id="story14" name="story-slide" type="radio" />
+        <input id="story15" name="story-slide" type="radio" />
+        <div class="story-slides">
+          <!-- Each story slide contains its own nav so the arrows change depending on which radio is selected -->
+          <div class="story-item s1">
+            <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+            <h3>Unknown deforestation agents</h3>
+            <div class="story-image"><img alt="Unknown deforestation agents" src="images/deforicmbio.png" /></div>
+            <p>We found out that almost half environmental embargoes in Brazil have no name on it, meaning that the
+              government didn't know who was responsible for deforestation in that area. By cross‑referencing public
+              datasets, we were able to identify some of these agents.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://piaui.folha.uol.com.br/desmatamento-amazonia-embargos-icmbio/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story15">‹ Anterior</label><label class="next"
+                for="story2">Próximo ›</label></div>
+          </div>
+          <div class="story-item s2">
+            <div class="story-tags"><span>MONGABAY</span></div>
+            <h3>The harsh, dangerous gig of seizing thousands of illegal cattle in the Amazon</h3>
+            <div class="story-image"><img alt="illegal cattle in the Amazon" src="images/mongaba24.png" /></div>
+            <p>This story explains how tracking illegal cattle in the Amazon is possible through GTA, a document issued
+              by state agencies, and why they try to hide those documents from civil society.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://news.mongabay.com/2024/06/the-harsh-dangerous-gig-of-seizing-thousands-of-illegal-cattle-in-the-amazon"
+                target="_blank">Read the story (English)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story1">‹ Anterior</label><label class="next"
+                for="story3">Próximo ›</label></div>
+          </div>
+          <div class="story-item s3">
+            <div class="story-tags"><span>AMBIENTAL MEDIA</span></div>
+            <h3>Majority of Amazon fire and deforestation fines in 12 Brazilian cities</h3>
+            <div class="story-image"><img alt="Amazon fire fines" src="images/ambi.png" /></div>
+            <p>This significant concentration of environmental infractions in a small fraction of the region highlights
+              critical areas of concern in the Amazon. The data reveals patterns and hotspots of environmental
+              violations, offering insights for further investigation and policy action.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://ambiental.media/mais-da-metade-das-multas-por-fogo-e-desmatamento-na-amazonia-aconteceram-em-apenas-12-municipios/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story2">‹ Anterior</label><label class="next"
+                for="story4">Próximo ›</label></div>
+          </div>
+          <div class="story-item s4">
+            <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+            <h3>Land Grabbing in the heart of Brasília</h3>
+            <div class="story-image"><img alt="Land grabbing in Brasília" src="images/gril_df.jpeg" /></div>
+            <p>We investigated how, with the support of politicians, individuals are invading Brazil's conservation
+              units, deforesting, and profiting from the sale of plots in the Distrito Federal, near the Congress and
+              Palácio do Planalto.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://piaui.folha.uol.com.br/distrito-federal-grileiros-car-brasilia/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story3">‹ Anterior</label><label class="next"
+                for="story5">Próximo ›</label></div>
+          </div>
+          <div class="story-item s5">
+            <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+            <h3>Land Grabbing, Gold Mining, and Cocaine Trade in the Amazon</h3>
+            <div class="story-image"><img alt="Agropó criminal network" src="images/pogado.jpeg" /></div>
+            <p>This investigation uncovers a scheme in the Amazon region called “agropó” that combines land grabbing,
+              illegal mining, and international cocaine trafficking. The investigation reveals that wealthy landowners,
+              such as Janio Oliveira, have been involved in this lucrative criminal network.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://piaui.folha.uol.com.br/quero-meter-dinheiro-e-no-agropo/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story4">‹ Anterior</label><label class="next"
+                for="story6">Próximo ›</label></div>
+          </div>
+          <div class="story-item s6">
+            <div class="story-tags"><span>INFOAMAZONIA</span><span>PULITZER CENTER</span><span>ARMANDO.INFO</span></div>
+            <h3>Amazon Underworld</h3>
+            <div class="story-image"><img alt="Amazon Underworld" src="images/soldier.jpeg" /></div>
+            <p>A one‑year cross‑border series of articles that mapped the presence of organized crime groups in the
+              Amazon region and reported on‑the‑ground about the impacts of their actions. Data Fixers coordinated the
+              data analysis and obtained the documents needed for the stories.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://amazonunderworld.org/" target="_blank">Visit the project page</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story5">‹ Anterior</label><label class="next"
+                for="story7">Próximo ›</label></div>
+          </div>
+          <div class="story-item s7">
+            <div class="story-tags">
+              <span>ICIJ</span><span>PODER 360</span><span>AGÊNCIA PÚBLICA</span><span>REVISTA PIAUÍ</span></div>
+            <h3>Deforestation Inc.</h3>
+            <div class="story-image"><img alt="Deforestation Inc" src="images/defor.jpeg" /></div>
+            <p>An International Consortium of Investigative Journalists (ICIJ)‑led cross‑border investigation exposes
+              how a lightly regulated sustainability industry overlooks forest destruction and human rights violations
+              when granting environmental certifications. Data Fixers coordinated the data analysis and obtained the
+              documents needed for the Brazilian stories.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://www.icij.org/investigations/deforestation-inc/"
+                target="_blank">Visit the project page</a>
+              <a class="btn-secondary"
+                href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/"
+                target="_blank">Read more about this project (English)</a>
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/madeireiras-com-selo-de-sustentabilidade-receberam-multas-milionarias-do-ibama/"
+                target="_blank">Read the story (Portuguese)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story6">‹ Anterior</label><label class="next"
+                for="story8">Próximo ›</label></div>
+          </div>
+          <div class="story-item s8">
+            <div class="story-tags"><span>GLOBAL WITNESS</span><span>REPÓRTER BRASIL</span></div>
+            <h3>How public agencies hinder access to information about the beef cattle chain</h3>
+            <div class="story-image"><img alt="Beef cattle chain" src="images/gadao.jpg" /></div>
+            <p>In partnership with NGO Global Witness, Data Fixers investigated how government agencies use several
+              strategies to withhold data about the cattle chain in Brazil, making it harder to investigate companies.
+            </p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://reporterbrasil.org.br/2023/07/how-public-agencies-hinder-access-to-information-about-the-beef-cattle-chain/"
+                target="_blank">Read an English version</a>
+              <a class="btn-secondary"
+                href="https://reporterbrasil.org.br/2023/07/como-orgaos-publicos-dificultam-o-acesso-a-informacoes-sobre-o-caminho-do-gado/"
+                target="_blank">Read the story in Portuguese</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story7">‹ Anterior</label><label class="next"
+                for="story9">Próximo ›</label></div>
+          </div>
+          <div class="story-item s9">
+            <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+            <h3>The worst land grabber in the Amazon</h3>
+            <div class="story-image"><img alt="Worst land grabber" src="images/masson.jpeg" /></div>
+            <p>The Brazilian magazine Piauí has published a profile on Altino Masson, a man who has illegally seized
+              458,000 hectares of public lands, an area equivalent to three times the size of the city of São Paulo.
+              This story is based on a data analysis conducted by Data Fixers and the Center for Climate Crime Analysis
+              (CCCA).</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/materia/como-maior-grileiro-altino-masson-se-apossou-de-terra-publica-amazonia/"
+                target="_blank">Read the article in Portuguese</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story8">‹ Anterior</label><label class="next"
+                for="story10">Próximo ›</label></div>
+          </div>
+          <div class="story-item s10">
+            <div class="story-tags"><span>OCCRP</span><span>REVISTA PIAUÍ</span></div>
+            <h3>A world heritage site under attack in Brazil</h3>
+            <div class="story-image"><img alt="Brazilwood endangered" src="images/madeire.jpeg" /></div>
+            <p>This story was supported by Earth News Network/Internews. Brazilwood is being driven to extinction by an
+              industry not often associated with organized crime: classical music. Known for its density and strength,
+              the wood is crafted into bows that are used to play stringed instruments such as violins and cellos around
+              the world. Forensic tests on a sample of the confiscated wood, obtained by reporters, show it was logged
+              in the Pau Brazil National Park.</p>
+            <div class="story-links">
+              <a class="btn-secondary" href="https://piaui.folha.uol.com.br/materia/pau-brasil-extincao-arcos-violino/"
+                target="_blank">Read the article in Portuguese</a>
+              <a class="btn-secondary"
+                href="https://www.occrp.org/en/investigations/a-world-heritage-site-under-attack-in-brazil"
+                target="_blank">English version</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story9">‹ Anterior</label><label class="next"
+                for="story11">Próximo ›</label></div>
+          </div>
+          <div class="story-item s11">
+            <div class="story-tags"><span>OCCRP</span><span>REVISTA PIAUÍ</span></div>
+            <h3>The Brazilian Bow Makers Under Investigation For Dealing in Endangered Wood</h3>
+            <div class="story-image"><img alt="Bow makers investigation" src="images/madeire.jpeg" /></div>
+            <p>A two‑month cross‑border investigation in the US, UK and Brazil about a group of bowmakers suspected of
+              trafficking an endangered Brazilian wood to make violin and cello bows.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://www.occrp.org/en/investigations/the-brazilian-bow-makers-under-investigation-for-dealing-in-endangered-wood"
+                target="_blank">Read the English version</a>
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/materia/arcos-de-violino-feitos-com-pau-brasil-contrabandeado/"
+                target="_blank">Read the story in Portuguese (part 1)</a>
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/materia/como-madeira-brasileira-protegida-vira-arco-de-violino-nos-eua/"
+                target="_blank">Read the story in Portuguese (part 2)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story10">‹ Anterior</label><label class="next"
+                for="story12">Próximo ›</label></div>
+          </div>
+          <div class="story-item s12">
+            <div class="story-tags"><span>BRAZILIAN REPORT</span><span>REVISTA PIAUÍ</span></div>
+            <h3>How Brazil's environmental agency lost R$ 1 billion in environmental fines</h3>
+            <div class="story-image"><img alt="Ibama fines" src="images/ibama.jpeg" /></div>
+            <p>An investigation about how environmental fines disappeared from Brazil's environmental agency office,
+              Ibama, helping several offenders save money and continue deforestation in the Amazon.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://brazilian.report/liveblog/2022/04/07/brazil-environmental-agency-lost-billion-fines/"
+                target="_blank">Read the story in English</a>
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/materia/como-o-ibama-perdeu-r-1-bilhao-em-multas-ambientais/"
+                target="_blank">Read the story in Portuguese</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story11">‹ Anterior</label><label class="next"
+                for="story13">Próximo ›</label></div>
+          </div>
+          <div class="story-item s13">
+            <div class="story-tags"><span>REVISTA PIAUÍ</span></div>
+            <h3>As artimanhas criminais de um austríaco</h3>
+            <div class="story-image"><img alt="Gold laundering" src="images/austriaco_gold_laundering.jpeg" /></div>
+            <p>We did web scraping of government and judicial data to support investigation into gold laundering.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://piaui.folha.uol.com.br/materia/as-artimanhas-criminais-de-um-austriaco/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story12">‹ Anterior</label><label class="next"
+                for="story14">Próximo ›</label></div>
+          </div>
+          <div class="story-item s14">
+            <div class="story-tags"><span>AGÊNCIA PÚBLICA</span></div>
+            <h3>Autorização de limpeza de pasto mascara e legaliza desmatamento ilegal</h3>
+            <div class="story-image"><img alt="Pasture cleaning authorization" src="images/deforestation_generic.jpg" />
+            </div>
+            <p>We elaborated all information requests and organized the data to support investigation into illegal
+              deforestation authorized by local governments.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://apublica.org/2025/04/autorizacao-de-limpeza-de-pasto-mascara-e-legaliza-desmatamento-ilegal/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story13">‹ Anterior</label><label class="next"
+                for="story15">Próximo ›</label></div>
+          </div>
+          <div class="story-item s15">
+            <div class="story-tags"><span>REPÓRTER BRASIL</span></div>
+            <h3>Autuados por trabalho escravo receberam mais de R$ 1 bilhão em isenções fiscais</h3>
+            <div class="story-image"><img alt="Slave labor tax exemptions"
+                src="images/slave_labor_tax_exemptions.jpeg" /></div>
+            <p>We analyzed data showing tax exemptions from the Brazilian government to companies prosecuted for slave
+              labor.</p>
+            <div class="story-links">
+              <a class="btn-secondary"
+                href="https://reporterbrasil.org.br/2024/07/autuados-trabalho-escravo-1-bilhao-isencoes-fiscais/"
+                target="_blank">Read the story (Portuguese only)</a>
+            </div>
+            <div class="story-nav"><label class="prev" for="story14">‹ Anterior</label><label class="next"
+                for="story1">Próximo ›</label></div>
+          </div>
+        </div>
+      </div>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </section>
+
+  <div class="section-separator"></div>
+
+  <!-- Media mentions -->
+  <section class="media-mentions-section">
+    <div class="container">
+      <h2>Who has featured our work</h2>
+      <div class="mentions-grid">
+        <div class="mention-item">
+          <div class="mention-tag">BROWN INSTITUTE – COLUMBIA UNIVERSITY</div>
+          <p>Major investigations published through Data Fixers project</p>
+          <a class="mention-link"
+            href="https://brown.columbia.edu/major-investigations-published-through-data-fixers-project/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">BROWN INSTITUTE – STANFORD UNIVERSITY</div>
+          <p>Data Fixers wins grant from the Earth Journalism Network</p>
+          <a class="mention-link"
+            href="https://brown.stanford.edu/data-fixers-wins-grant-from-the-earth-journalism-network/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">GROUND TRUTH</div>
+          <p>Data Fixers: The scientific method of investigative journalism in Brazil</p>
+          <a class="mention-link"
+            href="https://groundtruth.app/data-fixers-the-scientific-method-of-investigative-journalism-in-brazil-2/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">GLOBAL INVESTIGATIVE JOURNALISM NETWORK</div>
+          <p>Tips for FOIA/RTI requests</p>
+          <a class="mention-link" href="https://gijn.org/stories/tips-foia-rti-requests/" target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">FILECOIN FOUNDATION</div>
+          <p>Empowering a more informed, transparent society with decentralized technology</p>
+          <a class="mention-link"
+            href="https://ffdweb.org/blog/empowering-a-more-informed-transparent-society-with-decentralized-technology"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">BROWN INSTITUTE – COLUMBIA UNIVERSITY</div>
+          <p>After six months, Data Fixers achieves 100 mentions and new cross‑border investigations</p>
+          <a class="mention-link"
+            href="https://brown.columbia.edu/after-six-months-data-fixers-achieves-100-mentions-and-new-cross-border-investigations/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">MUCKROCK</div>
+          <p>Data Fixers add‑ons case study</p>
+          <a class="mention-link"
+            href="https://www.muckrock.com/news/archives/2022/dec/06/data-fixers-add-ons-case-study/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">MUCKROCK</div>
+          <p>L‑AI Bot: A chatbot that hones Brazilian information requests before they're filed</p>
+          <a class="mention-link"
+            href="https://www.muckrock.com/news/archives/2024/jan/24/l-ai-bot-a-chatbot-that-hones-brazilian-information-requests-before-theyre-filed/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">GLOBAL INVESTIGATIVE JOURNALISM NETWORK</div>
+          <p>Tracking organized crime's dirty money illicit operations tips</p>
+          <a class="mention-link"
+            href="https://gijn.org/stories/tracking-organized-crimes-dirty-money-illicit-operations-tips/"
+            target="_blank">Read more</a>
+        </div>
+        <div class="mention-item">
+          <div class="mention-tag">INTERNATIONAL JOURNALISTS' NETWORK</div>
+          <p>Latin American journalists offer advice on investigating organized crime</p>
+          <a class="mention-link"
+            href="https://ijnet.org/en/story/latin-american-journalists-offer-advice-investigating-organized-crime"
+            target="_blank">Read more</a>
+        </div>
+      </div>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </section>
+  <div class="section-separator"></div>
+  <!-- About -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <!-- Section heading separate from flex container to avoid interfering with layout -->
+      <h2>About</h2>
+      <!-- Simplified About: only text, with a link to Luiz at the end -->
+      <div class="about-text" style="max-width: 900px; margin: 0 auto;">
+        <p>
+          Data Fixers is a data‑driven journalism and consulting project created at the The Brown Institute for Media
+          Innovation — a joint initiative between Columbia University and Stanford University. This project received a
+          Magic Grant to find data and public records to support investigative journalism in Brazil and is coordinated
+          by journalist <a href="https://luizftoledo.github.io" target="_blank" rel="noopener">Luiz Fernando Toledo</a>
+          (Master of Science in Data Journalism 2022).
+        </p>
+      </div>
+      <!-- Back to top anchor centered below the about content -->
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <p>© 2025 Data Fixers. All rights reserved.</p>
+  </footer>
+  <script>
+    // mobile menu
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+    })();
+    // theme toggle removed by request; dark is default globally
+  </script>
+</body>
+
+</html>
