@@ -1,173 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A LAI que pegou – Reportagens e pesquisa acadêmica</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="alai.css?v=shadow1">
-  <style>
-    :root {
-      --primary-color: #10b981; /* emerald */
-      --secondary-color: #34d399; /* lighter emerald */
-      --text-color: #e6f4ee;
-      --muted-text: #b7d1c7;
-      --card-bg: rgba(255,255,255,0.04);
-      --light-bg: #0a1210;
-      --border: rgba(255,255,255,0.12);
-    }
-  </style>
-  <meta name="description" content="Agregador de textos que citam a Lei de Acesso à Informação (LAI), com foco em reportagens e pesquisas acadêmicas.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A LAI que pegou - Curadoria de reportagens</title>
+  <meta
+    name="description"
+    content="Curadoria atualizada de reportagens e pesquisas que citam ou usam a Lei de Acesso a Informacao (LAI)."
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="alai.css?v=20260303a" />
 </head>
 <body>
   <nav class="lai-nav">
     <div class="container nav-inner">
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        ☰
-      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a class="tab-btn" href="https://datafixers.org" target="_self" rel="noopener">Home</a></li>
-        <li><button class="tab-btn active" data-tab="news">Reportagens com LAI</button></li>
-        <li><button class="tab-btn" data-tab="academics">Artigos científicos sobre LAI</button></li>
+        <li><button class="tab-btn active" data-tab="news" type="button">Reportagens com LAI</button></li>
+        <li><button class="tab-btn" data-tab="academics" type="button">Pesquisa academica</button></li>
       </ul>
     </div>
   </nav>
 
-
   <header class="hero section">
-    <div class="container">
+    <div class="container hero-inner">
       <h1>A <span class="highlight">LAI</span> que pegou</h1>
-      <p>A <strong>LAI</strong> é, como costumamos dizer, uma lei que "pegou". Desde que entrou em vigor, em <strong>2012</strong>, já foram registrados <strong>mais de 1 milhão de pedidos de informação</strong>. Acompanhe aqui alguns exemplos de como a imprensa tem utilizado essa legislação.</p>
+      <p>
+        Monitor de links sobre a Lei de Acesso a Informacao. Aqui entram reportagens novas,
+        destaques atualizados automaticamente e uma lista pesquisavel para acompanhar a cobertura.
+      </p>
     </div>
   </header>
 
   <main class="section">
     <div class="container">
-      
-
-      <!-- Seção de filtros removida por solicitação: manter apenas o embed do Inoreader -->
-
-      <section id="featured">
-        <h2 class="section-title">Reportagens selecionadas</h2>
-        <div class="cards">
-          <article class="card">
-            <div class="card-body">
-              <span class="badge">Folha de S.Paulo</span>
-              <h3>Governo omite temas de pesquisas encomendadas pelo Planalto</h3>
-              <p class="muted">Reportagem mostra que a Secom não detalhou assuntos de pesquisas contratadas.</p>
-              <div class="kv">
-                <b>Como a LAI foi usada</b>
-                <span>Dados foram obtidos por meio de pedidos via LAI a órgãos do governo federal.</span>
-              </div>
-              <div class="actions">
-                <a class="btn" href="https://www1.folha.uol.com.br/amp/poder/2025/09/governo-lula-omite-temas-de-pesquisas-encomendadas-pelo-planalto.shtml" target="_blank" rel="noopener">Ler reportagem</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body">
-              <span class="badge">Metrópoles</span>
-              <h3>Zona leste de SP lidera registros de racismo nas escolas estaduais</h3>
-              <p class="muted">Entre jan/2024 e jul/2025, 35,86% dos casos ocorreram na região; estado tem 8 incidentes por dia.</p>
-              <div class="kv">
-                <b>Como a LAI foi usada</b>
-                <span>Apuração com dados oficiais; reportagem cita pedidos de informação e transparência pública.</span>
-              </div>
-              <div class="actions">
-                <a class="btn" href="https://www.metropoles.com/sao-paulo/zona-leste-sp-racismo-escolas" target="_blank" rel="noopener">Ler reportagem</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body">
-              <span class="badge">Metrópoles</span>
-              <h3>Câmara já pagou R$ 11,5 mi em reembolsos médicos a deputados</h3>
-              <p class="muted">Ranking revela os 15 parlamentares que mais receberam reembolsos na legislatura; Câmara não detalha procedimentos.</p>
-              <div class="kv">
-                <b>Como a LAI foi usada</b>
-                <span>Levantamento a partir de dados públicos; reportagem aciona pedidos de informação para detalhamento.</span>
-              </div>
-              <div class="actions">
-                <a class="btn" href="https://www.metropoles.com/sao-paulo/11-mi-reembolsos-medicos-deputados" target="_blank" rel="noopener">Ler reportagem</a>
-              </div>
-            </div>
-          </article>
+      <section class="panel summary-panel" aria-label="Resumo da curadoria">
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-label">Atualizado em</span>
+            <strong id="updatedAt">--</strong>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Links monitorados</span>
+            <strong id="newsCount">--</strong>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Novos na curadoria (30 dias)</span>
+            <strong id="newCount">--</strong>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Fontes unicas</span>
+            <strong id="sourceCount">--</strong>
+          </div>
         </div>
       </section>
 
-      <section id="list">
-        <h2 class="section-title" id="listTitle">Mais recentes</h2>
-        <!-- INOREADER_EMBED_REPORTAGENS_START -->
-        <div class="inoreader-embed" id="inoreader-reportagens" aria-label="Feed Inoreader – Reportagens recentes">
-          <iframe width="100%" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/Leis%20de%20acesso%20%C3%A0%20informa%C3%A7%C3%A3o%20em%20not%C3%ADcias/view/html?cs=m&ta=c" frameborder="0" tabindex="-1" title="Mais recentes – Inoreader" style="max-width:100%;"></iframe>
-        </div>
-        <!-- INOREADER_EMBED_REPORTAGENS_END -->
+      <section id="news" class="tab-section">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Destaques automaticos</h2>
+            <p class="muted">Selecao atualizada com base em recencia e relevancia para transparencia publica.</p>
+          </div>
+          <div id="featuredGrid" class="featured-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Novos links que entraram na curadoria</h2>
+            <p class="muted">Itens marcados como <span class="badge-new">novo</span> sao as entradas mais recentes no monitor.</p>
+          </div>
+          <ol id="newLinksList" class="compact-list"></ol>
+          <p id="newLinksEmpty" class="muted hidden">Nenhum link novo no periodo.</p>
+        </section>
+
+        <section class="panel" id="newsFilters">
+          <div class="panel-head">
+            <h2>Buscar na lista completa</h2>
+          </div>
+          <div class="filters-grid">
+            <label class="input-wrap">
+              <span>Buscar por termo</span>
+              <input id="searchBox" type="search" placeholder="Ex.: sigilo, gastos, contratos..." />
+            </label>
+            <label class="input-wrap">
+              <span>Fonte</span>
+              <select id="sourceFilter">
+                <option value="all">Todas</option>
+              </select>
+            </label>
+            <label class="input-wrap">
+              <span>Periodo</span>
+              <select id="periodFilter">
+                <option value="all">Todo o historico</option>
+                <option value="7">Ultimos 7 dias</option>
+                <option value="30">Ultimos 30 dias</option>
+                <option value="90">Ultimos 90 dias</option>
+              </select>
+            </label>
+            <label class="input-wrap">
+              <span>Ordenar</span>
+              <select id="sortSelect">
+                <option value="published_desc">Mais recentes (publicacao)</option>
+                <option value="first_seen_desc">Mais recentes (entrada na curadoria)</option>
+                <option value="published_asc">Mais antigos</option>
+                <option value="source_asc">Fonte (A-Z)</option>
+              </select>
+            </label>
+            <button class="toggle-btn" id="onlyNewBtn" type="button" aria-pressed="false">Mostrar apenas links novos</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p id="resultsInfo" class="muted"></p>
+          <ol id="newsList" class="news-list"></ol>
+          <p id="emptyState" class="muted hidden">Nenhum resultado com os filtros selecionados.</p>
+          <div id="pagination" class="pagination"></div>
+        </section>
       </section>
 
-
-      <section id="academics" class="hidden">
-        <h2 class="section-title">Pesquisa acadêmica</h2>
-        <div id="academicGrid" class="cards cards-academic hidden"></div>
-        <p id="academicEmpty" class="muted hidden">Sem resultados no momento.</p>
-        <p id="academicNote" class="footnote hidden">Atualizado automaticamente via Inoreader.</p>
-        <!-- INOREADER_EMBED_LAI_ACADEMICO_START -->
-        <div class="inoreader-embed" id="inoreader-academics" aria-label="Feed Inoreader – LAI Acadêmico">
-          <iframe width="100%" height="800" src="https://www.inoreader.com/stream/user/1003985396/tag/LAI%20Acad%C3%AAmico/view/html?t=Artigos%20recentes&cs=m&ta=c" frameborder="0" tabindex="-1" title="LAI Acadêmico – Inoreader" style="max-width:100%;"></iframe>
-        </div>
-        <!-- INOREADER_EMBED_LAI_ACADEMICO_END -->
+      <section id="academics" class="tab-section hidden">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Artigos cientificos sobre LAI</h2>
+            <p class="muted">Colecao complementar para consulta rapida.</p>
+          </div>
+          <label class="input-wrap academic-search-wrap">
+            <span>Buscar no acervo academico</span>
+            <input id="academicSearch" type="search" placeholder="Ex.: transparência, saúde, dados..." />
+          </label>
+          <div id="academicList" class="academic-list"></div>
+          <p id="academicEmpty" class="muted hidden">Sem resultados no momento.</p>
+        </section>
       </section>
     </div>
   </main>
 
   <footer class="footer section">
     <div class="container">
-      <p>Site produzido por <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a> | <a href="https://datafixers.org" target="_blank" rel="noopener">Luiz Fernando Toledo</a></p>
+      <p>
+        Site produzido por <a href="https://datafixers.org" target="_blank" rel="noopener">Datafixers.org</a>
+        | Autor: <a href="https://datafixers.org" target="_blank" rel="noopener">Luiz Fernando Toledo</a>
+      </p>
     </div>
   </footer>
-  
-  <!-- Banner fixo do curso no rodapé -->
+
   <div class="course-fixed" id="courseFixed">
     <div class="course-inner">
       <div class="course-text">
-        <strong>Curso: Investigue gastos públicos com a Lei de Acesso à Informação</strong>
-        <span>Curso online gravado e sob demanda, disponível na Udemy.</span>
+        <strong>Curso: Investigue gastos publicos com a Lei de Acesso a Informacao</strong>
+        <span>Curso online gravado e sob demanda, disponivel na Udemy.</span>
       </div>
       <a class="btn course-btn" href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/" target="_blank" rel="noopener">Acessar curso</a>
-      <button class="course-close" id="courseClose" aria-label="Fechar">×</button>
+      <button class="course-close" id="courseClose" aria-label="Fechar" type="button">x</button>
     </div>
   </div>
+
   <script>
-    // Mobile menu toggle
-    (function(){
-      const t = document.getElementById('menuToggle');
+    (function () {
+      const toggle = document.getElementById('menuToggle');
       const nav = document.getElementById('navLinks');
-      if (t && nav) t.addEventListener('click', ()=> nav.classList.toggle('open'));
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          nav.classList.toggle('open');
+        });
+      }
     })();
   </script>
   <script>
-    // Popup removed by request
-  </script>
-  <script>
-    // Banner fixo do curso (salva preferência na sessão)
-    (function(){
+    (function () {
       const el = document.getElementById('courseFixed');
       const close = document.getElementById('courseClose');
       const key = 'laiCourseBannerDismissed';
-      const safeGet = (k)=>{ try { return sessionStorage.getItem(k); } catch { return null; } };
-      const safeSet = (k,v)=>{ try { sessionStorage.setItem(k,v); } catch {} };
+      const safeGet = function (k) { try { return sessionStorage.getItem(k); } catch (err) { return null; } };
+      const safeSet = function (k, v) { try { sessionStorage.setItem(k, v); } catch (err) {} };
+
       if (el && !safeGet(key)) {
         el.classList.add('show');
         document.body.classList.add('with-course-banner');
       }
-      function hide(){ if (el){ el.classList.remove('show'); document.body.classList.remove('with-course-banner'); safeSet(key,'1'); } }
-      if (close) close.addEventListener('click', hide);
+
+      function hideBanner() {
+        if (!el) return;
+        el.classList.remove('show');
+        document.body.classList.remove('with-course-banner');
+        safeSet(key, '1');
+      }
+
+      if (close) {
+        close.addEventListener('click', hideBanner);
+      }
     })();
   </script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20260303a" defer></script>
 </body>
 </html>
-
-
