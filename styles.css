@@ -684,7 +684,7 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   gap: 1.5rem;
 }
 .dashboards-grid-expanded {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .dashboards-note {
   max-width: 860px;
@@ -713,6 +713,16 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   font-size: 0.9rem;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .dashboards-grid-expanded {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .dashboards-grid-expanded {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Back to top link styling */
