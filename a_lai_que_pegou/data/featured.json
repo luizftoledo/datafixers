@@ -7,7 +7,7 @@
     "published_at": "2026-02-19T22:13:17Z",
     "teaser": "Como a LGPD tem sido usada para restringir dados pedidos por LAI JOTA Info",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 9.06
+    "score": 9.02
   },
   {
     "id": "542f3fc9ed5e80",
@@ -30,16 +30,6 @@
     "score": 6.46
   },
   {
-    "id": "8685f9eb5d8e43",
-    "title": "Câmara aprova urgência para projeto que altera Lei de Acesso à Informação e aumenta transparência",
-    "url": "https://valor.globo.com/politica/noticia/2026/03/02/cmara-aprova-urgncia-para-projeto-que-altera-lei-de-acesso-informao-e-aumenta-transparncia.ghtml",
-    "source": "valor.globo.com",
-    "published_at": "2026-03-02T15:14:00Z",
-    "teaser": "A proposta estabelece que não poderá ser negado ao Congresso acesso a informações necessárias à fiscalização e ao controle, mesmo quando classificadas em qualquer grau de sigilo ...",
-    "why_featured": "Link recente que menciona LAI ou pedido de informação.",
-    "score": 6.46
-  },
-  {
     "id": "421f2021741371",
     "title": "Sanepar recebe orientações para adequar à LAI classificação de informações sigilosas - tce.pr.gov.br",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOclEycFdpVkUwcG1XWEJpckxWejR1UzZCOWx1UzduM043YVhha2RhZENhaU1BS2xfVjU1eFFBMkpBN19CZHFSVl83bDYtZkUxaUZUY0dob3B2dGhrM2N1b3VuOWR0T3R3UVhISDQ5ZlAzMzVHeTVxLVJzbFBwMXdVem9tWHI1WWRtTnQxVUNKMlVXWTl0d2hBTWhkTEEzWk0wXzJrZDBIeUhSal8yZlNheENpWERGUGFOcERDTnVNTQ",
@@ -47,7 +37,17 @@
     "published_at": "2026-01-29T08:00:00Z",
     "teaser": "Sanepar recebe orientações para adequar à LAI classificação de informações sigilosas tce.pr.gov.br",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 5.68
+    "score": 5.64
+  },
+  {
+    "id": "4b3efb74d865c9",
+    "title": "Câmara aprova urgência para projeto que altera Lei de Acesso à Informação e aumenta transparência - Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPeGRnTDliM1ZhLWk2X01zQWs1UWpaRFg3NF9yb3RJd1JIUnlJVWVWdnJXR2VjSnU2Qk15bTFabFExX2g5OUFXdVF6Y1I5bWxNMElGNDM5OGJwT205RXBUejZXV2ZKN3VtQi1jSXVUdFhDendKcE1GNG1BM203dnFlenA3TnBNX3B6eW05akxPS0dwWVRrNVNSUUhQTk5odmVOd0tCekI3bjJxQTNaTEJtcFlWa0hLWkdBLXVDcHA2MXZyRTI0NnNpOU1ia3pNNzZYVFZxdnF5RUpsbnd6VTdKUGlR0gHwAUFVX3lxTE1Tam5yOGxSRlFOTEVQX09hd2xUakgxS3ZjMlhVVm5xaG4teDJjV2QyNFVRcnh2b2V2eDJtcWJLbGdjMm5WLTBqeHp5dVdBWEhyWmVQVlZ5NFBqaE85OXlGT212TjZCVGFDX2tCN1ZqbTdRNG40Zzh6OEpVUnlRVmRsQlEyQXpwYWJTeDlHYTVoLXJXWjZwYXRsajRpX3FDLU1tTnlTLVMtSHhOSGR4WS04cDdkX2dNMHNfZk5sc1Zvd3RTanRYZGQtYUM4b1hrMFhTbVFoOTl1MV9qdTJBazhOb2xZLXk3d1NnY21wajhDLQ",
+    "source": "valor.globo.com",
+    "published_at": "2026-03-02T22:55:57Z",
+    "teaser": "Câmara aprova urgência para projeto que altera Lei de Acesso à Informação e aumenta transparência Valor Econômico",
+    "why_featured": "Link recente que menciona LAI ou pedido de informação.",
+    "score": 5.46
   },
   {
     "id": "59590c7233044b",
@@ -57,6 +57,6 @@
     "published_at": "2026-01-11T08:00:00Z",
     "teaser": "Governo Lula supera Bolsonaro em negativas por sigilo na LAI Gazeta do Povo",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 4.96
+    "score": 4.92
   }
 ]
