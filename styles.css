@@ -683,6 +683,16 @@ html[data-theme='dark'] .top-nav .theme-toggle:hover { background: var(--primary
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+.dashboards-grid-expanded {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.dashboards-note {
+  max-width: 860px;
+  margin: 0 auto 1.1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
 .dashboard-item {
   background: var(--card-bg);
   border-radius: var(--radius);
