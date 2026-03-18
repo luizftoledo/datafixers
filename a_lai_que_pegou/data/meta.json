@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-03-17T10:09:59Z",
-  "news_count": 80,
+  "updated_at": "2026-03-18T10:13:02Z",
+  "news_count": 83,
   "academics_count": 12,
-  "new_links_30d": 74,
+  "new_links_30d": 77,
   "sources_monitored": 4,
   "last_run": {
-    "added_news": 10,
+    "added_news": 7,
     "added_academics": 0
   }
 }
