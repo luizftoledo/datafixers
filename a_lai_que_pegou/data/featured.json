@@ -7,7 +7,7 @@
     "published_at": "2026-02-19T22:13:17Z",
     "teaser": "Como a LGPD tem sido usada para restringir dados pedidos por LAI JOTA Info",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 8.26
+    "score": 8.22
   },
   {
     "id": "694ad1ecdb2466",
@@ -17,7 +17,7 @@
     "published_at": "2026-03-12T00:20:46Z",
     "teaser": "Plínio cobrou a necessidade urgente de reformar a Lei de Acesso a Informação (LAI) para acabar com as brechas largamente usadas pelos governo para encobrir informações de aliados, que são de interesse público, e decretar sigilo de 100 anos para situa Portal Flagrante",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 7.56
+    "score": 7.52
   },
   {
     "id": "542f3fc9ed5e80",
@@ -27,7 +27,7 @@
     "published_at": "2026-03-02T16:14:00Z",
     "teaser": "A proposta mexe na Lei de Acesso à Informação (LAI) e impede sigilo sobre despesas públicas individualizadas custeadas com recursos públicos ...",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 7.2
+    "score": 7.16
   },
   {
     "id": "d2f540e3bf221c",
@@ -37,7 +37,17 @@
     "published_at": "2026-03-20T19:58:23Z",
     "teaser": "A gestão do prefeito Eduardo Braide (PSD) está no bojo de uma investigação por suposto descumprimento da Lei de Acesso à Informação .",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 6.92
+    "score": 6.88
+  },
+  {
+    "id": "500179705daa3f",
+    "title": "Figurões do Banco Master, Pleno e Will Bank entraram 73 vezes no BC - Metrópoles",
+    "url": "https://www.metropoles.com/colunas/tacio-lorran/figuroes-do-banco-master-pleno-e-will-bank-entraram-73-vezes-ao-bc",
+    "source": "metropoles.com",
+    "published_at": "2026-03-23T14:21:09Z",
+    "teaser": "A coluna obteve os registros de entradas no BC via Lei de Acesso à Informação (LAI). A reportagem contabilizou cada um deles separadamente, ainda ...",
+    "why_featured": "Link recente que menciona LAI ou pedido de informação.",
+    "score": 6.5
   },
   {
     "id": "a79cbe3d5bc9af",
@@ -47,16 +57,6 @@
     "published_at": "2026-03-02T21:05:47Z",
     "teaser": "Foram 223 agentes presos ao longo do ano, segundo dados obtidos pela Folha via Lei de Acesso à Informação . Todos foram levados para o Presídio ...",
     "why_featured": "Link recente que menciona LAI ou pedido de informação.",
-    "score": 5.7
-  },
-  {
-    "id": "8685f9eb5d8e43",
-    "title": "Câmara aprova urgência para projeto que altera Lei de Acesso à Informação e aumenta transparência",
-    "url": "https://valor.globo.com/politica/noticia/2026/03/02/cmara-aprova-urgncia-para-projeto-que-altera-lei-de-acesso-informao-e-aumenta-transparncia.ghtml",
-    "source": "valor.globo.com",
-    "published_at": "2026-03-02T15:14:00Z",
-    "teaser": "A proposta estabelece que não poderá ser negado ao Congresso acesso a informações necessárias à fiscalização e ao controle, mesmo quando classificadas em qualquer grau de sigilo ...",
-    "why_featured": "Link recente que menciona LAI ou pedido de informação.",
-    "score": 5.7
+    "score": 5.66
   }
 ]
