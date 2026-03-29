@@ -1,5 +1,15 @@
 [
   {
+    "id": "2ab96abc19aa01",
+    "title": "Prefeitura informa correção em informes de rendimentos de servidores - Prefeitura de Almenara",
+    "url": "https://www.almenara.mg.gov.br/noticia/detalhe/1682",
+    "source": "almenara.mg.gov.br",
+    "published_at": "2026-03-27T20:48:52Z",
+    "category": "news",
+    "teaser": "... Lei de acesso à informação - LAI Decreto Estadual 45969 · Notícias · Cultura. Cultura. EDITAL PNAB 2026 · Home · Noticías; ADMINISTRAÇÃO. Prefeitura ...",
+    "first_seen_at": "2026-03-29T09:54:32Z"
+  },
+  {
     "id": "59e32606cf7126",
     "title": "Programa Olhar Para Todos entrega mais de 1.000 óculos para a população",
     "url": "https://www.teresopolis.rj.gov.br/programa-olhar-para-todos-entrega-mais-de-1-000-oculos-para-a-populacao/",
@@ -281,12 +291,12 @@
   },
   {
     "id": "5c7b12f3ab5b74",
-    "title": "DF registra alta histórica de quase 300% nos pedidos via LAI - Secretaria de Estado de Governo do Distrito Federal",
+    "title": "DF registra alta histórica de quase 300% nos pedidos via LAI - segov.df.gov.br",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX1VlSkFwc3A5ZFNHZ1VpaE80MlVNUnVjNlVEalRaWFFfNEZiR2dFeHN1aktXZmF4RVlRR29jbFBjaGljZ1VyNS1mVzlxUTBDLS1GejdPRDJOUnRPWFdZU2c3NUQweGlmRFp1X3NYLWhnUmtqUHRNMlNtWnZxYXptVVRGdnU2MDhkRThKVHRB",
     "source": "segov.df.gov.br",
     "published_at": "2026-02-20T17:37:26Z",
     "category": "news",
-    "teaser": "DF registra alta histórica de quase 300% nos pedidos via LAI Secretaria de Estado de Governo do Distrito Federal",
+    "teaser": "DF registra alta histórica de quase 300% nos pedidos via LAI segov.df.gov.br",
     "first_seen_at": "2026-03-03T21:49:06Z"
   },
   {
@@ -401,12 +411,12 @@
   },
   {
     "id": "59590c7233044b",
-    "title": "Governo Lula supera Bolsonaro em negativas por sigilo na LAI - Gazeta do Povo",
+    "title": "Governo Lula supera Bolsonaro em negativas por sigilo na LAI - gazetadopovo.com.br",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOOHprcVpldE5lTnp1RHJBR2JEUVFwRWp4cFJqeFVpUUt4RTVnWEUzYXpqckdySEk0czdmaWhyNDd3d1pVaHNMSTMyRXR5aFNpdkgwb2laYnFmQm1nZGhLNmxsdFNRd0FLRFFiYlZfU2Q3OWJHWE56NkhYekdzbXlsV016ZWM4Nm1FanpQeWY4VWEzUTA",
     "source": "gazetadopovo.com.br",
     "published_at": "2026-01-11T08:00:00Z",
     "category": "news",
-    "teaser": "Governo Lula supera Bolsonaro em negativas por sigilo na LAI Gazeta do Povo",
+    "teaser": "Governo Lula supera Bolsonaro em negativas por sigilo na LAI gazetadopovo.com.br",
     "first_seen_at": "2026-03-03T21:49:06Z"
   },
   {
@@ -488,6 +498,16 @@
     "category": "news",
     "teaser": "Sepe convida para oficina sobre como usar a Lei de Acesso à Informação (LAI) para monitorar políticas educacionais Sepe-RJ",
     "first_seen_at": "2026-03-03T21:49:06Z"
+  },
+  {
+    "id": "17bd89a3af1fae",
+    "title": "Prefeitura promove capacitação sobre a Lei de Acesso à Informação (LAI) - uberlandia.mg.gov.br",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUHI5eEVUeG13WTRidWVUVlVsbTlNTDJMamhUZE9oTS1Ic2luVDdZejlxQzFISFI4NExQYmNhdmxfOUN6M1dDc2ZZYmIxVmJNLVRVSzIxWUJEUTFNZG1rRmsxVy10elRvTkdGSVN2X3RzZG5wR2RzcEVkNGZ5N2RkczhORXF3WkdBek80WVItWWluV0dwMzF1V0FxdzU3c05CU3F2Y1JTSUxaaXlEdm9CY2dvQ3I",
+    "source": "uberlandia.mg.gov.br",
+    "published_at": "2025-11-18T08:00:00Z",
+    "category": "news",
+    "teaser": "Prefeitura promove capacitação sobre a Lei de Acesso à Informação (LAI) uberlandia.mg.gov.br",
+    "first_seen_at": "2026-03-29T09:54:32Z"
   },
   {
     "id": "fe8627ab364178",
@@ -878,6 +898,16 @@
     "category": "news",
     "teaser": "A Lei de Acesso à Informação, a LAI, é uma realidade em grande parte do mundo. Países considerados democráticos – e até mesmo aqueles cujo regime é autoritário ou beira o autoritarismo – implantaram a ...",
     "first_seen_at": "2026-03-03T21:49:06Z"
+  },
+  {
+    "id": "99ba105db47fb0",
+    "title": "Fim do sigilo de 100 anos? O que se sabe sobre proposta do governo Lula",
+    "url": "https://veja.abril.com.br/coluna/maquiavel/fim-do-sigilo-de-100-anos-o-que-se-sabe-sobre-proposta-do-governo-lula/",
+    "source": "veja.abril.com.br",
+    "published_at": "2025-01-27T16:00:00Z",
+    "category": "news",
+    "teaser": "O governo federal deve apresentar ainda no primeiro semestre o projeto de lei para acabar com o “sigilo de 100 anos” sobre informações públicas que são solicitadas via Lei de Acesso à Informação (LAI) ...",
+    "first_seen_at": "2026-03-29T09:54:32Z"
   },
   {
     "id": "435b7931d6aaba",
