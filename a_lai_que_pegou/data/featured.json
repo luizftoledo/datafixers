@@ -7,7 +7,7 @@
     "published_at": "2026-02-19T22:13:17Z",
     "teaser": "Como a LGPD tem sido usada para restringir dados pedidos por LAI JOTA",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 7.06
+    "score": 7.02
   },
   {
     "id": "2fb8f64116a212",
@@ -17,17 +17,7 @@
     "published_at": "2026-03-26T04:57:00Z",
     "teaser": "O Ministério Público do Estado do Acre (MPAC) converteu em Inquérito Civil o Procedimento Preparatório nº 06.2025.00000503-4, instaurado para apurar supostas ...",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 6.92
-  },
-  {
-    "id": "e87ce7ec9d3659",
-    "title": "Alterar a Lei de Acesso à Informação: Definir claramente a fonte para o fornecimento de dados públicos. - Vietnam.vn",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaDg4d3VIVUxuN0pQdW1rZVdPWWpOUDc1TE9GN2w5alVqbkEyRkZLaktxcU13aG91YlQxTHJJTzVkOXJxenh5Vkx2TVd1dnF4VHdOOGtvN2txVWw0VDBSclpweUJiVGpMTzVKS2tEaWg2RlFJZHBwS0tuS2l6TXFhdHRYejR2WXhQbUl2VHJPOVFVbnRO",
-    "source": "vietnam.vn",
-    "published_at": "2026-04-09T10:48:58Z",
-    "teaser": "Alterar a Lei de Acesso à Informação: Definir claramente a fonte para o fornecimento de dados públicos. Vietnam.vn",
-    "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 6.52
+    "score": 6.88
   },
   {
     "id": "11abe55404c46b",
@@ -40,6 +30,16 @@
     "score": 6.5
   },
   {
+    "id": "e87ce7ec9d3659",
+    "title": "Alterar a Lei de Acesso à Informação: Definir claramente a fonte para o fornecimento de dados públicos. - Vietnam.vn",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaDg4d3VIVUxuN0pQdW1rZVdPWWpOUDc1TE9GN2w5alVqbkEyRkZLaktxcU13aG91YlQxTHJJTzVkOXJxenh5Vkx2TVd1dnF4VHdOOGtvN2txVWw0VDBSclpweUJiVGpMTzVKS2tEaWg2RlFJZHBwS0tuS2l6TXFhdHRYejR2WXhQbUl2VHJPOVFVbnRO",
+    "source": "vietnam.vn",
+    "published_at": "2026-04-09T10:48:58Z",
+    "teaser": "Alterar a Lei de Acesso à Informação: Definir claramente a fonte para o fornecimento de dados públicos. Vietnam.vn",
+    "why_featured": "Apuração com potencial de uso prático da LAI.",
+    "score": 6.48
+  },
+  {
     "id": "c4b68539f092c7",
     "title": "Lei de Acesso à Informação rumo à governança nacional de dados - Vietnam.vn",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMFl1ZWFDa0t5Z0NTMFVfcFFsRWtxc3N5X09obHNyRG9ZRWlVMW1FN29IYzNBSHpNeC1HeE5OWVpuX2o5TmxWZnVYcVdLNlJ1Z1lpVVZ2NFhhUkkyMlU5ZVpSMng0MnhNazFXWWk3enVDRnhaTTB4YnVqbXlfdjJwZFF6UkN5TUNpcEF5b2hweUdZbFQ4bk96TklNeFFoUQ",
@@ -47,7 +47,7 @@
     "published_at": "2026-04-09T04:48:57Z",
     "teaser": "Lei de Acesso à Informação rumo à governança nacional de dados Vietnam.vn",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 6.48
+    "score": 6.44
   },
   {
     "id": "694ad1ecdb2466",
@@ -57,6 +57,6 @@
     "published_at": "2026-03-12T00:20:46Z",
     "teaser": "Plínio cobrou a necessidade urgente de reformar a Lei de Acesso a Informação (LAI) para acabar com as brechas largamente usadas pelos governo para encobrir informações de aliados, que são de interesse público, e decretar sigilo de 100 anos para situa Portal Flagrante",
     "why_featured": "Apuração com potencial de uso prático da LAI.",
-    "score": 6.36
+    "score": 6.32
   }
 ]
