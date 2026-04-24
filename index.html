@@ -16,10 +16,10 @@
     (function () {
       try {
         const stored = localStorage.getItem('df-theme');
-        const theme = stored || 'dark';
+        const theme = stored || 'light';
         document.documentElement.setAttribute('data-theme', theme);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -28,6 +28,10 @@
 <body>
   <nav class="top-nav">
     <div class="container nav-inner">
+
+      <a class="brand" href="#top" aria-label="Data Fixers — início">
+        <img class="brand-logo" src="images/datafixers_logo.svg" alt="Data Fixers" />
+      </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span class="hamburger" aria-hidden="true">
@@ -64,10 +68,9 @@
   <header class="hero-section" id="top">
     <div class="container">
       <div class="hero-card">
+        <img class="hero-logo" src="images/datafixers_logo.svg" alt="Data Fixers" />
         <p class="tagline">
-          <span class="site-name">Data Fixers</span> é um projeto premiado, especializado em <span
-            class="highlight">análise e obtenção de dados</span> com foco em <span class="highlight">investigações
-            jornalísticas</span>.
+          Projeto <a href="https://premio.jornalismodedados.org.br/edicoes/2023/" target="_blank" rel="noopener noreferrer" class="tagline-link">premiado</a> de jornalismo, especializado em <span class="highlight">análise e obtenção de dados</span> para <span class="highlight">investigações</span>.
         </p>
         <!-- hero nav removed per new top navigation -->
         <div class="affiliations">
@@ -820,7 +823,11 @@
     </div>
   </section>
   <footer class="site-footer">
-    <p>© 2025 Data Fixers. Todos os direitos reservados.</p>
+    <ul class="footer-contact">
+      <li><a href="mailto:lta2119@columbia.edu">lta2119@columbia.edu</a></li>
+      <li><a href="https://luizftoledo.github.io" target="_blank" rel="noopener noreferrer">luizftoledo.github.io</a></li>
+      <li><a href="https://instagram.com/luizftoledo" target="_blank" rel="noopener noreferrer">instagram.com/luizftoledo</a></li>
+    </ul>
   </footer>
   <script>
     // mobile menu
