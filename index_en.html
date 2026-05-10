@@ -16,10 +16,10 @@
     (function () {
       try {
         const stored = localStorage.getItem('df-theme');
-        const theme = stored || 'dark';
+        const theme = stored || 'light';
         document.documentElement.setAttribute('data-theme', theme);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -58,6 +58,11 @@
               class="teal">LAI</span> que pegou</a></li>
       </ul>
 
+      <!-- Theme toggle (Right) -->
+      <button class="nav-theme-btn" id="themeToggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
       <!-- Language Switcher (Right) -->
       <a class="nav-lang-btn" href="index.html">
         Ler em <span class="teal">Português</span>
@@ -93,15 +98,15 @@
       <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Current Projects</h2>
       <div class="dashboards-grid"> <!-- Reusing existing grid class for 3 columns -->
 
-        <!-- Dashboards hub -->
+        <!-- LAI Dashboard -->
         <div class="dashboard-item"
           style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
           <div>
-            <div class="dash-icon"><i class="fas fa-globe-americas"></i></div>
-            <h3>Dashboards <span class="badge-new" aria-label="New">NEW</span></h3>
-            <p>Quick access to public dashboards on transparency, environmental fines, aircraft ownership, amendments and military secrecy.</p>
+            <div class="dash-icon"><i class="fas fa-scale-balanced"></i></div>
+            <h3>LAI Dashboard <span class="badge-new" aria-label="New">NEW</span></h3>
+            <p>Track denials of public information requests under Brazil's Access to Information Law: historical series, denial reasons and agency rankings.</p>
           </div>
-          <a class="dashboard-btn" href="#dashboards">View dashboards</a>
+          <a class="dashboard-btn" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
         </div>
 
         <!-- L-AI Notebook -->
@@ -676,50 +681,14 @@
 
   <section class="dashboards-section" id="dashboards">
     <div class="container">
-      <h2>Dashboards</h2>
-      <p class="dashboards-note">Live and legacy dashboards to track transparency, environment, aircraft ownership and parliamentary spending in plain language.</p>
-      <div class="dashboards-grid dashboards-grid-expanded">
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-globe-americas"></i></div>
-          <h3>Environmental Fines (Ibama and ICMBio)</h3>
-          <p>Environmental fines with daily updates, flexible search, map view and exports.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/ibama-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Chamber Basômetro</h3>
-          <p>Shows how often deputies align with the federal government's guidance in nominal votes.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/basometro-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
+      <h2>LAI Dashboard</h2>
+      <p class="dashboards-note">Track denials of public information requests under Brazil's Access to Information Law in plain language.</p>
+      <div class="dashboards-grid">
         <div class="dashboard-item">
           <div class="dash-icon"><i class="fas fa-scale-balanced"></i></div>
           <h3>Federal LAI Denials Monitor</h3>
           <p>Historical series of denied requests, denial reasons and agency rankings.</p>
           <a class="dashboard-btn" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3>Military Secrecy</h3>
-          <p>Focused view of military bodies to show what is being denied and how often.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/lai-dashboard/sigilo-militar.html" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-building-columns"></i></div>
-          <h3>Daily Parliamentary Amendments Monitor</h3>
-          <p>Tracks how much was newly committed each day, by author and destination.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/emendas-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-plane"></i></div>
-          <h3>Brazilian Aircraft Ownership</h3>
-          <p>Searchable RAB records by tail number, operator, name, CPF or CNPJ.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/aeronaves-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-        </div>
-        <div class="dashboard-item">
-          <div class="dash-icon"><i class="fas fa-microphone-lines"></i></div>
-          <h3>Presidential Speeches (archive)</h3>
-          <p>Legacy dashboard to explore speech topics and public statement patterns.</p>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/lulometro-dashboard/" target="_blank" rel="noopener noreferrer">Open dashboard</a>
         </div>
       </div>
       <a class="back-to-top" href="#top">Back to top ↑</a>
@@ -839,7 +808,17 @@
       const links = document.getElementById('navLinks');
       if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
     })();
-    // theme toggle removed by request; dark is default globally
+    // theme toggle (independent of language)
+    (function () {
+      const btn = document.getElementById('themeToggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('df-theme', next); } catch (e) {}
+      });
+    })();
   </script>
 </body>
 
