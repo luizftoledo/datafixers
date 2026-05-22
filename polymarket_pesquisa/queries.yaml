@@ -1,0 +1,47 @@
+# Queries pra raspagem one-shot do X via Apify Tweet Scraper.
+# Sintaxe segue a Twitter Advanced Search:
+#   https://github.com/igorbrigadir/twitter-advanced-search
+#
+# Edite à vontade antes de rodar. Cada termo dispara UM run do actor.
+
+start_date: "2024-01-01"
+end_date: "2026-05-22"
+
+groups:
+
+  polymarket_generico:
+    lang: pt
+    terms:
+      - "polymarket"
+
+  polymarket_framing_pesquisa:
+    lang: pt
+    terms:
+      - 'polymarket (aponta OR prevê OR mostra OR indica OR diz OR projeta)'
+      - '"segundo o polymarket"'
+      - '"no polymarket"'
+      - '"de acordo com o polymarket"'
+      - '"o polymarket diz"'
+
+  polymarket_eleicao_br:
+    lang: pt
+    terms:
+      - 'polymarket (eleição OR eleições OR eleicao OR eleicoes)'
+      - 'polymarket (lula OR bolsonaro OR tarcísio OR haddad OR zema OR ratinho OR caiado OR ciro OR pacheco)'
+      - 'polymarket (presidente OR presidência OR 2026)'
+
+  kalshi_comparacao:
+    lang: pt
+    terms:
+      - "kalshi"
+      - 'kalshi (aponta OR prevê OR mostra)'
+
+  institutos_tradicionais:
+    lang: pt
+    terms:
+      - "datafolha"
+      - "quaest"
+      - "ipec"
+      - '"atlas intel" OR atlasintel'
+      - "ipespe"
+      - '"paraná pesquisas" OR "parana pesquisas"'
