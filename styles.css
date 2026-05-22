@@ -60,6 +60,7 @@ body {
   font-feature-settings: 'ss01','cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 img, iframe { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -69,9 +70,15 @@ button { font: inherit; background: none; border: 0; color: inherit; cursor: poi
 .container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding-left: max(1.75rem, env(safe-area-inset-left));
+  padding-right: max(1.75rem, env(safe-area-inset-right));
 }
-@media (max-width: 600px) { .container { padding: 0 1.1rem; } }
+@media (max-width: 600px) {
+  .container {
+    padding-left: max(1.1rem, env(safe-area-inset-left));
+    padding-right: max(1.1rem, env(safe-area-inset-right));
+  }
+}
 
 .teal { color: var(--accent); font-weight: 500; }
 
@@ -185,6 +192,10 @@ button { font: inherit; background: none; border: 0; color: inherit; cursor: poi
   margin-right: .4rem;
   transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
 }
+@media (max-width: 880px) {
+  .nav-theme-btn { width: 44px; height: 44px; }
+  .nav-lang-btn { padding: .55rem .95rem; }
+}
 .nav-theme-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .nav-theme-btn svg { display: block; }
 .nav-theme-btn .icon-sun { display: none; }
@@ -195,12 +206,13 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
 /* hamburger */
 .nav-toggle {
   display: none;
-  width: 40px; height: 40px;
+  width: 44px; height: 44px;
   align-items: center; justify-content: center;
   border: 1px solid var(--rule-strong);
   border-radius: 999px;
   background: transparent;
   color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-toggle .hamburger { position: relative; width: 16px; height: 10px; display: inline-block; }
 .nav-toggle .bar { position: absolute; left: 0; right: 0; height: 1.5px; background: currentColor; }
@@ -210,25 +222,31 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
 
 @media (max-width: 880px) {
   .nav-toggle { display: inline-flex; }
+  .top-nav { position: sticky; }
+  .top-nav .nav-inner { position: relative; }
   .nav-links {
-    position: fixed;
-    left: 1rem; right: 1rem; top: 64px;
+    position: absolute;
+    left: 0; right: 0;
+    top: calc(100% + .5rem);
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     gap: .25rem;
-    padding: 1rem;
+    padding: .75rem 1rem;
     background: var(--paper);
     border: 1px solid var(--rule-strong);
     box-shadow: 0 30px 60px -30px rgba(0,0,0,.25);
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     display: none;
   }
   .nav-links.open { display: flex; }
   .nav-links li { border-bottom: 1px solid var(--rule); }
   .nav-links li:last-child { border-bottom: 0; }
-  .nav-links a { display: block; padding: .85rem .25rem; font-size: .95rem; }
+  .nav-links a { display: block; padding: .95rem .35rem; font-size: .98rem; min-height: 44px; }
   .nav-links a::after { display: none; }
-  .nav-pill { display: inline-block; padding: .4rem .85rem !important; }
+  .nav-pill { display: inline-block; padding: .55rem .95rem !important; min-height: 0; }
 }
 
 /* ----------------- hero ----------------- */
@@ -242,7 +260,8 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
 .hero-logo {
   display: block;
   margin: 0 auto clamp(1.75rem, 4vh, 2.5rem);
-  width: clamp(240px, 38vw, 460px);
+  width: clamp(190px, 38vw, 460px);
+  max-width: 75%;
   height: auto;
 }
 .hero-card {
@@ -829,8 +848,18 @@ section .section-title::after {
 .mention-link:hover::after { margin-left: 3px; }
 
 @media (max-width: 760px) {
-  .mention-item { grid-template-columns: 1fr; gap: .5rem; padding: 1.25rem 0 !important; }
-  .mention-link { justify-self: start; }
+  .mention-item {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    padding: 1.25rem 0 !important;
+  }
+  .mention-item:hover { padding-left: 0 !important; }
+  .mention-item p { font-size: 1.05rem !important; }
+  .mention-link {
+    justify-self: start;
+    padding: .35rem 0 4px;
+    display: inline-block;
+  }
 }
 
 /* ----------------- about (06) ----------------- */
@@ -889,7 +918,8 @@ section .section-title::after {
   color: var(--ink-mute);
   text-decoration: none;
   border-bottom: 1px solid var(--rule);
-  padding-bottom: 2px;
+  padding: .35rem 0 4px;
+  display: inline-block;
   transition: color .25s var(--ease), border-color .25s var(--ease);
 }
 .footer-contact a:hover {
@@ -1004,19 +1034,54 @@ section .section-title::after {
 @media (max-width: 768px) {
   .top-nav .nav-inner { padding: .7rem 0; }
   .brand { font-size: 1.05rem; }
-  .btn-primary, .btn-secondary, .dashboard-btn { padding: .6rem .95rem; font-size: .78rem; }
+  .btn-primary, .btn-secondary, .dashboard-btn {
+    padding: .75rem 1.1rem;
+    font-size: .8rem;
+    min-height: 44px;
+  }
+  /* keep story-card inline link compact (overridden lower in cascade) */
+  .stories-grid .story-card .btn-secondary { min-height: 0; padding: .35rem 0 4px !important; }
+  .dashboard-item .dashboard-btn { min-height: 0; }
   section { padding: 3.5rem 0; }
   .hero-section { padding: 4rem 0 3rem; }
   .hero-section::before { margin-bottom: 2rem; }
   .current-projects-section .dashboard-item,
-  .dashboards-section .dashboard-item { padding: 1.5rem 1.25rem !important; min-height: auto; }
+  .dashboards-section .dashboard-item {
+    padding: 1.5rem 1.25rem !important;
+    min-height: auto;
+  }
+  .dashboards-section .dashboards-grid,
+  .dashboards-grid.dashboards-grid-expanded { border-left: 0; }
   .aff-badge { font-size: .75rem; flex-wrap: wrap; justify-content: center; }
+  .affiliations { padding-top: 1.5rem; }
+  /* tighten section headings on mobile */
+  section h2,
+  section .section-title { margin-bottom: 1.5rem !important; padding-top: .5rem; }
+  section h2::after, section .section-title::after { margin-top: 1rem; }
+  /* dark-mode nav: keep solid background so backdrop-filter doesn't ghost */
+  html[data-theme='dark'] .top-nav {
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+  }
 }
 
 @media (max-width: 480px) {
-  body { font-size: 15px; }
+  body { font-size: 15px; line-height: 1.6; }
   .hero-section .site-name { font-size: clamp(3rem, 14vw, 4.5rem); }
-  .hero-section .tagline { font-size: 1.2rem; max-width: 28ch; }
+  .hero-section .tagline {
+    font-size: clamp(1.25rem, 6vw, 1.55rem);
+    max-width: 24ch;
+  }
+  .hero-section { padding: 3rem 0 2.25rem; }
+  /* card paddings tighter */
+  .current-projects-section .dashboard-item,
+  .dashboards-section .dashboard-item { padding: 1.35rem 1.1rem !important; }
+  .dashboard-item h3 { font-size: 1.2rem !important; }
+  .stories-grid .story-card h3 { font-size: 1.2rem !important; }
+  .about-section .about-text p { font-size: 1.1rem; }
+  /* footer breathing room */
+  .footer-contact { gap: .25rem 1.1rem; }
+  /* nav: tighter brand on tiny screens */
+  .brand-logo { height: 32px; }
 }
 
 /* -------------- print polish -------------- */
