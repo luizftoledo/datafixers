@@ -169,6 +169,29 @@ button { font: inherit; background: none; border: 0; color: inherit; cursor: poi
 .nav-lang-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .nav-lang-btn:hover .teal { color: var(--paper); }
 
+/* theme toggle */
+.nav-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: .85rem;
+  margin-right: .4rem;
+  transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+}
+.nav-theme-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.nav-theme-btn svg { display: block; }
+.nav-theme-btn .icon-sun { display: none; }
+.nav-theme-btn .icon-moon { display: block; }
+html[data-theme='dark'] .nav-theme-btn .icon-sun { display: block; }
+html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
+
 /* hamburger */
 .nav-toggle {
   display: none;
