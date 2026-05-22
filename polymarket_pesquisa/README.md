@@ -10,6 +10,8 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+> **Onde rodar.** Este script precisa chamar `api.apify.com`. O ambiente "Claude Code on the web" tem allowlist de rede e bloqueia esse host por padrão — rode **localmente na sua máquina** ou em qualquer servidor com saída pra internet aberta.
+
 ## Credencial Apify
 
 Crie conta em https://console.apify.com e pegue o token em **Settings → Integrations → API tokens**. O actor usado é `apidojo/tweet-scraper` (https://apify.com/apidojo/tweet-scraper) — cobra **US$ 0,40 por 1.000 tweets**.

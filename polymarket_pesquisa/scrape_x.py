@@ -20,6 +20,7 @@ Saída:
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -31,6 +32,15 @@ APIFY_BASE = "https://api.apify.com/v2"
 ACTOR_ID = "apidojo~tweet-scraper"
 POLL_INTERVAL = 10
 RUN_TIMEOUT = 60 * 30
+_TOKEN_RE = re.compile(r"apify_api_[A-Za-z0-9]{10,}")
+
+
+def redact(text: str) -> str:
+    return _TOKEN_RE.sub("apify_api_[REDACTED]", str(text))
+
+
+def auth_headers(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}"}
 
 ROOT = Path(__file__).resolve().parent
 RAW_DIR = ROOT / "data" / "raw"
@@ -58,7 +68,7 @@ def start_run(token, search_terms, lang, start, end, max_items, sort):
     }
     r = requests.post(
         f"{APIFY_BASE}/acts/{ACTOR_ID}/runs",
-        params={"token": token},
+        headers=auth_headers(token),
         json=payload,
         timeout=60,
     )
@@ -71,7 +81,7 @@ def wait_run(token, run_id, timeout=RUN_TIMEOUT):
     while time.time() < deadline:
         r = requests.get(
             f"{APIFY_BASE}/actor-runs/{run_id}",
-            params={"token": token},
+            headers=auth_headers(token),
             timeout=30,
         )
         r.raise_for_status()
@@ -87,7 +97,8 @@ def fetch_items(token, dataset_id):
     while True:
         r = requests.get(
             f"{APIFY_BASE}/datasets/{dataset_id}/items",
-            params={"token": token, "format": "json", "offset": offset, "limit": limit},
+            headers=auth_headers(token),
+            params={"format": "json", "offset": offset, "limit": limit},
             timeout=120,
         )
         r.raise_for_status()
@@ -192,7 +203,7 @@ def main():
             try:
                 run_id = start_run(token, [term], lang, start, end, args.max_items, args.sort)
             except requests.HTTPError as e:
-                print(f"    HTTPError ao iniciar: {e} — pulando")
+                print(f"    HTTPError ao iniciar: {redact(e)} — pulando")
                 summary.append({"group": group_name, "term": term, "items": 0, "status": "START_FAIL"})
                 continue
             print(f"    run_id={run_id}; aguardando…")
