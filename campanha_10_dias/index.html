@@ -1257,6 +1257,47 @@
 
 <script>
 // =====================================================================
+// TELEMETRIA — eventos enviados pra Worker no Cloudflare (privado)
+// =====================================================================
+const TELEMETRY = {
+  endpoint: 'https://campanha-stats.datafixers.org/track',
+  sessionId: Math.random().toString(36).slice(2, 14) + Date.now().toString(36).slice(-4),
+  startTime: Date.now(),
+  enabled: true
+};
+function track(event, data){
+  if(!TELEMETRY.enabled) return;
+  const payload = {
+    sid: TELEMETRY.sessionId,
+    ev: event,
+    d: data || {},
+    t: Date.now(),
+    el: Date.now() - TELEMETRY.startTime,
+    ref: (document.referrer || '').slice(0, 120),
+    ua: (navigator.userAgent || '').slice(0, 160),
+    lang: navigator.language || '',
+    w: window.innerWidth, h: window.innerHeight
+  };
+  try {
+    if(navigator.sendBeacon){
+      const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+      navigator.sendBeacon(TELEMETRY.endpoint, blob);
+    } else {
+      fetch(TELEMETRY.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true, mode: 'no-cors'
+      }).catch(()=>{});
+    }
+  } catch(e) {}
+}
+window.addEventListener('pagehide', ()=>{
+  try { track('pagehide', { day: (window.state||{}).day, intent: (window.state||{}).intent, followers: (window.state||{}).followers }); } catch(e){}
+});
+track('page_loaded', {});
+
+// =====================================================================
 // JOGO: Campanha — 10 dias
 // =====================================================================
 
@@ -3529,6 +3570,7 @@ function openHotspot(area){
 }
 
 function executeAction(a){
+  track('action', { id: a.id, tag: a.tag, area: a.area, day: state.day });
   closeModal();
   const ap = APPROACH[a.area];
   if(ap){
@@ -4791,6 +4833,7 @@ function scheduleIn(days, fn, desc){
 }
 
 function startDay(){
+  track('day_start', { day: state.day, intent: state.intent|0, opp: state.oppIntent|0, risk: state.risk|0, fol: state.followers|0, money: state.money|0 });
   state.energy = state.energyMax;
   state.walksToday = 0;
   state.videosToday = 0;
@@ -5421,6 +5464,13 @@ function determineEnd(){
 // END GAME
 // =====================================================================
 function endGame(kind){
+  track('game_end', {
+    kind, day: state.day,
+    intent: state.intent|0, opp: state.oppIntent|0, risk: state.risk|0,
+    trust: state.trust|0, fol: state.followers|0, money: state.money|0,
+    legal: state.legalActs, gray: state.grayActs, illegal: state.illegalActs,
+    flags: { bf: state.flags.boughtFollowers, wb: state.flags.didWhatsappBlast, nb: state.flags.neuroBots, df: state.flags.deepfakedAdv }
+  });
   state.running = false;
   Audio.music.stop();
   if(kind === 'vitoria1') Audio.music.stinger('victory');
@@ -5507,6 +5557,7 @@ $('startBtn').addEventListener('click', ()=>{
   $('quitBtn').style.display = 'flex';
   $('restBtn').style.display = 'flex';
   state.running = true;
+  track('game_start', {});
   // Start music (gesture-unlocked)
   Audio.init();
   Audio.resume();
