@@ -101,51 +101,60 @@
     .feed { height: 280px; }
   }
   @media (max-width: 640px) {
-    body { font-size: 17px; }
-    .app { padding: 10px 8px 80px; }
-    header.top { flex-direction: column; gap: 4px; align-items: flex-start; }
-    header.top h1 { font-size: 11px; line-height: 1.3; }
+    body { font-size: 16px; }
+    .app { padding: 6px 6px 70px; }
+    header.top { flex-direction: column; gap: 2px; align-items: center; text-align: center; padding-bottom: 6px; margin-bottom: 8px; }
+    header.top h1 { font-size: 10px; line-height: 1.3; padding: 0 8px; }
+    header.top .sub { font-size: 13px; }
     .hud {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4px 8px; padding: 8px 10px;
-      font-size: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px 6px; padding: 6px 8px;
+      margin-bottom: 8px;
     }
-    .hud .stat { border-right: none; border-bottom: 1px solid #4a3a64; padding-bottom: 4px; padding-right: 0; }
-    .hud .stat:nth-child(n+4) { border-bottom: none; padding-bottom: 0; }
-    .hud .label { font-size: 9px; }
-    .hud .value { font-size: 19px; }
-    .stage { padding: 6px; min-height: 0; }
-    .stage .scene-hint { font-size: 16px; padding: 6px 8px; left: 12px; right: 12px; bottom: 12px; }
-    .controls-row { font-size: 13px; flex-direction: column; gap: 4px; align-items: flex-start; }
-    .feed { height: 220px; padding: 8px; }
-    .feed h3 { font-size: 10px; }
-    .feed-item { font-size: 15px; padding: 6px 8px; }
-    .feed-item .meta { font-size: 11px; }
-    .modal { padding: 12px 14px; max-height: 90vh; overflow-y: auto; }
-    .modal h2 { font-size: 12px; }
-    .modal .subt { font-size: 15px; }
-    .modal .body { font-size: 16px; }
-    button.act, button.btn { font-size: 16px; padding: 12px 10px; }
-    button.act .lbl { font-size: 16px; }
-    button.act .lbl small { font-size: 13px; }
-    button.act .tag { font-size: 8px; }
-    .day-overlay h2 { font-size: 16px; }
-    .day-overlay p { font-size: 17px; }
-    .cover h2 { font-size: 15px; }
-    .cover .lead { font-size: 16px; }
-    .debate-stage h2 { font-size: 12px; }
-    .debate-question { font-size: 17px; padding: 8px 10px; }
-    .answers button { font-size: 16px; padding: 10px 8px; }
+    .hud .stat {
+      border-right: none;
+      padding-right: 0;
+      padding-bottom: 2px;
+    }
+    .hud .label { font-size: 8px; }
+    .hud .value { font-size: 16px; }
+    .hud .bar { display: none; } /* esconder barras em mobile pra economizar espaço */
+    .stage { padding: 4px; min-height: 0; }
+    .stage .scene-hint { font-size: 13px; padding: 5px 7px; left: 6px; right: 6px; bottom: 6px; }
+    .controls-row { display: none; } /* esconde dica em mobile, scene-hint já dá info */
+    .feed { height: 180px; padding: 6px; margin-top: 6px; }
+    .feed h3 { font-size: 9px; }
+    .feed-item { font-size: 14px; padding: 5px 7px; }
+    .feed-item .meta { font-size: 10px; }
+    .modal { padding: 10px 12px; max-height: 86vh; overflow-y: auto; }
+    .modal h2 { font-size: 11px; }
+    .modal .subt { font-size: 14px; }
+    .modal .body { font-size: 15px; }
+    button.act, button.btn { font-size: 15px; padding: 10px 8px; }
+    button.act .lbl { font-size: 15px; }
+    button.act .lbl small { font-size: 12px; }
+    button.act .tag { font-size: 8px; padding: 3px 4px; }
+    button.act .cost { font-size: 13px; }
+    button.act .cost b { font-size: 14px; }
+    button.act .cost .e { font-size: 14px; }
+    .day-overlay h2 { font-size: 14px; }
+    .day-overlay p { font-size: 16px; }
+    .cover { padding: 14px 12px; }
+    .cover h2 { font-size: 13px; }
+    .cover .lead { font-size: 15px; }
+    .debate-stage h2 { font-size: 11px; }
+    .debate-question { font-size: 16px; padding: 6px 9px; }
+    .answers button { font-size: 15px; padding: 9px 7px; }
     .answers button .tone { font-size: 8px; }
-    .podium .face { font-size: 28px; }
-    .podium .name { font-size: 14px; }
+    .podium .face { font-size: 26px; }
+    .podium .name { font-size: 13px; }
     .podium .role { font-size: 8px; }
     .podium .score { font-size: 9px; }
-    .endscreen .big { font-size: 16px; }
-    .endscreen .summary { font-size: 15px; }
-    .toast { font-size: 9px; padding: 9px 14px; max-width: 92vw; text-align: center; }
+    .endscreen .big { font-size: 15px; }
+    .endscreen .summary { font-size: 14px; }
+    .toast { font-size: 9px; padding: 8px 12px; max-width: 92vw; text-align: center; bottom: 76px; }
   }
-  /* Audio toggle floating button */
+  /* Floating controls — TOP em desktop, BOTTOM em mobile */
   #soundBtn {
     position: fixed;
     top: 14px; right: 14px;
@@ -161,7 +170,22 @@
     box-shadow: 0 4px 0 rgba(0,0,0,0.4);
   }
   #soundBtn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.4); }
-  @media (max-width: 640px) { #soundBtn { top: 8px; right: 8px; width: 38px; height: 38px; font-size: 18px; } }
+  @media (max-width: 640px) {
+    /* Bottom bar fixa com 4 botões */
+    #soundBtn, #fsBtn, #quitBtn, #restBtn {
+      position: fixed !important;
+      bottom: 8px !important;
+      top: auto !important;
+      width: 52px !important; height: 52px !important;
+      font-size: 22px !important;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.5) !important;
+      z-index: 160 !important;
+    }
+    #restBtn { left: 8px !important; right: auto !important; }
+    #quitBtn { left: 70px !important; right: auto !important; }
+    #fsBtn   { right: 70px !important; left: auto !important; }
+    #soundBtn{ right: 8px !important; left: auto !important; }
+  }
 
   .stage {
     position: relative;
@@ -1150,6 +1174,34 @@
       <h3>FEED DO DIA <span class="tag" id="feedDayTag">D1</span></h3>
       <div class="feed-list" id="feedList"></div>
     </aside>
+  </div>
+
+  <!-- Tela de criação do candidato -->
+  <div class="cover" id="charCreate" style="display:none">
+    <h2>QUEM É VOCÊ?</h2>
+    <p class="lead">Crie seu candidato a deputado federal. Você terá 10 dias pra fazer o nome valer alguma coisa.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto 14px;text-align:left">
+      <div>
+        <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:6px">NOME</label>
+        <input type="text" id="ccName" maxlength="22" placeholder="Seu nome" value=""
+          style="width:100%;padding:10px;font-family:'VT323',monospace;font-size:20px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text)"/>
+      </div>
+      <div>
+        <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:6px">SLOGAN</label>
+        <select id="ccSloganPick" style="width:100%;padding:10px;font-family:'VT323',monospace;font-size:18px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text);margin-bottom:6px"></select>
+        <input type="text" id="ccSlogan" maxlength="50" placeholder="Ou escreva o seu"
+          style="width:100%;padding:8px;font-family:'VT323',monospace;font-size:18px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text)"/>
+      </div>
+    </div>
+
+    <div style="max-width:760px;margin:0 auto">
+      <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:8px;text-align:left">AVATAR</label>
+      <div id="ccAvatars" style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px"></div>
+    </div>
+
+    <button class="btn primary" id="ccStart" style="font-size:13px;font-family:'Press Start 2P',monospace;padding:14px 22px">▶ COMEÇAR CAMPANHA</button>
+    <button class="btn" id="ccBack" style="margin-top:8px">VOLTAR</button>
   </div>
 
   <div class="cover" id="cover">
@@ -2327,63 +2379,122 @@ function drawMic(x,y){
   // sparkle (only when debate active)
 }
 
+// Avatares disponíveis (cores + estilo de cabelo)
+const AVATARS = [
+  { name: 'Pedro',   skin:'#f3c9a0', hair:'#b87333', hair2:'#8a5020', shirt:'#3c7dc0', accent:'#cf3a3a', style:'short' },
+  { name: 'Ana',     skin:'#f3c9a0', hair:'#1a0f24', hair2:'#0a0510', shirt:'#cf6cad', accent:'#3a90c0', style:'long' },
+  { name: 'Marina',  skin:'#c89968', hair:'#3a2010', hair2:'#1a0a00', shirt:'#7dd87d', accent:'#f6c453', style:'curly' },
+  { name: 'João',    skin:'#a0866a', hair:'#1a0f24', hair2:'#0a0510', shirt:'#f6c453', accent:'#cf3a3a', style:'afro' },
+  { name: 'Beatriz', skin:'#e9c39e', hair:'#cf3a3a', hair2:'#a01a1a', shirt:'#8a5cf6', accent:'#fff', style:'bun' },
+  { name: 'Tarso',   skin:'#8a6a4a', hair:'#5a5a5a', hair2:'#3a3a3a', shirt:'#fff', accent:'#3a5a8a', style:'bald' }
+];
+const SLOGAN_OPTIONS = [
+  'Voto consciente, mandato sério',
+  'Pra quem o congresso esquece',
+  'Mandato com presença, não com show',
+  'Compromisso é projeto, não promessa',
+  'O Brasil que dá certo, todo dia',
+  'Pelo trabalho real, contra a fraude digital'
+];
+
+function getCandidateColors(){
+  return AVATARS[state.candidate.avatar] || AVATARS[0];
+}
+
 // Player avatar 12x20-ish, with direction + walk frames
 function drawPlayer(x,y,opts){
   opts = opts || {};
   const facing = opts.facing || 'down';
-  const frame = opts.frame || 0; // 0..3 (0=stand, 1=left leg, 2=stand, 3=right leg)
+  const frame = opts.frame || 0;
   const moving = !!opts.moving;
   const bob = moving ? (frame===1?-1:frame===3?-1:0) : (Math.floor(opts.t||0)%2===0?0:-1);
+  const c = opts.colors || getCandidateColors();
   // shadow
   ctx.fillStyle = 'rgba(0,0,0,0.4)';
   ctx.fillRect(x-1, y+19, 14, 2);
   ctx.fillRect(x, y+20, 12, 1);
   const oy = bob;
-  // legs (walk anim)
   const legOffL = (moving && frame===1) ? 1 : 0;
   const legOffR = (moving && frame===3) ? 1 : 0;
+  // pants
   rect(x+2, y+14+oy-legOffL, 3, 5, PAL.player4);
   rect(x+7, y+14+oy-legOffR, 3, 5, PAL.player4);
   rect(x+2, y+18+oy-legOffL, 3, 1, PAL.shoes);
   rect(x+7, y+18+oy-legOffR, 3, 1, PAL.shoes);
-  // body (shirt)
-  rect(x+1, y+8+oy, 10, 7, PAL.player3);
-  rect(x+1, y+8+oy, 10, 2, '#2a5a90');
+  // shirt
+  rect(x+1, y+8+oy, 10, 7, c.shirt);
+  rect(x+1, y+8+oy, 10, 2, shadeColor(c.shirt, -25));
   // collar
-  rect(x+5, y+8+oy, 2, 2, PAL.player1);
-  // tie (only when facing camera-ish)
-  if(facing==='down'){ rect(x+5, y+10+oy, 2, 4, PAL.red); }
-  // arms swing
+  rect(x+5, y+8+oy, 2, 2, c.skin);
+  if(facing==='down'){ rect(x+5, y+10+oy, 2, 4, c.accent); }
+  // arms
   const armOffL = (moving && frame===1) ? -1 : 0;
   const armOffR = (moving && frame===3) ? -1 : 0;
-  rect(x, y+9+oy+armOffL, 1, 5, PAL.player3);
-  rect(x+11, y+9+oy+armOffR, 1, 5, PAL.player3);
-  rect(x, y+13+oy+armOffL, 1, 2, PAL.player1);
-  rect(x+11, y+13+oy+armOffR, 1, 2, PAL.player1);
+  rect(x, y+9+oy+armOffL, 1, 5, c.shirt);
+  rect(x+11, y+9+oy+armOffR, 1, 5, c.shirt);
+  rect(x, y+13+oy+armOffL, 1, 2, c.skin);
+  rect(x+11, y+13+oy+armOffR, 1, 2, c.skin);
   // head
-  rect(x+2, y+2+oy, 8, 7, PAL.player1);
-  // hair (two-tone)
-  rect(x+2, y+1+oy, 8, 3, PAL.player2);
-  rect(x+1, y+2+oy, 1, 3, PAL.player2);
-  rect(x+10, y+2+oy, 1, 3, '#8a5020');
-  rect(x+9, y+1+oy, 1, 2, '#8a5020');
-  // face by direction
+  rect(x+2, y+2+oy, 8, 7, c.skin);
+  // cabelo por style
+  const style = c.style || 'short';
+  if(style === 'short'){
+    rect(x+2, y+1+oy, 8, 3, c.hair);
+    rect(x+1, y+2+oy, 1, 3, c.hair);
+    rect(x+10, y+2+oy, 1, 3, c.hair2);
+    rect(x+9, y+1+oy, 1, 2, c.hair2);
+  } else if(style === 'long'){
+    rect(x+2, y+1+oy, 8, 4, c.hair);
+    rect(x+1, y+2+oy, 1, 8, c.hair);
+    rect(x+10, y+2+oy, 1, 8, c.hair2);
+    rect(x+2, y+9+oy, 1, 2, c.hair);
+    rect(x+9, y+9+oy, 1, 2, c.hair2);
+  } else if(style === 'curly'){
+    rect(x+1, y+1+oy, 10, 4, c.hair);
+    rect(x+2, y+0+oy, 2, 1, c.hair);
+    rect(x+5, y+0+oy, 2, 1, c.hair);
+    rect(x+8, y+0+oy, 2, 1, c.hair);
+    rect(x+0, y+3+oy, 1, 2, c.hair);
+    rect(x+11, y+3+oy, 1, 2, c.hair2);
+  } else if(style === 'afro'){
+    rect(x+1, y+0+oy, 10, 3, c.hair);
+    rect(x+0, y+1+oy, 1, 4, c.hair);
+    rect(x+11, y+1+oy, 1, 4, c.hair2);
+    rect(x+2, y+2+oy, 8, 1, c.hair2);
+  } else if(style === 'bun'){
+    rect(x+2, y+1+oy, 8, 3, c.hair);
+    rect(x+4, y-1+oy, 4, 3, c.hair);
+    rect(x+5, y-2+oy, 2, 1, c.hair);
+  } else if(style === 'bald'){
+    // sem cabelo, talvez sombra topo
+    rect(x+3, y+2+oy, 6, 1, shadeColor(c.skin, -15));
+  }
+  // face
   if(facing==='down'){
-    rect(x+4, y+5+oy, 1, 1, PAL.black);
-    rect(x+7, y+5+oy, 1, 1, PAL.black);
+    rect(x+4, y+5+oy, 1, 1, '#000');
+    rect(x+7, y+5+oy, 1, 1, '#000');
     rect(x+5, y+7+oy, 2, 1, '#8a3a3a');
   } else if(facing==='up'){
-    // back of head: hide eyes, ear hint
-    rect(x+2, y+1+oy, 8, 5, PAL.player2);
+    rect(x+2, y+1+oy, 8, 5, c.hair);
   } else if(facing==='left'){
-    rect(x+3, y+5+oy, 1, 1, PAL.black);
+    rect(x+3, y+5+oy, 1, 1, '#000');
     rect(x+3, y+7+oy, 2, 1, '#8a3a3a');
-    rect(x+9, y+4+oy, 1, 4, PAL.player2); // back side hair
+    rect(x+9, y+4+oy, 1, 4, c.hair);
   } else if(facing==='right'){
-    rect(x+8, y+5+oy, 1, 1, PAL.black);
+    rect(x+8, y+5+oy, 1, 1, '#000');
     rect(x+7, y+7+oy, 2, 1, '#8a3a3a');
-    rect(x+2, y+4+oy, 1, 4, PAL.player2);
+    rect(x+2, y+4+oy, 1, 4, c.hair);
   }
+}
+
+// Util: escurece/clareia uma cor hex
+function shadeColor(hex, amt){
+  const m = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
+  if(!m) return hex;
+  const r = Math.max(0, Math.min(255, parseInt(m[1],16) + amt));
+  const g = Math.max(0, Math.min(255, parseInt(m[2],16) + amt));
+  const b = Math.max(0, Math.min(255, parseInt(m[3],16) + amt));
+  return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
 }
 
 // Adversary cameo (different colors, behind window or on TV?)
@@ -2682,7 +2793,8 @@ function setTarget(tx, ty, hotspotId){
 
 function tickMove(dt){
   if(!state.running || state.inDebate || state.fxLocked || $('dayOverlay').classList.contains('show')) return;
-  const SPEED = 95; // px/s logical (mais rápido pra chegar perto antes do timeout)
+  // mobile: ainda mais rápido pra reduzir tempo de espera
+  const SPEED = (window.innerWidth < 700) ? 140 : 95;
   let dx = 0, dy = 0;
   // Keyboard
   if(state.keys['ArrowLeft']||state.keys['KeyA']) dx -= 1;
@@ -2698,7 +2810,8 @@ function tickMove(dt){
     const ddy = state.target.y - state.py;
     const dist = Math.hypot(ddx, ddy);
     const elapsed = performance.now() - (state.target.started || 0);
-    const timedOut = elapsed > 3000;
+    // mobile: timeout mais curto (1.5s) pra não esperar tanto; desktop 3s
+    const timedOut = elapsed > (isTouch ? 1500 : 3000);
     if(dist < 4 || timedOut){
       const t = state.target;
       state.target = null;
@@ -2772,11 +2885,20 @@ function canvasToLogical(clientX, clientY){
 }
 
 function findHotspotAt(x, y){
+  // pass 1: bbox exato
   for(const s of HOTSPOTS){
     if(s.id === 'mic' && state.day !== 10) continue;
     if(s.id === 'marketeiro' && !state.marketeiroVisible) continue;
-    if(s.id === 'bed' && state.day >= 10) continue; // no D10 vai pro debate
+    if(s.id === 'bed' && state.day >= 10) continue;
     if(x>=s.x && x<=s.x+s.w && y>=s.y && y<=s.y+s.h) return s;
+  }
+  // pass 2: tolerância de 5px pra ajudar tap em mobile
+  const pad = 5;
+  for(const s of HOTSPOTS){
+    if(s.id === 'mic' && state.day !== 10) continue;
+    if(s.id === 'marketeiro' && !state.marketeiroVisible) continue;
+    if(s.id === 'bed' && state.day >= 10) continue;
+    if(x>=s.x-pad && x<=s.x+s.w+pad && y>=s.y-pad && y<=s.y+s.h+pad) return s;
   }
   return null;
 }
@@ -2867,9 +2989,15 @@ const state = {
   risk: 0,
   trust: 60,
   followers: 3500,
-  engagement: 5,        // engagement rate %
-  algoPenaltyDays: 0,   // dias em que algoritmo pune (após exposição)
-  history: [],          // snapshots por dia (após o dia fechar)
+  engagement: 5,
+  algoPenaltyDays: 0,
+  history: [],
+  // candidato customizável
+  candidate: {
+    name: 'Você',
+    slogan: 'Voto consciente, mandato sério',
+    avatar: 0       // index em AVATARS
+  },
   running: false,
   log: [],
   pending: [],   // delayed effects: {whenDay, fn, desc, mitigatable}
@@ -5553,12 +5681,114 @@ function endGame(kind){
 // =====================================================================
 $('startBtn').addEventListener('click', ()=>{
   $('cover').style.display = 'none';
+  setupCharCreate();
+  $('charCreate').style.display = 'block';
+});
+
+// ====== TELA DE CRIAÇÃO DO CANDIDATO ======
+function setupCharCreate(){
+  // Slogans dropdown
+  const sel = $('ccSloganPick');
+  sel.innerHTML = SLOGAN_OPTIONS.map(s => `<option value="${s.replace(/"/g,'&quot;')}">${s}</option>`).join('');
+  sel.addEventListener('change', ()=>{ $('ccSlogan').value = sel.value; });
+  $('ccSlogan').value = SLOGAN_OPTIONS[0];
+  // Avatars
+  const ava = $('ccAvatars');
+  ava.innerHTML = '';
+  AVATARS.forEach((a, i)=>{
+    const box = document.createElement('div');
+    box.style.cssText = 'cursor:pointer;border:3px solid #4a3a64;border-radius:6px;padding:6px;text-align:center;background:var(--bg-card-2);transition:all .15s';
+    box.dataset.idx = i;
+    box.innerHTML = `<canvas width="32" height="48" style="image-rendering:pixelated;width:64px;height:96px;display:block;margin:0 auto"></canvas><div style="font-size:14px;color:var(--text);margin-top:4px">${a.name}</div>`;
+    const c = box.querySelector('canvas');
+    const cx = c.getContext('2d');
+    cx.imageSmoothingEnabled = false;
+    // desenha o avatar preview
+    drawPlayerPreview(cx, i);
+    box.addEventListener('click', ()=>{
+      state.candidate.avatar = i;
+      state.candidate.name = $('ccName').value.trim() || 'Você';
+      $('ccAvatars').querySelectorAll('div[data-idx]').forEach(b => b.style.borderColor = '#4a3a64');
+      box.style.borderColor = 'var(--gold)';
+      box.style.transform = 'scale(1.04)';
+      sfx('legal');
+    });
+    if(i === 0){ box.style.borderColor = 'var(--gold)'; }
+    ava.appendChild(box);
+  });
+}
+function drawPlayerPreview(cx, avatarIdx){
+  const c = AVATARS[avatarIdx];
+  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  cx.clearRect(0, 0, 32, 48);
+  r(0, 0, 32, 48, '#3a2a4a');
+  r(0, 38, 32, 10, '#704020');
+  // posição base
+  const x = 10, y = 14;
+  // shadow
+  r(x-1, y+19, 14, 2, 'rgba(0,0,0,0.4)');
+  r(x, y+20, 12, 1, 'rgba(0,0,0,0.4)');
+  // pants
+  r(x+2, y+14, 3, 5, '#222');
+  r(x+7, y+14, 3, 5, '#222');
+  r(x+2, y+18, 3, 1, '#4a2a10');
+  r(x+7, y+18, 3, 1, '#4a2a10');
+  // shirt
+  r(x+1, y+8, 10, 7, c.shirt);
+  r(x+1, y+8, 10, 2, shadeColor(c.shirt, -25));
+  r(x+5, y+8, 2, 2, c.skin);
+  r(x+5, y+10, 2, 4, c.accent);
+  r(x, y+9, 1, 5, c.shirt);
+  r(x+11, y+9, 1, 5, c.shirt);
+  r(x, y+13, 1, 2, c.skin);
+  r(x+11, y+13, 1, 2, c.skin);
+  // head
+  r(x+2, y+2, 8, 7, c.skin);
+  // cabelo
+  if(c.style === 'short'){
+    r(x+2, y+1, 8, 3, c.hair);
+    r(x+1, y+2, 1, 3, c.hair);
+    r(x+10, y+2, 1, 3, c.hair2);
+  } else if(c.style === 'long'){
+    r(x+2, y+1, 8, 4, c.hair);
+    r(x+1, y+2, 1, 8, c.hair);
+    r(x+10, y+2, 1, 8, c.hair2);
+  } else if(c.style === 'curly'){
+    r(x+1, y+1, 10, 4, c.hair);
+    r(x+2, y+0, 2, 1, c.hair);
+    r(x+5, y+0, 2, 1, c.hair);
+    r(x+8, y+0, 2, 1, c.hair);
+  } else if(c.style === 'afro'){
+    r(x+1, y+0, 10, 3, c.hair);
+    r(x+0, y+1, 1, 4, c.hair);
+    r(x+11, y+1, 1, 4, c.hair2);
+  } else if(c.style === 'bun'){
+    r(x+2, y+1, 8, 3, c.hair);
+    r(x+4, y-1, 4, 3, c.hair);
+    r(x+5, y-2, 2, 1, c.hair);
+  } else if(c.style === 'bald'){
+    r(x+3, y+2, 6, 1, shadeColor(c.skin, -15));
+  }
+  // eyes + mouth
+  r(x+4, y+5, 1, 1, '#000');
+  r(x+7, y+5, 1, 1, '#000');
+  r(x+5, y+7, 2, 1, '#8a3a3a');
+}
+
+$('ccBack').addEventListener('click', ()=>{
+  $('charCreate').style.display = 'none';
+  $('cover').style.display = 'block';
+});
+$('ccStart').addEventListener('click', ()=>{
+  state.candidate.name = $('ccName').value.trim() || 'Você';
+  state.candidate.slogan = $('ccSlogan').value.trim() || SLOGAN_OPTIONS[0];
+  $('charCreate').style.display = 'none';
   $('hud').style.display = 'grid';
   $('gameGrid').style.display = 'grid';
   $('quitBtn').style.display = 'flex';
   $('restBtn').style.display = 'flex';
   state.running = true;
-  track('game_start', {});
+  track('game_start', { name: state.candidate.name, slogan: state.candidate.slogan, avatar: state.candidate.avatar });
   // Start music (gesture-unlocked)
   Audio.init();
   Audio.resume();
