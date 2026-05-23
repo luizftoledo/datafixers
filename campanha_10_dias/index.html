@@ -347,6 +347,25 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  /* Labels HTML em cima dos móveis (texto crisp, não pixelado borrado) */
+  #mapLabels { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+  #mapLabels .ml {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: rgba(15,8,24,0.92);
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 4px 7px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0 #000;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.5);
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 900px) { #mapLabels .ml { font-size: 8px; padding: 3px 5px; } }
+  @media (max-width: 480px) { #mapLabels .ml { font-size: 7px; padding: 2px 4px; letter-spacing: 0; } }
   canvas#scene.shake { animation: shake .25s; }
   canvas#scene.flash-good { animation: flashGood .35s; }
   canvas#scene.flash-bad  { animation: flashBad .35s; }
@@ -1114,13 +1133,27 @@
   .sab-deltas { display: flex; gap: 14px; font-family: 'Press Start 2P', monospace; font-size: 10px; margin: 6px 0; flex-wrap: wrap; }
   .sab-adv-react { font-size: 17px; color: var(--muted); font-style: italic; }
 
-  /* Cover/intro */
+  /* Cover/intro — preenche a tela */
   .cover {
     background: var(--bg-card);
     border: 3px solid var(--gold);
     border-radius: 8px;
-    padding: 24px;
+    padding: 20px;
     text-align: center;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  #cover img { max-height: 45vh; object-fit: contain; }
+  @media (max-width: 640px) {
+    .cover { padding: 12px 10px; min-height: calc(100vh - 16px); }
+    #cover img { max-height: 38vh; margin-bottom: 12px; }
+    #cover .lead { font-size: 14px; margin: 6px 0 10px; line-height: 1.4; max-width: 100%; }
+    .cover .legend { gap: 6px; margin: 8px 0 14px; flex-wrap: wrap; }
+    .cover .legend span { font-size: 7px; padding: 3px 6px; }
   }
   .cover h2 {
     font-family: 'Press Start 2P', monospace;
@@ -1295,7 +1328,19 @@
 
   <div class="game-grid" id="gameGrid" style="display:none">
     <div class="stage">
+      <div class="scene-wrap" style="position:relative">
       <canvas id="scene" width="320" height="192"></canvas>
+      <div id="mapLabels" aria-hidden="true">
+        <div class="ml" data-id="desk"  style="left:12.5%;top:40%">🖥 COMPUTADOR</div>
+        <div class="ml" data-id="board" style="left:67%;top:11%">📰 IMPRENSA</div>
+        <div class="ml" data-id="tv"    style="left:81%;top:29%">📺 TV</div>
+        <div class="ml" data-id="sofa"  style="left:41%;top:70%">💼 REUNIÕES</div>
+        <div class="ml" data-id="bed"   style="left:60%;top:70%">💤 CAMA</div>
+        <div class="ml" data-id="door"  style="left:93%;top:60%">🚶 RUA</div>
+        <div class="ml" data-id="phone" style="left:17.5%;top:73%">📱 CELULAR</div>
+        <div class="ml" data-id="mic"   style="left:50%;top:43%;display:none">🎤 DEBATE</div>
+      </div>
+      </div>
       <div class="scene-hint" id="sceneHint">Toque/clique num móvel pra ir até ele e tomar decisões.</div>
       <div class="day-overlay" id="dayOverlay">
         <h2 id="dayOverlayTitle">DIA 1</h2>
@@ -2865,28 +2910,12 @@ function renderScene(opts={}){
     state.marketeiroVisible = false;
   }
 
-  // Hotspot labels (sempre visíveis, em cima de cada móvel)
-  const HOTSPOT_LABELS = {
-    desk:  { x: 40,  y: 78,  text: 'COMPUTADOR' },
-    sofa:  { x: 130, y: 136, text: 'REUNIÕES' },
-    tv:    { x: 260, y: 56,  text: 'TV' },
-    door:  { x: 297, y: 116, text: 'RUA' },
-    board: { x: 214, y: 22,  text: 'IMPRENSA' },
-    phone: { x: 56,  y: 142, text: 'CELULAR' },
-    bed:   { x: 192, y: 136, text: 'CAMA' },
-    mic:   { x: 160, y: 84,  text: 'DEBATE' }
-  };
-  for(const id in HOTSPOT_LABELS){
-    if(id === 'mic' && state.day !== 10) continue;
-    if(id === 'bed' && state.day >= 10) continue;
-    const L = HOTSPOT_LABELS[id];
-    const w = L.text.length * 4 + 4;
-    const x = (L.x - w/2) | 0;
-    rect(x-1, L.y-1, w+2, 9, 'rgba(20,12,30,0.9)');
-    rect(x, L.y, w, 1, '#f6c453');
-    rect(x, L.y+7, w, 1, '#f6c453');
-    txt(L.text, x+2, L.y+1, '#f6c453', 7);
-  }
+  // (labels HTML overlay são renderizadas em #mapLabels — mais crisp)
+  // Toggle dynamic labels (mic só no D10, cama só antes do D10, bed escondido durante debate)
+  const micLabel = document.querySelector('#mapLabels .ml[data-id="mic"]');
+  const bedLabel = document.querySelector('#mapLabels .ml[data-id="bed"]');
+  if(micLabel) micLabel.style.display = state.day === 10 ? 'block' : 'none';
+  if(bedLabel) bedLabel.style.display = state.day >= 10 ? 'none' : 'block';
 
   // Hotspot indicators — balão de fala em vez de "!"
   for(const h of HOTSPOTS){
