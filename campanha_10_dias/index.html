@@ -1179,7 +1179,7 @@
   <!-- Tela de criação do candidato -->
   <div class="cover" id="charCreate" style="display:none">
     <h2>QUEM É VOCÊ?</h2>
-    <p class="lead">Crie seu candidato a deputado federal. Você terá 10 dias pra fazer o nome valer alguma coisa.</p>
+    <p class="lead">Crie seu candidato a prefeito. Você terá 10 dias pra fazer o nome valer alguma coisa na cidade.</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto 14px;text-align:left">
       <div>
@@ -1205,13 +1205,16 @@
   </div>
 
   <div class="cover" id="cover">
+    <img src="assets/cover.png" alt="Marketeiros & Votos" id="coverArt"
+      style="display:block;max-width:760px;width:100%;height:auto;margin:0 auto 16px;border-radius:8px;box-shadow:0 8px 0 rgba(0,0,0,0.5),0 0 32px rgba(246,196,83,0.25);image-rendering:pixelated"
+      onerror="this.style.display='none'"/>
     <h2>MARKETEIROS &amp; VOTOS</h2>
     <p style="font-family:'Press Start 2P',monospace;font-size:11px;color:var(--pink);letter-spacing:1px;margin:-6px 0 14px">10 DIAS PRO 1º TURNO</p>
     <p class="lead">
-      Você é candidato a deputado federal. As pesquisas mostram empate técnico com o adversário.
+      Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário.
       Faltam <b>10 dias</b>. Você precisa decidir o que fazer com seu tempo, seu dinheiro e a tecnologia
       que está disponível — inclusive ferramentas de IA, alguns serviços do "submundo digital" e estratégias
-      que esticam a lei eleitoral.
+      que desafiam a lei eleitoral.
     </p>
     <p class="lead">
       Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
@@ -1257,7 +1260,7 @@
       <div class="ph-header">
         <div class="ph-avatar"></div>
         <div>
-          <div class="ph-name">candidato12345 <span style="color:#3a90d8">✓</span></div>
+          <div class="ph-name">candidato22 <span style="color:#3a90d8">✓</span></div>
           <div class="ph-meta">Agora · 🌍 Público</div>
         </div>
       </div>
@@ -2203,8 +2206,8 @@ function drawWall(){
   }
   rect(px0+24, 17, 28, 1, '#3a2a1a');
   rect(px0+24, 21, 22, 2, '#3a2a1a');
-  // número 12345 (deputado federal)
-  txt('12345', px0+26, 12, '#3a2a1a', 6);
+  // número 22 (prefeito)
+  txt('22', px0+30, 12, '#3a2a1a', 7);
 }
 
 function drawFloor(){
@@ -2390,7 +2393,7 @@ const AVATARS = [
 ];
 const SLOGAN_OPTIONS = [
   'Voto consciente, mandato sério',
-  'Pra quem o congresso esquece',
+  'Pra quem a cidade esquece',
   'Mandato com presença, não com show',
   'Compromisso é projeto, não promessa',
   'O Brasil que dá certo, todo dia',
@@ -3586,9 +3589,9 @@ const ACTIONS = [
     }
   },
   {
-    id: 'platformPost', area: 'phone', title: 'Publicar minhas pautas legislativas (1 vez)',
+    id: 'platformPost', area: 'phone', title: 'Publicar plano de governo (1 vez)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você divulga uma vez só, em PDF público, suas pautas de mandato: projetos de lei prioritários, comissões em que vai atuar, posicionamentos. Imprensa cita.',
+    desc: 'Você divulga uma vez só, em PDF público, seu plano de governo: prioridades dos primeiros 100 dias, secretarias-chave, fonte fiscal. Imprensa cita.',
     available(s){ return !s.flags.publishedPlatform; },
     apply(s){
       s.intent += 1.2;
@@ -3597,14 +3600,14 @@ const ACTIONS = [
       s.followers += followGain;
       s.flags.publishedPlatform = true;
       s.legalActs++;
-      feedNews('SEU SITE', 'PDF de pautas legislativas publicado. Colunas políticas citam os 3 projetos prioritários.', 'good');
+      feedNews('SEU SITE', 'PDF do plano de governo publicado. Colunas políticas citam as 3 prioridades.', 'good');
       return `+1.2% intenção, +5 confiança, +${followGain} 📱`;
     }
   },
   {
     id: 'fakeOutrage', area: 'desk', title: 'Acionar exército de comentários elogiosos',
     tag: 'illegal', energy: 1, cost: 15,
-    desc: 'Não é ataque — é elogio em massa. "Ele é muito bom, foi um ótimo deputado." Pesquisadores chamam de "percepção de maioria" — uma forma de driblar a Justiça com baixo risco jurídico mas alto risco moral.',
+    desc: 'Não é ataque — é elogio em massa. "Ele é muito bom, foi um ótimo prefeito." Pesquisadores chamam de "percepção de maioria" — uma forma de driblar a Justiça com baixo risco jurídico mas alto risco moral.',
     apply(s){
       s.money -= 15;
       const followGain = 250 + Math.floor(Math.random()*250);
@@ -3914,7 +3917,7 @@ function drawPhoneUI(t, post){
   rect(sx+2, sy+9, 8, 3, '#b87333');
   rect(sx+5, sy+13, 2, 1, '#000');
   rect(sx+8, sy+13, 2, 1, '#000');
-  txt('cand12345', sx+12, sy+10, '#000', 6);
+  txt('candidato22', sx+12, sy+10, '#000', 6);
   txt('•', sx+12, sy+10, '#3a5a8a', 6);
   txt('  Agora', sx+13, sy+13, '#888', 5);
 
@@ -4069,16 +4072,16 @@ function sampleN(arr, n){
 }
 
 const VIDEO_CAPTIONS = [
-  'Ouvi a história da Dona Tereza, do Industrial. 6 meses esperando consulta no SUS. Vou apresentar PL pra ampliar a Atenção Básica. Sigam acompanhando 🙏',
-  'Tô voltando da feira do Bairro Alto. Conversei com 14 famílias. Todo mundo fala a mesma coisa: cesta básica subiu, salário não. Vou levar isso pro Congresso.',
-  'Professor da escola estadual me parou no corredor: "ninguém vê a gente". Vou propor reajuste real pra educação básica. Não é discurso de campanha — é mandato.',
-  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos puxar audiência pública sobre seguro-desemprego, conta comigo.',
-  'Saí da reunião com o Conselho Tutelar do Pirambu. Vou levar o relatório pra comissão de Direitos Humanos. Criança precisa ser prioridade — sempre.',
-  'Falei com o Seu Antonio na padaria. ICMS subiu 4 vezes em 2 anos. Vou cobrar a bancada. Comércio popular não aguenta mais.'
+  'Ouvi a história da Dona Tereza, do Industrial. 6 meses esperando consulta no posto. Vou ampliar médico de família 24h no meu primeiro mês como prefeito. 🙏',
+  'Tô voltando da feira do Bairro Alto. Conversei com 14 famílias sobre transporte. Tarifa zero na periferia entra no plano de governo.',
+  'Professor da escola municipal me parou no corredor: "ninguém vê a gente". Reajuste real e merenda integral é compromisso meu pros primeiros 100 dias.',
+  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos criar gabinete de empregabilidade na prefeitura. Conta com a gente.',
+  'Saí da reunião com o Conselho Tutelar do Pirambu. Vou ter secretaria de proteção à criança ativa em 30 dias. Não dá pra esperar.',
+  'Falei com o Seu Antonio na padaria. IPTU subiu duas vezes em 4 anos. Vou abrir consulta pública e revisar a tabela. Comércio popular não aguenta mais.'
 ];
 const VIDEO_COMMENTS = [
   ['ana_silva','Finalmente alguém olhando pra fila do SUS 👏'],
-  ['jp_costa','Apoio. E o PL, em que comissão vai?'],
+  ['jp_costa','Apoio. E o cronograma de implantação, quando sai?'],
   ['marina_rj','Compartilhei aqui em casa, todo mundo já assistiu'],
   ['professor.lucas','Vou usar amanhã em aula pra discutir representação política'],
   ['rafa.r','Bonito o discurso, agora cadê o número do PL?'],
@@ -4143,19 +4146,19 @@ const MEME_COMMENTS = [
   ['lais_g','Era pra ser engraçado né? Foi bom']
 ];
 const CRISIS_CAPTIONS = [
-  '🚨 Sobre o caso da CPI do Saneamento: quem desviou, devolve. Apresento moção amanhã pedindo aprofundamento.',
-  'Acompanhei a notícia do despejo no Heliópolis. Vou pedir audiência pública na próxima semana. Quem quiser participar, comenta.',
-  'Sobre o orçamento federal pra educação que foi cortado: protocolei pedido de informação à comissão. Não dá pra calar.',
-  'Vi a manchete do desmatamento na Amazônia. Vamos apresentar PL de marco temporal inverso na próxima sessão. Compartilhem.',
-  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. Quero mediar. Quem fica entre quem governa e quem trabalha é quem foi eleito.',
-  'Caso da menina do Pirambu foi covarde. Vou pedir reunião com Conselho Tutelar e pasta de Direitos Humanos. Não vai prescrever no nosso silêncio.'
+  '🚨 Sobre o caso de desvio na secretaria municipal: quem desviou, devolve. Auditoria pública aberta no meu primeiro mês.',
+  'Acompanhei a notícia do despejo no Heliópolis. Vou pedir audiência na Câmara na próxima semana e levar um projeto de habitação social.',
+  'Sobre os repasses federais pra educação que sumiram: vamos brigar pela cidade. Não dá pra calar.',
+  'Vi a manchete sobre enchente no bairro X. Drenagem é prioridade nos primeiros 100 dias. Compartilhem essa proposta.',
+  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. Prefeito tem que mediar. Quem fica entre quem governa e quem trabalha é quem foi eleito.',
+  'Caso da menina do Pirambu foi covarde. Vou estruturar Conselho Tutelar municipal forte. Não vai prescrever no nosso silêncio.'
 ];
 const CRISIS_COMMENTS = [
   ['lima_jurista','Posição firme. E o número do PL fica pra divulgar quando?'],
   ['ana.r.tcn','Faltava alguém falando claro sobre isso, valeu'],
   ['eduardo_b','Bonito o post mas vamos ver a votação no plenário'],
   ['cida_pe','Compartilhei no grupo do bairro. Tá rodando'],
-  ['jp_p','Tem que ter coragem mesmo, no congresso quase todo mundo passa pano'],
+  ['jp_p','Tem que ter coragem mesmo, na Câmara quase todo mundo passa pano'],
   ['betinho','Vai sustentar isso depois de eleito também?'],
   ['nadir.s','Tô vendo cobrança em massa nos comentários. Bom sinal']
 ];
@@ -4199,13 +4202,13 @@ const PHONE_POSTS = {
   },
   crisisPost: {
     caption: () => pick(CRISIS_CAPTIONS),
-    contentHtml: () => `<div class="ph-crisis"><span class="pill">SOBRE A NOTÍCIA DO DIA</span><h4>Não dá pra calar.</h4><div style="font-size:12px;opacity:0.9;margin-top:6px;line-height:1.5">Quem foi eleito não pode ficar em cima do muro. Compromisso é apresentar PROJETO, não só lamentar.</div></div>`,
+    contentHtml: () => `<div class="ph-crisis"><span class="pill">SOBRE A NOTÍCIA DO DIA</span><h4>Não dá pra calar.</h4><div style="font-size:12px;opacity:0.9;margin-top:6px;line-height:1.5">Quem quer governar a cidade não pode ficar em cima do muro. Compromisso é APRESENTAR SOLUÇÃO, não só lamentar.</div></div>`,
     likes: () => 800 + Math.floor(state.followers/22),
     comments: () => sampleN(CRISIS_COMMENTS, 5)
   },
   platformPost: {
-    caption: 'Coloquei no ar o documento com minhas 3 pautas prioritárias. PDF público — baixe, critique, mostre pra sua rede.',
-    contentHtml: () => `<div class="ph-pdf"><h4>📄 PAUTAS LEGISLATIVAS 2026</h4><div class="line"></div><div class="line"></div><div class="line short"></div><div class="line"></div><div class="line short"></div><div style="margin-top:8px;font-size:11px;color:#666">1. PL ampliação BPC · 2. Fundo educação integral · 3. Passe livre periferia</div></div>`,
+    caption: 'Coloquei no ar o plano de governo completo. 3 prioridades pros primeiros 100 dias, em PDF público. Baixe, critique, mostre pra sua rede.',
+    contentHtml: () => `<div class="ph-pdf"><h4>📄 PLANO DE GOVERNO 2025-28</h4><div class="line"></div><div class="line"></div><div class="line short"></div><div class="line"></div><div class="line short"></div><div style="margin-top:8px;font-size:11px;color:#666">1. Educação integral em 30 escolas · 2. Médico de família 24h · 3. Passe livre na periferia</div></div>`,
     likes: () => 350 + Math.floor(state.followers/35),
     comments: () => sampleN(PLATFORM_COMMENTS, 5)
   }
@@ -4274,10 +4277,10 @@ function showSentimentOverlay(){
   const ov = $('sentimentOverlay');
   ov.style.display = 'block';
   const mentions = [
-    { src: 'X.com @transporte_brasil', txt: '"Ônibus continuam lotados. Cadê o governo federal?"', emotion: 'raiva' },
+    { src: 'X.com @transporte_local', txt: '"Ônibus continuam lotados. Cadê a prefeitura?"', emotion: 'raiva' },
     { src: 'Facebook · grupo Bairro X', txt: '"Esperando mudança. Educação tá ruim demais."', emotion: 'indignação' },
     { src: 'Instagram @comerciante_local', txt: '"Imposto sobre pequeno comércio precisa baixar"', emotion: 'expectativa' },
-    { src: 'Reddit r/brasilpolitica', txt: '"Esse candidato 12345 tá mais transparente que o outro"', emotion: 'confiança' },
+    { src: 'Reddit r/brasilpolitica', txt: '"Esse candidato 22 tá mais transparente que o outro"', emotion: 'confiança' },
     { src: 'TikTok @profressora_ana', txt: '"Salário não acompanha inflação há anos"', emotion: 'tristeza' },
     { src: 'X.com @estudanteUFPE', txt: '"Pra quando ampliação do passe livre?"', emotion: 'expectativa' },
   ];
@@ -4571,7 +4574,7 @@ FX.tvProgram = (t)=>{
   rect(257, 84, 4, 1, '#8a3a3a');
   // banner
   rect(242, 86, 36, 4, '#3a5a8a');
-  txt('12345 DEPUTADO', 244, 87, '#fff', 7);
+  txt('22 PREFEITO', 244, 87, '#fff', 7);
   // ON AIR red dot
   if(Math.floor(t*8)%2) rect(270, 73, 3, 3, '#ff3a3a');
   txt('NO AR', 100, 36, '#f6c453', 9);
@@ -4644,7 +4647,7 @@ FX.newspaper = (t)=>{
   rect(fx+22, fy+38, 12, 2, '#8a3a3a');
   // legenda
   rect(fx, fy+72, 56, 4, '#dab66b');
-  txt('CAND. 12345', fx+2, fy+72, '#222', 6);
+  txt('CANDIDATO 22', fx+2, fy+72, '#222', 6);
   // texto à direita da foto (linhas cinzas)
   const txc = tx + 72;
   const maxLineW = w - 80;
@@ -5351,9 +5354,9 @@ function finishSabatina(score){
 const DEBATE_QUESTIONS = [
   {
     speaker: 'MEDIADORA',
-    q: '"Como o(a) candidato(a) pretende usar o mandato federal para combater a desigualdade?"',
+    q: '"Como o(a) candidato(a) pretende combater a desigualdade nos primeiros 100 dias de mandato?"',
     options: [
-      { tone: 'TÉCNICO', text: 'Cito 3 projetos que vou apresentar: ampliação do BPC, vinculação de fundos pra educação integral e ampliação do passe livre via emenda.', d: 5, c: 5 },
+      { tone: 'TÉCNICO', text: 'Cito 3 entregas pros primeiros 100 dias: educação integral em 30 escolas, médico de família 24h e passe livre na periferia.', d: 5, c: 5 },
       { tone: 'EMOCIONAL', text: 'Conto a história da Dona Tereza que vi na caminhada do bairro Industrial. Esse é o nosso compromisso.', d: 4, c: 6, walkBonus: 4 },
       { tone: 'AGRESSIVO', text: 'Diferente do meu adversário, que aumentou IPTU em 2022, eu vou diminuir tributo de quem tem menos.', d: 3, c: -1 },
       { tone: 'VAGO', text: 'A desigualdade é o maior problema do Brasil. Vamos olhar com carinho pra todas as áreas.', d: -2, c: -3 },
