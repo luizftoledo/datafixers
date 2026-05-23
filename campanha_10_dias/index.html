@@ -32,7 +32,9 @@
     font-size: 20px;
     min-height: 100vh;
     overflow-x: hidden;
+    overscroll-behavior: contain;
   }
+  body.playing-mobile { overscroll-behavior-y: none; }
   body { image-rendering: pixelated; }
   .app {
     max-width: 1280px;
@@ -171,20 +173,156 @@
   }
   #soundBtn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.4); }
   @media (max-width: 640px) {
-    /* Bottom bar fixa com 4 botões */
-    #soundBtn, #fsBtn, #quitBtn, #restBtn {
+    /* Bottom bar com 3 botões — quit escondido (acessível via long-press no santinho) */
+    #soundBtn, #fsBtn, #restBtn {
       position: fixed !important;
       bottom: 8px !important;
       top: auto !important;
-      width: 52px !important; height: 52px !important;
-      font-size: 22px !important;
+      width: 48px !important; height: 48px !important;
+      font-size: 20px !important;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.5) !important;
       z-index: 160 !important;
     }
-    #restBtn { left: 8px !important; right: auto !important; }
-    #quitBtn { left: 70px !important; right: auto !important; }
-    #fsBtn   { right: 70px !important; left: auto !important; }
-    #soundBtn{ right: 8px !important; left: auto !important; }
+    #quitBtn { display: none !important; }
+    #restBtn { right: 124px !important; left: auto !important; }
+    #fsBtn   { right: 68px !important; left: auto !important; }
+    #soundBtn{ right: 12px !important; left: auto !important; }
+  }
+  /* D-pad virtual (mobile) */
+  #dpad {
+    display: none;
+    position: absolute;
+    left: 8px; bottom: 8px;
+    width: 132px; height: 132px;
+    z-index: 50;
+    pointer-events: none;
+  }
+  #dpad .dp {
+    position: absolute;
+    width: 42px; height: 42px;
+    background: rgba(58,42,74,0.75);
+    border: 2px solid rgba(246,196,83,0.6);
+    color: var(--gold);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: bold;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
+    cursor: pointer;
+  }
+  #dpad .dp:active, #dpad .dp.active {
+    background: rgba(246,196,83,0.6);
+    color: #1a0f24;
+  }
+  #dpad .dp.up    { left: 45px; top: 0; }
+  #dpad .dp.down  { left: 45px; bottom: 0; }
+  #dpad .dp.left  { left: 0; top: 45px; }
+  #dpad .dp.right { right: 0; top: 45px; }
+  @media (max-width: 900px) {
+    #dpad { display: block; }
+  }
+  /* Santinho fixo */
+  #santinho {
+    position: fixed;
+    left: 8px; top: 50%; transform: translateY(-50%);
+    width: 130px;
+    background: var(--bg-card);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    padding: 6px;
+    z-index: 140;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.4);
+    font-family: 'VT323', monospace;
+  }
+  #santinho .santi-flag {
+    background: var(--gold);
+    color: #1a0f00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  #santinho canvas {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    background: #88c8ff;
+    border-radius: 3px;
+    display: block;
+  }
+  #santinho .santi-name {
+    font-size: 16px;
+    color: var(--text);
+    text-align: center;
+    margin-top: 4px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  #santinho .santi-num {
+    background: var(--red);
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 3px;
+    margin-top: 4px;
+  }
+  #santinho .santi-slogan {
+    font-size: 12px;
+    color: var(--gold);
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  #santinho .santi-city {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 3px;
+  }
+  @media (max-width: 1200px){
+    #santinho { display: none !important; }
+  }
+  /* Charcreate styles */
+  .cc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 760px;
+    margin: 0 auto 16px;
+    text-align: left;
+  }
+  @media (max-width: 640px){ .cc-grid { grid-template-columns: 1fr; gap: 10px; } }
+  .cc-label {
+    display: block;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .cc-input {
+    width: 100%; padding: 10px;
+    font-family: 'VT323', monospace; font-size: 19px;
+    background: var(--bg-card-2);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+  }
+  .cc-avatars {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 640px){
+    .cc-avatars { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   }
 
   .stage {
@@ -1181,27 +1319,43 @@
     <h2>QUEM É VOCÊ?</h2>
     <p class="lead">Crie seu candidato a prefeito. Você terá 10 dias pra fazer o nome valer alguma coisa na cidade.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto 14px;text-align:left">
+    <div class="cc-grid">
       <div>
-        <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:6px">NOME</label>
-        <input type="text" id="ccName" maxlength="22" placeholder="Seu nome" value=""
-          style="width:100%;padding:10px;font-family:'VT323',monospace;font-size:20px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text)"/>
+        <label class="cc-label">NOME</label>
+        <input type="text" id="ccName" maxlength="22" placeholder="Seu nome" class="cc-input"/>
       </div>
       <div>
-        <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:6px">SLOGAN</label>
-        <select id="ccSloganPick" style="width:100%;padding:10px;font-family:'VT323',monospace;font-size:18px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text);margin-bottom:6px"></select>
-        <input type="text" id="ccSlogan" maxlength="50" placeholder="Ou escreva o seu"
-          style="width:100%;padding:8px;font-family:'VT323',monospace;font-size:18px;background:var(--bg-card-2);border:2px solid var(--border);border-radius:4px;color:var(--text)"/>
+        <label class="cc-label">NÚMERO</label>
+        <input type="text" id="ccNumber" maxlength="5" placeholder="22" inputmode="numeric" pattern="[0-9]*" class="cc-input"/>
+      </div>
+      <div>
+        <label class="cc-label">CIDADE</label>
+        <input type="text" id="ccCity" maxlength="30" placeholder="Ex: Belo Horizonte" class="cc-input"/>
+      </div>
+      <div>
+        <label class="cc-label">SLOGAN</label>
+        <input type="text" id="ccSlogan" maxlength="50" placeholder='Ex: "Pra quem a cidade esquece"' class="cc-input"/>
       </div>
     </div>
 
     <div style="max-width:760px;margin:0 auto">
-      <label style="display:block;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--gold);margin-bottom:8px;text-align:left">AVATAR</label>
-      <div id="ccAvatars" style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px"></div>
+      <label class="cc-label" style="text-align:left;display:block">AVATAR</label>
+      <div id="ccAvatars" class="cc-avatars"></div>
     </div>
 
     <button class="btn primary" id="ccStart" style="font-size:13px;font-family:'Press Start 2P',monospace;padding:14px 22px">▶ COMEÇAR CAMPANHA</button>
     <button class="btn" id="ccBack" style="margin-top:8px">VOLTAR</button>
+  </div>
+
+  <!-- Santinho fixo (aparece durante o jogo) -->
+  <div id="santinho" style="display:none"></div>
+
+  <!-- D-pad virtual (mobile) -->
+  <div id="dpad">
+    <div class="dp up" data-dir="up">▲</div>
+    <div class="dp down" data-dir="down">▼</div>
+    <div class="dp left" data-dir="left">◀</div>
+    <div class="dp right" data-dir="right">▶</div>
   </div>
 
   <div class="cover" id="cover">
@@ -2712,6 +2866,29 @@ function renderScene(opts={}){
     state.marketeiroVisible = false;
   }
 
+  // Hotspot labels (sempre visíveis, em cima de cada móvel)
+  const HOTSPOT_LABELS = {
+    desk:  { x: 40,  y: 78,  text: 'COMPUTADOR' },
+    sofa:  { x: 130, y: 136, text: 'REUNIÕES' },
+    tv:    { x: 260, y: 56,  text: 'TV' },
+    door:  { x: 297, y: 116, text: 'RUA' },
+    board: { x: 214, y: 22,  text: 'IMPRENSA' },
+    phone: { x: 56,  y: 142, text: 'CELULAR' },
+    bed:   { x: 192, y: 136, text: 'CAMA' },
+    mic:   { x: 160, y: 84,  text: 'DEBATE' }
+  };
+  for(const id in HOTSPOT_LABELS){
+    if(id === 'mic' && state.day !== 10) continue;
+    if(id === 'bed' && state.day >= 10) continue;
+    const L = HOTSPOT_LABELS[id];
+    const w = L.text.length * 4 + 4;
+    const x = (L.x - w/2) | 0;
+    rect(x-1, L.y-1, w+2, 9, 'rgba(20,12,30,0.9)');
+    rect(x, L.y, w, 1, '#f6c453');
+    rect(x, L.y+7, w, 1, '#f6c453');
+    txt(L.text, x+2, L.y+1, '#f6c453', 7);
+  }
+
   // Hotspot indicators — balão de fala em vez de "!"
   for(const h of HOTSPOTS){
     if(h.id === 'mic' && !showMic) continue;
@@ -2966,6 +3143,23 @@ cnv.addEventListener('touchstart', (e)=>{
     handleSceneTap(e.touches[0].clientX, e.touches[0].clientY);
   }
 }, { passive: false });
+cnv.addEventListener('touchmove', (e)=>{ e.preventDefault(); }, { passive: false });
+cnv.addEventListener('touchend', (e)=>{ e.preventDefault(); }, { passive: false });
+
+// D-pad virtual (mobile)
+const DPAD_KEY = { up:'ArrowUp', down:'ArrowDown', left:'ArrowLeft', right:'ArrowRight' };
+document.querySelectorAll('#dpad .dp').forEach(el=>{
+  const dir = el.dataset.dir;
+  const key = DPAD_KEY[dir];
+  const press = (e)=>{ e.preventDefault(); state.keys[key] = true; el.classList.add('active'); };
+  const release = (e)=>{ e.preventDefault(); state.keys[key] = false; el.classList.remove('active'); };
+  el.addEventListener('touchstart', press, { passive: false });
+  el.addEventListener('touchend', release, { passive: false });
+  el.addEventListener('touchcancel', release, { passive: false });
+  el.addEventListener('mousedown', press);
+  el.addEventListener('mouseup', release);
+  el.addEventListener('mouseleave', release);
+});
 
 // Keyboard
 const GAME_KEYS = new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD','Space']);
@@ -2999,7 +3193,9 @@ const state = {
   candidate: {
     name: 'Você',
     slogan: 'Voto consciente, mandato sério',
-    avatar: 0       // index em AVATARS
+    number: '22',
+    city: 'São Paulo',
+    avatar: 0
   },
   running: false,
   log: [],
@@ -4220,6 +4416,15 @@ function showPhoneOverlay(postId){
   const post = PHONE_POSTS[postId];
   if(!post) return;
   ov.style.display = 'block';
+  // atualiza nome dinâmico (número escolhido)
+  const nameEl = ov.querySelector('.ph-name');
+  if(nameEl){ nameEl.innerHTML = `candidato${state.candidate.number || '22'} <span style="color:#3a90d8">✓</span>`; }
+  // atualiza avatar com cores do candidato
+  const avEl = ov.querySelector('.ph-avatar');
+  if(avEl){
+    const c = getCandidateColors();
+    avEl.style.background = `linear-gradient(135deg, ${c.skin} 0%, ${c.hair} 50%, ${c.shirt} 100%)`;
+  }
   $('phContent').innerHTML = post.contentHtml();
   $('phComments').innerHTML = '';
   $('phLikes').textContent = '0';
@@ -4610,7 +4815,7 @@ FX.newspaper = (t)=>{
   rect(tx+4, ty+4, w, h, 'rgba(0,0,0,0.5)');
   rect(tx, ty, w, h, '#f5ecd9');
   rect(tx, ty, w, 3, '#dab66b');
-  txt('JORNAL DA CIDADE', tx+8, ty+6, '#222', 9);
+  txt('JORNAL DE ' + (state.candidate.city || 'CIDADE').toUpperCase().slice(0,20), tx+8, ty+6, '#222', 9);
   rect(tx+8, ty+17, w-16, 1, '#222');
   // manchete: quebrar em 2 linhas se necessário
   const manchete = state.trust > 50
@@ -4722,6 +4927,9 @@ function renderFx(){
 // =====================================================================
 function goToSleep(){
   if(state.endTriggered) return;
+  // garantir que nenhum overlay esteja em cima do diagnóstico
+  hidePhoneOverlay();
+  hideSentimentOverlay();
   if(state.day >= 10){
     endDay();
     return;
@@ -4739,6 +4947,8 @@ function goToSleep(){
   }, 80);
 }
 function showDayDiagnostic(){
+  hidePhoneOverlay();
+  hideSentimentOverlay();
   Audio.music.stinger('sleep');
   const dayWas = state.day;
   const before = state.dayStartSnapshot || snapshotStats();
@@ -5690,11 +5900,10 @@ $('startBtn').addEventListener('click', ()=>{
 
 // ====== TELA DE CRIAÇÃO DO CANDIDATO ======
 function setupCharCreate(){
-  // Slogans dropdown
-  const sel = $('ccSloganPick');
-  sel.innerHTML = SLOGAN_OPTIONS.map(s => `<option value="${s.replace(/"/g,'&quot;')}">${s}</option>`).join('');
-  sel.addEventListener('change', ()=>{ $('ccSlogan').value = sel.value; });
-  $('ccSlogan').value = SLOGAN_OPTIONS[0];
+  $('ccName').value = state.candidate.name === 'Você' ? '' : state.candidate.name;
+  $('ccNumber').value = state.candidate.number || '22';
+  $('ccCity').value = state.candidate.city || '';
+  $('ccSlogan').value = state.candidate.slogan || '';
   // Avatars
   const ava = $('ccAvatars');
   ava.innerHTML = '';
@@ -5720,6 +5929,25 @@ function setupCharCreate(){
     ava.appendChild(box);
   });
 }
+function renderSantinho(){
+  const el = $('santinho');
+  if(!el) return;
+  const c = state.candidate;
+  const ava = AVATARS[c.avatar] || AVATARS[0];
+  // canvas para o retrato pixel
+  el.innerHTML = `
+    <div class="santi-flag">${c.city || 'CIDADE'}</div>
+    <canvas width="32" height="48"></canvas>
+    <div class="santi-name">${(c.name||'Você').toUpperCase()}</div>
+    <div class="santi-num">${c.number || '22'} PREFEITO</div>
+    <div class="santi-slogan">"${c.slogan || ''}"</div>
+  `;
+  const can = el.querySelector('canvas');
+  const cx = can.getContext('2d');
+  cx.imageSmoothingEnabled = false;
+  drawPlayerPreview(cx, c.avatar);
+}
+
 function drawPlayerPreview(cx, avatarIdx){
   const c = AVATARS[avatarIdx];
   const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
@@ -5784,7 +6012,11 @@ $('ccBack').addEventListener('click', ()=>{
 });
 $('ccStart').addEventListener('click', ()=>{
   state.candidate.name = $('ccName').value.trim() || 'Você';
-  state.candidate.slogan = $('ccSlogan').value.trim() || SLOGAN_OPTIONS[0];
+  state.candidate.number = ($('ccNumber').value.trim() || '22').replace(/\D/g,'').slice(0,5) || '22';
+  state.candidate.city = $('ccCity').value.trim() || 'São Paulo';
+  state.candidate.slogan = $('ccSlogan').value.trim() || 'Voto consciente, mandato sério';
+  renderSantinho();
+  $('santinho').style.display = 'block';
   $('charCreate').style.display = 'none';
   $('hud').style.display = 'grid';
   $('gameGrid').style.display = 'grid';
