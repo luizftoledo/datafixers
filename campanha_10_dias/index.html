@@ -99,8 +99,9 @@
     gap: 12px;
   }
   @media (max-width: 900px) {
-    .game-grid { grid-template-columns: 1fr; }
-    .feed { display: none; } /* mobile: foco no canvas */
+    .game-grid { grid-template-columns: 1fr !important; }
+    .feed { display: none !important; }
+    .controls-row { display: none !important; }
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
@@ -5794,15 +5795,16 @@ function goToSleep(){
   }
   state.sleeping = true;
   setTarget(124, 174, null);
+  // fade rápido pra noite (era 80ms × ~15 = 1.2s, agora 40ms × 10 = 0.4s)
   let fade = 0;
   const fadeIv = setInterval(()=>{
-    fade += 0.06;
+    fade += 0.12;
     state.nightTint = Math.min(0.85, fade);
     if(fade >= 0.85){
       clearInterval(fadeIv);
       showDayDiagnostic();
     }
-  }, 80);
+  }, 40);
 }
 function showDayDiagnostic(){
   hidePhoneOverlay();
@@ -7157,6 +7159,16 @@ function showSilentWarning(){
 $('ctrlHint').innerHTML = isTouch
   ? '<b>Mobile</b>: toque num móvel pra ir até ele. Toque no chão pra andar livre.'
   : '<b>Desktop</b>: setas/WASD pra andar; clique num móvel pra agir.';
+
+// Fallback JS: garantir que feed + controls-row somem em mobile mesmo se CSS falhar
+function applyMobileLayout(){
+  const mobile = window.innerWidth <= 900;
+  document.querySelectorAll('.feed, .controls-row').forEach(el => {
+    el.style.display = mobile ? 'none' : '';
+  });
+}
+applyMobileLayout();
+window.addEventListener('resize', applyMobileLayout);
 
 // Init render once
 updateHUD();
