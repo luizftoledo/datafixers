@@ -1154,59 +1154,78 @@
     background: var(--bg-card);
     border: 3px solid var(--gold);
     border-radius: 8px;
-    padding: 12px;
+    padding: 18px;
     text-align: center;
-    height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    overflow: hidden;
+  }
+  .cover-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  @media (max-width: 860px) {
+    .cover-body { grid-template-columns: 1fr; gap: 12px; }
   }
   .cover-art-wrap {
     position: relative;
-    display: inline-block;
-    max-width: 1000px;
     width: 100%;
-    flex: 0 1 auto;
-    z-index: 1;
   }
   #coverArt {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 52vh;
+    max-height: 70vh;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.5), 0 0 28px rgba(246,196,83,0.3);
   }
-  .cover-overlay {
-    position: absolute;
-    left: 4%; right: 4%; bottom: 4%;
-    display: flex; flex-direction: column;
-    align-items: center; gap: 10px;
-    z-index: 10;
-    pointer-events: none;
+  .cover-side {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
   }
-  .cover-overlay .legend, .cover-overlay button {
-    pointer-events: auto;
-    position: relative;
-    z-index: 11;
+  .cover-side h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 28px;
+    color: var(--gold);
+    margin: 0;
+    text-shadow: 3px 3px 0 #000;
   }
-  .cover-overlay .legend {
-    background: rgba(15,8,24,0.7);
-    padding: 6px 10px;
-    border-radius: 6px;
-    backdrop-filter: blur(2px);
+  .cover-side .legend {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin: 4px 0;
   }
-  .cover-overlay button {
+  .cover-side button#startBtn {
     font-size: 14px;
     font-family: 'Press Start 2P', monospace;
-    padding: 14px 26px;
-    box-shadow: 0 4px 0 rgba(0,0,0,0.6);
+    padding: 16px 26px;
     cursor: pointer;
+    position: relative;
+    z-index: 5;
+    margin-top: 6px;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+  }
+  .cover-credit {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 8px 0 0;
+    font-style: italic;
+  }
+  @media (max-width: 860px) {
+    .cover-side { text-align: center; align-items: center; }
+    .cover-side .legend { justify-content: center; }
+    .cover-side h2 { font-size: 22px; }
   }
   .cover-foot {
     margin: 12px auto 0;
@@ -1482,28 +1501,32 @@
   </div>
 
   <div class="cover" id="cover">
-    <div class="cover-art-wrap">
-      <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"
-        onerror="document.getElementById('coverTitle').style.display='block'"/>
-      <div class="cover-overlay">
+    <div class="cover-body">
+      <div class="cover-art-wrap">
+        <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"
+          onerror="document.getElementById('coverTitle').style.display='block'"/>
+      </div>
+      <div class="cover-side">
+        <h2 id="coverTitle">10 DIAS</h2>
+        <p class="lead">
+          Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
+        </p>
+        <p class="lead">
+          Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
+          inclusive ferramentas de IA, serviços do "submundo digital" e estratégias que desafiam a lei eleitoral.
+        </p>
+        <p class="lead">
+          Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
+        </p>
         <div class="legend">
           <span class="legal">LEGAL</span>
           <span class="gray">ZONA CINZA</span>
           <span class="illegal">PROIBIDO PELO TSE</span>
         </div>
-        <button class="btn primary" id="startBtn">▶ COMEÇAR</button>
+        <button type="button" class="btn primary" id="startBtn">▶ COMEÇAR</button>
+        <p class="cover-credit">Inspirado em fatos reais reportados sobre marketing digital na eleição de 2026.</p>
       </div>
     </div>
-    <h2 id="coverTitle" style="display:none">10 DIAS</h2>
-    <p class="lead">
-      Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
-      Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
-      inclusive ferramentas de IA, serviços do "submundo digital" e estratégias que desafiam a lei eleitoral.
-    </p>
-    <p class="lead">
-      Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
-      <span style="color:var(--muted);font-size:14px">Inspirado em fatos reais reportados sobre marketing digital na eleição de 2026.</span>
-    </p>
   </div>
 </div>
 
