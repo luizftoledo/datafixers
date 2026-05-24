@@ -6674,13 +6674,45 @@ function endGame(kind){
   }
 
   const lessons = [];
-  if(state.illegalActs >= 3) lessons.push('⚠️ Você usou muitas ferramentas proibidas pelo TSE. Mesmo quando o efeito imediato parecia grande, o custo veio depois.');
-  if(state.flags.deepfakedAdv) lessons.push('🎭 Deepfake do adversário foi rastreado: a forense de IA hoje pega quase todos.');
-  if(state.flags.boughtFollowers) lessons.push('👥 Comprar seguidores raramente compensa: o algoritmo penaliza e a imprensa expõe — estrategistas chamam de "desastre total".');
-  if(state.flags.didWhatsappBlast) lessons.push('📲 Disparo em massa por WhatsApp — método de 2018 — ainda existe, mas o eleitor criou "vacina" contra contato de número desconhecido.');
-  if(state.walkCount >= 4) lessons.push('🚶 Você fez muita caminhada. É lento, mas vira voto real e confiança.');
-  if(state.videoCount >= 3) lessons.push('🎥 Presença digital "olho no olho" foi sua maior arma — confirma o que a maioria dos profissionais sérios diz.');
-  if(state.legalActs > state.illegalActs * 2) lessons.push('✅ Campanha majoritariamente dentro das regras. Eleitor sente, mesmo que devagar.');
+  // Lições contextuais por resultado
+  if(kind === 'cassado'){
+    lessons.push('⚖️ O TSE cassou sua candidatura. O que pareceu atalho virou abismo — exatamente o que a reportagem mostra: marketeiros digitais vendem "estrago" como serviço, e a Justiça Eleitoral está mais armada hoje pra responder.');
+  } else if(kind === 'vitoria1'){
+    if(state.illegalActs >= 3 || state.risk > 50){
+      lessons.push('🎉 Vitória, mas no fio. Risco TSE alto ainda pode virar cassação pós-eleição — uma das principais estratégias atuais é justamente contestar resultado por uso ilícito de IA/bots.');
+    } else if(state.legalActs > state.illegalActs * 3){
+      lessons.push('🎉 Vitória limpa no 1º turno. Você venceu sem precisar trapacear — presença real (caminhada, vídeo, plano público) pesou mais que qualquer truque digital.');
+    } else {
+      lessons.push('🎉 Vitória sólida. Mix equilibrado de presença real e ferramentas digitais.');
+    }
+  } else if(kind === 'segundoTurno'){
+    lessons.push('🟡 Vai pro 2º turno. Empatou nas urnas — agora a campanha vira sprint de 3 semanas. O que você construiu até aqui é a base.');
+  } else if(kind === 'derrota'){
+    if(state.illegalActs >= 3){
+      lessons.push('😞 Derrota com risco TSE alto e exposições — a "bala de prata da última semana" virou desorganização da sua própria campanha. Pesquisador Fabio Malini explica: disparo gera percepção de que "todos estão falando" mesmo quando não há voto real ali.');
+    } else if(state.walkCount + state.videoCount < 6){
+      lessons.push('😞 Derrota. Adversário foi mais à rua e às redes diretamente. Presença constante é o que a estrategista Carine Elpídio classifica como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
+    } else {
+      lessons.push('😞 Derrota apertada. Você fez a campanha possível em 10 dias — às vezes o adversário tem base mais consolidada.');
+    }
+  }
+
+  // Lições específicas por flag (independente do resultado)
+  if(state.flags.deepfakedAdv) lessons.push('🎭 Você encomendou deepfake do adversário. A forense de IA hoje detecta a maioria — o risco compensa muito raramente.');
+  if(state.flags.boughtFollowers) lessons.push('👥 Compra de seguidores: o algoritmo penaliza. Estrategistas chamam de "desastre total" porque o engajamento real despenca.');
+  if(state.flags.didWhatsappBlast) lessons.push('📲 Disparo em massa por WhatsApp ainda é vendido como solução, mas o eleitor "criou vacina" — contato de número desconhecido virou sinal de golpe.');
+  if(state.flags.neuroBots) lessons.push('🤖 Neurobots — perfis falsos com "cara e crachá" — violam diretamente resolução do TSE que proíbe chatbots e avatares simulando pessoa real.');
+
+  // Hábitos virtuosos
+  if(state.walkCount >= 4 && (kind === 'vitoria1' || kind === 'segundoTurno')) {
+    lessons.push('🚶 Você foi à rua de verdade. Caminhada é lento, mas vira voto consolidado e confiança duradoura — vantagem que pesquisas espontâneas captam.');
+  }
+  if(state.videoCount >= 3 && state.trust >= 60){
+    lessons.push('🎥 Sua presença "olho no olho" nos vídeos construiu credibilidade. É o que profissionais sérios mais recomendam, segundo a reportagem.');
+  }
+  if(state.flags.publishedPlatform){
+    lessons.push('📄 Plano público em PDF: parece técnico demais, mas a imprensa cita e o eleitor informado decide a partir daí.');
+  }
 
   modal.querySelector('.actions').innerHTML = '';
   const ac = modal.querySelector('.actions');
@@ -6969,21 +7001,33 @@ soundBtn.addEventListener('click', ()=>{
   Audio.setMuted(newMuted);
   soundBtn.textContent = newMuted ? '🔇' : '🔊';
 });
-// Desistir botão
+// Desistir botão (modal in-app, não sai do fullscreen)
 const quitBtn = $('quitBtn');
 quitBtn.addEventListener('click', ()=>{
-  if(confirm('Tem certeza que quer desistir da candidatura e recomeçar?')){
-    location.reload();
-  }
+  openModal({
+    title: 'DESISTIR DA CAMPANHA?',
+    subt: 'Tudo será perdido.',
+    body: 'Você vai recomeçar do zero. Sem volta.',
+    actions: [
+      { tag: 'illegal', title: '⏏ DESISTIR E RECOMEÇAR', cost: 0, energy: 0, onClick: ()=>{ location.reload(); } },
+      { tag: 'legal',   title: 'CANCELAR', cost: 0, energy: 0, onClick: closeModal }
+    ]
+  });
 });
-// Encerrar dia botão
+// Encerrar dia botão (modal in-app)
 const restBtn = $('restBtn');
 restBtn.addEventListener('click', ()=>{
   if(!state.running || state.fxLocked || state.inDebate || state.inSabatina) return;
-  if(state.day >= 10){ return; }
-  if(confirm('Encerrar o dia agora e dormir? Energia restante será perdida.')){
-    goToSleep();
-  }
+  if(state.day >= 10) return;
+  openModal({
+    title: '💤 ENCERRAR O DIA?',
+    subt: `Você ainda tem ${state.energy} de energia.`,
+    body: 'Dormir agora pula direto pro próximo dia. A energia restante é perdida.',
+    actions: [
+      { tag: 'gray', title: '💤 DORMIR ATÉ AMANHÃ', cost: 0, energy: 0, primary: true, onClick: ()=>{ closeModal(); goToSleep(); } },
+      { tag: 'legal', title: 'AINDA TEM COISA PRA FAZER', cost: 0, energy: 0, onClick: closeModal }
+    ]
+  });
 });
 // Fullscreen toggle
 const fsBtn = $('fsBtn');
