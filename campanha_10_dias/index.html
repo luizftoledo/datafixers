@@ -6081,7 +6081,7 @@ const MARKETEIRO_TIPS = [
   { cond: s => s.money < 5 && s.day >= 4,
     text: 'Caixa apertando. Posso indicar uma "reunião" off-record. Você decide.' },
   { cond: s => s.day === 7 && s.intent < 40,
-    text: 'Faltam 3 dias. Tua intenção tá em ' + Math.round(s.intent) + '%. Sem virada, é segundo turno na melhor das hipóteses.' },
+    text: s => 'Faltam 3 dias. Tua intenção tá em ' + Math.round(s.intent) + '%. Sem virada, é segundo turno na melhor das hipóteses.' },
   { cond: s => s.day === 9 && s.intent < 45,
     text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã é redenção ou tumba.' },
   { cond: s => s.illegalActs === 0 && s.day >= 5 && s.intent < s.oppIntent,
@@ -6107,7 +6107,8 @@ function maybeAppearMarketeiro(){
   if(useTip){
     const elig = MARKETEIRO_TIPS.filter(t => { try { return t.cond(state); } catch(e){ return false; } });
     if(elig.length){
-      text = elig[Math.floor(Math.random()*elig.length)].text;
+      const tip = elig[Math.floor(Math.random()*elig.length)];
+      text = typeof tip.text === 'function' ? tip.text(state) : tip.text;
     }
   }
   if(!text){
