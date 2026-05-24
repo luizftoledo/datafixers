@@ -359,7 +359,20 @@
     max-width: 760px;
     margin: 0 auto 14px;
   }
-  @media (max-width: 640px){ .cc-builder { grid-template-columns: 110px 1fr; gap: 12px; } }
+  @media (max-width: 640px){
+    .cc-builder { grid-template-columns: 90px 1fr; gap: 10px; }
+    .cc-builder-preview { min-height: 130px !important; padding: 6px !important; }
+    .cc-builder-preview #ccPreview { width: 60px !important; height: 90px !important; }
+    .cc-swatch { width: 26px !important; height: 26px !important; }
+    .cc-swatch.style-ic { width: 32px !important; height: 32px !important; padding: 1px !important; }
+    .cc-swatch.style-ic canvas { width: 26px !important; height: 26px !important; }
+    .cc-swatches { gap: 4px !important; }
+    .cc-grid { gap: 8px !important; }
+    .cc-input { padding: 8px !important; font-size: 17px !important; }
+    .cc-label { font-size: 9px !important; margin-bottom: 4px !important; }
+    #charCreate h2 { font-size: 14px !important; margin-bottom: 6px !important; }
+    #charCreate .lead { font-size: 14px !important; margin: 4px 0 10px !important; }
+  }
   .cc-builder-preview {
     background: linear-gradient(180deg,#88c8ff 0%, #88c8ff 60%, #704020 60%);
     border: 3px solid var(--gold);
@@ -1403,6 +1416,14 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+  }
+  /* Tela de criação do candidato — pode rolar livre */
+  #charCreate {
+    justify-content: flex-start;
+    min-height: auto;
+    overflow-y: auto;
+    max-height: 100vh;
+    padding-bottom: 24px;
   }
   .cover-art-wrap {
     position: relative;
