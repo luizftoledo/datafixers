@@ -421,6 +421,80 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  /* Cartaz do candidato na parede (HTML overlay) */
+  #wallPoster {
+    position: absolute;
+    left: 41.5%; top: 3.5%;
+    width: 17.5%;
+    background: #dab66b;
+    border: 2px solid #1a0f00;
+    border-radius: 3px;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    align-items: stretch;
+    z-index: 4;
+    pointer-events: none;
+    font-family: 'VT323', monospace;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+  }
+  #wallPoster canvas {
+    width: 18%;
+    min-width: 28px;
+    max-width: 36px;
+    height: auto;
+    image-rendering: pixelated;
+    background: #88c8ff;
+    border: 1px solid #1a0f00;
+    border-radius: 2px;
+  }
+  #wallPoster .wp-info {
+    flex: 1; min-width: 0;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+  #wallPoster .wp-name {
+    font-weight: bold;
+    color: #1a0f00;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #wallPoster .wp-num {
+    background: #cf3a3a;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    align-self: flex-start;
+  }
+  #wallPoster .wp-slogan {
+    font-size: 8px;
+    color: #5a3a10;
+    font-style: italic;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  @media (max-width: 900px){
+    #wallPoster .wp-name { font-size: 9px; }
+    #wallPoster .wp-num { font-size: 6px; }
+    #wallPoster .wp-slogan { font-size: 6px; }
+  }
+  @media (max-width: 640px){
+    #wallPoster { padding: 2px; gap: 2px; }
+    #wallPoster .wp-name { font-size: 7px; }
+    #wallPoster .wp-num { font-size: 5px; padding: 1px 3px; }
+    #wallPoster .wp-slogan { display: none; }
+  }
+
   /* Labels HTML em cima dos móveis (texto crisp, não pixelado borrado) */
   #mapLabels { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
   #mapLabels .ml {
@@ -1647,6 +1721,14 @@
     <div class="stage">
       <div class="scene-wrap" style="position:relative">
       <canvas id="scene" width="320" height="192"></canvas>
+      <div id="wallPoster" aria-hidden="true">
+        <canvas id="wpCanvas" width="32" height="48"></canvas>
+        <div class="wp-info">
+          <div class="wp-name" id="wpName">CAND</div>
+          <div class="wp-num" id="wpNum">22</div>
+          <div class="wp-slogan" id="wpSlogan"></div>
+        </div>
+      </div>
       <div id="mapLabels" aria-hidden="true">
         <div class="ml" data-id="desk"  style="left:12.5%;top:40%">🖥 COMPUTADOR</div>
         <div class="ml" data-id="board" style="left:67%;top:11%">📰 IMPRENSA</div>
@@ -2746,7 +2828,10 @@ function drawWall(){
     rect(wx+23,9,14,14,'#88c8ff');
     // sun if early
   }
-  drawCandidatePoster(132, 6);
+  // Cartaz fica como HTML overlay (#wallPoster) — mais legível.
+  // Aqui só desenha a moldura discreta na parede pra dar lugar visual.
+  rect(132, 6, 56, 22, '#1a0f00');
+  rect(133, 7, 54, 20, '#dab66b');
 }
 
 // Santinho do candidato na parede (atualiza com look + número + nome)
@@ -2972,15 +3057,15 @@ function drawMic(x,y){
 // Paletas pra customização do avatar
 const LOOK_OPTIONS = {
   style: [
-    { id:'short', label:'curto' },
-    { id:'long',  label:'longo' },
-    { id:'curly', label:'cacheado' },
-    { id:'afro',  label:'black power' },
-    { id:'bun',   label:'coque' },
-    { id:'bald',  label:'careca' }
+    { id:'short' },
+    { id:'long' },
+    { id:'curly' },
+    { id:'afro' },
+    { id:'bun' },
+    { id:'bald' }
   ],
-  hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453', '#fff', '#7a4030'],
-  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a', '#5a3a20'],
+  hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453', '#fff', '#7a4030', '#8a5cf6', '#3a90c0'],
+  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a', '#5a3a20', '#9be099', '#a890ff', '#88c8ff'],
   shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a', '#5a4030', '#e8e0d0']
 };
 
@@ -4996,29 +5081,121 @@ FX.newspaper = (t)=>{ fxDim(t); };
 
 // ====== JORNAL (DOM overlay) ======
 function showNewspaperOverlay(){
-  const headlines = [
-    { good: 'PROPOSTA PARA ENSINO INTEGRAL', bad: 'CANDIDATO HESITA AO FALAR DE ESCOLA', tema: 'educação' },
-    { good: 'PLANO DE MÉDICO 24H GANHA FORÇA', bad: 'PROMESSAS DE SAÚDE SEM FONTE', tema: 'saúde' },
-    { good: 'POLÍCIA E ASSISTÊNCIA INTEGRADAS', bad: 'TROPEÇA EM DADOS DE HOMICÍDIO', tema: 'segurança' },
-    { good: 'DEFENDE CORTE DE PUBLICIDADE OFICIAL', bad: 'NÚMEROS APRESENTADOS NÃO BATEM', tema: 'economia' },
-    { good: 'PASSE LIVRE NA PERIFERIA TEM FONTE FISCAL', bad: 'PASSE LIVRE SEM ONDE TIRAR DINHEIRO', tema: 'transporte' }
+  const cand = (state.candidate.name && state.candidate.name !== 'Você')
+    ? state.candidate.name
+    : `o candidato ${state.candidate.number || '22'}`;
+  const cidade = state.candidate.city || 'a cidade';
+  // Pool: cada item tem condition() para filtrar — só entram os relevantes
+  const pool = [
+    // === Notícias ruins (escândalos do histórico) ===
+    {
+      stamp:'ESCÂNDALO', kind:'bad',
+      headline: 'BOTS RASTREADOS ATÉ A CAMPANHA',
+      lead: `Investigação aponta que rede de 40 perfis falsos defendendo ${cand} foi disparada de servidor único.`,
+      txt: `O TSE foi notificado. Especialistas em mídia social classificam a operação como "neurobots" — perfis sintéticos com endereço, idade e profissão definidos. A campanha não respondeu.`,
+      cond: () => state.flags.neuroBots
+    },
+    {
+      stamp:'EXPOSTO', kind:'bad',
+      headline: 'CAMPANHA COMPROU SEGUIDORES',
+      lead: `Relatório técnico mostra que ${cidade}, conta oficial de ${cand} ganhou 1.500 seguidores artificiais em duas horas.`,
+      txt: `O algoritmo já reduziu o alcance orgânico da conta. A campanha alega "erro de fornecedor" — discurso clássico nesses casos.`,
+      cond: () => state.flags.boughtFollowers
+    },
+    {
+      stamp:'DEEPFAKE', kind:'bad',
+      headline: 'VÍDEO MANIPULADO RASTREADO',
+      lead: `Forense de IA identifica origem de deepfake do adversário até equipe de ${cand}.`,
+      txt: `A análise frame a frame mostrou padrão de geração sintética idêntico em três vídeos. Pedido de cassação foi protocolado no TSE.`,
+      cond: () => state.flags.deepfakedAdv
+    },
+    {
+      stamp:'DENÚNCIA', kind:'bad',
+      headline: 'DISPARO EM MASSA NO WHATSAPP',
+      lead: `Usuários relatam mensagens não solicitadas defendendo ${cand} em ${cidade}.`,
+      txt: `A Meta foi notificada. Especialistas afirmam que o método de 2018 segue vivo — agora com texto gerado por IA, mas o efeito sobre o eleitor "criou vacina".`,
+      cond: () => state.flags.didWhatsappBlast
+    },
+    {
+      stamp:'TSE', kind:'bad',
+      headline: 'TRIBUNAL ABRE 4 NOVOS PROCESSOS',
+      lead: `Acumulação de denúncias contra a campanha de ${cand} chega a nível crítico.`,
+      txt: `Risco TSE alto. Especialistas falam em possibilidade real de cassação até o segundo turno. Defesa promete recurso.`,
+      cond: () => state.risk >= 70
+    },
+    {
+      stamp:'DECEPÇÃO', kind:'bad',
+      headline: 'CONFIANÇA DESPENCA EM PESQUISAS',
+      lead: `Avaliação de ${cand} em ${cidade} caiu pelo segundo dia consecutivo.`,
+      txt: `Eleitores indecisos relatam "promessas vazias" e mudanças de discurso. Coluna política classifica como crise de credibilidade.`,
+      cond: () => state.trust < 40
+    },
+    // === Notícias boas (presença real) ===
+    {
+      stamp:'EXCLUSIVO', kind:'good',
+      headline: 'CAMINHADA NO BAIRRO REPERCUTE',
+      lead: `${cand} foi visto em feira popular e ouviu reclamações sobre transporte público em ${cidade}.`,
+      txt: `Vendedores ambulantes elogiaram o tom direto. Fotos espontâneas viralizaram nas redes sociais. A coluna política avalia como uma das semanas mais consistentes.`,
+      cond: () => state.walkCount >= 3 && state.trust >= 60
+    },
+    {
+      stamp:'PESQUISA', kind:'good',
+      headline: 'CANDIDATO CONSOLIDA LIDERANÇA',
+      lead: `Pesquisa de intenção de voto mostra ${cand} com vantagem sobre o adversário em ${cidade}.`,
+      txt: `O movimento é creditado à presença constante em bairros populares e ao tom técnico nos debates. Indecisos ainda decidem.`,
+      cond: () => state.intent > state.oppIntent + 3 && state.day >= 4
+    },
+    {
+      stamp:'BOA NOVA', kind:'good',
+      headline: 'PROPOSTA DE PASSE LIVRE GANHA FORÇA',
+      lead: `Plano de tarifa zero apresentado por ${cand} foi citado por colunas e por entidades de transporte.`,
+      txt: `Especialistas em mobilidade urbana classificam a proposta como factível. ${cand} prometeu apresentar fontes fiscais até o debate.`,
+      cond: () => state.legalActs >= 4 && state.trust >= 50
+    },
+    {
+      stamp:'EXCLUSIVO', kind:'good',
+      headline: 'DEFENDE MÉDICO DE FAMÍLIA 24H',
+      lead: `Em entrevista, ${cand} detalhou plano municipal de Atenção Básica integral.`,
+      txt: `O programa foi recebido com apreço por trabalhadores da saúde. Conselho municipal apoiou a iniciativa em nota.`,
+      cond: () => state.videoCount >= 2 && state.trust >= 55
+    },
+    {
+      stamp:'DESTAQUE', kind:'good',
+      headline: 'PROGRAMA DE GOVERNO PÚBLICO É CITADO',
+      lead: `${cand} é o único candidato com plano em PDF público em ${cidade}.`,
+      txt: `Organizações de transparência elogiaram. "O eleitor pode comparar com prazo, fonte e responsável", diz um analista.`,
+      cond: () => state.flags.publishedPlatform
+    },
+    // === Fallback neutro ===
+    {
+      stamp:'POLÍTICA', kind:'neutral',
+      headline: 'ENTREVISTA SEM SOBRESSALTOS',
+      lead: `${cand} concedeu entrevista de 40 minutos sobre prioridades em ${cidade}.`,
+      txt: `Coluna política classifica o desempenho como "consistente mas sem viés definido". Eleitores indecisos seguem decidindo.`,
+      cond: () => true
+    }
   ];
-  const t = headlines[Math.floor(Math.random()*headlines.length)];
-  const isGood = state.trust > 50;
+  // Filtra os elegíveis
+  const elig = pool.filter(p => p.cond());
+  // Prioriza notícias "bad" sobre boas se houver muito risco; senão sorteia
+  let chosen;
+  if(state.risk > 60 && elig.some(p => p.kind === 'bad')){
+    const bads = elig.filter(p => p.kind === 'bad');
+    chosen = bads[Math.floor(Math.random()*bads.length)];
+  } else {
+    chosen = elig[Math.floor(Math.random()*elig.length)];
+  }
+  // Render
   $('newsName').textContent = 'JORNAL DE ' + (state.candidate.city || 'CIDADE').toUpperCase();
   $('newsCaption').textContent = 'CANDIDATO ' + (state.candidate.number || '22');
-  $('newsHeadline').textContent = isGood ? t.good : t.bad;
-  $('newsLead').textContent = isGood
-    ? `O candidato ${state.candidate.name||'22'} concedeu entrevista exclusiva em sua agenda pelo bairro ontem. Falou sobre ${t.tema} com consistência.`
-    : `Entrevista com o candidato ${state.candidate.name||'22'} expôs contradições no tema ${t.tema}. Colunistas comentam.`;
-  $('newsTxt').textContent = isGood
-    ? `"Vou tratar ${t.tema} como prioridade nos primeiros 100 dias", afirmou. A coluna política classifica o desempenho como consistente. Reação positiva nas redes sociais e nas pesquisas espontâneas.`
-    : `O candidato titubeou ao ser questionado sobre números específicos. A coluna política reagiu com cobranças. Reação nas redes foi de desconfiança.`;
-  $('newsStamp').textContent = isGood ? 'EXCLUSIVO' : 'CONTRADIÇÕES';
-  $('newsStamp').style.background = isGood ? '#cf3a3a' : '#3a2a4a';
+  $('newsHeadline').textContent = chosen.headline;
+  $('newsLead').textContent = chosen.lead;
+  $('newsTxt').textContent = chosen.txt;
+  $('newsStamp').textContent = chosen.stamp;
+  $('newsStamp').style.background = chosen.kind === 'bad' ? '#3a1a1a' : chosen.kind === 'good' ? '#cf3a3a' : '#3a2a4a';
   $('newspaperOverlay').style.display = 'block';
   clearTimeout(_newsAutoHide);
-  _newsAutoHide = setTimeout(hideNewspaperOverlay, 6000);
+  _newsAutoHide = setTimeout(hideNewspaperOverlay, 6500);
 }
 function hideNewspaperOverlay(){ $('newspaperOverlay').style.display = 'none'; clearTimeout(_newsAutoHide); }
 
@@ -5352,10 +5529,10 @@ FX.tvAttack = (t)=>{
   txt('ATACA!', 100, 36, '#ef6b6b', 9);
 };
 
-// Entrevista jornal — capa com foto do candidato + manchete grande
-FX.newspaper = (t)=>{
-  ctx.fillStyle = `rgba(0,0,0,${0.4 + t*0.2})`;
-  ctx.fillRect(0, 32, W, H-32);
+// Entrevista jornal — só dim (DOM overlay faz o resto)
+FX.newspaper = (t)=>{ fxDim(t); };
+// ---- legacy desenho canvas (NÃO USADO) abaixo, mantido pra ref ----
+function _legacyNewspaperCanvas(t){
   const tt = Math.min(1, t*1.4);
   const w = 240, h = 130;
   const tx = (W - w)/2 + (1-tt)*60;
@@ -6513,9 +6690,24 @@ function buildAvatarRows(){
     });
   });
 }
+function renderWallPoster(){
+  const c = state.candidate;
+  const nameEl = $('wpName'); if(!nameEl) return;
+  nameEl.textContent = (c.name || 'CANDIDATO').toUpperCase();
+  $('wpNum').textContent = c.number || '22';
+  $('wpSlogan').textContent = '"' + (c.slogan || '') + '"';
+  const can = $('wpCanvas');
+  if(can){
+    const cx = can.getContext('2d');
+    cx.imageSmoothingEnabled = false;
+    drawPlayerPreview(cx, getCandidateColors());
+  }
+}
+
 function renderSantinho(){
   const el = $('santinho');
   if(!el) return;
+  renderWallPoster();
   const c = state.candidate;
   el.classList.add('show');
   el.innerHTML = `
