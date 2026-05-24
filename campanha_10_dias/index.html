@@ -335,15 +335,69 @@
     border-radius: 4px;
     color: var(--text);
   }
-  .cc-avatars {
+  /* Avatar builder */
+  .cc-builder {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    margin-bottom: 18px;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    align-items: start;
+    max-width: 760px;
+    margin: 0 auto 14px;
+  }
+  @media (max-width: 640px){ .cc-builder { grid-template-columns: 110px 1fr; gap: 12px; } }
+  .cc-builder-preview {
+    background: linear-gradient(180deg,#88c8ff 0%, #88c8ff 60%, #704020 60%);
+    border: 3px solid var(--gold);
+    border-radius: 6px;
+    padding: 14px;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 200px;
+  }
+  #ccPreview {
+    width: 96px; height: 144px;
+    image-rendering: pixelated;
+    display: block;
   }
   @media (max-width: 640px){
-    .cc-avatars { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .cc-builder-preview { min-height: 160px; padding: 8px; }
+    #ccPreview { width: 72px; height: 108px; }
   }
+  .cc-builder-rows {
+    display: flex; flex-direction: column;
+    gap: 8px;
+    text-align: left;
+  }
+  .cc-brow .cc-brow-label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: var(--gold);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .cc-swatches {
+    display: flex; gap: 5px; flex-wrap: wrap;
+  }
+  .cc-swatch {
+    width: 30px; height: 30px;
+    border-radius: 5px;
+    border: 2px solid #4a3a64;
+    cursor: pointer;
+    transition: transform .12s, border-color .12s;
+    padding: 0;
+    background-clip: padding-box;
+    position: relative;
+  }
+  .cc-swatch:hover { transform: scale(1.1); }
+  .cc-swatch.selected { border-color: var(--gold); transform: scale(1.12); box-shadow: 0 0 0 2px rgba(246,196,83,0.4); }
+  .cc-swatch.style {
+    background: var(--bg-card-2);
+    color: var(--text);
+    width: auto; padding: 0 8px;
+    font-family: 'VT323', monospace;
+    font-size: 13px;
+    height: 30px;
+  }
+  .cc-swatch.style.selected { background: var(--gold); color: #1a0f00; }
 
   .stage {
     position: relative;
@@ -1648,9 +1702,11 @@
       </div>
     </div>
 
-    <div style="max-width:760px;margin:0 auto">
-      <label class="cc-label" style="text-align:left;display:block">AVATAR</label>
-      <div id="ccAvatars" class="cc-avatars"></div>
+    <div class="cc-builder">
+      <div class="cc-builder-preview">
+        <canvas id="ccPreview" width="32" height="48"></canvas>
+      </div>
+      <div class="cc-builder-rows" id="ccBuilderRows"></div>
     </div>
 
     <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:14px;width:100%">
@@ -2885,19 +2941,32 @@ function drawMic(x,y){
   // sparkle (only when debate active)
 }
 
-// Avatares disponíveis (6 presets de cores/estilos)
-const AVATARS = [
-  { skin:'#f3c9a0', hair:'#b87333', hair2:'#8a5020', shirt:'#3c7dc0', accent:'#cf3a3a', style:'short' },
-  { skin:'#f3c9a0', hair:'#1a0f24', hair2:'#0a0510', shirt:'#cf6cad', accent:'#3a90c0', style:'long' },
-  { skin:'#c89968', hair:'#3a2010', hair2:'#1a0a00', shirt:'#7dd87d', accent:'#f6c453', style:'curly' },
-  { skin:'#a0866a', hair:'#1a0f24', hair2:'#0a0510', shirt:'#f6c453', accent:'#cf3a3a', style:'afro' },
-  { skin:'#e9c39e', hair:'#cf3a3a', hair2:'#a01a1a', shirt:'#8a5cf6', accent:'#fff',    style:'bun' },
-  { skin:'#8a6a4a', hair:'#5a5a5a', hair2:'#3a3a3a', shirt:'#fff',    accent:'#3a5a8a', style:'bald' }
-];
+// Paletas pra customização do avatar
+const LOOK_OPTIONS = {
+  style: [
+    { id:'short', label:'curto' },
+    { id:'long',  label:'longo' },
+    { id:'curly', label:'cacheado' },
+    { id:'afro',  label:'black power' },
+    { id:'bun',   label:'coque' },
+    { id:'bald',  label:'careca' }
+  ],
+  hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453', '#fff', '#7a4030'],
+  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a', '#5a3a20'],
+  shirt:  ['#3c7dc0', '#cf6cad', '#7dd87d', '#f6c453', '#8a5cf6', '#cf3a3a', '#222', '#fff'],
+  accent: ['#cf3a3a', '#3a90c0', '#f6c453', '#7dd87d', '#000', '#fff', '#ff9bd2', '#8a5cf6']
+};
 
 function getCandidateColors(){
-  const idx = state.candidate.avatar;
-  return AVATARS[idx|0] || AVATARS[0];
+  const L = state.candidate.look || {};
+  return {
+    style: L.style || 'short',
+    hair:  L.hair  || '#b87333',
+    hair2: shadeColor(L.hair || '#b87333', -30),
+    skin:  L.skin  || '#f3c9a0',
+    shirt: L.shirt || '#3c7dc0',
+    accent: L.accent || '#cf3a3a'
+  };
 }
 
 // Player avatar 12x20-ish, with direction + walk frames
@@ -3602,7 +3671,13 @@ const state = {
     slogan: 'Voto consciente, mandato sério',
     number: '22',
     city: 'São Paulo',
-    avatar: 0
+    look: {
+      style: 'short',
+      hair: '#b87333',
+      skin: '#f3c9a0',
+      shirt: '#3c7dc0',
+      accent: '#cf3a3a'
+    }
   },
   touch: { active: false, sx: 0, sy: 0, cx: 0, cy: 0, t0: 0, mode: 'idle' },
   running: false,
@@ -6351,30 +6426,56 @@ function setupCharCreate(){
   $('ccNumber').value = state.candidate.number || '22';
   $('ccCity').value = state.candidate.city || '';
   $('ccSlogan').value = state.candidate.slogan || '';
-  // Avatars
-  const ava = $('ccAvatars');
-  ava.innerHTML = '';
-  const styleLabels = { short:'curto', long:'longo', curly:'cacheado', afro:'black power', bun:'coque', bald:'careca' };
-  AVATARS.forEach((a, i)=>{
-    const box = document.createElement('div');
-    box.style.cssText = 'cursor:pointer;border:3px solid #4a3a64;border-radius:6px;padding:6px;text-align:center;background:var(--bg-card-2);transition:all .15s';
-    box.dataset.idx = i;
-    box.innerHTML = `<canvas width="32" height="48" style="image-rendering:pixelated;width:64px;height:96px;display:block;margin:0 auto"></canvas><div style="font-size:13px;color:var(--muted);margin-top:4px">${styleLabels[a.style]||''}</div>`;
-    const c = box.querySelector('canvas');
-    const cx = c.getContext('2d');
-    cx.imageSmoothingEnabled = false;
-    // desenha o avatar preview
-    drawPlayerPreview(cx, i);
-    box.addEventListener('click', ()=>{
-      state.candidate.avatar = i;
-      state.candidate.name = $('ccName').value.trim() || 'Você';
-      $('ccAvatars').querySelectorAll('div[data-idx]').forEach(b => b.style.borderColor = '#4a3a64');
-      box.style.borderColor = 'var(--gold)';
-      box.style.transform = 'scale(1.04)';
-      sfx('legal');
+  // Avatar builder
+  buildAvatarRows();
+  updateCCPreview();
+}
+
+function updateCCPreview(){
+  const can = $('ccPreview');
+  if(!can) return;
+  const cx = can.getContext('2d');
+  cx.imageSmoothingEnabled = false;
+  drawPlayerPreview(cx, getCandidateColors());
+}
+
+function buildAvatarRows(){
+  const rows = $('ccBuilderRows');
+  if(!rows) return;
+  rows.innerHTML = '';
+  const rowsConfig = [
+    { prop: 'style',  label: 'CABELO (ESTILO)' },
+    { prop: 'hair',   label: 'COR DO CABELO' },
+    { prop: 'skin',   label: 'COR DA PELE' },
+    { prop: 'shirt',  label: 'CAMISA' },
+    { prop: 'accent', label: 'GRAVATA' }
+  ];
+  rowsConfig.forEach(cfg => {
+    const div = document.createElement('div');
+    div.className = 'cc-brow';
+    const opts = LOOK_OPTIONS[cfg.prop];
+    const swatchesHtml = opts.map(opt => {
+      if(cfg.prop === 'style'){
+        const sel = state.candidate.look.style === opt.id ? ' selected' : '';
+        return `<button type="button" class="cc-swatch style${sel}" data-prop="style" data-val="${opt.id}">${opt.label}</button>`;
+      } else {
+        const sel = state.candidate.look[cfg.prop] === opt ? ' selected' : '';
+        return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt}" style="background:${opt}" aria-label="${opt}"></button>`;
+      }
+    }).join('');
+    div.innerHTML = `<div class="cc-brow-label">${cfg.label}</div><div class="cc-swatches">${swatchesHtml}</div>`;
+    rows.appendChild(div);
+  });
+  rows.querySelectorAll('.cc-swatch').forEach(s => {
+    s.addEventListener('click', () => {
+      const prop = s.dataset.prop;
+      const val  = s.dataset.val;
+      state.candidate.look[prop] = val;
+      // re-render swatches da linha pra marcar a selecionada
+      buildAvatarRows();
+      updateCCPreview();
+      sfx('tap');
     });
-    if(i === 0){ box.style.borderColor = 'var(--gold)'; }
-    ava.appendChild(box);
   });
 }
 function renderSantinho(){
@@ -6396,8 +6497,9 @@ function renderSantinho(){
   drawPlayerPreview(cx, c.avatar);
 }
 
-function drawPlayerPreview(cx, avatarIdx){
-  const c = AVATARS[avatarIdx];
+function drawPlayerPreview(cx, look){
+  const c = look || getCandidateColors();
+  if(c.hair && !c.hair2) c.hair2 = shadeColor(c.hair, -30);
   const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
   cx.clearRect(0, 0, 32, 48);
   r(0, 0, 32, 48, '#3a2a4a');
