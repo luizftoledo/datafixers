@@ -924,6 +924,98 @@
     #phoneOverlay { top: 4%; }
   }
 
+  /* Jornal overlay */
+  .news-paper {
+    width: 620px; max-width: 96vw;
+    background: #f5ecd9;
+    color: #1a0f00;
+    border: 3px solid #2a1f37;
+    border-radius: 4px;
+    padding: 18px 22px 14px;
+    font-family: 'Times New Roman', Georgia, serif;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.4);
+    position: relative;
+  }
+  .news-head {
+    border-bottom: 3px double #1a0f00;
+    padding-bottom: 6px; margin-bottom: 10px;
+  }
+  .news-name {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #1a0f00;
+    text-transform: uppercase;
+  }
+  .news-meta { font-size: 11px; color: #555; letter-spacing: 1px; text-transform: uppercase; }
+  .news-body {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 560px){ .news-body { grid-template-columns: 80px 1fr; } }
+  .news-photo { text-align: center; }
+  .news-portrait {
+    width: 140px; height: 140px;
+    background: linear-gradient(180deg, #88c8ff 0%, #88c8ff 55%, #555 55%, #888 100%);
+    border: 2px solid #1a0f00;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 560px){ .news-portrait { width: 80px; height: 80px; } }
+  .news-portrait::after {
+    content: '🧑‍💼';
+    position: absolute; bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 90px;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+  }
+  @media (max-width: 560px){ .news-portrait::after { font-size: 56px; bottom: 4px; } }
+  .news-caption {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #1a0f00;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .news-headline {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #1a0f00;
+    margin: 0 0 8px;
+  }
+  @media (max-width: 560px){ .news-headline { font-size: 19px; } }
+  .news-lead {
+    font-size: 16px; line-height: 1.45;
+    color: #1a0f00;
+    margin: 0 0 8px;
+    font-style: italic;
+  }
+  .news-txt {
+    font-size: 14px; line-height: 1.5;
+    color: #2a1f37;
+    margin: 0;
+    column-count: 1;
+  }
+  .news-stamp {
+    position: absolute;
+    top: 16px; right: 18px;
+    background: #cf3a3a;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transform: rotate(-6deg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+
   /* Sentiment dashboard overlay */
   .sent-board {
     width: 720px;
@@ -1266,6 +1358,25 @@
   .legend .legal { background: var(--legal); color: #14391a; }
   .legend .gray { background: var(--gray); color: #1a0f00; }
   .legend .illegal { background: var(--illegal); color: #4a0a0a; }
+  /* Botão fechar dos overlays (phone, sentiment) */
+  .overlay-close {
+    position: absolute;
+    top: -10px; right: -10px;
+    width: 38px; height: 38px;
+    background: var(--red);
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 240;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1;
+  }
+  .overlay-close:hover { background: #ff5555; }
+
   /* Prompt de tela cheia */
   #fsPrompt {
     position: fixed; inset: 0;
@@ -1491,6 +1602,7 @@
         <div class="ml" data-id="door"  style="left:93%;top:60%">🚶 RUA</div>
         <div class="ml" data-id="phone" style="left:17.5%;top:73%">📱 CELULAR</div>
         <div class="ml" data-id="mic"   style="left:50%;top:43%;display:none">🎤 DEBATE</div>
+        <div class="ml ml-marketeiro" data-id="marketeiro" style="left:30%;top:53%;display:none;background:rgba(80,24,32,0.95);border-color:#cf3a3a;color:#f6c453">🎩 MARKETEIRO</div>
       </div>
       </div>
       <div class="scene-hint" id="sceneHint">Toque/clique num móvel pra ir até ele e tomar decisões.</div>
@@ -1598,7 +1710,8 @@
 </div>
 
 <!-- Phone overlay -->
-<div id="phoneOverlay" style="display:none;position:fixed;left:50%;top:8%;transform:translateX(-50%);z-index:230;pointer-events:none">
+<div id="phoneOverlay" style="display:none;position:fixed;left:50%;top:8%;transform:translateX(-50%);z-index:230;pointer-events:auto">
+  <button type="button" class="overlay-close" id="phoneClose" aria-label="Fechar">×</button>
   <div class="phone-frame">
     <div class="phone-notch"></div>
     <div class="phone-screen">
@@ -1625,8 +1738,32 @@
   <div class="phone-stats" id="phoneStats"></div>
 </div>
 
+<!-- Jornal overlay (entrevista de imprensa) -->
+<div id="newspaperOverlay" style="display:none;position:fixed;left:50%;top:8%;transform:translateX(-50%);z-index:230;pointer-events:auto;max-width:96vw">
+  <button type="button" class="overlay-close" id="newspaperClose" aria-label="Fechar">×</button>
+  <div class="news-paper" id="newsPaper">
+    <div class="news-head">
+      <div class="news-name" id="newsName">JORNAL DE SÃO PAULO</div>
+      <div class="news-meta">Edição dominical · Política</div>
+    </div>
+    <div class="news-body">
+      <div class="news-photo">
+        <div class="news-portrait" id="newsPortrait"></div>
+        <div class="news-caption" id="newsCaption">CANDIDATO 22</div>
+      </div>
+      <div class="news-content">
+        <h2 class="news-headline" id="newsHeadline"></h2>
+        <p class="news-lead" id="newsLead"></p>
+        <p class="news-txt" id="newsTxt"></p>
+      </div>
+    </div>
+    <div class="news-stamp" id="newsStamp">EXCLUSIVO</div>
+  </div>
+</div>
+
 <!-- Sentiment analysis dashboard overlay -->
-<div id="sentimentOverlay" style="display:none;position:fixed;left:50%;top:8%;transform:translateX(-50%);z-index:230;pointer-events:none;max-width:92vw">
+<div id="sentimentOverlay" style="display:none;position:fixed;left:50%;top:8%;transform:translateX(-50%);z-index:230;pointer-events:auto;max-width:92vw">
+  <button type="button" class="overlay-close" id="sentimentClose" aria-label="Fechar">×</button>
   <div class="sent-board">
     <div class="sent-head">
       <span class="sent-logo">⚡ ANÁLISE DE SENTIMENTO — IA</span>
@@ -2880,7 +3017,7 @@ const HOTSPOTS = [
   { x: 144, y: 90,  w: 32, h: 50, id: 'mic',  label: 'Microfone do Debate' },
   { x: 167, y: 140, w: 50, h: 32, id: 'bed',  label: 'Cama (encerrar o dia)' },
   // Marketeiro: hotspot dinâmico (só ativo quando NPC visível)
-  { x: 200, y: 138, w: 30, h: 40, id: 'marketeiro', label: 'Marketeiro (ofertas off the record)', dynamic: true },
+  { x: 78, y: 102, w: 34, h: 42, id: 'marketeiro', label: 'Marketeiro (ofertas off the record)', dynamic: true },
 ];
 
 let highlightId = null;
@@ -3046,7 +3183,7 @@ function renderScene(opts={}){
 
   // Marketeiro NPC: aparece nos dias 2,3,5,7 — visualmente DISTINTO
   if(state.day >= 2 && state.day <= 8 && (state.day === 2 || state.day === 3 || state.day === 5 || state.day === 7)){
-    const mx = 210, my = 148; // ao lado da sala de reuniões
+    const mx = 88, my = 112; // canto esquerdo, longe da cama
     state.marketeiroVisible = true;
     // sombra forte
     rect(mx-1, my+22, 14, 2, 'rgba(0,0,0,0.55)');
@@ -3084,15 +3221,6 @@ function renderScene(opts={}){
     rect(mx+6, my+6, 1, 1, '#000');
     // bigode/sorriso cínico
     rect(mx+4, my+8, 4, 1, '#3a1a1a');
-    // LABEL persistente acima dele (não pisca)
-    const lx = mx - 4, ly = my - 12;
-    rect(lx, ly, 24, 9, '#f6c453');
-    rect(lx, ly, 24, 1, '#b48530');
-    rect(lx, ly+8, 24, 1, '#b48530');
-    txt('MARKETEIRO', lx+1, ly+1, '#1a0f00', 6);
-    // ponta do balão
-    rect(mx+5, ly+9, 2, 2, '#f6c453');
-    rect(mx+5, ly+11, 1, 1, '#f6c453');
     // ícone $$ piscante na maleta
     if(Math.sin(bobT*2) > 0){
       txt('$', mx+14, my+15, '#1a0f00', 6);
@@ -3108,11 +3236,12 @@ function renderScene(opts={}){
   }
 
   // (labels HTML overlay são renderizadas em #mapLabels — mais crisp)
-  // Toggle dynamic labels (mic só no D10, cama só antes do D10, bed escondido durante debate)
   const micLabel = document.querySelector('#mapLabels .ml[data-id="mic"]');
   const bedLabel = document.querySelector('#mapLabels .ml[data-id="bed"]');
+  const mkLabel  = document.querySelector('#mapLabels .ml[data-id="marketeiro"]');
   if(micLabel) micLabel.style.display = state.day === 10 ? 'block' : 'none';
   if(bedLabel) bedLabel.style.display = state.day >= 10 ? 'none' : 'block';
+  if(mkLabel)  mkLabel.style.display  = state.marketeiroVisible ? 'block' : 'none';
 
   // Hotspot indicators — balão de fala em vez de "!"
   for(const h of HOTSPOTS){
@@ -3174,7 +3303,7 @@ const APPROACH = {
   phone: { x: 56, y: 178, face: 'up' },
   mic:   { x: 160, y: 142, face: 'up' },
   bed:   { x: 192, y: 178, face: 'up' },
-  marketeiro: { x: 200, y: 180, face: 'up' },
+  marketeiro: { x: 95, y: 144, face: 'left' },
 };
 
 function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
@@ -3888,7 +4017,7 @@ const ACTIONS = [
   // ===== DOOR / RUA =====
   {
     id: 'streetWalk', area: 'door', title: 'Caminhada e corpo a corpo no bairro',
-    tag: 'legal', energy: 2, cost: 0,
+    tag: 'legal', energy: 3, cost: 0,
     desc: 'Andar onde a estrutura partidária aponta — feira, bairro popular, comércio. Cansa, mas ninguém substitui isso. Mais de 2 vezes no mesmo dia satura a cobertura.',
     available(s){ return s.walksToday < 2; },
     apply(s){
@@ -3924,7 +4053,7 @@ const ACTIONS = [
   },
   {
     id: 'streetEvent', area: 'door', title: 'Evento aberto com som de carro',
-    tag: 'legal', energy: 2, cost: 15,
+    tag: 'legal', energy: 3, cost: 15,
     desc: 'Palanque ao vivo num bairro estratégico. Custa logística, paga em imagem.',
     apply(s){
       s.money -= 15;
@@ -4187,41 +4316,43 @@ function executeAction(a){
   if(a.tag === 'illegal'){ sfx('illegal'); }
   else if(a.tag === 'legal'){ sfx('legal'); }
   else { sfx('gray'); }
+  // APLICA IMEDIATAMENTE (fix: ações de celular sem efeito)
   const before = snapshotStats();
+  state.energy -= a.energy;
+  const msg = a.apply(state);
+  clampStats();
+  updateHUD();
+  toast(`${a.title} — ${msg}`, a.tag === 'illegal' ? 'bad' : (a.tag === 'legal' ? 'good' : null));
+  const c = cnv;
+  c.classList.remove('shake','flash-good','flash-bad');
+  void c.offsetWidth;
+  if(a.tag === 'illegal'){ c.classList.add('shake','flash-bad'); }
+  else if(a.tag === 'legal'){ c.classList.add('flash-good'); }
+  else { c.classList.add('shake'); }
+  if(a.area === 'sofa' && a.id !== 'meetingShady') sfx('money');
+  reactToStatDelta(before, snapshotStats());
+  checkCassacao();
+  // FX visual (não bloqueia efeito da ação)
   const FX_DUR = {
-    newspaper: 4200,
+    newspaper: 5000,
     streetWalk: 3400, streetEvent: 3600,
     meetingBig: 2800, meetingShady: 2800, meetingSmall: 2400,
     whatsBlast: 3000, neuro: 2800, deepfakeAdv: 3000,
     tvProgram: 3000, tvAttack: 3000,
     buyFollowers: 2600, denuncia: 2400,
-    video: 2400, replyVideo: 2400,
-    monitor: 2200, sentiment: 2400, deepfakeDef: 2200,
-    fakeOutrage: 2400,
+    video: 3000, replyVideo: 3000,
+    monitor: 2400, sentiment: 6000, deepfakeDef: 2200,
+    fakeOutrage: 2800,
+    agendaPost: 3200, memePost: 3200, crisisPost: 3500, platformPost: 3000
   };
-  const dur = FX_DUR[a.id] || 2200;
-  // DOM overlays
+  const dur = FX_DUR[a.id] || 2400;
   if(PHONE_POSTS[a.id]) showPhoneOverlay(a.id);
   else if(a.id === 'sentiment') showSentimentOverlay();
+  else if(a.id === 'newspaper') showNewspaperOverlay();
   startFx(a.id, dur, { tag: a.tag, area: a.area }, ()=>{
     hidePhoneOverlay();
     hideSentimentOverlay();
-    state.energy -= a.energy;
-    const msg = a.apply(state);
-    clampStats();
-    updateHUD();
-    toast(`${a.title} — ${msg}`, a.tag === 'illegal' ? 'bad' : (a.tag === 'legal' ? 'good' : null));
-    // canvas shake/flash
-    const c = cnv;
-    c.classList.remove('shake','flash-good','flash-bad');
-    void c.offsetWidth;
-    if(a.tag === 'illegal'){ c.classList.add('shake','flash-bad'); }
-    else if(a.tag === 'legal'){ c.classList.add('flash-good'); }
-    else { c.classList.add('shake'); }
-    if(a.area === 'sofa' && a.id !== 'meetingShady') sfx('money');
-    // Stat delta reaction (chips + impact sounds + flash)
-    reactToStatDelta(before, snapshotStats());
-    checkCassacao();
+    hideNewspaperOverlay();
     if(state.energy <= 0 && !state.endTriggered){
       setTimeout(()=>{ goToSleep(); }, 2200);
     }
@@ -4755,6 +4886,33 @@ FX.agendaPost = (t)=>{ fxDim(t); };
 FX.memePost = (t)=>{ fxDim(t); };
 FX.crisisPost = (t)=>{ fxDim(t); };
 FX.platformPost = (t)=>{ fxDim(t); };
+FX.newspaper = (t)=>{ fxDim(t); };
+
+// ====== JORNAL (DOM overlay) ======
+function showNewspaperOverlay(){
+  const headlines = [
+    { good: 'PROPOSTA PARA ENSINO INTEGRAL', bad: 'CANDIDATO HESITA AO FALAR DE ESCOLA', tema: 'educação' },
+    { good: 'PLANO DE MÉDICO 24H GANHA FORÇA', bad: 'PROMESSAS DE SAÚDE SEM FONTE', tema: 'saúde' },
+    { good: 'POLÍCIA E ASSISTÊNCIA INTEGRADAS', bad: 'TROPEÇA EM DADOS DE HOMICÍDIO', tema: 'segurança' },
+    { good: 'DEFENDE CORTE DE PUBLICIDADE OFICIAL', bad: 'NÚMEROS APRESENTADOS NÃO BATEM', tema: 'economia' },
+    { good: 'PASSE LIVRE NA PERIFERIA TEM FONTE FISCAL', bad: 'PASSE LIVRE SEM ONDE TIRAR DINHEIRO', tema: 'transporte' }
+  ];
+  const t = headlines[Math.floor(Math.random()*headlines.length)];
+  const isGood = state.trust > 50;
+  $('newsName').textContent = 'JORNAL DE ' + (state.candidate.city || 'CIDADE').toUpperCase();
+  $('newsCaption').textContent = 'CANDIDATO ' + (state.candidate.number || '22');
+  $('newsHeadline').textContent = isGood ? t.good : t.bad;
+  $('newsLead').textContent = isGood
+    ? `O candidato ${state.candidate.name||'22'} concedeu entrevista exclusiva em sua agenda pelo bairro ontem. Falou sobre ${t.tema} com consistência.`
+    : `Entrevista com o candidato ${state.candidate.name||'22'} expôs contradições no tema ${t.tema}. Colunistas comentam.`;
+  $('newsTxt').textContent = isGood
+    ? `"Vou tratar ${t.tema} como prioridade nos primeiros 100 dias", afirmou. A coluna política classifica o desempenho como consistente. Reação positiva nas redes sociais e nas pesquisas espontâneas.`
+    : `O candidato titubeou ao ser questionado sobre números específicos. A coluna política reagiu com cobranças. Reação nas redes foi de desconfiança.`;
+  $('newsStamp').textContent = isGood ? 'EXCLUSIVO' : 'CONTRADIÇÕES';
+  $('newsStamp').style.background = isGood ? '#cf3a3a' : '#3a2a4a';
+  $('newspaperOverlay').style.display = 'block';
+}
+function hideNewspaperOverlay(){ $('newspaperOverlay').style.display = 'none'; }
 
 // ====== ANÁLISE DE SENTIMENTO (dashboard overlay) ======
 function showSentimentOverlay(){
@@ -5206,9 +5364,9 @@ function renderFx(){
 // =====================================================================
 function goToSleep(){
   if(state.endTriggered) return;
-  // garantir que nenhum overlay esteja em cima do diagnóstico
   hidePhoneOverlay();
   hideSentimentOverlay();
+  hideNewspaperOverlay();
   if(state.day >= 10){
     endDay();
     return;
@@ -5228,6 +5386,7 @@ function goToSleep(){
 function showDayDiagnostic(){
   hidePhoneOverlay();
   hideSentimentOverlay();
+  hideNewspaperOverlay();
   Audio.music.stinger('sleep');
   const dayWas = state.day;
   const before = state.dayStartSnapshot || snapshotStats();
@@ -5403,6 +5562,7 @@ function openModal({title, subt, body, actions, note}){
   // Sempre limpar overlays pendentes ao abrir um modal novo
   hidePhoneOverlay();
   hideSentimentOverlay();
+  hideNewspaperOverlay();
   // mini HUD sticky no modal
   const mh = $('modalMiniHud');
   if(mh && state.running){
@@ -5448,6 +5608,11 @@ function openModal({title, subt, body, actions, note}){
 function closeModal(){ $('modalBack').classList.remove('show'); }
 $('modalCancel').addEventListener('click', closeModal);
 $('modalCloseX').addEventListener('click', closeModal);
+
+// Fechar overlays de celular/sentimento em emergência (resolve trava)
+$('phoneClose').addEventListener('click', ()=>{ hidePhoneOverlay(); if(state.fx) state.fx = null; state.fxLocked = false; });
+$('sentimentClose').addEventListener('click', ()=>{ hideSentimentOverlay(); if(state.fx) state.fx = null; state.fxLocked = false; });
+$('newspaperClose').addEventListener('click', ()=>{ hideNewspaperOverlay(); if(state.fx) state.fx = null; state.fxLocked = false; });
 
 // =====================================================================
 // DAY LOOP
