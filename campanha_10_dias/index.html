@@ -3526,9 +3526,9 @@ function tickMove(dt){
     const ddy = state.target.y - state.py;
     const dist = Math.hypot(ddx, ddy);
     const elapsed = performance.now() - (state.target.started || 0);
-    // mobile: timeout mais curto (1.5s) pra não esperar tanto; desktop 3s
-    const timedOut = elapsed > (isTouch ? 1500 : 3000);
-    if(dist < 4 || timedOut){
+    // Ativa assim que estiver "perto o suficiente" (dist < 18) OU se travou (timedOut)
+    const timedOut = elapsed > (isTouch ? 1000 : 2000);
+    if(dist < 18 || timedOut){
       const t = state.target;
       state.target = null;
       if(timedOut){
@@ -3655,6 +3655,15 @@ function handleSceneTap(clientX, clientY){
   const hit = findHotspotAt(p.x, p.y);
   if(hit){
     const ap = APPROACH[hit.id] || { x: p.x, y: p.y };
+    // se já está perto, ativa direto (não precisa andar)
+    const dx = state.px - ap.x, dy = state.py - ap.y;
+    if(Math.hypot(dx, dy) < 24){
+      state.facing = ap.face || state.facing;
+      highlightId = hit.id;
+      sfx('tap');
+      openHotspot(hit.id);
+      return;
+    }
     setTarget(ap.x, ap.y, hit.id);
     highlightId = hit.id;
     pulseClickMarker(p.x, p.y, true);
