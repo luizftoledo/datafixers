@@ -32,9 +32,17 @@
     font-size: 20px;
     min-height: 100vh;
     overflow-x: hidden;
-    overscroll-behavior: contain;
+    overscroll-behavior: none;
   }
-  body.playing-mobile { overscroll-behavior-y: none; }
+  /* Mobile durante o jogo: trava o body pra não recarregar a página com pull-to-refresh */
+  body.playing-mobile {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    width: 100%;
+    -webkit-overflow-scrolling: auto;
+  }
   body { image-rendering: pixelated; }
   .app {
     max-width: 1280px;
@@ -7166,9 +7174,31 @@ function applyMobileLayout(){
   document.querySelectorAll('.feed, .controls-row').forEach(el => {
     el.style.display = mobile ? 'none' : '';
   });
+  // Trava pull-to-refresh em mobile com touch
+  if(isTouch && mobile){
+    document.body.classList.add('playing-mobile');
+  } else {
+    document.body.classList.remove('playing-mobile');
+  }
 }
 applyMobileLayout();
 window.addEventListener('resize', applyMobileLayout);
+
+// Bloqueia pull-to-refresh: preventDefault em touchmove no document quando o scroll está no topo
+let _touchStartY = 0;
+document.addEventListener('touchstart', (e)=>{
+  if(e.touches && e.touches[0]) _touchStartY = e.touches[0].clientY;
+}, { passive: true });
+document.addEventListener('touchmove', (e)=>{
+  if(!isTouch) return;
+  if(!e.touches || !e.touches[0]) return;
+  const y = e.touches[0].clientY;
+  const dy = y - _touchStartY;
+  // se está no topo da página e tentando puxar pra baixo
+  if(window.scrollY <= 0 && dy > 0){
+    e.preventDefault();
+  }
+}, { passive: false });
 
 // Init render once
 updateHUD();
