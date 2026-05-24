@@ -3307,7 +3307,6 @@ function handleSceneTap(clientX, clientY){
 cnv.addEventListener('click', (e)=>{ handleSceneTap(e.clientX, e.clientY); });
 
 // ===== TOUCH: drag-to-move com joystick virtual =====
-state.touch = { active: false, sx: 0, sy: 0, cx: 0, cy: 0, t0: 0, mode: 'idle' };
 function resetTouchKeys(){
   state.keys['ArrowLeft'] = false;
   state.keys['ArrowRight'] = false;
@@ -3415,6 +3414,7 @@ const state = {
     city: 'São Paulo',
     avatar: 0
   },
+  touch: { active: false, sx: 0, sy: 0, cx: 0, cy: 0, t0: 0, mode: 'idle' },
   running: false,
   log: [],
   pending: [],   // delayed effects: {whenDay, fn, desc, mitigatable}
