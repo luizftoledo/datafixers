@@ -6064,12 +6064,58 @@ const MARKETEIRO_LINES = [
   { text: '"Análise de sentimento" é nada. Quer mesmo é monitorar o adversário e derrubar conta dele.', area: 'desk' },
   { text: 'Adversário tá comprando seguidor, eu te garanto. Se você não responder na mesma moeda, perde.', area: 'desk' },
 ];
+// Dicas analíticas — o marketeiro observa o estado do jogador
+const MARKETEIRO_TIPS = [
+  { cond: s => s.walkCount < 3 && s.day >= 3 && s.intent < 38,
+    text: 'Cê tá quase não pisando na rua, viu? Pesquisa não sobe em sala fechada — os indecisos tão na esquina.' },
+  { cond: s => s.followers < 4500 && s.day >= 3,
+    text: 'Tô olhando teu perfil: tá morto. Sem seguidor, sem alcance. Posso resolver hoje mesmo.' },
+  { cond: s => s.oppIntent > s.intent + 4 && s.day >= 4,
+    text: 'Seu adversário tá colando. Sabe o que eu fazia agora? Soltava 40 perfis pra incomodar ele. Mas é você que sabe.' },
+  { cond: s => s.risk >= 65,
+    text: 'Tá esquentando aí, hein. TSE tá com você no radar. Diminui o ritmo das ousadias por uns dias.' },
+  { cond: s => s.trust < 40 && s.day >= 4,
+    text: 'Tua credibilidade despencou. Eleitor não tá comprando promessa. Precisa de impacto.' },
+  { cond: s => s.videoCount === 0 && s.day >= 4,
+    text: 'Cadê os vídeos? Eleitor decide olhando teu rosto. Sem cara na timeline, não vira voto.' },
+  { cond: s => s.money < 5 && s.day >= 4,
+    text: 'Caixa apertando. Posso indicar uma "reunião" off-record. Você decide.' },
+  { cond: s => s.day === 7 && s.intent < 40,
+    text: 'Faltam 3 dias. Tua intenção tá em ' + Math.round(s.intent) + '%. Sem virada, é segundo turno na melhor das hipóteses.' },
+  { cond: s => s.day === 9 && s.intent < 45,
+    text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã é redenção ou tumba.' },
+  { cond: s => s.illegalActs === 0 && s.day >= 5 && s.intent < s.oppIntent,
+    text: 'Você tá jogando limpo demais e perdendo. Política é guerra suja — quer ganhar ou quer ser exemplo?' },
+  { cond: s => s.illegalActs >= 2 && s.risk < 50,
+    text: 'Tá indo bem nas movimentações off-record. Aproveita que ninguém tá olhando ainda.' },
+  { cond: s => s.walkCount >= 5 && s.intent >= 50 && s.trust >= 60,
+    text: 'Você tá no caminho certo. Caminhada virou voto, credibilidade no teto. Vou ficar quieto.' },
+  { cond: s => s.flags.boughtFollowers && s.day >= 5 && !s.flags._exposedFollowers,
+    text: 'Aqueles seguidores que comprou: tá quase exposto. Tem que diluir com conteúdo real antes que vaze.' },
+  { cond: s => s.flags.didWhatsappBlast && s.risk >= 50,
+    text: 'Disparo de WhatsApp deixou rastro. Se vazar agora, eu não conheço você. Combinado?' },
+  { cond: s => s.flags.deepfakedAdv,
+    text: 'Aquele vídeo do adversário... a forense já tá analisando. Se forem rápidos, você cai antes da urna.' },
+];
+
 function maybeAppearMarketeiro(){
   if(state.day < 2 || state.day > 9) return;
   if(Math.random() > 0.6) return;
-  const line = MARKETEIRO_LINES[Math.floor(Math.random()*MARKETEIRO_LINES.length)];
+  // 60% das vezes: dica analítica baseada em stats. 40%: oferta tentadora
+  const useTip = Math.random() < 0.6;
+  let text = null;
+  if(useTip){
+    const elig = MARKETEIRO_TIPS.filter(t => { try { return t.cond(state); } catch(e){ return false; } });
+    if(elig.length){
+      text = elig[Math.floor(Math.random()*elig.length)].text;
+    }
+  }
+  if(!text){
+    const line = MARKETEIRO_LINES[Math.floor(Math.random()*MARKETEIRO_LINES.length)];
+    text = line.text;
+  }
   setTimeout(()=>{
-    bigNews('🎩 MARKETEIRO (oferta off the record)', `"${line.text}" — ele encosta na mesa esperando uma resposta.`, 'marketeiro');
+    bigNews('🎩 MARKETEIRO (sussurro)', `"${text}" — ele encosta na mesa esperando uma resposta.`, 'marketeiro');
   }, 500);
 }
 
@@ -6689,9 +6735,9 @@ function endGame(kind){
     lessons.push('🟡 Vai pro 2º turno. Empatou nas urnas — agora a campanha vira sprint de 3 semanas. O que você construiu até aqui é a base.');
   } else if(kind === 'derrota'){
     if(state.illegalActs >= 3){
-      lessons.push('😞 Derrota com risco TSE alto e exposições — a "bala de prata da última semana" virou desorganização da sua própria campanha. Pesquisador Fabio Malini explica: disparo gera percepção de que "todos estão falando" mesmo quando não há voto real ali.');
+      lessons.push('😞 Derrota com risco TSE alto e exposições — a "bala de prata da última semana" virou desorganização da sua própria campanha. Pesquisadores explicam: disparo gera percepção de que "todos estão falando" mesmo quando não há voto real ali.');
     } else if(state.walkCount + state.videoCount < 6){
-      lessons.push('😞 Derrota. Adversário foi mais à rua e às redes diretamente. Presença constante é o que a estrategista Carine Elpídio classifica como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
+      lessons.push('😞 Derrota. Adversário foi mais à rua e às redes diretamente. Estrategistas classificam presença constante como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
     } else {
       lessons.push('😞 Derrota apertada. Você fez a campanha possível em 10 dias — às vezes o adversário tem base mais consolidada.');
     }
