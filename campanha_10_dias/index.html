@@ -4435,9 +4435,93 @@ const ACTIONS = [
 // =====================================================================
 // HOTSPOT FLOW
 // =====================================================================
+// === Ofertas do marketeiro (citações literais da reportagem) ===
+const MARKETEIRO_OFFERS = [
+  {
+    actionId: 'neuro',
+    title: '🤖 40 neurobots com "cara e crachá"',
+    quote: '"Eu posso colocar 40 militantes virtuais pra falar mal dele [do próprio candidato]. E desses 40, depois eles retornam trazendo as coisas boas que ele fez."',
+    explain: 'Perfis falsos com endereço, idade, profissão. Cada um numa região. Cria onda artificial nas redes. Proibido pelo TSE (Resolução: chatbots e avatares sintéticos não podem simular diálogo de pessoa real).'
+  },
+  {
+    actionId: 'whatsBlast',
+    title: '📲 Disparo em massa via WhatsApp "esquentado"',
+    quote: '"A gente já deixa 100 números aquecendo durante um mês. Quando eu for utilizar aquele número, ele já está bem mais preparado e a duração é maior."',
+    explain: 'Cada número custa R$ 15-20 e dura 1-3 meses. "Esquentar" = usar de forma orgânica antes (entrar em grupos, mandar mensagem, postar status) pra não ser derrubado quando começar a disparar. Método de 2018, vivo em 2026.'
+  },
+  {
+    actionId: 'buyFollowers',
+    title: '👥 Pacote de seguidores reais (engajamento pago)',
+    quote: '"Hoje vem sendo cada vez mais impossível ter seguidores robôs. As operadoras de telefonia limitam a cinco números por CPF."',
+    explain: 'Plataformas de troca: pessoas reais ganham moedas virtuais por seguir/curtir/comentar, depois trocam por seguidores próprios ou dinheiro. R$ 100 pra 1.000+ seguidores. Estrategistas chamam de "desastre total" — o algoritmo penaliza.'
+  },
+  {
+    actionId: 'fakeOutrage',
+    title: '💬 Exército de comentários elogiosos',
+    quote: '"Quando se idolatra — \'ele é muito bom, foi um ótimo prefeito\' —, aquilo vai inundando a caixa de comentários, criando uma percepção de maioria baseada muito mais no amor do que no ódio."',
+    explain: 'Não é ataque — é elogio em massa. Pesquisadores explicam: cria "percepção de maioria" com risco jurídico menor que ataques. "Uma maneira de driblar a lógica jurídica."'
+  },
+  {
+    actionId: 'deepfakeAdv',
+    title: '🎭 Vídeo manipulado do adversário (deepfake)',
+    quote: '"Você quer fazer um estrago, você pode fazer um estrago."',
+    explain: 'Áudio + vídeo com fala fabricada do adversário. Custo baixo, efeito alto — MAS a forense de IA hoje detecta em horas. Detecção = cassação quase garantida.'
+  },
+  {
+    actionId: 'monitor',
+    title: '⚖️ IA jurídica de monitoramento + denúncias',
+    quote: '"Eu possuo uma IA jurídica que lê essas notícias e matérias e cria uma análise de risco. Hoje isso é uma das principais estratégias políticas para o pós-eleição."',
+    explain: 'Plataforma varre redes em busca de menções, cruza com legislação eleitoral, gera denúncias automáticas pro TSE e pras plataformas. Zona cinza: ferramenta legal, mas o volume vira abuso.'
+  },
+  {
+    actionId: 'deepfakeDef',
+    title: '🛡 Detector forense de deepfake (defesa)',
+    quote: '"Nós fazemos a varredura das mídias sociais, encontramos links ou vídeos ou imagens ou áudios que podem ser deepfakes e automatizamos a análise. O detector já providencia um relatório forense."',
+    explain: 'Ferramenta de defesa: se o adversário soltar deepfake contra você, sua equipe derruba antes de viralizar. Legal e útil.'
+  }
+];
+function openMarketeiroModal(){
+  const html = `
+    <div style="background:linear-gradient(180deg,#2a0810,#3a1015);border-left:3px solid #f6c453;padding:10px 14px;margin-bottom:10px;border-radius:4px">
+      <div style="font-family:'Press Start 2P',monospace;font-size:10px;color:#f6c453;margin-bottom:4px">🎩 MARKETEIRO DIGITAL</div>
+      <div style="font-size:16px;color:#fff;line-height:1.4;font-style:italic">"Tô aqui pra resolver o que você precisar. Tem coisa legal, tem coisa que ninguém precisa saber. Tudo precificado no que vai render. Escolhe."</div>
+    </div>
+  `;
+  const actions = MARKETEIRO_OFFERS.map(off => {
+    const a = ACTIONS.find(x => x.id === off.actionId);
+    if(!a) return null;
+    const availLeft = !a.available || a.available(state);
+    const reasons = [];
+    if(!availLeft) reasons.push('⛔ esgotado hoje');
+    if(a.energy > state.energy) reasons.push('⛔ sem energia');
+    if(a.cost > 0 && a.cost > state.money) reasons.push('⛔ sem dinheiro');
+    const disabled = reasons.length > 0;
+    return {
+      tag: a.tag,
+      title: off.title,
+      subtitle: `<em style="color:#f6c453">${off.quote}</em><br><span style="color:var(--muted);font-size:14px">${off.explain}</span>`,
+      cost: a.cost,
+      energy: a.energy,
+      disabled,
+      reasonNote: reasons.join(' · '),
+      onClick: ()=>{ if(disabled) return; executeAction(a); }
+    };
+  }).filter(Boolean);
+  openModal({
+    title: '🎩 OFERTAS OFF THE RECORD',
+    subt: 'Marketeiro digital',
+    body: html,
+    actions
+  });
+}
+
 function openHotspot(area){
   if(state.inDebate) return;
   if($('dayOverlay').classList.contains('show')) return;
+  if(area === 'marketeiro'){
+    openMarketeiroModal();
+    return;
+  }
   const acts = ACTIONS.filter(a => a.area === area && (!a.onlyOnDays || a.onlyOnDays.includes(state.day)));
   if(area === 'mic'){
     // antes do dia 10, só mostra info
