@@ -1266,6 +1266,72 @@
   .legend .legal { background: var(--legal); color: #14391a; }
   .legend .gray { background: var(--gray); color: #1a0f00; }
   .legend .illegal { background: var(--illegal); color: #4a0a0a; }
+  /* Prompt de tela cheia */
+  #fsPrompt {
+    position: fixed; inset: 0;
+    background: rgba(8,4,16,0.85);
+    z-index: 260;
+    align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  #fsPrompt.show { display: flex !important; }
+  .fsp-card {
+    background: var(--bg-card);
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 24px 28px;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 12px 0 rgba(0,0,0,0.5), 0 0 40px rgba(246,196,83,0.35);
+    animation: pop .25s ease;
+  }
+  .fsp-icon { font-size: 48px; line-height: 1; margin-bottom: 6px; }
+  .fsp-card h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 13px;
+    color: var(--gold);
+    margin: 4px 0 10px;
+    line-height: 1.4;
+  }
+  .fsp-card p {
+    font-size: 17px;
+    color: var(--text);
+    margin: 0 0 12px;
+    line-height: 1.4;
+  }
+  .fsp-shortcut {
+    background: var(--bg-card-2);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: var(--muted);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fsp-shortcut kbd {
+    display: inline-block;
+    background: var(--bg-card);
+    color: var(--gold);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 13px;
+    margin: 0 2px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+  }
+  .fsp-actions {
+    display: flex; flex-direction: column; gap: 8px;
+    align-items: stretch;
+  }
+  .fsp-actions button { font-family: 'Press Start 2P', monospace; font-size: 11px; padding: 12px; }
+
   /* Big news banner (centro da tela) */
   .bignews {
     position: fixed;
@@ -1581,6 +1647,23 @@
         <div class="sent-coltitle">RECOMENDAÇÃO</div>
         <div class="sent-reco" id="sentReco"></div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Prompt tela cheia (desktop) -->
+<div id="fsPrompt" style="display:none">
+  <div class="fsp-card">
+    <div class="fsp-icon">🖥️</div>
+    <h3>Joga em tela cheia pra aproveitar melhor</h3>
+    <p>O escritório, os menus e o debate funcionam melhor com a tela toda. Você pode entrar e sair quando quiser.</p>
+    <div class="fsp-shortcut">
+      <span>Atalhos:</span>
+      <kbd>F11</kbd> Windows · <kbd>⌃</kbd><kbd>⌘</kbd><kbd>F</kbd> Mac
+    </div>
+    <div class="fsp-actions">
+      <button type="button" class="btn primary" id="fspGo">⛶ ENTRAR EM TELA CHEIA</button>
+      <button type="button" class="btn" id="fspSkip">AGORA NÃO</button>
     </div>
   </div>
 </div>
@@ -6216,7 +6299,10 @@ $('ccStart').addEventListener('click', ()=>{
   state.candidate.city = $('ccCity').value.trim() || 'São Paulo';
   state.candidate.slogan = $('ccSlogan').value.trim() || 'Voto consciente, mandato sério';
   renderSantinho();
-  $('santinho').style.display = 'block';
+  // Sugerir tela cheia em desktop (não-touch, não já em fullscreen, e nunca recusado)
+  if(!isTouch && !document.fullscreenElement && !sessionStorage.getItem('fsDismissed')){
+    $('fsPrompt').classList.add('show');
+  }
   $('charCreate').style.display = 'none';
   $('hud').style.display = 'grid';
   $('gameGrid').style.display = 'grid';
@@ -6260,15 +6346,24 @@ restBtn.addEventListener('click', ()=>{
 });
 // Fullscreen toggle
 const fsBtn = $('fsBtn');
-fsBtn.addEventListener('click', ()=>{
+function goFullscreen(){
   const el = document.documentElement;
   if(!document.fullscreenElement && !document.webkitFullscreenElement){
     (el.requestFullscreen || el.webkitRequestFullscreen).call(el);
-    fsBtn.textContent = '⛶';
   } else {
     (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-    fsBtn.textContent = '⛶';
   }
+}
+fsBtn.addEventListener('click', goFullscreen);
+
+// Prompt de tela cheia (desktop)
+$('fspGo').addEventListener('click', ()=>{
+  $('fsPrompt').classList.remove('show');
+  goFullscreen();
+});
+$('fspSkip').addEventListener('click', ()=>{
+  $('fsPrompt').classList.remove('show');
+  try { sessionStorage.setItem('fsDismissed', '1'); } catch(e) {}
 });
 
 // Mobile vs desktop hint
