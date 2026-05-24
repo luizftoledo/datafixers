@@ -216,8 +216,8 @@
       z-index: 160 !important;
     }
     #quitBtn { display: none !important; }
-    #restBtn { right: 124px !important; left: auto !important; }
-    #fsBtn   { right: 68px !important; left: auto !important; }
+    #fsBtn   { display: none !important; } /* Fullscreen API instável em mobile (iOS Safari não suporta) */
+    #restBtn { right: 68px !important; left: auto !important; }
     #soundBtn{ right: 12px !important; left: auto !important; }
   }
   /* D-pad virtual (mobile) */
@@ -7036,9 +7036,11 @@ $('ccStart').addEventListener('click', ()=>{
   state.candidate.city = $('ccCity').value.trim() || 'São Paulo';
   state.candidate.slogan = $('ccSlogan').value.trim() || 'Voto consciente, mandato sério';
   renderSantinho();
-  // Sugerir tela cheia em desktop (não-touch, não já em fullscreen, e nunca recusado)
+  // Desktop: sugerir tela cheia. Mobile: avisar sobre modo silencioso.
   if(!isTouch && !document.fullscreenElement && !sessionStorage.getItem('fsDismissed')){
     $('fsPrompt').classList.add('show');
+  } else if(isTouch && !sessionStorage.getItem('silentWarned')){
+    showSilentWarning();
   }
   $('charCreate').style.display = 'none';
   $('hud').style.display = 'grid';
@@ -7114,6 +7116,21 @@ $('fspSkip').addEventListener('click', ()=>{
   $('fsPrompt').classList.remove('show');
   try { sessionStorage.setItem('fsDismissed', '1'); } catch(e) {}
 });
+
+// Aviso de modo silencioso (mobile)
+function showSilentWarning(){
+  openModal({
+    title: '🔊 SOM DO JOGO',
+    subt: 'Pra ouvir a trilha e os efeitos',
+    body: 'Se quiser ouvir o som do jogo, <b>desative o modo silencioso</b> do seu celular (no iPhone, é o interruptor lateral; no Android, o botão de volume). Você também pode usar fones.',
+    actions: [
+      { tag: 'legal', title: 'ENTENDI, BORA JOGAR', cost: 0, energy: 0, primary: true, onClick: ()=>{
+        try { sessionStorage.setItem('silentWarned', '1'); } catch(e){}
+        closeModal();
+      } }
+    ]
+  });
+}
 
 // Mobile vs desktop hint
 $('ctrlHint').innerHTML = isTouch
