@@ -1475,8 +1475,10 @@
       <div id="ccAvatars" class="cc-avatars"></div>
     </div>
 
-    <button class="btn primary" id="ccStart" style="font-size:13px;font-family:'Press Start 2P',monospace;padding:14px 22px">▶ COMEÇAR CAMPANHA</button>
-    <button class="btn" id="ccBack" style="margin-top:8px">VOLTAR</button>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:14px;width:100%">
+      <button type="button" class="btn primary" id="ccStart" style="font-size:13px;font-family:'Press Start 2P',monospace;padding:14px 22px">▶ COMEÇAR CAMPANHA</button>
+      <button type="button" class="btn" id="ccBack">VOLTAR</button>
+    </div>
   </div>
 
   <!-- D-pad virtual (mobile) -->
@@ -6104,11 +6106,12 @@ function setupCharCreate(){
   // Avatars
   const ava = $('ccAvatars');
   ava.innerHTML = '';
+  const styleLabels = { short:'curto', long:'longo', curly:'cacheado', afro:'black power', bun:'coque', bald:'careca' };
   AVATARS.forEach((a, i)=>{
     const box = document.createElement('div');
     box.style.cssText = 'cursor:pointer;border:3px solid #4a3a64;border-radius:6px;padding:6px;text-align:center;background:var(--bg-card-2);transition:all .15s';
     box.dataset.idx = i;
-    box.innerHTML = `<canvas width="32" height="48" style="image-rendering:pixelated;width:64px;height:96px;display:block;margin:0 auto"></canvas><div style="font-size:14px;color:var(--text);margin-top:4px">${a.name}</div>`;
+    box.innerHTML = `<canvas width="32" height="48" style="image-rendering:pixelated;width:64px;height:96px;display:block;margin:0 auto"></canvas><div style="font-size:13px;color:var(--muted);margin-top:4px">${styleLabels[a.style]||''}</div>`;
     const c = box.querySelector('canvas');
     const cx = c.getContext('2d');
     cx.imageSmoothingEnabled = false;
