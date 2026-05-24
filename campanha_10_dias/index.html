@@ -240,71 +240,75 @@
   #dpad .dp.right { right: 0; top: 45px; }
   /* D-pad desativado — usamos drag/joystick virtual em mobile agora */
   #dpad { display: none !important; }
-  /* Santinho fixo */
+  /* Santinho inline dentro da feed (no topo da sidebar) */
   #santinho {
-    position: fixed;
-    left: 8px; top: 50%; transform: translateY(-50%);
-    width: 130px;
-    background: var(--bg-card);
+    background: var(--bg-card-2);
     border: 2px solid var(--gold);
     border-radius: 6px;
     padding: 6px;
-    z-index: 140;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+    display: none;
+    grid-template-columns: 44px 1fr;
+    gap: 8px;
+    align-items: stretch;
     font-family: 'VT323', monospace;
   }
-  #santinho .santi-flag {
-    background: var(--gold);
-    color: #1a0f00;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 8px;
-    text-align: center;
-    padding: 3px 0;
-    border-radius: 3px;
-    margin-bottom: 4px;
+  #santinho.show { display: grid; }
+  #santinho .santi-portrait {
+    background: #88c8ff;
+    border-radius: 4px;
+    padding: 2px;
+    display: flex; align-items: center; justify-content: center;
   }
   #santinho canvas {
-    width: 100%;
-    height: auto;
+    width: 36px; height: 54px;
     image-rendering: pixelated;
-    background: #88c8ff;
-    border-radius: 3px;
     display: block;
   }
+  #santinho .santi-info {
+    display: flex; flex-direction: column;
+    min-width: 0;
+    gap: 2px;
+  }
   #santinho .santi-name {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text);
-    text-align: center;
-    margin-top: 4px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   #santinho .santi-num {
     background: var(--red);
     color: #fff;
     font-family: 'Press Start 2P', monospace;
-    font-size: 14px;
-    text-align: center;
-    padding: 4px 0;
+    font-size: 9px;
+    padding: 2px 4px;
     border-radius: 3px;
-    margin-top: 4px;
+    align-self: flex-start;
   }
   #santinho .santi-slogan {
     font-size: 12px;
     color: var(--gold);
-    text-align: center;
     line-height: 1.2;
-    margin-top: 4px;
     font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   #santinho .santi-city {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--muted);
-    text-align: center;
-    margin-top: 3px;
+    font-family: 'Press Start 2P', monospace;
+    letter-spacing: 0.5px;
   }
-  @media (max-width: 1200px){
-    #santinho { display: none !important; }
+  @media (max-width: 640px){
+    #santinho { padding: 4px; margin-bottom: 6px; }
+    #santinho canvas { width: 32px; height: 48px; }
+    #santinho .santi-name { font-size: 13px; }
   }
   /* Charcreate styles */
   .cc-grid {
@@ -1163,69 +1167,54 @@
     justify-content: center;
     box-sizing: border-box;
   }
-  .cover-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 24px;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  @media (max-width: 860px) {
-    .cover-body { grid-template-columns: 1fr; gap: 12px; }
-  }
   .cover-art-wrap {
     position: relative;
+    display: inline-block;
+    max-width: 1000px;
     width: 100%;
+    flex: 0 0 auto;
+    z-index: 1;
   }
   #coverArt {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 70vh;
+    max-height: 55vh;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.5), 0 0 28px rgba(246,196,83,0.3);
   }
-  .cover-side {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
+  .cover-overlay {
+    position: absolute;
+    left: 4%; right: 4%; bottom: 4%;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 10px;
+    z-index: 10;
+    pointer-events: none;
   }
-  .cover-side h2 {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 28px;
-    color: var(--gold);
-    margin: 0;
-    text-shadow: 3px 3px 0 #000;
+  .cover-overlay .legend, .cover-overlay button {
+    pointer-events: auto;
+    position: relative;
+    z-index: 11;
+    cursor: pointer;
   }
-  .cover-side .legend {
-    display: flex; gap: 8px; flex-wrap: wrap;
-    margin: 4px 0;
+  .cover-overlay .legend {
+    background: rgba(15,8,24,0.7);
+    padding: 6px 10px;
+    border-radius: 6px;
+    backdrop-filter: blur(2px);
   }
-  .cover-side button#startBtn {
+  .cover-overlay button {
     font-size: 14px;
     font-family: 'Press Start 2P', monospace;
-    padding: 16px 26px;
-    cursor: pointer;
-    position: relative;
-    z-index: 5;
-    margin-top: 6px;
-    box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+    padding: 14px 26px;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.6);
   }
-  .cover-credit {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.4;
-    margin: 8px 0 0;
-    font-style: italic;
-  }
-  @media (max-width: 860px) {
-    .cover-side { text-align: center; align-items: center; }
-    .cover-side .legend { justify-content: center; }
-    .cover-side h2 { font-size: 22px; }
+  @media (max-width: 640px){
+    .cover-overlay { left: 4px; right: 4px; bottom: 2%; gap: 6px; }
+    .cover-overlay .legend { padding: 4px 6px; gap: 4px; }
+    .cover-overlay .legend span { font-size: 7px; padding: 3px 5px; }
+    .cover-overlay button { font-size: 11px; padding: 10px 16px; }
   }
   .cover-foot {
     margin: 12px auto 0;
@@ -1451,6 +1440,7 @@
     </div>
 
     <aside class="feed">
+      <div id="santinho"></div>
       <h3>FEED DO DIA <span class="tag" id="feedDayTag">D1</span></h3>
       <div class="feed-list" id="feedList"></div>
     </aside>
@@ -1489,9 +1479,6 @@
     <button class="btn" id="ccBack" style="margin-top:8px">VOLTAR</button>
   </div>
 
-  <!-- Santinho fixo (aparece durante o jogo) -->
-  <div id="santinho" style="display:none"></div>
-
   <!-- D-pad virtual (mobile) -->
   <div id="dpad">
     <div class="dp up" data-dir="up">▲</div>
@@ -1501,32 +1488,28 @@
   </div>
 
   <div class="cover" id="cover">
-    <div class="cover-body">
-      <div class="cover-art-wrap">
-        <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"
-          onerror="document.getElementById('coverTitle').style.display='block'"/>
-      </div>
-      <div class="cover-side">
-        <h2 id="coverTitle">10 DIAS</h2>
-        <p class="lead">
-          Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
-        </p>
-        <p class="lead">
-          Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
-          inclusive ferramentas de IA, serviços do "submundo digital" e estratégias que desafiam a lei eleitoral.
-        </p>
-        <p class="lead">
-          Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
-        </p>
+    <div class="cover-art-wrap">
+      <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"
+        onerror="document.getElementById('coverTitle').style.display='block'"/>
+      <div class="cover-overlay">
         <div class="legend">
           <span class="legal">LEGAL</span>
           <span class="gray">ZONA CINZA</span>
           <span class="illegal">PROIBIDO PELO TSE</span>
         </div>
         <button type="button" class="btn primary" id="startBtn">▶ COMEÇAR</button>
-        <p class="cover-credit">Inspirado em fatos reais reportados sobre marketing digital na eleição de 2026.</p>
       </div>
     </div>
+    <h2 id="coverTitle" style="display:none">10 DIAS</h2>
+    <p class="lead">
+      Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
+      Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
+      inclusive ferramentas de IA, serviços do "submundo digital" e estratégias que desafiam a lei eleitoral.
+    </p>
+    <p class="lead">
+      Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
+      <span style="color:var(--muted);font-size:14px">Inspirado em fatos reais reportados sobre marketing digital na eleição de 2026.</span>
+    </p>
   </div>
 </div>
 
@@ -2680,26 +2663,19 @@ function drawMic(x,y){
   // sparkle (only when debate active)
 }
 
-// Avatares disponíveis (cores + estilo de cabelo)
+// Avatares disponíveis (6 presets de cores/estilos)
 const AVATARS = [
-  { name: 'Pedro',   skin:'#f3c9a0', hair:'#b87333', hair2:'#8a5020', shirt:'#3c7dc0', accent:'#cf3a3a', style:'short' },
-  { name: 'Ana',     skin:'#f3c9a0', hair:'#1a0f24', hair2:'#0a0510', shirt:'#cf6cad', accent:'#3a90c0', style:'long' },
-  { name: 'Marina',  skin:'#c89968', hair:'#3a2010', hair2:'#1a0a00', shirt:'#7dd87d', accent:'#f6c453', style:'curly' },
-  { name: 'João',    skin:'#a0866a', hair:'#1a0f24', hair2:'#0a0510', shirt:'#f6c453', accent:'#cf3a3a', style:'afro' },
-  { name: 'Beatriz', skin:'#e9c39e', hair:'#cf3a3a', hair2:'#a01a1a', shirt:'#8a5cf6', accent:'#fff', style:'bun' },
-  { name: 'Tarso',   skin:'#8a6a4a', hair:'#5a5a5a', hair2:'#3a3a3a', shirt:'#fff', accent:'#3a5a8a', style:'bald' }
-];
-const SLOGAN_OPTIONS = [
-  'Voto consciente, mandato sério',
-  'Pra quem a cidade esquece',
-  'Mandato com presença, não com show',
-  'Compromisso é projeto, não promessa',
-  'O Brasil que dá certo, todo dia',
-  'Pelo trabalho real, contra a fraude digital'
+  { skin:'#f3c9a0', hair:'#b87333', hair2:'#8a5020', shirt:'#3c7dc0', accent:'#cf3a3a', style:'short' },
+  { skin:'#f3c9a0', hair:'#1a0f24', hair2:'#0a0510', shirt:'#cf6cad', accent:'#3a90c0', style:'long' },
+  { skin:'#c89968', hair:'#3a2010', hair2:'#1a0a00', shirt:'#7dd87d', accent:'#f6c453', style:'curly' },
+  { skin:'#a0866a', hair:'#1a0f24', hair2:'#0a0510', shirt:'#f6c453', accent:'#cf3a3a', style:'afro' },
+  { skin:'#e9c39e', hair:'#cf3a3a', hair2:'#a01a1a', shirt:'#8a5cf6', accent:'#fff',    style:'bun' },
+  { skin:'#8a6a4a', hair:'#5a5a5a', hair2:'#3a3a3a', shirt:'#fff',    accent:'#3a5a8a', style:'bald' }
 ];
 
 function getCandidateColors(){
-  return AVATARS[state.candidate.avatar] || AVATARS[0];
+  const idx = state.candidate.avatar;
+  return AVATARS[idx|0] || AVATARS[0];
 }
 
 // Player avatar 12x20-ish, with direction + walk frames
@@ -5339,6 +5315,9 @@ function checkCassacao(){
 // =====================================================================
 function openModal({title, subt, body, actions, note}){
   sfx('modalOpen');
+  // Sempre limpar overlays pendentes ao abrir um modal novo
+  hidePhoneOverlay();
+  hideSentimentOverlay();
   // mini HUD sticky no modal
   const mh = $('modalMiniHud');
   if(mh && state.running){
@@ -6151,14 +6130,14 @@ function renderSantinho(){
   const el = $('santinho');
   if(!el) return;
   const c = state.candidate;
-  const ava = AVATARS[c.avatar] || AVATARS[0];
-  // canvas para o retrato pixel
+  el.classList.add('show');
   el.innerHTML = `
-    <div class="santi-flag">${c.city || 'CIDADE'}</div>
-    <canvas width="32" height="48"></canvas>
-    <div class="santi-name">${(c.name||'Você').toUpperCase()}</div>
-    <div class="santi-num">${c.number || '22'} PREFEITO</div>
-    <div class="santi-slogan">"${c.slogan || ''}"</div>
+    <div class="santi-portrait"><canvas width="32" height="48"></canvas></div>
+    <div class="santi-info">
+      <div class="santi-name">${(c.name||'Você').toUpperCase()}</div>
+      <div class="santi-num">${c.number || '22'} · ${(c.city||'CIDADE').toUpperCase()}</div>
+      <div class="santi-slogan">"${c.slogan || ''}"</div>
+    </div>
   `;
   const can = el.querySelector('canvas');
   const cx = can.getContext('2d');
