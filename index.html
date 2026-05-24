@@ -907,7 +907,18 @@
     (function () {
       const toggle = document.getElementById('navToggle');
       const links = document.getElementById('navLinks');
-      if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', () => links.classList.toggle('open'));
+      // fecha menu ao clicar em qualquer link
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => links.classList.remove('open'));
+      });
+      // fecha menu se clicar fora dele
+      document.addEventListener('click', (e) => {
+        if (!links.classList.contains('open')) return;
+        if (toggle.contains(e.target) || links.contains(e.target)) return;
+        links.classList.remove('open');
+      });
     })();
     // theme toggle (independent of language)
     (function () {
