@@ -2746,27 +2746,55 @@ function drawWall(){
     rect(wx+23,9,14,14,'#88c8ff');
     // sun if early
   }
-  // big election poster on wall (between windows)
-  const px0 = 132;
-  rect(px0, 6, 56, 22, PAL.paper);
-  rect(px0+2, 8, 52, 18, '#dab66b');
-  // candidate face mini
-  rect(px0+8, 10, 12, 14, PAL.player1);
-  rect(px0+8, 10, 12, 4, PAL.player2);
-  rect(px0+10, 14, 2, 2, PAL.black);
-  rect(px0+16, 14, 2, 2, PAL.black);
-  rect(px0+12, 19, 6, 1, PAL.red);
-  // VOTE text
-  ctx.fillStyle = '#3a2a1a';
-  ctx.font = '6px monospace';
-  // can't rely on font well; draw rectangles
-  for(let i=0;i<4;i++){
-    rect(px0+24+i*7, 12, 5, 2, '#3a2a1a');
+  drawCandidatePoster(132, 6);
+}
+
+// Santinho do candidato na parede (atualiza com look + número + nome)
+function drawCandidatePoster(px0, py0){
+  const W2 = 56, H2 = 22;
+  const c = getCandidateColors();
+  // moldura
+  rect(px0, py0, W2, H2, PAL.paper);
+  rect(px0+1, py0+1, W2-2, H2-2, '#dab66b');
+  // foto à esquerda (12x14)
+  const fx = px0+3, fy = py0+3;
+  rect(fx, fy, 12, 14, c.skin);
+  // cabelo conforme estilo
+  if(c.style === 'short'){
+    rect(fx, fy, 12, 4, c.hair);
+  } else if(c.style === 'long'){
+    rect(fx, fy, 12, 5, c.hair);
+    rect(fx-1, fy+3, 1, 8, c.hair);
+    rect(fx+12, fy+3, 1, 8, c.hair);
+  } else if(c.style === 'curly'){
+    rect(fx, fy-1, 12, 4, c.hair);
+    rect(fx-1, fy+1, 1, 3, c.hair);
+    rect(fx+12, fy+1, 1, 3, c.hair);
+  } else if(c.style === 'afro'){
+    rect(fx-1, fy-1, 14, 4, c.hair);
+  } else if(c.style === 'bun'){
+    rect(fx, fy, 12, 3, c.hair);
+    rect(fx+4, fy-2, 4, 3, c.hair);
+  } else if(c.style === 'bald'){
+    rect(fx+1, fy+2, 10, 1, shadeColor(c.skin, -15));
   }
-  rect(px0+24, 17, 28, 1, '#3a2a1a');
-  rect(px0+24, 21, 22, 2, '#3a2a1a');
-  // número 22 (prefeito)
-  txt('22', px0+30, 12, '#3a2a1a', 7);
+  // olhos
+  rect(fx+3, fy+6, 2, 1, '#000');
+  rect(fx+7, fy+6, 2, 1, '#000');
+  // sorriso
+  rect(fx+4, fy+10, 4, 1, '#8a3a3a');
+  // gola/camisa embaixo
+  rect(fx, fy+13, 12, 1, c.shirt);
+  // texto à direita: nome (curto) e número
+  const tx = px0 + 18;
+  const nm = (state.candidate.name || 'CAND').toUpperCase().slice(0, 10);
+  txt(nm, tx, py0+3, '#1a0f00', 5);
+  // número grande dourado
+  rect(tx, py0+9, 22, 6, '#cf3a3a');
+  txt((state.candidate.number||'22'), tx+2, py0+10, '#fff', 6);
+  // slogan em linhas pixel
+  rect(tx, py0+17, 30, 1, '#3a2a1a');
+  rect(tx, py0+19, 26, 1, '#3a2a1a');
 }
 
 function drawFloor(){
@@ -2953,8 +2981,7 @@ const LOOK_OPTIONS = {
   ],
   hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453', '#fff', '#7a4030'],
   skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a', '#5a3a20'],
-  shirt:  ['#3c7dc0', '#cf6cad', '#7dd87d', '#f6c453', '#8a5cf6', '#cf3a3a', '#222', '#fff'],
-  accent: ['#cf3a3a', '#3a90c0', '#f6c453', '#7dd87d', '#000', '#fff', '#ff9bd2', '#8a5cf6']
+  shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a', '#5a4030', '#e8e0d0']
 };
 
 function getCandidateColors(){
@@ -2994,7 +3021,6 @@ function drawPlayer(x,y,opts){
   rect(x+1, y+8+oy, 10, 2, shadeColor(c.shirt, -25));
   // collar
   rect(x+5, y+8+oy, 2, 2, c.skin);
-  if(facing==='down'){ rect(x+5, y+10+oy, 2, 4, c.accent); }
   // arms
   const armOffL = (moving && frame===1) ? -1 : 0;
   const armOffR = (moving && frame===3) ? -1 : 0;
@@ -4901,6 +4927,9 @@ function showPhoneOverlay(postId){
   const post = PHONE_POSTS[postId];
   if(!post) return;
   ov.style.display = 'block';
+  // auto-hide redundante (failsafe caso FX callback falhe)
+  clearTimeout(_phoneAutoHide);
+  _phoneAutoHide = setTimeout(hidePhoneOverlay, 4500);
   // atualiza nome dinâmico (número escolhido)
   const nameEl = ov.querySelector('.ph-name');
   if(nameEl){ nameEl.innerHTML = `candidato${state.candidate.number || '22'} <span style="color:#3a90d8">✓</span>`; }
@@ -4948,7 +4977,9 @@ function hidePhoneOverlay(){
   $('phoneOverlay').style.display = 'none';
   _phoneTimers.forEach(clearTimeout);
   _phoneTimers = [];
+  clearTimeout(_phoneAutoHide);
 }
+let _phoneAutoHide = null;
 
 // FX functions agora só pintam o canvas com tint dim (porque o DOM overlay faz o resto)
 function fxDim(t){
@@ -4986,13 +5017,18 @@ function showNewspaperOverlay(){
   $('newsStamp').textContent = isGood ? 'EXCLUSIVO' : 'CONTRADIÇÕES';
   $('newsStamp').style.background = isGood ? '#cf3a3a' : '#3a2a4a';
   $('newspaperOverlay').style.display = 'block';
+  clearTimeout(_newsAutoHide);
+  _newsAutoHide = setTimeout(hideNewspaperOverlay, 6000);
 }
-function hideNewspaperOverlay(){ $('newspaperOverlay').style.display = 'none'; }
+function hideNewspaperOverlay(){ $('newspaperOverlay').style.display = 'none'; clearTimeout(_newsAutoHide); }
 
 // ====== ANÁLISE DE SENTIMENTO (dashboard overlay) ======
+let _sentAutoHide = null, _newsAutoHide = null;
 function showSentimentOverlay(){
   const ov = $('sentimentOverlay');
   ov.style.display = 'block';
+  clearTimeout(_sentAutoHide);
+  _sentAutoHide = setTimeout(hideSentimentOverlay, 7000);
   const mentions = [
     { src: 'X.com @transporte_local', txt: '"Ônibus continuam lotados. Cadê a prefeitura?"', emotion: 'raiva' },
     { src: 'Facebook · grupo Bairro X', txt: '"Esperando mudança. Educação tá ruim demais."', emotion: 'indignação' },
@@ -5053,7 +5089,7 @@ function showSentimentOverlay(){
     sfx('legal');
   }, 1800);
 }
-function hideSentimentOverlay(){ $('sentimentOverlay').style.display = 'none'; }
+function hideSentimentOverlay(){ $('sentimentOverlay').style.display = 'none'; clearTimeout(_sentAutoHide); }
 
 FX.sentiment = (t)=>{ fxDim(t); };
 
@@ -6447,8 +6483,7 @@ function buildAvatarRows(){
     { prop: 'style',  label: 'CABELO (ESTILO)' },
     { prop: 'hair',   label: 'COR DO CABELO' },
     { prop: 'skin',   label: 'COR DA PELE' },
-    { prop: 'shirt',  label: 'CAMISA' },
-    { prop: 'accent', label: 'GRAVATA' }
+    { prop: 'shirt',  label: 'CAMISA' }
   ];
   rowsConfig.forEach(cfg => {
     const div = document.createElement('div');
@@ -6518,7 +6553,6 @@ function drawPlayerPreview(cx, look){
   r(x+1, y+8, 10, 7, c.shirt);
   r(x+1, y+8, 10, 2, shadeColor(c.shirt, -25));
   r(x+5, y+8, 2, 2, c.skin);
-  r(x+5, y+10, 2, 4, c.accent);
   r(x, y+9, 1, 5, c.shirt);
   r(x+11, y+9, 1, 5, c.shirt);
   r(x, y+13, 1, 2, c.skin);
