@@ -1857,7 +1857,7 @@
         <button class="btn primary" id="dayOverlayBtn">COMEÇAR DIA</button>
       </div>
       <div class="controls-row">
-        <span>Confiança: <b id="hudTrust">60</b>/100</span>
+        <span title="Confiança afeta: descontos de despesa, drift de indecisos, respostas no debate, resultado de entrevistas">Confiança: <b id="hudTrust">60</b>/100 <span id="hudTrustEmoji">🙂</span></span>
         <span id="ctrlHint"></span>
       </div>
     </div>
@@ -2365,7 +2365,11 @@ const Audio = (() => {
   function setPhase(p){
     p = Math.max(1, Math.min(5, p));
     mState.phase = p;
-    const dayBpm = Math.min(140, 80 + (_curDay - 1) * 4.5);
+    // Aceleração progressiva até D8, depois salto pra dar urgência D9/D10
+    let dayBpm;
+    if(_curDay >= 10)      dayBpm = 168;  // dia do debate — pulso máximo
+    else if(_curDay === 9) dayBpm = 148;  // véspera — visivelmente acelerado
+    else                   dayBpm = Math.min(132, 80 + (_curDay - 1) * 4.5);
     const phaseBpm = ({1: 86, 2: 96, 3: 108, 4: 124, 5: 140})[p];
     mState.bpm = Math.max(phaseBpm, dayBpm);
     mState.scaleName = (p >= 4) ? 'Ddorian' : 'Dminor';
@@ -3640,7 +3644,9 @@ function tickMove(dt){
     const dist = Math.hypot(ddx, ddy);
     const elapsed = performance.now() - (state.target.started || 0);
     // Ativa assim que estiver "perto o suficiente" (dist < 18) OU se travou (timedOut)
-    const timedOut = elapsed > (isTouch ? 1000 : 2000);
+    // Timeout reduzido pra evitar bug de "andar no lugar" quando o caminho passa
+    // dentro do obstáculo do próprio móvel.
+    const timedOut = elapsed > (isTouch ? 700 : 1200);
     if(dist < 18 || timedOut){
       const t = state.target;
       state.target = null;
@@ -3768,10 +3774,19 @@ function handleSceneTap(clientX, clientY){
   const hit = findHotspotAt(p.x, p.y);
   if(hit){
     const ap = APPROACH[hit.id] || { x: p.x, y: p.y };
-    // se já está perto, ativa direto (não precisa andar)
+    // 1) Se já está dentro/sobre a bbox do hotspot, ativa direto.
+    //    (Antes ficava andando no lugar porque tentava ir pro approach
+    //    point e o caminho passava dentro do obstáculo.)
+    const insideHotspot = state.px >= hit.x - 6 && state.px <= hit.x + hit.w + 6
+                       && state.py >= hit.y - 6 && state.py <= hit.y + hit.h + 12;
+    // 2) Ou se está perto o suficiente do approach point.
     const dx = state.px - ap.x, dy = state.py - ap.y;
-    if(Math.hypot(dx, dy) < 24){
+    const nearApproach = Math.hypot(dx, dy) < 40;
+    if(insideHotspot || nearApproach){
       state.facing = ap.face || state.facing;
+      // teleporta pro approach pra próxima animação ficar coerente
+      if(ap && canStand(ap.x, ap.y)){ state.px = ap.x; state.py = ap.y; }
+      state.target = null;
       highlightId = hit.id;
       sfx('tap');
       openHotspot(hit.id);
@@ -3969,6 +3984,19 @@ function updateHUD(){
   $('hudRiskBar').style.width = Math.max(0, Math.min(100, state.risk)) + '%';
   $('hudEnergy').textContent = `${state.energy}/${state.energyMax}`;
   $('hudTrust').textContent = Math.round(state.trust);
+  // Aviso visual da confiança
+  const emoji = state.trust < 25 ? '🚨' : state.trust < 45 ? '⚠️' : state.trust < 65 ? '🙂' : state.trust < 85 ? '😊' : '💚';
+  const trustEl = $('hudTrustEmoji');
+  if(trustEl) trustEl.textContent = emoji;
+  // Disparar bigNews quando cruza thresholds críticos (1x cada)
+  if(!state._trustWarned) state._trustWarned = {};
+  if(state.trust < 30 && !state._trustWarned[30]){
+    state._trustWarned[30] = true;
+    bigNews('⚠️ CONFIANÇA CRÍTICA', `Confiança em ${Math.round(state.trust)}/100. Eleitor não acredita em você — promessas no debate vão render menos.`, 'bad');
+  } else if(state.trust < 50 && !state._trustWarned[50]){
+    state._trustWarned[50] = true;
+    feedNews('OBSERVATÓRIO', `Confiança caiu pra ${Math.round(state.trust)}/100. Cuidado: indecisos migram pro adversário e respostas técnicas no debate perdem força.`, 'warn');
+  }
   $('feedDayTag').textContent = 'D'+state.day;
 }
 
@@ -4764,6 +4792,11 @@ function executeAction(a){
   const msg = a.apply(state);
   clampStats();
   updateHUD();
+  // Se gastou a última energia, marca pra dormir após o FX terminar.
+  // (Antes a checagem ficava só no callback de startFx, que podia não disparar.)
+  if(state.energy <= 0 && !state.endTriggered && state.day < 10 && !state.willSleep){
+    state.willSleep = true;
+  }
   toast(`${a.title} — ${msg}`, a.tag === 'illegal' ? 'bad' : (a.tag === 'legal' ? 'good' : null));
   const c = cnv;
   c.classList.remove('shake','flash-good','flash-bad');
@@ -4795,10 +4828,26 @@ function executeAction(a){
     hidePhoneOverlay();
     hideSentimentOverlay();
     hideNewspaperOverlay();
-    if(state.energy <= 0 && !state.endTriggered){
-      setTimeout(()=>{ goToSleep(); }, 2200);
+    if(state.willSleep && !state.sleeping && !state.endTriggered){
+      triggerEndOfDay();
     }
   });
+  // Failsafe: se o callback do FX não disparar por qualquer motivo
+  // (FX interrompido, overlay já fechado, etc), garante o sleep mesmo assim.
+  if(state.willSleep){
+    setTimeout(()=>{
+      if(state.willSleep && !state.sleeping && !state.endTriggered){
+        triggerEndOfDay();
+      }
+    }, dur + 1500);
+  }
+}
+
+function triggerEndOfDay(){
+  if(state.sleeping || state.endTriggered || !state.willSleep) return;
+  state.willSleep = false;
+  bigNews('FIM DO DIA', 'Você gastou toda sua energia. Hora de dormir.', 'event');
+  setTimeout(()=>{ if(!state.sleeping) goToSleep(); }, 1400);
 }
 
 function snapshotStats(){
@@ -6173,6 +6222,9 @@ function startDay(){
   state.videosToday = 0;
   state.meetingsToday = 0;
   state.intentLostToday = 0;
+  state.willSleep = false;
+  // os warnings de trust só ficam mudos por 1 dia (re-armam se cair de novo)
+  if(state.trust >= 50) state._trustWarned = {};
   // despesa operacional diária da campanha (equipe, gasolina, locação)
   // se confiança > 80, apoiadores voluntários reduzem custo
   const baseExpense = 10 + Math.floor(Math.random()*4);
@@ -6288,16 +6340,16 @@ function maybeAppearMarketeiro(){
 // =====================================================================
 const MODE_CONFIG = {
   tutorial: {
-    name: 'Tutorial', label: '😌 Tutorial',
-    desc: 'Aprenda as mecânicas. Adversário passivo, sem ataques surpresa, vitória quase garantida se jogar com cuidado.',
+    name: 'Tutorial', label: '😌 Tutorial (passivo)',
+    desc: 'Só pra aprender as mecânicas. ADVERSÁRIO NÃO ATACA — vitória quase garantida. Use só se nunca jogou antes.',
     dayCap: 3, leadPenalty: false,
     scheduledChance: { 3: 0, 5: 0, 7: 0 },
     dmgMul: 0.5, oppGrowthBonus: -0.6,
     spontaneousOppBoost: false, illegalRiskMul: 0.7,
   },
   normal: {
-    name: 'Normal', label: '🎯 Normal',
-    desc: 'Adversário ataca, mas só de leve. Ações honestas + uma defesa bem usada vencem em ~78% dos casos.',
+    name: 'Normal', label: '🎯 Normal (recomendado)',
+    desc: 'Adversário ataca de verdade (deepfake, bots, denúncia). Honesto sem defesa: 44% vitória 1T. Com defesa: 78%.',
     dayCap: 6, leadPenalty: true,
     scheduledChance: { 3: 0.5, 5: 0.6, 7: 0.7 },
     dmgMul: 1.0, oppGrowthBonus: 0,
@@ -6426,7 +6478,13 @@ function triggerOpponentAttack(attackId){
     if(trustDmg > 0) state.trust += trustDmg * 0.5;
   }
   Audio.music.stinger('attack');
-  feedNews(atk.headline, atk.text, 'bad');
+  // ataque grande = toma a tela; pequeno = só feed lateral
+  const lossIntent = Math.abs(atk.dmg.intent || 0);
+  if(lossIntent >= 5 || (atk.dmg.risk || 0) >= 15){
+    bigNews(`⚠️ ATAQUE — ${atk.headline}`, atk.text, 'bad');
+  } else {
+    feedNews(atk.headline, atk.text, 'bad');
+  }
 }
 
 function pickAttack(lead){
@@ -6877,6 +6935,11 @@ function startDebate(){
 
 function showDebateRound(){
   const q = DEBATE_QUESTIONS[debateState.idx];
+  // Embaralha as opções pra primeira não ser sempre a melhor
+  if(!q._shuffled){
+    q.options = q.options.slice().sort(()=>Math.random()-0.5);
+    q._shuffled = true;
+  }
   const isLast = debateState.idx === DEBATE_QUESTIONS.length - 1;
   $('modalActions').innerHTML = '';
   const html = `
@@ -6944,9 +7007,31 @@ function chooseAnswer(opt, timedOut){
   else if(dDelta <= 0) sfx('debateMiss');
   else sfx('click');
   let bonusMsg = [];
+  // RUÍDO: a plateia/jurados não respondem matemática — varia ±2pp
+  const noise = (Math.random() - 0.5) * 4;
+  dDelta += noise;
   // bonuses based on play history
   if(opt.walkBonus && state.walkCount >= 2){ dDelta += opt.walkBonus; bonusMsg.push(`+${opt.walkBonus} (você caminhou de verdade)`); }
   if(opt.videoBonus && state.videoCount >= 2){ dDelta += opt.videoBonus; bonusMsg.push(`+${opt.videoBonus} (presença autêntica nas redes)`); }
+  // PENALIDADES POR FALTA DE BASE
+  if(opt.tone === 'TÉCNICO' && !state.flags.publishedPlatform){
+    dDelta -= 3; cDelta -= 4;
+    bonusMsg.push('⚠️ Você falou "técnico" mas nunca publicou plano de governo. Soou improvisado.');
+  }
+  if(opt.tone === 'EMOCIONAL' && state.walkCount < 2){
+    dDelta -= 3; cDelta -= 3;
+    bonusMsg.push('⚠️ História emocional sem caminhada de campanha — soou ensaiado.');
+  }
+  // CONFIANÇA PESA: trust baixo derruba qualquer resposta "vendendo entrega"
+  if((opt.tone === 'TÉCNICO' || opt.tone === 'AUTÊNTICO') && state.trust < 40){
+    dDelta -= 4; cDelta -= 3;
+    bonusMsg.push(`⚠️ Confiança em ${Math.round(state.trust)}/100 — eleitor não acredita na sua promessa.`);
+  }
+  // CONFIANÇA ALTA AMPLIFICA respostas honestas
+  if((opt.tone === 'HONESTO' || opt.tone === 'AUTÊNTICO') && state.trust > 70){
+    dDelta += 2; cDelta += 2;
+    bonusMsg.push(`✅ Confiança ${Math.round(state.trust)}/100 — sua palavra vale.`);
+  }
   // penalties from history
   if(opt.illegalKiller && (state.flags.boughtFollowers || state.flags.neuroBots || state.flags.didWhatsappBlast)){
     dDelta = -10; cDelta = -15;
