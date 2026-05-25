@@ -1822,8 +1822,9 @@
     <div class="stat money" id="hud-money"><div class="label">CAIXA R$</div><div class="value" id="hudMoney">100k</div></div>
     <div class="stat followers" id="hud-followers"><div class="label">📱 SEGUIDORES</div><div class="value" id="hudFollowers">3.5k</div></div>
     <div class="stat risk" id="hud-risk"><div class="label">RISCO TSE</div><div class="value" id="hudRisk">0</div><div class="bar"><div id="hudRiskBar" style="width:0%"></div></div></div>
+    <div class="stat trust" id="hud-trust" title="Confiança do eleitor — afeta indecisos, debate, descontos e respostas a ataques"><div class="label">CONFIANÇA</div><div class="value" id="hudTrust">60</div><div class="bar"><div id="hudTrustBar" style="width:60%;background:#7dd87d"></div></div></div>
     <div class="stat energy" id="hud-energy"><div class="label">ENERGIA</div><div class="value" id="hudEnergy">5/5</div></div>
-    <div class="stat trust" id="hud-trust" style="display:none"></div>
+    <div class="stat mode-badge" id="hud-mode" title="Modo de dificuldade"><div class="label">MODO</div><div class="value" id="hudMode" style="font-size:12px;letter-spacing:0">Normal</div></div>
   </div>
 
   <div class="game-grid" id="gameGrid" style="display:none">
@@ -1857,7 +1858,6 @@
         <button class="btn primary" id="dayOverlayBtn">COMEÇAR DIA</button>
       </div>
       <div class="controls-row">
-        <span title="Confiança afeta: descontos de despesa, drift de indecisos, respostas no debate, resultado de entrevistas">Confiança: <b id="hudTrust">60</b>/100 <span id="hudTrustEmoji">🙂</span></span>
         <span id="ctrlHint"></span>
       </div>
     </div>
@@ -3687,8 +3687,17 @@ function tickMove(dt){
   } else if(canStand(state.px, ny)){
     state.py = ny;
   } else {
-    // stuck — clear target so user can retry
+    // stuck — se o target era um hotspot, abre direto (não fica andando no lugar)
+    const t = state.target;
     state.target = null;
+    if(t && t.hotspotId){
+      const ap = APPROACH[t.hotspotId];
+      if(ap && canStand(ap.x, ap.y)){
+        state.px = ap.x; state.py = ap.y;
+        state.facing = ap.face || state.facing;
+      }
+      openHotspot(t.hotspotId);
+    }
   }
   // walk frame
   state.walkAcc += step;
@@ -3984,10 +3993,18 @@ function updateHUD(){
   $('hudRiskBar').style.width = Math.max(0, Math.min(100, state.risk)) + '%';
   $('hudEnergy').textContent = `${state.energy}/${state.energyMax}`;
   $('hudTrust').textContent = Math.round(state.trust);
-  // Aviso visual da confiança
-  const emoji = state.trust < 25 ? '🚨' : state.trust < 45 ? '⚠️' : state.trust < 65 ? '🙂' : state.trust < 85 ? '😊' : '💚';
-  const trustEl = $('hudTrustEmoji');
-  if(trustEl) trustEl.textContent = emoji;
+  // Barra de confiança com cor que reflete o nível
+  const trustBar = $('hudTrustBar');
+  if(trustBar){
+    trustBar.style.width = Math.max(0, Math.min(100, state.trust)) + '%';
+    trustBar.style.background = state.trust < 30 ? '#ff7b7b' : state.trust < 55 ? '#f6c453' : '#7dd87d';
+  }
+  // Badge do modo
+  const hudMode = $('hudMode');
+  if(hudMode && state.mode){
+    const mc = MODE_CONFIG[state.mode];
+    if(mc) hudMode.textContent = mc.name;
+  }
   // Disparar bigNews quando cruza thresholds críticos (1x cada)
   if(!state._trustWarned) state._trustWarned = {};
   if(state.trust < 30 && !state._trustWarned[30]){
@@ -4385,11 +4402,19 @@ const ACTIONS = [
     tag: 'legal', energy: 0, cost: 0,
     desc: 'Você decide ir pra cama, jantar com a família, dormir cedo. Equipe entende — campanha cansa. Pula direto pro dia seguinte.',
     apply(s){
-      s.trust += 1;
+      const exausto = s.energy <= 0;
       s.energy = 0;
       s.legalActs++;
-      feedNews('SUA EQUIPE', 'Candidato encerrou o dia mais cedo. Folga estratégica.', 'event');
-      return 'Dia encerrado, +1 confiança';
+      if(exausto){
+        // Já gastou tudo — dormir é só natural, sem bônus de "folga"
+        feedNews('SUA EQUIPE', 'Candidato exausto encerrou o dia. Amanhã tem mais.', 'event');
+        return 'Dia encerrado';
+      } else {
+        // Foi pra cama com energia sobrando — bônus de confiança por descanso real
+        s.trust += 1;
+        feedNews('SUA EQUIPE', 'Candidato encerrou o dia mais cedo. Folga estratégica.', 'event');
+        return 'Dia encerrado, +1 confiança';
+      }
     }
   },
   // ===== AÇÕES DEFENSIVAS — protegem contra ataques do adversário =====
@@ -4792,10 +4817,15 @@ function executeAction(a){
   const msg = a.apply(state);
   clampStats();
   updateHUD();
-  // Se gastou a última energia, marca pra dormir após o FX terminar.
-  // (Antes a checagem ficava só no callback de startFx, que podia não disparar.)
-  if(state.energy <= 0 && !state.endTriggered && state.day < 10 && !state.willSleep){
-    state.willSleep = true;
+  // Se gastou a última energia, agenda fim de dia (sem flag persistente — timer direto).
+  if(state.energy <= 0 && state.day < 10 && !state.endTriggered && !state.sleeping){
+    if(state._endOfDayTimer) clearTimeout(state._endOfDayTimer);
+    state._endOfDayTimer = setTimeout(()=>{
+      state._endOfDayTimer = null;
+      if(state.sleeping || state.endTriggered) return;
+      bigNews('FIM DO DIA', 'Energia esgotada. A equipe te manda dormir — amanhã tem mais.', 'event');
+      setTimeout(()=>{ if(!state.sleeping && !state.endTriggered) goToSleep(); }, 1600);
+    }, 3000);
   }
   toast(`${a.title} — ${msg}`, a.tag === 'illegal' ? 'bad' : (a.tag === 'legal' ? 'good' : null));
   const c = cnv;
@@ -4828,26 +4858,7 @@ function executeAction(a){
     hidePhoneOverlay();
     hideSentimentOverlay();
     hideNewspaperOverlay();
-    if(state.willSleep && !state.sleeping && !state.endTriggered){
-      triggerEndOfDay();
-    }
   });
-  // Failsafe: se o callback do FX não disparar por qualquer motivo
-  // (FX interrompido, overlay já fechado, etc), garante o sleep mesmo assim.
-  if(state.willSleep){
-    setTimeout(()=>{
-      if(state.willSleep && !state.sleeping && !state.endTriggered){
-        triggerEndOfDay();
-      }
-    }, dur + 1500);
-  }
-}
-
-function triggerEndOfDay(){
-  if(state.sleeping || state.endTriggered || !state.willSleep) return;
-  state.willSleep = false;
-  bigNews('FIM DO DIA', 'Você gastou toda sua energia. Hora de dormir.', 'event');
-  setTimeout(()=>{ if(!state.sleeping) goToSleep(); }, 1400);
 }
 
 function snapshotStats(){
@@ -6222,7 +6233,7 @@ function startDay(){
   state.videosToday = 0;
   state.meetingsToday = 0;
   state.intentLostToday = 0;
-  state.willSleep = false;
+  if(state._endOfDayTimer){ clearTimeout(state._endOfDayTimer); state._endOfDayTimer = null; }
   // os warnings de trust só ficam mudos por 1 dia (re-armam se cair de novo)
   if(state.trust >= 50) state._trustWarned = {};
   // despesa operacional diária da campanha (equipe, gasolina, locação)
@@ -6357,21 +6368,21 @@ const MODE_CONFIG = {
   },
   dificil: {
     name: 'Difícil', label: '🔥 Difícil',
-    desc: 'Ataques mais frequentes e duros. Adversário cresce rápido. Defesas viram obrigatórias — sem elas, ~9% de chance de derrota.',
-    dayCap: 8, leadPenalty: true,
-    scheduledChance: { 3: 0.7, 5: 0.8, 7: 0.9 },
-    dmgMul: 1.25, oppGrowthBonus: 0.5,
-    spontaneousOppBoost: false, illegalRiskMul: 1.2,
-    leadThresholdLow: 4,
+    desc: 'Ataques quase todo dia, adversário cresce forte. Defesa é obrigatória — sem ela, ~26% chance de DERROTA. Vitória 1T fica em 5%.',
+    dayCap: 9, leadPenalty: true,
+    scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
+    dmgMul: 1.4, oppGrowthBonus: 0.8,
+    spontaneousOppBoost: false, illegalRiskMul: 1.3,
+    leadThresholdLow: 2,
   },
   realista: {
     name: 'Realista', label: '⚖️ Realista',
-    desc: 'Como uma campanha de verdade. Adversário tem eventos positivos espontâneos (endosso, viral). Honesto sem defesa: 17% de chance de vitória, 17% de derrota.',
-    dayCap: 8, leadPenalty: true,
-    scheduledChance: { 3: 0.7, 5: 0.8, 7: 0.9 },
-    dmgMul: 1.25, oppGrowthBonus: 0.5,
-    spontaneousOppBoost: true, illegalRiskMul: 1.2,
-    leadThresholdLow: 4,
+    desc: 'Como campanha de verdade. Adversário também tem viral/endosso. Honesto sem defesa: 1% vitória, 53% derrota. Mesmo com defesa: 4% vitória, 36% derrota.',
+    dayCap: 9, leadPenalty: true,
+    scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
+    dmgMul: 1.45, oppGrowthBonus: 0.9,
+    spontaneousOppBoost: true, illegalRiskMul: 1.35,
+    leadThresholdLow: 2,
   },
 };
 
@@ -6478,13 +6489,8 @@ function triggerOpponentAttack(attackId){
     if(trustDmg > 0) state.trust += trustDmg * 0.5;
   }
   Audio.music.stinger('attack');
-  // ataque grande = toma a tela; pequeno = só feed lateral
-  const lossIntent = Math.abs(atk.dmg.intent || 0);
-  if(lossIntent >= 5 || (atk.dmg.risk || 0) >= 15){
-    bigNews(`⚠️ ATAQUE — ${atk.headline}`, atk.text, 'bad');
-  } else {
-    feedNews(atk.headline, atk.text, 'bad');
-  }
+  // Todo ataque vira bigNews pra não passar batido
+  bigNews(`⚠️ ATAQUE — ${atk.headline}`, atk.text, 'bad');
 }
 
 function pickAttack(lead){
@@ -6570,14 +6576,17 @@ function runFixedEvents(){
 
   // ===== ATAQUES ADVERSÁRIOS DINÂMICOS =====
   const _m = modeCfg();
-  // Camada 1: lead penalty (a partir do D3, escala com vantagem)
-  if(d >= 3 && d <= 9){
+  // Camada 1: lead penalty (a partir do D2, escala com vantagem)
+  if(d >= 2 && d <= 9){
     maybeTriggerOpponentAttacks({ leadPenalty: true });
   }
-  // Camada 2: ataques coordenados em D3/D5/D7 (chance varia por modo)
-  if(d === 3 && Math.random() < _m.scheduledChance[3]) maybeTriggerOpponentAttacks({ scheduled: true });
-  if(d === 5 && Math.random() < _m.scheduledChance[5]) maybeTriggerOpponentAttacks({ scheduled: true });
-  if(d === 7 && Math.random() < _m.scheduledChance[7]) maybeTriggerOpponentAttacks({ scheduled: true });
+  // Camada 2: ataques coordenados nos dias configurados pelo modo
+  const sc = _m.scheduledChance || {};
+  for(const key of Object.keys(sc)){
+    if(d === +key && Math.random() < sc[key]){
+      maybeTriggerOpponentAttacks({ scheduled: true });
+    }
+  }
 
   // ===== BOOST ESPONTÂNEO DO ADVERSÁRIO (só modo realista) =====
   if(_m.spontaneousOppBoost){
@@ -7509,6 +7518,11 @@ $('ccStart').addEventListener('click', ()=>{
   Audio.init();
   Audio.resume();
   Audio.music.start(1);
+  // Aviso GRANDE na tela mostrando o modo escolhido
+  setTimeout(()=>{
+    const mc = MODE_CONFIG[state.mode];
+    bigNews(`MODO ${mc.name.toUpperCase()}`, mc.desc, mc.spontaneousOppBoost || mc.dmgMul > 1.2 ? 'bad' : (mc.dmgMul < 1 ? 'good' : 'event'));
+  }, 600);
   feedNews('SUA EQUIPE', `Empate técnico. Faltam 10 dias. Modo: <b>${MODE_CONFIG[state.mode].name}</b>.`, 'event');
   startDay();
   updateHUD();
