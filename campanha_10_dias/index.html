@@ -359,6 +359,48 @@
     border-radius: 4px;
     color: var(--text);
   }
+  /* Seletor de dificuldade */
+  .cc-mode-section {
+    margin-top: 14px;
+    padding: 12px;
+    background: var(--bg-card-2);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+  }
+  .cc-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .cc-mode-btn {
+    padding: 8px 6px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    background: #2a1e3a;
+    border: 2px solid var(--border);
+    border-radius: 3px;
+    color: var(--text);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.12s;
+  }
+  .cc-mode-btn:hover { border-color: var(--gold); }
+  .cc-mode-btn.selected {
+    background: var(--gold);
+    color: #1a1424;
+    border-color: var(--gold);
+  }
+  .cc-mode-desc {
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    color: var(--muted);
+    min-height: 38px;
+    line-height: 1.3;
+  }
+  @media (min-width: 600px){
+    .cc-mode-grid { grid-template-columns: repeat(4, 1fr); }
+  }
   /* Avatar builder */
   .cc-builder {
     display: grid;
@@ -1434,6 +1476,26 @@
     max-height: 100vh;
     padding-bottom: 24px;
   }
+  .cover-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 42px;
+    color: var(--gold);
+    margin: 0 0 4px;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  }
+  .cover-subtitle {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: var(--text);
+    margin: 0 0 14px;
+    letter-spacing: 2px;
+    opacity: 0.85;
+  }
+  @media (max-width: 640px){
+    .cover-title { font-size: 26px; letter-spacing: 3px; margin-bottom: 2px; }
+    .cover-subtitle { font-size: 17px; margin-bottom: 8px; }
+  }
   .cover-art-wrap {
     position: relative;
     display: inline-block;
@@ -1838,6 +1900,12 @@
       <div class="cc-builder-rows" id="ccBuilderRows"></div>
     </div>
 
+    <div class="cc-mode-section">
+      <div class="cc-label" style="margin-bottom:6px">DIFICULDADE</div>
+      <div class="cc-mode-grid" id="ccModeGrid"></div>
+      <div class="cc-mode-desc" id="ccModeDesc"></div>
+    </div>
+
     <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:14px;width:100%">
       <button type="button" class="btn primary" id="ccStart" style="font-size:13px;font-family:'Press Start 2P',monospace;padding:14px 22px">▶ COMEÇAR CAMPANHA</button>
       <button type="button" class="btn" id="ccBack">VOLTAR</button>
@@ -1853,9 +1921,10 @@
   </div>
 
   <div class="cover" id="cover">
+    <h1 class="cover-title">10 DIAS</h1>
+    <p class="cover-subtitle">jogo eleitoral</p>
     <div class="cover-art-wrap">
-      <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"
-        onerror="document.getElementById('coverTitle').style.display='block'"/>
+      <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"/>
       <div class="cover-overlay">
         <div class="legend">
           <span class="legal">LEGAL</span>
@@ -1865,7 +1934,6 @@
         <button type="button" class="btn primary" id="startBtn">▶ COMEÇAR</button>
       </div>
     </div>
-    <h2 id="coverTitle" style="display:none">10 DIAS</h2>
     <p class="lead">
       Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
       Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
@@ -3820,6 +3888,7 @@ window.addEventListener('keyup', (e)=>{
 
 // ===== GAME STATE =====
 const state = {
+  mode: 'normal',  // tutorial | normal | dificil | realista
   day: 1,
   energy: 5,
   energyMax: 5,
@@ -3851,7 +3920,9 @@ const state = {
   log: [],
   pending: [],   // delayed effects: {whenDay, fn, desc, mitigatable}
   shieldDeepfakeDays: 0,
-  flags: { boughtFollowers:false, didWhatsappBlast:false, neuroBots:false, deepfakedAdv:false, monitoringIA:false, sentimentIA:false },
+  flags: { boughtFollowers:false, didWhatsappBlast:false, neuroBots:false, deepfakedAdv:false, monitoringIA:false, sentimentIA:false, monitorRedes:false, treinoPortavoz:false, transparencia:false },
+  // cap diário de dano de intent por ataques externos
+  intentLostToday: 0,
   // counts for debate context
   legalActs: 0, grayActs:0, illegalActs:0,
   walkCount: 0,
@@ -4291,6 +4362,49 @@ const ACTIONS = [
       s.legalActs++;
       feedNews('SUA EQUIPE', 'Candidato encerrou o dia mais cedo. Folga estratégica.', 'event');
       return 'Dia encerrado, +1 confiança';
+    }
+  },
+  // ===== AÇÕES DEFENSIVAS — protegem contra ataques do adversário =====
+  {
+    id: 'monitorRedes', area: 'desk', title: 'Contratar monitoramento de redes (defensivo)',
+    tag: 'legal', energy: 1, cost: 8,
+    desc: 'Plataforma fica vasculhando posts, prints e vídeos sobre você nos grupos do adversário. Equipe responde antes da coisa pegar tração. 35% de chance de desarmar cada ataque orgânico futuro.',
+    available(s){ return !s.flags.monitorRedes && s.money >= 8; },
+    apply(s){
+      s.money -= 8;
+      s.trust += 1;
+      s.flags.monitorRedes = true;
+      s.legalActs++;
+      feedNews('SUA EQUIPE DIGITAL', 'Monitoramento de redes contratado. Equipe agora vê ataques antes deles viralizarem.', 'good');
+      return '+1 confiança, antecipa ataques (35% bloqueio)';
+    }
+  },
+  {
+    id: 'treinoPortavoz', area: 'sofa', title: 'Treinar porta-voz pra crise',
+    tag: 'legal', energy: 1, cost: 12,
+    desc: 'Sessão com porta-voz da campanha pra rebater ataques rápido e em tom certo. Quando o adversário soltar print/corte/fake, a resposta sai melhor. Reduz dano de ataques orgânicos pela metade.',
+    available(s){ return !s.flags.treinoPortavoz && s.money >= 12; },
+    apply(s){
+      s.money -= 12;
+      s.trust += 2;
+      s.flags.treinoPortavoz = true;
+      s.legalActs++;
+      feedNews('SUA EQUIPE', 'Porta-voz treinada. Resposta rápida e calibrada quando o adversário atacar.', 'good');
+      return '+2 confiança, ataques orgânicos rendem 50% menos';
+    }
+  },
+  {
+    id: 'transparencia', area: 'phone', title: 'Publicar declaração de transparência (proativo)',
+    tag: 'legal', energy: 1, cost: 0,
+    desc: 'Você publica antecipadamente todos seus bens, agenda da semana, doadores até aqui. Eleitor vê e guarda. Quando o adversário tentar manchar sua imagem, parte da blindagem já tá feita. Reduz dano à confiança pela metade.',
+    available(s){ return !s.flags.transparencia; },
+    apply(s){
+      s.trust += 4;
+      s.intent += 0.5;
+      s.flags.transparencia = true;
+      s.legalActs++;
+      feedNews('SEU PERFIL', 'Declaração pública de transparência. Imprensa cita. Eleitor lembra quando vier acusação.', 'good');
+      return '+4 confiança, ataques rendem 50% menos dano de imagem';
     }
   },
   {
@@ -6058,6 +6172,7 @@ function startDay(){
   state.walksToday = 0;
   state.videosToday = 0;
   state.meetingsToday = 0;
+  state.intentLostToday = 0;
   // despesa operacional diária da campanha (equipe, gasolina, locação)
   // se confiança > 80, apoiadores voluntários reduzem custo
   const baseExpense = 10 + Math.floor(Math.random()*4);
@@ -6168,6 +6283,178 @@ function maybeAppearMarketeiro(){
   }, 500);
 }
 
+// =====================================================================
+// MODOS DE DIFICULDADE — ditam intensidade dos ataques e crescimento do adv
+// =====================================================================
+const MODE_CONFIG = {
+  tutorial: {
+    name: 'Tutorial', label: '😌 Tutorial',
+    desc: 'Aprenda as mecânicas. Adversário passivo, sem ataques surpresa, vitória quase garantida se jogar com cuidado.',
+    dayCap: 3, leadPenalty: false,
+    scheduledChance: { 3: 0, 5: 0, 7: 0 },
+    dmgMul: 0.5, oppGrowthBonus: -0.6,
+    spontaneousOppBoost: false, illegalRiskMul: 0.7,
+  },
+  normal: {
+    name: 'Normal', label: '🎯 Normal',
+    desc: 'Adversário ataca, mas só de leve. Ações honestas + uma defesa bem usada vencem em ~78% dos casos.',
+    dayCap: 6, leadPenalty: true,
+    scheduledChance: { 3: 0.5, 5: 0.6, 7: 0.7 },
+    dmgMul: 1.0, oppGrowthBonus: 0,
+    spontaneousOppBoost: false, illegalRiskMul: 1.0,
+  },
+  dificil: {
+    name: 'Difícil', label: '🔥 Difícil',
+    desc: 'Ataques mais frequentes e duros. Adversário cresce rápido. Defesas viram obrigatórias — sem elas, ~9% de chance de derrota.',
+    dayCap: 8, leadPenalty: true,
+    scheduledChance: { 3: 0.7, 5: 0.8, 7: 0.9 },
+    dmgMul: 1.25, oppGrowthBonus: 0.5,
+    spontaneousOppBoost: false, illegalRiskMul: 1.2,
+    leadThresholdLow: 4,
+  },
+  realista: {
+    name: 'Realista', label: '⚖️ Realista',
+    desc: 'Como uma campanha de verdade. Adversário tem eventos positivos espontâneos (endosso, viral). Honesto sem defesa: 17% de chance de vitória, 17% de derrota.',
+    dayCap: 8, leadPenalty: true,
+    scheduledChance: { 3: 0.7, 5: 0.8, 7: 0.9 },
+    dmgMul: 1.25, oppGrowthBonus: 0.5,
+    spontaneousOppBoost: true, illegalRiskMul: 1.2,
+    leadThresholdLow: 4,
+  },
+};
+
+function modeCfg(){ return MODE_CONFIG[state.mode] || MODE_CONFIG.normal; }
+
+// =====================================================================
+// ATAQUES DO ADVERSÁRIO — pool dinâmico (lead penalty + D3/D5/D7)
+// =====================================================================
+const OPPONENT_ATTACKS = {
+  deepfakeAudio: {
+    kind: 'ia', shieldable: 'deepfake',
+    headline: 'GRUPOS DE WHATSAPP',
+    text: 'Áudio "seu" gerado por IA circulando — você falando frases que nunca disse. Equipe corre pra desmentir.',
+    dmg: { intent:-5, trust:-7 }
+  },
+  printForaContexto: {
+    kind: 'organico',
+    headline: 'TWITTER VIRAL',
+    text: 'Print de uma fala sua de 2018 viralizou recortado fora de contexto. Adversário compartilhou primeiro.',
+    dmg: { intent:-4, trust:-5 }
+  },
+  botsAtacando: {
+    kind: 'organico',
+    headline: 'SEU INSTAGRAM',
+    text: 'Onda de comentários hostis em todos seus posts. Padrão coordenado — bots da oposição.',
+    dmg: { intent:-3, followers:-800 }
+  },
+  corteEditado: {
+    kind: 'organico',
+    headline: 'YOUTUBE',
+    text: 'Vídeo editado seu rodando: cortes deturpando uma resposta sua de 1 minuto pra parecer outra coisa.',
+    dmg: { intent:-5, trust:-3 }
+  },
+  pesquisaFalsa: {
+    kind: 'organico',
+    headline: 'PORTAL SUSPEITO',
+    text: 'Pesquisa "Instituto não-registrado" vazou mostrando você 10pp atrás. Falsa, mas tá circulando.',
+    dmg: { intent:-4 }
+  },
+  denunciaLaranja: {
+    kind: 'organico',
+    headline: 'MP-ELEITORAL',
+    text: 'Cidadão "preocupado" protocolou denúncia contra você no MP. Sem prova, mas vai gerar manchete.',
+    dmg: { risk:18, trust:-3, intent:-1 }
+  },
+  vazamentoIA: {
+    kind: 'ia', shieldable: 'deepfake',
+    headline: 'GRUPO BOLSONARO',
+    text: '"Vazamento" de áudio com sua voz tratando eleitor com desprezo. Sintetizado por IA.',
+    dmg: { intent:-6, trust:-5 }
+  },
+  faleAntigo: {
+    kind: 'organico',
+    headline: 'COLUNA',
+    text: 'Colunista resgatou uma fala antiga sua que envelheceu mal. Tá em todos os agregadores.',
+    dmg: { intent:-4, trust:-3 }
+  },
+  escandaloPlantado: {
+    kind: 'organico', requiresLead: 12,
+    headline: 'JORNAL',
+    text: 'Reportagem "exclusiva" insinuando esquema irregular na sua campanha. Foto fora de contexto. Vai render por dias.',
+    dmg: { intent:-7, trust:-10, risk:8 }
+  },
+};
+
+function applyAttackDamage(dmg){
+  const m = modeCfg();
+  const remaining = m.dayCap - state.intentLostToday;
+  const intentLoss = Math.min(Math.abs(dmg.intent || 0) * m.dmgMul, Math.max(0, remaining));
+  state.intent -= intentLoss;
+  state.intentLostToday += intentLoss;
+  state.trust += (dmg.trust || 0) * m.dmgMul;
+  state.followers = Math.max(0, state.followers + (dmg.followers || 0) * m.dmgMul);
+  state.risk += (dmg.risk || 0) * m.dmgMul;
+}
+
+function triggerOpponentAttack(attackId){
+  const atk = OPPONENT_ATTACKS[attackId];
+  if(!atk) return;
+  // shield deepfake: desarma totalmente
+  if(atk.shieldable === 'deepfake' && state.shieldDeepfakeDays > 0){
+    state.intent += 2; state.trust += 2;
+    feedNews('SEU JURÍDICO', `Forense detectou conteúdo IA do adversário (${atk.headline.toLowerCase()}) — derrubado antes de viralizar.`, 'good');
+    return;
+  }
+  // monitor de redes: 35% chance de antecipar ataque orgânico
+  if(atk.kind === 'organico' && state.flags.monitorRedes && Math.random() < 0.35){
+    feedNews('SEU MONITORAMENTO', `Detectou cedo uma jogada do adversário (${atk.headline.toLowerCase()}) e equipe respondeu antes de pegar tração.`, 'good');
+    return;
+  }
+  // aplica dano com mitigações
+  const intentBefore = state.intentLostToday;
+  const trustBefore = state.trust;
+  applyAttackDamage(atk.dmg);
+  // porta-voz: -50% no intent loss de ataques orgânicos
+  if(atk.kind === 'organico' && state.flags.treinoPortavoz){
+    const applied = state.intentLostToday - intentBefore;
+    state.intent += applied * 0.5;
+    state.intentLostToday -= applied * 0.5;
+  }
+  // transparência: -50% no dano de confiança
+  if(state.flags.transparencia){
+    const trustDmg = trustBefore - state.trust;
+    if(trustDmg > 0) state.trust += trustDmg * 0.5;
+  }
+  Audio.music.stinger('attack');
+  feedNews(atk.headline, atk.text, 'bad');
+}
+
+function pickAttack(lead){
+  const pool = Object.keys(OPPONENT_ATTACKS).filter(k => {
+    const req = OPPONENT_ATTACKS[k].requiresLead || 0;
+    return lead >= req;
+  });
+  return pool[Math.floor(Math.random()*pool.length)];
+}
+
+function maybeTriggerOpponentAttacks(opts){
+  const m = modeCfg();
+  const lead = state.intent - state.oppIntent;
+  if(opts.scheduled){
+    triggerOpponentAttack(pickAttack(lead));
+  }
+  if(opts.leadPenalty && m.leadPenalty){
+    const thresh = m.leadThresholdLow || 5;
+    if(lead <= thresh) return;
+    const chance = Math.min(1.0, 0.25 + (lead - thresh) * 0.06);
+    if(Math.random() < chance){
+      triggerOpponentAttack(pickAttack(lead));
+      if(lead > 12 && Math.random() < 0.6) triggerOpponentAttack(pickAttack(lead));
+      if(lead > 18 && Math.random() < 0.4) triggerOpponentAttack(pickAttack(lead));
+    }
+  }
+}
+
 function runFixedEvents(){
   const d = state.day;
   maybeAppearMarketeiro();
@@ -6191,12 +6478,14 @@ function runFixedEvents(){
     feedNews('COLUNA DE POLÍTICA', 'Repórter pede entrevista. Boa janela se você for honesto. Pega no jornal local.', 'event');
   }
   if(d === 6){
+    const m = modeCfg();
     const pena = (state.illegalActs * 8) + (state.grayActs * 1.5);
     if(pena > 0){
       Audio.music.stinger('tseAlert');
-      state.risk += pena;
+      const riskAdd = pena * m.illegalRiskMul;
+      state.risk += riskAdd;
       state.intent -= Math.min(6, pena/3);
-      feedNews('TSE', `Onda de denúncias contra ações da sua campanha. +${Math.round(pena)} risco TSE, -${Math.min(6, pena/3).toFixed(1)}% intenção.`, 'bad');
+      feedNews('TSE', `Onda de denúncias contra ações da sua campanha. +${Math.round(riskAdd)} risco TSE, -${Math.min(6, pena/3).toFixed(1)}% intenção.`, 'bad');
     } else {
       feedNews('TSE', 'Sua campanha está limpa até aqui. Sem novas denúncias.', 'good');
     }
@@ -6221,11 +6510,38 @@ function runFixedEvents(){
     feedNews('IMPRENSA', 'Debate vai ao ar hoje à noite na rede principal. Você precisa ir ao microfone.', 'event');
   }
 
+  // ===== ATAQUES ADVERSÁRIOS DINÂMICOS =====
+  const _m = modeCfg();
+  // Camada 1: lead penalty (a partir do D3, escala com vantagem)
+  if(d >= 3 && d <= 9){
+    maybeTriggerOpponentAttacks({ leadPenalty: true });
+  }
+  // Camada 2: ataques coordenados em D3/D5/D7 (chance varia por modo)
+  if(d === 3 && Math.random() < _m.scheduledChance[3]) maybeTriggerOpponentAttacks({ scheduled: true });
+  if(d === 5 && Math.random() < _m.scheduledChance[5]) maybeTriggerOpponentAttacks({ scheduled: true });
+  if(d === 7 && Math.random() < _m.scheduledChance[7]) maybeTriggerOpponentAttacks({ scheduled: true });
+
+  // ===== BOOST ESPONTÂNEO DO ADVERSÁRIO (só modo realista) =====
+  if(_m.spontaneousOppBoost){
+    if(d === 5 && Math.random() < 0.45){
+      const boost = 3 + Math.random()*2;
+      state.oppIntent += boost;
+      Audio.music.stinger('attack');
+      feedNews('JORNAL NACIONAL', `Figura conhecida endossa publicamente o adversário em horário nobre. +${boost.toFixed(1)}pp pra ele.`, 'bad');
+    }
+    if(d === 8 && Math.random() < 0.5){
+      const boost = 2.5 + Math.random()*2;
+      state.oppIntent += boost;
+      Audio.music.stinger('attack');
+      feedNews('VIRAL DO DIA', `Vídeo do adversário visitando obra inacabada viralizou. +${boost.toFixed(1)}pp.`, 'bad');
+    }
+  }
+
   // Decay deepfake shield
   if(state.shieldDeepfakeDays > 0) state.shieldDeepfakeDays--;
 
   if(d > 1 && d < 10){
-    state.oppIntent += 0.8 + Math.random()*1.4;
+    state.oppIntent += 0.8 + Math.random()*1.4 + modeCfg().oppGrowthBonus;
   }
 
   // Indecisos drift (compete)
@@ -6864,6 +7180,30 @@ function setupCharCreate(){
   // Avatar builder
   buildAvatarRows();
   updateCCPreview();
+  // Seletor de dificuldade
+  buildModeSelector();
+}
+
+function buildModeSelector(){
+  const grid = $('ccModeGrid');
+  const desc = $('ccModeDesc');
+  if(!grid) return;
+  grid.innerHTML = '';
+  ['tutorial','normal','dificil','realista'].forEach(key => {
+    const cfg = MODE_CONFIG[key];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cc-mode-btn' + (state.mode === key ? ' selected' : '');
+    btn.dataset.mode = key;
+    btn.textContent = cfg.label;
+    btn.addEventListener('click', ()=>{
+      state.mode = key;
+      grid.querySelectorAll('.cc-mode-btn').forEach(b => b.classList.toggle('selected', b.dataset.mode === key));
+      desc.textContent = cfg.desc;
+    });
+    grid.appendChild(btn);
+  });
+  desc.textContent = MODE_CONFIG[state.mode].desc;
 }
 
 function updateCCPreview(){
@@ -7079,12 +7419,12 @@ $('ccStart').addEventListener('click', ()=>{
   $('quitBtn').style.display = 'flex';
   $('restBtn').style.display = 'flex';
   state.running = true;
-  track('game_start', { name: state.candidate.name, slogan: state.candidate.slogan, avatar: state.candidate.avatar });
+  track('game_start', { name: state.candidate.name, slogan: state.candidate.slogan, avatar: state.candidate.avatar, mode: state.mode });
   // Start music (gesture-unlocked)
   Audio.init();
   Audio.resume();
   Audio.music.start(1);
-  feedNews('SUA EQUIPE', 'Empate técnico. Faltam 10 dias. Vamos.', 'event');
+  feedNews('SUA EQUIPE', `Empate técnico. Faltam 10 dias. Modo: <b>${MODE_CONFIG[state.mode].name}</b>.`, 'event');
   startDay();
   updateHUD();
 });
