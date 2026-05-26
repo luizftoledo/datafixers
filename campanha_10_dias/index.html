@@ -213,6 +213,85 @@
     box-shadow: 0 4px 0 rgba(0,0,0,0.4);
   }
   #soundBtn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.4); }
+
+  /* Pulso de atenção pros botões (som / fullscreen) quando música está bloqueada */
+  @keyframes attention-pulse {
+    0%, 100% { box-shadow: 0 4px 0 rgba(0,0,0,0.4), 0 0 0 0 rgba(246,196,83,0.85); }
+    50%      { box-shadow: 0 4px 0 rgba(0,0,0,0.4), 0 0 0 14px rgba(246,196,83,0); }
+  }
+  .attention-pulse {
+    animation: attention-pulse 1.2s ease-out infinite;
+    border-color: var(--gold) !important;
+  }
+  #audioHint {
+    position: fixed;
+    top: 68px; right: 14px;
+    background: rgba(15, 8, 24, 0.96);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 12px 16px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--text);
+    z-index: 170;
+    max-width: 280px;
+    text-align: right;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    animation: hint-pop 0.25s ease-out;
+  }
+  @keyframes hint-pop {
+    from { transform: translateY(-8px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+  #audioHint::before {
+    content: '';
+    position: absolute;
+    top: -10px; right: 22px;
+    border: 6px solid transparent;
+    border-bottom-color: var(--gold);
+  }
+  #audioHint::after {
+    content: '';
+    position: absolute;
+    top: -7px; right: 23px;
+    border: 5px solid transparent;
+    border-bottom-color: rgba(15,8,24,0.96);
+  }
+  #audioHint .hint-line { display: block; }
+  #audioHint .hint-line + .hint-line { margin-top: 4px; }
+  #audioHint b { color: var(--gold); }
+  #audioHint .hint-x {
+    position: absolute;
+    top: 2px; left: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--muted);
+    user-select: none;
+  }
+  #audioHint .hint-x:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    #audioHint {
+      top: auto;
+      bottom: 64px;
+      right: 8px;
+      font-size: 15px;
+      max-width: calc(100vw - 16px);
+    }
+    #audioHint::before, #audioHint::after { display: none; }
+  }
+
+  /* Campo inválido na criação do personagem */
+  .cc-input-error {
+    border-color: var(--red) !important;
+    box-shadow: 0 0 0 3px rgba(207,58,58,0.35) !important;
+    animation: shake-tiny 0.4s ease-out;
+  }
+  @keyframes shake-tiny {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-3px); }
+    75%      { transform: translateX(3px); }
+  }
   @media (max-width: 640px) {
     /* Bottom bar com 3 botões — quit escondido (acessível via long-press no santinho) */
     #soundBtn, #fsBtn, #restBtn {
@@ -1511,7 +1590,8 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 78vh;
+    /* cabe no viewport sem cortar o texto abaixo; cap em 65vh em telas altas */
+    max-height: min(65vh, calc(100vh - 260px));
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.5), 0 0 28px rgba(246,196,83,0.3);
@@ -1564,7 +1644,7 @@
   }
   @media (max-width: 640px) {
     .cover { padding: 8px 6px; height: calc(100vh - 16px); max-height: calc(100vh - 16px); }
-    #cover img, #coverArt { max-height: 62vh; margin-bottom: 8px; max-width: 100%; }
+    #cover img, #coverArt { max-height: min(58vh, calc(100vh - 240px)); margin-bottom: 8px; max-width: 100%; }
     .cover .lead { font-size: 15px; line-height: 1.35; margin-top: 8px; }
     .cover .lead + .lead { margin-top: 6px; }
     #cover .lead { font-size: 14px; margin: 6px 0 10px; line-height: 1.4; max-width: 100%; }
@@ -1877,22 +1957,28 @@
     <h2>QUEM É VOCÊ?</h2>
     <p class="lead">Crie seu candidato a prefeito. Você terá 10 dias pra fazer o nome valer alguma coisa na cidade.</p>
 
-    <div class="cc-grid">
+    <!-- autocomplete="off" + name="search" + data-form-type="other" pra evitar o Chrome
+         oferecer cartão de crédito (o id antigo "ccNumber" disparava esse heurístico) -->
+    <div class="cc-grid" data-form-type="other">
       <div>
-        <label class="cc-label">NOME</label>
-        <input type="text" id="ccName" maxlength="22" placeholder="Seu nome" class="cc-input"/>
+        <label class="cc-label">NOME *</label>
+        <input type="text" id="ccName" maxlength="22" placeholder="Seu nome" class="cc-input"
+               name="candidato_nome_busca" autocomplete="off" data-lpignore="true" data-form-type="other" data-1p-ignore="true"/>
       </div>
       <div>
-        <label class="cc-label">NÚMERO</label>
-        <input type="text" id="ccNumber" maxlength="5" placeholder="22" inputmode="numeric" pattern="[0-9]*" class="cc-input"/>
+        <label class="cc-label">NÚMERO *</label>
+        <input type="text" id="ccNumber" maxlength="5" placeholder="22" inputmode="numeric" pattern="[0-9]*" class="cc-input"
+               name="candidato_numero_busca" autocomplete="off" data-lpignore="true" data-form-type="other" data-1p-ignore="true"/>
       </div>
       <div>
-        <label class="cc-label">CIDADE</label>
-        <input type="text" id="ccCity" maxlength="30" placeholder="Ex: Belo Horizonte" class="cc-input"/>
+        <label class="cc-label">CIDADE *</label>
+        <input type="text" id="ccCity" maxlength="30" placeholder="Ex: Belo Horizonte" class="cc-input"
+               name="candidato_cidade_busca" autocomplete="off" data-lpignore="true" data-form-type="other" data-1p-ignore="true"/>
       </div>
       <div>
-        <label class="cc-label">SLOGAN</label>
-        <input type="text" id="ccSlogan" maxlength="50" placeholder='Ex: "Pra quem a cidade esquece"' class="cc-input"/>
+        <label class="cc-label">SLOGAN *</label>
+        <input type="text" id="ccSlogan" maxlength="50" placeholder='Ex: "Pra quem a cidade esquece"' class="cc-input"
+               name="candidato_slogan_busca" autocomplete="off" data-lpignore="true" data-form-type="other" data-1p-ignore="true"/>
       </div>
     </div>
 
@@ -2067,6 +2153,11 @@
 <button id="quitBtn" aria-label="Desistir" title="Desistir da candidatura" style="position:fixed;top:14px;right:118px;width:44px;height:44px;background:var(--bg-card);border:2px solid var(--red);color:var(--red);font-size:18px;border-radius:50%;cursor:pointer;z-index:150;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,0.4);display:none">⏏</button>
 <button id="fsBtn" aria-label="Tela cheia" title="Tela cheia" style="position:fixed;top:14px;right:66px;width:44px;height:44px;background:var(--bg-card);border:2px solid var(--border);color:var(--gold);font-size:18px;border-radius:50%;cursor:pointer;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,0.4)">⛶</button>
 <button id="soundBtn" aria-label="Som" title="Som ligado / mudo">🔊</button>
+<div id="audioHint" style="display:none" role="alert">
+  <span class="hint-x" id="audioHintClose" aria-label="Fechar dica">×</span>
+  <span class="hint-line">🔊 clique aqui pra <b>ligar / desligar</b> o som</span>
+  <span class="hint-line">⛶ e aqui pra entrar em <b>tela cheia</b></span>
+</div>
 
 <script>
 // =====================================================================
@@ -2901,7 +2992,16 @@ const MusicPlayer = (() => {
     audio.volume = 0;
     const slot = { key, audio, _raf: null };
     const p = audio.play();
-    if(p && p.catch) p.catch(()=>{ /* autoplay bloqueado: próximo gesture destrava */ });
+    if(p && p.catch) p.catch(()=>{
+      // autoplay bloqueado → mostra dica visual pro usuário ligar manualmente
+      if(typeof window.showAudioHint === 'function') window.showAudioHint();
+    });
+    // Fallback: se em 1,2s o player ainda não estiver tocando, mostra a dica
+    setTimeout(()=>{
+      if(!muted && current === slot && audio.paused){
+        if(typeof window.showAudioHint === 'function') window.showAudioHint();
+      }
+    }, 1200);
     _fade(slot, muted ? 0 : TARGET_VOL, FADE_MS);
     if(current){
       const prev = current;
@@ -2926,7 +3026,17 @@ const MusicPlayer = (() => {
     if(current) _fade(current, m ? 0 : TARGET_VOL, 200);
   }
 
-  return { play, stop, setMuted, dayTrack };
+  // Tenta retomar a faixa atual (chamado quando o usuário libera autoplay via clique no som)
+  function retry(){
+    if(!current) return;
+    const a = current.audio;
+    if(a.paused){
+      const p = a.play();
+      if(p && p.catch) p.catch(()=>{});
+    }
+  }
+
+  return { play, stop, setMuted, dayTrack, retry };
 })();
 
 function sfx(name){
@@ -7950,10 +8060,47 @@ $('ccBack').addEventListener('click', ()=>{
   $('cover').style.display = 'block';
 });
 $('ccStart').addEventListener('click', ()=>{
-  state.candidate.name = $('ccName').value.trim() || 'Você';
-  state.candidate.number = ($('ccNumber').value.trim() || '22').replace(/\D/g,'').slice(0,5) || '22';
-  state.candidate.city = $('ccCity').value.trim() || 'São Paulo';
-  state.candidate.slogan = $('ccSlogan').value.trim() || 'Voto consciente, mandato sério';
+  // Validação: nome, número, cidade e slogan são obrigatórios
+  const required = [
+    { id: 'ccName',   label: 'NOME' },
+    { id: 'ccNumber', label: 'NÚMERO' },
+    { id: 'ccCity',   label: 'CIDADE' },
+    { id: 'ccSlogan', label: 'SLOGAN' }
+  ];
+  let firstEmpty = null;
+  const missing = [];
+  required.forEach(f => {
+    const el = $(f.id);
+    const empty = !el.value.trim();
+    el.classList.toggle('cc-input-error', empty);
+    if(empty){
+      missing.push(f.label);
+      if(!firstEmpty) firstEmpty = el;
+    }
+  });
+  if(firstEmpty){
+    sfx('illegal');
+    const toastEl = $('toast');
+    if(toastEl){
+      toastEl.textContent = 'Preencha: ' + missing.join(', ');
+      toastEl.classList.remove('good');
+      toastEl.classList.add('bad', 'show');
+      clearTimeout(window._ccValidationToast);
+      window._ccValidationToast = setTimeout(()=> toastEl.classList.remove('show'), 2800);
+    }
+    firstEmpty.focus();
+    // limpa o erro quando o usuário começar a digitar
+    required.forEach(f => {
+      const el = $(f.id);
+      const clear = () => { el.classList.remove('cc-input-error'); el.removeEventListener('input', clear); };
+      el.addEventListener('input', clear);
+    });
+    return;
+  }
+  state.candidate.name = $('ccName').value.trim();
+  state.candidate.number = $('ccNumber').value.trim().replace(/\D/g,'').slice(0,5) || '22';
+  state.candidate.city = $('ccCity').value.trim();
+  state.candidate.slogan = $('ccSlogan').value.trim();
   renderSantinho();
   // Desktop: sugerir tela cheia. Mobile: avisar sobre modo silencioso.
   if(!isTouch && !document.fullscreenElement && !sessionStorage.getItem('fsDismissed')){
@@ -7991,7 +8138,27 @@ soundBtn.addEventListener('click', ()=>{
   Audio.setMuted(newMuted);
   MusicPlayer.setMuted(newMuted);
   soundBtn.textContent = newMuted ? '🔇' : '🔊';
+  // Se a música estava bloqueada, esse clique destrava
+  if(!newMuted && MusicPlayer.retry) MusicPlayer.retry();
+  dismissAudioHint();
 });
+
+// Dica visual quando autoplay é bloqueado
+window._audioHintShown = false;
+window.showAudioHint = function(){
+  if(window._audioHintShown) return;
+  window._audioHintShown = true;
+  const sb = $('soundBtn'); if(sb) sb.classList.add('attention-pulse');
+  const fb = $('fsBtn');
+  if(fb && getComputedStyle(fb).display !== 'none') fb.classList.add('attention-pulse');
+  const h = $('audioHint'); if(h) h.style.display = 'block';
+};
+function dismissAudioHint(){
+  document.querySelectorAll('.attention-pulse').forEach(el => el.classList.remove('attention-pulse'));
+  const h = $('audioHint'); if(h) h.style.display = 'none';
+}
+const _ahClose = $('audioHintClose');
+if(_ahClose) _ahClose.addEventListener('click', dismissAudioHint);
 // Desistir botão (modal in-app, não sai do fullscreen)
 const quitBtn = $('quitBtn');
 quitBtn.addEventListener('click', ()=>{
@@ -8030,7 +8197,7 @@ function goFullscreen(){
     (document.exitFullscreen || document.webkitExitFullscreen).call(document);
   }
 }
-fsBtn.addEventListener('click', goFullscreen);
+fsBtn.addEventListener('click', ()=>{ goFullscreen(); dismissAudioHint(); });
 
 // Prompt de tela cheia (desktop)
 $('fspGo').addEventListener('click', ()=>{
