@@ -3881,8 +3881,16 @@ const LOOK_OPTIONS = {
   hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453',
            '#fff', '#7a4030', '#8a5cf6', '#3a90c0',
            '#e89bc7', '#5fdb8a', '#ff7733', '#9be3ff', '#c0c0c0', '#52317a'],
-  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a',
-           '#5a3a20', '#9be099', '#a890ff', '#88c8ff'],
+  // Tons de pele — paleta neutra, sem nomes/rótulos (padrão de jogos como Sims,
+  // Stardew, Cyberpunk, Animal Crossing). Cobre do mais claro ao mais escuro
+  // de forma contínua, seguida de tons de fantasia (verde/roxo/azul) pra
+  // deixar claro que TODO mundo está na mesma categoria de "tom"
+  skin:   [
+    '#fde7d7', '#fbd5b5', '#f3c9a0', '#e9c39e',  // muito claros → claros
+    '#d4a274', '#c89968', '#b88058', '#a0866a',  // médios claros → médios
+    '#8a6a4a', '#6a4a30', '#5a3a20', '#3e2615', '#2a1810',  // escuros → muito escuros
+    '#9be099', '#a890ff', '#88c8ff'              // fantasia (verde, roxo, azul)
+  ],
   shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a',
            '#5a4030', '#e8e0d0',
            '#3c7dc0', '#cf3a3a', '#f6c453', '#5fb872', '#e89bc7', '#8a5cf6',
@@ -8614,7 +8622,12 @@ function buildAvatarRows(){
         return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="accessory" data-val="${opt.id}" aria-label="${opt.id}"><canvas width="32" height="32" data-acc="${opt.id}"></canvas></button>`;
       } else {
         const sel = state.candidate.look[cfg.prop] === opt ? ' selected' : '';
-        return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt}" style="background:${opt}" aria-label="${opt}"></button>`;
+        // aria-label genérico e neutro: pra pele usa "tom N" sem nomear etnia;
+        // pros outros (cabelo/camisa) usa "cor N" — segue padrão de Sims,
+        // Stardew, Animal Crossing etc.
+        const labelPrefix = cfg.prop === 'skin' ? 'tom' : 'cor';
+        const ariaLabel = `${labelPrefix} ${i+1}`;
+        return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt}" style="background:${opt}" aria-label="${ariaLabel}" title="${ariaLabel}"></button>`;
       }
     }).join('');
     div.innerHTML = `<div class="cc-brow-label">${cfg.label}</div><div class="cc-swatches">${swatchesHtml}</div>`;
