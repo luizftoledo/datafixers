@@ -44,6 +44,7 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#projects">Reportagens</a></li>
+        <li><a href="#projetos">Projetos</a></li>
         <li><a href="#dashboards">Dashboards</a></li>
         <li><a href="#about">Sobre</a></li>
         <li>
@@ -90,62 +91,32 @@
 
   <!-- Navigation buttons moved under the hero tagline -->
 
-  <section class="current-projects-section" id="dashboards" style="padding: 4.5rem 0; background: var(--bg-alt);">
+  <section class="current-projects-section" id="projetos" style="padding: 4.5rem 0; background: var(--bg-alt);">
     <div class="container">
-      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Dashboards & Projetos</h2>
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Projetos</h2>
       <div class="dashboards-grid">
 
         <!-- 10 dias — 2026-05-23 -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
-            <div class="dash-icon"><i class="fas fa-vote-yea"></i></div>
+            <img src="campanha_10_dias/assets/cover.png" alt="10 dias — jogo eleitoral" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
             <h3>10 dias <span class="badge-new" aria-label="Novo">NEW</span></h3>
             <p>Jogo pixel art: você é candidato a prefeito, faltam 10 dias pro 1º turno. Decide entre debate, programa de TV, caminhada, disparo no WhatsApp, neurobots, deepfakes — com risco real de cassação pelo TSE.</p>
           </div>
           <a class="dashboard-btn" href="campanha_10_dias/index.html">Jogar</a>
         </div>
 
-        <!-- Relatórios Trabalho Escravo — 2026-05-22 -->
+        <!-- Sinais Enterrados — 2026-05-22 -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
-            <div class="dash-icon"><i class="fas fa-file-pdf"></i></div>
-            <h3>Relatórios de Trabalho Escravo <span class="badge-new" aria-label="Novo">NEW</span></h3>
-            <p>409 relatórios de operações de fiscalização do MTE (1995-2025), agrupados por ano e UF.</p>
+            <div style="display:block;width:100%;height:140px;border-radius:6px;margin-bottom:12px;background:linear-gradient(135deg,#1a1424 0%,#3b2e4f 60%,#6b4f8a 100%);display:flex;align-items:center;justify-content:center;color:#f6c453;font-size:42px;border:1px solid rgba(0,0,0,0.08)" aria-hidden="true"><i class="fas fa-gamepad"></i></div>
+            <h3>Sinais Enterrados</h3>
+            <p>Jogo de jornalismo investigativo: receba uma dica anônima, investigue documentos públicos e publique a matéria.</p>
           </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/relatorios-trabalho-escravo/" target="_blank">Abrir dashboard</a>
+          <a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/" target="_blank">Jogar</a>
         </div>
 
-        <!-- Pesquisas Eleitorais — 2026-05-22 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-vote-yea"></i></div>
-            <h3>Pesquisas Eleitorais</h3>
-            <p>Pesquisas registradas no TSE com atualização automática 2x ao dia e alertas por Telegram.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/" target="_blank">Abrir dashboard</a>
-        </div>
-
-        <!-- LAI Dashboard — 2026-05-22 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-scale-balanced"></i></div>
-            <h3>LAI Dashboard</h3>
-            <p>Negativas de pedidos de informação na Lei de Acesso à Informação: série histórica, motivos e ranking por órgão.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/lai/" target="_blank">Abrir dashboard</a>
-        </div>
-
-        <!-- Clipping — 2026-05-22 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-newspaper"></i></div>
-            <h3>Clipping</h3>
-            <p>Recortes e indicadores de cobertura jornalística — temas, veículos, frequência.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/clipping/" target="_blank">Abrir dashboard</a>
-        </div>
-
-        <!-- Simulador de reações — 2026-05-22 -->
+        <!-- Simulador de reações -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-robot"></i></div>
@@ -155,17 +126,7 @@
           <a class="dashboard-btn" href="https://ferramentas.datafixers.org/simulador-reacoes/" target="_blank">Abrir ferramenta</a>
         </div>
 
-        <!-- Sinais Enterrados — 2026-05-22 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-gamepad"></i></div>
-            <h3>Sinais Enterrados</h3>
-            <p>Jogo de jornalismo investigativo: receba uma dica anônima, investigue documentos públicos e publique a matéria.</p>
-          </div>
-          <a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/" target="_blank">Jogar</a>
-        </div>
-
-        <!-- A LAI que pegou — 2026-04-24 -->
+        <!-- A LAI que pegou -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-file-invoice"></i></div>
@@ -175,27 +136,7 @@
           <a class="dashboard-btn" href="https://luizftoledo.github.io/a-lai-que-pegou/" target="_blank">Veja o projeto</a>
         </div>
 
-        <!-- Basômetro — 2026-03-04 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-balance-scale"></i></div>
-            <h3>Basômetro</h3>
-            <p>Governismo dos parlamentares no Congresso — votações alinhadas ao governo, série histórica.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/basometro/" target="_blank">Abrir dashboard</a>
-        </div>
-
-        <!-- Lulômetro — 2026-03-04 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-comments"></i></div>
-            <h3>Lulômetro</h3>
-            <p>Análise de discurso de presidentes brasileiros — busca textual, citações nominais, evolução de temas.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/lulometro/" target="_blank">Abrir dashboard</a>
-        </div>
-
-        <!-- Curso de LAI — 2025-12-14 -->
+        <!-- Curso de LAI -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -207,7 +148,7 @@
             target="_blank">Acesse o curso</a>
         </div>
 
-        <!-- L-AI Notebook — 2025-10-11 -->
+        <!-- L-AI Notebook -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-book-open"></i></div>
@@ -217,7 +158,78 @@
           <a class="dashboard-btn" href="l-ai-notebook.html">Abrir Caderno</a>
         </div>
 
-        <!-- Emendas Parlamentares — 2024-08-15 -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-separator"></div>
+
+  <section class="current-projects-section" id="dashboards" style="padding: 4.5rem 0; background: var(--bg-alt);">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Dashboards</h2>
+      <div class="dashboards-grid">
+
+        <!-- Relatórios Trabalho Escravo — 2026-05-22 -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-file-pdf"></i></div>
+            <h3>Relatórios de Trabalho Escravo <span class="badge-new" aria-label="Novo">NEW</span></h3>
+            <p>409 relatórios de operações de fiscalização do MTE (1995-2025), agrupados por ano e UF.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/relatorios-trabalho-escravo/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- Pesquisas Eleitorais -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-vote-yea"></i></div>
+            <h3>Pesquisas Eleitorais</h3>
+            <p>Pesquisas registradas no TSE com atualização automática 2x ao dia e alertas por Telegram.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- LAI Dashboard -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-scale-balanced"></i></div>
+            <h3>LAI Dashboard</h3>
+            <p>Negativas de pedidos de informação na Lei de Acesso à Informação: série histórica, motivos e ranking por órgão.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/lai/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- Clipping -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-newspaper"></i></div>
+            <h3>Clipping</h3>
+            <p>Recortes e indicadores de cobertura jornalística — temas, veículos, frequência.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/clipping/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- Basômetro -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>Basômetro</h3>
+            <p>Governismo dos parlamentares no Congresso — votações alinhadas ao governo, série histórica.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/basometro/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- Lulômetro -->
+        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+          <div>
+            <div class="dash-icon"><i class="fas fa-comments"></i></div>
+            <h3>Lulômetro</h3>
+            <p>Análise de discurso de presidentes brasileiros — busca textual, citações nominais, evolução de temas.</p>
+          </div>
+          <a class="dashboard-btn" href="https://dashboards.datafixers.org/lulometro/" target="_blank">Abrir dashboard</a>
+        </div>
+
+        <!-- Emendas Parlamentares -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-money-bill-wave"></i></div>
@@ -227,7 +239,7 @@
           <a class="dashboard-btn" href="https://dashboards.datafixers.org/emendas/" target="_blank">Abrir dashboard</a>
         </div>
 
-        <!-- Aeronaves — 2023-02-08 -->
+        <!-- Aeronaves -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-plane"></i></div>
@@ -237,7 +249,7 @@
           <a class="dashboard-btn" href="https://dashboards.datafixers.org/aeronaves/" target="_blank">Abrir dashboard</a>
         </div>
 
-        <!-- IBAMA — 2022-08-24 -->
+        <!-- IBAMA -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
           <div>
             <div class="dash-icon"><i class="fas fa-tree"></i></div>
