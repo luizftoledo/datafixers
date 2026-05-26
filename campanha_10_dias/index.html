@@ -980,6 +980,27 @@
 
   /* Labels HTML em cima dos móveis (texto crisp, não pixelado borrado) */
   #mapLabels { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+  /* Nos dias 9 e 10, escurece o cenário e destaca só os pontos que importam */
+  .stage.phase-final canvas#scene { filter: brightness(0.45) saturate(0.6); transition: filter .4s; }
+  #mapLabels.phase-final .ml {
+    opacity: 0.22;
+    filter: grayscale(0.7);
+    transition: opacity .3s, filter .3s;
+  }
+  #mapLabels.phase-final .ml[data-id="phone"],
+  #mapLabels.phase-final .ml[data-id="bed"],
+  #mapLabels.phase-final .ml[data-id="mic"] {
+    opacity: 1;
+    filter: none;
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 3px;
+    animation: phase-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes phase-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(246,196,83,0.6); }
+    50%      { box-shadow: 0 0 0 12px rgba(246,196,83,0); }
+  }
   #mapLabels .ml {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -3391,26 +3412,30 @@ const MusicPlayer = (() => {
       return;
     }
     if(current && current.key === key) return;
-    // Sempre cria um Audio fresco — evita estado bagunçado do cache que estava
-    // fazendo dia 8/10 às vezes não tocarem
-    const audio = new window.Audio(TRACKS[key]);
+    // Sempre cria um Audio fresco. Sem crossOrigin (estava bloqueando alguns
+    // dias no Chrome quando o servidor variava cabeçalho). Load explícito.
+    const audio = new window.Audio();
+    audio.src = TRACKS[key];
     audio.loop = true;
     audio.preload = 'auto';
     audio.volume = 0;
-    audio.crossOrigin = 'anonymous';
+    try { audio.load(); } catch(_e){}
     const slot = { key, audio, _raf: null };
-    // Inicia playback assim que metadata estiver pronta (mais confiável)
+    // Tenta tocar IMEDIATAMENTE — o browser começa a baixar e toca quando puder
     const tryPlay = () => {
       const p = audio.play();
       if(p && p.catch) p.catch((err)=>{
-        console.warn('[MusicPlayer] play falhou pra', key, err && err.name);
+        console.warn('[MusicPlayer] play falhou pra', key, err && err.name, err && err.message);
         if(typeof window.showAudioHint === 'function') window.showAudioHint();
       });
     };
-    if(audio.readyState >= 2) tryPlay();
-    else audio.addEventListener('canplay', tryPlay, { once: true });
+    tryPlay();
+    // E também re-tenta no canplay caso o primeiro play() não tenha tido buffer
+    audio.addEventListener('canplay', ()=>{
+      if(audio.paused && current === slot) tryPlay();
+    }, { once: true });
     audio.addEventListener('error', ()=>{
-      console.warn('[MusicPlayer] erro carregando', key, audio.error && audio.error.code);
+      console.warn('[MusicPlayer] erro carregando', key, audio.error && audio.error.code, audio.src);
     }, { once: true });
     // Fallback: se em 2s ainda não estiver tocando, mostra a dica
     setTimeout(()=>{
@@ -4369,6 +4394,18 @@ function renderScene(opts={}){
   if(micLabel) micLabel.style.display = state.day === 10 ? 'block' : 'none';
   if(bedLabel) bedLabel.style.display = state.day >= 10 ? 'none' : 'block';
   if(mkLabel)  mkLabel.style.display  = state.marketeiroVisible ? 'block' : 'none';
+  // Fase final (D9/D10) — escurece cenário e destaca celular, cama (D9) e microfone (D10)
+  const stage = document.querySelector('.stage');
+  const mapLabels = document.getElementById('mapLabels');
+  if(stage && mapLabels){
+    if(state.day >= 9){
+      stage.classList.add('phase-final');
+      mapLabels.classList.add('phase-final');
+    } else {
+      stage.classList.remove('phase-final');
+      mapLabels.classList.remove('phase-final');
+    }
+  }
 
   // Hotspot indicators — balão de fala em vez de "!"
   for(const h of HOTSPOTS){
@@ -5583,6 +5620,41 @@ function openHotspot(area){
         ? 'A essa altura, praticamente nada mais muda intenção. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
         : 'Hoje só importa o <b>debate ao vivo</b> à noite. Aproxime do <b>🎤 MICROFONE</b> e comece. Resto da agenda não muda mais nada.',
       actions: [{ tag: 'legal', title: 'OK, ENTENDI', cost: 0, energy: 0, primary: true, onClick: closeModal }]
+    });
+    return;
+  }
+  // Celular nos D9/D10 só serve pra responder ataques — bloqueia agenda/meme/plano
+  if(state.day >= 9 && area === 'phone'){
+    const reply = ACTIONS.find(a => a.id === 'replyVideo');
+    const canReply = reply && (!reply.available || reply.available(state)) && state.energy >= reply.energy;
+    if(!canReply){
+      const reason = (state.unrepliedAttacks || 0) === 0
+        ? 'Nenhum ataque sem resposta agora. Outras ações no celular não mudam mais nada.'
+        : (state.videosToday >= 2)
+          ? 'Você já gravou 2 vídeos hoje. Algoritmo cansa — não rende mais.'
+          : 'Sem energia pra gravar resposta agora.';
+      openModal({
+        title: '📱 CELULAR — VÉSPERA/ELEIÇÃO',
+        subt: 'Só responder ataques agora',
+        body: reason,
+        actions: [{ tag: 'legal', title: 'OK', cost: 0, energy: 0, primary: true, onClick: closeModal }]
+      });
+      return;
+    }
+    // Mostra direto o modal de uma ação só, sem listar agenda/meme/plano
+    openModal({
+      title: '📱 CELULAR — RESPONDER ATAQUE',
+      subt: `${state.unrepliedAttacks} ataque(s) sem resposta`,
+      body: 'A essa altura, postar agenda ou meme não vira voto. Mas <b>responder em vídeo</b> a um ataque ainda funciona — limite de 2 por dia.',
+      actions: [{
+        tag: 'legal',
+        title: reply.title,
+        subtitle: reply.desc,
+        cost: reply.cost, energy: reply.energy,
+        primary: true,
+        onClick: ()=>{ executeAction(reply); }
+      },
+      { tag: 'gray', title: 'CANCELAR', cost: 0, energy: 0, onClick: closeModal }]
     });
     return;
   }
@@ -8163,6 +8235,9 @@ const EMERG_FAKE_NEWS = [
 
 function showMarketeiroEmergencia(){
   const item = EMERG_FAKE_NEWS[Math.floor(Math.random() * EMERG_FAKE_NEWS.length)];
+  // Esconde o X — modal exige decisão, não pode fechar sem escolher
+  const xBtn = document.getElementById('modalCloseX');
+  if(xBtn) xBtn.style.display = 'none';
   openModal({
     title: '🎩 MARKETEIRO BATEU NA SUA PORTA',
     subt: 'Última cartada pós-debate. Pega ou larga.',
@@ -8218,6 +8293,9 @@ function endGame(kind){
     flags: { bf: state.flags.boughtFollowers, wb: state.flags.didWhatsappBlast, nb: state.flags.neuroBots, df: state.flags.deepfakedAdv }
   });
   state.running = false;
+  // Tela final é decisiva: esconde o X de fechar o modal pra evitar travamento
+  const xBtnEnd = document.getElementById('modalCloseX');
+  if(xBtnEnd) xBtnEnd.style.display = 'none';
   Audio.music.stop();
   if(kind === 'vitoria1') Audio.music.stinger('victory');
   else if(kind === 'segundoTurno') sfx('legal');
@@ -8295,9 +8373,19 @@ function endGame(kind){
   b.style.fontSize='13px';
   b.style.fontFamily="'Press Start 2P',monospace";
   b.style.padding='12px';
-  b.textContent = 'JOGAR DE NOVO';
+  b.textContent = '↻ JOGAR DE NOVO';
   b.addEventListener('click', ()=>{ location.reload(); });
   ac.appendChild(b);
+
+  const backBtn = document.createElement('button');
+  backBtn.className = 'btn';
+  backBtn.style.fontSize='12px';
+  backBtn.style.fontFamily="'Press Start 2P',monospace";
+  backBtn.style.padding='10px';
+  backBtn.style.marginTop='6px';
+  backBtn.textContent = '← VOLTAR PRO DATA FIXERS';
+  backBtn.addEventListener('click', ()=>{ window.location.href = 'https://datafixers.org/'; });
+  ac.appendChild(backBtn);
 
   modal.querySelector('h2').textContent = title;
   modal.querySelector('.subt').textContent = subt;
