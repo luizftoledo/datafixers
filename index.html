@@ -68,22 +68,36 @@
     </div>
   </nav>
 
-  <!-- Banner promocional — jogo novo "10 dias" — POSICIONADO NO TOPO (acima do hero) pra ser a primeira coisa que aparece -->
-  <section style="background: linear-gradient(135deg, #2a1f37 0%, #3b2e4f 60%, #6b4f8a 100%); padding: 2.4rem 0; border-bottom: 4px solid #f6c453; position: relative; overflow: hidden;">
-    <div class="container" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center;">
-      <a href="campanha_10_dias/index.html" style="flex-shrink: 0; display: block;">
-        <img src="campanha_10_dias/assets/cover.png" alt="10 dias — jogo eleitoral" style="width: 220px; max-width: 100%; border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,0.5), 0 0 30px rgba(246,196,83,0.25); display: block;" loading="lazy"/>
-      </a>
-      <div style="flex: 1; min-width: 280px; max-width: 560px; color: #f5ecd9;">
-        <span style="display: inline-block; background: #f6c453; color: #2a1f37; font-family: 'Press Start 2P', monospace; font-size: 10px; padding: 5px 9px; border-radius: 3px; letter-spacing: 1px; margin-bottom: 12px;">JOGO EXPERIMENTAL</span>
-        <h2 style="font-size: 2rem; margin: 0 0 10px; color: #f6c453; line-height: 1.2;">10 dias — jogo eleitoral</h2>
-        <p style="font-size: 1.05rem; line-height: 1.55; margin: 0 0 20px; color: #e9dcc7;">
-          Testei transformar uma <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer" style="color: #f6c453; text-decoration: underline; font-weight: bold;">reportagem</a> em jogo de simulação. Nele, você é um candidato a prefeito e tem 10 dias pra convencer o eleitor com ferramentas de marketing digital. Nem todas as opções possuem autorização legal. Jogue agora!
-        </p>
-        <a href="campanha_10_dias/index.html" style="display: inline-block; background: #f6c453; color: #2a1f37; padding: 14px 28px; font-family: 'Press Start 2P', monospace; font-size: 13px; text-decoration: none; border-radius: 4px; box-shadow: 0 4px 0 rgba(0,0,0,0.35); letter-spacing: 0.5px;">▶ JOGAR AGORA</a>
+  <!-- Popup promocional do jogo "10 dias" (modal que abre uma vez por sessão) -->
+  <div id="gamePopup" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.78); align-items:center; justify-content:center; padding:16px;">
+    <div role="dialog" aria-labelledby="gpTitle" aria-modal="true" style="position:relative; max-width:520px; width:100%; background:linear-gradient(135deg,#2a1f37 0%,#3b2e4f 60%,#6b4f8a 100%); border:3px solid #f6c453; border-radius:12px; padding:20px 22px 24px; color:#f5ecd9; box-shadow:0 20px 60px rgba(0,0,0,0.7); max-height:90vh; overflow-y:auto;">
+      <button id="gpClose" type="button" aria-label="Fechar" style="position:absolute; top:8px; right:12px; background:transparent; border:0; color:#f5ecd9; font-size:28px; line-height:1; cursor:pointer; padding:4px 8px;">×</button>
+      <img src="campanha_10_dias/assets/cover.png" alt="10 dias — jogo eleitoral" style="width:100%; max-width:420px; display:block; margin:8px auto 14px; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.5);" loading="lazy"/>
+      <span style="display:inline-block; background:#f6c453; color:#2a1f37; font-family:'Press Start 2P',monospace; font-size:10px; padding:5px 9px; border-radius:3px; letter-spacing:1px; margin-bottom:10px;">JOGO EXPERIMENTAL</span>
+      <h2 id="gpTitle" style="font-size:1.6rem; margin:0 0 10px; color:#f6c453; line-height:1.2;">10 dias — jogo eleitoral</h2>
+      <p style="font-size:1rem; line-height:1.55; margin:0 0 18px; color:#e9dcc7;">
+        Testei transformar uma <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer" style="color:#f6c453; text-decoration:underline; font-weight:bold;">reportagem</a> em jogo de simulação. Nele, você é um candidato a prefeito e tem 10 dias pra convencer o eleitor com ferramentas de marketing digital. Nem todas as opções possuem autorização legal. Jogue agora!
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="campanha_10_dias/index.html" style="display:inline-block; background:#f6c453; color:#2a1f37; padding:13px 24px; font-family:'Press Start 2P',monospace; font-size:12px; text-decoration:none; border-radius:4px; box-shadow:0 4px 0 rgba(0,0,0,0.35); letter-spacing:0.5px;">▶ JOGAR AGORA</a>
+        <button id="gpLater" type="button" style="background:transparent; border:2px solid #c5b89a; color:#c5b89a; padding:11px 18px; font-family:'Press Start 2P',monospace; font-size:11px; border-radius:4px; cursor:pointer;">DEPOIS</button>
       </div>
     </div>
-  </section>
+  </div>
+  <script>
+  (function(){
+    var KEY = 'gamePopup10diasDismissed_v1';
+    var pop = document.getElementById('gamePopup');
+    if(!pop) return;
+    if(localStorage.getItem(KEY) === '1') return;
+    setTimeout(function(){ pop.style.display = 'flex'; }, 900);
+    function dismiss(){ pop.style.display = 'none'; try { localStorage.setItem(KEY, '1'); } catch(_e){} }
+    document.getElementById('gpClose').addEventListener('click', dismiss);
+    document.getElementById('gpLater').addEventListener('click', dismiss);
+    pop.addEventListener('click', function(e){ if(e.target === pop) dismiss(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop.style.display !== 'none') dismiss(); });
+  })();
+  </script>
 
   <!-- Hero / tagline -->
   <header class="hero-section" id="top">
