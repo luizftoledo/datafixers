@@ -4,6 +4,22 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>10 dias — jogo eleitoral</title>
+<meta name="description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Use IA, neurobots, deepfake, comício na rua e plano público — mas cuidado: o TSE está de olho. Inspirado em reportagem da BBC News Brasil." />
+<!-- Open Graph (WhatsApp, Telegram, Facebook, LinkedIn) -->
+<meta property="og:type"        content="website" />
+<meta property="og:site_name"   content="Data Fixers" />
+<meta property="og:title"       content="10 dias — jogo eleitoral" />
+<meta property="og:description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Use (ou não) IA, neurobots, deepfake e ferramentas do submundo digital. Mas cuidado: o TSE está de olho. Inspirado em reportagem da BBC News Brasil." />
+<meta property="og:url"         content="https://datafixers.org/campanha_10_dias/" />
+<meta property="og:image"       content="https://datafixers.org/campanha_10_dias/assets/cover.png" />
+<meta property="og:image:width"  content="1024" />
+<meta property="og:image:height" content="1024" />
+<meta property="og:locale"      content="pt_BR" />
+<!-- Twitter / X -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="10 dias — jogo eleitoral" />
+<meta name="twitter:description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Tom de campanha real com IA, neurobots e deepfake. Inspirado em reportagem da BBC News Brasil." />
+<meta name="twitter:image"       content="https://datafixers.org/campanha_10_dias/assets/cover.png" />
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -2323,6 +2339,7 @@
           <span class="illegal">PROIBIDO PELO TSE</span>
         </div>
         <button type="button" class="btn primary" id="startBtn">▶ COMEÇAR</button>
+        <button type="button" class="btn" id="trailerBtn" style="margin-top:6px;background:transparent;color:var(--gold);border:2px solid var(--gold)">🎬 ASSISTIR TRAILER (60s)</button>
       </div>
     </div>
     <p class="lead">
@@ -2497,6 +2514,12 @@
   <span class="hint-x" id="audioHintClose" aria-label="Fechar dica">×</span>
   <span class="hint-line">🔊 clique aqui pra <b>ligar / desligar</b> o som</span>
   <span class="hint-line">⛶ e aqui pra entrar em <b>tela cheia</b></span>
+</div>
+
+<!-- Trailer overlay (clique no botão da cover) -->
+<div id="trailerOverlay" style="display:none;position:fixed;inset:0;z-index:9300;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;padding:16px">
+  <button type="button" id="trailerClose" aria-label="Fechar" style="position:absolute;top:14px;right:18px;background:transparent;border:0;color:#fff;font-size:32px;cursor:pointer;line-height:1;z-index:9301">×</button>
+  <video id="trailerVideo" controls playsinline preload="none" style="max-width:100%;max-height:90vh;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,0.7)"></video>
 </div>
 
 <!-- Tutorial overlay (mostra no primeiro dia, pode pular) -->
@@ -8110,9 +8133,69 @@ function finishDebate(){
 
   setTimeout(()=>{
     closeModal();
-    // mostrar tela final
-    setTimeout(()=>{ endGame(determineEnd()); }, 800);
+    // Antes da tela final, o marketeiro reaparece com a "última cartada" — absurda
+    setTimeout(()=>{ showMarketeiroEmergencia(); }, 800);
   }, 1200);
+}
+
+// =====================================================================
+// MARKETEIRO EMERGENCIAL — última cartada absurda pós-debate (D10)
+// 70% chance de cassação (risco vai a 100). 30% chance de +5 intenção
+// =====================================================================
+const EMERG_FAKE_NEWS = [
+  { headline: 'ADVERSÁRIO USA WALLHACK NO COUNTER-STRIKE DESDE 2008',
+    text: 'Análise de demos de 2008 mostra movimentos suspeitos. Comunidade competitiva pede banimento eterno.' },
+  { headline: 'KLAPAUCIUS! ADVERSÁRIO PEGO USANDO CHEAT NO THE SIMS PRA TER GRANA INFINITA',
+    text: 'Print do bairro Bairro Sim mostra cofre do candidato com 999.999 simoleões. "É o método dele na vida real também".' },
+  { headline: 'ADVERSÁRIO NUNCA PASSOU DA FASE 2 DO MARIO BROS',
+    text: 'Vídeo no YouTube de 2011 prova que ele tentou e desistiu. "Quem desiste do encanador desiste do povo".' },
+  { headline: 'ADVERSÁRIO É CAMPER NO CALL OF DUTY — JURA QUE FOI HACKER',
+    text: 'Servers privados expuseram K/D de 0.4. Reportagem mostra ele acampando no spawn por 14 minutos.' },
+  { headline: 'ADVERSÁRIO USA CÓDIGO MOTHERLODE NO SIMS PRA SIMULAR LIDERANÇA',
+    text: '"Ele construiu uma mansão simulando ser empresário bem-sucedido, mas tudo era cheat", diz ex-vizinho virtual.' },
+  { headline: 'ADVERSÁRIO ROUBOU CARTAS RARAS NO POKÉMON ESTAMPAS ILUSTRADAS EM 1999',
+    text: 'Testemunha do clube infantil afirma: "Ele pegou meu Charizard holográfico e nunca devolveu".' },
+  { headline: 'ADVERSÁRIO COMPROU VBUCKS COM CARTÃO DA MÃE NO FORTNITE',
+    text: 'R$ 450 em skins. Mãe descobriu na fatura. "Foi traumatizante", relata fonte próxima à família.' },
+  { headline: 'ADVERSÁRIO TROCOU DE LADO NO ANIMAL CROSSING PRA VENDER NABO MAIS CARO',
+    text: 'Comportamento desleal na ilha do Joãozinho. "Ele só vinha quando o nabo estava 600 sinos".' }
+];
+
+function showMarketeiroEmergencia(){
+  const item = EMERG_FAKE_NEWS[Math.floor(Math.random() * EMERG_FAKE_NEWS.length)];
+  openModal({
+    title: '🎩 MARKETEIRO BATEU NA SUA PORTA',
+    subt: 'Última cartada pós-debate. Pega ou larga.',
+    body: `<div style="text-align:left;font-size:16px;line-height:1.5">
+      <p style="color:var(--gold);font-style:italic">"O voto ainda tá em aberto. Tenho aqui UMA coisa que pode virar a noite. Mas é arriscado. Se cair, você não se elege e ainda perde o título por 8 anos."</p>
+      <div style="background:#1a0f00;color:#f3c453;padding:10px;border-radius:4px;margin:8px 0;font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.5">"${item.headline}"</div>
+      <p style="font-size:14px;color:var(--muted)">${item.text}</p>
+      <p style="margin-top:8px"><b style="color:var(--red)">70%</b> de virar cassação imediata (risco TSE → 100) · <b style="color:var(--green)">30%</b> de ganhar +5pp de intenção mas com risco extra.</p>
+    </div>`,
+    actions: [
+      { tag: 'illegal', title: '🎲 DISPARAR (alto risco)', cost: 0, energy: 0, primary: true,
+        onClick: ()=>{
+          closeModal();
+          state.illegalActs++;
+          state.flags.didEmergencyFakeNews = true;
+          if(Math.random() < 0.70){
+            state.risk = 100;
+            feedNews('TSE — REPRESENTAÇÃO IMEDIATA', `Manchete absurda rastreada até sua campanha em 2 horas. "${item.headline}". Cassação iminente.`, 'bad');
+            Audio.music.stinger('cassation');
+            setTimeout(()=>{ endGame('cassado'); }, 1200);
+          } else {
+            state.intent += 5;
+            state.risk += 25;
+            feedNews('TIMELINE', `Manchete "${item.headline}" viralizou em grupos. Adversário ainda nem reagiu. +5pp pra você (mas +25 risco TSE).`, 'warn');
+            setTimeout(()=>{ endGame(determineEnd()); }, 1500);
+          }
+        }
+      },
+      { tag: 'legal', title: 'RECUSAR — eu confio no debate', cost: 0, energy: 0,
+        onClick: ()=>{ closeModal(); setTimeout(()=>{ endGame(determineEnd()); }, 400); }
+      }
+    ]
+  });
 }
 
 function determineEnd(){
@@ -8242,6 +8325,30 @@ function endGame(kind){
 // =====================================================================
 // BOOT
 // =====================================================================
+// Botão de trailer na cover — escolhe versão por viewport
+(function(){
+  const tBtn = document.getElementById('trailerBtn');
+  const ov   = document.getElementById('trailerOverlay');
+  const vid  = document.getElementById('trailerVideo');
+  const close = document.getElementById('trailerClose');
+  if(!tBtn || !ov || !vid) return;
+  tBtn.addEventListener('click', ()=>{
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    vid.src = isMobile ? 'assets/trailer_mobile.mp4' : 'assets/trailer_desktop.mp4';
+    ov.style.display = 'flex';
+    // dá um beat pro src carregar antes do play
+    setTimeout(()=>{ vid.play().catch(()=>{}); }, 100);
+  });
+  function dismiss(){
+    try { vid.pause(); } catch(_e){}
+    vid.removeAttribute('src');
+    vid.load();
+    ov.style.display = 'none';
+  }
+  close.addEventListener('click', dismiss);
+  ov.addEventListener('click', (e)=>{ if(e.target === ov) dismiss(); });
+})();
+
 $('startBtn').addEventListener('click', ()=>{
   // Gesture do usuário: destrava autoplay e inicia trilha da intro
   Audio.init();
