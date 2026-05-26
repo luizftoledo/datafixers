@@ -296,8 +296,12 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
   font-size: clamp(0.98rem, 1.55vw, 1.18rem);
   line-height: 1.55;
   color: var(--ink-soft);
-  max-width: 54ch;
+  max-width: 58ch;
   margin: clamp(1.25rem, 3vh, 1.75rem) auto 0;
+}
+.hero-section .tagline-sub .kw {
+  color: var(--accent);
+  font-weight: 600;
 }
 .hero-section .site-name[hidden] { display: none; }
 .hero-section .tagline-link {
