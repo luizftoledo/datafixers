@@ -415,8 +415,8 @@
     .cc-builder-preview { min-height: 130px !important; padding: 6px !important; }
     .cc-builder-preview #ccPreview { width: 60px !important; height: 90px !important; }
     .cc-swatch { width: 26px !important; height: 26px !important; }
-    .cc-swatch.style-ic { width: 32px !important; height: 32px !important; padding: 1px !important; }
-    .cc-swatch.style-ic canvas { width: 26px !important; height: 26px !important; }
+    .cc-swatch.style-ic, .cc-swatch.acc-ic { width: 32px !important; height: 32px !important; padding: 1px !important; }
+    .cc-swatch.style-ic canvas, .cc-swatch.acc-ic canvas { width: 26px !important; height: 26px !important; }
     .cc-swatches { gap: 4px !important; }
     .cc-grid { gap: 8px !important; }
     .cc-input { padding: 8px !important; font-size: 17px !important; }
@@ -468,17 +468,20 @@
   }
   .cc-swatch:hover { transform: scale(1.1); }
   .cc-swatch.selected { border-color: var(--gold); transform: scale(1.12); box-shadow: 0 0 0 2px rgba(246,196,83,0.4); }
-  .cc-swatch.style-ic {
+  .cc-swatch.style-ic,
+  .cc-swatch.acc-ic {
     background: var(--bg-card-2);
     width: 40px; height: 40px;
     padding: 2px;
     display: flex; align-items: center; justify-content: center;
   }
-  .cc-swatch.style-ic canvas {
+  .cc-swatch.style-ic canvas,
+  .cc-swatch.acc-ic canvas {
     width: 32px; height: 32px;
     image-rendering: pixelated;
   }
-  .cc-swatch.style-ic.selected { background: rgba(246,196,83,0.25); }
+  .cc-swatch.style-ic.selected,
+  .cc-swatch.acc-ic.selected { background: rgba(246,196,83,0.25); }
 
   .stage {
     position: relative;
@@ -1499,7 +1502,7 @@
   .cover-art-wrap {
     position: relative;
     display: inline-block;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     flex: 0 0 auto;
     z-index: 1;
@@ -1508,7 +1511,7 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 55vh;
+    max-height: 78vh;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 8px 0 rgba(0,0,0,0.5), 0 0 28px rgba(246,196,83,0.3);
@@ -1561,7 +1564,7 @@
   }
   @media (max-width: 640px) {
     .cover { padding: 8px 6px; height: calc(100vh - 16px); max-height: calc(100vh - 16px); }
-    #cover img, #coverArt { max-height: 38vh; margin-bottom: 8px; max-width: 100%; }
+    #cover img, #coverArt { max-height: 62vh; margin-bottom: 8px; max-width: 100%; }
     .cover .lead { font-size: 15px; line-height: 1.35; margin-top: 8px; }
     .cover .lead + .lead { margin-top: 6px; }
     #cover .lead { font-size: 14px; margin: 6px 0 10px; line-height: 1.4; max-width: 100%; }
@@ -1921,8 +1924,6 @@
   </div>
 
   <div class="cover" id="cover">
-    <h1 class="cover-title">10 DIAS</h1>
-    <p class="cover-subtitle">jogo eleitoral</p>
     <div class="cover-art-wrap">
       <img src="assets/cover.png" alt="10 dias — jogo eleitoral" id="coverArt"/>
       <div class="cover-overlay">
@@ -2836,8 +2837,96 @@ const Audio = (() => {
     resume,
     setMuted, isMuted,
     sfx: SFX,
-    music: { start: startMusic, stop: stopMusic, phase: transitionPhase, stinger, setDay }
+    music: {
+      start: (_p) => { MusicPlayer.play('day1_3'); },
+      stop:  ()   => { MusicPlayer.play('endgame'); },
+      phase: ()   => { /* track agora é definido pelo dia, não pela phase procedural */ },
+      setDay:(d)  => { MusicPlayer.play(MusicPlayer.dayTrack(d)); },
+      stinger
+    }
   };
+})();
+
+// =====================================================================
+// MUSIC PLAYER: trilhas MP3 com loop e mini-crossfade entre faixas
+// =====================================================================
+const MusicPlayer = (() => {
+  const BASE = 'assets/music/';
+  const TRACKS = {
+    intro:   BASE + 'intro_endgame.mp3',
+    day1_3:  BASE + 'day_1_3.mp3',
+    day4_7:  BASE + 'day_4_7.mp3',
+    day8:    BASE + 'day_8.mp3',
+    day9:    BASE + 'day_9.mp3',
+    day10:   BASE + 'day_10.mp3',
+    endgame: BASE + 'intro_endgame.mp3',
+  };
+  const FADE_MS = 800;       // mini fade in/out
+  const TARGET_VOL = 0.55;
+  let current = null;        // { key, audio, _raf }
+  let muted = false;
+
+  function _cancelFade(slot){
+    if(slot && slot._raf){ cancelAnimationFrame(slot._raf); slot._raf = null; }
+  }
+  function _fade(slot, to, ms, onDone){
+    _cancelFade(slot);
+    const audio = slot.audio;
+    const from = audio.volume;
+    if(ms <= 0){ audio.volume = to; onDone && onDone(); return; }
+    const t0 = performance.now();
+    function step(now){
+      const t = Math.min(1, (now - t0) / ms);
+      audio.volume = from + (to - from) * t;
+      if(t < 1){ slot._raf = requestAnimationFrame(step); }
+      else     { slot._raf = null; onDone && onDone(); }
+    }
+    slot._raf = requestAnimationFrame(step);
+  }
+
+  function dayTrack(day){
+    if(day <= 3) return 'day1_3';
+    if(day <= 7) return 'day4_7';
+    if(day === 8) return 'day8';
+    if(day === 9) return 'day9';
+    return 'day10';
+  }
+
+  function play(key){
+    if(!TRACKS[key]) return;
+    if(current && current.key === key) return;
+    const audio = new window.Audio(TRACKS[key]);
+    audio.loop = true;
+    audio.preload = 'auto';
+    audio.volume = 0;
+    const slot = { key, audio, _raf: null };
+    const p = audio.play();
+    if(p && p.catch) p.catch(()=>{ /* autoplay bloqueado: próximo gesture destrava */ });
+    _fade(slot, muted ? 0 : TARGET_VOL, FADE_MS);
+    if(current){
+      const prev = current;
+      _fade(prev, 0, FADE_MS, ()=>{
+        try { prev.audio.pause(); prev.audio.src = ''; } catch(_e){}
+      });
+    }
+    current = slot;
+  }
+
+  function stop(){
+    if(!current) return;
+    const prev = current;
+    current = null;
+    _fade(prev, 0, FADE_MS, ()=>{
+      try { prev.audio.pause(); prev.audio.src = ''; } catch(_e){}
+    });
+  }
+
+  function setMuted(m){
+    muted = m;
+    if(current) _fade(current, m ? 0 : TARGET_VOL, 200);
+  }
+
+  return { play, stop, setMuted, dayTrack };
 })();
 
 function sfx(name){
@@ -2981,6 +3070,35 @@ function drawCandidatePoster(px0, py0){
     rect(fx+4, fy-2, 4, 3, c.hair);
   } else if(c.style === 'bald'){
     rect(fx+1, fy+2, 10, 1, shadeColor(c.skin, -15));
+  } else if(c.style === 'mohawk'){
+    rect(fx+5, fy-1, 2, 4, c.hair);
+  } else if(c.style === 'mullet'){
+    rect(fx, fy, 12, 4, c.hair);
+    rect(fx+2, fy+13, 8, 2, c.hair);
+  } else if(c.style === 'spiky'){
+    rect(fx, fy+1, 12, 2, c.hair);
+    rect(fx+1, fy-1, 1, 2, c.hair);
+    rect(fx+4, fy-1, 1, 2, c.hair);
+    rect(fx+7, fy-1, 1, 2, c.hair);
+    rect(fx+10, fy-1, 1, 2, c.hair);
+  } else if(c.style === 'pigtails'){
+    rect(fx, fy, 12, 3, c.hair);
+    rect(fx-1, fy+3, 2, 6, c.hair);
+    rect(fx+11, fy+3, 2, 6, c.hair);
+  } else if(c.style === 'topknot'){
+    rect(fx, fy, 12, 3, c.hair);
+    rect(fx+4, fy-3, 4, 3, c.hair);
+  } else if(c.style === 'fade'){
+    rect(fx+2, fy, 8, 2, c.hair);
+  } else if(c.style === 'dreads'){
+    rect(fx, fy, 12, 3, c.hair);
+    rect(fx, fy+3, 1, 6, c.hair);
+    rect(fx+3, fy+4, 1, 5, c.hair);
+    rect(fx+8, fy+4, 1, 5, c.hair);
+    rect(fx+11, fy+3, 1, 6, c.hair);
+  } else if(c.style === 'ponytail'){
+    rect(fx, fy, 12, 3, c.hair);
+    rect(fx+12, fy+3, 2, 6, c.hair);
   }
   // olhos
   rect(fx+3, fy+6, 2, 1, '#000');
@@ -3176,16 +3294,27 @@ function drawMic(x,y){
 // Paletas pra customização do avatar
 const LOOK_OPTIONS = {
   style: [
-    { id:'short' },
-    { id:'long' },
-    { id:'curly' },
-    { id:'afro' },
-    { id:'bun' },
-    { id:'bald' }
+    { id:'short' }, { id:'long' }, { id:'curly' }, { id:'afro' },
+    { id:'bun' }, { id:'bald' }, { id:'mohawk' }, { id:'mullet' },
+    { id:'spiky' }, { id:'pigtails' }, { id:'topknot' }, { id:'fade' },
+    { id:'dreads' }, { id:'ponytail' }
   ],
-  hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453', '#fff', '#7a4030', '#8a5cf6', '#3a90c0'],
-  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a', '#5a3a20', '#9be099', '#a890ff', '#88c8ff'],
-  shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a', '#5a4030', '#e8e0d0']
+  hair:   ['#b87333', '#1a0f24', '#3a2010', '#cf3a3a', '#5a5a5a', '#f6c453',
+           '#fff', '#7a4030', '#8a5cf6', '#3a90c0',
+           '#e89bc7', '#5fdb8a', '#ff7733', '#9be3ff', '#c0c0c0', '#52317a'],
+  skin:   ['#f3c9a0', '#e9c39e', '#d4a274', '#c89968', '#a0866a', '#8a6a4a',
+           '#5a3a20', '#9be099', '#a890ff', '#88c8ff'],
+  shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a',
+           '#5a4030', '#e8e0d0',
+           '#3c7dc0', '#cf3a3a', '#f6c453', '#5fb872', '#e89bc7', '#8a5cf6',
+           '#1a1a1a', '#ffffff'],
+  accessory: [
+    { id:'none' }, { id:'glasses' }, { id:'sunglasses' }, { id:'cap' },
+    { id:'cowboyhat' }, { id:'crown' }, { id:'headphones' }, { id:'mask' },
+    { id:'mustache' }, { id:'beard' }, { id:'surfboard' }, { id:'briefcase' },
+    { id:'microphone' }, { id:'megaphone' }, { id:'flag' }, { id:'umbrella' },
+    { id:'skateboard' }, { id:'guitar' }, { id:'phone' }, { id:'dog' }
+  ]
 };
 
 function getCandidateColors(){
@@ -3196,8 +3325,167 @@ function getCandidateColors(){
     hair2: shadeColor(L.hair || '#b87333', -30),
     skin:  L.skin  || '#f3c9a0',
     shirt: L.shirt || '#3c7dc0',
-    accent: L.accent || '#cf3a3a'
+    accent: L.accent || '#cf3a3a',
+    accessory: L.accessory || 'none'
   };
+}
+
+// Desenha cabelo extra (estilos novos) — recebe `rect` callback pra reuso
+// entre drawPlayer (jogo) e drawPlayerPreview (preview da criação)
+function drawExtraHair(r, x, y, oy, c){
+  const s = c.style;
+  if(s === 'mohawk'){
+    r(x+5, y-1+oy, 2, 5, c.hair);
+    r(x+5, y-2+oy, 2, 1, c.hair);
+    r(x+4, y+1+oy, 1, 2, c.hair2);
+    r(x+7, y+1+oy, 1, 2, c.hair2);
+  } else if(s === 'mullet'){
+    r(x+2, y+1+oy, 8, 3, c.hair);
+    r(x+1, y+2+oy, 1, 3, c.hair);
+    r(x+10, y+2+oy, 1, 3, c.hair2);
+    r(x+3, y+9+oy, 6, 3, c.hair);
+    r(x+4, y+12+oy, 4, 2, c.hair2);
+  } else if(s === 'spiky'){
+    r(x+2, y+2+oy, 8, 2, c.hair);
+    r(x+2, y-1+oy, 1, 3, c.hair);
+    r(x+4, y-1+oy, 1, 3, c.hair);
+    r(x+6, y-1+oy, 1, 3, c.hair);
+    r(x+8, y-1+oy, 1, 3, c.hair);
+    r(x+10, y-1+oy, 1, 3, c.hair);
+  } else if(s === 'pigtails'){
+    r(x+2, y+1+oy, 8, 3, c.hair);
+    r(x+0, y+3+oy, 2, 5, c.hair);
+    r(x+10, y+3+oy, 2, 5, c.hair2);
+    r(x-1, y+5+oy, 1, 3, c.hair);
+    r(x+12, y+5+oy, 1, 3, c.hair2);
+  } else if(s === 'topknot'){
+    r(x+2, y+1+oy, 8, 3, c.hair);
+    r(x+4, y-2+oy, 4, 3, c.hair);
+    r(x+5, y-3+oy, 2, 1, c.hair);
+  } else if(s === 'fade'){
+    r(x+3, y+1+oy, 6, 2, c.hair);
+    r(x+2, y+2+oy, 1, 1, c.hair2);
+    r(x+9, y+2+oy, 1, 1, c.hair2);
+  } else if(s === 'dreads'){
+    r(x+2, y+1+oy, 8, 3, c.hair);
+    r(x+1, y+3+oy, 1, 5, c.hair);
+    r(x+3, y+4+oy, 1, 5, c.hair);
+    r(x+6, y+4+oy, 1, 5, c.hair);
+    r(x+9, y+4+oy, 1, 5, c.hair);
+    r(x+10, y+3+oy, 1, 5, c.hair2);
+  } else if(s === 'ponytail'){
+    r(x+2, y+1+oy, 8, 3, c.hair);
+    r(x+1, y+2+oy, 1, 3, c.hair);
+    r(x+10, y+2+oy, 1, 3, c.hair2);
+    r(x+11, y+4+oy, 2, 6, c.hair2);
+    r(x+12, y+9+oy, 1, 2, c.hair2);
+  }
+}
+
+// Desenha acessório (chapéu, óculos, item segurado) — `rect` callback pra reuso
+function drawAccessoryPx(r, x, y, oy, c, facing){
+  const acc = c.accessory || 'none';
+  if(acc === 'none') return;
+  facing = facing || 'down';
+  if(acc === 'glasses'){
+    r(x+3, y+5+oy, 2, 1, '#1a1a1a');
+    r(x+5, y+5+oy, 1, 1, '#1a1a1a');
+    r(x+6, y+5+oy, 2, 1, '#1a1a1a');
+    r(x+3, y+4+oy, 2, 1, '#1a1a1a');
+    r(x+6, y+4+oy, 2, 1, '#1a1a1a');
+  } else if(acc === 'sunglasses'){
+    r(x+3, y+4+oy, 6, 2, '#000');
+    r(x+5, y+4+oy, 1, 1, '#3a4a5a');
+  } else if(acc === 'cap'){
+    r(x+1, y+1+oy, 10, 2, '#cf3a3a');
+    r(x+1, y+3+oy, 4, 1, '#cf3a3a');
+    r(x+0, y+4+oy, 7, 1, '#1a1a1a');
+    r(x+5, y+2+oy, 3, 1, '#fff');
+  } else if(acc === 'cowboyhat'){
+    r(x-1, y+2+oy, 14, 1, '#7a4020');
+    r(x+2, y+0+oy, 8, 2, '#7a4020');
+    r(x+2, y-1+oy, 8, 1, '#7a4020');
+    r(x+3, y+1+oy, 6, 1, '#5a3010');
+  } else if(acc === 'crown'){
+    r(x+1, y+1+oy, 10, 1, '#f6c453');
+    r(x+1, y+0+oy, 1, 1, '#f6c453');
+    r(x+5, y+0+oy, 2, 1, '#f6c453');
+    r(x+10, y+0+oy, 1, 1, '#f6c453');
+    r(x+3, y+0+oy, 1, 1, '#cf3a3a');
+    r(x+8, y+0+oy, 1, 1, '#3a90c0');
+  } else if(acc === 'headphones'){
+    r(x+1, y+0+oy, 10, 1, '#1a1a1a');
+    r(x+0, y+1+oy, 1, 4, '#1a1a1a');
+    r(x+11, y+1+oy, 1, 4, '#1a1a1a');
+    r(x-1, y+4+oy, 2, 4, '#cf3a3a');
+    r(x+11, y+4+oy, 2, 4, '#cf3a3a');
+  } else if(acc === 'mask'){
+    r(x+2, y+6+oy, 8, 3, '#fff');
+    r(x+2, y+6+oy, 8, 1, '#cce0ee');
+    r(x+2, y+7+oy, 1, 2, '#cce0ee');
+    r(x+9, y+7+oy, 1, 2, '#cce0ee');
+  } else if(acc === 'mustache'){
+    r(x+4, y+6+oy, 4, 1, '#3a2010');
+    r(x+3, y+6+oy, 1, 1, '#3a2010');
+    r(x+8, y+6+oy, 1, 1, '#3a2010');
+  } else if(acc === 'beard'){
+    r(x+3, y+8+oy, 6, 1, '#3a2010');
+    r(x+2, y+9+oy, 8, 1, '#3a2010');
+    r(x+3, y+10+oy, 6, 1, '#3a2010');
+  } else if(acc === 'surfboard'){
+    r(x+13, y+1+oy, 2, 18, '#f6c453');
+    r(x+13, y+1+oy, 2, 2, '#cf3a3a');
+    r(x+13, y+9+oy, 2, 1, '#cf3a3a');
+    r(x+13, y+17+oy, 2, 2, '#cf3a3a');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'briefcase'){
+    r(x+12, y+11+oy, 5, 6, '#5a3a20');
+    r(x+13, y+10+oy, 3, 1, '#5a3a20');
+    r(x+12, y+13+oy, 5, 1, '#3a2010');
+    r(x+14, y+12+oy, 1, 1, '#f6c453');
+    r(x+12, y+10+oy, 1, 2, c.skin);
+  } else if(acc === 'microphone'){
+    r(x+12, y+7+oy, 2, 3, '#1a1a1a');
+    r(x+13, y+10+oy, 1, 4, '#5a5a5a');
+    r(x+12, y+8+oy, 1, 1, '#cf3a3a');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'megaphone'){
+    r(x+12, y+10+oy, 2, 3, '#cf3a3a');
+    r(x+14, y+8+oy, 2, 7, '#cf3a3a');
+    r(x+13, y+13+oy, 1, 1, '#1a1a1a');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'flag'){
+    r(x+12, y+0+oy, 1, 16, '#3a2010');
+    r(x+13, y+0+oy, 5, 5, c.accent || '#cf3a3a');
+    r(x+13, y+2+oy, 5, 1, '#f6c453');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'umbrella'){
+    r(x+12, y+4+oy, 1, 12, '#5a3a20');
+    r(x+10, y+3+oy, 5, 1, '#3a4a5a');
+    r(x+11, y+2+oy, 3, 1, '#3a4a5a');
+    r(x+12, y+1+oy, 1, 1, '#3a4a5a');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'skateboard'){
+    r(x+11, y+18+oy, 6, 1, '#7a4020');
+    r(x+11, y+19+oy, 1, 1, '#5a5a5a');
+    r(x+16, y+19+oy, 1, 1, '#5a5a5a');
+    r(x+12, y+17+oy, 4, 1, '#cf3a3a');
+  } else if(acc === 'guitar'){
+    r(x+12, y+5+oy, 4, 5, '#7a4020');
+    r(x+13, y+10+oy, 2, 6, '#7a4020');
+    r(x+13, y+7+oy, 2, 1, '#1a1a1a');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'phone'){
+    r(x+12, y+10+oy, 2, 3, '#1a1a1a');
+    r(x+12, y+10+oy, 2, 1, '#3a90c0');
+    r(x+12, y+13+oy, 1, 2, c.skin);
+  } else if(acc === 'dog'){
+    r(x+12, y+16+oy, 4, 3, '#a07050');
+    r(x+15, y+15+oy, 2, 2, '#a07050');
+    r(x+12, y+19+oy, 1, 1, '#a07050');
+    r(x+15, y+16+oy, 1, 1, '#000');
+    r(x+11, y+17+oy, 1, 1, '#a07050');
+  }
 }
 
 // Player avatar 12x20-ish, with direction + walk frames
@@ -3266,6 +3554,9 @@ function drawPlayer(x,y,opts){
   } else if(style === 'bald'){
     // sem cabelo, talvez sombra topo
     rect(x+3, y+2+oy, 6, 1, shadeColor(c.skin, -15));
+  } else {
+    // estilos extras (mohawk, mullet, spiky, pigtails, topknot, fade, dreads, ponytail)
+    drawExtraHair(rect, x, y, oy, c);
   }
   // face
   if(facing==='down'){
@@ -3283,6 +3574,8 @@ function drawPlayer(x,y,opts){
     rect(x+7, y+7+oy, 2, 1, '#8a3a3a');
     rect(x+2, y+4+oy, 1, 4, c.hair);
   }
+  // acessório por cima de tudo
+  drawAccessoryPx(rect, x, y, oy, c, facing);
 }
 
 // Util: escurece/clareia uma cor hex
@@ -3912,7 +4205,7 @@ window.addEventListener('keyup', (e)=>{
 
 // ===== GAME STATE =====
 const state = {
-  mode: 'normal',  // tutorial | normal | dificil | realista
+  mode: 'normal',  // normal | dificil
   day: 1,
   energy: 5,
   energyMax: 5,
@@ -3936,7 +4229,8 @@ const state = {
       hair: '#b87333',
       skin: '#f3c9a0',
       shirt: '#3c7dc0',
-      accent: '#cf3a3a'
+      accent: '#cf3a3a',
+      accessory: 'none'
     }
   },
   touch: { active: false, sx: 0, sy: 0, cx: 0, cy: 0, t0: 0, mode: 'idle' },
@@ -6350,24 +6644,8 @@ function maybeAppearMarketeiro(){
 // MODOS DE DIFICULDADE — ditam intensidade dos ataques e crescimento do adv
 // =====================================================================
 const MODE_CONFIG = {
-  tutorial: {
-    name: 'Tutorial', label: '😌 Tutorial (passivo)',
-    desc: 'Só pra aprender as mecânicas. ADVERSÁRIO NÃO ATACA — vitória quase garantida. Use só se nunca jogou antes.',
-    dayCap: 3, leadPenalty: false,
-    scheduledChance: { 3: 0, 5: 0, 7: 0 },
-    dmgMul: 0.5, oppGrowthBonus: -0.6,
-    spontaneousOppBoost: false, illegalRiskMul: 0.7,
-  },
   normal: {
-    name: 'Normal', label: '🎯 Normal (recomendado)',
-    desc: 'Adversário ataca de verdade (deepfake, bots, denúncia). Honesto sem defesa: 44% vitória 1T. Com defesa: 78%.',
-    dayCap: 6, leadPenalty: true,
-    scheduledChance: { 3: 0.5, 5: 0.6, 7: 0.7 },
-    dmgMul: 1.0, oppGrowthBonus: 0,
-    spontaneousOppBoost: false, illegalRiskMul: 1.0,
-  },
-  dificil: {
-    name: 'Difícil', label: '🔥 Difícil',
+    name: 'Normal', label: '🎯 Normal',
     desc: 'Ataques quase todo dia, adversário cresce forte. Defesa é obrigatória — sem ela, ~26% chance de DERROTA. Vitória 1T fica em 5%.',
     dayCap: 9, leadPenalty: true,
     scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
@@ -6375,8 +6653,8 @@ const MODE_CONFIG = {
     spontaneousOppBoost: false, illegalRiskMul: 1.3,
     leadThresholdLow: 2,
   },
-  realista: {
-    name: 'Realista', label: '⚖️ Realista',
+  dificil: {
+    name: 'Difícil', label: '🔥 Difícil',
     desc: 'Como campanha de verdade. Adversário também tem viral/endosso. Honesto sem defesa: 1% vitória, 53% derrota. Mesmo com defesa: 4% vitória, 36% derrota.',
     dayCap: 9, leadPenalty: true,
     scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
@@ -7260,6 +7538,10 @@ function endGame(kind){
 // BOOT
 // =====================================================================
 $('startBtn').addEventListener('click', ()=>{
+  // Gesture do usuário: destrava autoplay e inicia trilha da intro
+  Audio.init();
+  Audio.resume();
+  MusicPlayer.play('intro');
   $('cover').style.display = 'none';
   setupCharCreate();
   $('charCreate').style.display = 'block';
@@ -7283,7 +7565,7 @@ function buildModeSelector(){
   const desc = $('ccModeDesc');
   if(!grid) return;
   grid.innerHTML = '';
-  ['tutorial','normal','dificil','realista'].forEach(key => {
+  ['normal','dificil'].forEach(key => {
     const cfg = MODE_CONFIG[key];
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -7313,10 +7595,11 @@ function buildAvatarRows(){
   if(!rows) return;
   rows.innerHTML = '';
   const rowsConfig = [
-    { prop: 'style',  label: 'CABELO (ESTILO)' },
-    { prop: 'hair',   label: 'COR DO CABELO' },
-    { prop: 'skin',   label: 'COR DA PELE' },
-    { prop: 'shirt',  label: 'CAMISA' }
+    { prop: 'style',     label: 'CABELO (ESTILO)' },
+    { prop: 'hair',      label: 'COR DO CABELO' },
+    { prop: 'skin',      label: 'COR DA PELE' },
+    { prop: 'shirt',     label: 'COR DA CAMISA' },
+    { prop: 'accessory', label: 'ACESSÓRIO / OBJETO' }
   ];
   rowsConfig.forEach(cfg => {
     const div = document.createElement('div');
@@ -7326,6 +7609,9 @@ function buildAvatarRows(){
       if(cfg.prop === 'style'){
         const sel = state.candidate.look.style === opt.id ? ' selected' : '';
         return `<button type="button" class="cc-swatch style-ic${sel}" data-prop="style" data-val="${opt.id}" aria-label="${opt.id}"><canvas width="32" height="32" data-style="${opt.id}"></canvas></button>`;
+      } else if(cfg.prop === 'accessory'){
+        const sel = (state.candidate.look.accessory || 'none') === opt.id ? ' selected' : '';
+        return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="accessory" data-val="${opt.id}" aria-label="${opt.id}"><canvas width="32" height="32" data-acc="${opt.id}"></canvas></button>`;
       } else {
         const sel = state.candidate.look[cfg.prop] === opt ? ' selected' : '';
         return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt}" style="background:${opt}" aria-label="${opt}"></button>`;
@@ -7339,6 +7625,12 @@ function buildAvatarRows(){
     const cx = c.getContext('2d');
     cx.imageSmoothingEnabled = false;
     drawHeadIcon(cx, c.dataset.style);
+  });
+  // Desenhar ícones dos acessórios
+  rows.querySelectorAll('canvas[data-acc]').forEach(c => {
+    const cx = c.getContext('2d');
+    cx.imageSmoothingEnabled = false;
+    drawAccessoryIcon(cx, c.dataset.acc);
   });
   rows.querySelectorAll('.cc-swatch').forEach(s => {
     s.addEventListener('click', () => {
@@ -7392,12 +7684,170 @@ function drawHeadIcon(cx, style){
     r(cx0+4, cy0-4, 1, 1, c.hair);
   } else if(style === 'bald'){
     r(cx0+1, cy0+2, 6, 1, shadeColor(c.skin, -18));
+  } else if(style === 'mohawk'){
+    r(cx0+3, cy0-1, 2, 4, c.hair);
+  } else if(style === 'mullet'){
+    r(cx0, cy0, 8, 3, c.hair);
+    r(cx0-1, cy0+1, 1, 3, c.hair);
+    r(cx0+1, cy0+9, 6, 3, c.hair);
+  } else if(style === 'spiky'){
+    r(cx0, cy0+1, 8, 2, c.hair);
+    r(cx0, cy0-1, 1, 2, c.hair);
+    r(cx0+2, cy0-1, 1, 2, c.hair);
+    r(cx0+4, cy0-1, 1, 2, c.hair);
+    r(cx0+6, cy0-1, 1, 2, c.hair);
+  } else if(style === 'pigtails'){
+    r(cx0, cy0, 8, 3, c.hair);
+    r(cx0-2, cy0+2, 2, 5, c.hair);
+    r(cx0+8, cy0+2, 2, 5, c.hair);
+  } else if(style === 'topknot'){
+    r(cx0, cy0, 8, 3, c.hair);
+    r(cx0+2, cy0-3, 4, 3, c.hair);
+  } else if(style === 'fade'){
+    r(cx0+1, cy0, 6, 2, c.hair);
+  } else if(style === 'dreads'){
+    r(cx0, cy0, 8, 3, c.hair);
+    r(cx0-1, cy0+3, 1, 5, c.hair);
+    r(cx0+1, cy0+4, 1, 4, c.hair);
+    r(cx0+3, cy0+4, 1, 4, c.hair);
+    r(cx0+5, cy0+4, 1, 4, c.hair);
+    r(cx0+8, cy0+3, 1, 5, c.hair);
+  } else if(style === 'ponytail'){
+    r(cx0, cy0, 8, 3, c.hair);
+    r(cx0+8, cy0+2, 2, 5, c.hair);
   }
   // olhos
   r(cx0+2, cy0+4, 1, 1, '#000');
   r(cx0+5, cy0+4, 1, 1, '#000');
   // boca
   r(cx0+3, cy0+6, 2, 1, '#8a3a3a');
+}
+
+// Desenha mini-ícone do acessório (pra swatch) — usa cara genérica como base
+function drawAccessoryIcon(cx, accId){
+  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  cx.clearRect(0, 0, 32, 32);
+  if(accId === 'none'){
+    cx.font = 'bold 11px monospace';
+    cx.fillStyle = '#8a8a94';
+    cx.textAlign = 'center';
+    cx.textBaseline = 'middle';
+    cx.fillText('SEM', 16, 14);
+    cx.fillText('NADA', 16, 24);
+    return;
+  }
+  // Itens segurados → ícone grande do objeto, sem cabeça
+  if(['surfboard','briefcase','microphone','megaphone','flag','umbrella',
+      'skateboard','guitar','phone','dog'].includes(accId)){
+    if(accId === 'surfboard'){
+      r(13, 3, 6, 26, '#f6c453');
+      r(13, 3, 6, 3, '#cf3a3a');
+      r(13, 14, 6, 2, '#cf3a3a');
+      r(13, 26, 6, 3, '#cf3a3a');
+    } else if(accId === 'briefcase'){
+      r(7, 13, 18, 14, '#5a3a20');
+      r(11, 9, 10, 4, '#5a3a20');
+      r(7, 18, 18, 2, '#3a2010');
+      r(15, 16, 2, 2, '#f6c453');
+    } else if(accId === 'microphone'){
+      r(12, 4, 8, 10, '#1a1a1a');
+      r(15, 14, 2, 14, '#5a5a5a');
+      r(13, 6, 2, 2, '#cf3a3a');
+    } else if(accId === 'megaphone'){
+      r(7, 12, 6, 8, '#cf3a3a');
+      r(13, 8, 12, 16, '#cf3a3a');
+      r(10, 18, 2, 2, '#1a1a1a');
+      r(20, 14, 2, 4, '#7a1010');
+    } else if(accId === 'flag'){
+      r(9, 3, 2, 26, '#3a2010');
+      r(11, 3, 14, 11, '#cf3a3a');
+      r(11, 8, 14, 1, '#f6c453');
+      r(13, 11, 10, 1, '#f6c453');
+    } else if(accId === 'umbrella'){
+      r(15, 14, 2, 15, '#5a3a20');
+      r(6, 12, 20, 2, '#3a4a5a');
+      r(8, 10, 16, 2, '#3a4a5a');
+      r(11, 8, 10, 2, '#3a4a5a');
+      r(13, 6, 6, 2, '#3a4a5a');
+    } else if(accId === 'skateboard'){
+      r(4, 16, 24, 4, '#7a4020');
+      r(4, 18, 24, 2, '#5a3010');
+      r(6, 20, 4, 4, '#5a5a5a');
+      r(22, 20, 4, 4, '#5a5a5a');
+    } else if(accId === 'guitar'){
+      r(11, 4, 10, 12, '#7a4020');
+      r(13, 16, 6, 12, '#7a4020');
+      r(15, 8, 2, 2, '#1a1a1a');
+      r(11, 12, 10, 1, '#f6c453');
+    } else if(accId === 'phone'){
+      r(10, 5, 12, 22, '#1a1a1a');
+      r(11, 7, 10, 16, '#3a90c0');
+      r(14, 24, 4, 2, '#fff');
+    } else if(accId === 'dog'){
+      r(6, 16, 16, 9, '#a07050');
+      r(18, 12, 7, 7, '#a07050');
+      r(20, 14, 2, 2, '#000');
+      r(22, 17, 2, 1, '#000');
+      r(4, 18, 2, 4, '#a07050');
+      r(8, 25, 3, 3, '#a07050');
+      r(18, 25, 3, 3, '#a07050');
+    }
+    return;
+  }
+  // Cabeça/face → desenha mini face + acessório
+  const px = 12, py = 8;
+  r(px, py+10, 8, 2, '#f3c9a0');   // pescoço
+  r(px-2, py+12, 12, 6, '#5a5a64'); // colarinho
+  r(px, py+1, 8, 9, '#f3c9a0');    // cabeça
+  if(accId !== 'cap' && accId !== 'cowboyhat' && accId !== 'crown'){
+    r(px, py, 8, 3, '#3a2010');    // cabelo padrão (só se acessório não cobrir)
+    r(px-1, py+1, 1, 3, '#3a2010');
+    r(px+8, py+1, 1, 3, '#3a2010');
+  }
+  r(px+2, py+5, 1, 1, '#000');     // olho
+  r(px+5, py+5, 1, 1, '#000');     // olho
+  r(px+3, py+7, 2, 1, '#8a3a3a');  // boca
+  // acessório
+  if(accId === 'glasses'){
+    r(px+1, py+4, 2, 2, '#1a1a1a');
+    r(px+5, py+4, 2, 2, '#1a1a1a');
+    r(px+3, py+5, 2, 1, '#1a1a1a');
+    r(px+2, py+5, 1, 1, '#fff');
+    r(px+5, py+5, 1, 1, '#fff');
+  } else if(accId === 'sunglasses'){
+    r(px+1, py+4, 6, 2, '#000');
+    r(px+3, py+4, 1, 1, '#3a4a5a');
+  } else if(accId === 'mask'){
+    r(px, py+6, 8, 4, '#fff');
+    r(px, py+6, 8, 1, '#cce0ee');
+  } else if(accId === 'mustache'){
+    r(px+2, py+6, 4, 1, '#3a2010');
+    r(px+1, py+6, 1, 1, '#3a2010');
+    r(px+6, py+6, 1, 1, '#3a2010');
+  } else if(accId === 'beard'){
+    r(px+1, py+8, 6, 1, '#3a2010');
+    r(px, py+9, 8, 2, '#3a2010');
+  } else if(accId === 'cap'){
+    r(px-1, py-1, 10, 3, '#cf3a3a');
+    r(px-1, py+2, 5, 1, '#cf3a3a');
+    r(px-2, py+3, 7, 1, '#1a1a1a');
+  } else if(accId === 'cowboyhat'){
+    r(px-3, py+1, 14, 1, '#7a4020');
+    r(px, py-2, 8, 3, '#7a4020');
+  } else if(accId === 'crown'){
+    r(px-1, py, 10, 1, '#f6c453');
+    r(px-1, py-1, 2, 1, '#f6c453');
+    r(px+3, py-1, 2, 1, '#f6c453');
+    r(px+7, py-1, 2, 1, '#f6c453');
+    r(px+1, py-2, 1, 1, '#cf3a3a');
+    r(px+6, py-2, 1, 1, '#3a90c0');
+  } else if(accId === 'headphones'){
+    r(px-1, py-1, 10, 1, '#1a1a1a');
+    r(px-1, py, 1, 4, '#1a1a1a');
+    r(px+8, py, 1, 4, '#1a1a1a');
+    r(px-2, py+3, 2, 4, '#cf3a3a');
+    r(px+8, py+3, 2, 4, '#cf3a3a');
+  }
 }
 function renderWallPoster(){
   const c = state.candidate;
@@ -7484,11 +7934,15 @@ function drawPlayerPreview(cx, look){
     r(x+5, y-2, 2, 1, c.hair);
   } else if(c.style === 'bald'){
     r(x+3, y+2, 6, 1, shadeColor(c.skin, -15));
+  } else {
+    drawExtraHair(r, x, y, 0, c);
   }
   // eyes + mouth
   r(x+4, y+5, 1, 1, '#000');
   r(x+7, y+5, 1, 1, '#000');
   r(x+5, y+7, 2, 1, '#8a3a3a');
+  // acessório
+  drawAccessoryPx(r, x, y, 0, c, 'down');
 }
 
 $('ccBack').addEventListener('click', ()=>{
@@ -7535,6 +7989,7 @@ soundBtn.addEventListener('click', ()=>{
   Audio.resume();
   const newMuted = !Audio.isMuted();
   Audio.setMuted(newMuted);
+  MusicPlayer.setMuted(newMuted);
   soundBtn.textContent = newMuted ? '🔇' : '🔊';
 });
 // Desistir botão (modal in-app, não sai do fullscreen)
