@@ -7167,7 +7167,14 @@ function openModal({title, subt, body, actions, note}){
   });
   $('modalBack').classList.add('show');
 }
-function closeModal(){ $('modalBack').classList.remove('show'); }
+function closeModal(){
+  $('modalBack').classList.remove('show');
+  // Se o jogo já acabou (cassação/vitória/derrota/2T), fechar o modal por
+  // qualquer caminho recarrega a página — evita ficar travado no cenário morto
+  if(state && state.gameEnded){
+    setTimeout(()=>{ location.reload(); }, 50);
+  }
+}
 $('modalCancel').addEventListener('click', closeModal);
 $('modalCloseX').addEventListener('click', closeModal);
 
@@ -8320,9 +8327,12 @@ function endGame(kind){
     flags: { bf: state.flags.boughtFollowers, wb: state.flags.didWhatsappBlast, nb: state.flags.neuroBots, df: state.flags.deepfakedAdv }
   });
   state.running = false;
-  // Tela final é decisiva: esconde o X de fechar o modal pra evitar travamento
+  state.gameEnded = true;  // closeModal vai recarregar se algo fechar este modal
+  // Tela final é decisiva: esconde X e FECHAR do modal pra evitar travamento
   const xBtnEnd = document.getElementById('modalCloseX');
   if(xBtnEnd) xBtnEnd.style.display = 'none';
+  const cancelBtn = document.getElementById('modalCancel');
+  if(cancelBtn) cancelBtn.style.display = 'none';
   Audio.music.stop();
   if(kind === 'vitoria1') Audio.music.stinger('victory');
   else if(kind === 'segundoTurno') sfx('legal');
