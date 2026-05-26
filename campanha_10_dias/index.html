@@ -425,6 +425,99 @@
     #tutorialBox p { font-size: 14px; }
   }
 
+  /* Capa fictícia da revista OLHA SÓ (ataque da véspera) */
+  #olhaSoOverlay { display: none; position: fixed; inset: 0; z-index: 9100; }
+  .olhaso-back {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.86);
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  .olhaso-mag {
+    width: 100%; max-width: 420px;
+    background: #f3eedd;
+    border: 6px solid #cf0a2c;
+    border-radius: 4px;
+    padding: 14px 16px 18px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.7);
+    font-family: 'VT323', monospace;
+    color: #1a0f00;
+    text-align: center;
+    animation: olhaso-pop 0.4s ease-out;
+  }
+  @keyframes olhaso-pop {
+    from { transform: scale(0.85) rotate(-2deg); opacity: 0; }
+    to   { transform: scale(1) rotate(0); opacity: 1; }
+  }
+  .olhaso-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-bottom: 3px double #cf0a2c;
+    padding-bottom: 6px; margin-bottom: 8px;
+  }
+  .olhaso-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 22px;
+    color: #cf0a2c;
+    letter-spacing: 1px;
+  }
+  .olhaso-edition { font-size: 13px; color: #555; }
+  .olhaso-photo {
+    position: relative;
+    height: 130px;
+    background: repeating-linear-gradient(45deg, #5a4030 0 8px, #4a3020 8px 16px);
+    border: 2px solid #1a0f00;
+    margin: 8px 0 10px;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .olhaso-redacted {
+    background: #000; color: #f3c453;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px; letter-spacing: 1px;
+    padding: 6px 10px;
+    transform: rotate(-4deg);
+  }
+  .olhaso-stamp {
+    position: absolute; top: 8px; right: 10px;
+    background: #cf0a2c; color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px; padding: 4px 6px;
+    transform: rotate(8deg);
+    border: 2px solid #fff;
+  }
+  .olhaso-headline {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 13px; line-height: 1.4;
+    color: #1a0f00;
+    margin: 4px 0 6px;
+  }
+  .olhaso-sub {
+    font-size: 17px; line-height: 1.3;
+    color: #5a3a20;
+    margin-bottom: 12px;
+  }
+  .olhaso-impact {
+    background: #1a0f00; color: #f3c453;
+    font-size: 15px; padding: 8px;
+    margin: 8px 0 12px;
+    border-radius: 3px;
+  }
+  .olhaso-impact b { color: #cf3a3a; }
+  .olhaso-mag button {
+    background: #cf0a2c; color: #fff;
+    border: 2px solid #1a0f00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.5);
+  }
+  @media (max-width: 640px){
+    .olhaso-logo { font-size: 18px; }
+    .olhaso-headline { font-size: 11px; }
+    .olhaso-sub { font-size: 15px; }
+  }
+
   /* Hint dos botões 🔊 / ⛶ na tela de personagem (overlay com destaque) */
   #ccBtnHint {
     position: fixed; inset: 0; z-index: 9500;
@@ -2115,7 +2208,7 @@
     <div class="stat money" id="hud-money"><div class="label">CAIXA R$</div><div class="value" id="hudMoney">100k</div></div>
     <div class="stat followers" id="hud-followers"><div class="label">📱 SEGUIDORES</div><div class="value" id="hudFollowers">3.5k</div></div>
     <div class="stat risk" id="hud-risk"><div class="label">RISCO TSE</div><div class="value" id="hudRisk">0</div><div class="bar"><div id="hudRiskBar" style="width:0%"></div></div></div>
-    <div class="stat trust" id="hud-trust" title="Confiança do eleitor — afeta indecisos, debate, descontos e respostas a ataques"><div class="label">CONFIANÇA</div><div class="value" id="hudTrust">60</div><div class="bar"><div id="hudTrustBar" style="width:60%;background:#7dd87d"></div></div></div>
+    <div class="stat trust" id="hud-trust" style="cursor:help" title="Confiança ALTA (>70): respostas honestas no debate/sabatina pegam mais, ataques rendem menos dano, custos diários menores. Confiança BAIXA (<40): promessas no debate caem mal e eleitor desconfia. Clique pra ver detalhes."><div class="label">CONFIANÇA <span style="font-size:9px;color:var(--gold);opacity:0.85">ⓘ</span></div><div class="value" id="hudTrust">60</div><div class="bar"><div id="hudTrustBar" style="width:60%;background:#7dd87d"></div></div></div>
     <div class="stat energy" id="hud-energy"><div class="label">ENERGIA</div><div class="value" id="hudEnergy">5/5</div></div>
     <div class="stat mode-badge" id="hud-mode" title="Modo de dificuldade"><div class="label">MODO</div><div class="value" id="hudMode" style="font-size:12px;letter-spacing:0">Normal</div></div>
   </div>
@@ -7227,6 +7320,137 @@ function maybeTriggerOpponentAttacks(opts){
   }
 }
 
+// =====================================================================
+// FAKE NEWS DO ADVERSÁRIO (gatilho por VANTAGEM nos turnos 5 e 7)
+// Cada partida sorteia 1 manchete diferente — pool 5+ versões por dia
+// =====================================================================
+const FAKE_NEWS_DAY5 = [
+  { headline: 'BLOG REVELA: GABINETE TEM FUNCIONÁRIO FANTASMA',
+    text: 'Print de "folha de ponto" mostra servidor sem bater ponto há 6 meses. Documento é adulterado, mas viraliza.',
+    dmg: { intent:-4, trust:-3 } },
+  { headline: 'EMENDA SUSPEITA: R$ 280K PRA EMPRESA "DE FACHADA"',
+    text: 'Listagem de empenho com nome similar ao de loja fechada. PDF adulterado roda em grupos.',
+    dmg: { intent:-4, trust:-3 } },
+  { headline: 'ASSESSOR DO CANDIDATO É PRESO POR LAVAGEM EM SP',
+    text: 'É homônimo total — outra pessoa, outra cidade. Mas a foto sai com seu nome embaixo.',
+    dmg: { intent:-5, trust:-3 } },
+  { headline: 'IRMÃO DO CANDIDATO APONTADO EM ESQUEMA DE OBRA',
+    text: 'O "irmão" não existe — sobrenome é homônimo. Sem checar, viralizou em 4h.',
+    dmg: { intent:-4, trust:-3 } },
+  { headline: 'ÁUDIO MOSTRA SEU ALIADO COMBINANDO COMPRA DE VOTOS',
+    text: 'Áudio sintético, sem origem rastreável, com voz parecida com a do seu coordenador.',
+    dmg: { intent:-4, trust:-4 } },
+  { headline: 'CANDIDATO TERIA USADO CARRO OFICIAL EM VIAGEM PESSOAL',
+    text: 'Foto sem data, sem placa, em rodovia qualquer. Atribuída ao seu carro de campanha.',
+    dmg: { intent:-3, trust:-3 } }
+];
+
+const FAKE_NEWS_DAY7 = [
+  { headline: 'CARTÃO CORPORATIVO DA CAMPANHA TEM GASTO EM CASINO',
+    text: 'Print falsificado de extrato bancário roda em grupos. Sua equipe nem usa cartão corporativo.',
+    dmg: { intent:-5, trust:-4 } },
+  { headline: 'CONSTRUTORA QUE FINANCIOU CAMPANHA ESTÁ NA "LISTA SUJA"',
+    text: 'Nome da empresa "DOAÇÕES LTDA" sequer existe na Receita. Mas a tabela falsa circula.',
+    dmg: { intent:-5, trust:-4 } },
+  { headline: 'CANDIDATO TERIA PROMETIDO EMENDA DE R$ 1MI A IGREJA EM TROCA DE APOIO',
+    text: 'Captura de tela de "contrato" assinado. Documento todo fabricado em editor de imagem.',
+    dmg: { intent:-5, trust:-5 } },
+  { headline: 'IMAGEM MOSTRA CANDIDATO COM POLÍTICO INVESTIGADO',
+    text: 'Montagem grosseira, mas espalha em grupos sem checagem. Equipe corre pra desmentir.',
+    dmg: { intent:-5, trust:-4 } },
+  { headline: 'EX-FUNCIONÁRIO DA CAMPANHA DENUNCIA "CAIXA 2"',
+    text: '"Ex-funcionário" é um perfil fake aberto há 2 dias. Mas o vídeo de 1 minuto bombou.',
+    dmg: { intent:-5, trust:-5 } },
+  { headline: 'NOTA FRIA: GASTO DE R$ 90K SEM COMPROVAÇÃO',
+    text: 'Suposta inconsistência em prestação de contas. É um erro de leitura de uma planilha pública.',
+    dmg: { intent:-4, trust:-4 } }
+];
+
+// Capas da OLHA SÓ (D9, véspera) — pool de 5 manchetes negativas com "propina"
+const OLHA_SO_COVERS = [
+  { headline: 'DIVULGADO O ESCÂNDALO QUE TODOS SUSPEITAVAM',
+    sub: 'Imagens mostram candidato recebendo malote em hotel de luxo' },
+  { headline: 'BOMBA! VAZAM IMAGENS DE PROPINA EM HOTEL DE SP',
+    sub: 'Vídeo de 4 minutos viraliza na véspera da eleição' },
+  { headline: 'CANDIDATO PEGO EM FLAGRANTE COM MALA DE DINHEIRO',
+    sub: 'Câmera de segurança expõe encontro com ex-aliado' },
+  { headline: 'FOTOS COMPROMETEDORAS DESTROEM IMAGEM DO CANDIDATO',
+    sub: 'Registro de encontro reservado vaza poucas horas antes da urna' },
+  { headline: 'PROVAS DEFINITIVAS: CANDIDATO RECEBE PROPINA',
+    sub: 'Informante anônimo entrega tudo à OLHA SÓ na véspera' }
+];
+
+// Pergunta especial da sabatina sobre a capa da OLHA SÓ
+const OLHA_SO_SABATINA_ROUND = {
+  adv: 'A revista OLHA SÓ trouxe imagens te recebendo propina em hotel. Quer responder?',
+  youDefault: 'O auditório espera. Adversário sorri.',
+  options: [
+    { label: 'PROVA TÉCNICA', kind: 'objection',
+      text: '"Isso é um DEEPFAKE fabricado pela campanha adversária. Aqui está o laudo técnico do perito independente que provou manipulação."',
+      d: 9, c: 12, msg: 'Plateia muda. Laudo bate. Adversário tenta rebater e perde o microfone.' },
+    { label: 'NEGAÇÃO SIMPLES', kind: 'explain',
+      text: '"Eu nego. Nunca recebi propina. A revista vai ser processada."',
+      d: 2, c: 3 },
+    { label: 'CONTRA-ATAQUE', kind: 'deflect',
+      text: '"Quem fabricou isso foi o meu adversário. Não vou nem dar atenção."',
+      d: 1, c: -2 },
+    { label: 'EVASIVA', kind: 'concede',
+      text: '"Vou esclarecer com calma quando passar a eleição."',
+      d: -4, c: -6, msg: 'Evasiva. Plateia interpreta como confissão silenciosa.' }
+  ]
+};
+
+function triggerLeadFakeNews(day){
+  const pool = day === 5 ? FAKE_NEWS_DAY5 : FAKE_NEWS_DAY7;
+  const evt = pool[Math.floor(Math.random() * pool.length)];
+  applyAttackDamage(evt.dmg);
+  Audio.music.stinger('attack');
+  bigNews(`⚠️ ATAQUE OPORTUNISTA — ${evt.headline}`, evt.text, 'bad');
+  feedNews('FAKE NEWS DO ADVERSÁRIO', `Sua liderança virou alvo. ${evt.dmg.intent}% intenção, ${evt.dmg.trust} confiança.`, 'bad');
+  state.unrepliedAttacks = (state.unrepliedAttacks || 0) + 1;
+}
+
+function showOlhaSoCover(){
+  const m = modeCfg();
+  const intentLoss = m.name === 'Difícil' ? 3 : 1;
+  state.intent -= intentLoss;
+  state.trust -= intentLoss * 1.5;
+  state.olhaSoAttacked = true;
+  state.unrepliedAttacks = (state.unrepliedAttacks || 0) + 1;
+  const cov = OLHA_SO_COVERS[Math.floor(Math.random() * OLHA_SO_COVERS.length)];
+  state._olhaSoCover = cov;
+  Audio.music.stinger('attack');
+  // Overlay visual estilo capa de revista
+  let ov = document.getElementById('olhaSoOverlay');
+  if(!ov){
+    ov = document.createElement('div');
+    ov.id = 'olhaSoOverlay';
+    document.body.appendChild(ov);
+  }
+  ov.innerHTML = `
+    <div class="olhaso-back">
+      <div class="olhaso-mag">
+        <div class="olhaso-top">
+          <div class="olhaso-logo">OLHA SÓ</div>
+          <div class="olhaso-edition">Edição Especial · Véspera da Eleição</div>
+        </div>
+        <div class="olhaso-photo">
+          <div class="olhaso-redacted">CANDIDATO • PROPINA • MALOTE</div>
+          <div class="olhaso-stamp">EXCLUSIVO</div>
+        </div>
+        <div class="olhaso-headline">${cov.headline}</div>
+        <div class="olhaso-sub">${cov.sub}</div>
+        <div class="olhaso-impact">Sua intenção caiu <b>${intentLoss}pp</b> · Confiança caiu <b>${(intentLoss*1.5).toFixed(0)}</b></div>
+        <button type="button" id="olhaSoClose">VOU RESPONDER NA SABATINA</button>
+      </div>
+    </div>
+  `;
+  ov.style.display = 'block';
+  document.getElementById('olhaSoClose').addEventListener('click', ()=>{
+    ov.style.display = 'none';
+  });
+}
+
 function runFixedEvents(){
   const d = state.day;
   maybeAppearMarketeiro();
@@ -7248,6 +7472,10 @@ function runFixedEvents(){
   }
   if(d === 5){
     feedNews('COLUNA DE POLÍTICA', 'Repórter pede entrevista. Boa janela se você for honesto. Pega no jornal local.', 'event');
+    // Vantagem ≥5 dispara fake news oportunista
+    if((state.intent - state.oppIntent) >= 5){
+      setTimeout(triggerLeadFakeNews.bind(null, 5), 1200);
+    }
   }
   if(d === 6){
     const m = modeCfg();
@@ -7264,6 +7492,10 @@ function runFixedEvents(){
   }
   if(d === 7){
     feedNews('HORÁRIO ELEITORAL', 'Última grande janela de TV antes do debate. Quem agendou bloco hoje aproveita.', 'event');
+    // Vantagem ≥5 dispara fake news oportunista (pool diferente do D5)
+    if((state.intent - state.oppIntent) >= 5){
+      setTimeout(triggerLeadFakeNews.bind(null, 7), 1200);
+    }
   }
   if(d === 8){
     if(state.flags.boughtFollowers && Math.random() < 0.4){
@@ -7273,9 +7505,11 @@ function runFixedEvents(){
   }
   if(d === 9){
     Audio.music.stinger('poll');
-    bigNews('PESQUISA FINAL', `VOCÊ ${Math.round(state.intent)}% × ADVERSÁRIO ${Math.round(state.oppIntent)}%. Em seguida: SABATINA AO VIVO com o adversário.`, 'event');
+    bigNews('PESQUISA FINAL', `VOCÊ ${Math.round(state.intent)}% × ADVERSÁRIO ${Math.round(state.oppIntent)}%. Em seguida: capa da OLHA SÓ e SABATINA AO VIVO.`, 'event');
+    // Capa da OLHA SÓ (sempre na véspera) — perde 1pp normal / 3pp difícil
+    setTimeout(showOlhaSoCover, 1600);
     if(!state.sabatinaDone){
-      setTimeout(()=> startSabatina(), 1800);
+      setTimeout(()=> startSabatina(), 4200);  // dá tempo de ler a capa
     }
   }
   if(d === 10){
@@ -7442,16 +7676,25 @@ function startSabatina(){
   state.sabatinaDone = true;
   state.inSabatina = true;
   state.fxLocked = true;
+  // Se o jogador apanhou da OLHA SÓ, insere pergunta dedicada como 1ª rodada
+  if(state.olhaSoAttacked && !state._sabatinaQueueBuilt){
+    state._sabatinaQueue = [OLHA_SO_SABATINA_ROUND, ...SABATINA_ROUNDS];
+    state._sabatinaQueueBuilt = true;
+  } else if(!state._sabatinaQueueBuilt){
+    state._sabatinaQueue = SABATINA_ROUNDS.slice();
+    state._sabatinaQueueBuilt = true;
+  }
   Audio.music.stinger('sabatina');
   setTimeout(()=>{ showSabatinaRound(0, { d: 0, c: 0 }); }, 600);
 }
 
 function showSabatinaRound(idx, score){
-  if(idx >= SABATINA_ROUNDS.length){
+  const rounds = state._sabatinaQueue || SABATINA_ROUNDS;
+  if(idx >= rounds.length){
     finishSabatina(score);
     return;
   }
-  const round = SABATINA_ROUNDS[idx];
+  const round = rounds[idx];
   const back = $('modalBack');
   const modal = back.querySelector('.modal');
   modal.querySelector('h2').style.display = 'none';
@@ -7466,7 +7709,7 @@ function showSabatinaRound(idx, score){
             <div class="sab-face">👨‍💼</div>
             <div class="sab-name">ADVERSÁRIO</div>
           </div>
-          <div class="sab-banner">SABATINA AO VIVO — ROUND ${idx+1}/${SABATINA_ROUNDS.length}</div>
+          <div class="sab-banner">SABATINA AO VIVO — ROUND ${idx+1}/${rounds.length}</div>
           <div class="sab-side you">
             <div class="sab-face">🧑‍💼</div>
             <div class="sab-name">VOCÊ</div>
@@ -7891,7 +8134,7 @@ function endGame(kind){
     story = `Você (${Math.round(state.intent)}%) saiu na frente do adversário (${Math.round(state.oppIntent)}%) mas não atingiu maioria. Confiança ${Math.round(state.trust)}/100, Risco TSE ${Math.round(state.risk)}/100.`;
   } else if(kind === 'cassado'){
     title = 'CASSAÇÃO PELO TSE'; klass='cassado'; subt='Sua candidatura caiu.';
-    story = `Risco TSE atingiu o máximo. As ações da campanha — comprou seguidores (${state.flags.boughtFollowers?'sim':'não'}), disparos massivos (${state.flags.didWhatsappBlast?'sim':'não'}), neurobots (${state.flags.neuroBots?'sim':'não'}), deepfake (${state.flags.deepfakedAdv?'sim':'não'}) — somaram denúncias suficientes pra suspender o registro.`;
+    story = `Risco TSE no máximo. Denúncias somadas suspenderam seu registro.`;
   } else {
     title = 'DERROTA'; klass='lose'; subt='Adversário foi eleito.';
     story = `Você terminou com ${Math.round(state.intent)}%, o adversário com ${Math.round(state.oppIntent)}%. Confiança ${Math.round(state.trust)}/100, Risco TSE ${Math.round(state.risk)}/100.`;
@@ -7900,7 +8143,7 @@ function endGame(kind){
   const lessons = [];
   // Lições contextuais por resultado
   if(kind === 'cassado'){
-    lessons.push('⚖️ O TSE cassou sua candidatura. O que pareceu atalho virou abismo — exatamente o que a reportagem mostra: marketeiros digitais vendem "estrago" como serviço, e a Justiça Eleitoral está mais armada hoje pra responder.');
+    lessons.push('⚖️ Atalho virou abismo. A Justiça Eleitoral está mais armada pra rastrear IA, bots e disparo em massa.');
   } else if(kind === 'vitoria1'){
     if(state.illegalActs >= 3 || state.risk > 50){
       lessons.push('🎉 Vitória, mas no fio. Risco TSE alto ainda pode virar cassação pós-eleição — uma das principais estratégias atuais é justamente contestar resultado por uso ilícito de IA/bots.');
@@ -7959,9 +8202,13 @@ function endGame(kind){
   modal.querySelector('h2').textContent = title;
   modal.querySelector('.subt').textContent = subt;
   modal.querySelector('h2').className = '';
+  const cassadoImg = kind === 'cassado'
+    ? `<img src="assets/cassado.png" alt="Tribunal cassou sua candidatura" style="display:block;width:100%;max-width:420px;margin:6px auto 12px;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,0.5);image-rendering:pixelated"/>`
+    : '';
   modal.querySelector('.body').innerHTML = `
     <div class="endscreen">
       <div class="big ${klass}">${title}</div>
+      ${cassadoImg}
       <div class="summary">
         <b>Final:</b> ${story}<br><br>
         <b>Lições da partida:</b><br>
@@ -8612,6 +8859,26 @@ try {
   if(saved && SIZE_CLASSES.includes(saved)) applyAppSize(saved);
   else applyAppSize('size-m');
 } catch(_e){ applyAppSize('size-m'); }
+
+// Tooltip clicável da confiança no HUD
+(function(){
+  const el = document.getElementById('hud-trust');
+  if(!el) return;
+  el.addEventListener('click', ()=>{
+    if(typeof openModal !== 'function') return;
+    openModal({
+      title: 'CONFIANÇA',
+      subt: 'O que essa barra muda no jogo',
+      body: `<div style="text-align:left;font-size:16px;line-height:1.5">
+        <p><b style="color:#5fb872">ALTA (>70)</b> — respostas "honestas/autênticas" no debate e sabatina ganham bônus, ataques do adversário tiram menos confiança e até as <b>despesas diárias caem</b> (apoiadores voluntários ajudam).</p>
+        <p><b style="color:#f6c453">MÉDIA (40-70)</b> — neutra. Sem bônus nem penalidade.</p>
+        <p><b style="color:#cf3a3a">BAIXA (&lt;40)</b> — eleitor desconfia. Promessas técnicas no debate caem mal, sabatina rende menos pontos e o algoritmo te ajuda menos.</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">Como subir: vídeos honestos, caminhada na rua, plano de governo publicado, declarações pré-empt­ivas. Como cai: ações ilegais, ataques sofridos sem resposta, escolhas vagas no debate.</p>
+      </div>`,
+      actions: [{ tag: 'legal', title: 'ENTENDI', cost: 0, energy: 0, onClick: closeModal }]
+    });
+  });
+})();
 
 // Dica visual quando autoplay é bloqueado
 window._audioHintShown = false;
