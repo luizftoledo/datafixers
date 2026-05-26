@@ -251,7 +251,11 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
 
 /* ----------------- hero ----------------- */
 .hero-section {
-  padding: clamp(4rem, 12vh, 9rem) 0 clamp(3rem, 8vh, 6rem);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vh, 4rem) 0;
   background: var(--paper);
   position: relative;
 }
@@ -286,6 +290,15 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
   max-width: 22ch;
   margin: 0 auto;
 }
+.hero-section .tagline-sub {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(0.98rem, 1.55vw, 1.18rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 54ch;
+  margin: clamp(1.25rem, 3vh, 1.75rem) auto 0;
+}
 .hero-section .site-name[hidden] { display: none; }
 .hero-section .tagline-link {
   color: inherit;
@@ -314,6 +327,7 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
   box-decoration-break: clone;
 }
 
+/* legacy affiliations kept for other pages */
 .affiliations {
   display: flex;
   justify-content: center;
@@ -346,6 +360,38 @@ html[data-theme='dark'] .nav-theme-btn .icon-moon { display: none; }
   transition: border-color .25s var(--ease);
 }
 .aff-badge a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* prize box — new hero affiliation card */
+.hero-section .prize-box {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  max-width: 620px;
+  margin: clamp(2rem, 5vh, 3rem) auto 0;
+  padding: .85rem 1.15rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  text-align: left;
+  font-size: .82rem;
+  line-height: 1.5;
+  letter-spacing: .005em;
+  transition: border-color .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease);
+}
+.hero-section .prize-box:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.hero-section .prize-emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.hero-section .prize-text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
 
 /* kill the old rainbow animation */
 @keyframes df-hue { to { } }
@@ -1043,8 +1089,17 @@ section .section-title::after {
   .stories-grid .story-card .btn-secondary { min-height: 0; padding: .35rem 0 4px !important; }
   .dashboard-item .dashboard-btn { min-height: 0; }
   section { padding: 3.5rem 0; }
-  .hero-section { padding: 4rem 0 3rem; }
+  .hero-section { padding: 1.5rem 0 2rem; }
   .hero-section::before { margin-bottom: 2rem; }
+  .hero-section .prize-box {
+    flex-direction: row;
+    gap: .7rem;
+    padding: .75rem .95rem;
+    font-size: .76rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hero-section .prize-emoji { font-size: 1.2rem; }
   .current-projects-section .dashboard-item,
   .dashboards-section .dashboard-item {
     padding: 1.5rem 1.25rem !important;
@@ -1071,7 +1126,13 @@ section .section-title::after {
     font-size: clamp(1.25rem, 6vw, 1.55rem);
     max-width: 24ch;
   }
-  .hero-section { padding: 3rem 0 2.25rem; }
+  .hero-section .tagline-sub {
+    font-size: .95rem;
+    max-width: 42ch;
+    margin-top: 1rem;
+  }
+  .hero-section { padding: 1rem 0 1.5rem; }
+  .hero-logo { margin-bottom: 1.25rem; }
   /* card paddings tighter */
   .current-projects-section .dashboard-item,
   .dashboards-section .dashboard-item { padding: 1.35rem 1.1rem !important; }
