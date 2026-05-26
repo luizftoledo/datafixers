@@ -3368,35 +3368,34 @@ const MusicPlayer = (() => {
       return;
     }
     if(current && current.key === key) return;
-    // Reusa o Audio pré-carregado se houver — evita esperar o download
-    let audio = _preloaded[key];
-    if(audio){
-      try { audio.currentTime = 0; } catch(_e){}
-      _preloaded[key] = null; // será recriado em preloadAll na próxima passada
-    } else {
-      audio = new window.Audio(TRACKS[key]);
-      audio.preload = 'auto';
-      try { audio.load(); } catch(_e){}
-    }
+    // Sempre cria um Audio fresco — evita estado bagunçado do cache que estava
+    // fazendo dia 8/10 às vezes não tocarem
+    const audio = new window.Audio(TRACKS[key]);
     audio.loop = true;
+    audio.preload = 'auto';
     audio.volume = 0;
+    audio.crossOrigin = 'anonymous';
     const slot = { key, audio, _raf: null };
-    const p = audio.play();
-    if(p && p.catch) p.catch((err)=>{
-      console.warn('[MusicPlayer] play falhou pra', key, err);
-      // autoplay bloqueado → mostra dica visual pro usuário ligar manualmente
-      if(typeof window.showAudioHint === 'function') window.showAudioHint();
-    });
-    audio.addEventListener('error', (e)=>{
-      console.warn('[MusicPlayer] erro carregando', key, audio.error);
+    // Inicia playback assim que metadata estiver pronta (mais confiável)
+    const tryPlay = () => {
+      const p = audio.play();
+      if(p && p.catch) p.catch((err)=>{
+        console.warn('[MusicPlayer] play falhou pra', key, err && err.name);
+        if(typeof window.showAudioHint === 'function') window.showAudioHint();
+      });
+    };
+    if(audio.readyState >= 2) tryPlay();
+    else audio.addEventListener('canplay', tryPlay, { once: true });
+    audio.addEventListener('error', ()=>{
+      console.warn('[MusicPlayer] erro carregando', key, audio.error && audio.error.code);
     }, { once: true });
-    // Fallback: se em 1,5s o player ainda não estiver tocando, mostra a dica
+    // Fallback: se em 2s ainda não estiver tocando, mostra a dica
     setTimeout(()=>{
       if(!muted && current === slot && audio.paused){
-        console.warn('[MusicPlayer] paused após 1.5s pra', key);
+        console.warn('[MusicPlayer] ainda paused 2s depois pra', key);
         if(typeof window.showAudioHint === 'function') window.showAudioHint();
       }
-    }, 1500);
+    }, 2000);
     _fade(slot, muted ? 0 : TARGET_VOL, FADE_MS);
     if(current){
       const prev = current;
@@ -3405,8 +3404,6 @@ const MusicPlayer = (() => {
       });
     }
     current = slot;
-    // recarrega o cache da faixa que acabamos de "consumir" pra próxima vez
-    setTimeout(preloadAll, 100);
   }
 
   function stop(){
@@ -5552,6 +5549,29 @@ function openMarketeiroModal(){
 function openHotspot(area){
   if(state.inDebate) return;
   if($('dayOverlay').classList.contains('show')) return;
+  // Nos dias 9 e 10 só fazem sentido: ir pro microfone (debate), responder
+  // ataques no celular (replyVideo) ou dormir/encerrar o dia. Resto não muda
+  // mais a eleição a essa altura.
+  if(state.day >= 9 && !['mic','bed','phone'].includes(area) && area !== 'marketeiro'){
+    openModal({
+      title: state.day === 9 ? 'VÉSPERA DA ELEIÇÃO' : 'DIA DA ELEIÇÃO',
+      subt: state.day === 9 ? 'Sabatina + capa da OLHA SÓ definem o dia' : 'O debate é tudo',
+      body: state.day === 9
+        ? 'A essa altura, praticamente nada mais muda intenção. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
+        : 'Hoje só importa o <b>debate ao vivo</b> à noite. Aproxime do <b>🎤 MICROFONE</b> e comece. Resto da agenda não muda mais nada.',
+      actions: [{ tag: 'legal', title: 'OK, ENTENDI', cost: 0, energy: 0, primary: true, onClick: closeModal }]
+    });
+    return;
+  }
+  if(area === 'marketeiro' && state.day >= 9){
+    openModal({
+      title: 'TARDE DEMAIS PRO MARKETEIRO',
+      subt: 'Atalho já não cabe',
+      body: 'A essa altura da eleição, qualquer estrago ilegal não pega tração antes do voto — só aumenta seu risco de cassação. Marketeiro foi embora.',
+      actions: [{ tag: 'legal', title: 'OK', cost: 0, energy: 0, primary: true, onClick: closeModal }]
+    });
+    return;
+  }
   if(area === 'marketeiro'){
     openMarketeiroModal();
     return;
@@ -8195,13 +8215,6 @@ function endGame(kind){
   b.textContent = 'JOGAR DE NOVO';
   b.addEventListener('click', ()=>{ location.reload(); });
   ac.appendChild(b);
-
-  const linkBtn = document.createElement('button');
-  linkBtn.className='btn';
-  linkBtn.textContent='LEIA A REPORTAGEM ORIGINAL';
-  linkBtn.style.marginTop='6px';
-  linkBtn.addEventListener('click', ()=>{ window.open('../index.html', '_blank'); });
-  ac.appendChild(linkBtn);
 
   modal.querySelector('h2').textContent = title;
   modal.querySelector('.subt').textContent = subt;
