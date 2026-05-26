@@ -49,11 +49,18 @@
     margin: 0 auto;
     padding: 14px 16px 60px;
   }
-  /* Tamanhos selecionáveis pelo usuário — útil em monitores grandes */
-  .app.size-m  { max-width: 1280px; }
-  .app.size-l  { max-width: 1600px; }
-  .app.size-xl { max-width: 1920px; }
-  .app.size-full { max-width: 100%; padding-left: 40px; padding-right: 40px; }
+  /* Tamanhos selecionáveis pelo usuário — útil em monitores grandes.
+     Usamos `zoom` (não max-width) pra escalar largura E altura juntas. */
+  .app.size-m    { max-width: 1280px; zoom: 1; }
+  .app.size-l    { max-width: 1280px; zoom: 1.15; }
+  .app.size-xl   { max-width: 1280px; zoom: 1.30; }
+  .app.size-full { max-width: 1280px; zoom: 1.50; }
+  /* Firefox antigo não suporta zoom — fallback escala via transform */
+  @supports not (zoom: 1) {
+    .app.size-l    { transform: scale(1.15); transform-origin: top center; margin-bottom: 12vh; }
+    .app.size-xl   { transform: scale(1.30); transform-origin: top center; margin-bottom: 24vh; }
+    .app.size-full { transform: scale(1.50); transform-origin: top center; margin-bottom: 40vh; }
+  }
   header.top {
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 12px;
