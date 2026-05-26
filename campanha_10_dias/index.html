@@ -49,6 +49,11 @@
     margin: 0 auto;
     padding: 14px 16px 60px;
   }
+  /* Tamanhos selecionáveis pelo usuário — útil em monitores grandes */
+  .app.size-m  { max-width: 1280px; }
+  .app.size-l  { max-width: 1600px; }
+  .app.size-xl { max-width: 1920px; }
+  .app.size-full { max-width: 100%; padding-left: 40px; padding-right: 40px; }
   header.top {
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 12px;
@@ -213,6 +218,77 @@
     box-shadow: 0 4px 0 rgba(0,0,0,0.4);
   }
   #soundBtn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.4); }
+
+  /* Popover de configurações (volume + tamanho da tela) */
+  #settingsPopover {
+    position: fixed;
+    top: 66px; right: 14px;
+    background: var(--bg-card);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 12px 14px;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 240px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+    font-family: 'VT323', monospace;
+  }
+  #settingsPopover.show { display: flex; }
+  #settingsPopover .set-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  #settingsPopover .set-row .set-label {
+    font-size: 14px; color: var(--muted); white-space: nowrap;
+  }
+  #settingsPopover .mute-toggle {
+    background: var(--bg-card-2);
+    border: 2px solid var(--border);
+    color: var(--gold);
+    font-size: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  #settingsPopover .mute-toggle.muted { color: var(--red); border-color: var(--red); }
+  #settingsPopover input[type=range] {
+    flex: 1;
+    accent-color: var(--gold);
+    height: 6px;
+    cursor: pointer;
+  }
+  #settingsPopover .vol-val {
+    font-size: 14px; color: var(--text); min-width: 36px; text-align: right;
+  }
+  #settingsPopover .size-btns {
+    display: flex; gap: 4px; flex: 1; justify-content: flex-end;
+  }
+  #settingsPopover .size-btn {
+    background: var(--bg-card-2);
+    border: 2px solid var(--border);
+    color: var(--text);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #settingsPopover .size-btn.selected {
+    background: var(--gold);
+    color: #2a1f37;
+    border-color: var(--gold);
+  }
+  @media (max-width: 640px) {
+    #settingsPopover {
+      top: auto; bottom: 64px; right: 12px;
+      min-width: 220px;
+    }
+    /* Tamanho da tela só faz sentido em desktop — esconde linha no mobile */
+    #settingsPopover .size-row { display: none; }
+  }
 
   /* Pulso de atenção pros botões (som / fullscreen) quando música está bloqueada */
   @keyframes attention-pulse {
@@ -2303,7 +2379,23 @@
 <button id="restBtn" aria-label="Encerrar o dia" title="Encerrar o dia e dormir" style="position:fixed;top:14px;right:170px;width:44px;height:44px;background:var(--bg-card);border:2px solid var(--blue);color:var(--blue);font-size:20px;border-radius:50%;cursor:pointer;z-index:150;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,0.4);display:none">💤</button>
 <button id="quitBtn" aria-label="Desistir" title="Desistir da candidatura" style="position:fixed;top:14px;right:118px;width:44px;height:44px;background:var(--bg-card);border:2px solid var(--red);color:var(--red);font-size:18px;border-radius:50%;cursor:pointer;z-index:150;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,0.4);display:none">⏏</button>
 <button id="fsBtn" aria-label="Tela cheia" title="Tela cheia" style="position:fixed;top:14px;right:66px;width:44px;height:44px;background:var(--bg-card);border:2px solid var(--border);color:var(--gold);font-size:18px;border-radius:50%;cursor:pointer;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,0.4)">⛶</button>
-<button id="soundBtn" aria-label="Som" title="Som ligado / mudo">🔊</button>
+<button id="soundBtn" aria-label="Som e configurações" title="Som e configurações">🔊</button>
+<div id="settingsPopover" role="dialog" aria-label="Configurações">
+  <div class="set-row">
+    <button type="button" class="mute-toggle" id="muteToggle" aria-label="Mudo">🔊</button>
+    <input type="range" id="volSlider" min="0" max="100" value="55" aria-label="Volume"/>
+    <span class="vol-val" id="volVal">55%</span>
+  </div>
+  <div class="set-row size-row">
+    <span class="set-label">TELA:</span>
+    <div class="size-btns">
+      <button type="button" class="size-btn" data-size="size-m">M</button>
+      <button type="button" class="size-btn" data-size="size-l">G</button>
+      <button type="button" class="size-btn" data-size="size-xl">XG</button>
+      <button type="button" class="size-btn" data-size="size-full">CHEIA</button>
+    </div>
+  </div>
+</div>
 <div id="audioHint" style="display:none" role="alert">
   <span class="hint-x" id="audioHintClose" aria-label="Fechar dica">×</span>
   <span class="hint-line">🔊 clique aqui pra <b>ligar / desligar</b> o som</span>
@@ -2412,11 +2504,18 @@ const Audio = (() => {
     if(actx && actx.state === 'suspended') actx.resume();
   }
 
+  let baseVol = 0.85;
   function setMuted(m){
     muted = m;
-    if(masterGain) masterGain.gain.setTargetAtTime(m ? 0 : 0.85, actx.currentTime, 0.05);
+    if(masterGain) masterGain.gain.setTargetAtTime(m ? 0 : baseVol, actx.currentTime, 0.05);
   }
   function isMuted(){ return muted; }
+  function setVolume(v){
+    v = Math.max(0, Math.min(1, v));
+    baseVol = v;
+    if(masterGain && !muted) masterGain.gain.setTargetAtTime(baseVol, actx.currentTime, 0.05);
+  }
+  function getVolume(){ return baseVol; }
 
   function midiFreq(m){ return 440 * Math.pow(2, (m-69)/12); }
 
@@ -3095,7 +3194,7 @@ const Audio = (() => {
   return {
     init: ensure,
     resume,
-    setMuted, isMuted,
+    setMuted, isMuted, setVolume, getVolume,
     sfx: SFX,
     music: {
       start: (_p) => { MusicPlayer.play('day1_3'); },
@@ -3122,7 +3221,7 @@ const MusicPlayer = (() => {
     endgame: BASE + 'intro_endgame.mp3',
   };
   const FADE_MS = 800;       // mini fade in/out
-  const TARGET_VOL = 0.55;
+  let TARGET_VOL = 0.55;     // pode ser alterado via setVolume(v)
   let current = null;        // { key, audio, _raf }
   let muted = false;
 
@@ -3227,6 +3326,14 @@ const MusicPlayer = (() => {
     if(current) _fade(current, m ? 0 : TARGET_VOL, 200);
   }
 
+  // Define volume base (0..1) — afeta a faixa atual imediatamente
+  function setVolume(v){
+    v = Math.max(0, Math.min(1, v));
+    TARGET_VOL = v;
+    if(current && !muted) _fade(current, v, 150);
+  }
+  function getVolume(){ return TARGET_VOL; }
+
   // Tenta retomar a faixa atual (chamado quando o usuário libera autoplay via clique no som)
   function retry(){
     if(!current) return;
@@ -3237,7 +3344,7 @@ const MusicPlayer = (() => {
     }
   }
 
-  return { play, stop, setMuted, dayTrack, retry, preloadAll };
+  return { play, stop, setMuted, dayTrack, retry, preloadAll, setVolume, getVolume };
 })();
 
 function sfx(name){
@@ -4886,7 +4993,7 @@ const ACTIONS = [
 
   // ===== SOFA / RECURSOS =====
   {
-    id: 'meetingBig', area: 'sofa', title: 'Reunião com empresário (médio porte)',
+    id: 'meetingBig', area: 'sofa', title: 'Reunião com empresário',
     tag: 'legal', energy: 1, cost: 0,
     desc: 'Você recebe um empresário. Promessas conservadoras, contrato fechado, comprovante de doação dentro do limite eleitoral. Entra dinheiro.',
     available(s){ return s.meetingsToday < 1; },
@@ -8401,18 +8508,91 @@ $('ccStart').addEventListener('click', ()=>{
 
 // Sound toggle
 const soundBtn = $('soundBtn');
-soundBtn.addEventListener('click', ()=>{
+soundBtn.addEventListener('click', (e)=>{
   Audio.init();
   Audio.resume();
-  const newMuted = !Audio.isMuted();
-  Audio.setMuted(newMuted);
-  MusicPlayer.setMuted(newMuted);
-  soundBtn.textContent = newMuted ? '🔇' : '🔊';
-  // Se a música estava bloqueada, esse clique destrava
-  if(!newMuted && MusicPlayer.retry) MusicPlayer.retry();
+  const pop = $('settingsPopover');
+  const isOpen = pop.classList.contains('show');
+  if(isOpen){ pop.classList.remove('show'); }
+  else { pop.classList.add('show'); syncSettingsUI(); }
+  if(MusicPlayer.retry) MusicPlayer.retry();   // destrava música se bloqueada
   dismissAudioHint();
   if(typeof dismissCcBtnHint === 'function') dismissCcBtnHint();
+  e.stopPropagation();
 });
+
+// Fecha o popover ao clicar fora dele
+document.addEventListener('click', (e)=>{
+  const pop = $('settingsPopover');
+  if(!pop.classList.contains('show')) return;
+  if(pop.contains(e.target) || e.target === soundBtn) return;
+  pop.classList.remove('show');
+});
+
+// === Volume / mute via popover ===
+const muteToggle = $('muteToggle');
+const volSlider  = $('volSlider');
+const volVal     = $('volVal');
+
+function applyMute(m){
+  Audio.setMuted(m);
+  MusicPlayer.setMuted(m);
+  soundBtn.textContent = m ? '🔇' : '🔊';
+  muteToggle.textContent = m ? '🔇' : '🔊';
+  muteToggle.classList.toggle('muted', m);
+}
+function applyVolume(vPct){
+  const v = vPct / 100;
+  Audio.setVolume(v * 0.85);   // mantém o teto histórico do masterGain
+  MusicPlayer.setVolume(v * 0.75);
+  volVal.textContent = vPct + '%';
+}
+function syncSettingsUI(){
+  applyMute(Audio.isMuted());
+  volSlider.value = Math.round((MusicPlayer.getVolume() / 0.75) * 100);
+  volVal.textContent = volSlider.value + '%';
+  syncSizeButtons();
+}
+
+muteToggle.addEventListener('click', ()=>{
+  const newMuted = !Audio.isMuted();
+  applyMute(newMuted);
+  if(!newMuted && MusicPlayer.retry) MusicPlayer.retry();
+});
+volSlider.addEventListener('input', ()=>{
+  applyVolume(parseInt(volSlider.value, 10));
+  if(Audio.isMuted() && parseInt(volSlider.value,10) > 0){
+    // se estava mudo e moveu o slider, desmuta automaticamente
+    applyMute(false);
+    if(MusicPlayer.retry) MusicPlayer.retry();
+  }
+});
+
+// === Tamanho da tela (cycle) ===
+const SIZE_CLASSES = ['size-m', 'size-l', 'size-xl', 'size-full'];
+function applyAppSize(cls){
+  const app = document.querySelector('.app');
+  if(!app) return;
+  SIZE_CLASSES.forEach(c => app.classList.remove(c));
+  app.classList.add(cls);
+  try { localStorage.setItem('appSize', cls); } catch(_e){}
+  syncSizeButtons();
+}
+function syncSizeButtons(){
+  const cur = (document.querySelector('.app').className.match(/size-\w+/) || ['size-m'])[0];
+  document.querySelectorAll('#settingsPopover .size-btn').forEach(b => {
+    b.classList.toggle('selected', b.dataset.size === cur);
+  });
+}
+document.querySelectorAll('#settingsPopover .size-btn').forEach(b => {
+  b.addEventListener('click', ()=> applyAppSize(b.dataset.size));
+});
+// Carrega tamanho salvo no load
+try {
+  const saved = localStorage.getItem('appSize');
+  if(saved && SIZE_CLASSES.includes(saved)) applyAppSize(saved);
+  else applyAppSize('size-m');
+} catch(_e){ applyAppSize('size-m'); }
 
 // Dica visual quando autoplay é bloqueado
 window._audioHintShown = false;
@@ -8455,7 +8635,7 @@ const TUTORIAL_STEPS = [
 let _tutStep = 0;
 
 function startTutorial(){
-  if(sessionStorage.getItem('tutDone') === '1') return;
+  // Sempre mostra o tutorial no dia 1, independente de já ter jogado antes
   _tutStep = 0;
   $('tutorialOverlay').classList.add('show');
   showTutorialStep(_tutStep);
