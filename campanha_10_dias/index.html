@@ -281,6 +281,74 @@
     #audioHint::before, #audioHint::after { display: none; }
   }
 
+  /* Tutorial overlay com spotlight */
+  #tutorialOverlay { position: fixed; inset: 0; z-index: 9000; display: none; pointer-events: auto; }
+  #tutorialOverlay.show { display: block; }
+  #tutorialSpotlight {
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.78);
+    z-index: 9001;
+    pointer-events: none;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+  #tutorialSpotlight.no-spot {
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(0,0,0,0.85);
+    outline: none;
+  }
+  #tutorialBox {
+    position: fixed;
+    z-index: 9002;
+    background: var(--bg-card);
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 14px 16px;
+    max-width: 360px;
+    width: calc(100vw - 32px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    font-family: 'VT323', monospace;
+    color: var(--text);
+    pointer-events: auto;
+  }
+  #tutorialBox h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    margin: 0 0 10px;
+    letter-spacing: 0.5px;
+  }
+  #tutorialBox p { font-size: 16px; line-height: 1.4; margin: 0 0 14px; }
+  #tutorialBox b { color: var(--gold); }
+  #tutorialBox .tut-buttons {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  #tutorialBox .tut-step-counter { font-size: 13px; color: var(--muted); }
+  #tutorialBox button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  #tutorialBox .tut-skip {
+    background: transparent; border: 2px solid var(--muted); color: var(--muted);
+  }
+  #tutorialBox .tut-next {
+    background: var(--gold); border: 2px solid var(--gold); color: #2a1f37;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.4);
+  }
+  @media (max-width: 640px){
+    #tutorialBox { font-size: 14px; padding: 12px 14px; }
+    #tutorialBox h3 { font-size: 10px; }
+    #tutorialBox p { font-size: 14px; }
+  }
+
   /* Campo inválido na criação do personagem */
   .cc-input-error {
     border-color: var(--red) !important;
@@ -2031,13 +2099,20 @@
     </p>
     <p class="lead" style="color:var(--muted);font-size:14px;max-width:760px;margin-top:10px">
       Inspirado na reportagem
-      <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline">
+      <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o"
+         target="_blank" rel="noopener noreferrer"
+         onclick="event.preventDefault(); window.open('https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o','_blank','noopener,noreferrer');"
+         style="color:var(--gold);text-decoration:underline;font-weight:bold">
         publicada pela BBC News Brasil
       </a>
-      sobre marketing digital, IA e neurobots nas eleições municipais.
+      sobre marketing digital, IA e neurobots nas eleições.
       <br/>
-      <b style="color:var(--text)">Este jogo não tem qualquer relação com a BBC.</b>
-      Foi feito de forma independente por <a href="https://luizftoledo.github.io" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline">Luiz Toledo</a>
+      <b style="color:#ff5252">Não tem qualquer relação com a BBC.</b>
+      Foi feito de forma independente por
+      <a href="https://luizftoledo.github.io"
+         target="_blank" rel="noopener noreferrer"
+         onclick="event.preventDefault(); window.open('https://luizftoledo.github.io','_blank','noopener,noreferrer');"
+         style="color:var(--gold);text-decoration:underline">Luiz Fernando Toledo</a>
       apenas como protótipo experimental.
     </p>
   </div>
@@ -2167,6 +2242,12 @@
   <span class="hint-x" id="audioHintClose" aria-label="Fechar dica">×</span>
   <span class="hint-line">🔊 clique aqui pra <b>ligar / desligar</b> o som</span>
   <span class="hint-line">⛶ e aqui pra entrar em <b>tela cheia</b></span>
+</div>
+
+<!-- Tutorial overlay (mostra no primeiro dia, pode pular) -->
+<div id="tutorialOverlay">
+  <div id="tutorialSpotlight" class="no-spot"></div>
+  <div id="tutorialBox"></div>
 </div>
 
 <script>
@@ -2993,25 +3074,55 @@ const MusicPlayer = (() => {
     return 'day10';
   }
 
+  // Cache de elementos Audio pré-carregados (evita esperar download na hora da troca)
+  const _preloaded = {};
+  function preloadAll(){
+    Object.keys(TRACKS).forEach(k => {
+      if(_preloaded[k]) return;
+      const a = new window.Audio();
+      a.preload = 'auto';
+      a.src = TRACKS[k];
+      a.loop = true;
+      try { a.load(); } catch(_e){}
+      _preloaded[k] = a;
+    });
+  }
+
   function play(key){
-    if(!TRACKS[key]) return;
+    if(!TRACKS[key]){
+      console.warn('[MusicPlayer] faixa desconhecida:', key);
+      return;
+    }
     if(current && current.key === key) return;
-    const audio = new window.Audio(TRACKS[key]);
+    // Reusa o Audio pré-carregado se houver — evita esperar o download
+    let audio = _preloaded[key];
+    if(audio){
+      try { audio.currentTime = 0; } catch(_e){}
+      _preloaded[key] = null; // será recriado em preloadAll na próxima passada
+    } else {
+      audio = new window.Audio(TRACKS[key]);
+      audio.preload = 'auto';
+      try { audio.load(); } catch(_e){}
+    }
     audio.loop = true;
-    audio.preload = 'auto';
     audio.volume = 0;
     const slot = { key, audio, _raf: null };
     const p = audio.play();
-    if(p && p.catch) p.catch(()=>{
+    if(p && p.catch) p.catch((err)=>{
+      console.warn('[MusicPlayer] play falhou pra', key, err);
       // autoplay bloqueado → mostra dica visual pro usuário ligar manualmente
       if(typeof window.showAudioHint === 'function') window.showAudioHint();
     });
-    // Fallback: se em 1,2s o player ainda não estiver tocando, mostra a dica
+    audio.addEventListener('error', (e)=>{
+      console.warn('[MusicPlayer] erro carregando', key, audio.error);
+    }, { once: true });
+    // Fallback: se em 1,5s o player ainda não estiver tocando, mostra a dica
     setTimeout(()=>{
       if(!muted && current === slot && audio.paused){
+        console.warn('[MusicPlayer] paused após 1.5s pra', key);
         if(typeof window.showAudioHint === 'function') window.showAudioHint();
       }
-    }, 1200);
+    }, 1500);
     _fade(slot, muted ? 0 : TARGET_VOL, FADE_MS);
     if(current){
       const prev = current;
@@ -3020,6 +3131,8 @@ const MusicPlayer = (() => {
       });
     }
     current = slot;
+    // recarrega o cache da faixa que acabamos de "consumir" pra próxima vez
+    setTimeout(preloadAll, 100);
   }
 
   function stop(){
@@ -3046,7 +3159,7 @@ const MusicPlayer = (() => {
     }
   }
 
-  return { play, stop, setMuted, dayTrack, retry };
+  return { play, stop, setMuted, dayTrack, retry, preloadAll };
 })();
 
 function sfx(name){
@@ -7042,6 +7155,10 @@ function dayOverlayHandler(){
     updateHUD();
     checkCassacao();
   }
+  // Dispara o tutorial só uma vez, ao fechar o overlay do dia 1
+  if(state.day === 1 && typeof startTutorial === 'function'){
+    setTimeout(startTutorial, 300);
+  }
 }
 function bindDayOverlay(){
   $('dayOverlayBtn').onclick = dayOverlayHandler;
@@ -7661,6 +7778,7 @@ $('startBtn').addEventListener('click', ()=>{
   // Gesture do usuário: destrava autoplay e inicia trilha da intro
   Audio.init();
   Audio.resume();
+  MusicPlayer.preloadAll();   // pré-carrega todas as faixas pra trocas serem instantâneas
   MusicPlayer.play('intro');
   $('cover').style.display = 'none';
   setupCharCreate();
@@ -8169,6 +8287,102 @@ function dismissAudioHint(){
 }
 const _ahClose = $('audioHintClose');
 if(_ahClose) _ahClose.addEventListener('click', dismissAudioHint);
+
+// =====================================================================
+// TUTORIAL — overlay com spotlight no primeiro dia
+// =====================================================================
+const TUTORIAL_STEPS = [
+  { target: null, title: 'BEM-VINDO À CAMPANHA',
+    text: 'Você é candidato a prefeito. Tem <b>10 dias</b> pra virar a eleição. Vamos ver rapidinho como funciona.' },
+  { target: '#hud', title: 'PAINEL DO TOPO',
+    text: 'Aqui aparecem sua <b>% de intenção</b>, a do <b>adversário</b>, o dia atual, a <b>energia</b> diária e o caixa. O objetivo: terminar o dia 10 com mais % que ele.' },
+  { target: '#scene', title: 'O CENÁRIO',
+    text: 'Ande pelo escritório com <b>WASD/setas</b> (ou D-pad no celular) e fique perto de objetos como celular, computador, TV e porta pra abrir ações.' },
+  { target: '#restBtn', title: 'DORMIR / ENCERRAR O DIA',
+    text: 'Quando esgotar as ações do dia, clique no <b>💤</b> pra dormir e avançar pro próximo dia.' },
+  { target: '#soundBtn', title: 'SOM',
+    text: 'Liga e desliga a trilha musical e os efeitos.' },
+  { target: '#fsBtn', title: 'TELA CHEIA',
+    text: 'Recomendado pra imersão — esconde a barra do navegador.' },
+  { target: null, title: 'CUIDADO COM O TSE',
+    text: 'Cada ação tem cor: <b style="color:#5fb872">🟢 LEGAL</b>, <b style="color:#f6c453">🟡 ZONA CINZA</b>, <b style="color:#cf3a3a">🔴 PROIBIDO</b>. Ações ilegais aumentam o risco de cassação. Boa sorte!' }
+];
+let _tutStep = 0;
+
+function startTutorial(){
+  if(sessionStorage.getItem('tutDone') === '1') return;
+  _tutStep = 0;
+  $('tutorialOverlay').classList.add('show');
+  showTutorialStep(_tutStep);
+}
+function showTutorialStep(idx){
+  const step = TUTORIAL_STEPS[idx];
+  if(!step) return endTutorial();
+  const spot = $('tutorialSpotlight');
+  const box = $('tutorialBox');
+  const isLast = idx === TUTORIAL_STEPS.length - 1;
+  box.innerHTML =
+    '<h3>' + step.title + '</h3>' +
+    '<p>' + step.text + '</p>' +
+    '<div class="tut-buttons">' +
+      '<button type="button" class="tut-skip" id="tutSkipBtn">PULAR</button>' +
+      '<span class="tut-step-counter">' + (idx+1) + '/' + TUTORIAL_STEPS.length + '</span>' +
+      '<button type="button" class="tut-next" id="tutNextBtn">' + (isLast ? 'COMEÇAR' : 'PRÓXIMO') + '</button>' +
+    '</div>';
+  $('tutSkipBtn').addEventListener('click', endTutorial);
+  $('tutNextBtn').addEventListener('click', nextTutorialStep);
+
+  if(step.target){
+    const el = document.querySelector(step.target);
+    if(el && el.offsetParent !== null && getComputedStyle(el).display !== 'none'){
+      const rect = el.getBoundingClientRect();
+      const pad = 8;
+      spot.classList.remove('no-spot');
+      spot.style.background = '';
+      spot.style.top = Math.max(0, rect.top - pad) + 'px';
+      spot.style.left = Math.max(0, rect.left - pad) + 'px';
+      spot.style.width = (rect.width + pad*2) + 'px';
+      spot.style.height = (rect.height + pad*2) + 'px';
+      positionTutBox(box, rect);
+      return;
+    }
+  }
+  // Sem target (ou target invisível) → tela cheia escura + caixa no centro
+  spot.classList.add('no-spot');
+  box.style.top = '50%';
+  box.style.left = '50%';
+  box.style.right = 'auto';
+  box.style.transform = 'translate(-50%, -50%)';
+}
+function positionTutBox(box, rect){
+  box.style.transform = '';
+  const boxW = 360, boxH = 200, margin = 16;
+  let top;
+  if(rect.bottom + margin + boxH < window.innerHeight){
+    top = rect.bottom + margin;
+  } else if(rect.top - margin - boxH > 0){
+    top = rect.top - margin - boxH;
+  } else {
+    top = Math.max(8, window.innerHeight - boxH - 8);
+  }
+  const left = Math.max(8, Math.min(window.innerWidth - boxW - 8, rect.left + rect.width/2 - boxW/2));
+  box.style.top = top + 'px';
+  box.style.left = left + 'px';
+  box.style.right = 'auto';
+}
+function nextTutorialStep(){
+  _tutStep++;
+  if(_tutStep >= TUTORIAL_STEPS.length) endTutorial();
+  else showTutorialStep(_tutStep);
+}
+function endTutorial(){
+  $('tutorialOverlay').classList.remove('show');
+  sessionStorage.setItem('tutDone', '1');
+}
+window.addEventListener('resize', ()=>{
+  if($('tutorialOverlay').classList.contains('show')) showTutorialStep(_tutStep);
+});
+
 // Desistir botão (modal in-app, não sai do fullscreen)
 const quitBtn = $('quitBtn');
 quitBtn.addEventListener('click', ()=>{
