@@ -1054,12 +1054,15 @@
     position: absolute; inset: 12px;
     background: rgba(8,4,16,0.95);
     display: none;
-    align-items: center; justify-content: center;
+    align-items: center;
     border-radius: 4px;
-    z-index: 5;
+    z-index: 6;
     flex-direction: column;
-    padding: 24px;
+    padding: 20px 16px 0;       /* zero embaixo: o botão sticky preenche */
     text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   .stage .day-overlay.show { display: flex; }
   .day-overlay h2 {
@@ -1069,7 +1072,23 @@
     margin: 0 0 12px;
   }
   .day-overlay p { font-size: 22px; color: var(--text); max-width: 600px; line-height: 1.4; }
-  .day-overlay button { margin-top: 18px; }
+  /* Botão pra avançar dia: sticky no fundo do overlay pra SEMPRE ficar visível
+     mesmo quando o diagnóstico é longo (problema no mobile) */
+  .day-overlay button {
+    position: sticky;
+    bottom: 0;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 22px;
+    background: rgba(8,4,16,0.98);
+    box-shadow: 0 -10px 18px rgba(8,4,16,0.95);
+    z-index: 2;
+  }
+  /* Esconde a scene-hint quando o overlay está aberto (estava aparecendo
+     por baixo no mobile, atrapalhando a leitura do diagnóstico) */
+  .stage .day-overlay.show ~ .scene-hint,
+  .stage:has(.day-overlay.show) .scene-hint { display: none !important; }
 
   .feed {
     background: var(--bg-card);
@@ -5802,7 +5821,8 @@ function snapshotStats(){
   return {
     intent: state.intent, oppIntent: state.oppIntent,
     money: state.money, risk: state.risk,
-    trust: state.trust
+    trust: state.trust,
+    followers: state.followers   // sem isso o diagnóstico mostrava "Seguidores NaN"
   };
 }
 function reactToStatDelta(before, after){
@@ -7688,10 +7708,17 @@ function showDayOverlay(title, text, btn){
   $('dayOverlayBtn').textContent = btn || 'OK';
   $('dayOverlay').classList.add('show');
   state.nightTint = 0.4;
+  // Garante que o overlay rola pro topo (mobile às vezes abre no meio)
+  $('dayOverlay').scrollTop = 0;
+  // Esconde a scene-hint enquanto o overlay tá aberto
+  const sh = document.getElementById('sceneHint');
+  if(sh) sh.style.display = 'none';
 }
 function hideDayOverlay(){
   $('dayOverlay').classList.remove('show');
   state.nightTint = 0;
+  const sh = document.getElementById('sceneHint');
+  if(sh) sh.style.display = '';
 }
 function dayOverlayHandler(){
   hideDayOverlay();
