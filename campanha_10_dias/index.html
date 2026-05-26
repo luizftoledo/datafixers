@@ -4656,7 +4656,7 @@ const state = {
   log: [],
   pending: [],   // delayed effects: {whenDay, fn, desc, mitigatable}
   shieldDeepfakeDays: 0,
-  flags: { boughtFollowers:false, didWhatsappBlast:false, neuroBots:false, deepfakedAdv:false, monitoringIA:false, sentimentIA:false, monitorRedes:false, treinoPortavoz:false, transparencia:false },
+  flags: { boughtFollowers:false, didWhatsappBlast:false, neuroBots:false, deepfakedAdv:false, monitoringIA:false, sentimentIA:false, monitorRedes:false, treinoPortavoz:false },
   // cap diário de dano de intent por ataques externos
   intentLostToday: 0,
   // counts for debate context
@@ -4881,113 +4881,122 @@ const ACTIONS = [
   {
     id: 'buyFollowers', area: 'desk', title: 'Comprar pacote de seguidores (PIX, anônimo)',
     tag: 'illegal', energy: 1, cost: 10,
-    desc: 'R$ 100 dá pra comprar mais de mil seguidores reais — pessoas pagas pra seguir e curtir. Estrategistas chamam isso de "desastre total". O algoritmo pode te marcar e exposições viralizam.',
+    desc: 'R$ 100 dá pra comprar mais de mil seguidores reais. Empurra a intenção, mas o algoritmo te marca e o adversário denuncia se cair em jornalista bom.',
     apply(s){
       s.money -= 10;
-      const followGain = 1500 + Math.floor(Math.random()*1000);
+      const followGain = 3000 + Math.floor(Math.random()*2000);
       s.followers += followGain;
-      s.intent += 2;
+      s.intent += 5;
       s.trust -= 2;
-      s.risk += 15;
+      s.risk += 25;
       s.flags.boughtFollowers = true;
       s.illegalActs++;
       feedNews('SEU INSTAGRAM', `+${followGain.toLocaleString('pt-BR')} seguidores em 20 minutos. Engajamento dispara artificialmente — mas o algoritmo nota.`, 'warn');
-      if(Math.random() < 0.65){
-        scheduleIn(2 + Math.floor(Math.random()*2), ()=>{
-          const lost = 3000 + Math.floor(Math.random()*2000);
+      if(Math.random() < 0.80){
+        scheduleIn(1 + Math.floor(Math.random()*2), ()=>{
+          const lost = 5000 + Math.floor(Math.random()*3000);
           state.followers = Math.max(500, state.followers - lost);
-          state.algoPenaltyDays = 3;
-          state.intent -= 4;
-          state.trust -= 12;
-          state.risk += 10;
-          feedNews('JORNAL', `Reportagem mostra que sua conta comprou seguidores. ${lost.toLocaleString('pt-BR')} contas removidas. Algoritmo pune por 3 dias.`, 'bad');
+          state.algoPenaltyDays = 4;
+          state.intent -= 8;
+          state.trust -= 18;
+          state.risk += 18;
+          feedNews('JORNAL', `Reportagem mostra que sua conta comprou seguidores. ${lost.toLocaleString('pt-BR')} contas removidas. Algoritmo pune por 4 dias.`, 'bad');
         }, 'exposição compra seguidores');
       }
-      return `+${followGain} 📱, +2% intenção, +15 risco, alta chance de exposição`;
+      // Adversário pode denunciar formalmente
+      if(Math.random() < 0.45){
+        scheduleIn(2, ()=>{
+          state.risk += 15;
+          state.intent -= 3;
+          feedNews('ADVERSÁRIO', 'Adversário protocolou representação no TSE pela compra de seguidores.', 'bad');
+        }, 'denúncia compra seguidores');
+      }
+      return `+${followGain} 📱, +5% intenção, +25 risco, 80% chance de exposição`;
     }
   },
   {
     id: 'whatsBlast', area: 'desk', title: 'Disparo em massa via WhatsApp "esquentado"',
     tag: 'illegal', energy: 2, cost: 30,
-    desc: 'Comprar 200 números aquecidos por um mês (R$ 15-20 cada) e disparar mensagens calibradas. O método de 2018 ainda existe — agora com IA gerando o texto. Funciona, mas o público criou "vacina" e pode virar a seu favor — ou contra você.',
+    desc: 'Comprar 200 números aquecidos por um mês e disparar mensagens calibradas com IA. Pode render bem — ou virar contra você na "vacina" que o eleitor criou pra spam.',
     apply(s){
       s.money -= 30;
-      s.risk += 20;
+      s.risk += 30;
       s.flags.didWhatsappBlast = true;
       s.illegalActs++;
       const backfire = Math.random() < 0.45;
-      const followGain = 200 + Math.floor(Math.random()*300);
+      const followGain = 500 + Math.floor(Math.random()*500);
       s.followers += followGain;
       const bonus = reachBonus();
       if(backfire){
-        s.intent -= 4;
-        s.trust -= 4;
+        s.intent -= 7;
+        s.trust -= 7;
         feedNews('COLUNAS POLÍTICAS', 'Disparo de WhatsApp da sua campanha viralizou — pra mostrar como você fez. "Vacina" funcionou.', 'bad');
       } else {
-        s.intent += 3 + bonus;
+        s.intent += 6 + bonus;
         s.trust -= 2;
         feedNews('SEU WHATSAPP', `Mensagens entregues em milhares de aparelhos. +${followGain} seguidores curiosos.`, 'warn');
       }
-      // sempre risco residual
+      // sempre risco residual + chance maior de denúncia
       scheduleIn(2, ()=>{
-        if(Math.random() < 0.5){
-          state.risk += 8;
+        if(Math.random() < 0.70){
+          state.risk += 15;
+          state.intent -= 2;
           feedNews('TSE', 'Denúncia formal contra disparo em massa atribuído à sua campanha.', 'bad');
         }
       }, 'denúncia disparo');
-      return backfire? '-4% intenção, +20 risco (vacina pegou)' : '+3% intenção, +20 risco';
+      return backfire? '-7% intenção, +30 risco (vacina pegou)' : '+6% intenção, +30 risco';
     }
   },
   {
     id: 'neuro', area: 'desk', title: 'Contratar rede de "neurobots" (personas digitais)',
     tag: 'illegal', energy: 1, cost: 50,
-    desc: 'O marketeiro da Bahia vende isso: 40 perfis falsos com "cara e crachá", cada um numa região, defendendo você ou criando discussão. Proibido pelo TSE — simular diálogo de pessoa real é violação direta.',
+    desc: 'O marketeiro vende: 40 perfis falsos com "cara e crachá", cada um numa região, defendendo você ou criando discussão. Proibido pelo TSE — alta chance do adversário denunciar.',
     apply(s){
       s.money -= 50;
-      const followGain = 500 + Math.floor(Math.random()*400);
+      const followGain = 1000 + Math.floor(Math.random()*800);
       s.followers += followGain;
-      s.intent += 6;
+      s.intent += 10;
       s.trust -= 2;
-      s.risk += 20;
+      s.risk += 30;
       s.flags.neuroBots = true;
       s.illegalActs++;
       feedNews('CONTRATADO', `Rede de 40 neurobots ativada. Personas interagindo. +${followGain} seguidores ativos.`, 'warn');
-      if(Math.random() < 0.35){
-        scheduleIn(3, ()=>{
-          const lost = 1500 + Math.floor(Math.random()*1000);
+      if(Math.random() < 0.55){
+        scheduleIn(2, ()=>{
+          const lost = 2500 + Math.floor(Math.random()*1500);
           state.followers = Math.max(500, state.followers - lost);
-          state.algoPenaltyDays = 2;
-          state.intent -= 5;
-          state.trust -= 8;
-          state.risk += 15;
+          state.algoPenaltyDays = 3;
+          state.intent -= 9;
+          state.trust -= 12;
+          state.risk += 25;
           feedNews('TRIBUNAL', `Adversário identifica padrão de comportamento idêntico em 40 perfis — denúncia ao TSE. -${lost} seguidores.`, 'bad');
         }, 'exposição neurobots');
       }
-      return `+${followGain} 📱, +6% intenção, +20 risco`;
+      return `+${followGain} 📱, +10% intenção, +30 risco`;
     }
   },
   {
     id: 'deepfakeAdv', area: 'desk', title: 'Encomendar deepfake do adversário',
     tag: 'illegal', energy: 2, cost: 20,
-    desc: 'Um vídeo curto manipulado, com fala falsificada do adversário. Custa pouco e pode "destruir" — mas a forense de IA hoje quase sempre rastreia. Cassação praticamente garantida se cair.',
+    desc: 'Vídeo curto manipulado com fala falsificada do adversário. Pode "destruir" — mas a forense de IA hoje quase sempre rastreia. Cassação praticamente garantida se cair.',
     apply(s){
       s.money -= 20;
-      s.oppIntent -= 6;
+      s.oppIntent -= 10;
       s.trust -= 5;
-      s.risk += 35;
+      s.risk += 50;
       s.flags.deepfakedAdv = true;
       s.illegalActs++;
-      feedNews('GRUPOS DE WHATSAPP', 'Vídeo do adversário "admitindo" desvio circula em grupos.', 'warn');
-      // altíssima chance de detecção
-      if(Math.random() < 0.7){
+      feedNews('GRUPOS APOIADORES DO ADVERSÁRIO', 'Vídeo do adversário "admitindo" desvio circula em grupos.', 'warn');
+      // praticamente certo de detecção
+      if(Math.random() < 0.85){
         scheduleIn(1 + Math.floor(Math.random()*2), ()=>{
-          state.risk += 50;
-          state.trust -= 15;
-          state.intent -= 8;
+          state.risk += 60;
+          state.trust -= 20;
+          state.intent -= 12;
           feedNews('JORNAL NACIONAL', 'Forense identifica deepfake. Origem rastreada até sua campanha.', 'bad');
         }, 'detecção deepfake');
       }
-      return '-6% adv, +35 risco, 70% chance de cassação';
+      return '-10% adv, +50 risco, 85% chance de cassação';
     }
   },
 
@@ -5159,20 +5168,6 @@ const ACTIONS = [
     }
   },
   {
-    id: 'transparencia', area: 'phone', title: 'Publicar declaração de transparência (proativo)',
-    tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você publica antecipadamente todos seus bens, agenda da semana, doadores até aqui. Eleitor vê e guarda. Quando o adversário tentar manchar sua imagem, parte da blindagem já tá feita. Reduz dano à confiança pela metade.',
-    available(s){ return !s.flags.transparencia; },
-    apply(s){
-      s.trust += 4;
-      s.intent += 0.5;
-      s.flags.transparencia = true;
-      s.legalActs++;
-      feedNews('SEU PERFIL', 'Declaração pública de transparência. Imprensa cita. Eleitor lembra quando vier acusação.', 'good');
-      return '+4 confiança, ataques rendem 50% menos dano de imagem';
-    }
-  },
-  {
     id: 'streetEvent', area: 'door', title: 'Evento aberto com som de carro',
     tag: 'legal', energy: 3, cost: 15,
     desc: 'Palanque ao vivo num bairro estratégico. Custa logística, paga em imagem.',
@@ -5241,10 +5236,10 @@ const ACTIONS = [
 
   // ===== PHONE / RESPOSTA ÀS REDES =====
   {
-    id: 'replyVideo', area: 'phone', title: 'Responder ataques com vídeo curto e honesto',
+    id: 'replyVideo', area: 'phone', title: 'Responder ataque com vídeo curto e honesto',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Sentou, abriu a câmera, falou olhando — sem ataques, só fato. É o conselho de quase todo profissional sério. Limite de 2 por dia (depois cansa o algoritmo).',
-    available(s){ return s.videosToday < 2; },
+    desc: 'Sentou, abriu a câmera, falou olhando — sem ataques, só fato. Só disponível DEPOIS de um ataque do adversário no mesmo dia. Limite de 2 por dia.',
+    available(s){ return s.videosToday < 2 && (s.unrepliedAttacks || 0) > 0; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.videosToday*0.4);
       const bonus = reachBonus();
@@ -5254,6 +5249,7 @@ const ACTIONS = [
       s.followers += followGain;
       s.videoCount++;
       s.videosToday++;
+      s.unrepliedAttacks = Math.max(0, (s.unrepliedAttacks||0) - 1);
       s.legalActs++;
       feedNews('SEUS STORIES', `Vídeo de resposta caiu bem. +${followGain} seguidores espontâneos.`, 'good');
       return `+${((1+bonus)*decay).toFixed(1)}% intenção, +${followGain} 📱`;
@@ -5262,7 +5258,8 @@ const ACTIONS = [
   {
     id: 'agendaPost', area: 'phone', title: 'Postar agenda do dia (transparência)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você publica sua agenda pública: onde vai, com quem se reúne, em que horário. Eleitor curte transparência.',
+    desc: 'Você publica sua agenda pública: onde vai, com quem se reúne, em que horário. Eleitor curte transparência. Uma vez por dia.',
+    available(s){ return !s.agendaPostedToday; },
     apply(s){
       const bonus = reachBonus();
       s.intent += 0.6 + bonus*0.5;
@@ -5270,6 +5267,7 @@ const ACTIONS = [
       const followGain = 80 + Math.floor(Math.random()*100);
       s.followers += followGain;
       s.legalActs++;
+      s.agendaPostedToday = true;
       feedNews('SEU PERFIL', `Print da agenda viralizou nos stories. +${followGain} seguidores buscando você.`, 'good');
       return `+${(0.6+bonus*0.5).toFixed(1)}% intenção, +${followGain} 📱, +2 confiança`;
     }
@@ -5314,44 +5312,59 @@ const ACTIONS = [
     }
   },
   {
-    id: 'platformPost', area: 'phone', title: 'Publicar plano de governo (1 vez)',
+    id: 'platformPost', area: 'phone', title: 'Publicar plano de governo (só 1 vez)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você divulga uma vez só, em PDF público, seu plano de governo: prioridades dos primeiros 100 dias, secretarias-chave, fonte fiscal. Imprensa cita.',
+    desc: 'Você divulga UMA VEZ, em PDF público, seu plano de governo. Quanto mais cedo publicar, mais ciclos de notícia ele rende — imprensa, redes e debate ficam citando.',
     available(s){ return !s.flags.publishedPlatform; },
     apply(s){
-      s.intent += 1.2;
-      s.trust += 5;
-      const followGain = 80 + Math.floor(Math.random()*120);
+      // Bônus por publicar cedo — vira referência durante toda a campanha
+      const d = s.day;
+      const earlyBonus = d <= 2 ? 1.5 : d <= 4 ? 0.8 : d <= 6 ? 0.3 : 0;
+      const trustBonus = d <= 2 ? 4   : d <= 4 ? 2   : d <= 6 ? 1   : 0;
+      const intentGain = 1.5 + earlyBonus;
+      const trustGain  = 5  + trustBonus;
+      s.intent += intentGain;
+      s.trust  += trustGain;
+      const followGain = 100 + Math.floor(Math.random()*180) + (d <= 3 ? 120 : 0);
       s.followers += followGain;
       s.flags.publishedPlatform = true;
+      s.flags.platformPublishDay = d;
       s.legalActs++;
-      feedNews('SEU SITE', 'PDF do plano de governo publicado. Colunas políticas citam as 3 prioridades.', 'good');
-      return `+1.2% intenção, +5 confiança, +${followGain} 📱`;
+      const msg = d <= 2
+        ? 'PDF do plano publicado cedo. Vira referência: colunas citam por dias.'
+        : d <= 4
+        ? 'PDF do plano publicado. Colunas citam as 3 prioridades.'
+        : d <= 6
+        ? 'PDF do plano publicado tarde. Repercussão menor — quase ninguém mais lê plano nessa altura.'
+        : 'PDF publicado quase em cima da eleição. Imprensa só registra.';
+      feedNews('SEU SITE', msg, 'good');
+      return `+${intentGain.toFixed(1)}% intenção, +${trustGain} confiança, +${followGain} 📱`;
     }
   },
   {
     id: 'fakeOutrage', area: 'desk', title: 'Acionar exército de comentários elogiosos',
     tag: 'illegal', energy: 1, cost: 15,
-    desc: 'Não é ataque — é elogio em massa. "Ele é muito bom, foi um ótimo prefeito." Pesquisadores chamam de "percepção de maioria" — uma forma de driblar a Justiça com baixo risco jurídico mas alto risco moral.',
+    desc: 'Elogio em massa. "Ele é ótimo, melhor prefeito da história." Cria "percepção de maioria" — baixo risco jurídico, alto risco moral.',
     apply(s){
       s.money -= 15;
-      const followGain = 250 + Math.floor(Math.random()*250);
+      const followGain = 500 + Math.floor(Math.random()*400);
       s.followers += followGain;
-      s.intent += 2;
-      s.risk += 12;
+      s.intent += 4;
+      s.risk += 18;
       s.trust -= 1;
       s.illegalActs++;
       feedNews('SEU PERFIL', `Onda de comentários elogiosos enche sua última publicação. +${followGain} seguidores movidos pela onda.`, 'warn');
-      if(Math.random() < 0.3){
+      if(Math.random() < 0.45){
         scheduleIn(2, ()=>{
-          const lost = 800 + Math.floor(Math.random()*500);
+          const lost = 1500 + Math.floor(Math.random()*1000);
           state.followers = Math.max(500, state.followers - lost);
-          state.risk += 10;
-          state.intent -= 2;
+          state.risk += 15;
+          state.intent -= 5;
+          state.trust -= 4;
           feedNews('REPÓRTER ESPECIALIZADO', `Análise mostra padrão idêntico em 400 comentários da sua conta. -${lost} seguidores.`, 'bad');
         }, 'exposição elogios automatizados');
       }
-      return `+${followGain} 📱, +2% intenção, +12 risco`;
+      return `+${followGain} 📱, +4% intenção, +18 risco`;
     }
   }
 ];
@@ -6945,6 +6958,8 @@ function startDay(){
   state.videosToday = 0;
   state.meetingsToday = 0;
   state.intentLostToday = 0;
+  state.agendaPostedToday = false;
+  state.unrepliedAttacks = 0;  // ataques de dias passados não justificam responder hoje
   if(state._endOfDayTimer){ clearTimeout(state._endOfDayTimer); state._endOfDayTimer = null; }
   // os warnings de trust só ficam mudos por 1 dia (re-armam se cair de novo)
   if(state.trust >= 50) state._trustWarned = {};
@@ -7179,12 +7194,9 @@ function triggerOpponentAttack(attackId){
     state.intent += applied * 0.5;
     state.intentLostToday -= applied * 0.5;
   }
-  // transparência: -50% no dano de confiança
-  if(state.flags.transparencia){
-    const trustDmg = trustBefore - state.trust;
-    if(trustDmg > 0) state.trust += trustDmg * 0.5;
-  }
   Audio.music.stinger('attack');
+  // Toda vez que sofre um ataque, abre janela pra usar a ação "responder ataque"
+  state.unrepliedAttacks = (state.unrepliedAttacks || 0) + 1;
   // Todo ataque vira bigNews pra não passar batido
   bigNews(`⚠️ ATAQUE — ${atk.headline}`, atk.text, 'bad');
 }
@@ -7716,9 +7728,13 @@ function chooseAnswer(opt, timedOut){
   else if(dDelta <= 0) sfx('debateMiss');
   else sfx('click');
   let bonusMsg = [];
-  // RUÍDO: a plateia/jurados não respondem matemática — varia ±2pp
-  const noise = (Math.random() - 0.5) * 4;
+  // RUÍDO: público é imprevisível — a mesma fala pode bombar ou cair mal
+  // Range maior (~±5) faz o debate ser mais 50/50: até a "melhor" resposta pode dar errado
+  const noise = (Math.random() - 0.5) * 10;
   dDelta += noise;
+  // Ruído também no eixo confiança
+  const noiseC = (Math.random() - 0.5) * 6;
+  cDelta += noiseC;
   // bonuses based on play history
   if(opt.walkBonus && state.walkCount >= 2){ dDelta += opt.walkBonus; bonusMsg.push(`+${opt.walkBonus} (você caminhou de verdade)`); }
   if(opt.videoBonus && state.videoCount >= 2){ dDelta += opt.videoBonus; bonusMsg.push(`+${opt.videoBonus} (presença autêntica nas redes)`); }
@@ -7802,19 +7818,22 @@ function chooseAnswer(opt, timedOut){
 }
 
 function finishDebate(){
-  // Convert debate total into intent shift
-  const d = debateState.totalD;     // typical -15 to +35
-  const c = debateState.totalC;     // typical -25 to +35
-  const intentShift = d * 0.45;     // clímax real sem invalidar grind
-  const trustShift = c * 0.5;
+  // Converte os totais em mudança de intenção/confiança — agora com TETO RÍGIDO
+  // pra debate não decidir a eleição sozinho (max ±5pp na intenção)
+  const d = debateState.totalD;
+  const c = debateState.totalC;
+  const rawIntent = d * 0.18;
+  const rawTrust  = c * 0.30;
+  const intentShift = Math.max(-5, Math.min(5, rawIntent));
+  const trustShift  = Math.max(-10, Math.min(10, rawTrust));
   state.intent += intentShift;
   state.trust += trustShift;
 
   // Adversary gets a small boost if you bombed
   if(d < 5) state.oppIntent += 2;
-  // big risk → opponent uses against you
+  // big risk → opponent uses against you (também capado)
   if(state.risk > 70){
-    state.intent -= 4;
+    state.intent -= 2;
     feedNews('NA MESA DOS COMENTARISTAS', 'Adversário citou processos contra você no debate. Pegou.', 'bad');
   }
   clampStats();
