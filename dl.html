@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Baixador em lote — Data Fixers</title>
+<style>
+  :root {
+    --paper:#fbfbfa; --paper-alt:#eff4f3; --ink:#141312; --ink-soft:#3a3836;
+    --ink-mute:#6a6864; --ink-faint:#a19e98; --rule:#1413121a; --rule-strong:#14131233;
+    --card:#ffffff; --accent:#2a7975; --accent-soft:#b4d7d1; --hot:#b33a2a; --ok:#1f7a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#0c1211; --paper-alt:#121a18; --ink:#edf4f1; --ink-soft:#ccd8d4;
+      --ink-mute:#9aa5a1; --ink-faint:#626b68; --rule:#edf4f11f; --rule-strong:#edf4f140;
+      --card:#141c1a; --accent:#9dd3cc; --accent-soft:#3f7a75; --hot:#e57158; --ok:#7bd29a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--paper); color: var(--ink); line-height: 1.55; font-size: 15px;
+    padding: 32px 20px 80px; min-height: 100vh;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 {
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-weight: 500; font-size: 32px; letter-spacing: -0.01em; margin-bottom: 6px;
+  }
+  .sub { color: var(--ink-mute); font-size: 14px; margin-bottom: 28px; }
+  .sub a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+
+  details.howto {
+    background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 12px 16px; margin-bottom: 24px; font-size: 14px;
+  }
+  details.howto summary {
+    cursor: pointer; font-weight: 600; color: var(--ink-soft); list-style: none;
+  }
+  details.howto summary::before { content: '▸ '; color: var(--ink-faint); }
+  details.howto[open] summary::before { content: '▾ '; }
+  details.howto ol { margin: 12px 0 4px 20px; color: var(--ink-soft); }
+  details.howto li { margin-bottom: 6px; }
+  details.howto code { background: var(--card); padding: 1px 5px; border-radius: 2px; font-size: 13px; }
+
+  label.field { display: block; font-size: 13px; color: var(--ink-mute); margin-bottom: 6px; font-weight: 500; }
+  textarea {
+    width: 100%; min-height: 200px; padding: 14px;
+    border: 1px solid var(--rule-strong); border-radius: 4px;
+    background: var(--card); color: var(--ink);
+    font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px;
+    resize: vertical;
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    margin: 16px 0 20px; padding: 14px; background: var(--paper-alt);
+    border: 1px solid var(--rule); border-radius: 4px;
+  }
+  .controls > div { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-soft); }
+  .controls select, .controls input[type=number] {
+    background: var(--card); color: var(--ink); border: 1px solid var(--rule-strong);
+    padding: 5px 8px; border-radius: 3px; font-family: inherit; font-size: 13px;
+  }
+  .controls input[type=number] { width: 60px; }
+
+  button {
+    background: var(--ink); color: var(--paper); border: 0;
+    padding: 10px 18px; border-radius: 3px; font-family: inherit; font-size: 14px;
+    font-weight: 500; cursor: pointer; transition: opacity .15s;
+  }
+  button:hover { opacity: 0.85; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  button.ghost { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule-strong); }
+  button.ghost:hover { background: var(--paper-alt); }
+  button.accent { background: var(--accent); color: #fff; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+
+  .summary {
+    display: flex; gap: 18px; flex-wrap: wrap;
+    padding: 12px 16px; background: var(--card); border: 1px solid var(--rule);
+    border-radius: 4px; font-size: 14px; margin-bottom: 12px;
+  }
+  .summary span { color: var(--ink-mute); }
+  .summary b { color: var(--ink); font-weight: 600; }
+  .summary .ok b { color: var(--ok); }
+  .summary .err b { color: var(--hot); }
+
+  .progress {
+    height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; margin-bottom: 16px;
+  }
+  .progress > div { height: 100%; background: var(--accent); transition: width .15s; }
+
+  ul.items {
+    list-style: none; max-height: 480px; overflow-y: auto;
+    border: 1px solid var(--rule); border-radius: 4px; background: var(--card);
+  }
+  ul.items li {
+    display: grid; grid-template-columns: 22px 1fr auto;
+    gap: 10px; align-items: center;
+    padding: 8px 14px; border-bottom: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px;
+    color: var(--ink-soft);
+  }
+  ul.items li:last-child { border-bottom: 0; }
+  ul.items .url {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    color: var(--ink-soft);
+  }
+  ul.items .url a { color: inherit; text-decoration: none; }
+  ul.items .url a:hover { color: var(--accent); }
+  ul.items .status { font-size: 11px; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  ul.items .icon { text-align: center; font-size: 12px; }
+  .s-pending { background: var(--paper-alt); color: var(--ink-mute); }
+  .s-running { background: #f5e6c3; color: #8a5a00; }
+  .s-ok      { background: #d6f0d8; color: var(--ok); }
+  .s-fail    { background: #f5d6d1; color: var(--hot); }
+  @media (prefers-color-scheme: dark) {
+    .s-running { background: #4a3a14; color: #f5d28a; }
+    .s-ok      { background: #1a3a22; color: var(--ok); }
+    .s-fail    { background: #4a1f18; color: var(--hot); }
+  }
+
+  .empty { padding: 30px; text-align: center; color: var(--ink-faint); font-size: 13px; }
+
+  footer { text-align: center; color: var(--ink-faint); font-size: 12px; margin-top: 40px; }
+  footer a { color: var(--ink-mute); text-decoration: none; border-bottom: 1px dotted var(--rule-strong); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Baixador em lote</h1>
+  <p class="sub">Cole muitos links de PDF, JPEG ou outros arquivos e baixe todos. Funciona com 1000+ URLs. &nbsp;·&nbsp; <a href="/">datafixers.org</a></p>
+
+  <details class="howto">
+    <summary>Como usar</summary>
+    <ol>
+      <li>Cole os links na caixa abaixo — pode ser um por linha, separados por espaço, ou copiado de qualquer texto. URLs são detectadas automaticamente.</li>
+      <li>Escolha o filtro: <code>PDF e JPEG</code> (padrão), só PDF, só imagens, ou <code>tudo</code>.</li>
+      <li>Clique <b>Detectar links</b> pra ver a lista filtrada e revisar.</li>
+      <li>Clique <b>Baixar tudo</b>. Na primeira vez o navegador vai perguntar se permite <i>"baixar vários arquivos automaticamente"</i> — autorize.</li>
+      <li>Se algum link falhar (servidor bloqueia CORS, link quebrado, etc.) ele fica marcado em vermelho e dá pra <b>retentar só os que falharam</b> ou copiar a lista pra investigar.</li>
+      <li>Pra grandes volumes, deixe a janela aberta até terminar — os downloads usam a pasta padrão do navegador (geralmente <code>~/Downloads</code>).</li>
+    </ol>
+  </details>
+
+  <label class="field" for="input">Cole aqui (qualquer texto — só os links são extraídos)</label>
+  <textarea id="input" placeholder="https://exemplo.com/arquivo1.pdf&#10;https://exemplo.com/foto.jpg&#10;..."></textarea>
+
+  <div class="controls">
+    <div>
+      <label for="filter">Filtrar:</label>
+      <select id="filter">
+        <option value="pdfjpg" selected>PDF e JPEG</option>
+        <option value="pdf">Só PDF</option>
+        <option value="img">Imagens (jpg, jpeg, png, gif, webp)</option>
+        <option value="all">Todos os links</option>
+      </select>
+    </div>
+    <div>
+      <label for="concurrency">Em paralelo:</label>
+      <input id="concurrency" type="number" min="1" max="20" value="4" />
+    </div>
+    <div>
+      <label for="dedupe"><input id="dedupe" type="checkbox" checked /> Remover duplicados</label>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="detect" class="ghost">Detectar links</button>
+    <button id="start" class="accent" disabled>Baixar tudo</button>
+    <button id="retry" class="ghost" disabled>Retentar falhas</button>
+    <button id="copyFails" class="ghost" disabled>Copiar URLs com falha</button>
+    <button id="clear" class="ghost">Limpar</button>
+  </div>
+
+  <div id="summary" class="summary" style="display:none">
+    <span>Total: <b id="s-total">0</b></span>
+    <span class="ok">Baixados: <b id="s-ok">0</b></span>
+    <span class="err">Falhas: <b id="s-fail">0</b></span>
+    <span>Pendentes: <b id="s-pending">0</b></span>
+  </div>
+
+  <div id="progress" class="progress" style="display:none"><div id="bar" style="width:0%"></div></div>
+
+  <ul id="items" class="items" style="display:none"></ul>
+  <div id="empty" class="empty">Cole links acima e clique em <b>Detectar links</b>.</div>
+
+  <footer>
+    sem rastreamento · roda 100% no seu navegador · <a href="/">data fixers</a>
+  </footer>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  const $ = (id) => document.getElementById(id);
+  const input = $('input'), filterSel = $('filter'), concInp = $('concurrency'), dedupeChk = $('dedupe');
+  const detectBtn = $('detect'), startBtn = $('start'), retryBtn = $('retry');
+  const copyFailsBtn = $('copyFails'), clearBtn = $('clear');
+  const itemsEl = $('items'), emptyEl = $('empty');
+  const summaryEl = $('summary'), bar = $('bar'), progress = $('progress');
+  const sTotal = $('s-total'), sOk = $('s-ok'), sFail = $('s-fail'), sPending = $('s-pending');
+
+  let items = []; // { url, status: 'pending'|'running'|'ok'|'fail', el, reason }
+  let running = false;
+
+  const URL_RE = /https?:\/\/[^\s<>"'`)]+/gi;
+
+  const FILTERS = {
+    pdfjpg: /\.(pdf|jpe?g)(\?|#|$)/i,
+    pdf: /\.pdf(\?|#|$)/i,
+    img: /\.(jpe?g|png|gif|webp)(\?|#|$)/i,
+    all: null,
+  };
+
+  function extractUrls(text) {
+    const raw = text.match(URL_RE) || [];
+    const cleaned = raw.map((u) => {
+      // strip common trailing punctuation that isn't part of the URL
+      return u.replace(/[.,;:!?)\]}'"”’]+$/, '');
+    });
+    const filt = FILTERS[filterSel.value];
+    const filtered = filt ? cleaned.filter((u) => filt.test(u)) : cleaned;
+    if (dedupeChk.checked) {
+      return [...new Set(filtered)];
+    }
+    return filtered;
+  }
+
+  function fileNameFromUrl(u) {
+    try {
+      const url = new URL(u);
+      const last = url.pathname.split('/').filter(Boolean).pop() || 'arquivo';
+      return decodeURIComponent(last);
+    } catch {
+      return 'arquivo';
+    }
+  }
+
+  function render() {
+    itemsEl.innerHTML = '';
+    if (items.length === 0) {
+      emptyEl.style.display = '';
+      itemsEl.style.display = 'none';
+      summaryEl.style.display = 'none';
+      progress.style.display = 'none';
+      return;
+    }
+    emptyEl.style.display = 'none';
+    itemsEl.style.display = '';
+    summaryEl.style.display = '';
+
+    const frag = document.createDocumentFragment();
+    items.forEach((it, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span class="icon">${i + 1}</span>
+        <span class="url" title="${escapeAttr(it.url)}"><a href="${escapeAttr(it.url)}" target="_blank" rel="noopener">${escapeHtml(it.url)}</a></span>
+        <span class="status s-pending">aguardando</span>
+      `;
+      it.el = li.querySelector('.status');
+      frag.appendChild(li);
+    });
+    itemsEl.appendChild(frag);
+    updateSummary();
+  }
+
+  function escapeHtml(s) { return s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])); }
+  function escapeAttr(s) { return s.replace(/["&<>]/g, (c) => ({ '"': '&quot;', '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])); }
+
+  function setStatus(it, status, reason) {
+    it.status = status;
+    it.reason = reason;
+    if (!it.el) return;
+    const cls = { pending: 's-pending', running: 's-running', ok: 's-ok', fail: 's-fail' }[status];
+    const label = { pending: 'aguardando', running: 'baixando…', ok: 'ok', fail: reason ? `falha: ${reason}` : 'falha' }[status];
+    it.el.className = `status ${cls}`;
+    it.el.textContent = label;
+  }
+
+  function updateSummary() {
+    const total = items.length;
+    const ok = items.filter((x) => x.status === 'ok').length;
+    const fail = items.filter((x) => x.status === 'fail').length;
+    const pending = items.filter((x) => x.status === 'pending' || x.status === 'running').length;
+    sTotal.textContent = total; sOk.textContent = ok; sFail.textContent = fail; sPending.textContent = pending;
+    progress.style.display = total > 0 ? '' : 'none';
+    const done = ok + fail;
+    bar.style.width = total ? `${(done / total) * 100}%` : '0%';
+    retryBtn.disabled = !(fail > 0 && !running);
+    copyFailsBtn.disabled = fail === 0;
+    startBtn.disabled = total === 0 || running || pending === 0;
+  }
+
+  // Download strategies — tries fetch+blob first (forces a real download even cross-origin
+  // when CORS allows). Falls back to a same-tab anchor click with `download` attribute.
+  async function downloadOne(it) {
+    const url = it.url;
+    const name = fileNameFromUrl(url);
+    try {
+      const resp = await fetch(url, { mode: 'cors', credentials: 'omit', redirect: 'follow' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const blob = await resp.blob();
+      const objUrl = URL.createObjectURL(blob);
+      triggerDownload(objUrl, name);
+      // Revoke after the browser has had a moment to register the download
+      setTimeout(() => URL.revokeObjectURL(objUrl), 60_000);
+      return { ok: true };
+    } catch (e) {
+      // CORS-blocked or network error — fall back to anchor with download attr.
+      // For cross-origin without proper headers the browser may navigate instead of
+      // downloading; we open in a new tab as last resort so the page stays usable.
+      try {
+        triggerDownload(url, name, true);
+        return { ok: true, soft: true };
+      } catch (e2) {
+        return { ok: false, reason: shortReason(e) };
+      }
+    }
+  }
+
+  function triggerDownload(href, filename, newTab) {
+    const a = document.createElement('a');
+    a.href = href;
+    a.download = filename;
+    a.rel = 'noopener';
+    if (newTab) a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function shortReason(e) {
+    const m = (e && e.message) || String(e);
+    if (/Failed to fetch|NetworkError|CORS/i.test(m)) return 'CORS/rede';
+    if (/HTTP \d+/.test(m)) return m;
+    return m.slice(0, 40);
+  }
+
+  async function runQueue(targets) {
+    running = true;
+    startBtn.disabled = true; retryBtn.disabled = true; detectBtn.disabled = true;
+    const conc = Math.max(1, Math.min(20, parseInt(concInp.value, 10) || 4));
+    let cursor = 0;
+
+    async function worker() {
+      while (cursor < targets.length) {
+        const it = targets[cursor++];
+        setStatus(it, 'running');
+        updateSummary();
+        const res = await downloadOne(it);
+        if (res.ok) setStatus(it, 'ok');
+        else setStatus(it, 'fail', res.reason);
+        updateSummary();
+        // tiny pause to let the browser queue the actual file save & avoid being
+        // rate-limited as "automatic multi-download abuse"
+        await new Promise((r) => setTimeout(r, 120));
+      }
+    }
+
+    const workers = Array.from({ length: conc }, worker);
+    await Promise.all(workers);
+
+    running = false;
+    detectBtn.disabled = false;
+    updateSummary();
+  }
+
+  detectBtn.addEventListener('click', () => {
+    const urls = extractUrls(input.value);
+    items = urls.map((u) => ({ url: u, status: 'pending', el: null, reason: null }));
+    render();
+  });
+
+  startBtn.addEventListener('click', () => {
+    const pending = items.filter((x) => x.status === 'pending');
+    if (pending.length === 0) return;
+    runQueue(pending);
+  });
+
+  retryBtn.addEventListener('click', () => {
+    const failed = items.filter((x) => x.status === 'fail');
+    failed.forEach((it) => setStatus(it, 'pending'));
+    updateSummary();
+    runQueue(failed);
+  });
+
+  copyFailsBtn.addEventListener('click', async () => {
+    const lines = items.filter((x) => x.status === 'fail').map((x) => x.url).join('\n');
+    try {
+      await navigator.clipboard.writeText(lines);
+      copyFailsBtn.textContent = 'Copiado ✓';
+      setTimeout(() => (copyFailsBtn.textContent = 'Copiar URLs com falha'), 1500);
+    } catch {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = lines; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    if (running) return;
+    input.value = '';
+    items = [];
+    render();
+  });
+
+  // initial render
+  render();
+})();
+</script>
+</body>
+</html>
