@@ -32,6 +32,14 @@ jobs:
           repository: luizftoledo/datafixers-dashboards
           ref: main
 
+      - name: Remover arquivos acima do limite de 25 MiB do Pages
+        # cache de build da LAI (lai/data/cache/yearly_publica, 20-33MB) vive
+        # no git mas nao e consumido pelo site - so os scripts usam. O Pages
+        # rejeita o deploy inteiro se qualquer arquivo passar de 25 MiB.
+        run: |
+          echo "Removidos do deploy (nao do repo):"
+          find . -path ./.git -prune -o -type f -size +24M -print -exec rm -f {} \;
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
