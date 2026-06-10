@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>10 dias — jogo eleitoral</title>
+<title>10 dias — jogo eleitoral · edição SNES</title>
 <meta name="description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Use IA, neurobots, deepfake, comício na rua e plano público — mas cuidado: o TSE está de olho. Inspirado em reportagem da BBC News Brasil." />
 <!-- Open Graph (WhatsApp, Telegram, Facebook, LinkedIn) -->
 <meta property="og:type"        content="website" />
@@ -2273,7 +2273,7 @@
   <div class="game-grid" id="gameGrid" style="display:none">
     <div class="stage">
       <div class="scene-wrap" style="position:relative">
-      <canvas id="scene" width="320" height="192"></canvas>
+      <canvas id="scene" width="640" height="384"></canvas>
       <div id="wallPoster" aria-hidden="true">
         <canvas id="wpCanvas" width="32" height="48"></canvas>
         <div class="wp-info">
@@ -3514,188 +3514,131 @@ function sfx(name){
   Audio.sfx[name]();
 }
 
-// ----- PIXEL ART RENDERING -----
+// ----- PIXEL ART RENDERING — SNES EDITION -----
+// O canvas físico é 640x384 (2x). As coordenadas lógicas continuam 320x192:
+// ctx.scale(2,2) faz todo o código legado desenhar idêntico, e as funções
+// novas usam frect() com passo de 0.5 unidade lógica (= 1 pixel físico),
+// o que dá 4x mais detalhe — sprites e cenário no padrão 16-bit.
 const cnv = document.getElementById('scene');
-const ctx = cnv.getContext('2d');
+let ctx = cnv.getContext('2d');
 // Logical size
 const W = 320, H = 192;
-// Display scale (4x — mais nítido)
 cnv.style.maxWidth = '1280px';
+ctx.scale(2, 2);
 ctx.imageSmoothingEnabled = false;
 
-// Palette
+// Palette (chaves antigas mantidas + novas, tons SNES)
 const PAL = {
-  floor1: '#a07a4c',
-  floor2: '#8a663d',
-  rug1:   '#6b3e3e',
-  rug2:   '#8a4f4f',
-  wall:   '#3a2a4a',
-  wallTrim:'#5a4070',
-  walltop:'#1a1424',
-  desk1:  '#704020',
-  desk2:  '#8a5a30',
-  pc1:    '#444',
-  pc2:    '#666',
-  screen: '#5fc0ff',
-  screen2:'#3a90c0',
-  sofa1:  '#4a6a8a',
-  sofa2:  '#3a4f6a',
-  tv1:    '#222',
-  tv2:    '#333',
-  tvscr:  '#ffcc44',
-  door:   '#553322',
-  door2:  '#3a2010',
-  plant1: '#3a6a3a',
-  plant2: '#558b55',
-  plantPot:'#8a5a30',
-  player1:'#f3c9a0', // skin
-  player2:'#b87333', // hair
-  player3:'#3c7dc0', // shirt
-  player4:'#222',    // pants
-  shoes:  '#4a2a10',
-  black:  '#000',
-  white:  '#ffffff',
+  out:     '#1c1022',   // contorno universal dos sprites
+  // piso de madeira mel
+  floor1:  '#b48455', floor2: '#9e7045', floor3: '#875c36',
+  floorHi: '#d2a36b', floorLine: '#64431f', floorKnot: '#74522c',
+  // tapete vinho com borda dourada
+  rug1: '#7e3a4c', rug2: '#9a5064', rug3: '#5c2636',
+  rugGold: '#d8a84e', rugEdge: '#3e1a28',
+  // parede (papel azul-ardósia + lambri de madeira)
+  wall: '#48688c', wallHi: '#567a9e', wallLo: '#3c587a',
+  wallTrim: '#2c405c', walltop: '#16223a',
+  wain: '#6a4530', wainHi: '#85593c', wainLo: '#4e3020',
+  // móveis
+  desk1: '#7e4c24', desk2: '#9a6434', desk3: '#5e3618',
+  pc1: '#3a3a46', pc2: '#5a5a6a',
+  screen: '#5fc0ff', screen2: '#2a6aa0',
+  sofa1: '#4a6a8a', sofa2: '#3a4f6a',
+  tv1: '#23232e', tv2: '#3c3c4a', tvscr: '#ffcc44',
+  door: '#6a3c20', door2: '#46260f',
+  plant1: '#2e6a3a', plant2: '#4e9a58', plant3: '#76c47c',
+  plantPot: '#a05c30',
+  player1: '#f3c9a0', // skin
+  player2: '#b87333', // hair
+  player3: '#3c7dc0', // shirt
+  player4: '#222',    // pants
+  shoes: '#4a2a10',
+  black: '#000',
+  white: '#ffffff',
   yellow: '#f6c453',
-  red:    '#cf3a3a',
-  green:  '#5fa55a',
-  gold:   '#f6c453',
-  paper:  '#f5ecd9',
-  phone1: '#222',
-  phone2: '#555',
+  red: '#cf3a3a',
+  green: '#5fa55a',
+  gold: '#f6c453',
+  paper: '#f5ecd9',
+  phone1: '#23232e',
+  phone2: '#50505e',
 };
 
-// Draw helpers
+// Draw helpers — rect/px legados (grade de 1px) e frect/fpx finos (grade 0.5)
 function rect(x,y,w,h,c){ ctx.fillStyle=c; ctx.fillRect(x|0,y|0,w|0,h|0); }
 function px(x,y,c){ ctx.fillStyle=c; ctx.fillRect(x|0,y|0,1,1); }
+function frect(x,y,w,h,c){ ctx.fillStyle=c; ctx.fillRect(x,y,w,h); }
+function fpx(x,y,c){ ctx.fillStyle=c; ctx.fillRect(x,y,0.5,0.5); }
+// xadrez de meio-pixel (textura/dithering estilo SNES) — usar só em área pequena
+// ou em render estático (cacheado), nunca em área grande por frame
+function dith(x,y,w,h,c){
+  ctx.fillStyle=c;
+  const x2=Math.round(x*2), y2=Math.round(y*2), w2=Math.round(w*2), h2=Math.round(h*2);
+  for(let j=0;j<h2;j++){
+    for(let i=(x2+y2+j)&1; i<w2; i+=2){
+      ctx.fillRect((x2+i)/2,(y2+j)/2,0.5,0.5);
+    }
+  }
+}
+function outlineRect(x,y,w,h,c){
+  frect(x,y,w,0.5,c); frect(x,y+h-0.5,w,0.5,c);
+  frect(x,y,0.5,h,c); frect(x+w-0.5,y,0.5,h,c);
+}
 
+// ===== PISO =====
 function drawFloorTile(x,y){
-  rect(x,y,16,16,PAL.floor1);
-  // wood plank lines (3 tons)
-  ctx.fillStyle = '#5a3a20';
-  ctx.fillRect(x, y+5, 16, 1);
-  ctx.fillRect(x, y+10, 16, 1);
-  ctx.fillRect(x+3, y, 1, 5);
-  ctx.fillRect(x+11, y+6, 1, 5);
-  ctx.fillRect(x+7, y+11, 1, 5);
-  // highlight strip (top of plank)
-  ctx.fillStyle = '#c89968';
-  ctx.fillRect(x, y+6, 16, 1);
-  ctx.fillRect(x, y+11, 16, 1);
-  // sparse wood knots (pseudo-random by coord)
-  const k = ((x*7) ^ (y*13)) & 7;
-  if(k === 3){ ctx.fillStyle = '#5a3a20'; ctx.fillRect(x+5, y+2, 2, 1); ctx.fillRect(x+6, y+3, 1, 1); }
-  if(k === 5){ ctx.fillStyle = '#5a3a20'; ctx.fillRect(x+12, y+12, 1, 2); }
-}
-function drawRugTile(x,y){
-  rect(x,y,16,16,PAL.rug1);
-  ctx.fillStyle = PAL.rug2;
-  for(let i=0;i<16;i+=4){
-    ctx.fillRect(x+i, y+2, 2, 1);
-    ctx.fillRect(x+i+1, y+8, 1, 1);
-    ctx.fillRect(x+i, y+13, 2, 1);
+  // tábuas horizontais longas: tom por fileira, juntas verticais sutis
+  for(const py0 of [0,8]){
+    const row = (y+py0)>>3, col = x>>4;
+    const v = ((row*13) % 3 + 3) % 3;
+    frect(x, y+py0, 16, 8, v===0 ? PAL.floor1 : v===1 ? PAL.floor2 : '#aa7a4c');
+    frect(x, y+py0, 16, 0.5, 'rgba(210,163,107,0.55)');  // topo da tábua
+    frect(x, y+py0+7.5, 16, 0.5, PAL.floorLine);         // junta inferior
+    // veios da madeira
+    frect(x+2+((col*5)%4), y+py0+3, 7, 0.5, 'rgba(100,67,31,0.3)');
+    frect(x+9.5-((col*3)%3), y+py0+5.5, 5, 0.5, 'rgba(100,67,31,0.22)');
+    // junta vertical só a cada duas telhas (tábuas de ~32px)
+    if(((col + row) & 1) === 0){
+      frect(x + (row%2 ? 4.5 : 11), y+py0+0.5, 0.5, 7, 'rgba(100,67,31,0.5)');
+    }
   }
+  // nós da madeira esparsos (pseudo-random por coordenada)
+  const k = ((x*7) ^ (y*13)) & 15;
+  if(k === 3){ frect(x+4, y+2.5, 1.5, 1, PAL.floorKnot); fpx(x+4.5, y+3, PAL.floorLine); }
+  if(k === 9){ frect(x+11, y+11, 1, 1.5, PAL.floorKnot); fpx(x+11.5, y+11.5, PAL.floorLine); }
 }
 
-function drawWall(){
-  rect(0,0,W,32,PAL.wall);
-  rect(0,28,W,4,PAL.wallTrim);
-  rect(0,0,W,3,PAL.walltop);
-  // window frames
-  for(let wx of [40, 200]){
-    rect(wx,6,40,20,'#3a5a8a');
-    rect(wx+2,8,18,16,'#6ec0ff');
-    rect(wx+22,8,16,16,'#6ec0ff');
-    rect(wx,6,40,2,PAL.wallTrim);
-    rect(wx,24,40,2,PAL.wallTrim);
-    rect(wx+19,6,2,20,PAL.wallTrim);
-    rect(wx,6,2,20,PAL.wallTrim);
-    rect(wx+38,6,2,20,PAL.wallTrim);
-    // sky
-    rect(wx+3,9,16,14,'#88c8ff');
-    rect(wx+23,9,14,14,'#88c8ff');
-    // sun if early
-  }
-  // Cartaz fica como HTML overlay (#wallPoster) — mais legível.
-  // Aqui só desenha a moldura discreta na parede pra dar lugar visual.
-  rect(132, 6, 56, 22, '#1a0f00');
-  rect(133, 7, 54, 20, '#dab66b');
-}
+// legado (não usado mais — o tapete agora é desenhado inteiro por drawRug)
+function drawRugTile(x,y){ frect(x,y,16,16,PAL.rug1); }
 
-// Santinho do candidato na parede (atualiza com look + número + nome)
-function drawCandidatePoster(px0, py0){
-  const W2 = 56, H2 = 22;
-  const c = getCandidateColors();
-  // moldura
-  rect(px0, py0, W2, H2, PAL.paper);
-  rect(px0+1, py0+1, W2-2, H2-2, '#dab66b');
-  // foto à esquerda (12x14)
-  const fx = px0+3, fy = py0+3;
-  rect(fx, fy, 12, 14, c.skin);
-  // cabelo conforme estilo
-  if(c.style === 'short'){
-    rect(fx, fy, 12, 4, c.hair);
-  } else if(c.style === 'long'){
-    rect(fx, fy, 12, 5, c.hair);
-    rect(fx-1, fy+3, 1, 8, c.hair);
-    rect(fx+12, fy+3, 1, 8, c.hair);
-  } else if(c.style === 'curly'){
-    rect(fx, fy-1, 12, 4, c.hair);
-    rect(fx-1, fy+1, 1, 3, c.hair);
-    rect(fx+12, fy+1, 1, 3, c.hair);
-  } else if(c.style === 'afro'){
-    rect(fx-1, fy-1, 14, 4, c.hair);
-  } else if(c.style === 'bun'){
-    rect(fx, fy, 12, 3, c.hair);
-    rect(fx+4, fy-2, 4, 3, c.hair);
-  } else if(c.style === 'bald'){
-    rect(fx+1, fy+2, 10, 1, shadeColor(c.skin, -15));
-  } else if(c.style === 'mohawk'){
-    rect(fx+5, fy-1, 2, 4, c.hair);
-  } else if(c.style === 'mullet'){
-    rect(fx, fy, 12, 4, c.hair);
-    rect(fx+2, fy+13, 8, 2, c.hair);
-  } else if(c.style === 'spiky'){
-    rect(fx, fy+1, 12, 2, c.hair);
-    rect(fx+1, fy-1, 1, 2, c.hair);
-    rect(fx+4, fy-1, 1, 2, c.hair);
-    rect(fx+7, fy-1, 1, 2, c.hair);
-    rect(fx+10, fy-1, 1, 2, c.hair);
-  } else if(c.style === 'pigtails'){
-    rect(fx, fy, 12, 3, c.hair);
-    rect(fx-1, fy+3, 2, 6, c.hair);
-    rect(fx+11, fy+3, 2, 6, c.hair);
-  } else if(c.style === 'topknot'){
-    rect(fx, fy, 12, 3, c.hair);
-    rect(fx+4, fy-3, 4, 3, c.hair);
-  } else if(c.style === 'fade'){
-    rect(fx+2, fy, 8, 2, c.hair);
-  } else if(c.style === 'dreads'){
-    rect(fx, fy, 12, 3, c.hair);
-    rect(fx, fy+3, 1, 6, c.hair);
-    rect(fx+3, fy+4, 1, 5, c.hair);
-    rect(fx+8, fy+4, 1, 5, c.hair);
-    rect(fx+11, fy+3, 1, 6, c.hair);
-  } else if(c.style === 'ponytail'){
-    rect(fx, fy, 12, 3, c.hair);
-    rect(fx+12, fy+3, 2, 6, c.hair);
+// Tapete inteiro: campo vinho, borda dourada dupla, losangos e franjas
+function drawRug(x,y,w,h){
+  // sombra projetada da borda
+  frect(x+1, y+h, w-2, 0.5, 'rgba(30,16,10,0.3)');
+  // campo
+  frect(x, y, w, h, PAL.rug1);
+  outlineRect(x, y, w, h, PAL.rugEdge);
+  // borda dourada dupla
+  outlineRect(x+1.5, y+1.5, w-3, h-3, PAL.rugGold);
+  outlineRect(x+2.5, y+2.5, w-5, h-5, PAL.rug3);
+  outlineRect(x+5, y+5, w-10, h-10, PAL.rug2);
+  // textura sutil no campo interno
+  dith(x+7, y+7, w-14, h-14, 'rgba(92,38,54,0.5)');
+  // três medalhões em losango na faixa central
+  const cy = y + h/2;
+  for(const cx0 of [x+w*0.25, x+w*0.5, x+w*0.75]){
+    for(let i=0;i<5;i++){
+      const ww = (i<3 ? (i+1) : (5-i)) * 2;
+      frect(cx0-ww/2, cy-5+i*2, ww, 2, i===2 ? PAL.rugGold : PAL.rug2);
+    }
+    frect(cx0-1, cy-1, 2, 2, PAL.rug1);
   }
-  // olhos
-  rect(fx+3, fy+6, 2, 1, '#000');
-  rect(fx+7, fy+6, 2, 1, '#000');
-  // sorriso
-  rect(fx+4, fy+10, 4, 1, '#8a3a3a');
-  // gola/camisa embaixo
-  rect(fx, fy+13, 12, 1, c.shirt);
-  // texto à direita: nome (curto) e número
-  const tx = px0 + 18;
-  const nm = (state.candidate.name || 'CAND').toUpperCase().slice(0, 10);
-  txt(nm, tx, py0+3, '#1a0f00', 5);
-  // número grande dourado
-  rect(tx, py0+9, 22, 6, '#cf3a3a');
-  txt((state.candidate.number||'22'), tx+2, py0+10, '#fff', 6);
-  // slogan em linhas pixel
-  rect(tx, py0+17, 30, 1, '#3a2a1a');
-  rect(tx, py0+19, 26, 1, '#3a2a1a');
+  // franjas em cima e embaixo
+  for(let i=2; i<w-2; i+=2){
+    frect(x+i, y-1, 0.5, 1, PAL.rugGold);
+    frect(x+i, y+h+0.5, 0.5, 1, PAL.rugGold);
+  }
 }
 
 function drawFloor(){
@@ -3704,170 +3647,645 @@ function drawFloor(){
       drawFloorTile(x,y);
     }
   }
-  // rug center
-  for(let y=80; y<144; y+=16){
-    for(let x=80; x<240; x+=16){
-      drawRugTile(x,y);
-    }
+  // sombra da parede caindo no chão
+  frect(0, 32, W, 1.5, 'rgba(16,10,30,0.35)');
+  frect(0, 33.5, W, 0.5, 'rgba(16,10,30,0.18)');
+  drawRug(82, 82, 156, 60);
+}
+
+// ===== PAREDE =====
+const WINDOWS = [{x:40,y:5},{x:200,y:5}];
+
+function drawWall(){
+  // papel de parede com listras verticais sutis
+  frect(0, 0, W, 32, PAL.wall);
+  for(let x=0; x<W; x+=8){ frect(x, 3, 0.5, 19, '#426082'); }
+  for(let x=4; x<W; x+=8){ frect(x, 3, 0.5, 19, '#4e7094'); }
+  // sombra do teto
+  frect(0, 0, W, 2, PAL.walltop);
+  frect(0, 2, W, 0.5, PAL.wallTrim);
+  // bandeirinhas de campanha penduradas
+  frect(0, 2.5, W, 0.5, '#caa23c'); // cordinha
+  for(let x=2; x<W; x+=11){
+    const ci = (x/11|0)%3;
+    const c = ci===0 ? '#e8c84a' : ci===1 ? '#4aa860' : '#4a78c8';
+    frect(x, 3, 5, 1, c);
+    frect(x+1, 4, 3, 1, shadeColor(c,-30));
+    frect(x+2, 5, 1, 1, shadeColor(c,-55));
+  }
+  // trilho do lambri
+  frect(0, 22, W, 1, PAL.wainHi);
+  frect(0, 23, W, 0.5, PAL.out);
+  // lambri de madeira
+  frect(0, 23.5, W, 6.5, PAL.wain);
+  for(let x=2; x<W; x+=10){
+    frect(x, 24, 0.5, 5.5, PAL.wainLo);
+    frect(x+0.5, 24, 0.5, 5.5, PAL.wainHi);
+  }
+  // rodapé
+  frect(0, 30, W, 2, PAL.wainLo);
+  frect(0, 30, W, 0.5, PAL.wainHi);
+  // molduras das janelas (o vidro é dinâmico — drawWindowPanes)
+  for(const wd of WINDOWS) drawWindowFrame(wd.x, wd.y);
+  // moldura do cartaz do candidato (o conteúdo é overlay HTML #wallPoster)
+  frect(131, 5, 58, 24, '#2a1a10');
+  frect(131.5, 5.5, 57, 23, '#c8a050');
+  frect(132.5, 6.5, 55, 21, '#e9dcc0');
+  fpx(132, 5.5, '#e8d8a0'); fpx(188.5, 5.5, '#e8d8a0');
+  // decoração extra
+  drawWallClock(106, 8);
+  drawFramedPic(14, 8);
+  drawShelf(248, 8);
+}
+
+function drawWindowFrame(wx, wy){
+  // sombra/contorno
+  frect(wx-1.5, wy-1.5, 43, 24.5, PAL.out);
+  // moldura de madeira
+  frect(wx-1, wy-1, 42, 23.5, '#7e5230');
+  frect(wx-1, wy-1, 42, 1, '#9a6c42');
+  frect(wx-1, wy-1, 1, 23.5, '#9a6c42');
+  frect(wx+40, wy-1, 1, 23.5, '#5e3a1c');
+  frect(wx-1, wy+21.5, 42, 1, '#5e3a1c');
+  // peitoril
+  frect(wx-3, wy+22, 46, 2.5, '#8a5a32');
+  frect(wx-3, wy+22, 46, 0.75, '#aa7a4c');
+  frect(wx-3, wy+24, 46, 0.5, PAL.out);
+  // vasinho de flores no peitoril (só na janela da direita)
+  if(wx > 100){
+    frect(wx+32, wy+19, 4, 3, '#a05c30');
+    frect(wx+32, wy+19, 4, 0.75, '#c0784a');
+    fpx(wx+33, wy+17.5, '#cf3a3a'); fpx(wx+34.5, wy+17, '#e85a5a');
+    fpx(wx+33.5, wy+18.5, '#4e9a58'); fpx(wx+34, wy+18, '#4e9a58');
   }
 }
 
-// Desk + computer (digital ops corner)
+// Vidro das janelas — dinâmico (nuvens passando). Chamado todo frame.
+function drawWindowPanes(t){
+  for(const wd of WINDOWS){
+    const wx = wd.x, wy = wd.y;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(wx+0.5, wy+0.5, 39, 20);
+    ctx.clip();
+    // céu em bandas
+    frect(wx+0.5, wy+0.5, 39, 20, '#8fc4ee');
+    frect(wx+0.5, wy+0.5, 39, 5, '#a9d8f6');
+    frect(wx+0.5, wy+12, 39, 9, '#7ab2e0');
+    // sol (só janela esquerda)
+    if(wx < 100){
+      frect(wx+30, wy+2, 4, 4, '#ffe88a');
+      frect(wx+31, wy+1.5, 2, 5, '#ffe88a');
+      frect(wx+29.5, wy+3, 5, 2, '#ffe88a');
+      frect(wx+31, wy+3, 2, 2, '#fff6c8');
+    }
+    // nuvens animadas (loop horizontal)
+    const sp = ((t*1.5) % 60);
+    drawCloudPx(wx - 10 + sp, wy+3);
+    drawCloudPx(wx + 18 + sp*0.6, wy+7.5);
+    drawCloudPx(wx - 28 + sp, wy+5.5);
+    // skyline da cidade
+    const hts = [7,10,5,12,8,6,11,9,4,10];
+    for(let i=0; i<10; i++){
+      const bx = wx+0.5 + i*4, bh = hts[(i + (wx>100?3:0)) % 10];
+      frect(bx, wy+20.5-bh, 4, bh, '#36537a');
+      frect(bx, wy+20.5-bh, 4, 0.5, '#4a6a94');
+      // janelinhas acesas
+      for(let j=1; j<bh-1; j+=2){
+        if(((i*7+j*5) % 4) === 0) fpx(bx+1, wy+20-j, '#ffd76a');
+        if(((i*5+j*3) % 5) === 0) fpx(bx+2.5, wy+20-j, '#ffd76a');
+      }
+    }
+    // reflexo diagonal do vidro
+    ctx.fillStyle = 'rgba(255,255,255,0.18)';
+    for(let i=0; i<14; i++){ ctx.fillRect(wx+4+i, wy+14-i, 2, 1); }
+    for(let i=0; i<10; i++){ ctx.fillRect(wx+24+i, wy+11-i, 1, 1); }
+    ctx.restore();
+    // caixilho central (por cima do vidro)
+    frect(wx+19.5, wy+0.5, 1, 20, '#7e5230');
+    frect(wx+19.5, wy+0.5, 0.5, 20, '#9a6c42');
+    frect(wx+0.5, wy+10, 39, 1, '#7e5230');
+    frect(wx+0.5, wy+10, 39, 0.5, '#9a6c42');
+  }
+}
+
+function drawCloudPx(cx0, cy0){
+  frect(cx0, cy0, 8, 2, '#ffffff');
+  frect(cx0+1.5, cy0-1, 4.5, 1.5, '#ffffff');
+  frect(cx0+0.5, cy0+1.5, 7, 0.5, '#d8e8f4');
+}
+
+function drawWallClock(x, y){
+  frect(x-0.5, y-0.5, 9.5, 9.5, PAL.out);
+  frect(x, y, 8.5, 8.5, '#8a5a32');
+  frect(x, y, 8.5, 0.5, '#aa7a4c');
+  frect(x+1, y+1, 6.5, 6.5, '#f2e8d0');
+  frect(x+1, y+1, 6.5, 0.5, '#d8c8a8');
+  // marcações 12/3/6/9
+  fpx(x+4, y+1.5, '#5a4a32'); fpx(x+4, y+6.5, '#5a4a32');
+  fpx(x+1.5, y+4, '#5a4a32'); fpx(x+6.5, y+4, '#5a4a32');
+  // ponteiros (10h10 — clássico de vitrine)
+  frect(x+2.5, y+3, 2, 0.5, '#2a2018');
+  frect(x+4, y+2, 0.5, 2.5, '#2a2018');
+  fpx(x+4, y+4, '#cf3a3a');
+}
+
+function drawFramedPic(x, y){
+  frect(x-0.5, y-0.5, 15, 11, PAL.out);
+  frect(x, y, 14, 10, '#c8a050');
+  frect(x+1, y+1, 12, 8, '#88c8e8');     // céu
+  frect(x+1, y+5.5, 12, 3.5, '#4e9a58'); // morros
+  frect(x+3, y+4.5, 4, 1.5, '#3a7a44');
+  frect(x+8, y+5, 4, 1, '#3a7a44');
+  frect(x+10, y+2, 2, 2, '#ffe88a');     // sol
+  fpx(x+3, y+2.5, '#fff'); fpx(x+5.5, y+3, '#fff'); // nuvens
+}
+
+function drawShelf(x, y){
+  // prateleira de madeira com livros e troféu
+  frect(x-0.5, y+8, 41, 2, PAL.out);
+  frect(x, y+8.5, 40, 1, '#8a5a32');
+  frect(x, y+8.5, 40, 0.5, '#aa7a4c');
+  // mãos francesas
+  frect(x+3, y+10, 1, 2, '#5e3a1c');
+  frect(x+36, y+10, 1, 2, '#5e3a1c');
+  // livros encostados
+  const bks = ['#b04848','#4a78c8','#4aa860','#d8a84e','#8a5cb8','#c87840','#3a8a8a'];
+  let bx = x+2;
+  for(let i=0; i<7; i++){
+    const bh = 5 + ((i*3)%3), bw = 2 + (i%2)*0.5;
+    frect(bx-0.25+0.25, y+8.5-bh, bw, bh, bks[i]);
+    frect(bx, y+8.5-bh, bw, 0.5, shadeColor(bks[i], 30));
+    frect(bx, y+7, bw, 0.5, shadeColor(bks[i], -40));
+    bx += bw + 0.5;
+  }
+  // livro deitado
+  frect(bx+0.5, y+7, 6, 1.5, '#d8d0b8');
+  frect(bx+0.5, y+7, 6, 0.5, '#f0e8d0');
+  // troféu dourado
+  const tx = x+32;
+  frect(tx+1, y+2.5, 3, 2.5, '#e8c84a');
+  frect(tx+0.5, y+2.5, 1, 1.5, '#e8c84a');
+  frect(tx+3.5, y+2.5, 1, 1.5, '#e8c84a');
+  frect(tx+1.5, y+5, 2, 1, '#b48a30');
+  frect(tx+1, y+6, 3, 1, '#8a6820');
+  fpx(tx+1.5, y+3, '#fff8d8');
+}
+
+// O cartaz do candidato virou overlay HTML (#wallPoster) — stub mantido
+function drawCandidatePoster(){ /* ver renderWallPoster() */ }
+
+// ===== MÓVEIS =====
+
+// Mesa de trabalho + computador (canto digital)
 function drawDesk(x,y){
-  // desk
-  rect(x,y+8,52,12,PAL.desk1);
-  rect(x,y+8,52,2,PAL.desk2);
-  // legs
-  rect(x+1,y+20,3,8,PAL.desk2);
-  rect(x+48,y+20,3,8,PAL.desk2);
+  // laterais/corpo até o chão
+  frect(x-0.5, y+7, 54, 21.5, PAL.out);
+  frect(x, y+9.5, 3.5, 18, PAL.desk3);
+  frect(x+48.5, y+9.5, 3.5, 18, PAL.desk3);
+  frect(x+0.5, y+9.5, 0.5, 18, PAL.desk2);
+  // gaveteiro do lado direito
+  frect(x+38, y+10, 13, 16, PAL.desk1);
+  frect(x+39, y+11, 11, 4.5, PAL.desk2);
+  frect(x+39, y+16.5, 11, 4.5, PAL.desk2);
+  frect(x+39, y+11, 11, 0.5, '#b8854c');
+  frect(x+39, y+16.5, 11, 0.5, '#b8854c');
+  frect(x+43.5, y+13, 2, 1, '#3a2410');   // puxadores
+  frect(x+43.5, y+18.5, 2, 1, '#3a2410');
+  // vão escuro embaixo da mesa
+  frect(x+4, y+10, 34, 17, '#3a2410');
+  frect(x+4, y+10, 34, 2, '#2a1808');
+  // tampo
+  frect(x-1, y+7.5, 54.5, 2.5, PAL.desk2);
+  frect(x-1, y+7.5, 54.5, 0.75, '#b8854c');
+  frect(x-1, y+9.5, 54.5, 0.5, PAL.desk3);
   // monitor
-  rect(x+8,y-12,18,16,PAL.pc1);
-  rect(x+9,y-11,16,12,PAL.screen);
-  rect(x+10,y-10,14,10,PAL.screen2);
-  // tiny screen lines (data feed)
-  for(let i=0;i<5;i++){
-    rect(x+11, y-9+i*2, 12, 1, '#f5ecd9');
+  frect(x+6.5, y-12.5, 20.5, 16, PAL.out);
+  frect(x+7, y-12, 19.5, 15, PAL.pc1);
+  frect(x+7, y-12, 19.5, 0.5, PAL.pc2);
+  frect(x+8, y-11, 17.5, 12.5, '#0c2238');
+  // conteúdo da tela: dashboard de campanha
+  frect(x+8, y-11, 17.5, 2, '#163a5c');
+  fpx(x+9, y-10.5, '#5fc0ff'); fpx(x+10, y-10.5, '#5fc0ff');
+  // gráfico de linha subindo
+  const gpts = [6,5.5,6,5,4.5,5,4,3.5,3,2.5];
+  for(let i=0; i<10; i++){ fpx(x+9.5+i, y-8.5+gpts[i], '#6fdf76'); }
+  // barras
+  for(let i=0; i<4; i++){
+    const bh2 = 1.5 + i*0.75;
+    frect(x+10+i*3, y+0.5-bh2, 2, bh2, i===3 ? '#f6c453' : '#3c7dc0');
   }
-  rect(x+15,y+4,4,4,PAL.pc2); // stand
-  rect(x+11,y+8,12,2,PAL.pc1);
-  // keyboard
-  rect(x+30,y+5,18,3,PAL.pc2);
-  // mouse
-  rect(x+50,y+6,3,2,PAL.pc2);
-  // coffee mug
-  rect(x+2,y+3,5,5,PAL.white);
-  rect(x+2,y+3,5,1,'#aaa');
-  rect(x+7,y+4,1,3,PAL.white);
+  frect(x+21, y-8, 4, 0.5, '#ef6b6b');
+  frect(x+21, y-6.5, 3, 0.5, '#f5ecd9');
+  frect(x+21, y-5, 3.5, 0.5, '#f5ecd9');
+  // post-its na borda do monitor
+  fpx(x+7.5, y-7, '#f6c453'); fpx(x+7.5, y-5.5, '#ff9bd2');
+  // pé do monitor
+  frect(x+15.5, y+3.5, 4, 3, PAL.pc2);
+  frect(x+13, y+6.5, 9, 1, PAL.pc1);
+  frect(x+13, y+6.5, 9, 0.5, PAL.pc2);
+  // teclado
+  frect(x+29.5, y+4, 18.5, 4.5, PAL.out);
+  frect(x+30, y+4.5, 17.5, 3.5, PAL.pc1);
+  for(let j=0; j<2; j++){
+    for(let i=0; i<8; i++){ fpx(x+31+i*2, y+5+j*1.25, PAL.pc2); }
+  }
+  frect(x+34, y+7.25, 9, 0.5, PAL.pc2); // barra de espaço
+  // mousepad + mouse
+  frect(x+49, y+4.5, 4, 4.5, '#2c3c50');
+  frect(x+49.5, y+5.5, 2.5, 3, '#c8c8d0');
+  frect(x+49.5, y+5.5, 2.5, 0.75, '#e8e8f0');
+  // caneca de café (vapor é dinâmico)
+  frect(x+1.5, y+2.5, 5.5, 6, PAL.out);
+  frect(x+2, y+3, 4.5, 5, '#e8e4dc');
+  frect(x+2, y+3, 4.5, 1, '#6a4530');   // café
+  frect(x+6.5, y+4, 1.5, 2.5, '#e8e4dc'); // alça
+  fpx(x+7.5, y+4.5, PAL.out);
+  frect(x+2.5, y+5, 1, 2, '#fff');      // brilho
+  // papelada
+  frect(x+24, y+5.5, 6, 3, PAL.paper);
+  frect(x+24.5, y+6, 5, 0.5, '#9a9284');
+  frect(x+24.5, y+7, 4, 0.5, '#b8b0a0');
 }
 
-// Cama / sofá-cama pra encerrar o dia
+// Cama (encerrar o dia) — o 💤 é desenhado dinamicamente em renderScene
 function drawBed(x,y){
-  // base/estrutura
-  rect(x, y+6, 44, 16, '#5a3a20');
-  rect(x, y+6, 44, 2, '#7a4a30');
-  rect(x, y+20, 44, 2, '#3a2010');
+  // estrutura
+  frect(x-0.5, y+5.5, 45, 17, PAL.out);
+  frect(x, y+6, 44, 16, PAL.desk3);
+  frect(x, y+6, 44, 1, '#7a4a28');
+  frect(x, y+20.5, 44, 1.5, '#3a2010');
+  // cabeceira (lado esquerdo)
+  frect(x-1, y+1, 3.5, 21, PAL.out);
+  frect(x-0.5, y+1.5, 2.5, 20, '#7a4a28');
+  frect(x-0.5, y+1.5, 2.5, 1, '#9a6438');
+  frect(x+0.5, y+3, 0.5, 17, '#5e3618');
   // pés
-  rect(x+1, y+22, 3, 4, '#3a2010');
-  rect(x+40, y+22, 3, 4, '#3a2010');
+  frect(x+0.5, y+22, 3, 4, PAL.out);
+  frect(x+1, y+22, 2, 3.5, '#3a2010');
+  frect(x+40.5, y+22, 3, 4, PAL.out);
+  frect(x+41, y+22, 2, 3.5, '#3a2010');
   // colchão
-  rect(x+2, y+2, 40, 10, '#dde4ed');
-  rect(x+2, y+2, 40, 2, '#fff');
-  rect(x+2, y+10, 40, 2, '#a8b0c0');
+  frect(x+2, y+1.5, 40.5, 11, PAL.out);
+  frect(x+2.5, y+2, 39.5, 10, '#e8edf4');
+  frect(x+2.5, y+2, 39.5, 1, '#ffffff');
+  frect(x+2.5, y+10, 39.5, 2, '#b0bccd');
   // travesseiro
-  rect(x+3, y+3, 12, 7, '#fff');
-  rect(x+3, y+3, 12, 1, '#dde4ed');
-  // edredom (lado direito) com xadrez
-  rect(x+16, y+4, 26, 7, '#7a2a3a');
-  // padrão xadrez
-  for(let i=0;i<6;i++){
-    rect(x+18+i*4, y+5, 1, 5, '#a04a5a');
+  frect(x+3.5, y+3, 11.5, 7, '#c8d2e0');
+  frect(x+4, y+3.5, 10.5, 6, '#ffffff');
+  frect(x+4, y+3.5, 10.5, 1, '#eef2f8');
+  frect(x+8.5, y+5, 0.5, 3, '#d8e0ea');  // vinco central
+  frect(x+4, y+8.5, 10.5, 1, '#d0d8e4');
+  // edredom xadrez (lado direito)
+  frect(x+16, y+2, 26.5, 11, '#8a3046');
+  frect(x+16, y+2, 26.5, 0.75, '#a84a5e');
+  // dobra junto ao travesseiro (lençol virado)
+  frect(x+15.5, y+2, 2, 11, '#dfe6ee');
+  frect(x+17, y+2, 0.5, 11, '#b0bccd');
+  // xadrez: listras verticais + horizontais
+  for(let i=0; i<6; i++){
+    frect(x+20+i*4, y+2.5, 1, 10, '#a84a5e');
+    frect(x+20.5+i*4, y+2.5, 0.5, 10, '#6c2438');
   }
-  rect(x+16, y+7, 26, 1, '#a04a5a');
-  // tag "💤" piscante quando o jogador pode usar
-  if(state && state.running && state.day < 10 && !state.fxLocked){
-    if(Math.sin(bobT*1.4) > 0){
-      txt('💤', x+18, y-6, '#6ec0ff', 8);
-    }
-  }
+  frect(x+18, y+5, 24.5, 1, '#a84a5e');
+  frect(x+18, y+8.5, 24.5, 1, '#a84a5e');
+  frect(x+18, y+5.5, 24.5, 0.5, '#6c2438');
+  // barra do edredom caindo
+  frect(x+16, y+12, 26.5, 1.5, '#6c2438');
 }
 
 // Mesa de reuniões (captação de recursos)
 function drawMeetingTable(x,y){
-  // mesa retangular
-  rect(x+4, y+2, 30, 14, PAL.desk1);
-  rect(x+4, y+2, 30, 2, PAL.desk2);
-  rect(x+4, y+14, 30, 2, '#5a3a20');
-  // pernas
-  rect(x+5, y+16, 3, 4, PAL.desk2);
-  rect(x+30, y+16, 3, 4, PAL.desk2);
-  // cadeiras nas laterais
-  rect(x, y+6, 4, 10, '#3a2a4a');
-  rect(x, y+4, 4, 2, '#5a4070');
-  rect(x+34, y+6, 4, 10, '#3a2a4a');
-  rect(x+34, y+4, 4, 2, '#5a4070');
-  // papéis e pastas
-  rect(x+8, y+4, 8, 6, PAL.paper);
-  rect(x+9, y+5, 6, 1, '#222');
-  rect(x+9, y+7, 6, 1, '#555');
-  // dinheiro/recibo
-  rect(x+18, y+5, 8, 4, '#7dd87d');
-  rect(x+19, y+6, 6, 1, '#fff');
-  // xícara de café
-  rect(x+28, y+5, 4, 4, '#fff');
-  rect(x+28, y+5, 4, 1, '#aaa');
-  rect(x+32, y+6, 1, 2, '#fff');
+  // cadeiras nas laterais (encosto + assento + pés)
+  for(const cx0 of [x-1, x+33]){
+    frect(cx0, y+3, 5.5, 13.5, PAL.out);
+    frect(cx0+0.5, y+3.5, 4.5, 3, PAL.sofa1);      // encosto
+    frect(cx0+0.5, y+3.5, 4.5, 0.75, '#5e80a0');
+    frect(cx0+0.5, y+7, 4.5, 6, PAL.sofa2);        // assento/base
+    fpx(cx0+1.5, y+5, '#34495e'); fpx(cx0+3.5, y+5, '#34495e'); // botões
+    frect(cx0+1, y+13, 1, 3, '#2a2a36');           // pés
+    frect(cx0+3.5, y+13, 1, 3, '#2a2a36');
+  }
+  // tampo da mesa
+  frect(x+3.5, y+1, 31.5, 16, PAL.out);
+  frect(x+4, y+1.5, 30.5, 13, PAL.desk1);
+  frect(x+4, y+1.5, 30.5, 1, '#b8854c');
+  frect(x+4, y+13.5, 30.5, 2.5, PAL.desk3);        // borda frontal
+  frect(x+4, y+13.5, 30.5, 0.5, '#4a2a10');
+  // pés
+  frect(x+5, y+16.5, 2.5, 3.5, PAL.desk3);
+  frect(x+30.5, y+16.5, 2.5, 3.5, PAL.desk3);
+  // pasta aberta com papéis
+  frect(x+7, y+3.5, 9.5, 7, '#b08030');
+  frect(x+7.5, y+4, 8.5, 6, PAL.paper);
+  frect(x+8, y+5, 7, 0.5, '#7a7264');
+  frect(x+8, y+6.5, 6, 0.5, '#9a9284');
+  frect(x+8, y+8, 6.5, 0.5, '#9a9284');
+  fpx(x+14.5, y+4.5, '#cf3a3a'); // clipe
+  // maço de dinheiro
+  frect(x+19, y+4.5, 8, 4.5, PAL.out);
+  frect(x+19.5, y+5, 7, 3.5, '#5fb872');
+  frect(x+19.5, y+5, 7, 0.75, '#7dd87d');
+  frect(x+22, y+5, 2, 3.5, '#e8e0c8');   // cinta
+  fpx(x+22.5, y+6.5, '#2a5a36');
+  // duas xícaras de café
+  for(const ox of [x+29, x+13]){
+    frect(ox, y+9.5, 3.5, 3, PAL.out);
+    frect(ox+0.5, y+10, 2.5, 2, '#fff');
+    frect(ox+0.5, y+10, 2.5, 0.5, '#6a4530');
+    fpx(ox+3, y+10.5, '#fff');
+  }
+  // caneta
+  frect(x+24, y+10.5, 4, 0.75, '#2a4a8a');
+  fpx(x+28, y+10.5, '#c8c8d0');
 }
 
-// TV
+// TV de notícias
 function drawTV(x,y){
-  rect(x,y,40,26,PAL.tv1);
-  rect(x+2,y+2,36,18,PAL.tvscr);
-  // tv news scene: anchor head
-  rect(x+18,y+6,8,8,'#f3c9a0');
-  rect(x+18,y+6,8,3,'#222');
-  rect(x+20,y+11,4,3,'#cc2222');
-  // scrollbar
-  rect(x+2,y+16,36,4,'#aa1111');
-  rect(x+24,y+12,12,2,'#fff'); // breaking
-  // stand
-  rect(x+16,y+26,8,4,PAL.tv2);
-  rect(x+10,y+30,20,2,PAL.tv2);
+  // gabinete CRT
+  frect(x-0.5, y-0.5, 41, 28, PAL.out);
+  frect(x, y, 40, 27, PAL.tv1);
+  frect(x, y, 40, 1, PAL.tv2);
+  frect(x, y, 1, 27, PAL.tv2);
+  // tela (estúdio de jornal — o âncora é drawAdvCameo, desenhado por cima)
+  frect(x+2, y+1.5, 36, 18.5, '#10131c');
+  frect(x+2.5, y+2, 35, 17.5, '#284a78');
+  frect(x+2.5, y+2, 35, 5, '#325a8c');
+  // globo do cenário
+  frect(x+27, y+4, 7, 6, '#3a6aa0');
+  frect(x+28, y+5, 5, 4, '#4a82c0');
+  frect(x+29, y+5.5, 2, 1, '#6fdf76');
+  frect(x+31.5, y+7, 1.5, 1.5, '#6fdf76');
+  // bancada do âncora
+  frect(x+2.5, y+13, 35, 2.5, '#1a3258');
+  frect(x+2.5, y+13, 35, 0.5, '#2a4a78');
+  // selo AO VIVO (o ponto vermelho pisca dinamicamente)
+  frect(x+3.5, y+3, 8, 3, '#cc2030');
+  frect(x+6.5, y+3.75, 4.5, 1.5, '#ffffff');
+  // tarja de breaking news
+  frect(x+2.5, y+15.5, 35, 4, '#aa1822');
+  frect(x+2.5, y+15.5, 35, 0.5, '#d83040');
+  frect(x+4, y+17, 12, 1, '#ffffff');
+  frect(x+18, y+17, 8, 1, '#e8b0b8');
+  frect(x+28, y+17, 6, 1, '#e8b0b8');
+  // grade de ventilação
+  for(let i=0; i<5; i++){ frect(x+28+i*2, y+22.5, 1, 3, '#16161e'); }
+  fpx(x+4, y+23, '#5fc0ff'); // led
+  // rack de madeira
+  frect(x+14.5, y+27, 11, 3, PAL.out);
+  frect(x+15, y+27, 10, 2.5, PAL.desk3);
+  frect(x+7.5, y+29.5, 25, 3, PAL.out);
+  frect(x+8, y+30, 24, 2.5, PAL.desk1);
+  frect(x+8, y+30, 24, 0.5, '#b8854c');
 }
 
-// Door (street exit)
+// Porta (saída pra rua)
 function drawDoor(x,y){
-  rect(x,y,24,40,PAL.door);
-  rect(x,y,24,4,PAL.door2);
-  rect(x,y,3,40,PAL.door2);
-  rect(x+21,y,3,40,PAL.door2);
-  rect(x+18,y+18,3,3,PAL.gold); // handle
-  // exit sign above
-  rect(x+4,y-8,16,6,PAL.green);
-  rect(x+6,y-7,12,4,PAL.white);
+  // batente
+  frect(x-2.5, y-2.5, 29, 43, PAL.out);
+  frect(x-2, y-2, 28, 42, '#8a5a32');
+  frect(x-2, y-2, 28, 1, '#aa7a4c');
+  frect(x-2, y-2, 1, 42, '#aa7a4c');
+  frect(x+25, y-2, 1, 42, '#5e3a1c');
+  // folha da porta
+  frect(x, y, 24, 40, PAL.door);
+  frect(x, y, 24, 0.5, '#8a5430');
+  frect(x, y, 0.5, 40, '#8a5430');
+  // dois painéis rebaixados
+  for(const py0 of [y+3, y+21]){
+    outlineRect(x+3, py0, 18, 15, PAL.door2);
+    frect(x+3.5, py0+0.5, 17, 14, '#5e3418');
+    frect(x+4, py0+1, 16, 0.5, '#46260f');
+    frect(x+4, py0+1, 0.5, 13, '#46260f');
+    frect(x+4, py0+13.5, 16, 0.5, '#7a4624');
+  }
+  // maçaneta dourada
+  frect(x+18.5, y+17.5, 2.5, 6, '#8a6820');
+  frect(x+18.5, y+18.5, 2.5, 2.5, '#e8c84a');
+  fpx(x+19, y+19, '#fff8d8');
+  // placa SAÍDA acesa
+  frect(x+2.5, y-10.5, 19, 7.5, PAL.out);
+  frect(x+3, y-10, 18, 6.5, '#2a8a4a');
+  frect(x+3, y-10, 18, 0.75, '#4aba6a');
+  frect(x+4.5, y-8.5, 11, 3.5, '#dff6e4');
+  // seta →
+  frect(x+16.5, y-7.5, 3, 1.5, '#dff6e4');
+  frect(x+18.5, y-8.25, 1, 3, '#dff6e4');
+  // capacho
+  frect(x+1.5, y+40.5, 21, 4, PAL.out);
+  frect(x+2, y+41, 20, 3, '#8a6a3c');
+  frect(x+2, y+41, 20, 0.5, '#a8854c');
+  frect(x+4, y+42, 16, 1, '#6e5430');
 }
 
-// Phone for newspaper interview
+// Celular sobre a mesinha (redes sociais)
 function drawPhone(x,y){
-  rect(x,y+2,12,16,PAL.phone1);
-  rect(x+1,y+3,10,14,PAL.phone2);
-  rect(x+2,y+4,8,8,PAL.screen);
-  rect(x+4,y+14,4,1,'#fff');
+  frect(x-0.5, y+1.5, 13, 17, PAL.out);
+  frect(x, y+2, 12, 16, PAL.phone1);
+  frect(x+0.5, y+2.5, 11, 0.75, PAL.phone2);
+  // tela com apps
+  frect(x+1, y+3.5, 10, 12, '#16324e');
+  frect(x+1, y+3.5, 10, 1, '#0c2238');   // status bar
+  fpx(x+9.5, y+3.75, '#6fdf76');         // bateria
+  const appc = ['#e85a5a','#4a78c8','#4aa860','#e8c84a','#b06ad8','#3ac8c8'];
+  for(let j=0; j<2; j++){
+    for(let i=0; i<3; i++){
+      frect(x+2+i*3, y+5.5+j*3, 2, 2, appc[j*3+i]);
+      fpx(x+2+i*3, y+5.5+j*3, shadeColor(appc[j*3+i], 40));
+    }
+  }
+  // notificação piscando seria dinâmica; badge fixo
+  fpx(x+9, y+5, '#ff4040');
+  frect(x+4, y+16.5, 4, 0.5, '#888');    // home bar
+  frect(x+1.5, y+4, 1, 8, 'rgba(255,255,255,0.12)'); // reflexo
 }
 
-// Plant
+// Mesinha do celular
+function drawPhoneTable(x,y){
+  frect(x-0.5, y-0.5, 23, 19, PAL.out);
+  frect(x, y, 22, 2.5, PAL.desk2);
+  frect(x, y, 22, 0.75, '#b8854c');
+  frect(x+0.5, y+2.5, 2, 15, PAL.desk3);
+  frect(x+19.5, y+2.5, 2, 15, PAL.desk3);
+  // prateleira baixa com revista
+  frect(x+2.5, y+10, 17, 1.5, PAL.desk1);
+  frect(x+5, y+8.5, 7, 1.5, '#cf3a3a');
+  frect(x+5.5, y+8.75, 3, 0.75, '#fff');
+}
+
+// Planta
 function drawPlant(x,y){
-  rect(x,y+10,10,6,PAL.plantPot);
-  rect(x,y+10,10,2,'#a87445');
-  rect(x+2,y,6,10,PAL.plant1);
-  rect(x,y+2,10,8,PAL.plant1);
-  rect(x+1,y+1,2,2,PAL.plant2);
-  rect(x+7,y+3,2,2,PAL.plant2);
-  rect(x+3,y+6,3,3,PAL.plant2);
+  // vaso com borda
+  frect(x-0.5, y+9, 11, 7.5, PAL.out);
+  frect(x, y+9.5, 10, 6.5, PAL.plantPot);
+  frect(x, y+9.5, 10, 1.5, '#c0784a');
+  frect(x+1, y+15, 8, 1, '#7a4222');
+  frect(x+1, y+11.5, 1, 3.5, '#c0784a'); // brilho lateral
+  // terra
+  frect(x+1.5, y+9, 7, 1, '#3a2410');
+  // folhagem em camadas
+  frect(x+1, y+2, 8, 8, PAL.plant1);
+  frect(x, y+3.5, 10, 5, PAL.plant1);
+  frect(x+2, y+0.5, 6, 3, PAL.plant1);
+  // tufos médios
+  frect(x+1.5, y+1.5, 3, 2.5, PAL.plant2);
+  frect(x+5.5, y+3, 3.5, 3, PAL.plant2);
+  frect(x+1, y+5.5, 3, 3, PAL.plant2);
+  frect(x+4, y+6.5, 3, 2.5, PAL.plant2);
+  // brilhos
+  frect(x+2.5, y+1, 1.5, 1, PAL.plant3);
+  fpx(x+6.5, y+3.5, PAL.plant3);
+  fpx(x+2, y+6, PAL.plant3);
+  fpx(x+5, y+7, PAL.plant3);
+  // talos
+  frect(x+4.5, y+7.5, 0.5, 2, '#2a5230');
+  frect(x+3, y+8, 0.5, 1.5, '#2a5230');
+  frect(x+6.5, y+8, 0.5, 1.5, '#2a5230');
+  // folha caída na borda
+  frect(x+8.5, y+9, 2, 1, PAL.plant2);
 }
 
-// Bulletin board (jornal/entrevista nesta versão visual)
+// Mural de cortiça (imprensa/jurídico) — estilo investigação
 function drawBoard(x,y){
-  rect(x,y,38,24,'#5a4070');
-  rect(x+2,y+2,34,20,'#dab66b');
-  // notes
-  rect(x+4,y+4,8,8,PAL.paper);
-  rect(x+14,y+5,9,7,'#f6c453');
-  rect(x+24,y+4,10,8,'#7dd87d');
-  rect(x+5,y+14,12,5,'#ff9bd2');
-  rect(x+18,y+14,15,5,'#a8d8ff');
+  frect(x-0.5, y-0.5, 39, 25, PAL.out);
+  frect(x, y, 38, 24, '#6e4a2a');
+  frect(x, y, 38, 0.75, '#8a6038');
+  // cortiça
+  frect(x+1.5, y+1.5, 35, 21, '#c89a5e');
+  dith(x+1.5, y+1.5, 35, 21, 'rgba(168,122,68,0.5)');
+  // recortes pendurados
+  // nota branca com texto
+  frect(x+3.5, y+3.5, 8.5, 8, PAL.paper);
+  frect(x+4, y+5, 7, 0.5, '#7a7264');
+  frect(x+4, y+6.5, 6, 0.5, '#9a9284');
+  frect(x+4, y+8, 6.5, 0.5, '#9a9284');
+  frect(x+4, y+9.5, 4, 0.5, '#9a9284');
+  // polaroid (foto do adversário)
+  frect(x+14, y+3, 8, 8.5, '#f0ece0');
+  frect(x+15, y+4, 6, 5.5, '#3a5a78');
+  frect(x+16.5, y+5, 3, 2.5, '#e8b88a'); // rostinho
+  frect(x+16.5, y+5, 3, 1, '#2a2a32');
+  // post-it dourado
+  frect(x+24.5, y+4, 9, 7.5, '#f0d060');
+  frect(x+24.5, y+4, 9, 0.5, '#fff0a0');
+  frect(x+25.5, y+6, 7, 0.5, '#a08830');
+  frect(x+25.5, y+7.5, 6, 0.5, '#a08830');
+  // gráfico verde
+  frect(x+4.5, y+14, 12.5, 7, '#dff0e0');
+  for(let i=0; i<6; i++){ fpx(x+6+i*1.5, y+19-i*0.5, '#2a8a4a'); }
+  frect(x+5.5, y+19.5, 10, 0.5, '#88a890');
+  // mapa azul
+  frect(x+19.5, y+14.5, 14, 6.5, '#b8d8f0');
+  frect(x+21, y+15.5, 4, 2.5, '#88b8e0');
+  frect(x+27, y+17, 4.5, 3, '#88b8e0');
+  fpx(x+24, y+18, '#cf3a3a'); // alfinete no mapa
+  // barbante vermelho ligando as pistas (estilo investigação)
+  ctx.fillStyle = '#d04040';
+  const ln = (x1,y1,x2,y2)=>{
+    const steps = Math.max(Math.abs(x2-x1), Math.abs(y2-y1)) * 2;
+    for(let i=0; i<=steps; i++){
+      ctx.fillRect(x1+(x2-x1)*i/steps, y1+(y2-y1)*i/steps, 0.5, 0.5);
+    }
+  };
+  ln(x+8, y+4, x+18, y+3.5);
+  ln(x+18, y+3.5, x+29, y+4.5);
+  ln(x+18, y+3.5, x+10, y+14.5);
+  ln(x+29, y+4.5, x+24, y+18);
+  // alfinetes
+  for(const [px0,py0,pc] of [[x+8,y+4,'#cf3a3a'],[x+18,y+3.5,'#e8c84a'],[x+29,y+4.5,'#4a78c8'],[x+10,y+14.5,'#cf3a3a'],[x+24,y+18,'#2a8a4a']]){
+    frect(px0-0.5, py0-0.5, 1.5, 1.5, pc);
+    fpx(px0-0.5, py0-0.5, '#fff');
+  }
 }
 
-// Microphone (debate)
+// Microfone do debate (D10)
 function drawMic(x,y){
-  // pedestal
-  rect(x+2,y+18,4,8,'#444');
-  rect(x,y+24,8,2,'#444');
-  // mic body
-  rect(x+1,y+10,6,8,'#333');
-  rect(x+2,y+10,4,2,'#aaa');
-  rect(x+2,y+12,4,2,'#666');
-  rect(x+2,y+14,4,2,'#aaa');
-  // sparkle (only when debate active)
+  // base redonda
+  frect(x+0.5, y+24.5, 8, 2, PAL.out);
+  frect(x+1, y+25, 7, 1, '#2e2e3a');
+  frect(x+1.5, y+24.5, 6, 0.5, '#50505e');
+  // haste
+  frect(x+3.5, y+12, 1.5, 13, PAL.out);
+  frect(x+4, y+12, 0.5, 13, '#6a6a7a');
+  // braçadeira
+  frect(x+3, y+17, 2.5, 1, '#8a8a96');
+  // corpo do microfone
+  frect(x+2, y+5.5, 5, 8, PAL.out);
+  frect(x+2.5, y+9, 4, 4, '#3a3a46');
+  frect(x+2.5, y+9, 4, 0.5, '#5a5a6a');
+  frect(x+2.5, y+12, 4, 0.75, '#cf3a3a'); // anel vermelho
+  // globo com grade
+  frect(x+2.5, y+6, 4, 3, '#9a9aa8');
+  dith(x+2.5, y+6, 4, 3, '#6a6a7a');
+  frect(x+2.5, y+6, 4, 0.5, '#c8c8d4');
+  // cabo serpenteando
+  fpx(x+1, y+25.5, '#222'); fpx(x+0.5, y+26, '#222'); fpx(x-0.5, y+26.5, '#222');
+  fpx(x-1.5, y+26, '#222'); fpx(x-2.5, y+25.5, '#222');
+}
+
+// ===== CENÁRIO ESTÁTICO CACHEADO =====
+// Tudo que não muda é desenhado uma vez num canvas offscreen e blitado
+// por frame — mais detalhe E mais rápido que redesenhar móvel por móvel.
+let bgCanvas = null, bgCtx = null, bgDirty = true;
+function renderStaticBg(){
+  if(!bgCanvas){
+    bgCanvas = document.createElement('canvas');
+    bgCanvas.width = W*2; bgCanvas.height = H*2;
+    bgCtx = bgCanvas.getContext('2d');
+    bgCtx.scale(2,2);
+    bgCtx.imageSmoothingEnabled = false;
+  }
+  const main = ctx; ctx = bgCtx;   // redireciona TODOS os helpers pro offscreen
+  drawWall();
+  drawFloor();
+  dropShadow(240, 100, 40);
+  drawTV(240, 70);
+  drawBoard(195, 32);
+  dropShadow(14, 122, 52);
+  drawDesk(14, 92);
+  dropShadow(110, 168, 38);
+  drawMeetingTable(110, 150);
+  dropShadow(170, 174, 44);
+  drawBed(170, 148);
+  drawDoor(285, 130);
+  dropShadow(78, 48, 10);
+  drawPlant(78, 32);
+  dropShadow(78, 168, 10);
+  drawPlant(78, 152);
+  dropShadow(258, 168, 10);
+  drawPlant(258, 152);
+  dropShadow(45, 172, 22);
+  drawPhoneTable(45, 154);
+  drawPhone(50, 152);
+  ctx = main;
+  bgDirty = false;
+}
+function blitBg(){
+  if(bgDirty) renderStaticBg();
+  ctx.drawImage(bgCanvas, 0, 0, W, H);
+}
+
+// Props animados por cima do fundo estático
+function drawDynamicProps(){
+  drawWindowPanes(bobT);
+  // led "AO VIVO" da TV piscando
+  if(Math.sin(bobT*2.2) > 0) frect(244.5, 73.75, 1.5, 1.5, '#ff5050');
+  // vapor do café na mesa de trabalho (caneca em ~18,95)
+  for(let i=0; i<3; i++){
+    const ph = (bobT*0.9 + i*2.1) % 6;
+    if(ph < 4.5){
+      const a = 0.5 * (1 - ph/4.5);
+      const sx = 18 + Math.sin(bobT*1.3 + i*2)*0.5;
+      ctx.fillStyle = `rgba(232,228,220,${a})`;
+      ctx.fillRect(sx, 93.5 - ph, 1, 1);
+    }
+  }
+  // 💤 piscante da cama (movido de drawBed — a cama agora é estática)
+  if(state && state.running && state.day < 10 && !state.fxLocked){
+    if(Math.sin(bobT*1.4) > 0){
+      txt('💤', 188, 142, '#6ec0ff', 8);
+    }
+  }
 }
 
 // Paletas pra customização do avatar
@@ -3917,253 +4335,10 @@ function getCandidateColors(){
   };
 }
 
-// Desenha cabelo extra (estilos novos) — recebe `rect` callback pra reuso
-// entre drawPlayer (jogo) e drawPlayerPreview (preview da criação)
-function drawExtraHair(r, x, y, oy, c){
-  const s = c.style;
-  if(s === 'mohawk'){
-    r(x+5, y-1+oy, 2, 5, c.hair);
-    r(x+5, y-2+oy, 2, 1, c.hair);
-    r(x+4, y+1+oy, 1, 2, c.hair2);
-    r(x+7, y+1+oy, 1, 2, c.hair2);
-  } else if(s === 'mullet'){
-    r(x+2, y+1+oy, 8, 3, c.hair);
-    r(x+1, y+2+oy, 1, 3, c.hair);
-    r(x+10, y+2+oy, 1, 3, c.hair2);
-    r(x+3, y+9+oy, 6, 3, c.hair);
-    r(x+4, y+12+oy, 4, 2, c.hair2);
-  } else if(s === 'spiky'){
-    r(x+2, y+2+oy, 8, 2, c.hair);
-    r(x+2, y-1+oy, 1, 3, c.hair);
-    r(x+4, y-1+oy, 1, 3, c.hair);
-    r(x+6, y-1+oy, 1, 3, c.hair);
-    r(x+8, y-1+oy, 1, 3, c.hair);
-    r(x+10, y-1+oy, 1, 3, c.hair);
-  } else if(s === 'pigtails'){
-    r(x+2, y+1+oy, 8, 3, c.hair);
-    r(x+0, y+3+oy, 2, 5, c.hair);
-    r(x+10, y+3+oy, 2, 5, c.hair2);
-    r(x-1, y+5+oy, 1, 3, c.hair);
-    r(x+12, y+5+oy, 1, 3, c.hair2);
-  } else if(s === 'topknot'){
-    r(x+2, y+1+oy, 8, 3, c.hair);
-    r(x+4, y-2+oy, 4, 3, c.hair);
-    r(x+5, y-3+oy, 2, 1, c.hair);
-  } else if(s === 'fade'){
-    r(x+3, y+1+oy, 6, 2, c.hair);
-    r(x+2, y+2+oy, 1, 1, c.hair2);
-    r(x+9, y+2+oy, 1, 1, c.hair2);
-  } else if(s === 'dreads'){
-    r(x+2, y+1+oy, 8, 3, c.hair);
-    r(x+1, y+3+oy, 1, 5, c.hair);
-    r(x+3, y+4+oy, 1, 5, c.hair);
-    r(x+6, y+4+oy, 1, 5, c.hair);
-    r(x+9, y+4+oy, 1, 5, c.hair);
-    r(x+10, y+3+oy, 1, 5, c.hair2);
-  } else if(s === 'ponytail'){
-    r(x+2, y+1+oy, 8, 3, c.hair);
-    r(x+1, y+2+oy, 1, 3, c.hair);
-    r(x+10, y+2+oy, 1, 3, c.hair2);
-    r(x+11, y+4+oy, 2, 6, c.hair2);
-    r(x+12, y+9+oy, 1, 2, c.hair2);
-  }
-}
-
-// Desenha acessório (chapéu, óculos, item segurado) — `rect` callback pra reuso
-function drawAccessoryPx(r, x, y, oy, c, facing){
-  const acc = c.accessory || 'none';
-  if(acc === 'none') return;
-  facing = facing || 'down';
-  if(acc === 'glasses'){
-    r(x+3, y+5+oy, 2, 1, '#1a1a1a');
-    r(x+5, y+5+oy, 1, 1, '#1a1a1a');
-    r(x+6, y+5+oy, 2, 1, '#1a1a1a');
-    r(x+3, y+4+oy, 2, 1, '#1a1a1a');
-    r(x+6, y+4+oy, 2, 1, '#1a1a1a');
-  } else if(acc === 'sunglasses'){
-    r(x+3, y+4+oy, 6, 2, '#000');
-    r(x+5, y+4+oy, 1, 1, '#3a4a5a');
-  } else if(acc === 'cap'){
-    r(x+1, y+1+oy, 10, 2, '#cf3a3a');
-    r(x+1, y+3+oy, 4, 1, '#cf3a3a');
-    r(x+0, y+4+oy, 7, 1, '#1a1a1a');
-    r(x+5, y+2+oy, 3, 1, '#fff');
-  } else if(acc === 'cowboyhat'){
-    r(x-1, y+2+oy, 14, 1, '#7a4020');
-    r(x+2, y+0+oy, 8, 2, '#7a4020');
-    r(x+2, y-1+oy, 8, 1, '#7a4020');
-    r(x+3, y+1+oy, 6, 1, '#5a3010');
-  } else if(acc === 'crown'){
-    r(x+1, y+1+oy, 10, 1, '#f6c453');
-    r(x+1, y+0+oy, 1, 1, '#f6c453');
-    r(x+5, y+0+oy, 2, 1, '#f6c453');
-    r(x+10, y+0+oy, 1, 1, '#f6c453');
-    r(x+3, y+0+oy, 1, 1, '#cf3a3a');
-    r(x+8, y+0+oy, 1, 1, '#3a90c0');
-  } else if(acc === 'headphones'){
-    r(x+1, y+0+oy, 10, 1, '#1a1a1a');
-    r(x+0, y+1+oy, 1, 4, '#1a1a1a');
-    r(x+11, y+1+oy, 1, 4, '#1a1a1a');
-    r(x-1, y+4+oy, 2, 4, '#cf3a3a');
-    r(x+11, y+4+oy, 2, 4, '#cf3a3a');
-  } else if(acc === 'mask'){
-    r(x+2, y+6+oy, 8, 3, '#fff');
-    r(x+2, y+6+oy, 8, 1, '#cce0ee');
-    r(x+2, y+7+oy, 1, 2, '#cce0ee');
-    r(x+9, y+7+oy, 1, 2, '#cce0ee');
-  } else if(acc === 'mustache'){
-    r(x+4, y+6+oy, 4, 1, '#3a2010');
-    r(x+3, y+6+oy, 1, 1, '#3a2010');
-    r(x+8, y+6+oy, 1, 1, '#3a2010');
-  } else if(acc === 'beard'){
-    r(x+3, y+8+oy, 6, 1, '#3a2010');
-    r(x+2, y+9+oy, 8, 1, '#3a2010');
-    r(x+3, y+10+oy, 6, 1, '#3a2010');
-  } else if(acc === 'surfboard'){
-    r(x+13, y+1+oy, 2, 18, '#f6c453');
-    r(x+13, y+1+oy, 2, 2, '#cf3a3a');
-    r(x+13, y+9+oy, 2, 1, '#cf3a3a');
-    r(x+13, y+17+oy, 2, 2, '#cf3a3a');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'briefcase'){
-    r(x+12, y+11+oy, 5, 6, '#5a3a20');
-    r(x+13, y+10+oy, 3, 1, '#5a3a20');
-    r(x+12, y+13+oy, 5, 1, '#3a2010');
-    r(x+14, y+12+oy, 1, 1, '#f6c453');
-    r(x+12, y+10+oy, 1, 2, c.skin);
-  } else if(acc === 'microphone'){
-    r(x+12, y+7+oy, 2, 3, '#1a1a1a');
-    r(x+13, y+10+oy, 1, 4, '#5a5a5a');
-    r(x+12, y+8+oy, 1, 1, '#cf3a3a');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'megaphone'){
-    r(x+12, y+10+oy, 2, 3, '#cf3a3a');
-    r(x+14, y+8+oy, 2, 7, '#cf3a3a');
-    r(x+13, y+13+oy, 1, 1, '#1a1a1a');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'flag'){
-    r(x+12, y+0+oy, 1, 16, '#3a2010');
-    r(x+13, y+0+oy, 5, 5, c.accent || '#cf3a3a');
-    r(x+13, y+2+oy, 5, 1, '#f6c453');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'umbrella'){
-    r(x+12, y+4+oy, 1, 12, '#5a3a20');
-    r(x+10, y+3+oy, 5, 1, '#3a4a5a');
-    r(x+11, y+2+oy, 3, 1, '#3a4a5a');
-    r(x+12, y+1+oy, 1, 1, '#3a4a5a');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'skateboard'){
-    r(x+11, y+18+oy, 6, 1, '#7a4020');
-    r(x+11, y+19+oy, 1, 1, '#5a5a5a');
-    r(x+16, y+19+oy, 1, 1, '#5a5a5a');
-    r(x+12, y+17+oy, 4, 1, '#cf3a3a');
-  } else if(acc === 'guitar'){
-    r(x+12, y+5+oy, 4, 5, '#7a4020');
-    r(x+13, y+10+oy, 2, 6, '#7a4020');
-    r(x+13, y+7+oy, 2, 1, '#1a1a1a');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'phone'){
-    r(x+12, y+10+oy, 2, 3, '#1a1a1a');
-    r(x+12, y+10+oy, 2, 1, '#3a90c0');
-    r(x+12, y+13+oy, 1, 2, c.skin);
-  } else if(acc === 'dog'){
-    r(x+12, y+16+oy, 4, 3, '#a07050');
-    r(x+15, y+15+oy, 2, 2, '#a07050');
-    r(x+12, y+19+oy, 1, 1, '#a07050');
-    r(x+15, y+16+oy, 1, 1, '#000');
-    r(x+11, y+17+oy, 1, 1, '#a07050');
-  }
-}
-
-// Player avatar 12x20-ish, with direction + walk frames
-function drawPlayer(x,y,opts){
-  opts = opts || {};
-  const facing = opts.facing || 'down';
-  const frame = opts.frame || 0;
-  const moving = !!opts.moving;
-  const bob = moving ? (frame===1?-1:frame===3?-1:0) : (Math.floor(opts.t||0)%2===0?0:-1);
-  const c = opts.colors || getCandidateColors();
-  // shadow
-  ctx.fillStyle = 'rgba(0,0,0,0.4)';
-  ctx.fillRect(x-1, y+19, 14, 2);
-  ctx.fillRect(x, y+20, 12, 1);
-  const oy = bob;
-  const legOffL = (moving && frame===1) ? 1 : 0;
-  const legOffR = (moving && frame===3) ? 1 : 0;
-  // pants
-  rect(x+2, y+14+oy-legOffL, 3, 5, PAL.player4);
-  rect(x+7, y+14+oy-legOffR, 3, 5, PAL.player4);
-  rect(x+2, y+18+oy-legOffL, 3, 1, PAL.shoes);
-  rect(x+7, y+18+oy-legOffR, 3, 1, PAL.shoes);
-  // shirt
-  rect(x+1, y+8+oy, 10, 7, c.shirt);
-  rect(x+1, y+8+oy, 10, 2, shadeColor(c.shirt, -25));
-  // collar
-  rect(x+5, y+8+oy, 2, 2, c.skin);
-  // arms
-  const armOffL = (moving && frame===1) ? -1 : 0;
-  const armOffR = (moving && frame===3) ? -1 : 0;
-  rect(x, y+9+oy+armOffL, 1, 5, c.shirt);
-  rect(x+11, y+9+oy+armOffR, 1, 5, c.shirt);
-  rect(x, y+13+oy+armOffL, 1, 2, c.skin);
-  rect(x+11, y+13+oy+armOffR, 1, 2, c.skin);
-  // head
-  rect(x+2, y+2+oy, 8, 7, c.skin);
-  // cabelo por style
-  const style = c.style || 'short';
-  if(style === 'short'){
-    rect(x+2, y+1+oy, 8, 3, c.hair);
-    rect(x+1, y+2+oy, 1, 3, c.hair);
-    rect(x+10, y+2+oy, 1, 3, c.hair2);
-    rect(x+9, y+1+oy, 1, 2, c.hair2);
-  } else if(style === 'long'){
-    rect(x+2, y+1+oy, 8, 4, c.hair);
-    rect(x+1, y+2+oy, 1, 8, c.hair);
-    rect(x+10, y+2+oy, 1, 8, c.hair2);
-    rect(x+2, y+9+oy, 1, 2, c.hair);
-    rect(x+9, y+9+oy, 1, 2, c.hair2);
-  } else if(style === 'curly'){
-    rect(x+1, y+1+oy, 10, 4, c.hair);
-    rect(x+2, y+0+oy, 2, 1, c.hair);
-    rect(x+5, y+0+oy, 2, 1, c.hair);
-    rect(x+8, y+0+oy, 2, 1, c.hair);
-    rect(x+0, y+3+oy, 1, 2, c.hair);
-    rect(x+11, y+3+oy, 1, 2, c.hair2);
-  } else if(style === 'afro'){
-    rect(x+1, y+0+oy, 10, 3, c.hair);
-    rect(x+0, y+1+oy, 1, 4, c.hair);
-    rect(x+11, y+1+oy, 1, 4, c.hair2);
-    rect(x+2, y+2+oy, 8, 1, c.hair2);
-  } else if(style === 'bun'){
-    rect(x+2, y+1+oy, 8, 3, c.hair);
-    rect(x+4, y-1+oy, 4, 3, c.hair);
-    rect(x+5, y-2+oy, 2, 1, c.hair);
-  } else if(style === 'bald'){
-    // sem cabelo, talvez sombra topo
-    rect(x+3, y+2+oy, 6, 1, shadeColor(c.skin, -15));
-  } else {
-    // estilos extras (mohawk, mullet, spiky, pigtails, topknot, fade, dreads, ponytail)
-    drawExtraHair(rect, x, y, oy, c);
-  }
-  // face
-  if(facing==='down'){
-    rect(x+4, y+5+oy, 1, 1, '#000');
-    rect(x+7, y+5+oy, 1, 1, '#000');
-    rect(x+5, y+7+oy, 2, 1, '#8a3a3a');
-  } else if(facing==='up'){
-    rect(x+2, y+1+oy, 8, 5, c.hair);
-  } else if(facing==='left'){
-    rect(x+3, y+5+oy, 1, 1, '#000');
-    rect(x+3, y+7+oy, 2, 1, '#8a3a3a');
-    rect(x+9, y+4+oy, 1, 4, c.hair);
-  } else if(facing==='right'){
-    rect(x+8, y+5+oy, 1, 1, '#000');
-    rect(x+7, y+7+oy, 2, 1, '#8a3a3a');
-    rect(x+2, y+4+oy, 1, 4, c.hair);
-  }
-  // acessório por cima de tudo
-  drawAccessoryPx(rect, x, y, oy, c, facing);
-}
+// ===== PERSONAGENS — CORPO DETALHADO ESTILO SNES =====
+// Sprite ~24x40 pixels físicos (12x20 lógicos com passo 0.5): contorno
+// escuro, 3 tons de sombreamento, olhos com branco/pupila, mãos, cinto,
+// sapatos e ciclo de caminhada com passada e balanço de braço.
 
 // Util: escurece/clareia uma cor hex
 function shadeColor(hex, amt){
@@ -4175,14 +4350,543 @@ function shadeColor(hex, amt){
   return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
 }
 
-// Adversary cameo (different colors, behind window or on TV?)
+// Expande o look básico (style/hair/skin/shirt) pra paleta completa de tons
+function extendColors(c){
+  c = c || {};
+  if(c._ext) return c;
+  const hair = c.hair || '#b87333', skin = c.skin || '#f3c9a0', shirt = c.shirt || '#3c7dc0';
+  const pants = c.pants || '#2e2a3a', shoe = c.shoe || '#4a2a14';
+  return {
+    _ext: true,
+    style: c.style || 'short', accessory: c.accessory || 'none', accent: c.accent || '#cf3a3a',
+    hair, hair2: c.hair2 || shadeColor(hair, -35), hairHi: shadeColor(hair, 26),
+    skin, skinSh: shadeColor(skin, -28), skinHi: shadeColor(skin, 16),
+    shirt, shirtSh: shadeColor(shirt, -34), shirtHi: shadeColor(shirt, 24),
+    pants, pantsSh: shadeColor(pants, -16),
+    shoe, shoeHi: shadeColor(shoe, 26)
+  };
+}
+
+// Corpo completo. r = callback rect(x,y,w,h,cor) — frect no jogo, ctx próprio
+// nos previews. o = { facing, frame, moving, oy, c }
+function drawBodySNES(r, x, y, o){
+  o = o || {};
+  const facing = o.facing || 'down';
+  const frame = o.frame || 0;
+  const moving = !!o.moving;
+  const oy = o.oy || 0;
+  const c = extendColors(o.c);
+  const OUT = PAL.out;
+
+  // sombra no chão (não acompanha o bob)
+  r(x+1.5, y+19, 9, 0.5, 'rgba(0,0,0,0.18)');
+  r(x+1, y+19.5, 10, 1, 'rgba(0,0,0,0.3)');
+  r(x+2, y+20.5, 8, 0.5, 'rgba(0,0,0,0.16)');
+
+  if(facing === 'down' || facing === 'up'){
+    const legL = (moving && frame===1) ? 0.5 : 0;
+    const legR = (moving && frame===3) ? 0.5 : 0;
+    const armL = (moving && frame===1) ? -0.5 : (moving && frame===3) ? 0.5 : 0;
+    const armR = -armL;
+    // ---- pernas ----
+    // esquerda
+    r(x+2, y+14+oy-legL, 3.5, 5.5, OUT);
+    r(x+2.5, y+14.5+oy-legL, 2.5, 3.5, c.pants);
+    r(x+4.5, y+14.5+oy-legL, 0.5, 3.5, c.pantsSh);
+    r(x+2.5, y+18+oy-legL, 2.5, 1, c.shoe);
+    r(x+2.5, y+18+oy-legL, 2.5, 0.5, c.shoeHi);
+    // direita
+    r(x+6.5, y+14+oy-legR, 3.5, 5.5, OUT);
+    r(x+7, y+14.5+oy-legR, 2.5, 3.5, c.pants);
+    r(x+7, y+14.5+oy-legR, 0.5, 3.5, c.pantsSh);
+    r(x+7, y+18+oy-legR, 2.5, 1, c.shoe);
+    r(x+7, y+18+oy-legR, 2.5, 0.5, c.shoeHi);
+    // ---- tronco ----
+    r(x+1.5, y+8.5+oy, 9, 6.5, OUT);
+    r(x+2, y+9+oy, 8, 5.5, c.shirt);
+    r(x+2, y+9+oy, 8, 0.5, c.shirtHi);          // ombros iluminados
+    r(x+8.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // sombra lateral
+    r(x+2, y+13.5+oy, 8, 1, c.shirtSh);         // barra da camisa
+    if(facing === 'down'){
+      r(x+5.5, y+9+oy, 1, 1, c.skin);           // gola V
+      r(x+4.5, y+9+oy, 1, 0.5, c.shirtHi);      // colarinho
+      r(x+6.5, y+9+oy, 1, 0.5, c.shirtSh);
+      r(x+6, y+10+oy, 0.5, 3.5, c.shirtSh);     // botões
+      r(x+6, y+10.5+oy, 0.5, 0.5, '#f0f0f0');
+      r(x+6, y+12+oy, 0.5, 0.5, '#f0f0f0');
+    } else {
+      r(x+4, y+9+oy, 4, 0.5, c.shirtSh);        // gola (costas)
+      r(x+6, y+10+oy, 0.5, 4, c.shirtSh);       // costura central
+    }
+    // cinto + fivela
+    r(x+2, y+14.5+oy, 8, 0.5, '#2a1a10');
+    if(facing === 'down') r(x+5.5, y+14.5+oy, 1, 0.5, '#e8c84a');
+    // ---- braços ----
+    r(x+0.5, y+9+oy+armL, 2, 6, OUT);
+    r(x+1, y+9.5+oy+armL, 1, 3.5, facing==='down' ? c.shirt : c.shirtSh);
+    r(x+1, y+9.5+oy+armL, 1, 0.5, c.shirtHi);
+    r(x+1, y+13+oy+armL, 1, 1.5, c.skin);
+    r(x+1, y+13+oy+armL, 1, 0.5, c.skinSh);
+    r(x+9.5, y+9+oy+armR, 2, 6, OUT);
+    r(x+10, y+9.5+oy+armR, 1, 3.5, c.shirtSh);
+    r(x+10, y+13+oy+armR, 1, 1.5, c.skin);
+    r(x+10, y+13+oy+armR, 1, 0.5, c.skinSh);
+    // ---- cabeça ----
+    r(x+2, y+0.5+oy, 8, 8.5, OUT);
+    r(x+2.5, y+1+oy, 7, 7.5, c.skin);
+    r(x+2.5, y+7.5+oy, 7, 1, c.skinSh);         // queixo
+    // orelhas
+    r(x+2, y+4.5+oy, 0.5, 1.5, c.skin);
+    r(x+9.5, y+4.5+oy, 0.5, 1.5, c.skin);
+    if(facing === 'down'){
+      // olhos com branco + pupila
+      r(x+3.5, y+4+oy, 1.5, 1.5, '#ffffff');
+      r(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
+      r(x+4, y+4.5+oy, 0.5, 1, '#241c2e');
+      r(x+7.5, y+4.5+oy, 0.5, 1, '#241c2e');
+      // sobrancelhas
+      r(x+3.5, y+3+oy, 1.5, 0.5, c.hair2);
+      r(x+7, y+3+oy, 1.5, 0.5, c.hair2);
+      // nariz + boca
+      r(x+5.5, y+5.5+oy, 1, 0.5, c.skinSh);
+      r(x+5, y+6.5+oy, 2, 0.5, '#9c4444');
+    }
+    drawHairSNES(r, x, y, oy, c, facing);
+  } else {
+    // ---- PERFIL (right; left = espelhado) ----
+    const right = facing === 'right';
+    const ax = x + 6; // eixo de espelhamento
+    const R = right ? r : (xx,yy,ww,hh,cc)=> r(2*ax - xx - ww, yy, ww, hh, cc);
+    const sprd = moving ? (frame===1 ? 1 : frame===3 ? -1 : 0) : 0;
+    const armX = moving ? (frame===1 ? 1 : frame===3 ? -1 : 0) : 0;
+    // perna de trás (mais escura)
+    R(x+2.5-sprd, y+14+oy, 3.5, 5.5, OUT);
+    R(x+3-sprd, y+14.5+oy, 2.5, 3.5, c.pantsSh);
+    R(x+3-sprd, y+18+oy, 2.5, 1, shadeColor(c.shoe,-14));
+    // perna da frente
+    R(x+6+sprd, y+14+oy, 3.5, 5.5, OUT);
+    R(x+6.5+sprd, y+14.5+oy, 2.5, 3.5, c.pants);
+    R(x+8.5+sprd, y+14.5+oy, 0.5, 3.5, c.pantsSh);
+    R(x+6.5+sprd, y+18+oy, 3, 1, c.shoe);       // sapato com bico
+    R(x+6.5+sprd, y+18+oy, 3, 0.5, c.shoeHi);
+    // tronco
+    R(x+2, y+8.5+oy, 8.5, 6.5, OUT);
+    R(x+2.5, y+9+oy, 7.5, 5.5, c.shirt);
+    R(x+2.5, y+9+oy, 7.5, 0.5, c.shirtHi);
+    R(x+2.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // costas sombreadas
+    R(x+2.5, y+13.5+oy, 7.5, 1, c.shirtSh);
+    R(x+2.5, y+14.5+oy, 7.5, 0.5, '#2a1a10');   // cinto
+    // braço visível (balança pra frente/trás)
+    R(x+4.5+armX, y+9.5+oy, 2.5, 5.5, OUT);
+    R(x+5+armX, y+10+oy, 1.5, 3.5, c.shirt);
+    R(x+5+armX, y+10+oy, 1.5, 0.5, c.shirtHi);
+    R(x+5+armX, y+13.5+oy, 1.5, 1.5, c.skin);
+    R(x+5+armX, y+13.5+oy, 1.5, 0.5, c.skinSh);
+    // cabeça
+    R(x+2, y+0.5+oy, 8, 8.5, OUT);
+    R(x+2.5, y+1+oy, 7, 7.5, c.skin);
+    R(x+2.5, y+7.5+oy, 7, 1, c.skinSh);
+    // nariz saliente
+    R(x+9.5, y+5+oy, 1, 1.5, c.skin);
+    R(x+10, y+6+oy, 0.5, 0.5, c.skinSh);
+    // olho único
+    R(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
+    R(x+8, y+4.5+oy, 0.5, 1, '#241c2e');
+    R(x+7, y+3+oy, 1.5, 0.5, c.hair2);          // sobrancelha
+    // boca
+    R(x+8.5, y+6.5+oy, 1, 0.5, '#9c4444');
+    // orelha (lado de trás)
+    R(x+3.5, y+4.5+oy, 1, 2, c.skinSh);
+    R(x+4, y+5+oy, 0.5, 1, shadeColor(c.skin,-44));
+    drawHairSNES(R, x, y, oy, c, 'right');
+  }
+}
+
+// Cabelos — 14 estilos, com brilho, tom escuro e variações por direção
+function drawHairSNES(r, x, y, oy, c, facing){
+  const s = c.style;
+  const up = facing === 'up';
+  const side = facing === 'right';
+  // base traseira: na visão de costas o cabelo cobre a cabeça
+  if(up && s !== 'bald' && s !== 'mohawk' && s !== 'fade'){
+    r(x+2.5, y+1+oy, 7, 6.5, c.hair);
+    r(x+2.5, y+6.5+oy, 7, 1, c.hair2);
+    r(x+3, y+1.5+oy, 5, 0.5, c.hairHi);
+  }
+  if(s === 'short'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+2, y+3+oy, 1, 1.5, c.hair);
+    r(x+9, y+3+oy, 1, 1.5, c.hair2);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+2.5, y+2.5+oy, 7, 0.5, c.hair2);
+    if(side) r(x+2.5, y+3+oy, 1.5, 2.5, c.hair2); // nuca
+  } else if(s === 'long'){
+    r(x+2, y+0.5+oy, 8, 3, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+1.5, y+1.5+oy, 1, 9, c.hair);
+    r(x+9.5, y+1.5+oy, 1, 9, c.hair2);
+    r(x+1.5, y+9.5+oy, 1.5, 1.5, c.hair2);
+    r(x+9, y+9.5+oy, 2, 1.5, c.hair2);
+    if(up) r(x+2.5, y+7+oy, 7, 4.5, c.hair), r(x+2.5, y+10.5+oy, 7, 1, c.hair2);
+    if(side) r(x+2, y+2+oy, 3, 8.5, c.hair), r(x+2, y+9+oy, 3, 1.5, c.hair2);
+  } else if(s === 'curly'){
+    r(x+1.5, y+0.5+oy, 9, 3.5, c.hair);
+    r(x+2.5, y+0+oy, 1.5, 0.5, c.hair);
+    r(x+5, y+0+oy, 1.5, 0.5, c.hair);
+    r(x+7.5, y+0+oy, 1.5, 0.5, c.hair);
+    r(x+1.5, y+3.5+oy, 0.5, 2, c.hair);
+    r(x+10, y+3.5+oy, 0.5, 2, c.hair2);
+    // textura de cachos
+    r(x+3, y+1.5+oy, 0.5, 0.5, c.hair2); r(x+5.5, y+1+oy, 0.5, 0.5, c.hair2);
+    r(x+7.5, y+2+oy, 0.5, 0.5, c.hair2); r(x+4.5, y+2.5+oy, 0.5, 0.5, c.hair2);
+    r(x+3.5, y+0.5+oy, 1, 0.5, c.hairHi); r(x+6.5, y+0.5+oy, 1, 0.5, c.hairHi);
+    if(side) r(x+2, y+3+oy, 2, 3, c.hair), r(x+2.5, y+5+oy, 1, 1, c.hair2);
+  } else if(s === 'afro'){
+    r(x+1.5, y-0.5+oy, 9, 4.5, c.hair);
+    r(x+1, y+0.5+oy, 10, 3, c.hair);
+    r(x+1, y+2+oy, 0.5, 2.5, c.hair);
+    r(x+10.5, y+2+oy, 0.5, 2.5, c.hair2);
+    r(x+2.5, y+3.5+oy, 7, 0.5, c.hair2);
+    // textura
+    r(x+3, y+0.5+oy, 0.5, 0.5, c.hair2); r(x+6, y+0+oy, 0.5, 0.5, c.hair2);
+    r(x+8.5, y+1+oy, 0.5, 0.5, c.hair2); r(x+4.5, y+1.5+oy, 0.5, 0.5, c.hair2);
+    r(x+2.5, y-0.5+oy, 3, 0.5, c.hairHi);
+    if(side) r(x+1.5, y+3+oy, 2.5, 3, c.hair), r(x+2, y+5.5+oy, 1.5, 0.5, c.hair2);
+  } else if(s === 'bun'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+4.5, y-1.5+oy, 3, 2.5, c.hair);
+    r(x+5, y-2+oy, 2, 0.5, c.hair);
+    r(x+4.5, y+0.5+oy, 3, 0.5, c.hair2);
+    r(x+5, y-0.5+oy, 2, 0.5, '#caa23c');  // elástico
+    if(side) r(x+2.5, y+3+oy, 1.5, 2, c.hair2);
+  } else if(s === 'bald'){
+    r(x+3, y+1.5+oy, 2.5, 0.5, c.skinHi); // brilho da careca
+    r(x+2.5, y+1+oy, 7, 0.5, c.skinSh);
+    if(side) r(x+3, y+3.5+oy, 1, 1.5, c.skinSh);
+  } else if(s === 'mohawk'){
+    r(x+2.5, y+1+oy, 7, 1, c.skinSh);     // laterais raspadas
+    r(x+5, y-2+oy, 2, 4.5, c.hair);
+    r(x+5.5, y-2.5+oy, 1, 0.5, c.hair);
+    r(x+4.5, y+0.5+oy, 0.5, 1.5, c.hair2);
+    r(x+7, y+0.5+oy, 0.5, 1.5, c.hair2);
+    r(x+5.5, y-2+oy, 0.5, 3, c.hairHi);
+    if(up) r(x+5, y+2.5+oy, 2, 5, c.hair);
+    if(side) r(x+4, y-2+oy, 4, 2, c.hair), r(x+3, y+0.5+oy, 3, 1, c.hair);
+  } else if(s === 'mullet'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+1.5, y+5.5+oy, 1, 4.5, c.hair);
+    r(x+9.5, y+5.5+oy, 1, 4.5, c.hair2);
+    r(x+1.5, y+9+oy, 1, 1.5, c.hair2);
+    r(x+9.5, y+9+oy, 1, 1.5, c.hair2);
+    if(up) r(x+2.5, y+7+oy, 7, 4, c.hair), r(x+3, y+10+oy, 6, 1.5, c.hair2);
+    if(side) r(x+2, y+2.5+oy, 2.5, 7, c.hair), r(x+2, y+8+oy, 2.5, 1.5, c.hair2);
+  } else if(s === 'spiky'){
+    r(x+2, y+1+oy, 8, 2, c.hair);
+    r(x+2.5, y-0.5+oy, 1, 1.5, c.hair);
+    r(x+4.5, y-1+oy, 1, 2, c.hair);
+    r(x+6.5, y-0.5+oy, 1, 1.5, c.hair);
+    r(x+8.5, y-1+oy, 1, 2, c.hair);
+    r(x+3.5, y+0+oy, 1, 1, c.hairHi);
+    r(x+7.5, y+0+oy, 1, 1, c.hairHi);
+    r(x+2.5, y+2.5+oy, 7, 0.5, c.hair2);
+    if(side) r(x+2.5, y+3+oy, 1.5, 2, c.hair2);
+  } else if(s === 'pigtails'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+0.5, y+2.5+oy, 1.5, 4.5, c.hair);
+    r(x+10, y+2.5+oy, 1.5, 4.5, c.hair2);
+    r(x+0.5, y+6+oy, 1.5, 1, c.hair2);
+    r(x+0.5, y+2.5+oy, 1.5, 0.5, c.accent);  // lacinhos
+    r(x+10, y+2.5+oy, 1.5, 0.5, c.accent);
+    if(side) r(x+2, y+2.5+oy, 2, 4.5, c.hair), r(x+2, y+6+oy, 2, 1, c.hair2);
+  } else if(s === 'topknot'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+4.5, y-2.5+oy, 3, 3, c.hair);
+    r(x+5, y-3+oy, 2, 0.5, c.hair);
+    r(x+4.5, y-0.5+oy, 3, 0.5, '#caa23c');
+    r(x+5, y-2.5+oy, 1, 1, c.hairHi);
+    r(x+2.5, y+2.5+oy, 7, 0.5, c.hair2);
+    if(side) r(x+2.5, y+3+oy, 1.5, 2, c.hair2);
+  } else if(s === 'fade'){
+    r(x+3, y+0.5+oy, 6, 1.5, c.hair);
+    r(x+4, y+0.5+oy, 3, 0.5, c.hairHi);
+    r(x+2.5, y+2+oy, 0.5, 1, c.hair2);
+    r(x+9, y+2+oy, 0.5, 1, c.hair2);
+    r(x+3, y+2+oy, 6, 0.5, c.hair2);
+    if(up) r(x+3, y+2+oy, 6, 3, c.hair), r(x+3.5, y+4.5+oy, 5, 0.5, c.hair2);
+    if(side) r(x+3, y+2.5+oy, 1.5, 1.5, c.hair2);
+  } else if(s === 'dreads'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+1.5, y+2.5+oy, 1, 5, c.hair);
+    r(x+3, y+3.5+oy, 1, 4.5, c.hair2);
+    r(x+8, y+3.5+oy, 1, 4.5, c.hair);
+    r(x+9.5, y+2.5+oy, 1, 5, c.hair2);
+    r(x+1.5, y+7+oy, 1, 0.5, '#caa23c');   // contas
+    r(x+9.5, y+7+oy, 1, 0.5, '#caa23c');
+    if(up){
+      r(x+3.5, y+5+oy, 1, 4, c.hair2); r(x+5.5, y+5.5+oy, 1, 4, c.hair);
+      r(x+7.5, y+5+oy, 1, 4, c.hair2);
+    }
+    if(side) r(x+2, y+2.5+oy, 2.5, 6, c.hair), r(x+2.5, y+7.5+oy, 1, 1.5, c.hair2);
+  } else if(s === 'ponytail'){
+    r(x+2, y+0.5+oy, 8, 2.5, c.hair);
+    r(x+3, y+1+oy, 4, 0.5, c.hairHi);
+    r(x+2, y+3+oy, 0.5, 1.5, c.hair);
+    r(x+9.5, y+3+oy, 0.5, 1.5, c.hair2);
+    // rabo (aparece atrás do ombro direito de frente; atrás no perfil)
+    r(x+10, y+3+oy, 1.5, 5.5, c.hair2);
+    r(x+10.5, y+8.5+oy, 1, 1.5, c.hair2);
+    r(x+10, y+3+oy, 1.5, 0.5, '#caa23c');
+    if(up){
+      r(x+5, y+2.5+oy, 2, 1, '#caa23c');
+      r(x+4.5, y+3.5+oy, 3, 6, c.hair);
+      r(x+5, y+9+oy, 2, 1.5, c.hair2);
+    }
+    if(side) r(x+1.5, y+3.5+oy, 1.5, 5, c.hair), r(x+1.5, y+8+oy, 1.5, 1.5, c.hair2);
+  }
+}
+
+// Acessórios — versão detalhada com contorno
+function drawAccessorySNES(r, x, y, oy, c, facing){
+  const acc = c.accessory || 'none';
+  if(acc === 'none') return;
+  facing = facing || 'down';
+  const OUT = PAL.out;
+  if(acc === 'glasses'){
+    // armação fina com lentes
+    r(x+3, y+3.5+oy, 2.5, 0.5, '#1a1a1a');
+    r(x+6.5, y+3.5+oy, 2.5, 0.5, '#1a1a1a');
+    r(x+3, y+5.5+oy, 2.5, 0.5, '#1a1a1a');
+    r(x+6.5, y+5.5+oy, 2.5, 0.5, '#1a1a1a');
+    r(x+3, y+4+oy, 0.5, 1.5, '#1a1a1a');
+    r(x+5, y+4+oy, 0.5, 1.5, '#1a1a1a');
+    r(x+6.5, y+4+oy, 0.5, 1.5, '#1a1a1a');
+    r(x+8.5, y+4+oy, 0.5, 1.5, '#1a1a1a');
+    r(x+5.5, y+4.5+oy, 1, 0.5, '#1a1a1a');  // ponte
+    r(x+2, y+4.5+oy, 1, 0.5, '#1a1a1a');    // hastes
+    r(x+9, y+4.5+oy, 1, 0.5, '#1a1a1a');
+  } else if(acc === 'sunglasses'){
+    r(x+3, y+3.5+oy, 6, 2.5, '#0c0c12');
+    r(x+5.5, y+4+oy, 1, 0.5, '#0c0c12');
+    r(x+2, y+4+oy, 1, 0.5, '#0c0c12');
+    r(x+9, y+4+oy, 1, 0.5, '#0c0c12');
+    r(x+3.5, y+4+oy, 1, 0.5, '#4a5a6e');    // brilho
+    r(x+7, y+4+oy, 1, 0.5, '#4a5a6e');
+  } else if(acc === 'cap'){
+    r(x+1.5, y+0+oy, 9, 3, c.accent);
+    r(x+2, y+0+oy, 8, 0.5, shadeColor(c.accent, 30));
+    r(x+1.5, y+2.5+oy, 9, 0.5, shadeColor(c.accent, -40));
+    // aba pra frente
+    if(facing === 'up'){ r(x+2.5, y+0+oy, 7, 1, shadeColor(c.accent,-25)); }
+    else { r(x+0.5, y+3+oy, 7.5, 1, shadeColor(c.accent, -40)); }
+    r(x+5.5, y+0.5+oy, 1, 1.5, '#ffffff');  // logo
+    r(x+5.5, y-0.5+oy, 0.5, 0.5, shadeColor(c.accent,-40)); // botãozinho
+  } else if(acc === 'cowboyhat'){
+    r(x+0.5, y+1.5+oy, 11, 1.5, '#7a4a22');
+    r(x+0.5, y+1.5+oy, 11, 0.5, '#9a6438');
+    r(x+2.5, y-1.5+oy, 7, 3, '#7a4a22');
+    r(x+3, y-2+oy, 6, 0.5, '#7a4a22');
+    r(x+2.5, y+0.5+oy, 7, 1, '#4e2c10');   // fita
+    r(x+3.5, y-1.5+oy, 2, 0.5, '#9a6438'); // vinco
+  } else if(acc === 'crown'){
+    r(x+2.5, y+0.5+oy, 7, 1.5, '#e8c84a');
+    r(x+2.5, y-1+oy, 1, 1.5, '#e8c84a');
+    r(x+5.5, y-1.5+oy, 1, 2, '#e8c84a');
+    r(x+8.5, y-1+oy, 1, 1.5, '#e8c84a');
+    r(x+2.5, y+1.5+oy, 7, 0.5, '#b48a30');
+    r(x+4, y+0.5+oy, 0.5, 0.5, '#cf3a3a'); // joias
+    r(x+7.5, y+0.5+oy, 0.5, 0.5, '#4a78c8');
+    r(x+5.75-0.25, y-1+oy, 0.5, 0.5, '#fff');
+  } else if(acc === 'headphones'){
+    r(x+2, y-0.5+oy, 8, 1, '#1a1a1a');
+    r(x+3, y-1+oy, 6, 0.5, '#1a1a1a');
+    r(x+1.5, y+0.5+oy, 0.5, 4, '#1a1a1a');
+    r(x+10, y+0.5+oy, 0.5, 4, '#1a1a1a');
+    r(x+1, y+3.5+oy, 1.5, 3.5, '#cf3a3a');
+    r(x+9.5, y+3.5+oy, 1.5, 3.5, '#cf3a3a');
+    r(x+1, y+3.5+oy, 1.5, 0.5, '#e85a5a');
+    r(x+1, y+6.5+oy, 1.5, 0.5, '#8a1a1a');
+  } else if(acc === 'mask'){
+    r(x+3, y+5+oy, 6, 3, '#ffffff');
+    r(x+3, y+5+oy, 6, 0.5, '#cce0ee');
+    r(x+3.5, y+6+oy, 5, 0.5, '#dde8f0');   // pregas
+    r(x+3.5, y+7+oy, 5, 0.5, '#dde8f0');
+    r(x+2.5, y+5.5+oy, 0.5, 1, '#cce0ee'); // alças
+    r(x+9, y+5.5+oy, 0.5, 1, '#cce0ee');
+  } else if(acc === 'mustache'){
+    r(x+4, y+6+oy, 4, 1, c.hair2);
+    r(x+3.5, y+6.5+oy, 1, 0.5, c.hair2);
+    r(x+7.5, y+6.5+oy, 1, 0.5, c.hair2);
+    r(x+5.5, y+6+oy, 1, 0.5, 'rgba(0,0,0,0.25)'); // divisão central
+  } else if(acc === 'beard'){
+    r(x+3, y+6.5+oy, 1, 2, c.hair2);
+    r(x+8, y+6.5+oy, 1, 2, c.hair2);
+    r(x+3, y+7.5+oy, 6, 1.5, c.hair2);
+    r(x+4, y+8.5+oy, 4, 1, c.hair2);
+    r(x+4.5, y+7+oy, 3, 0.5, 'rgba(0,0,0,0.0)');
+    r(x+5, y+7+oy, 2, 0.5, '#9c4444');    // boca no meio da barba
+  } else if(acc === 'surfboard'){
+    r(x+12.5, y+0.5+oy, 2.5, 18.5, OUT);
+    r(x+13, y+1+oy, 1.5, 17.5, '#f0cf60');
+    r(x+13, y+1+oy, 0.5, 17.5, '#fff0a0');
+    r(x+13, y+1.5+oy, 1.5, 1.5, '#cf3a3a');
+    r(x+13, y+9+oy, 1.5, 1, '#cf3a3a');
+    r(x+13, y+16.5+oy, 1.5, 1.5, '#cf3a3a');
+    r(x+12, y+12.5+oy, 1, 2, c.skin);     // mão segurando
+  } else if(acc === 'briefcase'){
+    r(x+11.5, y+10.5+oy, 6, 6.5, OUT);
+    r(x+12, y+11+oy, 5, 5.5, '#6e4326');
+    r(x+12, y+11+oy, 5, 1, '#8a5a32');
+    r(x+13.5, y+9.5+oy, 2, 1.5, '#46260f'); // alça
+    r(x+12, y+13+oy, 5, 0.75, '#46260f');
+    r(x+14, y+12.5+oy, 1, 1.5, '#e8c84a');  // fecho
+    r(x+12, y+10+oy, 1, 1.5, c.skin);       // mão
+  } else if(acc === 'microphone'){
+    r(x+12, y+6.5+oy, 2.5, 3, '#3a3a46');
+    r(x+12, y+6.5+oy, 2.5, 1, '#9a9aa8');
+    r(x+12.5, y+9.5+oy, 1.5, 4.5, '#5a5a6a');
+    r(x+12, y+7.5+oy, 0.5, 0.5, '#cf3a3a');
+    r(x+12, y+12.5+oy, 1.5, 2, c.skin);
+  } else if(acc === 'megaphone'){
+    r(x+11.5, y+9.5+oy, 2, 3.5, '#cf3a3a');
+    r(x+13.5, y+7.5+oy, 2.5, 7.5, '#cf3a3a');
+    r(x+13.5, y+7.5+oy, 2.5, 1, '#e85a5a');
+    r(x+14, y+8.5+oy, 1.5, 5, '#8a1a1a');
+    r(x+12.5, y+13+oy, 1, 1, '#1a1a1a');
+    r(x+11.5, y+12.5+oy, 1.5, 2, c.skin);
+  } else if(acc === 'flag'){
+    r(x+12, y-0.5+oy, 1, 16.5, '#6e4326');
+    r(x+12, y-0.5+oy, 0.5, 16.5, '#8a5a32');
+    r(x+13, y+0+oy, 5.5, 5, c.accent || '#cf3a3a');
+    r(x+13, y+0+oy, 5.5, 0.75, shadeColor(c.accent||'#cf3a3a', 30));
+    r(x+13, y+2+oy, 5.5, 1, '#f6c453');
+    r(x+12, y+12.5+oy, 1, 2, c.skin);
+  } else if(acc === 'umbrella'){
+    r(x+12.5, y+3.5+oy, 1, 12.5, '#6e4326');
+    r(x+10, y+2.5+oy, 6, 1, '#3a4a6e');
+    r(x+11, y+1.5+oy, 4, 1, '#3a4a6e');
+    r(x+12.5, y+0.5+oy, 1, 1, '#3a4a6e');
+    r(x+11, y+2+oy, 1, 0.5, '#5a6a8e');
+    r(x+12.5, y+15.5+oy, 1.5, 1, '#e8c84a'); // cabo curvo
+    r(x+12.5, y+12.5+oy, 1, 2, c.skin);
+  } else if(acc === 'skateboard'){
+    r(x+10.5, y+17.5+oy, 7, 1.5, OUT);
+    r(x+11, y+17.5+oy, 6, 1, '#8a5a32');
+    r(x+11, y+17.5+oy, 6, 0.5, '#cf3a3a');
+    r(x+11.5, y+19+oy, 1, 1, '#5a5a6a');
+    r(x+15.5, y+19+oy, 1, 1, '#5a5a6a');
+  } else if(acc === 'guitar'){
+    r(x+11.5, y+4.5+oy, 5, 5.5, OUT);
+    r(x+12, y+5+oy, 4, 4.5, '#8a5424');
+    r(x+12, y+5+oy, 4, 1, '#a87038');
+    r(x+13, y+6.5+oy, 2, 1.5, '#2a1a10');  // boca
+    r(x+13, y+9.5+oy, 1.5, 6, '#6e4326');  // braço
+    r(x+13, y+15+oy, 1.5, 1, '#2a1a10');
+    r(x+13.5, y+10.5+oy, 0.5, 4, '#d8c8a0'); // cordas
+    r(x+12, y+12.5+oy, 1, 2, c.skin);
+  } else if(acc === 'phone'){
+    r(x+11.5, y+9.5+oy, 2.5, 4, OUT);
+    r(x+12, y+10+oy, 1.5, 3, '#1a1a1a');
+    r(x+12, y+10+oy, 1.5, 2, '#5fc0ff');
+    r(x+12, y+13+oy, 1.5, 1.5, c.skin);
+  } else if(acc === 'dog'){
+    // cachorrinho na coleira
+    r(x+11.5, y+15.5+oy, 5, 3, OUT);
+    r(x+12, y+16+oy, 4, 2.5, '#a87850');
+    r(x+12, y+16+oy, 4, 0.5, '#c09468');
+    r(x+15.5, y+14+oy, 2.5, 2.5, '#a87850'); // cabeça
+    r(x+15.5, y+13.5+oy, 1, 1, '#8a5e3c');   // orelha
+    r(x+17.5, y+14+oy, 0.5, 1, '#8a5e3c');
+    r(x+16.5, y+15+oy, 0.5, 0.5, '#1a1a1a'); // olho
+    r(x+17.5, y+15.5+oy, 0.5, 0.5, '#1a1a1a'); // focinho
+    r(x+11, y+15+oy, 1, 1, '#a87850');       // rabo
+    r(x+12.5, y+18.5+oy, 0.5, 1, '#8a5e3c'); // patas
+    r(x+15, y+18.5+oy, 0.5, 1, '#8a5e3c');
+    r(x+16, y+13.5+oy, 1, 0.5, '#cf3a3a');   // coleira
+    // guia até a mão
+    r(x+11.5, y+14.5+oy, 0.5, 0.5, '#cf3a3a');
+    r(x+11, y+14+oy, 0.5, 0.5, '#cf3a3a');
+  }
+}
+
+// Player avatar — wrapper que liga o corpo SNES ao estado do jogo
+function drawPlayer(x,y,opts){
+  opts = opts || {};
+  const facing = opts.facing || 'down';
+  const frame = opts.frame || 0;
+  const moving = !!opts.moving;
+  const bob = moving ? (frame===1 ? -0.5 : frame===3 ? -0.5 : 0)
+                     : (Math.floor(opts.t||0)%2===0 ? 0 : -0.5);
+  const c = extendColors(opts.colors || getCandidateColors());
+  drawBodySNES(frect, x, y, { facing, frame, moving, oy: bob, c });
+  drawAccessorySNES(frect, x, y, bob, c, facing);
+}
+
+// Compat: assinaturas antigas redirecionam pro motor novo
+function drawExtraHair(r, x, y, oy, c){ drawHairSNES(r, x, y, oy, extendColors(c), 'down'); }
+function drawAccessoryPx(r, x, y, oy, c, facing){ drawAccessorySNES(r, x, y, oy, extendColors(c), facing||'down'); }
+
+// Marketeiro — NPC de terno vinho, óculos escuros e maleta dourada
+function drawMarketeiro(mx, my){
+  const oy = Math.sin(bobT*1.1) > 0 ? 0 : -0.5;
+  const c = extendColors({
+    style: 'fade', hair: '#16121e', skin: '#c89968',
+    shirt: '#6e2436', pants: '#34343f', shoe: '#1c1c24'
+  });
+  drawBodySNES(frect, mx, my, { facing: 'down', frame: 0, moving: false, oy, c });
+  // camisa branca + gravata mostarda por cima do "terno"
+  frect(mx+5.5, my+9.5+oy, 1, 1, '#f0ead8');
+  frect(mx+5.5, my+10+oy, 1, 3.5, '#e8b83c');
+  frect(mx+5.5, my+10+oy, 1, 0.5, '#c89820');
+  // lapelas
+  frect(mx+4, my+9.5+oy, 1, 2.5, '#511826');
+  frect(mx+7, my+9.5+oy, 1, 2.5, '#511826');
+  fpx(mx+3, my+10.5+oy, '#f0ead8'); // lenço no bolso
+  // óculos escuros
+  frect(mx+3, my+3.5+oy, 2.5, 2, '#0c0c12');
+  frect(mx+6.5, my+3.5+oy, 2.5, 2, '#0c0c12');
+  frect(mx+5.5, my+4+oy, 1, 0.5, '#0c0c12');
+  fpx(mx+3.5, my+4+oy, '#4a5a6e');
+  fpx(mx+7, my+4+oy, '#4a5a6e');
+  // sorriso cínico de canto
+  frect(mx+6, my+6.5+oy, 1.5, 0.5, '#7a3030');
+  // maleta dourada
+  frect(mx+11.5, my+13+oy, 6.5, 5.5, PAL.out);
+  frect(mx+12, my+13.5+oy, 5.5, 4.5, '#e8c84a');
+  frect(mx+12, my+13.5+oy, 5.5, 1, '#f6dc7a');
+  frect(mx+12, my+16+oy, 5.5, 0.5, '#b48a30');
+  frect(mx+13.5, my+12+oy, 2.5, 1.5, '#b48a30'); // alça
+  fpx(mx+14.5, my+15+oy, '#8a6820');             // fecho
+  frect(mx+11.5, my+12.5+oy, 1, 1.5, c.skin);    // mão
+  // cifrão piscante na maleta
+  if(Math.sin(bobT*2) > 0){
+    txt('$', mx+13.5, my+14+oy, '#5a3a00', 6);
+  }
+}
+
+// Adversário no telão da TV (âncora de terno laranja)
 function drawAdvCameo(x,y){
-  // smaller avatar
-  rect(x+2,y+8,8,6,'#cf8a52'); // shirt orange
-  rect(x+3,y+2,6,6,PAL.player1);
-  rect(x+3,y+1,6,2,'#2a2a2a');
-  rect(x+4,y+4,1,1,PAL.black);
-  rect(x+7,y+4,1,1,PAL.black);
+  const yy = y - 3; // sobe um pouco pra não cobrir a tarja de notícias
+  frect(x+1.5, yy+7.5, 9, 5.5, PAL.out);
+  frect(x+2, yy+8, 8, 5, '#b86a30');
+  frect(x+2, yy+8, 8, 0.5, '#d8884a');
+  frect(x+4.5, yy+8, 3, 2, '#ffffff');       // camisa
+  frect(x+5.5, yy+8.5, 1, 3, '#8a2030');     // gravata
+  frect(x+2.5, yy+1, 7, 7, PAL.out);
+  frect(x+3, yy+1.5, 6, 6, '#e8b88a');
+  frect(x+3, yy+1.5, 6, 2, '#2a2a32');       // cabelo
+  frect(x+2.5, yy+2, 0.5, 2, '#2a2a32');
+  frect(x+9, yy+2, 0.5, 2, '#2a2a32');
+  frect(x+4, yy+4.5, 1, 1, '#ffffff');       // olhos
+  frect(x+6.5, yy+4.5, 1, 1, '#ffffff');
+  fpx(x+4.5, yy+5, '#1c1422');
+  fpx(x+7, yy+5, '#1c1422');
+  frect(x+4, yy+4, 1, 0.5, '#1c1c24');       // sobrancelhas franzidas
+  frect(x+6.5, yy+4, 1, 0.5, '#1c1c24');
+  frect(x+5, yy+6.5, 2, 0.5, '#8a4040');     // boca séria
 }
 
 // Hotspot rectangles (in logical coords). Generously sized for tap.
@@ -4211,34 +4915,10 @@ function dropShadow(x, y, w){
 }
 
 function renderScene(opts={}){
-  drawWall();
-  drawFloor();
-  // back-mid props with shadows
-  dropShadow(240, 100, 40);
-  drawTV(240, 70);
-  drawBoard(195, 32);
-  // desk + monitor at back-left
-  dropShadow(14, 122, 52);
-  drawDesk(14, 92);
-  // mesa de reuniões front-mid
-  dropShadow(110, 168, 38);
-  drawMeetingTable(110, 150);
-  // cama (encerrar o dia)
-  dropShadow(170, 174, 44);
-  drawBed(170, 148);
-  // door right
-  drawDoor(285, 130);
-  // plants with shadow
-  dropShadow(78, 48, 10);
-  drawPlant(78, 32);
-  dropShadow(78, 168, 10);
-  drawPlant(78, 152);
-  dropShadow(258, 168, 10);
-  drawPlant(258, 152);
-  // phone on small table (front-left)
-  dropShadow(45, 172, 22);
-  rect(45, 154, 22, 18, PAL.desk1);
-  drawPhone(50, 152);
+  // fundo estático cacheado (parede, piso e móveis em alta densidade)
+  blitBg();
+  // props animados (janelas com nuvens, led da TV, vapor do café, 💤)
+  drawDynamicProps();
   // microphone — só no dia 10 (debate day)
   const showMic = state && state.day === 10;
   if(showMic){
@@ -4364,46 +5044,7 @@ function renderScene(opts={}){
   if(state.day >= 2 && state.day <= 8 && (state.day === 2 || state.day === 3 || state.day === 5 || state.day === 7)){
     const mx = 88, my = 112; // canto esquerdo, longe da cama
     state.marketeiroVisible = true;
-    // sombra forte
-    rect(mx-1, my+22, 14, 2, 'rgba(0,0,0,0.55)');
-    rect(mx, my+23, 12, 1, 'rgba(0,0,0,0.55)');
-    // pernas (calça cinza-claro, distinta do candidato)
-    rect(mx+2, my+15, 3, 6, '#6a6a7a');
-    rect(mx+7, my+15, 3, 6, '#6a6a7a');
-    rect(mx+2, my+20, 3, 1, '#3a3a4a');
-    rect(mx+7, my+20, 3, 1, '#3a3a4a');
-    // terno vinho (super distinto)
-    rect(mx+1, my+8, 10, 8, '#7a2a3a');
-    rect(mx+1, my+8, 10, 2, '#5a1a2a');
-    // colarinho amarelo (gravata mostarda)
-    rect(mx+5, my+8, 2, 2, '#f3c9a0');
-    rect(mx+5, my+10, 2, 4, '#f6c453');
-    // braços
-    rect(mx, my+9, 1, 5, '#7a2a3a');
-    rect(mx+11, my+9, 1, 5, '#7a2a3a');
-    rect(mx, my+13, 1, 2, '#a0866a');
-    rect(mx+11, my+13, 1, 2, '#a0866a');
-    // maleta amarela na mão direita (oferece serviço)
-    rect(mx+12, my+14, 6, 5, '#f6c453');
-    rect(mx+12, my+14, 6, 1, '#b48530');
-    rect(mx+14, my+13, 2, 1, '#b48530'); // alça
-    rect(mx+14, my+16, 1, 1, '#b48530');
-    // cabeça
-    rect(mx+2, my+2, 8, 7, '#c89968');
-    // cabelo penteado pra trás (preto)
-    rect(mx+2, my+1, 8, 3, '#1a0f24');
-    rect(mx+1, my+2, 1, 3, '#1a0f24');
-    rect(mx+10, my+2, 1, 3, '#1a0f24');
-    // óculos escuros distintos
-    rect(mx+3, my+5, 3, 2, '#000');
-    rect(mx+7, my+5, 3, 2, '#000');
-    rect(mx+6, my+6, 1, 1, '#000');
-    // bigode/sorriso cínico
-    rect(mx+4, my+8, 4, 1, '#3a1a1a');
-    // ícone $$ piscante na maleta
-    if(Math.sin(bobT*2) > 0){
-      txt('$', mx+14, my+15, '#1a0f00', 6);
-    }
+    drawMarketeiro(mx, my);
     // brilho sutil de chamada
     if(Math.sin(bobT*0.8) > 0.5 && !state.fxLocked){
       ctx.strokeStyle = 'rgba(246,196,83,0.5)';
@@ -4851,6 +5492,11 @@ const state = {
   walksToday: 0,
   videosToday: 0,
   meetingsToday: 0,
+  interviewsToday: 0,
+  denunciasToday: 0,
+  tvBlocksToday: 0,
+  sentimentToday: 0,
+  crisisPostsToday: 0,
   inDebate: false,
   // player physics
   px: 150, py: 140,
@@ -5013,8 +5659,10 @@ const ACTIONS = [
   {
     id: 'sentiment', area: 'desk', title: 'Análise de sentimento por IA',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Plataforma gratuita classifica o que falam de você como "raiva, expectativa, indignação..." e sugere posts de resposta. Vai te dar bônus nos posts dos próximos 2 dias.',
+    desc: 'Plataforma gratuita classifica o que falam de você como "raiva, expectativa, indignação..." e sugere posts de resposta. Vai te dar bônus nos posts dos próximos 2 dias. (1x por dia)',
+    available(s){ return s.sentimentToday < 1; },
     apply(s){
+      s.sentimentToday++;
       s.intent += 0.7;
       s.trust += 2;
       s.flags.sentimentIA = true;
@@ -5244,8 +5892,10 @@ const ACTIONS = [
   {
     id: 'tvProgram', area: 'tv', title: 'Programa eleitoral oficial',
     tag: 'legal', energy: 2, cost: 30,
-    desc: 'Bloco de 1 minuto no horário gratuito. Ainda funciona, principalmente fora das grandes capitais.',
+    desc: 'Bloco de 1 minuto no horário gratuito. Ainda funciona, principalmente fora das grandes capitais. (1 bloco por dia)',
+    available(s){ return s.tvBlocksToday < 1; },
     apply(s){
+      s.tvBlocksToday++;
       s.money -= 30;
       s.intent += 3;
       s.trust += 1;
@@ -5260,8 +5910,10 @@ const ACTIONS = [
   {
     id: 'tvAttack', area: 'tv', title: 'Programa eleitoral atacando adversário',
     tag: 'gray', energy: 2, cost: 30,
-    desc: 'Mesmo bloco, mas agora usando seu tempo pra atacar o adversário com dados duros (e seletivos). Você ganha um pouco, ele perde mais.',
+    desc: 'Mesmo bloco, mas agora usando seu tempo pra atacar o adversário com dados duros (e seletivos). Você ganha um pouco, ele perde mais. (1 bloco por dia)',
+    available(s){ return s.tvBlocksToday < 1; },
     apply(s){
+      s.tvBlocksToday++;
       s.money -= 30;
       s.intent += 1;
       s.oppIntent -= 3;
@@ -5368,8 +6020,10 @@ const ACTIONS = [
   {
     id: 'newspaper', area: 'board', title: 'Dar entrevista pra jornal',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Repórter pede 40 minutos. Tema varia conforme o dia. Vai sair em página inteira no domingo. Pode te ajudar — ou te enterrar.',
+    desc: 'Repórter pede 40 minutos. Tema varia conforme o dia. Vai sair em página inteira no domingo. Pode te ajudar — ou te enterrar. (1x por dia)',
+    available(s){ return s.interviewsToday < 1; },
     apply(s){
+      s.interviewsToday++;
       const temas = [
         { tema: 'educação', headlineGood: 'PROPOSTA PARA ENSINO INTEGRAL', headlineBad: 'CANDIDATO HESITA AO FALAR DE ESCOLA' },
         { tema: 'saúde', headlineGood: 'PLANO DE MÉDICO 24H GANHA FORÇA', headlineBad: 'PROMESSAS DE SAÚDE SEM FONTE' },
@@ -5398,8 +6052,10 @@ const ACTIONS = [
   {
     id: 'denuncia', area: 'board', title: 'Denúncia legítima ao TSE (com prova real)',
     tag: 'legal', energy: 1, cost: 10,
-    desc: 'Seu jurídico levanta caso sólido contra o adversário e protocola — sem IA, com documento.',
+    desc: 'Seu jurídico levanta caso sólido contra o adversário e protocola — sem IA, com documento. (1x por dia)',
+    available(s){ return s.denunciasToday < 1; },
     apply(s){
+      s.denunciasToday++;
       s.money -= 10;
       if(s.oppIntent > 30){
         s.oppIntent -= 2;
@@ -5479,8 +6135,10 @@ const ACTIONS = [
   {
     id: 'crisisPost', area: 'phone', title: 'Comentar notícia do dia (gancho público)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você pega uma notícia que tá rolando e posta opinião embasada. Mostra preparo.',
+    desc: 'Você pega uma notícia que tá rolando e posta opinião embasada. Mostra preparo. (1x por dia)',
+    available(s){ return s.crisisPostsToday < 1; },
     apply(s){
+      s.crisisPostsToday++;
       const bonus = reachBonus();
       const sentBonus = s.sentimentBonusDays > 0 ? 0.5 : 0;
       s.intent += 1 + bonus + sentBonus;
@@ -7204,6 +7862,11 @@ function startDay(){
   state.walksToday = 0;
   state.videosToday = 0;
   state.meetingsToday = 0;
+  state.interviewsToday = 0;
+  state.denunciasToday = 0;
+  state.tvBlocksToday = 0;
+  state.sentimentToday = 0;
+  state.crisisPostsToday = 0;
   state.intentLostToday = 0;
   state.agendaPostedToday = false;
   state.unrepliedAttacks = 0;  // ataques de dias passados não justificam responder hoje
@@ -8897,65 +9560,25 @@ function renderSantinho(){
 }
 
 function drawPlayerPreview(cx, look){
-  const c = look || getCandidateColors();
-  if(c.hair && !c.hair2) c.hair2 = shadeColor(c.hair, -30);
-  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  // upgrade do canvas pra densidade 2x (64x96 físico, 32x48 lógico)
+  const can = cx.canvas;
+  if(can.width !== 64 || can.height !== 96){ can.width = 64; can.height = 96; }
+  cx.setTransform(2, 0, 0, 2, 0, 0);
+  cx.imageSmoothingEnabled = false;
   cx.clearRect(0, 0, 32, 48);
-  r(0, 0, 32, 48, '#3a2a4a');
-  r(0, 38, 32, 10, '#704020');
-  // posição base
-  const x = 10, y = 14;
-  // shadow
-  r(x-1, y+19, 14, 2, 'rgba(0,0,0,0.4)');
-  r(x, y+20, 12, 1, 'rgba(0,0,0,0.4)');
-  // pants
-  r(x+2, y+14, 3, 5, '#222');
-  r(x+7, y+14, 3, 5, '#222');
-  r(x+2, y+18, 3, 1, '#4a2a10');
-  r(x+7, y+18, 3, 1, '#4a2a10');
-  // shirt
-  r(x+1, y+8, 10, 7, c.shirt);
-  r(x+1, y+8, 10, 2, shadeColor(c.shirt, -25));
-  r(x+5, y+8, 2, 2, c.skin);
-  r(x, y+9, 1, 5, c.shirt);
-  r(x+11, y+9, 1, 5, c.shirt);
-  r(x, y+13, 1, 2, c.skin);
-  r(x+11, y+13, 1, 2, c.skin);
-  // head
-  r(x+2, y+2, 8, 7, c.skin);
-  // cabelo
-  if(c.style === 'short'){
-    r(x+2, y+1, 8, 3, c.hair);
-    r(x+1, y+2, 1, 3, c.hair);
-    r(x+10, y+2, 1, 3, c.hair2);
-  } else if(c.style === 'long'){
-    r(x+2, y+1, 8, 4, c.hair);
-    r(x+1, y+2, 1, 8, c.hair);
-    r(x+10, y+2, 1, 8, c.hair2);
-  } else if(c.style === 'curly'){
-    r(x+1, y+1, 10, 4, c.hair);
-    r(x+2, y+0, 2, 1, c.hair);
-    r(x+5, y+0, 2, 1, c.hair);
-    r(x+8, y+0, 2, 1, c.hair);
-  } else if(c.style === 'afro'){
-    r(x+1, y+0, 10, 3, c.hair);
-    r(x+0, y+1, 1, 4, c.hair);
-    r(x+11, y+1, 1, 4, c.hair2);
-  } else if(c.style === 'bun'){
-    r(x+2, y+1, 8, 3, c.hair);
-    r(x+4, y-1, 4, 3, c.hair);
-    r(x+5, y-2, 2, 1, c.hair);
-  } else if(c.style === 'bald'){
-    r(x+3, y+2, 6, 1, shadeColor(c.skin, -15));
-  } else {
-    drawExtraHair(r, x, y, 0, c);
-  }
-  // eyes + mouth
-  r(x+4, y+5, 1, 1, '#000');
-  r(x+7, y+5, 1, 1, '#000');
-  r(x+5, y+7, 2, 1, '#8a3a3a');
-  // acessório
-  drawAccessoryPx(r, x, y, 0, c, 'down');
+  const r = (x,y,w,h,col)=>{ cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  // cenário de fundo: parede listrada + lambri + piso
+  r(0, 0, 32, 48, '#48688c');
+  for(let sx=0; sx<32; sx+=8) r(sx, 0, 0.5, 33, '#3c587a');
+  for(let sx=4; sx<32; sx+=8) r(sx, 0, 0.5, 33, '#567a9e');
+  r(0, 33, 32, 1, '#85593c');
+  r(0, 34, 32, 4, '#6a4530');
+  r(0, 38, 32, 10, '#9e7045');
+  r(0, 38, 32, 0.5, '#d2a36b');
+  r(0, 42, 32, 0.5, '#64431f');
+  const c = extendColors(look || getCandidateColors());
+  drawBodySNES(r, 10, 14, { facing: 'down', frame: 0, moving: false, oy: 0, c });
+  drawAccessorySNES(r, 10, 14, 0, c, 'down');
 }
 
 $('ccBack').addEventListener('click', ()=>{
@@ -9361,6 +9984,73 @@ document.addEventListener('touchmove', (e)=>{
     e.preventDefault();
   }
 }, { passive: false });
+
+// --- DEV (apenas local): #sprites mostra galeria de personagens ampliada ---
+if(location.hash === '#sprites'){
+  window.addEventListener('load', ()=>{
+    $('cover').style.display = 'none';
+    $('hud').style.display = 'grid';
+    $('gameGrid').style.display = 'grid';
+    state.running = false;
+    renderScene = function(){
+      frect(0, 0, W, H, '#2a2438');
+      const styles = LOOK_OPTIONS.style.map(s => s.id);
+      // linha 1: 14 estilos de cabelo (de frente)
+      styles.forEach((st, i) => {
+        const c = extendColors({ style: st, hair: '#b87333', skin: '#f3c9a0', shirt: '#3c7dc0' });
+        drawBodySNES(frect, 8 + i*22, 8, { facing: 'down', frame: 0, moving: false, oy: 0, c });
+      });
+      // linha 2: 4 direções x 4 frames de caminhada
+      const c2 = extendColors({ style: 'short', hair: '#3a2010', skin: '#c89968', shirt: '#cf3a3a' });
+      ['down','up','left','right'].forEach((f, fi) => {
+        for(let fr = 0; fr < 4; fr++){
+          drawBodySNES(frect, 8 + (fi*4+fr)*19, 42, { facing: f, frame: fr, moving: true, oy: (fr===1||fr===3)?-0.5:0, c: c2 });
+        }
+      });
+      // linha 3: acessórios numa amostra
+      ['glasses','sunglasses','cap','cowboyhat','crown','headphones','mask','mustache','beard','briefcase','megaphone','flag','phone','dog'].forEach((a, i) => {
+        const c3 = extendColors({ style: 'fade', hair: '#1a0f24', skin: '#a0866a', shirt: '#5fb872', accessory: a });
+        drawBodySNES(frect, 8 + i*22, 76, { facing: 'down', frame: 0, moving: false, oy: 0, c: c3 });
+        drawAccessorySNES(frect, 8 + i*22, 76, 0, c3, 'down');
+      });
+      // linha 4: marketeiro + skins variadas + camisas
+      drawMarketeiro(8, 112);
+      ['#fde7d7','#d4a274','#8a6a4a','#3e2615','#9be099'].forEach((sk, i) => {
+        const c4 = extendColors({ style: ['long','curly','afro','dreads','bun'][i], hair: ['#1a0f24','#cf3a3a','#1a0f24','#3a2010','#f6c453'][i], skin: sk, shirt: ['#e8e0d0','#f6c453','#8a5cf6','#3c7dc0','#e89bc7'][i] });
+        drawBodySNES(frect, 40 + i*24, 112, { facing: 'down', frame: 0, moving: false, oy: 0, c: c4 });
+      });
+      // linha 5: perfis andando + costas
+      const c5 = extendColors({ style: 'ponytail', hair: '#cf3a3a', skin: '#f3c9a0', shirt: '#3a4a5a' });
+      for(let fr = 0; fr < 4; fr++){
+        drawBodySNES(frect, 8 + fr*20, 148, { facing: 'right', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 100 + fr*20, 148, { facing: 'left', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 192 + fr*20, 148, { facing: 'up', frame: fr, moving: true, oy: 0, c: c5 });
+      }
+    };
+  });
+}
+
+// --- DEV (apenas local): #cc abre direto a criação de personagem ---
+if(location.hash === '#cc'){
+  window.addEventListener('load', ()=>{
+    $('cover').style.display = 'none';
+    try{ setupCharCreate(); }catch(e){ console.error(e); }
+    $('charCreate').style.display = 'block';
+  });
+}
+
+// --- DEV (apenas local): abrir com #debugN pula direto pra cena no dia N ---
+if(location.hash.indexOf('#debug') === 0){
+  window.addEventListener('load', ()=>{
+    const d = Math.max(1, Math.min(10, parseInt(location.hash.replace('#debug',''), 10) || 3));
+    $('cover').style.display = 'none';
+    $('hud').style.display = 'grid';
+    $('gameGrid').style.display = 'grid';
+    state.running = true;
+    state.day = d;
+    try{ updateHUD(); }catch(e){}
+  });
+}
 
 // Init render once
 updateHUD();
