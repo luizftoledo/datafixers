@@ -2315,7 +2315,7 @@
   <!-- Tela de criação do candidato -->
   <div class="cover" id="charCreate" style="display:none">
     <h2>QUEM É VOCÊ?</h2>
-    <p class="lead">Crie seu candidato a prefeito. Você terá 10 dias pra fazer o nome valer alguma coisa na cidade.</p>
+    <p class="lead">Crie seu candidato a prefeito. Você tem 10 dias pra fazer seu nome valer alguma coisa na cidade.</p>
 
     <!-- autocomplete="off" + name="search" + data-form-type="other" pra evitar o Chrome
          oferecer cartão de crédito (o id antigo "ccNumber" disparava esse heurístico) -->
@@ -4309,10 +4309,52 @@ const LOOK_OPTIONS = {
     '#8a6a4a', '#6a4a30', '#5a3a20', '#3e2615', '#2a1810',  // escuros → muito escuros
     '#9be099', '#a890ff', '#88c8ff'              // fantasia (verde, roxo, azul)
   ],
+  skinTone: [
+    { id:0, color:'#fde7d7', label:'muito claro' },
+    { id:1, color:'#f3c9a0', label:'claro' },
+    { id:2, color:'#c89968', label:'medio' },
+    { id:3, color:'#8a6a4a', label:'moreno' },
+    { id:4, color:'#4a2c1a', label:'escuro' }
+  ],
+  eyeColor: [
+    { id:0, color:'#4a2a14', label:'castanho' },
+    { id:1, color:'#2f8a52', label:'verde' },
+    { id:2, color:'#2f6fc0', label:'azul' },
+    { id:3, color:'#7f8b91', label:'acinzentado' },
+    { id:4, color:'#b87822', label:'ambar' },
+    { id:5, color:'#7a45b8', label:'violeta' },
+    { id:6, color:'#15131a', label:'preto' }
+  ],
   shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a',
            '#5a4030', '#e8e0d0',
            '#3c7dc0', '#cf3a3a', '#f6c453', '#5fb872', '#e89bc7', '#8a5cf6',
            '#1a1a1a', '#ffffff'],
+  outfitColor: [
+    { id:0, color:'#3c7dc0', label:'azul' },
+    { id:1, color:'#cf3a3a', label:'vermelho' },
+    { id:2, color:'#f6c453', label:'amarelo' },
+    { id:3, color:'#5fb872', label:'verde' },
+    { id:4, color:'#8a5cf6', label:'violeta' },
+    { id:5, color:'#e89bc7', label:'rosa' },
+    { id:6, color:'#3a4a5a', label:'grafite' },
+    { id:7, color:'#e8e0d0', label:'claro' }
+  ],
+  outfitPattern: [
+    { id:0, label:'liso' }, { id:1, label:'listras' }, { id:2, label:'xadrez sutil' },
+    { id:3, label:'gravata' }, { id:4, label:'faixa diagonal' }, { id:5, label:'brasao simples' }
+  ],
+  capeColor: [
+    { id:0, color:'transparent', label:'nenhum' },
+    { id:1, color:'#7a2438', label:'vinho' },
+    { id:2, color:'#264f94', label:'azul' },
+    { id:3, color:'#2f7a4f', label:'verde' },
+    { id:4, color:'#6b3fb0', label:'roxo' },
+    { id:5, color:'#c28a2d', label:'dourado' }
+  ],
+  companion: [
+    { id:0, label:'nenhum' }, { id:1, label:'cachorro' }, { id:2, label:'chocobo' },
+    { id:3, label:'moguri' }, { id:4, label:'gato' }, { id:5, label:'mini dragao' }
+  ],
   accessory: [
     { id:'none' }, { id:'glasses' }, { id:'sunglasses' }, { id:'cap' },
     { id:'cowboyhat' }, { id:'crown' }, { id:'headphones' }, { id:'mask' },
@@ -4322,14 +4364,38 @@ const LOOK_OPTIONS = {
   ]
 };
 
+const NUMERIC_LOOK_PROPS = { skinTone:1, eyeColor:1, outfitColor:1, outfitPattern:1, capeColor:1, companion:1 };
+
+function lookIndex(v, max, fallback){
+  const n = parseInt(v, 10);
+  if(Number.isFinite(n)) return Math.max(0, Math.min(max, n));
+  return fallback;
+}
+
 function getCandidateColors(){
   const L = state.candidate.look || {};
+  const skinTone = lookIndex(L.skinTone, LOOK_OPTIONS.skinTone.length-1, 1);
+  const eyeColor = lookIndex(L.eyeColor, LOOK_OPTIONS.eyeColor.length-1, 0);
+  const outfitColor = lookIndex(L.outfitColor, LOOK_OPTIONS.outfitColor.length-1, 0);
+  const outfitPattern = lookIndex(L.outfitPattern, LOOK_OPTIONS.outfitPattern.length-1, 0);
+  const capeColor = lookIndex(L.capeColor, LOOK_OPTIONS.capeColor.length-1, 0);
+  const companion = lookIndex(L.companion, LOOK_OPTIONS.companion.length-1, 0);
+  const skin = L.skinTone !== undefined ? LOOK_OPTIONS.skinTone[skinTone].color : (L.skin || '#f3c9a0');
+  const shirt = L.outfitColor !== undefined ? LOOK_OPTIONS.outfitColor[outfitColor].color : (L.shirt || '#3c7dc0');
   return {
     style: L.style || 'short',
     hair:  L.hair  || '#b87333',
     hair2: shadeColor(L.hair || '#b87333', -30),
-    skin:  L.skin  || '#f3c9a0',
-    shirt: L.shirt || '#3c7dc0',
+    skin,
+    skinTone,
+    eye: LOOK_OPTIONS.eyeColor[eyeColor].color,
+    eyeColor,
+    shirt,
+    outfitColor,
+    outfitPattern,
+    capeColor,
+    cape: capeColor ? LOOK_OPTIONS.capeColor[capeColor].color : null,
+    companion,
     accent: L.accent || '#cf3a3a',
     accessory: L.accessory || 'none'
   };
@@ -4356,15 +4422,90 @@ function extendColors(c){
   if(c._ext) return c;
   const hair = c.hair || '#b87333', skin = c.skin || '#f3c9a0', shirt = c.shirt || '#3c7dc0';
   const pants = c.pants || '#2e2a3a', shoe = c.shoe || '#4a2a14';
+  const cape = c.cape || null;
   return {
     _ext: true,
     style: c.style || 'short', accessory: c.accessory || 'none', accent: c.accent || '#cf3a3a',
-    hair, hair2: c.hair2 || shadeColor(hair, -35), hairHi: shadeColor(hair, 26),
-    skin, skinSh: shadeColor(skin, -28), skinHi: shadeColor(skin, 16),
-    shirt, shirtSh: shadeColor(shirt, -34), shirtHi: shadeColor(shirt, 24),
-    pants, pantsSh: shadeColor(pants, -16),
-    shoe, shoeHi: shadeColor(shoe, 26)
+    hair, hair2: c.hair2 || shadeColor(hair, -35), hairHi: shadeColor(hair, 26), hairDark: shadeColor(hair, -58),
+    skin, skinSh: shadeColor(skin, -28), skinDark: shadeColor(skin, -48), skinHi: shadeColor(skin, 16),
+    eye: c.eye || '#4a2a14', eyeColor: c.eyeColor || 0,
+    shirt, shirtSh: shadeColor(shirt, -34), shirtDark: shadeColor(shirt, -58), shirtHi: shadeColor(shirt, 24),
+    outfitColor: c.outfitColor || 0, outfitPattern: c.outfitPattern || 0,
+    capeColor: c.capeColor || 0, cape, capeSh: cape ? shadeColor(cape, -38) : null, capeHi: cape ? shadeColor(cape, 24) : null,
+    companion: c.companion || 0,
+    pants, pantsSh: shadeColor(pants, -16), pantsDark: shadeColor(pants, -34), pantsHi: shadeColor(pants, 14),
+    shoe, shoeHi: shadeColor(shoe, 26), shoeSh: shadeColor(shoe, -24)
   };
+}
+
+function drawCapeSNES(r, x, y, oy, c, facing, frame, moving){
+  if(!c.cape) return;
+  const wave = moving ? (frame===1 ? -0.5 : frame===3 ? 0.5 : 0) : 0;
+  const OUT = PAL.out;
+  if(facing === 'up'){
+    r(x+1, y+7+oy, 10, 12.5, OUT);
+    r(x+1.5, y+7.5+oy, 9, 11.5, c.cape);
+    r(x+2, y+8+oy, 7.5, 1, c.capeHi);
+    r(x+8.5+wave, y+9+oy, 1.5, 9.5, c.capeSh);
+    r(x+2.5-wave, y+18.5+oy, 6.5, 1, c.capeSh);
+  } else if(facing === 'down'){
+    r(x+1.5, y+8+oy, 9, 12, OUT);
+    r(x+2, y+8.5+oy, 8, 10.5, c.cape);
+    r(x+2.5, y+8.5+oy, 6, 1, c.capeHi);
+    r(x+2+wave, y+10+oy, 1, 8.5, c.capeSh);
+    r(x+9+wave, y+10+oy, 1, 8.5, c.capeSh);
+    r(x+3-wave, y+18.5+oy, 6, 1, c.capeSh);
+  } else {
+    const right = facing === 'right';
+    const ax = x + 6;
+    const R = right ? r : (xx,yy,ww,hh,cc)=> r(2*ax - xx - ww, yy, ww, hh, cc);
+    R(x+1+wave, y+8+oy, 7.5, 12, OUT);
+    R(x+1.5+wave, y+8.5+oy, 6.5, 10.5, c.cape);
+    R(x+2+wave, y+8.5+oy, 5, 1, c.capeHi);
+    R(x+1.5+wave, y+17.5+oy, 6, 1.5, c.capeSh);
+  }
+}
+
+function drawOutfitPatternSNES(r, x, y, oy, c, facing){
+  const p = c.outfitPattern || 0;
+  if(!p) return;
+  const accent = c.accent || '#cf3a3a';
+  const line = shadeColor(c.shirt, -62);
+  const hi = shadeColor(c.shirt, 38);
+  if(p === 1){
+    r(x+2.5, y+10+oy, 7, 0.5, hi);
+    r(x+2.5, y+12+oy, 7, 0.5, line);
+    r(x+2.5, y+14+oy, 7, 0.5, line);
+  } else if(p === 2){
+    r(x+3.5, y+9.5+oy, 0.5, 5, line);
+    r(x+6, y+9.5+oy, 0.5, 5, hi);
+    r(x+8.5, y+9.5+oy, 0.5, 5, line);
+    r(x+2.5, y+11+oy, 7, 0.5, hi);
+    r(x+2.5, y+13+oy, 7, 0.5, line);
+  } else if(p === 3){
+    if(facing !== 'up'){
+      r(x+5.5, y+9.5+oy, 1, 1, '#f4ead8');
+      r(x+5.5, y+10.5+oy, 1, 3.5, accent);
+      r(x+5.5, y+12.5+oy, 1, 1.5, shadeColor(accent, -38));
+    } else {
+      r(x+4, y+9.5+oy, 4, 0.5, line);
+      r(x+6, y+10.5+oy, 0.5, 3, line);
+    }
+  } else if(p === 4){
+    r(x+2.5, y+9.5+oy, 2, 1, accent);
+    r(x+3.5, y+10.5+oy, 2, 1, accent);
+    r(x+4.5, y+11.5+oy, 2, 1, accent);
+    r(x+5.5, y+12.5+oy, 2, 1, accent);
+    r(x+6.5, y+13.5+oy, 2, 1, shadeColor(accent, -34));
+  } else if(p === 5){
+    if(facing !== 'up'){
+      r(x+7.5, y+10.5+oy, 1.5, 1.5, '#f6c453');
+      r(x+8, y+11+oy, 0.5, 0.5, '#fff2a0');
+      r(x+8, y+12+oy, 0.5, 1, shadeColor('#f6c453', -42));
+    } else {
+      r(x+3, y+10.5+oy, 1.5, 1, '#f6c453');
+    }
+  }
 }
 
 // Corpo completo. r = callback rect(x,y,w,h,cor) — frect no jogo, ctx próprio
@@ -4382,6 +4523,7 @@ function drawBodySNES(r, x, y, o){
   r(x+1.5, y+19, 9, 0.5, 'rgba(0,0,0,0.18)');
   r(x+1, y+19.5, 10, 1, 'rgba(0,0,0,0.3)');
   r(x+2, y+20.5, 8, 0.5, 'rgba(0,0,0,0.16)');
+  drawCapeSNES(r, x, y, oy, c, facing, frame, moving);
 
   if(facing === 'down' || facing === 'up'){
     const legL = (moving && frame===1) ? 0.5 : 0;
@@ -4392,13 +4534,17 @@ function drawBodySNES(r, x, y, o){
     // esquerda
     r(x+2, y+14+oy-legL, 3.5, 5.5, OUT);
     r(x+2.5, y+14.5+oy-legL, 2.5, 3.5, c.pants);
+    r(x+2.5, y+14.5+oy-legL, 2, 0.5, c.pantsHi);
     r(x+4.5, y+14.5+oy-legL, 0.5, 3.5, c.pantsSh);
+    r(x+2.5, y+17+oy-legL, 2.5, 0.5, c.pantsDark);
     r(x+2.5, y+18+oy-legL, 2.5, 1, c.shoe);
     r(x+2.5, y+18+oy-legL, 2.5, 0.5, c.shoeHi);
     // direita
     r(x+6.5, y+14+oy-legR, 3.5, 5.5, OUT);
     r(x+7, y+14.5+oy-legR, 2.5, 3.5, c.pants);
+    r(x+7, y+14.5+oy-legR, 2, 0.5, c.pantsHi);
     r(x+7, y+14.5+oy-legR, 0.5, 3.5, c.pantsSh);
+    r(x+7, y+17+oy-legR, 2.5, 0.5, c.pantsDark);
     r(x+7, y+18+oy-legR, 2.5, 1, c.shoe);
     r(x+7, y+18+oy-legR, 2.5, 0.5, c.shoeHi);
     // ---- tronco ----
@@ -4407,6 +4553,7 @@ function drawBodySNES(r, x, y, o){
     r(x+2, y+9+oy, 8, 0.5, c.shirtHi);          // ombros iluminados
     r(x+8.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // sombra lateral
     r(x+2, y+13.5+oy, 8, 1, c.shirtSh);         // barra da camisa
+    r(x+2.5, y+14+oy, 7, 0.5, c.shirtDark);     // dobra de cintura
     if(facing === 'down'){
       r(x+5.5, y+9+oy, 1, 1, c.skin);           // gola V
       r(x+4.5, y+9+oy, 1, 0.5, c.shirtHi);      // colarinho
@@ -4418,6 +4565,7 @@ function drawBodySNES(r, x, y, o){
       r(x+4, y+9+oy, 4, 0.5, c.shirtSh);        // gola (costas)
       r(x+6, y+10+oy, 0.5, 4, c.shirtSh);       // costura central
     }
+    drawOutfitPatternSNES(r, x, y, oy, c, facing);
     // cinto + fivela
     r(x+2, y+14.5+oy, 8, 0.5, '#2a1a10');
     if(facing === 'down') r(x+5.5, y+14.5+oy, 1, 0.5, '#e8c84a');
@@ -4425,15 +4573,20 @@ function drawBodySNES(r, x, y, o){
     r(x+0.5, y+9+oy+armL, 2, 6, OUT);
     r(x+1, y+9.5+oy+armL, 1, 3.5, facing==='down' ? c.shirt : c.shirtSh);
     r(x+1, y+9.5+oy+armL, 1, 0.5, c.shirtHi);
+    r(x+1, y+12.5+oy+armL, 1, 0.5, c.shirtDark);
     r(x+1, y+13+oy+armL, 1, 1.5, c.skin);
     r(x+1, y+13+oy+armL, 1, 0.5, c.skinSh);
     r(x+9.5, y+9+oy+armR, 2, 6, OUT);
     r(x+10, y+9.5+oy+armR, 1, 3.5, c.shirtSh);
+    r(x+10, y+12.5+oy+armR, 1, 0.5, c.shirtDark);
     r(x+10, y+13+oy+armR, 1, 1.5, c.skin);
     r(x+10, y+13+oy+armR, 1, 0.5, c.skinSh);
     // ---- cabeça ----
     r(x+2, y+0.5+oy, 8, 8.5, OUT);
     r(x+2.5, y+1+oy, 7, 7.5, c.skin);
+    r(x+3, y+1+oy, 6, 1, c.skinHi);             // luz no topo
+    r(x+2.5, y+6.5+oy, 0.5, 1.5, c.skinSh);
+    r(x+9, y+6.5+oy, 0.5, 1.5, c.skinSh);
     r(x+2.5, y+7.5+oy, 7, 1, c.skinSh);         // queixo
     // orelhas
     r(x+2, y+4.5+oy, 0.5, 1.5, c.skin);
@@ -4442,8 +4595,12 @@ function drawBodySNES(r, x, y, o){
       // olhos com branco + pupila
       r(x+3.5, y+4+oy, 1.5, 1.5, '#ffffff');
       r(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
-      r(x+4, y+4.5+oy, 0.5, 1, '#241c2e');
-      r(x+7.5, y+4.5+oy, 0.5, 1, '#241c2e');
+      r(x+4, y+4.5+oy, 0.5, 1, c.eye);
+      r(x+4.5, y+4.5+oy, 0.5, 1, '#241c2e');
+      r(x+7.5, y+4.5+oy, 0.5, 1, c.eye);
+      r(x+8, y+4.5+oy, 0.5, 1, '#241c2e');
+      r(x+4, y+4+oy, 0.5, 0.5, '#ffffff');
+      r(x+7.5, y+4+oy, 0.5, 0.5, '#ffffff');
       // sobrancelhas
       r(x+3.5, y+3+oy, 1.5, 0.5, c.hair2);
       r(x+7, y+3+oy, 1.5, 0.5, c.hair2);
@@ -4462,11 +4619,14 @@ function drawBodySNES(r, x, y, o){
     // perna de trás (mais escura)
     R(x+2.5-sprd, y+14+oy, 3.5, 5.5, OUT);
     R(x+3-sprd, y+14.5+oy, 2.5, 3.5, c.pantsSh);
+    R(x+3-sprd, y+17+oy, 2.5, 0.5, c.pantsDark);
     R(x+3-sprd, y+18+oy, 2.5, 1, shadeColor(c.shoe,-14));
     // perna da frente
     R(x+6+sprd, y+14+oy, 3.5, 5.5, OUT);
     R(x+6.5+sprd, y+14.5+oy, 2.5, 3.5, c.pants);
+    R(x+6.5+sprd, y+14.5+oy, 2, 0.5, c.pantsHi);
     R(x+8.5+sprd, y+14.5+oy, 0.5, 3.5, c.pantsSh);
+    R(x+6.5+sprd, y+17+oy, 2.5, 0.5, c.pantsDark);
     R(x+6.5+sprd, y+18+oy, 3, 1, c.shoe);       // sapato com bico
     R(x+6.5+sprd, y+18+oy, 3, 0.5, c.shoeHi);
     // tronco
@@ -4475,23 +4635,30 @@ function drawBodySNES(r, x, y, o){
     R(x+2.5, y+9+oy, 7.5, 0.5, c.shirtHi);
     R(x+2.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // costas sombreadas
     R(x+2.5, y+13.5+oy, 7.5, 1, c.shirtSh);
+    R(x+2.5, y+14+oy, 7.5, 0.5, c.shirtDark);
+    drawOutfitPatternSNES(R, x, y, oy, c, 'right');
     R(x+2.5, y+14.5+oy, 7.5, 0.5, '#2a1a10');   // cinto
     // braço visível (balança pra frente/trás)
     R(x+4.5+armX, y+9.5+oy, 2.5, 5.5, OUT);
     R(x+5+armX, y+10+oy, 1.5, 3.5, c.shirt);
     R(x+5+armX, y+10+oy, 1.5, 0.5, c.shirtHi);
+    R(x+5+armX, y+13+oy, 1.5, 0.5, c.shirtDark);
     R(x+5+armX, y+13.5+oy, 1.5, 1.5, c.skin);
     R(x+5+armX, y+13.5+oy, 1.5, 0.5, c.skinSh);
     // cabeça
     R(x+2, y+0.5+oy, 8, 8.5, OUT);
     R(x+2.5, y+1+oy, 7, 7.5, c.skin);
+    R(x+3, y+1+oy, 6, 1, c.skinHi);
+    R(x+2.5, y+6.5+oy, 0.5, 1.5, c.skinSh);
     R(x+2.5, y+7.5+oy, 7, 1, c.skinSh);
     // nariz saliente
     R(x+9.5, y+5+oy, 1, 1.5, c.skin);
     R(x+10, y+6+oy, 0.5, 0.5, c.skinSh);
     // olho único
     R(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
+    R(x+7.5, y+4.5+oy, 0.5, 1, c.eye);
     R(x+8, y+4.5+oy, 0.5, 1, '#241c2e');
+    R(x+7.5, y+4+oy, 0.5, 0.5, '#ffffff');
     R(x+7, y+3+oy, 1.5, 0.5, c.hair2);          // sobrancelha
     // boca
     R(x+8.5, y+6.5+oy, 1, 0.5, '#9c4444');
@@ -4646,6 +4813,22 @@ function drawHairSNES(r, x, y, oy, c, facing){
       r(x+5, y+9+oy, 2, 1.5, c.hair2);
     }
     if(side) r(x+1.5, y+3.5+oy, 1.5, 5, c.hair), r(x+1.5, y+8+oy, 1.5, 1.5, c.hair2);
+  }
+  if(s !== 'bald'){
+    if(up){
+      r(x+4, y+2+oy, 0.5, 4.5, c.hairDark);
+      r(x+7, y+2.5+oy, 0.5, 3.5, c.hair2);
+      r(x+3.5, y+1+oy, 2.5, 0.5, c.hairHi);
+    } else if(side){
+      r(x+3, y+1+oy, 3, 0.5, c.hairHi);
+      r(x+2.5, y+2.5+oy, 0.5, 3, c.hairDark);
+      r(x+7.5, y+2+oy, 1, 0.5, c.hair2);
+    } else {
+      r(x+3, y+1+oy, 3, 0.5, c.hairHi);
+      r(x+7, y+1.5+oy, 1.5, 0.5, c.hair2);
+      r(x+3.5, y+2.5+oy, 0.5, 1.5, c.hairDark);
+      r(x+8.5, y+2.5+oy, 0.5, 1.5, c.hairDark);
+    }
   }
 }
 
@@ -4813,6 +4996,95 @@ function drawAccessorySNES(r, x, y, oy, c, facing){
 }
 
 // Player avatar — wrapper que liga o corpo SNES ao estado do jogo
+function drawCompanionSNES(r, x, y, facing, frame, companionIdx){
+  companionIdx = parseInt(companionIdx || 0, 10);
+  if(!companionIdx) return;
+  facing = facing || 'down';
+  frame = frame || 0;
+  const step = frame % 2;
+  const hop = step ? -0.5 : 0;
+  const OUT = PAL.out;
+  const side = facing === 'left' || facing === 'right';
+  const right = facing !== 'left';
+  const ax = x + 4.5;
+  const R = side && !right ? (xx,yy,ww,hh,cc)=> r(2*ax - xx - ww, yy, ww, hh, cc) : r;
+  r(x+1, y+8.5, 7, 0.5, 'rgba(0,0,0,0.22)');
+  r(x+2, y+9, 5, 0.5, 'rgba(0,0,0,0.18)');
+
+  if(companionIdx === 1){
+    R(x+1, y+4+hop, 6, 4, OUT);
+    R(x+1.5, y+4.5+hop, 5, 3, '#a87850');
+    R(x+2, y+4.5+hop, 4, 0.5, '#c09468');
+    R(x+6, y+2.5+hop, 3, 3, OUT);
+    R(x+6.5, y+3+hop, 2.5, 2.5, '#a87850');
+    R(x+6.5, y+2+hop, 1, 1.5, '#7a5438');
+    R(x+8, y+3.5+hop, 0.5, 0.5, '#161018');
+    R(x+8.5, y+4.5+hop, 0.5, 0.5, '#161018');
+    R(x+0, y+3.5+hop, 1.5, 1, '#a87850');
+    R(x+2, y+7.5+hop+step*0.5, 0.5, 1.5, '#7a5438');
+    R(x+5.5, y+7.5+hop+(1-step)*0.5, 0.5, 1.5, '#7a5438');
+  } else if(companionIdx === 2){
+    R(x+2, y+2+hop, 5, 6.5, OUT);
+    R(x+2.5, y+2.5+hop, 4, 5.5, '#f0c84a');
+    R(x+3, y+2.5+hop, 3, 0.5, '#fff08a');
+    R(x+5.5, y+0.5+hop, 2.5, 2.5, OUT);
+    R(x+6, y+1+hop, 2, 2, '#f0c84a');
+    R(x+7.5, y+1.5+hop, 1, 0.5, '#d07028');
+    R(x+6.5, y+1.5+hop, 0.5, 0.5, '#1c1022');
+    R(x+2.5, y+0+hop, 1, 2, '#f6dc6a');
+    R(x+4, y+0+hop, 1, 2, '#f6dc6a');
+    R(x+3, y+8+hop+step*0.5, 0.5, 1.5, '#a85a20');
+    R(x+5, y+8+hop+(1-step)*0.5, 0.5, 1.5, '#a85a20');
+  } else if(companionIdx === 3){
+    R(x+2, y+3+hop, 5.5, 5.5, OUT);
+    R(x+2.5, y+3.5+hop, 4.5, 4.5, '#f4f4f0');
+    R(x+3, y+3.5+hop, 3, 0.5, '#ffffff');
+    R(x+1, y+3.5+hop, 1.5, 3, '#cfd8f0');
+    R(x+7, y+3.5+hop, 1.5, 3, '#cfd8f0');
+    R(x+4, y+1+hop, 0.5, 2.5, '#5a4030');
+    R(x+3, y+0+hop, 2, 1.5, '#cf3a3a');
+    R(x+3.5, y+5+hop, 0.5, 0.5, '#1c1022');
+    R(x+5.5, y+5+hop, 0.5, 0.5, '#1c1022');
+    R(x+4.5, y+6.5+hop, 1, 0.5, '#8a4040');
+    R(x+3, y+8+hop+step*0.5, 1, 1, '#d8d8d8');
+    R(x+5.5, y+8+hop+(1-step)*0.5, 1, 1, '#d8d8d8');
+  } else if(companionIdx === 4){
+    R(x+1.5, y+4+hop, 6, 4, OUT);
+    R(x+2, y+4.5+hop, 5, 3, '#333040');
+    R(x+5.5, y+2.5+hop, 3, 3, OUT);
+    R(x+6, y+3+hop, 2.5, 2.5, '#333040');
+    R(x+6, y+2+hop, 1, 1.5, '#333040');
+    R(x+7.5, y+2+hop, 1, 1.5, '#333040');
+    R(x+6.5, y+4+hop, 0.5, 0.5, '#f6c453');
+    R(x+8, y+4+hop, 0.5, 0.5, '#f6c453');
+    R(x+8.5, y+4.5+hop, 0.5, 0.5, '#f0d0d0');
+    R(x+0.5, y+3+hop, 1, 3, '#333040');
+    R(x+2.5, y+7.5+hop+step*0.5, 0.5, 1.5, '#1e1a28');
+    R(x+5.5, y+7.5+hop+(1-step)*0.5, 0.5, 1.5, '#1e1a28');
+  } else if(companionIdx === 5){
+    R(x+1.5, y+3.5+hop, 6, 5, OUT);
+    R(x+2, y+4+hop, 5, 4, '#7a45b8');
+    R(x+2.5, y+4+hop, 3.5, 0.5, '#a070d8');
+    R(x+6.5, y+2+hop, 3, 3, OUT);
+    R(x+7, y+2.5+hop, 2.5, 2.5, '#7a45b8');
+    R(x+8.5, y+3.5+hop, 1, 0.5, '#e8d8ff');
+    R(x+7.5, y+3.5+hop, 0.5, 0.5, '#1c1022');
+    R(x+1, y+2.5+hop, 2, 3, '#5fdb8a');
+    R(x+4.5, y+2.5+hop, 2, 3, '#5fdb8a');
+    R(x+0.5, y+5+hop, 1, 1, '#7a45b8');
+    R(x+2.5, y+8+hop+step*0.5, 0.5, 1, '#4c2a78');
+    R(x+5, y+8+hop+(1-step)*0.5, 0.5, 1, '#4c2a78');
+  }
+}
+
+function drawCompanionBehindPlayer(r, x, y, facing, frame, companionIdx){
+  if(!companionIdx) return;
+  const off = facing === 'up' ? [2, 13] :
+              facing === 'left' ? [10, 5] :
+              facing === 'right' ? [-7, 5] : [2, -5];
+  drawCompanionSNES(r, x + off[0], y + off[1], facing, frame, companionIdx);
+}
+
 function drawPlayer(x,y,opts){
   opts = opts || {};
   const facing = opts.facing || 'down';
@@ -4821,6 +5093,7 @@ function drawPlayer(x,y,opts){
   const bob = moving ? (frame===1 ? -0.5 : frame===3 ? -0.5 : 0)
                      : (Math.floor(opts.t||0)%2===0 ? 0 : -0.5);
   const c = extendColors(opts.colors || getCandidateColors());
+  drawCompanionBehindPlayer(frect, x, y, facing, frame, c.companion);
   drawBodySNES(frect, x, y, { facing, frame, moving, oy: bob, c });
   drawAccessorySNES(frect, x, y, bob, c, facing);
 }
@@ -5469,6 +5742,12 @@ const state = {
       hair: '#b87333',
       skin: '#f3c9a0',
       shirt: '#3c7dc0',
+      skinTone: 1,
+      eyeColor: 0,
+      outfitColor: 0,
+      outfitPattern: 0,
+      capeColor: 0,
+      companion: 0,
       accent: '#cf3a3a',
       accessory: 'none'
     }
@@ -5668,7 +5947,7 @@ const ACTIONS = [
       s.flags.sentimentIA = true;
       s.sentimentBonusDays = 2;
       s.legalActs++;
-      feedNews('PLATAFORMA DE SENTIMENTO', 'Detectou onda de raiva entre eleitores 35-50 sobre transporte. Recomendações copiadas pra você.', 'event');
+      feedNews('PLATAFORMA DE SENTIMENTO', 'Detectou onda de raiva entre eleitores 35-50 sobre transporte. Sugestões de post já na sua mão.', 'event');
       return '+0.7% intenção, +2 confiança, posts turbinados por 2 dias';
     }
   },
@@ -5710,7 +5989,7 @@ const ACTIONS = [
   {
     id: 'buyFollowers', area: 'desk', title: 'Comprar pacote de seguidores (PIX, anônimo)',
     tag: 'illegal', energy: 1, cost: 10,
-    desc: 'R$ 100 dá pra comprar mais de mil seguidores reais. Empurra a intenção, mas o algoritmo te marca e o adversário denuncia se cair em jornalista bom.',
+    desc: 'R$ 100 dá pra comprar mais de mil seguidores reais. Empurra a intenção, mas o algoritmo te marca — e se um jornalista bom pegar, vira matéria.',
     apply(s){
       s.money -= 10;
       const followGain = 3000 + Math.floor(Math.random()*2000);
@@ -5746,7 +6025,7 @@ const ACTIONS = [
   {
     id: 'whatsBlast', area: 'desk', title: 'Disparo em massa via WhatsApp "esquentado"',
     tag: 'illegal', energy: 2, cost: 30,
-    desc: 'Comprar 200 números aquecidos por um mês e disparar mensagens calibradas com IA. Pode render bem — ou virar contra você na "vacina" que o eleitor criou pra spam.',
+    desc: 'Comprar 200 números aquecidos por um mês e disparar mensagens calibradas com IA. Pode render bem — ou esbarrar na "vacina" que o eleitor já criou contra spam.',
     apply(s){
       s.money -= 30;
       s.risk += 30;
@@ -5833,7 +6112,7 @@ const ACTIONS = [
   {
     id: 'meetingBig', area: 'sofa', title: 'Reunião com empresário',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você recebe um empresário. Promessas conservadoras, contrato fechado, comprovante de doação dentro do limite eleitoral. Entra dinheiro.',
+    desc: 'Você recebe um empresário. Conversa protocolar, promessa modesta, doação declarada dentro do limite eleitoral. Entra dinheiro.',
     available(s){ return s.meetingsToday < 1; },
     apply(s){
       const got = 25 + Math.floor(Math.random()*15);
@@ -5920,7 +6199,7 @@ const ACTIONS = [
       s.trust -= 2;
       s.risk += 5;
       s.grayActs++;
-      feedNews('PROGRAMA ELEITORAL', 'Você atacou o adversário em rede aberta. Direita política reage, parte da imprensa critica.', 'warn');
+      feedNews('PROGRAMA ELEITORAL', 'Você atacou o adversário em rede aberta. A militância dele reage e parte da imprensa critica.', 'warn');
       return '+1% intenção, -3% adv, +5 risco, -2 confiança';
     },
     onlyOnDays: [3, 7]
@@ -5930,7 +6209,7 @@ const ACTIONS = [
   {
     id: 'streetWalk', area: 'door', title: 'Caminhada e corpo a corpo no bairro',
     tag: 'legal', energy: 3, cost: 0,
-    desc: 'Andar onde a estrutura partidária aponta — feira, bairro popular, comércio. Cansa, mas ninguém substitui isso. Mais de 2 vezes no mesmo dia satura a cobertura.',
+    desc: 'Andar onde a estrutura partidária aponta — feira, bairro popular, comércio. Cansa, mas nada substitui isso. Mais de 2 vezes no mesmo dia satura a cobertura.',
     available(s){ return s.walksToday < 2; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.walksToday*0.5);
@@ -6003,7 +6282,7 @@ const ACTIONS = [
   {
     id: 'streetEvent', area: 'door', title: 'Evento aberto com som de carro',
     tag: 'legal', energy: 3, cost: 15,
-    desc: 'Palanque ao vivo num bairro estratégico. Custa logística, paga em imagem.',
+    desc: 'Palanque ao vivo num bairro estratégico. A logística custa caro, mas rende imagem.',
     apply(s){
       s.money -= 15;
       s.intent += 3;
@@ -6075,7 +6354,7 @@ const ACTIONS = [
   {
     id: 'replyVideo', area: 'phone', title: 'Responder ataque com vídeo curto e honesto',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Sentou, abriu a câmera, falou olhando — sem ataques, só fato. Só disponível DEPOIS de um ataque do adversário no mesmo dia. Limite de 2 por dia.',
+    desc: 'Senta, abre a câmera e fala olhando pra lente — sem ataque, só fato. Só disponível DEPOIS de um ataque do adversário no mesmo dia. Limite de 2 por dia.',
     available(s){ return s.videosToday < 2 && (s.unrepliedAttacks || 0) > 0; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.videosToday*0.4);
@@ -6153,7 +6432,7 @@ const ACTIONS = [
   {
     id: 'platformPost', area: 'phone', title: 'Publicar plano de governo (só 1 vez)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você divulga UMA VEZ, em PDF público, seu plano de governo. Quanto mais cedo publicar, mais ciclos de notícia ele rende — imprensa, redes e debate ficam citando.',
+    desc: 'Você divulga UMA VEZ, em PDF público, seu plano de governo. Quanto mais cedo publicar, mais tempo ele rende notícia — imprensa, redes e debate ficam citando.',
     available(s){ return !s.flags.publishedPlatform; },
     apply(s){
       // Bônus por publicar cedo — vira referência durante toda a campanha
@@ -6302,7 +6581,7 @@ function openHotspot(area){
       title: state.day === 9 ? 'VÉSPERA DA ELEIÇÃO' : 'DIA DA ELEIÇÃO',
       subt: state.day === 9 ? 'Sabatina + capa da OLHA SÓ definem o dia' : 'O debate é tudo',
       body: state.day === 9
-        ? 'A essa altura, praticamente nada mais muda intenção. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
+        ? 'A essa altura, quase nada mais muda a intenção de voto. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
         : 'Hoje só importa o <b>debate ao vivo</b> à noite. Aproxime do <b>🎤 MICROFONE</b> e comece. Resto da agenda não muda mais nada.',
       actions: [{ tag: 'legal', title: 'OK, ENTENDI', cost: 0, energy: 0, primary: true, onClick: closeModal }]
     });
@@ -6316,7 +6595,7 @@ function openHotspot(area){
       const reason = (state.unrepliedAttacks || 0) === 0
         ? 'Nenhum ataque sem resposta agora. Outras ações no celular não mudam mais nada.'
         : (state.videosToday >= 2)
-          ? 'Você já gravou 2 vídeos hoje. Algoritmo cansa — não rende mais.'
+          ? 'Você já gravou 2 vídeos hoje. O algoritmo satura — não rende mais.'
           : 'Sem energia pra gravar resposta agora.';
       openModal({
         title: '📱 CELULAR — VÉSPERA/ELEIÇÃO',
@@ -6806,8 +7085,8 @@ const VIDEO_CAPTIONS = [
   'Ouvi a história da Dona Tereza, do Industrial. 6 meses esperando consulta no posto. Vou ampliar médico de família 24h no meu primeiro mês como prefeito. 🙏',
   'Tô voltando da feira do Bairro Alto. Conversei com 14 famílias sobre transporte. Tarifa zero na periferia entra no plano de governo.',
   'Professor da escola municipal me parou no corredor: "ninguém vê a gente". Reajuste real e merenda integral é compromisso meu pros primeiros 100 dias.',
-  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos criar gabinete de empregabilidade na prefeitura. Conta com a gente.',
-  'Saí da reunião com o Conselho Tutelar do Pirambu. Vou ter secretaria de proteção à criança ativa em 30 dias. Não dá pra esperar.',
+  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos criar um balcão de emprego na prefeitura. Conta com a gente.',
+  'Saí da reunião com o Conselho Tutelar do Pirambu. Em 30 dias a secretaria de proteção à criança tem que estar de pé. Não dá pra esperar.',
   'Falei com o Seu Antonio na padaria. IPTU subiu duas vezes em 4 anos. Vou abrir consulta pública e revisar a tabela. Comércio popular não aguenta mais.'
 ];
 const VIDEO_COMMENTS = [
@@ -6836,7 +7115,7 @@ const REPLY_COMMENTS = [
   ['carolinemc','Salvando esse vídeo pra mandar pros amigos confusos'],
   ['paulo_h','Resposta certa, sem perder a linha'],
   ['nina.r','Esse é o tom que faltava no Congresso'],
-  ['eduardo_b','Linhada. Mas não esquece o que prometeu mês passado'],
+  ['eduardo_b','Elegante. Mas não esquece o que prometeu mês passado'],
   ['carla.s','Compartilhei no grupo da família. Conversa difícil…']
 ];
 const AGENDA_VARIANTS = [
@@ -6881,8 +7160,8 @@ const CRISIS_CAPTIONS = [
   'Acompanhei a notícia do despejo no Heliópolis. Vou pedir audiência na Câmara na próxima semana e levar um projeto de habitação social.',
   'Sobre os repasses federais pra educação que sumiram: vamos brigar pela cidade. Não dá pra calar.',
   'Vi a manchete sobre enchente no bairro X. Drenagem é prioridade nos primeiros 100 dias. Compartilhem essa proposta.',
-  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. Prefeito tem que mediar. Quem fica entre quem governa e quem trabalha é quem foi eleito.',
-  'Caso da menina do Pirambu foi covarde. Vou estruturar Conselho Tutelar municipal forte. Não vai prescrever no nosso silêncio.'
+  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. Mediar esse tipo de conflito é obrigação de quem foi eleito.',
+  'O caso da menina do Pirambu foi covarde. Vou estruturar um Conselho Tutelar forte. Isso não pode morrer em silêncio.'
 ];
 const CRISIS_COMMENTS = [
   ['lima_jurista','Posição firme. E o número do PL fica pra divulgar quando?'],
@@ -7074,7 +7353,7 @@ function showNewspaperOverlay(){
       stamp:'EXCLUSIVO', kind:'good',
       headline: 'CAMINHADA NO BAIRRO REPERCUTE',
       lead: `${cand} foi visto em feira popular e ouviu reclamações sobre transporte público em ${cidade}.`,
-      txt: `Vendedores ambulantes elogiaram o tom direto. Fotos espontâneas viralizaram nas redes sociais. A coluna política avalia como uma das semanas mais consistentes.`,
+      txt: `Vendedores ambulantes elogiaram o tom direto. Fotos espontâneas viralizaram nas redes sociais. A coluna política fala na sua semana mais consistente até aqui.`,
       cond: () => state.walkCount >= 3 && state.trust >= 60
     },
     {
@@ -7095,7 +7374,7 @@ function showNewspaperOverlay(){
       stamp:'EXCLUSIVO', kind:'good',
       headline: 'DEFENDE MÉDICO DE FAMÍLIA 24H',
       lead: `Em entrevista, ${cand} detalhou plano municipal de Atenção Básica integral.`,
-      txt: `O programa foi recebido com apreço por trabalhadores da saúde. Conselho municipal apoiou a iniciativa em nota.`,
+      txt: `O programa foi bem recebido por trabalhadores da saúde. Conselho municipal apoiou a iniciativa em nota.`,
       cond: () => state.videoCount >= 2 && state.trust >= 55
     },
     {
@@ -7110,7 +7389,7 @@ function showNewspaperOverlay(){
       stamp:'POLÍTICA', kind:'neutral',
       headline: 'ENTREVISTA SEM SOBRESSALTOS',
       lead: `${cand} concedeu entrevista de 40 minutos sobre prioridades em ${cidade}.`,
-      txt: `Coluna política classifica o desempenho como "consistente mas sem viés definido". Eleitores indecisos seguem decidindo.`,
+      txt: `Coluna política classifica o desempenho como "consistente, mas sem brilho". Indecisos seguem em cima do muro.`,
       cond: () => true
     }
   ];
@@ -7900,15 +8179,15 @@ function startDay(){
 function getDayIntro(d){
   const intros = {
     1: 'Faltam 10 dias. Empate técnico (você 30%, adversário 30%, indecisos 40%). Caixa: R$ 100k. <i>Energia: 5 ações por dia.</i>',
-    2: 'Pesquisa nova hoje. O ciclo de notícias começa a esquentar.',
-    3: 'Hoje rola horário eleitoral. Bloco abre na TV.',
+    2: 'Pesquisa nova sai hoje. O noticiário começa a esquentar.',
+    3: 'Hoje tem horário eleitoral. Seu bloco pode ir ao ar na TV.',
     4: 'Adversário pode atacar hoje. Quem tem detector de deepfake fica protegido.',
-    5: 'Imprensa procurando entrevistas. Caminhada de rua rende foto.',
+    5: 'Imprensa atrás de entrevista. Caminhada de rua rende foto.',
     6: 'O TSE começa a olhar denúncias acumuladas. Quem fez muita coisa cinza paga.',
     7: 'Segundo bloco do horário eleitoral. Última grande janela de TV antes do debate.',
-    8: 'Faltam 2 dias. Exposições começam a explodir.',
-    9: 'Véspera do debate. Última captação faz sentido. Dorme cedo.',
-    10:'<b>DIA DO DEBATE.</b> Tudo desce pra rede principal. Tudo o que você fez vai pesar.'
+    8: 'Faltam 2 dias. O que ficou mal escondido começa a estourar.',
+    9: 'Véspera do debate. Último dia em que captar dinheiro ainda adianta. Dorme cedo.',
+    10:'<b>DIA DO DEBATE.</b> À noite, na rede principal. Tudo o que você fez até aqui vai pesar.'
   };
   return intros[d] || '';
 }
@@ -7921,7 +8200,7 @@ const MARKETEIRO_LINES = [
   { text: 'Tenho 200 números aquecidos prontos. Manda hoje à noite que viraliza.', area: 'desk' },
   { text: 'Aquele vídeo do adversário... posso "ajustar" a fala. Em 4 horas tá nas redes.', area: 'desk' },
   { text: 'Tô com 40 perfis cadastrados, todos com endereço, idade, profissão. Quer que eu solte hoje?', area: 'desk' },
-  { text: 'Tem um empresário querendo te conhecer. Não declara nada. Pé limpo.', area: 'sofa' },
+  { text: 'Tem um empresário querendo te conhecer. Não declara nada. Sem rastro.', area: 'sofa' },
   { text: 'Pesquisa amanhã mostra empate. Se quiser virar antes, faz o disparo agora.', area: 'desk' },
   { text: 'Tenho cara que enche sua caixa de comentários "Você é o melhor!". R$ 15k.', area: 'phone' },
   { text: '"Análise de sentimento" é nada. Quer mesmo é monitorar o adversário e derrubar conta dele.', area: 'desk' },
@@ -7946,7 +8225,7 @@ const MARKETEIRO_TIPS = [
   { cond: s => s.day === 7 && s.intent < 40,
     text: s => 'Faltam 3 dias. Tua intenção tá em ' + Math.round(s.intent) + '%. Sem virada, é segundo turno na melhor das hipóteses.' },
   { cond: s => s.day === 9 && s.intent < 45,
-    text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã é redenção ou tumba.' },
+    text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã ou você vira o jogo, ou já era.' },
   { cond: s => s.illegalActs === 0 && s.day >= 5 && s.intent < s.oppIntent,
     text: 'Você tá jogando limpo demais e perdendo. Política é guerra suja — quer ganhar ou quer ser exemplo?' },
   { cond: s => s.illegalActs >= 2 && s.risk < 50,
@@ -8028,19 +8307,19 @@ const OPPONENT_ATTACKS = {
   botsAtacando: {
     kind: 'organico',
     headline: 'SEU INSTAGRAM',
-    text: 'Onda de comentários hostis em todos seus posts. Padrão coordenado — bots da oposição.',
+    text: 'Onda de comentários hostis em todos os seus posts. Padrão coordenado — bots da oposição.',
     dmg: { intent:-3, followers:-800 }
   },
   corteEditado: {
     kind: 'organico',
     headline: 'YOUTUBE',
-    text: 'Vídeo editado seu rodando: cortes deturpando uma resposta sua de 1 minuto pra parecer outra coisa.',
+    text: 'Vídeo seu rodando com cortes que fazem uma resposta de 1 minuto parecer outra coisa.',
     dmg: { intent:-5, trust:-3 }
   },
   pesquisaFalsa: {
     kind: 'organico',
     headline: 'PORTAL SUSPEITO',
-    text: 'Pesquisa "Instituto não-registrado" vazou mostrando você 10pp atrás. Falsa, mas tá circulando.',
+    text: 'Pesquisa de um "instituto" que nem existe mostra você 10 pontos atrás. Falsa — mas tá circulando.',
     dmg: { intent:-4 }
   },
   denunciaLaranja: {
@@ -8204,7 +8483,7 @@ const OLHA_SO_SABATINA_ROUND = {
   options: [
     { label: 'PROVA TÉCNICA', kind: 'objection',
       text: '"Isso é um DEEPFAKE fabricado pela campanha adversária. Aqui está o laudo técnico do perito independente que provou manipulação."',
-      d: 9, c: 12, msg: 'Plateia muda. Laudo bate. Adversário tenta rebater e perde o microfone.' },
+      d: 9, c: 12, msg: 'A plateia vira pro seu lado. O laudo fecha. Adversário tenta rebater e perde o microfone.' },
     { label: 'NEGAÇÃO SIMPLES', kind: 'explain',
       text: '"Eu nego. Nunca recebi propina. A revista vai ser processada."',
       d: 2, c: 3 },
@@ -8213,7 +8492,7 @@ const OLHA_SO_SABATINA_ROUND = {
       d: 1, c: -2 },
     { label: 'EVASIVA', kind: 'concede',
       text: '"Vou esclarecer com calma quando passar a eleição."',
-      d: -4, c: -6, msg: 'Evasiva. Plateia interpreta como confissão silenciosa.' }
+      d: -4, c: -6, msg: 'Evasiva. Pra plateia, soou como quem tem algo a esconder.' }
   ]
 };
 
@@ -8456,7 +8735,7 @@ const SABATINA_ROUNDS = [
     youDefault: 'Você sente o golpe.',
     options: [
       { label: 'OBJEÇÃO!', kind: 'objection', text: '"Página é peso de papel, eu tenho prazo e responsável por cada entrega. Cito os três primeiros agora."',
-        d: 5, c: 6, needs: { actsLegal: 4 }, fallback: { d: -2, c: -3, msg: 'Soou hesitação porque você não fez muito até aqui.' } },
+        d: 5, c: 6, needs: { actsLegal: 4 }, fallback: { d: -2, c: -3, msg: 'Soou hesitante — você não tem muita entrega pra citar.' } },
       { label: 'EXPLICAR', kind: 'explain', text: '"Plano público no meu site, com fonte e cronograma. Quantidade não é qualidade."',
         d: 4, c: 4 },
       { label: 'DESVIAR', kind: 'deflect', text: '"O senhor lê os 120? Aposto que nem sua equipe leu."',
@@ -8466,7 +8745,7 @@ const SABATINA_ROUNDS = [
     ]
   },
   {
-    adv: 'O seu adversário aqui foi visto numa reunião sem comprovante com um empresário investigado por sonegação. Quer comentar?',
+    adv: 'O candidato aqui do lado foi visto numa reunião, sem registro nenhum, com um empresário investigado por sonegação. Quer comentar?',
     youDefault: 'A acusação chega com força.',
     options: [
       { label: 'OBJEÇÃO!', kind: 'objection', text: '"Reunião pra falar de gestão pública. Tudo no meu calendário público — basta consultar."',
@@ -8604,7 +8883,7 @@ function chooseSabatina(idx, opt, score){
   const modal = back.querySelector('.modal');
   const advReact = dDelta >= 4 ? 'Adversário recua. A plateia vai junto.'
                 : dDelta >= 0 ? 'Adversário rebate, mas não derruba.'
-                : 'Adversário avança. Tá perdendo o controle da narrativa.';
+                : 'Adversário avança. Você perdeu o fio da resposta.';
   modal.querySelector('.body').innerHTML = `
     <div class="sabatina">
       <div class="sabatina-stage ${opt.kind === 'objection' ? 'sab-flash' : ''}">
@@ -8839,7 +9118,7 @@ function chooseAnswer(opt, timedOut){
     dDelta -= 4; cDelta -= 6;
     bonusMsg.push('⚠️ Risco TSE alto demais pra "minha campanha não usa".');
   }
-  if(timedOut){ bonusMsg.push('⏰ Tempo esgotou — soou hesitação.'); dDelta -= 2; cDelta -= 2; }
+  if(timedOut){ bonusMsg.push('⏰ O tempo estourou — você pareceu hesitar.'); dDelta -= 2; cDelta -= 2; }
 
   debateState.totalD += dDelta;
   debateState.totalC += cDelta;
@@ -8852,9 +9131,9 @@ function chooseAnswer(opt, timedOut){
     'Adversário tenta: "Vocês podem confiar? Olha o histórico."',
   ];
   const advLinesGood = [
-    'Adversário cala. Os jurados anotaram seu ponto.',
+    'Adversário se cala. Os jurados anotaram seu ponto.',
     'Adversário sorri amarelo. Aquela resposta pegou bem.',
-    'Adversário pisca o teleprompter. Recuou da agressividade.',
+    'Adversário consulta o teleprompter. Recuou da agressividade.',
     'Adversário desvia para outro tema — sinal de que sentiu o golpe.',
   ];
   const pool = dDelta >= 3 ? advLinesGood : advLinesBad;
@@ -8868,7 +9147,7 @@ function chooseAnswer(opt, timedOut){
       <div class="debate-reaction">
         <div style="font-size:36px;margin-bottom:8px">${dDelta >= 4 ? '🔥' : dDelta >= 1 ? '👍' : dDelta >= 0 ? '😐' : '🙈'}</div>
         <div>Você respondeu em tom <b>${opt.tone}</b></div>
-        <div style="color:var(--green);margin-top:6px;font-size:18px">+${dDelta} pontos de debate · ${cDelta>=0?'+':''}${cDelta} pontos de confiança</div>
+        <div style="color:${dDelta>=0?'var(--green)':'var(--red)'};margin-top:6px;font-size:18px">${dDelta>=0?'+':''}${dDelta.toFixed(1)} pontos de debate · ${cDelta>=0?'+':''}${cDelta.toFixed(1)} pontos de confiança</div>
         ${bonusMsg.length?`<div style="font-size:15px;color:var(--muted);margin-top:6px">${bonusMsg.join('<br>')}</div>`:''}
         <div style="margin-top:10px;color:var(--blue)">${advLine}</div>
       </div>
@@ -8947,7 +9226,7 @@ function showMarketeiroEmergencia(){
     title: '🎩 MARKETEIRO BATEU NA SUA PORTA',
     subt: 'Última cartada pós-debate. Pega ou larga.',
     body: `<div style="text-align:left;font-size:16px;line-height:1.5">
-      <p style="color:var(--gold);font-style:italic">"O voto ainda tá em aberto. Tenho aqui UMA coisa que pode virar a noite. Mas é arriscado. Se cair, você não se elege e ainda perde o título por 8 anos."</p>
+      <p style="color:var(--gold);font-style:italic">"O voto ainda tá em aberto. Tenho aqui UMA coisa que pode virar a noite. Mas é arriscado. Se cair, você não se elege e ainda fica inelegível por 8 anos."</p>
       <div style="background:#1a0f00;color:#f3c453;padding:10px;border-radius:4px;margin:8px 0;font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.5">"${item.headline}"</div>
       <p style="font-size:14px;color:var(--muted)">${item.text}</p>
       <p style="margin-top:8px"><b style="color:var(--red)">70%</b> de virar cassação imediata (risco TSE → 100) · <b style="color:var(--green)">30%</b> de ganhar +5pp de intenção mas com risco extra.</p>
@@ -9036,20 +9315,20 @@ function endGame(kind){
   const lessons = [];
   // Lições contextuais por resultado
   if(kind === 'cassado'){
-    lessons.push('⚖️ Atalho virou abismo. A Justiça Eleitoral está mais armada pra rastrear IA, bots e disparo em massa.');
+    lessons.push('⚖️ O atalho custou a candidatura. A Justiça Eleitoral está cada vez mais equipada pra rastrear IA, bots e disparo em massa.');
   } else if(kind === 'vitoria1'){
     if(state.illegalActs >= 3 || state.risk > 50){
-      lessons.push('🎉 Vitória, mas no fio. Risco TSE alto ainda pode virar cassação pós-eleição — uma das principais estratégias atuais é justamente contestar resultado por uso ilícito de IA/bots.');
+      lessons.push('🎉 Vitória por um fio. Risco TSE alto ainda pode virar cassação depois da eleição — contestar o resultado por uso ilícito de IA e bots virou estratégia comum.');
     } else if(state.legalActs > state.illegalActs * 3){
       lessons.push('🎉 Vitória limpa no 1º turno. Você venceu sem precisar trapacear — presença real (caminhada, vídeo, plano público) pesou mais que qualquer truque digital.');
     } else {
       lessons.push('🎉 Vitória sólida. Mix equilibrado de presença real e ferramentas digitais.');
     }
   } else if(kind === 'segundoTurno'){
-    lessons.push('🟡 Vai pro 2º turno. Empatou nas urnas — agora a campanha vira sprint de 3 semanas. O que você construiu até aqui é a base.');
+    lessons.push('🟡 Vai pro 2º turno. Ninguém fechou a conta no primeiro — agora vem uma corrida de mais 3 semanas. O que você construiu até aqui é a base.');
   } else if(kind === 'derrota'){
     if(state.illegalActs >= 3){
-      lessons.push('😞 Derrota com risco TSE alto e exposições — a "bala de prata da última semana" virou desorganização da sua própria campanha. Pesquisadores explicam: disparo gera percepção de que "todos estão falando" mesmo quando não há voto real ali.');
+      lessons.push('😞 Derrota com risco TSE alto e escândalos expostos. A aposta suja da última semana bagunçou a sua própria campanha. Pesquisadores explicam: disparo em massa cria a sensação de que "todo mundo tá falando" — mas isso não vira voto.');
     } else if(state.walkCount + state.videoCount < 6){
       lessons.push('😞 Derrota. Adversário foi mais à rua e às redes diretamente. Estrategistas classificam presença constante como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
     } else {
@@ -9065,7 +9344,7 @@ function endGame(kind){
 
   // Hábitos virtuosos
   if(state.walkCount >= 4 && (kind === 'vitoria1' || kind === 'segundoTurno')) {
-    lessons.push('🚶 Você foi à rua de verdade. Caminhada é lento, mas vira voto consolidado e confiança duradoura — vantagem que pesquisas espontâneas captam.');
+    lessons.push('🚶 Você foi à rua de verdade. Caminhada rende devagar, mas vira voto firme e confiança que dura.');
   }
   if(state.videoCount >= 3 && state.trust >= 60){
     lessons.push('🎥 Sua presença "olho no olho" nos vídeos construiu credibilidade. É o que profissionais sérios mais recomendam, segundo a reportagem.');
@@ -9268,8 +9547,12 @@ function buildAvatarRows(){
   const rowsConfig = [
     { prop: 'style',     label: 'CABELO (ESTILO)' },
     { prop: 'hair',      label: 'COR DO CABELO' },
-    { prop: 'skin',      label: 'COR DA PELE' },
-    { prop: 'shirt',     label: 'COR DA CAMISA' },
+    { prop: 'skinTone',  label: 'COR DA PELE' },
+    { prop: 'eyeColor',  label: 'COR DOS OLHOS' },
+    { prop: 'outfitColor', label: 'COR DA ROUPA' },
+    { prop: 'outfitPattern', label: 'PADRÃO DA ROUPA' },
+    { prop: 'capeColor', label: 'CAPA / MANTO' },
+    { prop: 'companion', label: 'COMPANHEIRO' },
     { prop: 'accessory', label: 'ACESSÓRIO / OBJETO' }
   ];
   rowsConfig.forEach(cfg => {
@@ -9283,6 +9566,22 @@ function buildAvatarRows(){
       } else if(cfg.prop === 'accessory'){
         const sel = (state.candidate.look.accessory || 'none') === opt.id ? ' selected' : '';
         return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="accessory" data-val="${opt.id}" aria-label="${opt.id}"><canvas width="32" height="32" data-acc="${opt.id}"></canvas></button>`;
+      } else if(cfg.prop === 'outfitPattern'){
+        const cur = lookIndex(state.candidate.look.outfitPattern, LOOK_OPTIONS.outfitPattern.length-1, 0);
+        const sel = cur === opt.id ? ' selected' : '';
+        return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="outfitPattern" data-val="${opt.id}" aria-label="${opt.label}" title="${opt.label}"><canvas width="32" height="32" data-pattern="${opt.id}"></canvas></button>`;
+      } else if(cfg.prop === 'companion'){
+        const cur = lookIndex(state.candidate.look.companion, LOOK_OPTIONS.companion.length-1, 0);
+        const sel = cur === opt.id ? ' selected' : '';
+        return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="companion" data-val="${opt.id}" aria-label="${opt.label}" title="${opt.label}"><canvas width="32" height="32" data-pet="${opt.id}"></canvas></button>`;
+      } else if(NUMERIC_LOOK_PROPS[cfg.prop]){
+        const fallback = cfg.prop === 'skinTone' ? 1 : 0;
+        const cur = lookIndex(state.candidate.look[cfg.prop], opts.length-1, fallback);
+        const sel = cur === opt.id ? ' selected' : '';
+        const bg = opt.color === 'transparent'
+          ? 'repeating-linear-gradient(45deg, rgba(255,255,255,.18) 0 4px, rgba(0,0,0,.18) 4px 8px)'
+          : opt.color;
+        return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt.id}" style="background:${bg}" aria-label="${opt.label}" title="${opt.label}"></button>`;
       } else {
         const sel = state.candidate.look[cfg.prop] === opt ? ' selected' : '';
         // aria-label genérico e neutro: pra pele usa "tom N" sem nomear etnia;
@@ -9308,10 +9607,20 @@ function buildAvatarRows(){
     cx.imageSmoothingEnabled = false;
     drawAccessoryIcon(cx, c.dataset.acc);
   });
+  rows.querySelectorAll('canvas[data-pattern]').forEach(c => {
+    const cx = c.getContext('2d');
+    cx.imageSmoothingEnabled = false;
+    drawPatternIcon(cx, parseInt(c.dataset.pattern, 10));
+  });
+  rows.querySelectorAll('canvas[data-pet]').forEach(c => {
+    const cx = c.getContext('2d');
+    cx.imageSmoothingEnabled = false;
+    drawCompanionIcon(cx, parseInt(c.dataset.pet, 10));
+  });
   rows.querySelectorAll('.cc-swatch').forEach(s => {
     s.addEventListener('click', () => {
       const prop = s.dataset.prop;
-      const val  = s.dataset.val;
+      const val  = NUMERIC_LOOK_PROPS[prop] ? parseInt(s.dataset.val, 10) : s.dataset.val;
       state.candidate.look[prop] = val;
       buildAvatarRows();
       updateCCPreview();
@@ -9525,6 +9834,38 @@ function drawAccessoryIcon(cx, accId){
     r(px+8, py+3, 2, 4, '#cf3a3a');
   }
 }
+
+function drawPatternIcon(cx, patternId){
+  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  cx.clearRect(0, 0, 32, 32);
+  const c = extendColors(getCandidateColors());
+  const x = 10, y = 8;
+  r(x-1, y, 14, 18, PAL.out);
+  r(x, y+1, 12, 16, c.shirt);
+  r(x, y+1, 12, 2, c.shirtHi);
+  r(x, y+14, 12, 3, c.shirtSh);
+  const mini = extendColors({ ...c, outfitPattern: patternId });
+  drawOutfitPatternSNES(r, x, y-8, 8, mini, 'down');
+  if(patternId === 0){
+    r(x+3, y+8, 6, 1, c.shirtHi);
+  }
+}
+
+function drawCompanionIcon(cx, petId){
+  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
+  cx.clearRect(0, 0, 32, 32);
+  if(!petId){
+    cx.font = 'bold 10px monospace';
+    cx.fillStyle = '#8a8a94';
+    cx.textAlign = 'center';
+    cx.textBaseline = 'middle';
+    cx.fillText('SEM', 16, 13);
+    cx.fillText('PET', 16, 23);
+    return;
+  }
+  drawCompanionSNES(r, 11, 12, 'right', 1, petId);
+}
+
 function renderWallPoster(){
   const c = state.candidate;
   const nameEl = $('wpName'); if(!nameEl) return;
@@ -9577,6 +9918,7 @@ function drawPlayerPreview(cx, look){
   r(0, 38, 32, 0.5, '#d2a36b');
   r(0, 42, 32, 0.5, '#64431f');
   const c = extendColors(look || getCandidateColors());
+  drawCompanionBehindPlayer(r, 10, 14, 'down', 0, c.companion);
   drawBodySNES(r, 10, 14, { facing: 'down', frame: 0, moving: false, oy: 0, c });
   drawAccessorySNES(r, 10, 14, 0, c, 'down');
 }
@@ -10013,18 +10355,30 @@ if(location.hash === '#sprites'){
         drawBodySNES(frect, 8 + i*22, 76, { facing: 'down', frame: 0, moving: false, oy: 0, c: c3 });
         drawAccessorySNES(frect, 8 + i*22, 76, 0, c3, 'down');
       });
-      // linha 4: marketeiro + skins variadas + camisas
+      // linha 4: padrões de roupa + capas + tons/olhos novos
       drawMarketeiro(8, 112);
-      ['#fde7d7','#d4a274','#8a6a4a','#3e2615','#9be099'].forEach((sk, i) => {
-        const c4 = extendColors({ style: ['long','curly','afro','dreads','bun'][i], hair: ['#1a0f24','#cf3a3a','#1a0f24','#3a2010','#f6c453'][i], skin: sk, shirt: ['#e8e0d0','#f6c453','#8a5cf6','#3c7dc0','#e89bc7'][i] });
-        drawBodySNES(frect, 40 + i*24, 112, { facing: 'down', frame: 0, moving: false, oy: 0, c: c4 });
+      LOOK_OPTIONS.outfitPattern.forEach((pat, i) => {
+        const capeOpt = LOOK_OPTIONS.capeColor[i % LOOK_OPTIONS.capeColor.length];
+        const sk = LOOK_OPTIONS.skinTone[i % LOOK_OPTIONS.skinTone.length].color;
+        const oc = LOOK_OPTIONS.outfitColor[i % LOOK_OPTIONS.outfitColor.length].color;
+        const eye = LOOK_OPTIONS.eyeColor[i % LOOK_OPTIONS.eyeColor.length].color;
+        const c4 = extendColors({
+          style: ['long','curly','afro','dreads','bun','fade'][i],
+          hair: ['#1a0f24','#cf3a3a','#1a0f24','#3a2010','#f6c453','#5a5a5a'][i],
+          skin: sk, eye, shirt: oc, outfitPattern: pat.id,
+          capeColor: capeOpt.id, cape: capeOpt.id ? capeOpt.color : null
+        });
+        drawBodySNES(frect, 42 + i*24, 112, { facing: 'down', frame: i%4, moving: true, oy: 0, c: c4 });
       });
-      // linha 5: perfis andando + costas
-      const c5 = extendColors({ style: 'ponytail', hair: '#cf3a3a', skin: '#f3c9a0', shirt: '#3a4a5a' });
+      // linha 5: companions + perfis andando
+      for(let pet = 1; pet <= 5; pet++){
+        drawCompanionSNES(frect, 8 + (pet-1)*18, 152, ['down','up','left','right','down'][pet-1], pet, pet);
+      }
+      const c5 = extendColors({ style: 'ponytail', hair: '#cf3a3a', skin: '#f3c9a0', eye: '#2f6fc0', shirt: '#3a4a5a', outfitPattern: 4, cape: '#264f94', capeColor: 2 });
       for(let fr = 0; fr < 4; fr++){
-        drawBodySNES(frect, 8 + fr*20, 148, { facing: 'right', frame: fr, moving: true, oy: 0, c: c5 });
-        drawBodySNES(frect, 100 + fr*20, 148, { facing: 'left', frame: fr, moving: true, oy: 0, c: c5 });
-        drawBodySNES(frect, 192 + fr*20, 148, { facing: 'up', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 108 + fr*18, 148, { facing: 'right', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 188 + fr*18, 148, { facing: 'left', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 268 + fr*12, 148, { facing: 'up', frame: fr, moving: true, oy: 0, c: c5 });
       }
     };
   });
