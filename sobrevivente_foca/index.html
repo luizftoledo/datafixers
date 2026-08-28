@@ -3476,10 +3476,24 @@ function stopLoop(){
   _currentLoopAudio = null;
   _currentLoopKey = null;
 }
+// Toca uma trilha "de evento" sozinha — pausa a trilha de fundo enquanto
+// ela toca e retoma a trilha de fundo automaticamente quando ela acaba
+// (nunca duas músicas ao mesmo tempo).
 function playOneShot(key){
+  const resumeKey = _currentLoopKey;
+  const resumeAudio = _currentLoopAudio;
+  if(resumeAudio){ try{ resumeAudio.pause(); }catch(_e){} }
   const a = new NativeAudio(MUSIC_TRACKS[key]);
   a.volume = 0.65;
   const _p = a.play(); if(_p && _p.catch) _p.catch(()=>{});
+  const resume = ()=>{
+    a.removeEventListener('ended', resume);
+    // só retoma se a trilha de fundo ainda for a mesma (ninguém trocou nesse meio-tempo)
+    if(resumeAudio && _currentLoopAudio === resumeAudio && _currentLoopKey === resumeKey){
+      const _p2 = resumeAudio.play(); if(_p2 && _p2.catch) _p2.catch(()=>{});
+    }
+  };
+  a.addEventListener('ended', resume);
 }
 
 // Tenta tocar a trilha de abertura assim que a página carrega, direto no menu.
@@ -5911,7 +5925,6 @@ const ACTIONS = [
         const great = Math.random() < 0.3;
         const gain = great ? (16 + Math.random()*6) : (9 + Math.random()*5);
         state.intent += gain;
-        if(great && typeof playOneShot === 'function') playOneShot('special');
         feedNews('LAI', great
           ? 'A resposta chegou completa, com planilhas que ninguém tinha pedido antes. Ótimo material.'
           : 'A resposta chegou dentro do prazo, com documentos que sustentam bem a apuração.', 'good');
@@ -6138,7 +6151,6 @@ const ACTIONS = [
         const gain = 22 + Math.random()*8;
         s.intent += gain;
         s.trust += 4;
-        if(typeof playOneShot === 'function') playOneShot('special');
         feedNews('FONTE ANÔNIMA', 'A fonte entrega documentos reais, com nomes e datas. É o tipo de furo que muda uma carreira.', 'good');
         return `+${gain.toFixed(1)} apuração, +4 confiança`;
       } else {
@@ -6323,16 +6335,67 @@ function maybeShowJornalista(){
 function maybeRandomEvent(){
   if(state.day < 2) return;
   const roll = Math.random();
-  if(roll < 0.18){
-    // Assessor liga reclamando da matéria
-    const spike = 16 + Math.random()*8;
-    state.risk = Math.min(100, state.risk + spike);
-    if(typeof playOneShot === 'function') playOneShot('special');
-    bigNews('📞 ASSESSOR NO TELEFONE', `Um assessor liga reclamando de uma das suas matérias — "isso vai gerar processo". A pressão sobe (+${spike.toFixed(0)}). Talvez seja hora de desabafar com a Carla.`, 'bad');
+  if(roll < 0.18 && state.published > 0){
+    triggerAssessorEvent();
   } else if(roll < 0.32 && !state.anonSourceAvailable){
     state.anonSourceAvailable = true;
     bigNews('☎️ LIGAÇÃO SEM IDENTIFICAÇÃO', 'Uma fonte anônima liga e pede pra te encontrar sozinho(a) no estacionamento do Carrefour. Pode ser um furo — ou uma armadilha. A opção apareceu no celular.', 'event');
   }
+}
+
+// Assessor liga reclamando de uma matéria já publicada — resolve na hora,
+// com uma escolha que realmente importa (blefar sem dado dá muito mais errado).
+function triggerAssessorEvent(){
+  const headline = state.usedHeadlines[state.usedHeadlines.length - 1] || 'sua última matéria';
+  if(typeof playOneShot === 'function') playOneShot('special');
+  openModal({
+    title: '📞 ASSESSOR NO TELEFONE',
+    subt: 'Reclamação sobre matéria publicada',
+    body: `Um assessor liga alterado sobre "<b>${headline}</b>": "Isso vai gerar processo, vocês não checaram direito." Como você responde <b>agora</b>?`,
+    actions: [
+      {
+        tag: 'legal', title: 'Ser assertivo, citando os dados que você apurou',
+        subtitle: 'Só funciona de verdade se sua apuração estiver sólida.',
+        cost: 0, energy: 0,
+        onClick: ()=>{
+          closeModal();
+          const solid = state.trust >= 45;
+          if(solid){
+            state.risk = Math.min(100, state.risk + 5);
+            feedNews('ASSESSOR', 'Você cita a fonte e o documento na hora. O assessor recua, meio sem graça.', 'good');
+            updateHUD();
+          } else {
+            state.risk = Math.min(100, state.risk + 22);
+            state.trust = Math.max(0, state.trust - 6);
+            feedNews('ASSESSOR', 'Você tenta se impor, mas não tem o dado na ponta da língua. Fica evidente — o assessor escala pro editor.', 'bad');
+            updateHUD();
+            setTimeout(showCarlaScolding, 1000);
+          }
+        }
+      },
+      {
+        tag: 'gray', title: 'Pedir desculpas e prometer verificar de novo',
+        subtitle: 'Seguro, mas mostra fragilidade — pressão sobe um pouco mais.',
+        cost: 0, energy: 0,
+        onClick: ()=>{
+          closeModal();
+          state.risk = Math.min(100, state.risk + 10);
+          feedNews('ASSESSOR', 'Você pede desculpas e promete conferir tudo de novo. Ele desliga irritado, mas sem escalar.', 'warn');
+          updateHUD();
+        }
+      }
+    ]
+  });
+}
+function showCarlaScolding(){
+  state.risk = Math.min(100, state.risk + 8);
+  updateHUD();
+  openModal({
+    title: '🛋 SALA DA CARLA',
+    subt: 'Você foi chamado(a) na sala dela',
+    body: 'Carla fecha a porta: "Isso não pode acontecer de novo — confere tudo antes de sair na defensiva." A conversa é dura, mas ela te ajuda a organizar os próximos passos.',
+    actions: [{ tag: 'legal', title: 'OK', cost: 0, energy: 0, primary: true, onClick: closeModal }]
+  });
 }
 function openMarketeiroModal(){
   const isLegal = Math.random() < 0.5;
@@ -6454,7 +6517,6 @@ function doPublishRisky(){
     state.intent = Math.max(0, state.intent - threshold*0.5);
     state.risk = Math.min(100, state.risk + 15);
     state.trust = Math.max(0, state.trust - 8);
-    if(typeof playOneShot === 'function') playOneShot('special');
     bigNews('😡 EDITOR IRRITADO', 'Você publicou sob pressão e saiu errado — furo raso, fonte mal checada. O editor cobra na sua frente. Pressão dispara.', 'bad');
     sfx('statDown');
   }
@@ -9700,6 +9762,10 @@ const TUTORIAL_STEPS = [
     text: 'Aqui aparecem sua <b>apuração</b> acumulada, a <b>pressão</b>, a <b>confiança</b> da redação em você, a semana atual, a <b>energia</b> semanal e seu bolso. O objetivo: publicar o máximo de matérias sem estourar a pressão.' },
   { target: '#scene', title: 'A REDAÇÃO',
     text: 'Ande pela sala com <b>WASD/setas</b> (ou D-pad no celular) e fique perto de objetos como a mesa, o celular, o mural e a porta pra abrir ações.' },
+  { target: null, title: 'COMO PUBLICAR UMA MATÉRIA',
+    text: 'A partir da 2ª semana você recebe uma <b>editoria</b> diferente a cada semana — é ela que define o tipo de matéria que você pode publicar. Mas <b>só dá pra publicar a partir da 4ª semana</b>. Antes disso, vá só <b>apurando pontos</b> nas ações da mesa, do celular e da rua.' },
+  { target: '#mapLabels .ml[data-id="board"]', title: 'O MURAL',
+    text: 'Só dá pra <b>publicar a partir da semana 4</b>. Quando achar que tem apuração suficiente, vá até o mural: se a pressão estiver controlada, publica sem problema; se estiver alta demais, só dá pra publicar no risco — 50% de chance de sair errado e o editor cobrar na sua frente.' },
   { target: '#restBtn', title: 'IR PRA CASA — ATALHO',
     text: 'Clicando no <b>💤</b> aqui em cima você encerra a semana de qualquer lugar e vai descansar.' },
   { target: '#soundBtn', title: 'SOM',
