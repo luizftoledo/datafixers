@@ -55,6 +55,8 @@ hora_instagram = 'https://www.instagram.com/ahoradosul/p/DdogKbBFsLH/'
 hora_fb_main = 'https://www.facebook.com/ahoradosul/posts/pfbid02JjQ6vtqveGpqPRebTTaxKKsYe7GdYreUo35UWHvjCGhtSasFrScVsQ6eDyt5SSGcl'
 hora_fb_link = 'https://www.facebook.com/ahoradosul/posts/pfbid0DryxU1zuK37UVzmGs8Qfh3WXDxLHyPGGF9rN6cRi7PAGwA2ZA8zmDGRU32qwZkfSl'
 espeto_url = 'https://espetocorrido.com.br/luto-72/'
+group_url = 'https://www.facebook.com/groups/2733586010195934/posts/4654538318100684/'
+radio_url = 'https://www.facebook.com/radiotupanci/posts/pfbid035dJ8aLdTbhjBmhqgZdj35wWeY1dJNLXcYhXzi46dKfnpRA9JjiyA1FS6esTiw1NPl'
 governor_url = 'https://x.com/EduardoLeite_/status/2102783199734644976'
 mdb_url = 'https://mdb-rs.org.br/?publicacao=mdb_rs_lamenta_falecimento_do_emedebista_jose_maria_carvalho_da_silva-25802'
 
@@ -102,6 +104,8 @@ sources = [
     ('A Hora do Sul · Facebook, notícia principal', hora_fb_main),
     ('A Hora do Sul · Facebook, link da reportagem', hora_fb_link),
     ('Espeto Corrido · comentários', espeto_url),
+    ('Antiga Pelotas · Facebook', group_url),
+    ('Rádio Tupanci · Facebook', radio_url),
 ]
 
 # Comentários adicionais carregados diretamente na publicação do Instagram.
@@ -147,10 +151,14 @@ voices = [tuple(row) for row in json.loads(OUT.with_name('comments_data.json').r
 # distribuição estável, independente da ordem em que foram coletadas.
 featured_order = [
     'Paulo Souza',
+    'Joel Rocha',
     'humbertomoralescavalcanti',
+    'Luiz Antonio Ribeiro Medeiros',
     'Ari DA Silva Caldeira',
     'Ruthe Nudilemom Peters',
     'Vilmar Canez',
+    'Luiz Carlos Gautério Pinheiro',
+    'Volne Dilli',
     'Geraldo Bohns',
     'Eduardo Krüger',
     'Mara Fredes',
