@@ -143,17 +143,39 @@ instagram_extra = [
 
 voices = [tuple(row) for row in json.loads(OUT.with_name('comments_data.json').read_text(encoding='utf-8'))]
 
-# O conjunto começa com recordações pessoais e intercala notas de autoridades.
-featured_names = {'Ari DA Silva Caldeira', 'Ruthe Nudilemom Peters', 'Mara Fredes', 'Geraldo Bohns', 'Rubisnei Fonseca', 'Vilmar Canez', 'Paulo Souza', 'Fernando Costa Cavalheiro', 'humbertomoralescavalcanti'}
-voices.sort(key=lambda x: (0 if x[0] in featured_names else 1, hashlib.sha1((x[0]+x[1]+x[2]).encode()).hexdigest()))
+# Recordações com detalhes pessoais abrem a nuvem; as demais conservam a
+# distribuição estável, independente da ordem em que foram coletadas.
+featured_order = [
+    'Paulo Souza',
+    'humbertomoralescavalcanti',
+    'Ari DA Silva Caldeira',
+    'Ruthe Nudilemom Peters',
+    'Vilmar Canez',
+    'Geraldo Bohns',
+    'Eduardo Krüger',
+    'Mara Fredes',
+    'Rubisnei Fonseca',
+    'Maria Alice Herrmann',
+]
+featured_rank = {name: rank for rank, name in enumerate(featured_order)}
+def voice_rank(voice):
+    author, message, url, *_ = voice
+    rank = featured_rank.get(author, len(featured_order))
+    if author == 'humbertomoralescavalcanti' and 'grande amigo do meu pai' not in message:
+        rank = len(featured_order)
+    return rank, hashlib.sha1((author + message + url).encode()).hexdigest()
+
+voices.sort(key=voice_rank)
 
 
-def voice_card(author, message, url, source, reply=False, official=False, exact_quote=True):
+def voice_card(author, message, url, source, reply=False, official=False, exact_quote=True, featured=False):
     digest = int(hashlib.sha1((author + message + url).encode()).hexdigest()[:4], 16)
     rot = (digest % 5) - 2
     long = len(message) > 95
     size = 'large' if official or long else ('tiny' if len(message) < 25 else 'medium')
     kind = ' official' if official else ' voice'
+    if featured:
+        kind += ' featured'
     label = 'Manifestação integral' if official and exact_quote else ('Síntese da manifestação' if official else source)
     if official and exact_quote:
         excerpt = 'Recebi com profundo pesar a notícia da morte do professor e ex-prefeito de Pelotas José Maria Carvalho da Silva, aos 91 anos. José Maria dedicou parte importante de sua vida ao serviço público e à educação.'
@@ -171,12 +193,12 @@ def voice_card(author, message, url, source, reply=False, official=False, exact_
             f'<span class="bubble-author">{escape(author)} <span aria-hidden="true">↗</span></span></a>')
 
 cards = []
-official_positions = {0: 0, 8: 1, 35: 2, 80: 3, 125: 4}
+official_positions = {3: 0, 20: 1, 45: 2, 90: 3, 135: 4}
 for idx, voice in enumerate(voices):
     if idx in official_positions:
         author, message, url = highlights[official_positions[idx]]
         cards.append(voice_card(author, message, url, '', official=True, exact_quote=official_positions[idx] == 0))
-    cards.append(voice_card(*voice))
+    cards.append(voice_card(*voice, featured=idx < len(featured_order)))
 cloud_html = '\n'.join(cards)
 source_links = '\n'.join(f'<li><a href="{escape(u, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(label)} <span aria-hidden="true">↗</span></a></li>' for label, u in sources)
 
@@ -207,6 +229,7 @@ OUT.write_text(f'''<!doctype html>
     .bubble.tiny {{ width: 176px; min-height: 94px; }}
     .bubble.medium {{ width: 260px; }}
     .bubble.large {{ width: 355px; min-height: 155px; }}
+    .bubble.featured {{ background: #fff1df; border-color: #d9ad8f; box-shadow: 0 7px 23px #60452e19; }}
     .bubble.official {{ width: 430px; min-height: 180px; border-color: #72554a; background: #693f3d; color: #fff8ee; box-shadow: 0 10px 25px #57393430; transform: none; }}
     .bubble.official:nth-child(even) {{ background: #76513f; }}
     .bubble.official:hover, .bubble.official:focus-visible {{ transform: translateY(-5px); }}
