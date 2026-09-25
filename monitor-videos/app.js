@@ -17,7 +17,13 @@ function render() {
   const total=key=>rows.reduce((n,r)=>n+(r.now?.[key]??0),0);
   const diff=key=>rows.reduce((n,r)=>n+(delta(r.now?.[key],r.prior?.[key])??0),0);
   const complete=key=>previous&&rows.some(r=>delta(r.now?.[key],r.prior?.[key])!=null);
-  const metrics=[['Vídeos monitorados',rows.filter(r=>r.now).length,`${videos.length} no catálogo`],['Visualizações / reproduções',rows.some(r=>r.now?.views!=null)?total('views'):null,complete('views')?`${diff('views')>=0?'+':''}${number(diff('views'))} desde ${dateLabel(previous)}`:'Sem comparação anterior'],['Curtidas acumuladas',rows.some(r=>r.now?.likes!=null)?total('likes'):null,complete('likes')?`${diff('likes')>=0?'+':''}${number(diff('likes'))} desde ${dateLabel(previous)}`:'Sem comparação anterior'],['Comentários acumulados',rows.some(r=>r.now?.comments!=null)?total('comments'):null,complete('comments')?`${diff('comments')>=0?'+':''}${number(diff('comments'))} desde ${dateLabel(previous)}`:'Sem comparação anterior']];
+  const metric=(label,key)=>{
+    const available=rows.filter(r=>r.now?.[key]!=null).length;
+    const comparable=rows.filter(r=>delta(r.now?.[key],r.prior?.[key])!=null).length;
+    const change=complete(key)?`${diff(key)>=0?'+':''}${number(diff(key))} desde ${dateLabel(previous)} (${comparable} comparáveis)`:'Sem comparação anterior';
+    return [label,available?total(key):null,`${change} · dados em ${available}/${rows.length} vídeos`];
+  };
+  const metrics=[['Vídeos monitorados',rows.filter(r=>r.now).length,`${videos.length} no catálogo`],metric('Visualizações / reproduções','views'),metric('Curtidas acumuladas','likes'),metric('Comentários acumulados','comments')];
   const summary=el('summary');summary.replaceChildren();for(const [label,value,sub] of metrics){const card=node('div','metric');card.append(node('div','label',label),node('strong','value',value==null?'—':number(value)),node('div','delta',sub));summary.append(card);}
   const sort=el('sort').value;
   rows.sort((a,b)=>sort==='title'?(a.now?.title||a.v.portfolioLabel).localeCompare(b.now?.title||b.v.portfolioLabel):sort==='growth'?(delta(b.now?.views,b.prior?.views)??-Infinity)-(delta(a.now?.views,a.prior?.views)??-Infinity):(b.now?.[sort]??-Infinity)-(a.now?.[sort]??-Infinity));
