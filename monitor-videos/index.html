@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Monitor de publicações em vídeo · Datafixers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="https://datafixers.org/">data<span>fixers</span></a><span>Monitor de publicações em vídeo</span><a href="https://luizftoledo.github.io/#short-videos" target="_blank" rel="noopener">Ver portfólio ↗</a></header>
+  <main>
+    <div class="heading"><div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>Vídeos publicados</h1><p class="lede">Visualizações ou reproduções, curtidas e comentários dos vídeos reunidos no portfólio.</p></div><div class="stamp" id="stamp">Aguardando dados</div></div>
+    <div class="notice" id="notice" hidden></div>
+    <section class="controls" aria-label="Filtros"><label>Plataforma <select id="platform"><option value="all">Todas</option><option value="youtube">YouTube</option><option value="instagram">Instagram</option></select></label><label>Data do snapshot <select id="date"></select></label><label>Buscar vídeo <input id="search" type="search" placeholder="Título ou link"></label></section>
+    <section class="summary" id="summary" aria-label="Resumo"></section>
+    <div class="layout"><section class="panel videos-panel"><div class="panel-head"><div><h2>Publicações</h2><p id="video-count"></p></div><select id="sort" aria-label="Ordenar vídeos"><option value="views">Mais visualizados</option><option value="growth">Mais visualizações desde a coleta anterior</option><option value="comments">Mais comentários</option><option value="title">Título</option></select></div><div class="table-wrap"><table><thead><tr><th>Vídeo</th><th>Visualizações / reproduções<br><small>total / variação</small></th><th>Curtidas<br><small>total / variação</small></th><th>Comentários<br><small>total / variação</small></th></tr></thead><tbody id="videos"></tbody></table></div></section><aside class="panel comment-panel"><div class="panel-head"><div><h2>Comentários capturados</h2><p id="comment-count"></p></div><select id="comment-filter" aria-label="Filtrar comentários"><option value="new">Novos na última coleta</option><option value="all">Todos capturados</option></select></div><div id="comments" class="comments"></div></aside></div>
+    <footer><p><strong>Como ler:</strong> “Variação” é a diferença entre dois totais coletados, não uma medida exata de eventos no dia. A contagem do YouTube é de visualizações; a do Instagram usa reproduções quando disponíveis. Essas medidas não representam pessoas únicas e não são diretamente comparáveis. Os totais somam vídeos e podem incluir a mesma pessoa mais de uma vez.</p><p>Comentários exibidos: comentários públicos recentes capturados pela API do YouTube e, quando disponível, pela Apify no Instagram. A coleta pode ser parcial, inclusive para respostas e posts com restrições. Dados históricos começam na primeira coleta. <a href="https://github.com/luizftoledo/datafixers/tree/main/monitor-videos" target="_blank" rel="noopener">Fonte e metodologia ↗</a></p></footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
