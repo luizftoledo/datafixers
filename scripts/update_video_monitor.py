@@ -26,6 +26,9 @@ def get_json(url, headers=None, payload=None, timeout=45):
         with urlopen(request, timeout=timeout) as response:
             return json.load(response)
     except HTTPError as error:
+        detail = error.read(1000).decode('utf-8', 'replace')
+        if 'Monthly usage hard limit exceeded' in detail:
+            raise RuntimeError('Limite mensal da conta Apify atingido') from error
         raise RuntimeError(f'HTTP {error.code} from source API') from error
     except URLError as error:
         raise RuntimeError(str(error.reason)) from error
