@@ -2,7 +2,13 @@ name: Atualizar monitor de vídeos
 on:
   schedule:
     - cron: '17 8 * * *'
+    - cron: '17 9 * * 1'
   workflow_dispatch:
+    inputs:
+      discover:
+        description: Buscar novos vídeos da BBC antes da coleta
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -13,6 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Buscar vídeos novos nas legendas da BBC
+        if: github.event.schedule == '17 9 * * 1' || (github.event_name == 'workflow_dispatch' && inputs.discover)
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python3 scripts/discover_video_monitor.py
       - name: Coletar métricas e comentários públicos
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -23,7 +35,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add monitor-videos/data.json
+          git add monitor-videos/videos.json monitor-videos/data.json
           if ! git diff --cached --quiet; then
             git commit -m 'Atualiza métricas diárias dos vídeos'
             git push

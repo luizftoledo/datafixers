@@ -3,6 +3,7 @@
 import datetime as dt
 import json
 import os
+import time
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -31,11 +32,13 @@ def get_json(url, headers=None, payload=None, timeout=45):
 
 def youtube(catalog, api_key):
     videos = [v for v in catalog if v['platform'] == 'youtube']
-    ids = ','.join(v['platformId'] for v in videos)
-    data = get_json('https://www.googleapis.com/youtube/v3/videos?' + urlencode({
-        'part': 'snippet,statistics', 'id': ids, 'key': api_key, 'maxResults': 50
-    }))
-    found = {item['id']: item for item in data.get('items', [])}
+    found = {}
+    for start in range(0, len(videos), 50):
+        ids = ','.join(v['platformId'] for v in videos[start:start+50])
+        data = get_json('https://www.googleapis.com/youtube/v3/videos?' + urlencode({
+            'part': 'snippet,statistics', 'id': ids, 'key': api_key, 'maxResults': 50
+        }))
+        found.update({item['id']: item for item in data.get('items', [])})
     result, comments = {}, []
     for video in videos:
         item = found.get(video['platformId'])
@@ -83,18 +86,29 @@ def to_number(value):
         return None
 
 
-def apify_actor(actor, token, actor_input):
+def apify_actor(actor, token, actor_input, timeout_seconds=900):
     actor_id = actor.replace('/', '~')
-    url = f'https://api.apify.com/v2/acts/{actor_id}/run-sync-get-dataset-items'
-    return get_json(url, {'Authorization': 'Bearer ' + token},
-                    json.dumps(actor_input).encode(), timeout=320)
+    headers = {'Authorization': 'Bearer ' + token}
+    started = get_json(f'https://api.apify.com/v2/acts/{actor_id}/runs', headers,
+                       json.dumps(actor_input).encode())['data']
+    run_id = started['id']
+    for _ in range(max(1, timeout_seconds // 10)):
+        status = get_json('https://api.apify.com/v2/actor-runs/' + run_id, headers)['data']
+        if status['status'] == 'SUCCEEDED':
+            return get_json('https://api.apify.com/v2/datasets/' +
+                            status['defaultDatasetId'] + '/items?clean=true', headers)
+        if status['status'] in {'FAILED', 'ABORTED', 'TIMED-OUT'}:
+            raise RuntimeError(f'Apify {actor}: execução {status["status"]}')
+        time.sleep(10)
+    raise RuntimeError(f'Apify {actor}: execução excedeu {timeout_seconds // 60} minutos')
 
 
 def instagram(catalog, token):
     videos = [v for v in catalog if v['platform'] == 'instagram']
     urls = [v['url'] for v in videos]
-    posts = apify_actor('apify/instagram-post-scraper', token,
-                        {'username': urls, 'resultsLimit': 1, 'dataDetailLevel': 'basicData'})
+    posts = apify_actor('apify/instagram-reel-scraper', token,
+                        {'username': urls, 'includeTranscript': False,
+                         'includeDownloadedVideo': False})
     by_code = {v['platformId']: v for v in videos}
     result = {}
     for post in posts:
@@ -103,7 +117,8 @@ def instagram(catalog, token):
         if not video:
             continue
         result[video['id']] = {
-            'title': (post.get('caption') or video['portfolioLabel']).split('\n')[0][:140],
+            'title': next((line.strip() for line in (post.get('caption') or '').splitlines() if line.strip()),
+                          video['portfolioLabel'])[:140],
             'views': to_number(post.get('videoPlayCount') if post.get('videoPlayCount') is not None else post.get('videoViewCount')),
             'likes': to_number(post.get('likesCount')),
             'comments': to_number(post.get('commentsCount')),
