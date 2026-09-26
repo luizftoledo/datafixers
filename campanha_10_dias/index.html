@@ -4,12 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>10 dias — jogo eleitoral · edição SNES</title>
-<meta name="description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Use IA, neurobots, deepfake, comício na rua e plano público — mas cuidado: o TSE está de olho. Inspirado em reportagem da BBC News Brasil." />
+<meta name="description" content="Você disputa a prefeitura e tem 10 dias pra virar a eleição. Use IA, neurobots, deepfake, comício na rua e plano público — mas cuidado: a Justiça Eleitoral está de olho. Inspirado em reportagem da BBC News Brasil." />
 <!-- Open Graph (WhatsApp, Telegram, Facebook, LinkedIn) -->
 <meta property="og:type"        content="website" />
 <meta property="og:site_name"   content="Data Fixers" />
 <meta property="og:title"       content="10 dias — jogo eleitoral" />
-<meta property="og:description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Use (ou não) IA, neurobots, deepfake e ferramentas do submundo digital. Mas cuidado: o TSE está de olho. Inspirado em reportagem da BBC News Brasil." />
+<meta property="og:description" content="Você disputa a prefeitura e tem 10 dias pra virar a eleição. Use (ou não) IA, neurobots, deepfake e ferramentas do submundo digital. Mas cuidado: a Justiça Eleitoral está de olho. Inspirado em reportagem da BBC News Brasil." />
 <meta property="og:url"         content="https://datafixers.org/campanha_10_dias/" />
 <meta property="og:image"       content="https://datafixers.org/campanha_10_dias/assets/cover.png" />
 <meta property="og:image:width"  content="1024" />
@@ -18,7 +18,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card"        content="summary_large_image" />
 <meta name="twitter:title"       content="10 dias — jogo eleitoral" />
-<meta name="twitter:description" content="Você é candidato a prefeito e tem 10 dias pra virar a eleição. Tom de campanha real com IA, neurobots e deepfake. Inspirado em reportagem da BBC News Brasil." />
+<meta name="twitter:description" content="Você disputa a prefeitura e tem 10 dias pra virar a eleição. Tom de campanha real com IA, neurobots e deepfake. Inspirado em reportagem da BBC News Brasil." />
 <meta name="twitter:image"       content="https://datafixers.org/campanha_10_dias/assets/cover.png" />
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet" />
 <style>
@@ -2262,10 +2262,10 @@
       <div class="value" id="hudOpp" style="color:#ff7b7b">30</div>
       <div class="bar"><div id="hudOppBar" style="width:30%;background:#ff7b7b"></div></div>
     </div>
-    <div class="stat money" id="hud-money"><div class="label">CAIXA R$</div><div class="value" id="hudMoney">100k</div></div>
-    <div class="stat followers" id="hud-followers"><div class="label">📱 SEGUIDORES</div><div class="value" id="hudFollowers">3.5k</div></div>
+    <div class="stat money" id="hud-money"><div class="label">CAIXA R$</div><div class="value" id="hudMoney">55k</div></div>
+    <div class="stat followers" id="hud-followers"><div class="label">📱 SEGUIDORES</div><div class="value" id="hudFollowers">3,5k</div></div>
     <div class="stat risk" id="hud-risk"><div class="label">RISCO TSE</div><div class="value" id="hudRisk">0</div><div class="bar"><div id="hudRiskBar" style="width:0%"></div></div></div>
-    <div class="stat trust" id="hud-trust" style="cursor:help" title="Confiança ALTA (>70): respostas honestas no debate/sabatina pegam mais, ataques rendem menos dano, custos diários menores. Confiança BAIXA (<40): promessas no debate caem mal e eleitor desconfia. Clique pra ver detalhes."><div class="label">CONFIANÇA <span style="font-size:9px;color:var(--gold);opacity:0.85">ⓘ</span></div><div class="value" id="hudTrust">60</div><div class="bar"><div id="hudTrustBar" style="width:60%;background:#7dd87d"></div></div></div>
+    <div class="stat trust" id="hud-trust" style="cursor:help" title="Confiança ALTA: respostas honestas no debate pegam mais e custos diários caem. Confiança BAIXA: entrevistas saem negativas, promessas no debate caem mal e indecisos migram pro adversário. Clique pra ver detalhes."><div class="label">CONFIANÇA <span style="font-size:9px;color:var(--gold);opacity:0.85">ⓘ</span></div><div class="value" id="hudTrust">60</div><div class="bar"><div id="hudTrustBar" style="width:60%;background:#7dd87d"></div></div></div>
     <div class="stat energy" id="hud-energy"><div class="label">ENERGIA</div><div class="value" id="hudEnergy">5/5</div></div>
     <div class="stat mode-badge" id="hud-mode" title="Modo de dificuldade"><div class="label">MODO</div><div class="value" id="hudMode" style="font-size:12px;letter-spacing:0">Normal</div></div>
   </div>
@@ -2315,7 +2315,7 @@
   <!-- Tela de criação do candidato -->
   <div class="cover" id="charCreate" style="display:none">
     <h2>QUEM É VOCÊ?</h2>
-    <p class="lead">Crie seu candidato a prefeito. Você tem 10 dias pra fazer seu nome valer alguma coisa na cidade.</p>
+    <p class="lead">Crie seu personagem para disputar a prefeitura. Você terá 10 dias pra fazer seu nome valer alguma coisa na cidade.</p>
 
     <!-- autocomplete="off" + name="search" + data-form-type="other" pra evitar o Chrome
          oferecer cartão de crédito (o id antigo "ccNumber" disparava esse heurístico) -->
@@ -2383,12 +2383,12 @@
       </div>
     </div>
     <p class="lead">
-      Você é candidato a prefeito. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
+      Você disputa a prefeitura. As pesquisas mostram empate técnico com o adversário. Faltam <b>10 dias</b>.
       Você decide o que fazer com seu tempo, seu dinheiro e a tecnologia disponível —
       inclusive ferramentas de IA, serviços do "submundo digital" e estratégias que desafiam a lei eleitoral.
     </p>
     <p class="lead">
-      Mas cuidado: o <b>TSE</b> está de olho. Você pode vencer, perder ou ser <b>cassado</b>.
+      Mas cuidado: a <b>Justiça Eleitoral</b> está de olho. Você pode vencer, perder ou ter a <b>candidatura cassada</b>.
     </p>
     <p class="lead" style="color:var(--muted);font-size:14px;max-width:760px;margin-top:10px">
       Inspirado na reportagem
@@ -2440,7 +2440,7 @@
       <div class="ph-header">
         <div class="ph-avatar"></div>
         <div>
-          <div class="ph-name">candidato22 <span style="color:#3a90d8">✓</span></div>
+          <div class="ph-name">campanha22 <span style="color:#3a90d8">✓</span></div>
           <div class="ph-meta">Agora · 🌍 Público</div>
         </div>
       </div>
@@ -2462,12 +2462,12 @@
   <div class="news-paper" id="newsPaper">
     <div class="news-head">
       <div class="news-name" id="newsName">JORNAL DE SÃO PAULO</div>
-      <div class="news-meta">Edição dominical · Política</div>
+      <div class="news-meta">Edição impressa · Política</div>
     </div>
     <div class="news-body">
       <div class="news-photo">
         <div class="news-portrait" id="newsPortrait"></div>
-        <div class="news-caption" id="newsCaption">CANDIDATO 22</div>
+        <div class="news-caption" id="newsCaption">CAMPANHA 22</div>
       </div>
       <div class="news-content">
         <h2 class="news-headline" id="newsHeadline"></h2>
@@ -3392,11 +3392,12 @@ const MusicPlayer = (() => {
     _cancelFade(slot);
     const audio = slot.audio;
     const from = audio.volume;
-    if(ms <= 0){ audio.volume = to; onDone && onDone(); return; }
+    const cl = v => Math.max(0, Math.min(1, v));
+    if(ms <= 0){ audio.volume = cl(to); onDone && onDone(); return; }
     const t0 = performance.now();
     function step(now){
       const t = Math.min(1, (now - t0) / ms);
-      audio.volume = from + (to - from) * t;
+      audio.volume = cl(from + (to - from) * t);
       if(t < 1){ slot._raf = requestAnimationFrame(step); }
       else     { slot._raf = null; onDone && onDone(); }
     }
@@ -4309,52 +4310,10 @@ const LOOK_OPTIONS = {
     '#8a6a4a', '#6a4a30', '#5a3a20', '#3e2615', '#2a1810',  // escuros → muito escuros
     '#9be099', '#a890ff', '#88c8ff'              // fantasia (verde, roxo, azul)
   ],
-  skinTone: [
-    { id:0, color:'#fde7d7', label:'muito claro' },
-    { id:1, color:'#f3c9a0', label:'claro' },
-    { id:2, color:'#c89968', label:'medio' },
-    { id:3, color:'#8a6a4a', label:'moreno' },
-    { id:4, color:'#4a2c1a', label:'escuro' }
-  ],
-  eyeColor: [
-    { id:0, color:'#4a2a14', label:'castanho' },
-    { id:1, color:'#2f8a52', label:'verde' },
-    { id:2, color:'#2f6fc0', label:'azul' },
-    { id:3, color:'#7f8b91', label:'acinzentado' },
-    { id:4, color:'#b87822', label:'ambar' },
-    { id:5, color:'#7a45b8', label:'violeta' },
-    { id:6, color:'#15131a', label:'preto' }
-  ],
   shirt:  ['#a8a8b0', '#3a4a5a', '#5a5a64', '#7a6a50', '#9a8c6a', '#4a5a4a',
            '#5a4030', '#e8e0d0',
            '#3c7dc0', '#cf3a3a', '#f6c453', '#5fb872', '#e89bc7', '#8a5cf6',
            '#1a1a1a', '#ffffff'],
-  outfitColor: [
-    { id:0, color:'#3c7dc0', label:'azul' },
-    { id:1, color:'#cf3a3a', label:'vermelho' },
-    { id:2, color:'#f6c453', label:'amarelo' },
-    { id:3, color:'#5fb872', label:'verde' },
-    { id:4, color:'#8a5cf6', label:'violeta' },
-    { id:5, color:'#e89bc7', label:'rosa' },
-    { id:6, color:'#3a4a5a', label:'grafite' },
-    { id:7, color:'#e8e0d0', label:'claro' }
-  ],
-  outfitPattern: [
-    { id:0, label:'liso' }, { id:1, label:'listras' }, { id:2, label:'xadrez sutil' },
-    { id:3, label:'gravata' }, { id:4, label:'faixa diagonal' }, { id:5, label:'brasao simples' }
-  ],
-  capeColor: [
-    { id:0, color:'transparent', label:'nenhum' },
-    { id:1, color:'#7a2438', label:'vinho' },
-    { id:2, color:'#264f94', label:'azul' },
-    { id:3, color:'#2f7a4f', label:'verde' },
-    { id:4, color:'#6b3fb0', label:'roxo' },
-    { id:5, color:'#c28a2d', label:'dourado' }
-  ],
-  companion: [
-    { id:0, label:'nenhum' }, { id:1, label:'cachorro' }, { id:2, label:'chocobo' },
-    { id:3, label:'moguri' }, { id:4, label:'gato' }, { id:5, label:'mini dragao' }
-  ],
   accessory: [
     { id:'none' }, { id:'glasses' }, { id:'sunglasses' }, { id:'cap' },
     { id:'cowboyhat' }, { id:'crown' }, { id:'headphones' }, { id:'mask' },
@@ -4364,38 +4323,14 @@ const LOOK_OPTIONS = {
   ]
 };
 
-const NUMERIC_LOOK_PROPS = { skinTone:1, eyeColor:1, outfitColor:1, outfitPattern:1, capeColor:1, companion:1 };
-
-function lookIndex(v, max, fallback){
-  const n = parseInt(v, 10);
-  if(Number.isFinite(n)) return Math.max(0, Math.min(max, n));
-  return fallback;
-}
-
 function getCandidateColors(){
   const L = state.candidate.look || {};
-  const skinTone = lookIndex(L.skinTone, LOOK_OPTIONS.skinTone.length-1, 1);
-  const eyeColor = lookIndex(L.eyeColor, LOOK_OPTIONS.eyeColor.length-1, 0);
-  const outfitColor = lookIndex(L.outfitColor, LOOK_OPTIONS.outfitColor.length-1, 0);
-  const outfitPattern = lookIndex(L.outfitPattern, LOOK_OPTIONS.outfitPattern.length-1, 0);
-  const capeColor = lookIndex(L.capeColor, LOOK_OPTIONS.capeColor.length-1, 0);
-  const companion = lookIndex(L.companion, LOOK_OPTIONS.companion.length-1, 0);
-  const skin = L.skinTone !== undefined ? LOOK_OPTIONS.skinTone[skinTone].color : (L.skin || '#f3c9a0');
-  const shirt = L.outfitColor !== undefined ? LOOK_OPTIONS.outfitColor[outfitColor].color : (L.shirt || '#3c7dc0');
   return {
     style: L.style || 'short',
     hair:  L.hair  || '#b87333',
     hair2: shadeColor(L.hair || '#b87333', -30),
-    skin,
-    skinTone,
-    eye: LOOK_OPTIONS.eyeColor[eyeColor].color,
-    eyeColor,
-    shirt,
-    outfitColor,
-    outfitPattern,
-    capeColor,
-    cape: capeColor ? LOOK_OPTIONS.capeColor[capeColor].color : null,
-    companion,
+    skin:  L.skin  || '#f3c9a0',
+    shirt: L.shirt || '#3c7dc0',
     accent: L.accent || '#cf3a3a',
     accessory: L.accessory || 'none'
   };
@@ -4422,90 +4357,15 @@ function extendColors(c){
   if(c._ext) return c;
   const hair = c.hair || '#b87333', skin = c.skin || '#f3c9a0', shirt = c.shirt || '#3c7dc0';
   const pants = c.pants || '#2e2a3a', shoe = c.shoe || '#4a2a14';
-  const cape = c.cape || null;
   return {
     _ext: true,
     style: c.style || 'short', accessory: c.accessory || 'none', accent: c.accent || '#cf3a3a',
-    hair, hair2: c.hair2 || shadeColor(hair, -35), hairHi: shadeColor(hair, 26), hairDark: shadeColor(hair, -58),
-    skin, skinSh: shadeColor(skin, -28), skinDark: shadeColor(skin, -48), skinHi: shadeColor(skin, 16),
-    eye: c.eye || '#4a2a14', eyeColor: c.eyeColor || 0,
-    shirt, shirtSh: shadeColor(shirt, -34), shirtDark: shadeColor(shirt, -58), shirtHi: shadeColor(shirt, 24),
-    outfitColor: c.outfitColor || 0, outfitPattern: c.outfitPattern || 0,
-    capeColor: c.capeColor || 0, cape, capeSh: cape ? shadeColor(cape, -38) : null, capeHi: cape ? shadeColor(cape, 24) : null,
-    companion: c.companion || 0,
-    pants, pantsSh: shadeColor(pants, -16), pantsDark: shadeColor(pants, -34), pantsHi: shadeColor(pants, 14),
-    shoe, shoeHi: shadeColor(shoe, 26), shoeSh: shadeColor(shoe, -24)
+    hair, hair2: c.hair2 || shadeColor(hair, -35), hairHi: shadeColor(hair, 26),
+    skin, skinSh: shadeColor(skin, -28), skinHi: shadeColor(skin, 16),
+    shirt, shirtSh: shadeColor(shirt, -34), shirtHi: shadeColor(shirt, 24),
+    pants, pantsSh: shadeColor(pants, -16),
+    shoe, shoeHi: shadeColor(shoe, 26)
   };
-}
-
-function drawCapeSNES(r, x, y, oy, c, facing, frame, moving){
-  if(!c.cape) return;
-  const wave = moving ? (frame===1 ? -0.5 : frame===3 ? 0.5 : 0) : 0;
-  const OUT = PAL.out;
-  if(facing === 'up'){
-    r(x+1, y+7+oy, 10, 12.5, OUT);
-    r(x+1.5, y+7.5+oy, 9, 11.5, c.cape);
-    r(x+2, y+8+oy, 7.5, 1, c.capeHi);
-    r(x+8.5+wave, y+9+oy, 1.5, 9.5, c.capeSh);
-    r(x+2.5-wave, y+18.5+oy, 6.5, 1, c.capeSh);
-  } else if(facing === 'down'){
-    r(x+1.5, y+8+oy, 9, 12, OUT);
-    r(x+2, y+8.5+oy, 8, 10.5, c.cape);
-    r(x+2.5, y+8.5+oy, 6, 1, c.capeHi);
-    r(x+2+wave, y+10+oy, 1, 8.5, c.capeSh);
-    r(x+9+wave, y+10+oy, 1, 8.5, c.capeSh);
-    r(x+3-wave, y+18.5+oy, 6, 1, c.capeSh);
-  } else {
-    const right = facing === 'right';
-    const ax = x + 6;
-    const R = right ? r : (xx,yy,ww,hh,cc)=> r(2*ax - xx - ww, yy, ww, hh, cc);
-    R(x+1+wave, y+8+oy, 7.5, 12, OUT);
-    R(x+1.5+wave, y+8.5+oy, 6.5, 10.5, c.cape);
-    R(x+2+wave, y+8.5+oy, 5, 1, c.capeHi);
-    R(x+1.5+wave, y+17.5+oy, 6, 1.5, c.capeSh);
-  }
-}
-
-function drawOutfitPatternSNES(r, x, y, oy, c, facing){
-  const p = c.outfitPattern || 0;
-  if(!p) return;
-  const accent = c.accent || '#cf3a3a';
-  const line = shadeColor(c.shirt, -62);
-  const hi = shadeColor(c.shirt, 38);
-  if(p === 1){
-    r(x+2.5, y+10+oy, 7, 0.5, hi);
-    r(x+2.5, y+12+oy, 7, 0.5, line);
-    r(x+2.5, y+14+oy, 7, 0.5, line);
-  } else if(p === 2){
-    r(x+3.5, y+9.5+oy, 0.5, 5, line);
-    r(x+6, y+9.5+oy, 0.5, 5, hi);
-    r(x+8.5, y+9.5+oy, 0.5, 5, line);
-    r(x+2.5, y+11+oy, 7, 0.5, hi);
-    r(x+2.5, y+13+oy, 7, 0.5, line);
-  } else if(p === 3){
-    if(facing !== 'up'){
-      r(x+5.5, y+9.5+oy, 1, 1, '#f4ead8');
-      r(x+5.5, y+10.5+oy, 1, 3.5, accent);
-      r(x+5.5, y+12.5+oy, 1, 1.5, shadeColor(accent, -38));
-    } else {
-      r(x+4, y+9.5+oy, 4, 0.5, line);
-      r(x+6, y+10.5+oy, 0.5, 3, line);
-    }
-  } else if(p === 4){
-    r(x+2.5, y+9.5+oy, 2, 1, accent);
-    r(x+3.5, y+10.5+oy, 2, 1, accent);
-    r(x+4.5, y+11.5+oy, 2, 1, accent);
-    r(x+5.5, y+12.5+oy, 2, 1, accent);
-    r(x+6.5, y+13.5+oy, 2, 1, shadeColor(accent, -34));
-  } else if(p === 5){
-    if(facing !== 'up'){
-      r(x+7.5, y+10.5+oy, 1.5, 1.5, '#f6c453');
-      r(x+8, y+11+oy, 0.5, 0.5, '#fff2a0');
-      r(x+8, y+12+oy, 0.5, 1, shadeColor('#f6c453', -42));
-    } else {
-      r(x+3, y+10.5+oy, 1.5, 1, '#f6c453');
-    }
-  }
 }
 
 // Corpo completo. r = callback rect(x,y,w,h,cor) — frect no jogo, ctx próprio
@@ -4523,7 +4383,6 @@ function drawBodySNES(r, x, y, o){
   r(x+1.5, y+19, 9, 0.5, 'rgba(0,0,0,0.18)');
   r(x+1, y+19.5, 10, 1, 'rgba(0,0,0,0.3)');
   r(x+2, y+20.5, 8, 0.5, 'rgba(0,0,0,0.16)');
-  drawCapeSNES(r, x, y, oy, c, facing, frame, moving);
 
   if(facing === 'down' || facing === 'up'){
     const legL = (moving && frame===1) ? 0.5 : 0;
@@ -4534,17 +4393,13 @@ function drawBodySNES(r, x, y, o){
     // esquerda
     r(x+2, y+14+oy-legL, 3.5, 5.5, OUT);
     r(x+2.5, y+14.5+oy-legL, 2.5, 3.5, c.pants);
-    r(x+2.5, y+14.5+oy-legL, 2, 0.5, c.pantsHi);
     r(x+4.5, y+14.5+oy-legL, 0.5, 3.5, c.pantsSh);
-    r(x+2.5, y+17+oy-legL, 2.5, 0.5, c.pantsDark);
     r(x+2.5, y+18+oy-legL, 2.5, 1, c.shoe);
     r(x+2.5, y+18+oy-legL, 2.5, 0.5, c.shoeHi);
     // direita
     r(x+6.5, y+14+oy-legR, 3.5, 5.5, OUT);
     r(x+7, y+14.5+oy-legR, 2.5, 3.5, c.pants);
-    r(x+7, y+14.5+oy-legR, 2, 0.5, c.pantsHi);
     r(x+7, y+14.5+oy-legR, 0.5, 3.5, c.pantsSh);
-    r(x+7, y+17+oy-legR, 2.5, 0.5, c.pantsDark);
     r(x+7, y+18+oy-legR, 2.5, 1, c.shoe);
     r(x+7, y+18+oy-legR, 2.5, 0.5, c.shoeHi);
     // ---- tronco ----
@@ -4553,7 +4408,6 @@ function drawBodySNES(r, x, y, o){
     r(x+2, y+9+oy, 8, 0.5, c.shirtHi);          // ombros iluminados
     r(x+8.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // sombra lateral
     r(x+2, y+13.5+oy, 8, 1, c.shirtSh);         // barra da camisa
-    r(x+2.5, y+14+oy, 7, 0.5, c.shirtDark);     // dobra de cintura
     if(facing === 'down'){
       r(x+5.5, y+9+oy, 1, 1, c.skin);           // gola V
       r(x+4.5, y+9+oy, 1, 0.5, c.shirtHi);      // colarinho
@@ -4565,7 +4419,6 @@ function drawBodySNES(r, x, y, o){
       r(x+4, y+9+oy, 4, 0.5, c.shirtSh);        // gola (costas)
       r(x+6, y+10+oy, 0.5, 4, c.shirtSh);       // costura central
     }
-    drawOutfitPatternSNES(r, x, y, oy, c, facing);
     // cinto + fivela
     r(x+2, y+14.5+oy, 8, 0.5, '#2a1a10');
     if(facing === 'down') r(x+5.5, y+14.5+oy, 1, 0.5, '#e8c84a');
@@ -4573,20 +4426,15 @@ function drawBodySNES(r, x, y, o){
     r(x+0.5, y+9+oy+armL, 2, 6, OUT);
     r(x+1, y+9.5+oy+armL, 1, 3.5, facing==='down' ? c.shirt : c.shirtSh);
     r(x+1, y+9.5+oy+armL, 1, 0.5, c.shirtHi);
-    r(x+1, y+12.5+oy+armL, 1, 0.5, c.shirtDark);
     r(x+1, y+13+oy+armL, 1, 1.5, c.skin);
     r(x+1, y+13+oy+armL, 1, 0.5, c.skinSh);
     r(x+9.5, y+9+oy+armR, 2, 6, OUT);
     r(x+10, y+9.5+oy+armR, 1, 3.5, c.shirtSh);
-    r(x+10, y+12.5+oy+armR, 1, 0.5, c.shirtDark);
     r(x+10, y+13+oy+armR, 1, 1.5, c.skin);
     r(x+10, y+13+oy+armR, 1, 0.5, c.skinSh);
     // ---- cabeça ----
     r(x+2, y+0.5+oy, 8, 8.5, OUT);
     r(x+2.5, y+1+oy, 7, 7.5, c.skin);
-    r(x+3, y+1+oy, 6, 1, c.skinHi);             // luz no topo
-    r(x+2.5, y+6.5+oy, 0.5, 1.5, c.skinSh);
-    r(x+9, y+6.5+oy, 0.5, 1.5, c.skinSh);
     r(x+2.5, y+7.5+oy, 7, 1, c.skinSh);         // queixo
     // orelhas
     r(x+2, y+4.5+oy, 0.5, 1.5, c.skin);
@@ -4595,12 +4443,8 @@ function drawBodySNES(r, x, y, o){
       // olhos com branco + pupila
       r(x+3.5, y+4+oy, 1.5, 1.5, '#ffffff');
       r(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
-      r(x+4, y+4.5+oy, 0.5, 1, c.eye);
-      r(x+4.5, y+4.5+oy, 0.5, 1, '#241c2e');
-      r(x+7.5, y+4.5+oy, 0.5, 1, c.eye);
-      r(x+8, y+4.5+oy, 0.5, 1, '#241c2e');
-      r(x+4, y+4+oy, 0.5, 0.5, '#ffffff');
-      r(x+7.5, y+4+oy, 0.5, 0.5, '#ffffff');
+      r(x+4, y+4.5+oy, 0.5, 1, '#241c2e');
+      r(x+7.5, y+4.5+oy, 0.5, 1, '#241c2e');
       // sobrancelhas
       r(x+3.5, y+3+oy, 1.5, 0.5, c.hair2);
       r(x+7, y+3+oy, 1.5, 0.5, c.hair2);
@@ -4619,14 +4463,11 @@ function drawBodySNES(r, x, y, o){
     // perna de trás (mais escura)
     R(x+2.5-sprd, y+14+oy, 3.5, 5.5, OUT);
     R(x+3-sprd, y+14.5+oy, 2.5, 3.5, c.pantsSh);
-    R(x+3-sprd, y+17+oy, 2.5, 0.5, c.pantsDark);
     R(x+3-sprd, y+18+oy, 2.5, 1, shadeColor(c.shoe,-14));
     // perna da frente
     R(x+6+sprd, y+14+oy, 3.5, 5.5, OUT);
     R(x+6.5+sprd, y+14.5+oy, 2.5, 3.5, c.pants);
-    R(x+6.5+sprd, y+14.5+oy, 2, 0.5, c.pantsHi);
     R(x+8.5+sprd, y+14.5+oy, 0.5, 3.5, c.pantsSh);
-    R(x+6.5+sprd, y+17+oy, 2.5, 0.5, c.pantsDark);
     R(x+6.5+sprd, y+18+oy, 3, 1, c.shoe);       // sapato com bico
     R(x+6.5+sprd, y+18+oy, 3, 0.5, c.shoeHi);
     // tronco
@@ -4635,30 +4476,23 @@ function drawBodySNES(r, x, y, o){
     R(x+2.5, y+9+oy, 7.5, 0.5, c.shirtHi);
     R(x+2.5, y+9.5+oy, 1.5, 5, c.shirtSh);      // costas sombreadas
     R(x+2.5, y+13.5+oy, 7.5, 1, c.shirtSh);
-    R(x+2.5, y+14+oy, 7.5, 0.5, c.shirtDark);
-    drawOutfitPatternSNES(R, x, y, oy, c, 'right');
     R(x+2.5, y+14.5+oy, 7.5, 0.5, '#2a1a10');   // cinto
     // braço visível (balança pra frente/trás)
     R(x+4.5+armX, y+9.5+oy, 2.5, 5.5, OUT);
     R(x+5+armX, y+10+oy, 1.5, 3.5, c.shirt);
     R(x+5+armX, y+10+oy, 1.5, 0.5, c.shirtHi);
-    R(x+5+armX, y+13+oy, 1.5, 0.5, c.shirtDark);
     R(x+5+armX, y+13.5+oy, 1.5, 1.5, c.skin);
     R(x+5+armX, y+13.5+oy, 1.5, 0.5, c.skinSh);
     // cabeça
     R(x+2, y+0.5+oy, 8, 8.5, OUT);
     R(x+2.5, y+1+oy, 7, 7.5, c.skin);
-    R(x+3, y+1+oy, 6, 1, c.skinHi);
-    R(x+2.5, y+6.5+oy, 0.5, 1.5, c.skinSh);
     R(x+2.5, y+7.5+oy, 7, 1, c.skinSh);
     // nariz saliente
     R(x+9.5, y+5+oy, 1, 1.5, c.skin);
     R(x+10, y+6+oy, 0.5, 0.5, c.skinSh);
     // olho único
     R(x+7, y+4+oy, 1.5, 1.5, '#ffffff');
-    R(x+7.5, y+4.5+oy, 0.5, 1, c.eye);
     R(x+8, y+4.5+oy, 0.5, 1, '#241c2e');
-    R(x+7.5, y+4+oy, 0.5, 0.5, '#ffffff');
     R(x+7, y+3+oy, 1.5, 0.5, c.hair2);          // sobrancelha
     // boca
     R(x+8.5, y+6.5+oy, 1, 0.5, '#9c4444');
@@ -4813,22 +4647,6 @@ function drawHairSNES(r, x, y, oy, c, facing){
       r(x+5, y+9+oy, 2, 1.5, c.hair2);
     }
     if(side) r(x+1.5, y+3.5+oy, 1.5, 5, c.hair), r(x+1.5, y+8+oy, 1.5, 1.5, c.hair2);
-  }
-  if(s !== 'bald'){
-    if(up){
-      r(x+4, y+2+oy, 0.5, 4.5, c.hairDark);
-      r(x+7, y+2.5+oy, 0.5, 3.5, c.hair2);
-      r(x+3.5, y+1+oy, 2.5, 0.5, c.hairHi);
-    } else if(side){
-      r(x+3, y+1+oy, 3, 0.5, c.hairHi);
-      r(x+2.5, y+2.5+oy, 0.5, 3, c.hairDark);
-      r(x+7.5, y+2+oy, 1, 0.5, c.hair2);
-    } else {
-      r(x+3, y+1+oy, 3, 0.5, c.hairHi);
-      r(x+7, y+1.5+oy, 1.5, 0.5, c.hair2);
-      r(x+3.5, y+2.5+oy, 0.5, 1.5, c.hairDark);
-      r(x+8.5, y+2.5+oy, 0.5, 1.5, c.hairDark);
-    }
   }
 }
 
@@ -4996,95 +4814,6 @@ function drawAccessorySNES(r, x, y, oy, c, facing){
 }
 
 // Player avatar — wrapper que liga o corpo SNES ao estado do jogo
-function drawCompanionSNES(r, x, y, facing, frame, companionIdx){
-  companionIdx = parseInt(companionIdx || 0, 10);
-  if(!companionIdx) return;
-  facing = facing || 'down';
-  frame = frame || 0;
-  const step = frame % 2;
-  const hop = step ? -0.5 : 0;
-  const OUT = PAL.out;
-  const side = facing === 'left' || facing === 'right';
-  const right = facing !== 'left';
-  const ax = x + 4.5;
-  const R = side && !right ? (xx,yy,ww,hh,cc)=> r(2*ax - xx - ww, yy, ww, hh, cc) : r;
-  r(x+1, y+8.5, 7, 0.5, 'rgba(0,0,0,0.22)');
-  r(x+2, y+9, 5, 0.5, 'rgba(0,0,0,0.18)');
-
-  if(companionIdx === 1){
-    R(x+1, y+4+hop, 6, 4, OUT);
-    R(x+1.5, y+4.5+hop, 5, 3, '#a87850');
-    R(x+2, y+4.5+hop, 4, 0.5, '#c09468');
-    R(x+6, y+2.5+hop, 3, 3, OUT);
-    R(x+6.5, y+3+hop, 2.5, 2.5, '#a87850');
-    R(x+6.5, y+2+hop, 1, 1.5, '#7a5438');
-    R(x+8, y+3.5+hop, 0.5, 0.5, '#161018');
-    R(x+8.5, y+4.5+hop, 0.5, 0.5, '#161018');
-    R(x+0, y+3.5+hop, 1.5, 1, '#a87850');
-    R(x+2, y+7.5+hop+step*0.5, 0.5, 1.5, '#7a5438');
-    R(x+5.5, y+7.5+hop+(1-step)*0.5, 0.5, 1.5, '#7a5438');
-  } else if(companionIdx === 2){
-    R(x+2, y+2+hop, 5, 6.5, OUT);
-    R(x+2.5, y+2.5+hop, 4, 5.5, '#f0c84a');
-    R(x+3, y+2.5+hop, 3, 0.5, '#fff08a');
-    R(x+5.5, y+0.5+hop, 2.5, 2.5, OUT);
-    R(x+6, y+1+hop, 2, 2, '#f0c84a');
-    R(x+7.5, y+1.5+hop, 1, 0.5, '#d07028');
-    R(x+6.5, y+1.5+hop, 0.5, 0.5, '#1c1022');
-    R(x+2.5, y+0+hop, 1, 2, '#f6dc6a');
-    R(x+4, y+0+hop, 1, 2, '#f6dc6a');
-    R(x+3, y+8+hop+step*0.5, 0.5, 1.5, '#a85a20');
-    R(x+5, y+8+hop+(1-step)*0.5, 0.5, 1.5, '#a85a20');
-  } else if(companionIdx === 3){
-    R(x+2, y+3+hop, 5.5, 5.5, OUT);
-    R(x+2.5, y+3.5+hop, 4.5, 4.5, '#f4f4f0');
-    R(x+3, y+3.5+hop, 3, 0.5, '#ffffff');
-    R(x+1, y+3.5+hop, 1.5, 3, '#cfd8f0');
-    R(x+7, y+3.5+hop, 1.5, 3, '#cfd8f0');
-    R(x+4, y+1+hop, 0.5, 2.5, '#5a4030');
-    R(x+3, y+0+hop, 2, 1.5, '#cf3a3a');
-    R(x+3.5, y+5+hop, 0.5, 0.5, '#1c1022');
-    R(x+5.5, y+5+hop, 0.5, 0.5, '#1c1022');
-    R(x+4.5, y+6.5+hop, 1, 0.5, '#8a4040');
-    R(x+3, y+8+hop+step*0.5, 1, 1, '#d8d8d8');
-    R(x+5.5, y+8+hop+(1-step)*0.5, 1, 1, '#d8d8d8');
-  } else if(companionIdx === 4){
-    R(x+1.5, y+4+hop, 6, 4, OUT);
-    R(x+2, y+4.5+hop, 5, 3, '#333040');
-    R(x+5.5, y+2.5+hop, 3, 3, OUT);
-    R(x+6, y+3+hop, 2.5, 2.5, '#333040');
-    R(x+6, y+2+hop, 1, 1.5, '#333040');
-    R(x+7.5, y+2+hop, 1, 1.5, '#333040');
-    R(x+6.5, y+4+hop, 0.5, 0.5, '#f6c453');
-    R(x+8, y+4+hop, 0.5, 0.5, '#f6c453');
-    R(x+8.5, y+4.5+hop, 0.5, 0.5, '#f0d0d0');
-    R(x+0.5, y+3+hop, 1, 3, '#333040');
-    R(x+2.5, y+7.5+hop+step*0.5, 0.5, 1.5, '#1e1a28');
-    R(x+5.5, y+7.5+hop+(1-step)*0.5, 0.5, 1.5, '#1e1a28');
-  } else if(companionIdx === 5){
-    R(x+1.5, y+3.5+hop, 6, 5, OUT);
-    R(x+2, y+4+hop, 5, 4, '#7a45b8');
-    R(x+2.5, y+4+hop, 3.5, 0.5, '#a070d8');
-    R(x+6.5, y+2+hop, 3, 3, OUT);
-    R(x+7, y+2.5+hop, 2.5, 2.5, '#7a45b8');
-    R(x+8.5, y+3.5+hop, 1, 0.5, '#e8d8ff');
-    R(x+7.5, y+3.5+hop, 0.5, 0.5, '#1c1022');
-    R(x+1, y+2.5+hop, 2, 3, '#5fdb8a');
-    R(x+4.5, y+2.5+hop, 2, 3, '#5fdb8a');
-    R(x+0.5, y+5+hop, 1, 1, '#7a45b8');
-    R(x+2.5, y+8+hop+step*0.5, 0.5, 1, '#4c2a78');
-    R(x+5, y+8+hop+(1-step)*0.5, 0.5, 1, '#4c2a78');
-  }
-}
-
-function drawCompanionBehindPlayer(r, x, y, facing, frame, companionIdx){
-  if(!companionIdx) return;
-  const off = facing === 'up' ? [2, 13] :
-              facing === 'left' ? [10, 5] :
-              facing === 'right' ? [-7, 5] : [2, -5];
-  drawCompanionSNES(r, x + off[0], y + off[1], facing, frame, companionIdx);
-}
-
 function drawPlayer(x,y,opts){
   opts = opts || {};
   const facing = opts.facing || 'down';
@@ -5093,7 +4822,6 @@ function drawPlayer(x,y,opts){
   const bob = moving ? (frame===1 ? -0.5 : frame===3 ? -0.5 : 0)
                      : (Math.floor(opts.t||0)%2===0 ? 0 : -0.5);
   const c = extendColors(opts.colors || getCandidateColors());
-  drawCompanionBehindPlayer(frect, x, y, facing, frame, c.companion);
   drawBodySNES(frect, x, y, { facing, frame, moving, oy: bob, c });
   drawAccessorySNES(frect, x, y, bob, c, facing);
 }
@@ -5742,12 +5470,6 @@ const state = {
       hair: '#b87333',
       skin: '#f3c9a0',
       shirt: '#3c7dc0',
-      skinTone: 1,
-      eyeColor: 0,
-      outfitColor: 0,
-      outfitPattern: 0,
-      capeColor: 0,
-      companion: 0,
       accent: '#cf3a3a',
       accessory: 'none'
     }
@@ -5794,9 +5516,9 @@ const state = {
 const $ = (id)=>document.getElementById(id);
 
 function fmtFollowers(n){
-  if(n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if(n >= 1000000) return (n/1000000).toFixed(1).replace('.', ',') + 'M';
   if(n >= 10000) return (n/1000).toFixed(0) + 'k';
-  if(n >= 1000) return (n/1000).toFixed(1) + 'k';
+  if(n >= 1000) return (n/1000).toFixed(1).replace('.', ',') + 'k';
   return Math.max(0, Math.round(n)).toString();
 }
 function updateHUD(){
@@ -5830,7 +5552,7 @@ function updateHUD(){
     bigNews('⚠️ CONFIANÇA CRÍTICA', `Confiança em ${Math.round(state.trust)}/100. Eleitor não acredita em você — promessas no debate vão render menos.`, 'bad');
   } else if(state.trust < 50 && !state._trustWarned[50]){
     state._trustWarned[50] = true;
-    feedNews('OBSERVATÓRIO', `Confiança caiu pra ${Math.round(state.trust)}/100. Cuidado: indecisos migram pro adversário e respostas técnicas no debate perdem força.`, 'warn');
+    feedNews('OBSERVATÓRIO', `Confiança caiu pra ${Math.round(state.trust)}/100. Cuidado: indecisos migram pro adversário e, abaixo de 40, respostas técnicas no debate perdem força.`, 'warn');
   }
   $('feedDayTag').textContent = 'D'+state.day;
 }
@@ -5843,9 +5565,11 @@ function reachBonus(){
   return Math.max(0, base + penalty);
 }
 
+// números decimais em pt-BR: 1.4% -> 1,4% (não mexe em milhares como 3.542)
+function ptNum(t){ return String(t).replace(/(\d)\.(\d)(?=\s?(?:%|pp|p\.p\.|k\b| pontos))/g, '$1,$2'); }
 function toast(text, kind){
   const t = $('toast');
-  t.textContent = text;
+  t.textContent = ptNum(text);
   t.className = 'toast show' + (kind?(' '+kind):'');
   clearTimeout(toast._t);
   toast._t = setTimeout(()=>{ t.className = 'toast'; }, 4200);
@@ -5855,7 +5579,7 @@ function feed(html, kind){
   const list = $('feedList');
   const div = document.createElement('div');
   div.className = 'feed-item' + (kind?(' '+kind):'');
-  div.innerHTML = html;
+  div.innerHTML = ptNum(html);
   list.insertBefore(div, list.firstChild);
   // cap
   while(list.children.length > 30) list.removeChild(list.lastChild);
@@ -5919,7 +5643,7 @@ const ACTIONS = [
   {
     id: 'video', area: 'desk', title: 'Gravar vídeo "falando direto pro povo"',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você grava um vídeo curto, sem produção, mostrando seu rosto, fazendo uma promessa concreta e contando algo seu. Estrategistas dizem que é essa presença constante que mais funciona. Mais de 2 por dia satura o feed.',
+    desc: 'Você grava um vídeo curto, sem produção, mostrando seu rosto, fazendo uma promessa concreta e contando algo seu. Estrategistas dizem que é essa presença constante que mais funciona. Limite de 2 vídeos por dia, somando as respostas a ataques — o segundo rende menos.',
     available(s){ return s.videosToday < 2; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.videosToday*0.4);
@@ -5938,7 +5662,7 @@ const ACTIONS = [
   {
     id: 'sentiment', area: 'desk', title: 'Análise de sentimento por IA',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Plataforma gratuita classifica o que falam de você como "raiva, expectativa, indignação..." e sugere posts de resposta. Vai te dar bônus nos posts dos próximos 2 dias. (1x por dia)',
+    desc: 'Plataforma gratuita classifica o que falam de você como "raiva, expectativa, indignação..." e sugere posts de resposta. Dá +0,5% extra ao "Comentar notícia do dia" hoje e amanhã. (1x por dia)',
     available(s){ return s.sentimentToday < 1; },
     apply(s){
       s.sentimentToday++;
@@ -5947,21 +5671,21 @@ const ACTIONS = [
       s.flags.sentimentIA = true;
       s.sentimentBonusDays = 2;
       s.legalActs++;
-      feedNews('PLATAFORMA DE SENTIMENTO', 'Detectou onda de raiva entre eleitores 35-50 sobre transporte. Sugestões de post já na sua mão.', 'event');
-      return '+0.7% intenção, +2 confiança, posts turbinados por 2 dias';
+      feedNews('PLATAFORMA DE SENTIMENTO', 'Detectou onda de raiva entre eleitores de 35 a 50 anos sobre transporte. Recomendações copiadas pra você.', 'event');
+      return '+0,7% intenção, +2 confiança, "Comentar notícia" rende +0,5% hoje e amanhã';
     }
   },
   {
     id: 'monitor', area: 'desk', title: 'Monitoramento + denúncia automatizada de adversário',
     tag: 'gray', energy: 1, cost: 15,
-    desc: 'Uma IA jurídica varre redes em busca de menções a você e sugere denúncias formais ao TSE e plataformas — calúnia, difamação, fake news. Pode realmente derrubar conteúdo. Pode também ser visto como abuso.',
+    desc: 'Uma IA jurídica varre redes em busca de menções a você e sugere denúncias formais à Justiça Eleitoral e às plataformas — calúnia, difamação, fake news. Pode realmente derrubar conteúdo. Pode também ser visto como abuso.',
     apply(s){
       s.money -= 15;
       s.oppIntent -= 1;
       s.trust -= 1;
       s.risk += 8;
       s.grayActs++;
-      feedNews('TSE', 'Sua denúncia automatizada contra publicação do adversário foi protocolada.', 'warn');
+      feedNews('JUSTIÇA ELEITORAL', 'Sua denúncia automatizada contra publicação do adversário foi protocolada.', 'warn');
       // potential backlash
       if(Math.random() < 0.35){
         scheduleIn(2, ()=>{
@@ -5975,13 +5699,14 @@ const ACTIONS = [
   },
   {
     id: 'deepfakeDef', area: 'desk', title: 'Detector de deepfake (preparar defesa)',
-    tag: 'gray', energy: 1, cost: 10,
+    tag: 'legal', energy: 1, cost: 10,
     desc: 'Comprar acesso a um detector forense de deepfake. Se o adversário publicar vídeo manipulado contra você, sua campanha derruba na hora com o laudo.',
     apply(s){
       s.money -= 10;
       s.shieldDeepfakeDays = 4; // protege próximos 4 dias
+      s.flags.hadDetector = true;
       s.trust += 2;
-      s.grayActs++;
+      s.legalActs++;
       feedNews('SEU JURÍDICO', 'Detector de deepfake contratado. Você está protegido contra os próximos ataques manipulados.', 'good');
       return 'Protegido contra deepfake por 4 dias';
     }
@@ -5989,7 +5714,7 @@ const ACTIONS = [
   {
     id: 'buyFollowers', area: 'desk', title: 'Comprar pacote de seguidores (PIX, anônimo)',
     tag: 'illegal', energy: 1, cost: 10,
-    desc: 'R$ 100 dá pra comprar mais de mil seguidores reais. Empurra a intenção, mas o algoritmo te marca — e se um jornalista bom pegar, vira matéria.',
+    desc: 'Na reportagem, R$ 100 compram mais de mil seguidores (pessoas reais) em plataformas de troca de engajamento. Aqui o pacote é de R$ 10k: milhares de uma vez. Empurra a intenção, mas o algoritmo te marca e, se um bom jornalista descobrir, o adversário denuncia.',
     apply(s){
       s.money -= 10;
       const followGain = 3000 + Math.floor(Math.random()*2000);
@@ -6008,6 +5733,7 @@ const ACTIONS = [
           state.intent -= 8;
           state.trust -= 18;
           state.risk += 18;
+          state.flags._exposedFollowers = true;
           feedNews('JORNAL', `Reportagem mostra que sua conta comprou seguidores. ${lost.toLocaleString('pt-BR')} contas removidas. Algoritmo pune por 4 dias.`, 'bad');
         }, 'exposição compra seguidores');
       }
@@ -6016,7 +5742,7 @@ const ACTIONS = [
         scheduleIn(2, ()=>{
           state.risk += 15;
           state.intent -= 3;
-          feedNews('ADVERSÁRIO', 'Adversário protocolou representação no TSE pela compra de seguidores.', 'bad');
+          feedNews('ADVERSÁRIO', 'Adversário protocolou representação na Justiça Eleitoral pela compra de seguidores.', 'bad');
         }, 'denúncia compra seguidores');
       }
       return `+${followGain} 📱, +5% intenção, +25 risco, 80% chance de exposição`;
@@ -6025,7 +5751,7 @@ const ACTIONS = [
   {
     id: 'whatsBlast', area: 'desk', title: 'Disparo em massa via WhatsApp "esquentado"',
     tag: 'illegal', energy: 2, cost: 30,
-    desc: 'Comprar 200 números aquecidos por um mês e disparar mensagens calibradas com IA. Pode render bem — ou esbarrar na "vacina" que o eleitor já criou contra spam.',
+    desc: 'Usar 100 números "aquecidos" durante um mês e disparar mensagens calibradas com IA. Pode render bem — ou virar contra você na "vacina" que o eleitor criou pra spam.',
     apply(s){
       s.money -= 30;
       s.risk += 30;
@@ -6049,10 +5775,10 @@ const ACTIONS = [
         if(Math.random() < 0.70){
           state.risk += 15;
           state.intent -= 2;
-          feedNews('TSE', 'Denúncia formal contra disparo em massa atribuído à sua campanha.', 'bad');
+          feedNews('JUSTIÇA ELEITORAL', 'Denúncia formal contra disparo em massa atribuído à sua campanha.', 'bad');
         }
       }, 'denúncia disparo');
-      return backfire? '-7% intenção, +30 risco (vacina pegou)' : '+6% intenção, +30 risco';
+      return backfire? '-7% intenção, -7 confiança, +30 risco (vacina pegou)' : `+${(6+bonus).toFixed(1)}% intenção, -2 confiança, +30 risco`;
     }
   },
   {
@@ -6077,7 +5803,7 @@ const ACTIONS = [
           state.intent -= 9;
           state.trust -= 12;
           state.risk += 25;
-          feedNews('TRIBUNAL', `Adversário identifica padrão de comportamento idêntico em 40 perfis — denúncia ao TSE. -${lost} seguidores.`, 'bad');
+          feedNews('JUSTIÇA ELEITORAL', `Adversário identifica padrão de comportamento idêntico em 40 perfis e apresenta denúncia à Justiça Eleitoral. -${lost} seguidores.`, 'bad');
         }, 'exposição neurobots');
       }
       return `+${followGain} 📱, +10% intenção, +30 risco`;
@@ -6094,17 +5820,17 @@ const ACTIONS = [
       s.risk += 50;
       s.flags.deepfakedAdv = true;
       s.illegalActs++;
-      feedNews('GRUPOS APOIADORES DO ADVERSÁRIO', 'Vídeo do adversário "admitindo" desvio circula em grupos.', 'warn');
+      feedNews('GRUPOS DE APOIADORES DO ADVERSÁRIO', 'Vídeo do adversário "admitindo" desvio circula em grupos.', 'warn');
       // praticamente certo de detecção
       if(Math.random() < 0.85){
         scheduleIn(1 + Math.floor(Math.random()*2), ()=>{
           state.risk += 60;
           state.trust -= 20;
           state.intent -= 12;
-          feedNews('JORNAL NACIONAL', 'Forense identifica deepfake. Origem rastreada até sua campanha.', 'bad');
+          feedNews('TELEJORNAL', 'Perícia identifica deepfake. Origem rastreada até sua campanha.', 'bad');
         }, 'detecção deepfake');
       }
-      return '-10% adv, +50 risco, 85% chance de cassação';
+      return '-10% adv, +50 risco, 85% chance de ser rastreado';
     }
   },
 
@@ -6112,7 +5838,7 @@ const ACTIONS = [
   {
     id: 'meetingBig', area: 'sofa', title: 'Reunião com empresário',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você recebe um empresário. Conversa protocolar, promessa modesta, doação declarada dentro do limite eleitoral. Entra dinheiro.',
+    desc: 'Você recebe um empresário. Ele doa como pessoa física (empresa não pode doar desde 2015), dentro do limite legal e com recibo. Entra dinheiro, mas pega mal com parte do eleitorado.',
     available(s){ return s.meetingsToday < 1; },
     apply(s){
       const got = 25 + Math.floor(Math.random()*15);
@@ -6122,14 +5848,14 @@ const ACTIONS = [
       s.risk += 1;
       s.meetingsToday++;
       s.legalActs++;
-      feedNews('SEU CAIXA', `Doação recebida: R$ ${got}k. Tudo declarado.`, 'good');
-      return `+R$ ${got}k, -0.4% intenção, -1 confiança`;
+      feedNews('SEU CAIXA', `Doação de pessoa física recebida: R$ ${got}k. Tudo declarado.`, 'good');
+      return `+R$ ${got}k, -0,4% intenção, -1 confiança`;
     }
   },
   {
     id: 'meetingSmall', area: 'sofa', title: 'Vaquinha online com militância',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Live no Instagram pedindo doações pequenas pra base militante.',
+    desc: 'Live no Instagram pedindo pequenas doações à base militante.',
     available(s){ return s.meetingsToday < 2; },
     apply(s){
       const got = 8 + Math.floor(Math.random()*8);
@@ -6141,26 +5867,27 @@ const ACTIONS = [
       s.meetingsToday++;
       s.legalActs++;
       feedNews('SEU ENGAJAMENTO', `Vaquinha online: R$ ${got}k + ${followGain} seguidores.`, 'good');
-      return `+R$ ${got}k, +${followGain} 📱, +0.6% intenção`;
+      return `+R$ ${got}k, +${followGain} 📱, +0,6% intenção`;
     }
   },
   {
     id: 'meetingShady', area: 'sofa', title: 'Conversa "off the record" com marketeiro digital',
     tag: 'illegal', energy: 1, cost: 0,
-    desc: 'O marketeiro digital aparece com proposta: dinheiro vivo entregue por terceiro pra "campanha digital paralela", sem comprovante. Rápido, eficiente, e se vazar, sua candidatura cai.',
+    desc: 'O marketeiro digital aparece com proposta: dinheiro vivo entregue por terceiro pra "campanha digital paralela", sem comprovante. Rápido, eficiente — e, se vazar, sua candidatura cai.',
     apply(s){
       const got = 55 + Math.floor(Math.random()*30);
       s.money += got;
       s.trust -= 3;
       s.risk += 30;
       s.illegalActs++;
+      s.flags.caixa2 = true;
       feedNews('NINGUÉM SOUBE… AINDA', `Recebeu R$ ${got}k em espécie via marketeiro. Sem comprovante.`, 'warn');
       if(Math.random() < 0.5){
         scheduleIn(2 + Math.floor(Math.random()*3), ()=>{
           state.intent -= 5;
           state.trust -= 10;
           state.risk += 30;
-          feedNews('JORNAL', 'Foto vaza: marketeiro visto saindo do escritório da sua campanha. MP-Eleitoral abre apuração.', 'bad');
+          feedNews('JORNAL', 'Foto vaza: marketeiro visto saindo do escritório da sua campanha. Ministério Público Eleitoral abre apuração.', 'bad');
         }, 'vazamento caixa 2');
       }
       return `+R$ ${got}k, +30 risco, -3 confiança`;
@@ -6171,7 +5898,7 @@ const ACTIONS = [
   {
     id: 'tvProgram', area: 'tv', title: 'Programa eleitoral oficial',
     tag: 'legal', energy: 2, cost: 30,
-    desc: 'Bloco de 1 minuto no horário gratuito. Ainda funciona, principalmente fora das grandes capitais. (1 bloco por dia)',
+    desc: 'Bloco de 1 minuto no horário eleitoral gratuito — o tempo de TV é de graça, mas a produção custa. Ainda funciona, principalmente fora das capitais. (Só nos dias 3 e 7.)',
     available(s){ return s.tvBlocksToday < 1; },
     apply(s){
       s.tvBlocksToday++;
@@ -6189,7 +5916,7 @@ const ACTIONS = [
   {
     id: 'tvAttack', area: 'tv', title: 'Programa eleitoral atacando adversário',
     tag: 'gray', energy: 2, cost: 30,
-    desc: 'Mesmo bloco, mas agora usando seu tempo pra atacar o adversário com dados duros (e seletivos). Você ganha um pouco, ele perde mais. (1 bloco por dia)',
+    desc: 'Mesmo bloco, mas agora usando seu tempo pra atacar o adversário com dados duros (e seletivos). Você ganha um pouco, ele perde mais. (Só nos dias 3 e 7.)',
     available(s){ return s.tvBlocksToday < 1; },
     apply(s){
       s.tvBlocksToday++;
@@ -6199,7 +5926,7 @@ const ACTIONS = [
       s.trust -= 2;
       s.risk += 5;
       s.grayActs++;
-      feedNews('PROGRAMA ELEITORAL', 'Você atacou o adversário em rede aberta. A militância dele reage e parte da imprensa critica.', 'warn');
+      feedNews('PROGRAMA ELEITORAL', 'Você atacou o adversário em rede aberta. Aliados dele reagem, parte da imprensa critica.', 'warn');
       return '+1% intenção, -3% adv, +5 risco, -2 confiança';
     },
     onlyOnDays: [3, 7]
@@ -6209,7 +5936,7 @@ const ACTIONS = [
   {
     id: 'streetWalk', area: 'door', title: 'Caminhada e corpo a corpo no bairro',
     tag: 'legal', energy: 3, cost: 0,
-    desc: 'Andar onde a estrutura partidária aponta — feira, bairro popular, comércio. Cansa, mas nada substitui isso. Mais de 2 vezes no mesmo dia satura a cobertura.',
+    desc: 'Andar onde a estrutura partidária aponta — feira, bairro popular, comércio. Cansa (3 de energia, então cabe uma por dia), mas ninguém substitui isso.',
     available(s){ return s.walksToday < 2; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.walksToday*0.5);
@@ -6233,19 +5960,19 @@ const ACTIONS = [
   {
     id: 'restDay', area: 'bed', title: 'Dormir agora (encerrar o dia)',
     tag: 'legal', energy: 0, cost: 0,
-    desc: 'Você decide ir pra cama, jantar com a família, dormir cedo. Equipe entende — campanha cansa. Pula direto pro dia seguinte.',
+    desc: 'Você decide jantar com a família e dormir cedo. Equipe entende — campanha cansa. Pula direto pro dia seguinte.',
     apply(s){
       const exausto = s.energy <= 0;
       s.energy = 0;
       s.legalActs++;
       if(exausto){
         // Já gastou tudo — dormir é só natural, sem bônus de "folga"
-        feedNews('SUA EQUIPE', 'Candidato exausto encerrou o dia. Amanhã tem mais.', 'event');
+        feedNews('SUA EQUIPE', 'Você encerrou o dia sem energia. Amanhã tem mais.', 'event');
         return 'Dia encerrado';
       } else {
         // Foi pra cama com energia sobrando — bônus de confiança por descanso real
         s.trust += 1;
-        feedNews('SUA EQUIPE', 'Candidato encerrou o dia mais cedo. Folga estratégica.', 'event');
+        feedNews('SUA EQUIPE', 'Você encerrou o dia mais cedo. Folga estratégica.', 'event');
         return 'Dia encerrado, +1 confiança';
       }
     }
@@ -6261,14 +5988,14 @@ const ACTIONS = [
       s.trust += 1;
       s.flags.monitorRedes = true;
       s.legalActs++;
-      feedNews('SUA EQUIPE DIGITAL', 'Monitoramento de redes contratado. Equipe agora vê ataques antes deles viralizarem.', 'good');
+      feedNews('SUA EQUIPE DIGITAL', 'Monitoramento de redes contratado. Equipe agora vê ataques antes de eles viralizarem.', 'good');
       return '+1 confiança, antecipa ataques (35% bloqueio)';
     }
   },
   {
     id: 'treinoPortavoz', area: 'sofa', title: 'Treinar porta-voz pra crise',
     tag: 'legal', energy: 1, cost: 12,
-    desc: 'Sessão com porta-voz da campanha pra rebater ataques rápido e em tom certo. Quando o adversário soltar print/corte/fake, a resposta sai melhor. Reduz dano de ataques orgânicos pela metade.',
+    desc: 'Sessão com porta-voz da campanha pra rebater ataques rápido e em tom certo. Quando o adversário soltar print/corte/fake, a resposta sai melhor. Reduz pela metade a perda de intenção nos ataques orgânicos.',
     available(s){ return !s.flags.treinoPortavoz && s.money >= 12; },
     apply(s){
       s.money -= 12;
@@ -6276,13 +6003,13 @@ const ACTIONS = [
       s.flags.treinoPortavoz = true;
       s.legalActs++;
       feedNews('SUA EQUIPE', 'Porta-voz treinada. Resposta rápida e calibrada quando o adversário atacar.', 'good');
-      return '+2 confiança, ataques orgânicos rendem 50% menos';
+      return '+2 confiança, ataques orgânicos tiram 50% menos intenção';
     }
   },
   {
-    id: 'streetEvent', area: 'door', title: 'Evento aberto com som de carro',
+    id: 'streetEvent', area: 'door', title: 'Evento aberto com carro de som',
     tag: 'legal', energy: 3, cost: 15,
-    desc: 'Palanque ao vivo num bairro estratégico. A logística custa caro, mas rende imagem.',
+    desc: 'Palanque ao vivo num bairro estratégico. Custa logística, paga em imagem.',
     apply(s){
       s.money -= 15;
       s.intent += 3;
@@ -6299,14 +6026,14 @@ const ACTIONS = [
   {
     id: 'newspaper', area: 'board', title: 'Dar entrevista pra jornal',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Repórter pede 40 minutos. Tema varia conforme o dia. Vai sair em página inteira no domingo. Pode te ajudar — ou te enterrar. (1x por dia)',
+    desc: 'Repórter pede 40 minutos. Tema varia conforme o dia. Vai sair em página inteira na edição de amanhã. Pode te ajudar — ou te enterrar. (1x por dia)',
     available(s){ return s.interviewsToday < 1; },
     apply(s){
       s.interviewsToday++;
       const temas = [
-        { tema: 'educação', headlineGood: 'PROPOSTA PARA ENSINO INTEGRAL', headlineBad: 'CANDIDATO HESITA AO FALAR DE ESCOLA' },
+        { tema: 'educação', headlineGood: 'PROPOSTA PARA ENSINO INTEGRAL', headlineBad: 'CAMPANHA HESITA AO FALAR DE ESCOLA' },
         { tema: 'saúde', headlineGood: 'PLANO DE MÉDICO 24H GANHA FORÇA', headlineBad: 'PROMESSAS DE SAÚDE SEM FONTE' },
-        { tema: 'segurança', headlineGood: 'PROPOSTA PRA INTEGRAR POLÍCIA E ASSISTÊNCIA', headlineBad: 'CANDIDATO TROPEÇA EM DADOS DE HOMICÍDIO' },
+        { tema: 'segurança', headlineGood: 'PROPOSTA PARA INTEGRAR GUARDA MUNICIPAL E ASSISTÊNCIA', headlineBad: 'CAMPANHA TROPEÇA EM DADOS DE HOMICÍDIO' },
         { tema: 'economia', headlineGood: 'ECONOMIA: DEFENDE CORTE DE PUBLICIDADE OFICIAL', headlineBad: 'NÚMEROS APRESENTADOS NÃO BATEM' },
         { tema: 'meio ambiente', headlineGood: 'DEFENDE FUNDO MUNICIPAL DE CLIMA', headlineBad: 'PROPOSTA AMBIENTAL FICA NO ABSTRATO' },
         { tema: 'transporte', headlineGood: 'PASSE LIVRE NA PERIFERIA TEM FONTE FISCAL', headlineBad: 'PASSE LIVRE SEM ONDE TIRAR DINHEIRO' }
@@ -6323,15 +6050,16 @@ const ACTIONS = [
       } else {
         s.intent -= 1;
         s.trust -= 2;
+        s.legalActs++;
         feedNews('JORNAL LOCAL', `"${t.headlineBad}" — colunistas pegam contradição em ${t.tema}.`, 'bad');
         return '-1% intenção, -2 confiança';
       }
     }
   },
   {
-    id: 'denuncia', area: 'board', title: 'Denúncia legítima ao TSE (com prova real)',
+    id: 'denuncia', area: 'board', title: 'Representação legítima na Justiça Eleitoral (com prova real)',
     tag: 'legal', energy: 1, cost: 10,
-    desc: 'Seu jurídico levanta caso sólido contra o adversário e protocola — sem IA, com documento. (1x por dia)',
+    desc: 'Seu jurídico levanta caso sólido contra o adversário e protocola representação na Justiça Eleitoral — sem IA, com documento. (1x por dia)',
     available(s){ return s.denunciasToday < 1; },
     apply(s){
       s.denunciasToday++;
@@ -6339,12 +6067,13 @@ const ACTIONS = [
       if(s.oppIntent > 30){
         s.oppIntent -= 2;
         s.trust += 1;
-        feedNews('TSE', 'Denúncia da sua campanha foi aceita. Adversário responde processo.', 'good');
+        feedNews('JUSTIÇA ELEITORAL', 'Representação da sua campanha foi aceita. Adversário responde processo.', 'good');
         s.legalActs++;
         return '-2% adv, +1 confiança';
       } else {
         s.trust -= 1;
-        feedNews('TSE', 'Denúncia rejeitada por falta de prova. Adversário usa contra você.', 'warn');
+        s.legalActs++;
+        feedNews('JUSTIÇA ELEITORAL', 'Representação rejeitada: o juiz eleitoral não viu irregularidade. Adversário usa contra você.', 'warn');
         return '-1 confiança';
       }
     }
@@ -6354,7 +6083,7 @@ const ACTIONS = [
   {
     id: 'replyVideo', area: 'phone', title: 'Responder ataque com vídeo curto e honesto',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Senta, abre a câmera e fala olhando pra lente — sem ataque, só fato. Só disponível DEPOIS de um ataque do adversário no mesmo dia. Limite de 2 por dia.',
+    desc: 'Sentou, abriu a câmera, falou olhando pra lente — sem ataques, só fato. Só disponível DEPOIS de um ataque do adversário no mesmo dia. Divide com "Gravar vídeo" o limite de 2 vídeos por dia.',
     available(s){ return s.videosToday < 2 && (s.unrepliedAttacks || 0) > 0; },
     apply(s){
       const decay = Math.max(0.4, 1 - s.videosToday*0.4);
@@ -6374,7 +6103,7 @@ const ACTIONS = [
   {
     id: 'agendaPost', area: 'phone', title: 'Postar agenda do dia (transparência)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você publica sua agenda pública: onde vai, com quem se reúne, em que horário. Eleitor curte transparência. Uma vez por dia.',
+    desc: 'Você publica sua agenda: onde vai, com quem se reúne, em que horário. Eleitor curte transparência. Uma vez por dia.',
     available(s){ return !s.agendaPostedToday; },
     apply(s){
       const bonus = reachBonus();
@@ -6401,12 +6130,12 @@ const ACTIONS = [
         s.trust += 1;
         s.grayActs++;
         feedNews('VIRAL DO DIA', `Meme seu pegou na timeline. +${followGain} seguidores.`, 'good');
-        return `+1.5% intenção, +${followGain} 📱`;
+        return `+${(1.5+reachBonus()).toFixed(1)}% intenção, +${followGain} 📱, +1 confiança`;
       } else {
         s.intent -= 1;
         s.trust -= 3;
         s.grayActs++;
-        feedNews('TIMELINE', 'Meme pegou mal. Comentaristas te chamando de "tentando ser engraçado".', 'bad');
+        feedNews('TIMELINE', 'Meme pegou mal. Comentaristas dizem que você está "forçando pra ser engraçado".', 'bad');
         return '-1% intenção, -3 confiança';
       }
     }
@@ -6425,14 +6154,14 @@ const ACTIONS = [
       const followGain = Math.floor((120 + Math.random()*180) * (1 + bonus*0.4));
       s.followers += followGain;
       s.legalActs++;
-      feedNews('SEU PERFIL', `Posicionamento sobre o caso ${['da semana','da educação','da saúde','do orçamento'][Math.floor(Math.random()*4)]} repercutiu. +${followGain} seguidores.`, 'good');
+      feedNews('SEU PERFIL', `Posicionamento sobre o caso ${['da semana','da merenda escolar','da fila da saúde','do orçamento'][Math.floor(Math.random()*4)]} repercutiu. +${followGain} seguidores.`, 'good');
       return `+${(1+bonus+sentBonus).toFixed(1)}% intenção, +${followGain} 📱`;
     }
   },
   {
     id: 'platformPost', area: 'phone', title: 'Publicar plano de governo (só 1 vez)',
     tag: 'legal', energy: 1, cost: 0,
-    desc: 'Você divulga UMA VEZ, em PDF público, seu plano de governo. Quanto mais cedo publicar, mais tempo ele rende notícia — imprensa, redes e debate ficam citando.',
+    desc: 'As propostas já foram entregues à Justiça Eleitoral no registro da candidatura; agora você divulga UMA VEZ, em PDF, a versão completa do plano. Quanto mais cedo publicar, mais ciclos de notícia ele rende — imprensa, redes e debate ficam citando.',
     available(s){ return !s.flags.publishedPlatform; },
     apply(s){
       // Bônus por publicar cedo — vira referência durante toda a campanha
@@ -6453,7 +6182,7 @@ const ACTIONS = [
         : d <= 4
         ? 'PDF do plano publicado. Colunas citam as 3 prioridades.'
         : d <= 6
-        ? 'PDF do plano publicado tarde. Repercussão menor — quase ninguém mais lê plano nessa altura.'
+        ? 'PDF do plano publicado tarde. Repercussão menor — quase ninguém mais lê plano a essa altura.'
         : 'PDF publicado quase em cima da eleição. Imprensa só registra.';
       feedNews('SEU SITE', msg, 'good');
       return `+${intentGain.toFixed(1)}% intenção, +${trustGain} confiança, +${followGain} 📱`;
@@ -6462,7 +6191,7 @@ const ACTIONS = [
   {
     id: 'fakeOutrage', area: 'desk', title: 'Acionar exército de comentários elogiosos',
     tag: 'illegal', energy: 1, cost: 15,
-    desc: 'Elogio em massa. "Ele é ótimo, melhor prefeito da história." Cria "percepção de maioria" — baixo risco jurídico, alto risco moral.',
+    desc: 'Elogio em massa. "Ele é ótimo, vai ser o melhor prefeito da história." Cria "percepção de maioria". Parece menos arriscado que atacar, mas feito com perfis falsos e automação é vedado pelo TSE — e deixa padrão fácil de rastrear.',
     apply(s){
       s.money -= 15;
       const followGain = 500 + Math.floor(Math.random()*400);
@@ -6496,7 +6225,7 @@ const MARKETEIRO_OFFERS = [
     actionId: 'neuro',
     title: '🤖 40 neurobots com "cara e crachá"',
     quote: '"Eu posso colocar 40 militantes virtuais pra falar mal dele [do próprio candidato]. E desses 40, depois eles retornam trazendo as coisas boas que ele fez."',
-    explain: 'Perfis falsos com endereço, idade, profissão. Cada um numa região. Cria onda artificial nas redes. Proibido pelo TSE (Resolução: chatbots e avatares sintéticos não podem simular diálogo de pessoa real).'
+    explain: 'Perfis falsos com endereço, idade, profissão. Cada um numa região. Cria onda artificial nas redes. Proibido pelo TSE (Resolução 23.610/2019, alterada em 2024: chatbots e avatares não podem simular conversa com pessoa real).'
   },
   {
     actionId: 'whatsBlast',
@@ -6508,7 +6237,7 @@ const MARKETEIRO_OFFERS = [
     actionId: 'buyFollowers',
     title: '👥 Pacote de seguidores reais (engajamento pago)',
     quote: '"Hoje vem sendo cada vez mais impossível ter seguidores robôs. As operadoras de telefonia limitam a cinco números por CPF."',
-    explain: 'Plataformas de troca: pessoas reais ganham moedas virtuais por seguir/curtir/comentar, depois trocam por seguidores próprios ou dinheiro. R$ 100 pra 1.000+ seguidores. Estrategistas chamam de "desastre total" — o algoritmo penaliza.'
+    explain: 'Plataformas de troca: pessoas reais ganham moedas virtuais por seguir/curtir/comentar, depois trocam por seguidores próprios ou dinheiro. Na reportagem, R$ 100 compram 1.000+ seguidores; no jogo, o pacote de R$ 10k traz milhares. Estrategistas chamam de "desastre total" — o algoritmo penaliza.'
   },
   {
     actionId: 'fakeOutrage',
@@ -6520,13 +6249,13 @@ const MARKETEIRO_OFFERS = [
     actionId: 'deepfakeAdv',
     title: '🎭 Vídeo manipulado do adversário (deepfake)',
     quote: '"Você quer fazer um estrago, você pode fazer um estrago."',
-    explain: 'Áudio + vídeo com fala fabricada do adversário. Custo baixo, efeito alto — MAS a forense de IA hoje detecta em horas. Detecção = cassação quase garantida.'
+    explain: 'Áudio + vídeo com fala fabricada do adversário. Custo baixo, efeito alto — MAS a forense de IA hoje detecta em um ou dois dias. Detecção = cassação quase garantida.'
   },
   {
     actionId: 'monitor',
     title: '⚖️ IA jurídica de monitoramento + denúncias',
     quote: '"Eu possuo uma IA jurídica que lê essas notícias e matérias e cria uma análise de risco. Hoje isso é uma das principais estratégias políticas para o pós-eleição."',
-    explain: 'Plataforma varre redes em busca de menções, cruza com legislação eleitoral, gera denúncias automáticas pro TSE e pras plataformas. Zona cinza: ferramenta legal, mas o volume vira abuso.'
+    explain: 'Plataforma varre redes em busca de menções, cruza com legislação eleitoral, gera denúncias automáticas pra Justiça Eleitoral e pras plataformas. Zona cinza: ferramenta legal, mas o volume vira abuso.'
   },
   {
     actionId: 'deepfakeDef',
@@ -6547,7 +6276,7 @@ function openMarketeiroModal(){
     if(!a) return null;
     const availLeft = !a.available || a.available(state);
     const reasons = [];
-    if(!availLeft) reasons.push('⛔ esgotado hoje');
+    if(!availLeft) reasons.push('⛔ indisponível agora');
     if(a.energy > state.energy) reasons.push('⛔ sem energia');
     if(a.cost > 0 && a.cost > state.money) reasons.push('⛔ sem dinheiro');
     const disabled = reasons.length > 0;
@@ -6578,11 +6307,11 @@ function openHotspot(area){
   // mais a eleição a essa altura.
   if(state.day >= 9 && !['mic','bed','phone'].includes(area) && area !== 'marketeiro'){
     openModal({
-      title: state.day === 9 ? 'VÉSPERA DA ELEIÇÃO' : 'DIA DA ELEIÇÃO',
+      title: state.day === 9 ? 'VÉSPERA DO DEBATE' : 'DIA DO DEBATE',
       subt: state.day === 9 ? 'Sabatina + capa da OLHA SÓ definem o dia' : 'O debate é tudo',
       body: state.day === 9
-        ? 'A essa altura, quase nada mais muda a intenção de voto. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
-        : 'Hoje só importa o <b>debate ao vivo</b> à noite. Aproxime do <b>🎤 MICROFONE</b> e comece. Resto da agenda não muda mais nada.',
+        ? 'A essa altura, praticamente nada mais muda a intenção de voto. Foque em <b>responder na sabatina</b> e <b>descansar</b> pra TV de amanhã. Se ainda há ataques sem resposta, use o <b>📱 CELULAR</b> pra revidar com vídeo.'
+        : 'Hoje só importa o <b>debate ao vivo</b> à noite. Aproxime-se do <b>🎤 MICROFONE</b> e comece. Resto da agenda não muda mais nada.',
       actions: [{ tag: 'legal', title: 'OK, ENTENDI', cost: 0, energy: 0, primary: true, onClick: closeModal }]
     });
     return;
@@ -6595,10 +6324,10 @@ function openHotspot(area){
       const reason = (state.unrepliedAttacks || 0) === 0
         ? 'Nenhum ataque sem resposta agora. Outras ações no celular não mudam mais nada.'
         : (state.videosToday >= 2)
-          ? 'Você já gravou 2 vídeos hoje. O algoritmo satura — não rende mais.'
+          ? 'Você já gravou 2 vídeos hoje. Algoritmo cansa — não rende mais.'
           : 'Sem energia pra gravar resposta agora.';
       openModal({
-        title: '📱 CELULAR — VÉSPERA/ELEIÇÃO',
+        title: '📱 CELULAR — RETA FINAL',
         subt: 'Só responder ataques agora',
         body: reason,
         actions: [{ tag: 'legal', title: 'OK', cost: 0, energy: 0, primary: true, onClick: closeModal }]
@@ -6658,7 +6387,7 @@ function openHotspot(area){
   if(acts.length === 0){
     openModal({
       title: 'NADA AQUI AGORA', subt: '',
-      body: 'Nenhuma ação disponível neste ponto hoje. Tente outro móvel.',
+      body: 'Nenhuma ação disponível neste ponto hoje (a TV só tem horário eleitoral nos dias 3 e 7). Tente outro móvel.',
       actions: [
         { tag: 'legal', title: 'OK, ENTENDI', cost: 0, energy: 0, primary: true, onClick: closeModal }
       ]
@@ -6673,13 +6402,13 @@ function openHotspot(area){
     board:{ title: 'MURAL — IMPRENSA & JURÍDICO', subt: 'Jornais, TSE, processos' },
     phone:{ title: 'CELULAR', subt: 'Suas redes sociais — tudo gratuito' },
     bed:  { title: 'CAMA — ENCERRAR O DIA', subt: 'Descansa e pula pro próximo dia' },
-    marketeiro:{ title: '🎩 MARKETEIRO DIGITAL', subt: 'Ofertas off the record (PROIBIDAS)' },
+    marketeiro:{ title: '🎩 MARKETEIRO DIGITAL', subt: 'Ofertas off the record (a maioria proibida)' },
   };
   const info = areaInfo[area] || { title: area, subt: '' };
   const modalActions = acts.map(a => {
     const availLeft = !a.available || a.available(state);
     const reasons = [];
-    if(!availLeft) reasons.push('⛔ esgotado hoje');
+    if(!availLeft) reasons.push('⛔ indisponível agora');
     if(a.energy > state.energy) reasons.push('⛔ sem energia');
     if(a.cost > 0 && a.cost > state.money) reasons.push('⛔ sem dinheiro');
     const disabled = reasons.length > 0;
@@ -6696,7 +6425,7 @@ function openHotspot(area){
   });
   openModal({
     title: info.title, subt: info.subt,
-    body: 'Escolha uma ação. Ações <b style="color:var(--legal)">verdes</b> são legais. <b style="color:var(--gray)">Amarelas</b> são cinzas — ajudam mas elevam risco. <b style="color:var(--illegal)">Vermelhas</b> são proibidas e podem te cassar.',
+    body: 'Escolha uma ação. Ações <b style="color:var(--legal)">verdes</b> são legais. <b style="color:var(--gray)">Amarelas</b> são zona cinza — ajudam mas elevam risco. <b style="color:var(--illegal)">Vermelhas</b> são proibidas e podem te cassar.',
     actions: modalActions
   });
 }
@@ -6793,7 +6522,7 @@ function reactToStatDelta(before, after){
     color: d.risk<=0 ? '#7dd87d' : '#ef6b6b', up: d.risk<=0
   });
   if(Math.abs(d.money) >= 4) chips.push({
-    el: 'hud-money', txt: `R$ ${d.money>=0?'+':''}${d.money.toFixed(0)}k`,
+    el: 'hud-money', txt: `${d.money>=0?'+':'−'}R$ ${Math.abs(d.money).toFixed(0)}k`,
     color: d.money>=0 ? '#f6c453' : '#ef6b6b', up: d.money>=0
   });
   if(Math.abs(d.trust) >= 1.5) chips.push({
@@ -6927,7 +6656,7 @@ function drawPhoneUI(t, post){
   rect(sx+2, sy+9, 8, 3, '#b87333');
   rect(sx+5, sy+13, 2, 1, '#000');
   rect(sx+8, sy+13, 2, 1, '#000');
-  txt('candidato22', sx+12, sy+10, '#000', 6);
+  txt('campanha22', sx+12, sy+10, '#000', 6);
   txt('•', sx+12, sy+10, '#3a5a8a', 6);
   txt('  Agora', sx+13, sy+13, '#888', 5);
 
@@ -7082,19 +6811,19 @@ function sampleN(arr, n){
 }
 
 const VIDEO_CAPTIONS = [
-  'Ouvi a história da Dona Tereza, do Industrial. 6 meses esperando consulta no posto. Vou ampliar médico de família 24h no meu primeiro mês como prefeito. 🙏',
+  'Ouvi a história da Dona Tereza, do Industrial. 6 meses esperando consulta no posto. Vou levar o médico de família 24h aos postos já no primeiro mês de governo. 🙏',
   'Tô voltando da feira do Bairro Alto. Conversei com 14 famílias sobre transporte. Tarifa zero na periferia entra no plano de governo.',
-  'Professor da escola municipal me parou no corredor: "ninguém vê a gente". Reajuste real e merenda integral é compromisso meu pros primeiros 100 dias.',
-  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos criar um balcão de emprego na prefeitura. Conta com a gente.',
-  'Saí da reunião com o Conselho Tutelar do Pirambu. Em 30 dias a secretaria de proteção à criança tem que estar de pé. Não dá pra esperar.',
-  'Falei com o Seu Antonio na padaria. IPTU subiu duas vezes em 4 anos. Vou abrir consulta pública e revisar a tabela. Comércio popular não aguenta mais.'
+  'Professor da escola municipal me parou no corredor: "ninguém vê a gente". Reajuste real e merenda integral são compromissos meus pros primeiros 100 dias.',
+  'Atendi 3 ligações de quem perdeu emprego essa semana. Vamos criar gabinete de empregabilidade na prefeitura. Conta com a gente.',
+  'Saí da reunião com o Conselho Tutelar da Vila Nova. No primeiro mês, mando à Câmara o projeto que cria a secretaria de proteção à criança. Não dá pra esperar.',
+  'Falei com o Seu Antônio na padaria. IPTU subiu duas vezes em 4 anos. Vou abrir consulta pública e revisar a tabela. Comércio popular não aguenta mais.'
 ];
 const VIDEO_COMMENTS = [
   ['ana_silva','Finalmente alguém olhando pra fila do SUS 👏'],
   ['jp_costa','Apoio. E o cronograma de implantação, quando sai?'],
   ['marina_rj','Compartilhei aqui em casa, todo mundo já assistiu'],
   ['professor.lucas','Vou usar amanhã em aula pra discutir representação política'],
-  ['rafa.r','Bonito o discurso, agora cadê o número do PL?'],
+  ['rafa.r','Bonito o discurso, agora de onde sai o dinheiro?'],
   ['biaa_eng','Tô torcendo. Família toda já decidiu o voto'],
   ['fernando.t','Promete tudo igual os outros, mas vou ver no domingo'],
   ['lia.m','Que diferença ouvir alguém falar com calma'],
@@ -7104,8 +6833,8 @@ const VIDEO_COMMENTS = [
 ];
 const REPLY_CAPTIONS = [
   'Vi o vídeo manipulado que tá circulando. Aqui vai a versão completa do que eu falei, sem edição. Confiram a transcrição linkada no comentário.',
-  'Sobre o boato de hoje: nunca participei daquela reunião. Tô publicando minha agenda completa de janeiro. Confiram.',
-  'Pediram que eu respondesse a acusação. Vou ser direto: documento não existe. Tô abrindo os comprovantes da campanha aqui.',
+  'Sobre o boato de hoje: nunca participei daquela reunião. Tô publicando minha agenda completa da semana. Confiram.',
+  'Pediram que eu respondesse à acusação. Vou direto ao ponto: o documento não existe. Tô abrindo os comprovantes da campanha aqui.',
   'Adversário falou em rede aberta uma versão recortada. Aqui tá o que eu disse, em 38 segundos. Compartilhem.'
 ];
 const REPLY_COMMENTS = [
@@ -7114,71 +6843,71 @@ const REPLY_COMMENTS = [
   ['ze_da_padaria','Pra mim os dois ficam falando mal um do outro, cansei'],
   ['carolinemc','Salvando esse vídeo pra mandar pros amigos confusos'],
   ['paulo_h','Resposta certa, sem perder a linha'],
-  ['nina.r','Esse é o tom que faltava no Congresso'],
-  ['eduardo_b','Elegante. Mas não esquece o que prometeu mês passado'],
+  ['nina.r','Esse é o tom que faltava na política'],
+  ['eduardo_b','Mandou bem. Mas não esquece o que prometeu mês passado'],
   ['carla.s','Compartilhei no grupo da família. Conversa difícil…']
 ];
 const AGENDA_VARIANTS = [
-  `<ul><li>08h — Feira do bairro Industrial</li><li>10h — Reunião c/ associação de moradores</li><li>14h — Visita à EE Professor Antunes</li><li>17h — Live no Instagram (perguntas)</li><li>20h — Encontro c/ diretório municipal</li></ul>`,
-  `<ul><li>07h — Café com lideranças do Pirambu</li><li>09h — Visita ao posto de saúde</li><li>11h — Audiência pública na Câmara</li><li>15h — Caminhada no comércio central</li><li>19h — Reunião com militância</li></ul>`,
-  `<ul><li>08h — Encontro c/ professores estaduais</li><li>10h — Visita à creche comunitária</li><li>13h — Almoço com pequenos comerciantes</li><li>16h — Entrevista no jornal local</li><li>18h — Plenária aberta ao público</li></ul>`,
-  `<ul><li>09h — Inauguração simbólica c/ associação</li><li>11h — Conversa com sindicato</li><li>14h — Roda de jovens na biblioteca</li><li>17h — Caminhada no bairro Alto</li><li>20h — Diretório municipal</li></ul>`
+  `<ul><li>08h — Feira do bairro Industrial</li><li>10h — Reunião c/ associação de moradores</li><li>14h — Visita à EMEF Professor Antunes</li><li>17h — Live no Instagram (perguntas)</li><li>20h — Encontro c/ diretório municipal</li></ul>`,
+  `<ul><li>07h — Café com lideranças da Vila Nova</li><li>09h — Visita ao posto de saúde</li><li>11h — Audiência pública na Câmara</li><li>15h — Caminhada no comércio central</li><li>19h — Reunião com militância</li></ul>`,
+  `<ul><li>08h — Encontro c/ professores da rede municipal</li><li>10h — Visita à creche comunitária</li><li>13h — Almoço com pequenos comerciantes</li><li>16h — Entrevista no jornal local</li><li>18h — Plenária aberta ao público</li></ul>`,
+  `<ul><li>09h — Visita à sede da associação de moradores</li><li>11h — Conversa com sindicato</li><li>14h — Roda de jovens na biblioteca</li><li>17h — Caminhada no bairro Alto</li><li>20h — Diretório municipal</li></ul>`
 ];
 const AGENDA_CAPTIONS = [
   'Minha agenda de hoje, pra quem quiser acompanhar de perto. Quem puder, aparece, é tudo aberto.',
-  'Roteiro de hoje aqui em baixo. Tô anotando comentário por comentário das pessoas. Bora.',
+  'Roteiro de hoje aqui embaixo. Tô anotando comentário por comentário das pessoas. Bora.',
   'Compromissos do dia. Como sempre — se for público, eu publico antes. Se chegar, fala comigo.',
   'Tudo aberto. Apareça em qualquer um destes endereços, é assim que a gente vai conhecendo a cidade de verdade.'
 ];
 const AGENDA_COMMENTS = [
-  ['raul.f','Vou tentar passar na feira de manhã'],
-  ['marinaribeiro','Transparência demais isso, viu. Outros candidatos esconde tudo'],
-  ['lucasmds','Posso levar minha mãe na live? Ela tem dúvida sobre BPC'],
-  ['ana_silva','Bora juntos na escola depois do almoço'],
+  ['raul.f','Vou tentar passar em algum desses de manhã'],
+  ['marinaribeiro','Transparência demais isso, viu. Outros candidatos escondem tudo'],
+  ['lucasmds','Minha mãe quer perguntar da fila da creche. Onde ela encontra vocês?'],
+  ['ana_silva','Bora junto depois do almoço'],
   ['profe.dani','Que organização. Anotei tudo aqui ☕'],
-  ['rita.f','Vou na audiência pública sim, há tempos esperando'],
-  ['caio_p','Live tá cedo demais, dá pra gravar?'],
+  ['rita.f','Vou em um desses sim, faz tempo que espero uma conversa assim'],
+  ['caio_p','Não consigo ir em nenhum, dá pra gravar e postar depois?'],
   ['mariah','Boa, tô conhecendo o trabalho']
 ];
 const MEME_VARIANTS = [
-  { line1: 'QUANDO O ADVERSÁRIO', face: '😐', line2: 'FALA DE ECONOMIA', caption: 'Quando o adversário fala de "responsabilidade fiscal" depois de votar 4 emendas suspeitas 🤡' },
-  { line1: 'EU OUVINDO', face: '🥱', line2: 'PROMESSA NOVA', caption: 'Esperando os debates do horário eleitoral... vamos ver quem traz proposta concreta hoje.' },
+  { line1: 'QUANDO O ADVERSÁRIO', face: '😐', line2: 'FALA DE ECONOMIA', caption: 'Quando o adversário fala de "responsabilidade fiscal" depois de assinar 4 contratos sem licitação 🤡' },
+  { line1: 'EU OUVINDO', face: '🥱', line2: 'PROMESSA NOVA', caption: 'Esperando o horário eleitoral de hoje... vamos ver quem traz proposta concreta hoje.' },
   { line1: 'ADVERSÁRIO', face: '😅', line2: 'NA HORA DA PESQUISA', caption: 'Quando a pesquisa sai com empate técnico e o outro lado começa a explicar que "a pesquisa não vale" 😆' },
-  { line1: 'BOLSA OU TARIFA?', face: '🤔', line2: 'NÃO É EXCLUDENTE', caption: 'Sempre vendem como "ou um, ou outro". Mas a verdade é que dá pra ter cesta básica E controle fiscal.' }
+  { line1: 'BOLSA OU TARIFA?', face: '🤔', line2: 'NÃO É EXCLUDENTE', caption: 'Sempre vendem como "ou um, ou outro". Mas a verdade é que dá pra ter bolsa E tarifa zero, com as contas em dia.' }
 ];
 const MEME_COMMENTS = [
   ['neto_tt','HAHAHA mandou bem demais 💀'],
   ['carol.zin','Compartilhei. Tá circulando aqui já'],
-  ['vinicius_p','Achei meio infantil, mas...vou rir'],
+  ['vinicius_p','Achei meio infantil, mas... vou rir'],
   ['marcelo.m','Esse aqui é o tipo de post que viraliza nos grupos da família'],
   ['fernanda.r','Não conhecia, vim por causa do meme. Vou seguir.'],
-  ['ane.gp','Mandou mal, candidato sério não posta isso 😬'],
-  ['lais_g','Era pra ser engraçado né? Foi bom']
+  ['ane.gp','Mandou mal, campanha séria não posta isso 😬'],
+  ['lais_g','Era pra ser engraçado, né? Foi bom']
 ];
 const CRISIS_CAPTIONS = [
   '🚨 Sobre o caso de desvio na secretaria municipal: quem desviou, devolve. Auditoria pública aberta no meu primeiro mês.',
-  'Acompanhei a notícia do despejo no Heliópolis. Vou pedir audiência na Câmara na próxima semana e levar um projeto de habitação social.',
+  'Acompanhei a notícia do despejo no Jardim Esperança. Vou pedir audiência na Câmara na próxima semana e levar um projeto de habitação social.',
   'Sobre os repasses federais pra educação que sumiram: vamos brigar pela cidade. Não dá pra calar.',
-  'Vi a manchete sobre enchente no bairro X. Drenagem é prioridade nos primeiros 100 dias. Compartilhem essa proposta.',
-  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. Mediar esse tipo de conflito é obrigação de quem foi eleito.',
-  'O caso da menina do Pirambu foi covarde. Vou estruturar um Conselho Tutelar forte. Isso não pode morrer em silêncio.'
+  'Vi a manchete sobre a enchente na zona norte. Drenagem é prioridade nos primeiros 100 dias. Compartilhem essa proposta.',
+  'Greve dos rodoviários começou hoje. Já liguei pro sindicato. A prefeitura tem que mediar o diálogo entre empresas de ônibus e trabalhadores.',
+  'O caso da menina da Vila Nova foi covarde. Vou fortalecer o Conselho Tutelar, com mais conselheiros e estrutura. Não vamos deixar cair no silêncio.'
 ];
 const CRISIS_COMMENTS = [
-  ['lima_jurista','Posição firme. E o número do PL fica pra divulgar quando?'],
+  ['lima_jurista','Posição firme. E o plano detalhado fica pra divulgar quando?'],
   ['ana.r.tcn','Faltava alguém falando claro sobre isso, valeu'],
-  ['eduardo_b','Bonito o post mas vamos ver a votação no plenário'],
+  ['eduardo_b','Bonito o post, mas quero ver isso sair do papel'],
   ['cida_pe','Compartilhei no grupo do bairro. Tá rodando'],
   ['jp_p','Tem que ter coragem mesmo, na Câmara quase todo mundo passa pano'],
-  ['betinho','Vai sustentar isso depois de eleito também?'],
+  ['betinho','Vai sustentar isso se vencer também?'],
   ['nadir.s','Tô vendo cobrança em massa nos comentários. Bom sinal']
 ];
 const PLATFORM_COMMENTS = [
-  ['marcia.tcc','Documentado! Isso que é mandato sério'],
+  ['marcia.tcc','Documentado! Isso que é campanha séria'],
   ['joao.henr','Li as 12 páginas. Bom material. Cadê a fonte do recurso do 3?'],
   ['biaa_eng','Já mandei pro grupo de engenheiras. Importante isso'],
   ['rafa.r','Finalmente um plano. Outros só falam genericamente'],
   ['ze.s','Vou imprimir e levar pra reunião do bairro'],
-  ['paula.tt','Documento bem feito, mas faltou ambiental']
+  ['paula.tt','Documento bem feito, mas faltou a parte ambiental']
 ];
 
 const PHONE_POSTS = {
@@ -7218,7 +6947,7 @@ const PHONE_POSTS = {
   },
   platformPost: {
     caption: 'Coloquei no ar o plano de governo completo. 3 prioridades pros primeiros 100 dias, em PDF público. Baixe, critique, mostre pra sua rede.',
-    contentHtml: () => `<div class="ph-pdf"><h4>📄 PLANO DE GOVERNO 2025-28</h4><div class="line"></div><div class="line"></div><div class="line short"></div><div class="line"></div><div class="line short"></div><div style="margin-top:8px;font-size:11px;color:#666">1. Educação integral em 30 escolas · 2. Médico de família 24h · 3. Passe livre na periferia</div></div>`,
+    contentHtml: () => `<div class="ph-pdf"><h4>📄 PLANO DE GOVERNO 2029-32</h4><div class="line"></div><div class="line"></div><div class="line short"></div><div class="line"></div><div class="line short"></div><div style="margin-top:8px;font-size:11px;color:#666">1. Educação integral em 30 escolas · 2. Médico de família 24h · 3. Passe livre na periferia</div></div>`,
     likes: () => 350 + Math.floor(state.followers/35),
     comments: () => sampleN(PLATFORM_COMMENTS, 5)
   }
@@ -7235,14 +6964,16 @@ function showPhoneOverlay(postId){
   _phoneAutoHide = setTimeout(hidePhoneOverlay, 4500);
   // atualiza nome dinâmico (número escolhido)
   const nameEl = ov.querySelector('.ph-name');
-  if(nameEl){ nameEl.innerHTML = `candidato${state.candidate.number || '22'} <span style="color:#3a90d8">✓</span>`; }
+  if(nameEl){ nameEl.innerHTML = `vota${state.candidate.number || '22'} <span style="color:#3a90d8">✓</span>`; }
   // atualiza avatar com cores do candidato
   const avEl = ov.querySelector('.ph-avatar');
   if(avEl){
     const c = getCandidateColors();
     avEl.style.background = `linear-gradient(135deg, ${c.skin} 0%, ${c.hair} 50%, ${c.shirt} 100%)`;
   }
-  $('phContent').innerHTML = post.contentHtml();
+  const _html = post.contentHtml();
+  const _cap = typeof post.caption === 'function' ? post.caption() : post.caption;
+  $('phContent').innerHTML = (_cap ? `<div class="ph-text">${_cap}</div>` : '') + _html;
   $('phComments').innerHTML = '';
   $('phLikes').textContent = '0';
   $('phComm').textContent = '0';
@@ -7262,7 +6993,7 @@ function showPhoneOverlay(postId){
   };
   tick();
   // comments dripping in
-  const comments = post.comments || [];
+  const comments = (typeof post.comments === 'function' ? post.comments() : post.comments) || [];
   _phoneTimers.forEach(clearTimeout);
   _phoneTimers = [];
   comments.forEach((c, i)=>{
@@ -7270,7 +7001,8 @@ function showPhoneOverlay(postId){
       const div = document.createElement('div');
       div.className = 'ph-comment';
       const colors = ['#7dd87d','#ff9bd2','#6ec0ff','#f6c453','#cf3a3a','#cc66ff'];
-      div.innerHTML = `<div class="ph-cavt" style="background:${colors[i%6]}"></div><div><b>@${['ana_silva','jp_costa','marina_rj','luiz_t','duda_sp','rafa.r'][i%6]}</b>${c}</div>`;
+      const [who, what] = Array.isArray(c) ? c : [['ana_silva','jp_costa','marina_rj','luiz_t','duda_sp','rafa.r'][i%6], c];
+      div.innerHTML = `<div class="ph-cavt" style="background:${colors[i%6]}"></div><div><b>@${who}</b> ${what}</div>`;
       $('phComments').appendChild(div);
       sfx('tap');
     }, 400 + i*450));
@@ -7301,7 +7033,8 @@ FX.newspaper = (t)=>{ fxDim(t); };
 function showNewspaperOverlay(){
   const cand = (state.candidate.name && state.candidate.name !== 'Você')
     ? state.candidate.name
-    : `o candidato ${state.candidate.number || '22'}`;
+    : `quem concorre com o número ${state.candidate.number || '22'}`;
+  const Cand = cand.charAt(0).toUpperCase() + cand.slice(1);
   const cidade = state.candidate.city || 'a cidade';
   // Pool: cada item tem condition() para filtrar — só entram os relevantes
   const pool = [
@@ -7309,36 +7042,36 @@ function showNewspaperOverlay(){
     {
       stamp:'ESCÂNDALO', kind:'bad',
       headline: 'BOTS RASTREADOS ATÉ A CAMPANHA',
-      lead: `Investigação aponta que rede de 40 perfis falsos defendendo ${cand} foi disparada de servidor único.`,
-      txt: `O TSE foi notificado. Especialistas em mídia social classificam a operação como "neurobots" — perfis sintéticos com endereço, idade e profissão definidos. A campanha não respondeu.`,
+      lead: `Investigação aponta que rede de 40 perfis falsos defendendo ${cand} era operada a partir de um único servidor.`,
+      txt: `A Justiça Eleitoral foi notificada. Especialistas em mídia social classificam a operação como "neurobots" — perfis sintéticos com endereço, idade e profissão definidos. A campanha não respondeu.`,
       cond: () => state.flags.neuroBots
     },
     {
       stamp:'EXPOSTO', kind:'bad',
       headline: 'CAMPANHA COMPROU SEGUIDORES',
-      lead: `Relatório técnico mostra que ${cidade}, conta oficial de ${cand} ganhou 1.500 seguidores artificiais em duas horas.`,
+      lead: `Relatório técnico mostra que a conta oficial de ${cand}, em ${cidade}, ganhou milhares de seguidores artificiais em poucas horas.`,
       txt: `O algoritmo já reduziu o alcance orgânico da conta. A campanha alega "erro de fornecedor" — discurso clássico nesses casos.`,
       cond: () => state.flags.boughtFollowers
     },
     {
       stamp:'DEEPFAKE', kind:'bad',
       headline: 'VÍDEO MANIPULADO RASTREADO',
-      lead: `Forense de IA identifica origem de deepfake do adversário até equipe de ${cand}.`,
-      txt: `A análise frame a frame mostrou padrão de geração sintética idêntico em três vídeos. Pedido de cassação foi protocolado no TSE.`,
+      lead: `Perícia forense de IA rastreia deepfake contra o adversário até a equipe de ${cand}.`,
+      txt: `A análise frame a frame mostrou padrão de geração sintética idêntico em três vídeos. Pedido de cassação foi protocolado na Justiça Eleitoral.`,
       cond: () => state.flags.deepfakedAdv
     },
     {
       stamp:'DENÚNCIA', kind:'bad',
       headline: 'DISPARO EM MASSA NO WHATSAPP',
       lead: `Usuários relatam mensagens não solicitadas defendendo ${cand} em ${cidade}.`,
-      txt: `A Meta foi notificada. Especialistas afirmam que o método de 2018 segue vivo — agora com texto gerado por IA, mas o efeito sobre o eleitor "criou vacina".`,
+      txt: `A Meta foi notificada. Especialistas afirmam que o método de 2018 segue vivo — agora com texto gerado por IA, embora parte do eleitorado já tenha "criado vacina" contra esse tipo de mensagem.`,
       cond: () => state.flags.didWhatsappBlast
     },
     {
-      stamp:'TSE', kind:'bad',
-      headline: 'TRIBUNAL ABRE 4 NOVOS PROCESSOS',
-      lead: `Acumulação de denúncias contra a campanha de ${cand} chega a nível crítico.`,
-      txt: `Risco TSE alto. Especialistas falam em possibilidade real de cassação até o segundo turno. Defesa promete recurso.`,
+      stamp:'JUSTIÇA ELEITORAL', kind:'bad',
+      headline: 'DENÚNCIAS PRESSIONAM A CAMPANHA',
+      lead: `Acúmulo de denúncias contra a campanha de ${cand} chega a nível crítico.`,
+      txt: `Especialistas avaliam que as suspeitas podem colocar a candidatura em risco. A campanha promete apresentar defesa.`,
       cond: () => state.risk >= 70
     },
     {
@@ -7352,35 +7085,35 @@ function showNewspaperOverlay(){
     {
       stamp:'EXCLUSIVO', kind:'good',
       headline: 'CAMINHADA NO BAIRRO REPERCUTE',
-      lead: `${cand} foi visto em feira popular e ouviu reclamações sobre transporte público em ${cidade}.`,
-      txt: `Vendedores ambulantes elogiaram o tom direto. Fotos espontâneas viralizaram nas redes sociais. A coluna política fala na sua semana mais consistente até aqui.`,
+      lead: `${Cand} esteve em feira popular e ouviu reclamações sobre transporte público em ${cidade}.`,
+      txt: `Vendedores ambulantes elogiaram o tom direto. Fotos espontâneas viralizaram nas redes sociais. A coluna política avalia como uma das semanas mais consistentes.`,
       cond: () => state.walkCount >= 3 && state.trust >= 60
     },
     {
       stamp:'PESQUISA', kind:'good',
-      headline: 'CANDIDATO CONSOLIDA LIDERANÇA',
+      headline: 'OPOSIÇÃO CONSOLIDA LIDERANÇA',
       lead: `Pesquisa de intenção de voto mostra ${cand} com vantagem sobre o adversário em ${cidade}.`,
-      txt: `O movimento é creditado à presença constante em bairros populares e ao tom técnico nos debates. Indecisos ainda decidem.`,
+      txt: `O movimento é creditado à presença constante em bairros populares e ao tom técnico nas entrevistas. Indecisos ainda podem mudar o quadro.`,
       cond: () => state.intent > state.oppIntent + 3 && state.day >= 4
     },
     {
       stamp:'BOA NOVA', kind:'good',
-      headline: 'PROPOSTA DE PASSE LIVRE GANHA FORÇA',
-      lead: `Plano de tarifa zero apresentado por ${cand} foi citado por colunas e por entidades de transporte.`,
-      txt: `Especialistas em mobilidade urbana classificam a proposta como factível. ${cand} prometeu apresentar fontes fiscais até o debate.`,
+      headline: 'PROPOSTAS DA CAMPANHA GANHAM ESPAÇO',
+      lead: `Propostas apresentadas por ${cand} foram citadas por colunas e entidades locais.`,
+      txt: `A repercussão positiva acompanha a presença da campanha nas ruas e nas entrevistas. Eleitores ainda cobram metas e fontes de recursos.`,
       cond: () => state.legalActs >= 4 && state.trust >= 50
     },
     {
       stamp:'EXCLUSIVO', kind:'good',
-      headline: 'DEFENDE MÉDICO DE FAMÍLIA 24H',
-      lead: `Em entrevista, ${cand} detalhou plano municipal de Atenção Básica integral.`,
-      txt: `O programa foi bem recebido por trabalhadores da saúde. Conselho municipal apoiou a iniciativa em nota.`,
+      headline: 'VÍDEOS DA CAMPANHA REPERCUTEM',
+      lead: `Vídeos publicados por ${cand} ganharam espaço nas redes sociais.`,
+      txt: `A presença frequente em vídeo rendeu comentários positivos. Eleitores pedem mais detalhes sobre as propostas.`,
       cond: () => state.videoCount >= 2 && state.trust >= 55
     },
     {
       stamp:'DESTAQUE', kind:'good',
       headline: 'PROGRAMA DE GOVERNO PÚBLICO É CITADO',
-      lead: `${cand} é o único candidato com plano em PDF público em ${cidade}.`,
+      lead: `${Cand} publicou o plano de governo mais detalhado de ${cidade}, com metas e fontes.`,
       txt: `Organizações de transparência elogiaram. "O eleitor pode comparar com prazo, fonte e responsável", diz um analista.`,
       cond: () => state.flags.publishedPlatform
     },
@@ -7388,8 +7121,8 @@ function showNewspaperOverlay(){
     {
       stamp:'POLÍTICA', kind:'neutral',
       headline: 'ENTREVISTA SEM SOBRESSALTOS',
-      lead: `${cand} concedeu entrevista de 40 minutos sobre prioridades em ${cidade}.`,
-      txt: `Coluna política classifica o desempenho como "consistente, mas sem brilho". Indecisos seguem em cima do muro.`,
+      lead: `${Cand} concedeu entrevista de 40 minutos sobre prioridades em ${cidade}.`,
+      txt: `Coluna política classifica o desempenho como "consistente, mas sem marca definida". Eleitores indecisos seguem em dúvida.`,
       cond: () => true
     }
   ];
@@ -7405,7 +7138,7 @@ function showNewspaperOverlay(){
   }
   // Render
   $('newsName').textContent = 'JORNAL DE ' + (state.candidate.city || 'CIDADE').toUpperCase();
-  $('newsCaption').textContent = 'CANDIDATO ' + (state.candidate.number || '22');
+  $('newsCaption').textContent = 'CANDIDATURA ' + (state.candidate.number || '22');
   $('newsHeadline').textContent = chosen.headline;
   $('newsLead').textContent = chosen.lead;
   $('newsTxt').textContent = chosen.txt;
@@ -7426,11 +7159,11 @@ function showSentimentOverlay(){
   _sentAutoHide = setTimeout(hideSentimentOverlay, 7000);
   const mentions = [
     { src: 'X.com @transporte_local', txt: '"Ônibus continuam lotados. Cadê a prefeitura?"', emotion: 'raiva' },
-    { src: 'Facebook · grupo Bairro X', txt: '"Esperando mudança. Educação tá ruim demais."', emotion: 'indignação' },
+    { src: 'Facebook · grupo Moradores do Centro', txt: '"Esperando mudança. Educação tá ruim demais."', emotion: 'indignação' },
     { src: 'Instagram @comerciante_local', txt: '"Imposto sobre pequeno comércio precisa baixar"', emotion: 'expectativa' },
-    { src: 'Reddit r/brasilpolitica', txt: '"Esse candidato 22 tá mais transparente que o outro"', emotion: 'confiança' },
-    { src: 'TikTok @profressora_ana', txt: '"Salário não acompanha inflação há anos"', emotion: 'tristeza' },
-    { src: 'X.com @estudanteUFPE', txt: '"Pra quando ampliação do passe livre?"', emotion: 'expectativa' },
+    { src: 'Reddit r/brasilpolitica', txt: `"Esse ${state.candidate.number || '22'} tá mais transparente que o outro"`, emotion: 'confiança' },
+    { src: 'TikTok @professora_ana', txt: '"Salário não acompanha inflação há anos"', emotion: 'tristeza' },
+    { src: 'X.com @estudante_uni', txt: '"Pra quando a ampliação do passe livre?"', emotion: 'expectativa' },
   ];
   $('sentMentions').innerHTML = '';
   mentions.forEach((m, i)=>{
@@ -7478,8 +7211,8 @@ function showSentimentOverlay(){
   setTimeout(()=>{
     $('sentReco').innerHTML = `
       <span class="reco-pill">RESPOSTA SUGERIDA</span>
-      <div style="margin-bottom:6px">Tema mais quente: <b style="color:#ef6b6b">transporte</b> (raiva 32%). Eleitores 35-50 reclamando.</div>
-      <div class="draft">"Vou apresentar projeto pra ampliar BR-Mobilidade. Próxima semana, audiência pública no meu gabinete. Quem quiser participar, comenta aqui."</div>
+      <div style="margin-bottom:6px">Tema mais quente: <b style="color:#ef6b6b">transporte</b> (raiva 32%). Eleitores de 35 a 50 anos reclamando.</div>
+      <div class="draft">"Vou apresentar um plano pra ampliar as linhas de ônibus nos bairros. Nesta semana, plenária aberta no comitê. Quem quiser participar, comenta aqui."</div>
     `;
     sfx('legal');
   }, 1800);
@@ -7604,7 +7337,7 @@ FX.monitor = (t)=>{
     if(Math.random() > 0.5) rect(sx+c*3, sy+r*3, 1, 1, '#7dd87d');
   }
   if(t > 0.5){
-    txt('TSE: 3 hits', 100, 36, '#7dd87d', 8);
+    txt('3 alertas', 100, 36, '#7dd87d', 8);
   }
 };
 
@@ -7722,7 +7455,7 @@ FX.tvProgram = (t)=>{
   rect(257, 84, 4, 1, '#8a3a3a');
   // banner
   rect(242, 86, 36, 4, '#3a5a8a');
-  txt('22 PREFEITO', 244, 87, '#fff', 7);
+  txt((state.candidate.number || '22') + ' PREFEITURA', 244, 87, '#fff', 7);
   // ON AIR red dot
   if(Math.floor(t*8)%2) rect(270, 73, 3, 3, '#ff3a3a');
   txt('NO AR', 100, 36, '#f6c453', 9);
@@ -7762,7 +7495,7 @@ function _legacyNewspaperCanvas(t){
   rect(tx+8, ty+17, w-16, 1, '#222');
   // manchete: quebrar em 2 linhas se necessário
   const manchete = state.trust > 50
-    ? 'CANDIDATO DEFENDE\nPLANO DE 100 DIAS'
+    ? 'CAMPANHA DEFENDE\nPLANO DE 100 DIAS'
     : 'CONTRADIÇÕES MARCAM\nENTREVISTA';
   const ttype = Math.max(0, Math.min(1, (t-0.4)/0.4));
   const lines = manchete.split('\n');
@@ -7795,7 +7528,7 @@ function _legacyNewspaperCanvas(t){
   rect(fx+22, fy+38, 12, 2, '#8a3a3a');
   // legenda
   rect(fx, fy+72, 56, 4, '#dab66b');
-  txt('CANDIDATO 22', fx+2, fy+72, '#222', 6);
+  txt('CAMPANHA 22', fx+2, fy+72, '#222', 6);
   // texto à direita da foto (linhas cinzas)
   const txc = tx + 72;
   const maxLineW = w - 80;
@@ -7923,8 +7656,8 @@ function showDayDiagnostic(){
       <div>Adversário</div><div style="${cls(-d.opp, true)}">${arrow(d.opp)} ${d.opp>=0?'+':''}${d.opp.toFixed(1)}%</div>
       <div>Risco TSE</div><div style="${cls(-d.risk, true)}">${arrow(d.risk)} ${d.risk>=0?'+':''}${d.risk.toFixed(0)}</div>
       <div>Confiança</div><div style="${cls(d.trust, true)}">${arrow(d.trust)} ${d.trust>=0?'+':''}${d.trust.toFixed(0)}</div>
-      <div>Caixa</div><div style="${cls(d.money, true)}">${arrow(d.money)} R$ ${d.money>=0?'+':''}${d.money.toFixed(0)}k</div>
-      <div>Seguidores</div><div style="${cls(d.followers, true)}">${arrow(d.followers)} ${d.followers>=0?'+':''}${fmtFollowers(Math.abs(d.followers))}</div>
+      <div>Caixa</div><div style="${cls(d.money, true)}">${arrow(d.money)} ${d.money>=0?'+':'−'}R$ ${Math.abs(d.money).toFixed(0)}k</div>
+      <div>Seguidores</div><div style="${cls(d.followers, true)}">${arrow(d.followers)} ${d.followers>=0?'+':'−'}${fmtFollowers(Math.abs(d.followers))}</div>
     </div>
   `;
   const analysis = getDayAnalysis(d);
@@ -7991,13 +7724,13 @@ function renderEvolutionChart(){
 }
 
 function getDayAnalysis(d){
-  if(d.risk > 25) return 'Sua campanha ficou marcada por suspeitas de práticas irregulares. O TSE pode pesar a mão.';
+  if(d.risk > 25) return 'Sua campanha ficou marcada por suspeitas de práticas irregulares. A Justiça Eleitoral pode pesar a mão.';
   if(d.intent >= 4 && d.trust > 0) return 'Dia forte: você cresceu e ainda manteve credibilidade.';
   if(d.intent >= 4 && d.trust < 0) return 'Subiu, mas com custo de imagem. Pode voltar contra você.';
-  if(d.intent <= -3) return 'Você perdeu chão. Adversário aproveitou e a imprensa cobrou.';
+  if(d.intent <= -3) return 'Você perdeu chão, e a imprensa cobrou.';
   if(d.followers > 1500 && d.trust < 0) return 'Engajamento artificial inflou seu perfil. O algoritmo cedo ou tarde reage.';
   if(d.followers > 200 && d.intent > 0) return 'Crescimento orgânico saudável.';
-  if(Math.abs(d.intent) < 1 && Math.abs(d.risk) < 3) return 'Dia morno. Adversário também não cresceu muito.';
+  if(Math.abs(d.intent) < 1 && Math.abs(d.risk) < 3) return 'Dia morno. Pouca coisa mudou na sua campanha.';
   return 'Resultado misto. Olhe os números e ajuste a estratégia.';
 }
 function wakeUp(){
@@ -8011,12 +7744,12 @@ function wakeUp(){
 }
 function getSleepText(d){
   const msgs = {
-    1: 'Primeiro dia fechado. O candidato senta no sofá, abre a agenda do dia seguinte e apaga a luz.',
+    1: 'Primeiro dia fechado. Você senta no sofá, abre a agenda do dia seguinte e apaga a luz.',
     2: 'Adversário também trabalhou. Não dá pra perder tempo.',
     3: 'A semana começa a apertar.',
-    4: 'A noite cai depois do ataque. Você ouve a equipe ainda apagando o incêndio.',
+    4: 'A noite cai. Você ouve a equipe ainda respondendo mensagens.',
     5: 'Meio do caminho. O cansaço bate.',
-    6: 'O TSE tá pegando pesado. Você dorme mal.',
+    6: 'Dia de acerto de contas com a Justiça Eleitoral. Você dorme mal.',
     7: 'Última noite antes da reta final.',
     8: 'Faltam dois dias. Você fica acordado revendo o discurso.',
     9: 'Véspera do debate. Você precisa descansar.',
@@ -8037,20 +7770,19 @@ function clampStats(){
   state.oppIntent = Math.min(98, state.oppIntent);
   state.trust = Math.max(0, Math.min(100, state.trust));
   state.risk = Math.max(0, Math.min(100, state.risk));
-  state.money = Math.max(-50, state.money);
   state.followers = Math.max(0, state.followers);
-  // money cap inferior generoso (campanha pode operar em vermelho)
-  state.money = Math.max(-100, state.money);
+  // caixa pode operar no vermelho, até -R$ 50k
+  state.money = Math.max(-50, state.money);
 }
 
 function checkCassacao(){
   if(state.risk >= 90 && state.risk < 100 && !state._risk90warned){
     state._risk90warned = true;
     Audio.music.stinger('tseAlert');
-    bigNews('TSE — ALERTA MÁXIMO', `Risco em ${Math.round(state.risk)}/100. Mais uma denúncia e sua candidatura está fora.`, 'bad');
+    bigNews('JUSTIÇA ELEITORAL — ALERTA MÁXIMO', `Risco em ${Math.round(state.risk)}/100. Novas denúncias podem levar à cassação da candidatura.`, 'bad');
   } else if(state.risk >= 75 && state.risk < 90 && !state._risk75warned){
     state._risk75warned = true;
-    bigNews('TSE — ATENÇÃO', `Risco subiu para ${Math.round(state.risk)}/100. Acúmulo perigoso de denúncias.`, 'warn');
+    bigNews('JUSTIÇA ELEITORAL — ATENÇÃO', `Risco subiu para ${Math.round(state.risk)}/100. Acúmulo perigoso de denúncias.`, 'warn');
   }
   if(state.risk >= 100 && !state.endTriggered){
     state.endTriggered = true;
@@ -8178,16 +7910,16 @@ function startDay(){
 
 function getDayIntro(d){
   const intros = {
-    1: 'Faltam 10 dias. Empate técnico (você 30%, adversário 30%, indecisos 40%). Caixa: R$ 100k. <i>Energia: 5 ações por dia.</i>',
-    2: 'Pesquisa nova sai hoje. O noticiário começa a esquentar.',
-    3: 'Hoje tem horário eleitoral. Seu bloco pode ir ao ar na TV.',
+    1: `Faltam 10 dias. Empate técnico (você 30%, adversário 30%, indecisos 40%). Caixa: R$ ${Math.round(state.money)}k (já descontada a despesa do dia). <i>Energia: 5 pontos por dia.</i>`,
+    2: 'Pesquisa nova hoje. O ciclo de notícias começa a esquentar.',
+    3: 'Hoje sua campanha tem vaga no horário eleitoral gratuito: dá pra levar um bloco à TV.',
     4: 'Adversário pode atacar hoje. Quem tem detector de deepfake fica protegido.',
-    5: 'Imprensa atrás de entrevista. Caminhada de rua rende foto.',
-    6: 'O TSE começa a olhar denúncias acumuladas. Quem fez muita coisa cinza paga.',
-    7: 'Segundo bloco do horário eleitoral. Última grande janela de TV antes do debate.',
-    8: 'Faltam 2 dias. O que ficou mal escondido começa a estourar.',
-    9: 'Véspera do debate. Último dia em que captar dinheiro ainda adianta. Dorme cedo.',
-    10:'<b>DIA DO DEBATE.</b> À noite, na rede principal. Tudo o que você fez até aqui vai pesar.'
+    5: 'Imprensa procurando entrevistas. Caminhada de rua rende foto.',
+    6: 'A Justiça Eleitoral começa a analisar as representações acumuladas. Quem fez muita coisa cinza paga.',
+    7: 'Sua segunda e última vaga no horário eleitoral gratuito. Última grande janela de TV antes do debate.',
+    8: 'Faltam 2 dias para o debate. O que ficou escondido pode vir à tona.',
+    9: 'Véspera do debate. Hoje tem sabatina ao vivo — e a capa da OLHA SÓ vai sair. Responda bem e descanse.',
+    10:'<b>DIA DO DEBATE.</b> Hoje à noite, debate na TV aberta. Tudo o que você fez vai pesar.'
   };
   return intros[d] || '';
 }
@@ -8196,26 +7928,26 @@ function getDayIntro(d){
 // MARKETEIRO PROVOCADOR — sussurra tentações ilegais
 // =====================================================================
 const MARKETEIRO_LINES = [
-  { text: 'Pô candidato, R$ 100 e a gente bota mil seguidores na sua conta agora. Ninguém vai notar.', area: 'desk' },
-  { text: 'Tenho 200 números aquecidos prontos. Manda hoje à noite que viraliza.', area: 'desk' },
+  { text: 'Pô, R$ 100 e a gente bota mil seguidores na sua conta agora. Ninguém vai notar.', area: 'desk' },
+  { text: 'Tenho 100 números aquecidos prontos. Manda hoje à noite que viraliza.', area: 'desk' },
   { text: 'Aquele vídeo do adversário... posso "ajustar" a fala. Em 4 horas tá nas redes.', area: 'desk' },
   { text: 'Tô com 40 perfis cadastrados, todos com endereço, idade, profissão. Quer que eu solte hoje?', area: 'desk' },
-  { text: 'Tem um empresário querendo te conhecer. Não declara nada. Sem rastro.', area: 'sofa' },
-  { text: 'Pesquisa amanhã mostra empate. Se quiser virar antes, faz o disparo agora.', area: 'desk' },
-  { text: 'Tenho cara que enche sua caixa de comentários "Você é o melhor!". R$ 15k.', area: 'phone' },
-  { text: '"Análise de sentimento" é nada. Quer mesmo é monitorar o adversário e derrubar conta dele.', area: 'desk' },
+  { text: 'Tem um empresário querendo te conhecer. Não declara nada. Pé limpo.', area: 'sofa' },
+  { text: 'A próxima pesquisa vai mostrar empate. Se quiser virar antes, faz o disparo agora.', area: 'desk' },
+  { text: 'Tenho um cara que enche sua caixa de comentários "Você é o melhor!". R$ 15k.', area: 'phone' },
+  { text: '"Análise de sentimento" não é nada. Quer mesmo é monitorar o adversário e derrubar conta dele.', area: 'desk' },
   { text: 'Adversário tá comprando seguidor, eu te garanto. Se você não responder na mesma moeda, perde.', area: 'desk' },
 ];
 // Dicas analíticas — o marketeiro observa o estado do jogador
 const MARKETEIRO_TIPS = [
   { cond: s => s.walkCount < 3 && s.day >= 3 && s.intent < 38,
-    text: 'Cê tá quase não pisando na rua, viu? Pesquisa não sobe em sala fechada — os indecisos tão na esquina.' },
+    text: 'Cê quase não tá pisando na rua, viu? Pesquisa não sobe em sala fechada — os indecisos tão na esquina.' },
   { cond: s => s.followers < 4500 && s.day >= 3,
     text: 'Tô olhando teu perfil: tá morto. Sem seguidor, sem alcance. Posso resolver hoje mesmo.' },
   { cond: s => s.oppIntent > s.intent + 4 && s.day >= 4,
-    text: 'Seu adversário tá colando. Sabe o que eu fazia agora? Soltava 40 perfis pra incomodar ele. Mas é você que sabe.' },
+    text: 'Seu adversário tá abrindo vantagem. Sabe o que eu fazia agora? Soltava 40 perfis pra incomodar ele. Mas é você que sabe.' },
   { cond: s => s.risk >= 65,
-    text: 'Tá esquentando aí, hein. TSE tá com você no radar. Diminui o ritmo das ousadias por uns dias.' },
+    text: 'Tá esquentando aí, hein. O MP Eleitoral tá com você no radar. Diminui o ritmo das ousadias por uns dias.' },
   { cond: s => s.trust < 40 && s.day >= 4,
     text: 'Tua credibilidade despencou. Eleitor não tá comprando promessa. Precisa de impacto.' },
   { cond: s => s.videoCount === 0 && s.day >= 4,
@@ -8224,8 +7956,8 @@ const MARKETEIRO_TIPS = [
     text: 'Caixa apertando. Posso indicar uma "reunião" off-record. Você decide.' },
   { cond: s => s.day === 7 && s.intent < 40,
     text: s => 'Faltam 3 dias. Tua intenção tá em ' + Math.round(s.intent) + '%. Sem virada, é segundo turno na melhor das hipóteses.' },
-  { cond: s => s.day === 9 && s.intent < 45,
-    text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã ou você vira o jogo, ou já era.' },
+  { cond: s => s.day === 9 && s.intent < s.oppIntent,
+    text: 'Véspera do debate. Pesquisa de hoje te coloca atrás. Amanhã é redenção ou tumba.' },
   { cond: s => s.illegalActs === 0 && s.day >= 5 && s.intent < s.oppIntent,
     text: 'Você tá jogando limpo demais e perdendo. Política é guerra suja — quer ganhar ou quer ser exemplo?' },
   { cond: s => s.illegalActs >= 2 && s.risk < 50,
@@ -8233,7 +7965,7 @@ const MARKETEIRO_TIPS = [
   { cond: s => s.walkCount >= 5 && s.intent >= 50 && s.trust >= 60,
     text: 'Você tá no caminho certo. Caminhada virou voto, credibilidade no teto. Vou ficar quieto.' },
   { cond: s => s.flags.boughtFollowers && s.day >= 5 && !s.flags._exposedFollowers,
-    text: 'Aqueles seguidores que comprou: tá quase exposto. Tem que diluir com conteúdo real antes que vaze.' },
+    text: 'Aqueles seguidores que você comprou tão quase expostos. Tem que diluir com conteúdo real antes que vaze.' },
   { cond: s => s.flags.didWhatsappBlast && s.risk >= 50,
     text: 'Disparo de WhatsApp deixou rastro. Se vazar agora, eu não conheço você. Combinado?' },
   { cond: s => s.flags.deepfakedAdv,
@@ -8268,7 +8000,7 @@ function maybeAppearMarketeiro(){
 const MODE_CONFIG = {
   normal: {
     name: 'Normal', label: '🎯 Normal',
-    desc: 'Ataques quase todo dia, adversário cresce forte. Defesa é obrigatória — sem ela, ~26% chance de DERROTA. Vitória 1T fica em 5%.',
+    desc: 'Ataques quase todo dia, adversário cresce forte. Defesa é obrigatória — sem ela, ~26% de chance de DERROTA. Vitória no 1º turno fica em 5%.',
     dayCap: 9, leadPenalty: true,
     scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
     dmgMul: 1.4, oppGrowthBonus: 0.8,
@@ -8277,7 +8009,7 @@ const MODE_CONFIG = {
   },
   dificil: {
     name: 'Difícil', label: '🔥 Difícil',
-    desc: 'Como campanha de verdade. Adversário também tem viral/endosso. Honesto sem defesa: 1% vitória, 53% derrota. Mesmo com defesa: 4% vitória, 36% derrota.',
+    desc: 'Como campanha de verdade. Adversário também tem viral/endosso. Honesto sem defesa: 1% de vitória, 53% de derrota. Mesmo com defesa: 4% de vitória, 36% de derrota.',
     dayCap: 9, leadPenalty: true,
     scheduledChance: { 2: 0.4, 3: 0.8, 4: 0.5, 5: 0.9, 6: 0.5, 7: 1.0, 8: 0.5 },
     dmgMul: 1.45, oppGrowthBonus: 0.9,
@@ -8307,30 +8039,30 @@ const OPPONENT_ATTACKS = {
   botsAtacando: {
     kind: 'organico',
     headline: 'SEU INSTAGRAM',
-    text: 'Onda de comentários hostis em todos os seus posts. Padrão coordenado — bots da oposição.',
+    text: 'Onda de comentários hostis em todos os seus posts. Padrão coordenado — bots ligados ao adversário.',
     dmg: { intent:-3, followers:-800 }
   },
   corteEditado: {
     kind: 'organico',
     headline: 'YOUTUBE',
-    text: 'Vídeo seu rodando com cortes que fazem uma resposta de 1 minuto parecer outra coisa.',
+    text: 'Vídeo editado seu rodando: cortes deturpando uma resposta sua de 1 minuto pra parecer outra coisa.',
     dmg: { intent:-5, trust:-3 }
   },
   pesquisaFalsa: {
     kind: 'organico',
     headline: 'PORTAL SUSPEITO',
-    text: 'Pesquisa de um "instituto" que nem existe mostra você 10 pontos atrás. Falsa — mas tá circulando.',
+    text: 'Pesquisa de um instituto sem registro na Justiça Eleitoral vazou mostrando você 10 pontos atrás. Falsa, mas tá circulando.',
     dmg: { intent:-4 }
   },
   denunciaLaranja: {
     kind: 'organico',
-    headline: 'MP-ELEITORAL',
-    text: 'Cidadão "preocupado" protocolou denúncia contra você no MP. Sem prova, mas vai gerar manchete.',
+    headline: 'MP ELEITORAL',
+    text: 'Cidadão "preocupado" protocolou representação contra você no MP Eleitoral. Sem prova, mas vai gerar manchete.',
     dmg: { risk:18, trust:-3, intent:-1 }
   },
   vazamentoIA: {
     kind: 'ia', shieldable: 'deepfake',
-    headline: 'GRUPOS APOIADORES DO ADVERSÁRIO',
+    headline: 'GRUPOS DE APOIADORES DO ADVERSÁRIO',
     text: '"Vazamento" de áudio com sua voz tratando eleitor com desprezo. Sintetizado por IA.',
     dmg: { intent:-6, trust:-5 }
   },
@@ -8365,12 +8097,12 @@ function triggerOpponentAttack(attackId){
   // shield deepfake: desarma totalmente
   if(atk.shieldable === 'deepfake' && state.shieldDeepfakeDays > 0){
     state.intent += 2; state.trust += 2;
-    feedNews('SEU JURÍDICO', `Forense detectou conteúdo IA do adversário (${atk.headline.toLowerCase()}) — derrubado antes de viralizar.`, 'good');
+    feedNews('SUA EQUIPE JURÍDICA', `Perícia detectou conteúdo de IA do adversário (${atk.headline}) — derrubado antes de viralizar.`, 'good');
     return;
   }
   // monitor de redes: 35% chance de antecipar ataque orgânico
   if(atk.kind === 'organico' && state.flags.monitorRedes && Math.random() < 0.35){
-    feedNews('SEU MONITORAMENTO', `Detectou cedo uma jogada do adversário (${atk.headline.toLowerCase()}) e equipe respondeu antes de pegar tração.`, 'good');
+    feedNews('SEU MONITORAMENTO', `Detectou cedo uma jogada do adversário (${atk.headline}) e a equipe respondeu antes de pegar tração.`, 'good');
     return;
   }
   // aplica dano com mitigações
@@ -8421,37 +8153,37 @@ function maybeTriggerOpponentAttacks(opts){
 // Cada partida sorteia 1 manchete diferente — pool 5+ versões por dia
 // =====================================================================
 const FAKE_NEWS_DAY5 = [
-  { headline: 'BLOG REVELA: GABINETE TEM FUNCIONÁRIO FANTASMA',
-    text: 'Print de "folha de ponto" mostra servidor sem bater ponto há 6 meses. Documento é adulterado, mas viraliza.',
+  { headline: 'BLOG REVELA: CAMPANHA PAGA "FUNCIONÁRIO FANTASMA"',
+    text: 'Print de "folha de pagamento" mostra cabo eleitoral que nunca apareceu. Documento é adulterado, mas viraliza.',
     dmg: { intent:-4, trust:-3 } },
-  { headline: 'EMENDA SUSPEITA: R$ 280K PRA EMPRESA "DE FACHADA"',
-    text: 'Listagem de empenho com nome similar ao de loja fechada. PDF adulterado roda em grupos.',
+  { headline: 'CONTRATO SUSPEITO: R$ 280K PRA EMPRESA "DE FACHADA"',
+    text: 'Nota de fornecedor da campanha com nome similar ao de loja fechada. PDF adulterado roda em grupos.',
     dmg: { intent:-4, trust:-3 } },
-  { headline: 'ASSESSOR DO CANDIDATO É PRESO POR LAVAGEM EM SP',
-    text: 'É homônimo total — outra pessoa, outra cidade. Mas a foto sai com seu nome embaixo.',
+  { headline: 'ASSESSOR DA CAMPANHA É PRESO POR LAVAGEM EM SP',
+    text: 'É homônimo total — outra pessoa, outra cidade. Mas a foto circula ligada ao seu nome.',
     dmg: { intent:-5, trust:-3 } },
-  { headline: 'IRMÃO DO CANDIDATO APONTADO EM ESQUEMA DE OBRA',
-    text: 'O "irmão" não existe — sobrenome é homônimo. Sem checar, viralizou em 4h.',
+  { headline: 'SUPOSTO PARENTE LIGADO À CAMPANHA EM ESQUEMA',
+    text: 'O "parente" não existe — é só alguém com o mesmo sobrenome. Sem checar, viralizou em 4h.',
     dmg: { intent:-4, trust:-3 } },
   { headline: 'ÁUDIO MOSTRA SEU ALIADO COMBINANDO COMPRA DE VOTOS',
     text: 'Áudio sintético, sem origem rastreável, com voz parecida com a do seu coordenador.',
     dmg: { intent:-4, trust:-4 } },
-  { headline: 'CANDIDATO TERIA USADO CARRO OFICIAL EM VIAGEM PESSOAL',
+  { headline: 'CAMPANHA TERIA USADO CARRO EM VIAGEM PESSOAL',
     text: 'Foto sem data, sem placa, em rodovia qualquer. Atribuída ao seu carro de campanha.',
     dmg: { intent:-3, trust:-3 } }
 ];
 
 const FAKE_NEWS_DAY7 = [
-  { headline: 'CARTÃO CORPORATIVO DA CAMPANHA TEM GASTO EM CASINO',
+  { headline: 'CARTÃO CORPORATIVO DA CAMPANHA TEM GASTO EM CASSINO',
     text: 'Print falsificado de extrato bancário roda em grupos. Sua equipe nem usa cartão corporativo.',
     dmg: { intent:-5, trust:-4 } },
   { headline: 'CONSTRUTORA QUE FINANCIOU CAMPANHA ESTÁ NA "LISTA SUJA"',
-    text: 'Nome da empresa "DOAÇÕES LTDA" sequer existe na Receita. Mas a tabela falsa circula.',
+    text: 'Nome da empresa "DOAÇÕES LTDA" nem sequer existe na Receita. Mas a tabela falsa circula.',
     dmg: { intent:-5, trust:-4 } },
-  { headline: 'CANDIDATO TERIA PROMETIDO EMENDA DE R$ 1MI A IGREJA EM TROCA DE APOIO',
+  { headline: 'CAMPANHA TERIA PROMETIDO R$ 1 MI A IGREJA EM TROCA DE APOIO',
     text: 'Captura de tela de "contrato" assinado. Documento todo fabricado em editor de imagem.',
     dmg: { intent:-5, trust:-5 } },
-  { headline: 'IMAGEM MOSTRA CANDIDATO COM POLÍTICO INVESTIGADO',
+  { headline: 'IMAGEM LIGA CAMPANHA A POLÍTICO INVESTIGADO',
     text: 'Montagem grosseira, mas espalha em grupos sem checagem. Equipe corre pra desmentir.',
     dmg: { intent:-5, trust:-4 } },
   { headline: 'EX-FUNCIONÁRIO DA CAMPANHA DENUNCIA "CAIXA 2"',
@@ -8465,25 +8197,26 @@ const FAKE_NEWS_DAY7 = [
 // Capas da OLHA SÓ (D9, véspera) — pool de 5 manchetes negativas com "propina"
 const OLHA_SO_COVERS = [
   { headline: 'DIVULGADO O ESCÂNDALO QUE TODOS SUSPEITAVAM',
-    sub: 'Imagens mostram candidato recebendo malote em hotel de luxo' },
-  { headline: 'BOMBA! VAZAM IMAGENS DE PROPINA EM HOTEL DE SP',
-    sub: 'Vídeo de 4 minutos viraliza na véspera da eleição' },
-  { headline: 'CANDIDATO PEGO EM FLAGRANTE COM MALA DE DINHEIRO',
+    sub: 'Imagens mostram entrega de malote em hotel de luxo' },
+  { headline: 'BOMBA! VAZAM IMAGENS DE PROPINA EM HOTEL DE LUXO',
+    sub: 'Vídeo de 4 minutos viraliza às vésperas do debate' },
+  { headline: 'FLAGRANTE DE MALA DE DINHEIRO ABALA CAMPANHA',
     sub: 'Câmera de segurança expõe encontro com ex-aliado' },
-  { headline: 'FOTOS COMPROMETEDORAS DESTROEM IMAGEM DO CANDIDATO',
-    sub: 'Registro de encontro reservado vaza poucas horas antes da urna' },
-  { headline: 'PROVAS DEFINITIVAS: CANDIDATO RECEBE PROPINA',
-    sub: 'Informante anônimo entrega tudo à OLHA SÓ na véspera' }
+  { headline: 'FOTOS COMPROMETEDORAS ABALAM CAMPANHA',
+    sub: 'Registro de encontro reservado vaza na reta final da campanha' },
+  { headline: 'PROVAS DEFINITIVAS: CAMPANHA RECEBE PROPINA',
+    sub: 'Informante anônimo entrega tudo à OLHA SÓ na reta final' }
 ];
 
 // Pergunta especial da sabatina sobre a capa da OLHA SÓ
 const OLHA_SO_SABATINA_ROUND = {
-  adv: 'A revista OLHA SÓ trouxe imagens te recebendo propina em hotel. Quer responder?',
+  adv: 'A revista OLHA SÓ trouxe imagens de você recebendo propina em hotel. Quer responder?',
   youDefault: 'O auditório espera. Adversário sorri.',
   options: [
     { label: 'PROVA TÉCNICA', kind: 'objection',
       text: '"Isso é um DEEPFAKE fabricado pela campanha adversária. Aqui está o laudo técnico do perito independente que provou manipulação."',
-      d: 9, c: 12, msg: 'A plateia vira pro seu lado. O laudo fecha. Adversário tenta rebater e perde o microfone.' },
+      needs: { hadDetector: true }, fallback: { d: 1, c: -2, msg: 'Sem laudo em mãos — você não contratou perícia —, "deepfake" soou como desculpa.' },
+      d: 9, c: 12, msg: 'Plateia muda. Laudo bate. Adversário tenta rebater e perde o microfone.' },
     { label: 'NEGAÇÃO SIMPLES', kind: 'explain',
       text: '"Eu nego. Nunca recebi propina. A revista vai ser processada."',
       d: 2, c: 3 },
@@ -8492,7 +8225,7 @@ const OLHA_SO_SABATINA_ROUND = {
       d: 1, c: -2 },
     { label: 'EVASIVA', kind: 'concede',
       text: '"Vou esclarecer com calma quando passar a eleição."',
-      d: -4, c: -6, msg: 'Evasiva. Pra plateia, soou como quem tem algo a esconder.' }
+      d: -4, c: -6, msg: 'Evasiva. Plateia interpreta como confissão silenciosa.' }
   ]
 };
 
@@ -8502,7 +8235,7 @@ function triggerLeadFakeNews(day){
   applyAttackDamage(evt.dmg);
   Audio.music.stinger('attack');
   bigNews(`⚠️ ATAQUE OPORTUNISTA — ${evt.headline}`, evt.text, 'bad');
-  feedNews('FAKE NEWS DO ADVERSÁRIO', `Sua liderança virou alvo. ${evt.dmg.intent}% intenção, ${evt.dmg.trust} confiança.`, 'bad');
+  feedNews('FAKE NEWS DO ADVERSÁRIO', 'Sua liderança virou alvo. Intenção e confiança caem.', 'bad');
   state.unrepliedAttacks = (state.unrepliedAttacks || 0) + 1;
 }
 
@@ -8528,15 +8261,15 @@ function showOlhaSoCover(){
       <div class="olhaso-mag">
         <div class="olhaso-top">
           <div class="olhaso-logo">OLHA SÓ</div>
-          <div class="olhaso-edition">Edição Especial · Véspera da Eleição</div>
+          <div class="olhaso-edition">Edição Especial · Reta Final da Campanha</div>
         </div>
         <div class="olhaso-photo">
-          <div class="olhaso-redacted">CANDIDATO • PROPINA • MALOTE</div>
+          <div class="olhaso-redacted">CAMPANHA • PROPINA • MALOTE</div>
           <div class="olhaso-stamp">EXCLUSIVO</div>
         </div>
         <div class="olhaso-headline">${cov.headline}</div>
         <div class="olhaso-sub">${cov.sub}</div>
-        <div class="olhaso-impact">Sua intenção caiu <b>${intentLoss}pp</b> · Confiança caiu <b>${(intentLoss*1.5).toFixed(0)}</b></div>
+        <div class="olhaso-impact">Sua intenção caiu <b>${intentLoss}pp</b> · Confiança caiu <b>${(intentLoss*1.5).toFixed(1).replace('.', ',')}</b></div>
         <button type="button" id="olhaSoClose">VOU RESPONDER NA SABATINA</button>
       </div>
     </div>
@@ -8551,7 +8284,7 @@ function runFixedEvents(){
   const d = state.day;
   maybeAppearMarketeiro();
   if(d === 2){
-    feedNews('IBOPE / DATAFOLHA', `Pesquisa: VOCÊ ${Math.round(state.intent)}% × ADVERSÁRIO ${Math.round(state.oppIntent)}%. ${100 - state.intent - state.oppIntent | 0}% indecisos.`, 'event');
+    feedNews('INSTITUTO DE PESQUISA', `Pesquisa: VOCÊ ${Math.round(state.intent)}% × ADVERSÁRIO ${Math.round(state.oppIntent)}%. ${100 - Math.round(state.intent) - Math.round(state.oppIntent)}% indecisos.`, 'event');
   }
   if(d === 4){
     // adversary attack
@@ -8561,13 +8294,14 @@ function runFixedEvents(){
       state.trust += 2;
     } else {
       Audio.music.stinger('attack');
-      feedNews('GRUPOS DE WHATSAPP', 'Deepfake circulando: vídeo "seu" cortado falando o oposto do que você defende. Equipe correndo atrás.', 'bad');
+      bigNews('⚠️ ATAQUE — GRUPOS DE WHATSAPP', 'Deepfake circulando: vídeo "seu" gerado por IA, falando o oposto do que você defende. Equipe correndo atrás.', 'bad');
       state.intent -= 5;
       state.trust -= 7;
+      state.unrepliedAttacks = (state.unrepliedAttacks || 0) + 1;
     }
   }
   if(d === 5){
-    feedNews('COLUNA DE POLÍTICA', 'Repórter pede entrevista. Boa janela se você for honesto. Pega no jornal local.', 'event');
+    feedNews('COLUNA DE POLÍTICA', 'Repórter pede entrevista. Boa janela se você for honesto. A vaga é no jornal local.', 'event');
     // Vantagem ≥5 dispara fake news oportunista
     if((state.intent - state.oppIntent) >= 5){
       setTimeout(triggerLeadFakeNews.bind(null, 5), 1200);
@@ -8581,22 +8315,22 @@ function runFixedEvents(){
       const riskAdd = pena * m.illegalRiskMul;
       state.risk += riskAdd;
       state.intent -= Math.min(6, pena/3);
-      feedNews('TSE', `Onda de denúncias contra ações da sua campanha. +${Math.round(riskAdd)} risco TSE, -${Math.min(6, pena/3).toFixed(1)}% intenção.`, 'bad');
+      feedNews('JUSTIÇA ELEITORAL', `Representações do MP Eleitoral e de partidos chegam contra ações da sua campanha. +${Math.round(riskAdd)} risco TSE, -${Math.min(6, pena/3).toFixed(1)}% intenção.`, 'bad');
     } else {
       feedNews('TSE', 'Sua campanha está limpa até aqui. Sem novas denúncias.', 'good');
     }
   }
   if(d === 7){
-    feedNews('HORÁRIO ELEITORAL', 'Última grande janela de TV antes do debate. Quem agendou bloco hoje aproveita.', 'event');
+    feedNews('HORÁRIO ELEITORAL', 'Última grande janela de TV antes do debate. Sua campanha tem bloco disponível hoje.', 'event');
     // Vantagem ≥5 dispara fake news oportunista (pool diferente do D5)
     if((state.intent - state.oppIntent) >= 5){
       setTimeout(triggerLeadFakeNews.bind(null, 7), 1200);
     }
   }
   if(d === 8){
-    if(state.flags.boughtFollowers && Math.random() < 0.4){
+    if(state.flags.boughtFollowers && !state.flags._exposedFollowers && Math.random() < 0.4){
       state.intent -= 2; state.trust -= 5; state.risk += 5;
-      feedNews('PORTAL DE JORNALISMO DE DADOS', 'Detectado padrão: sua conta tem 1,5k seguidores comprados.', 'bad');
+      feedNews('PORTAL DE JORNALISMO DE DADOS', 'Levantamento confirma: sua conta tem milhares de seguidores comprados.', 'bad');
     }
   }
   if(d === 9){
@@ -8609,7 +8343,7 @@ function runFixedEvents(){
     }
   }
   if(d === 10){
-    feedNews('IMPRENSA', 'Debate vai ao ar hoje à noite na rede principal. Você precisa ir ao microfone.', 'event');
+    feedNews('IMPRENSA', 'Debate vai ao ar hoje à noite na TV aberta. Você precisa ir ao microfone.', 'event');
   }
 
   // ===== ATAQUES ADVERSÁRIOS DINÂMICOS =====
@@ -8632,13 +8366,13 @@ function runFixedEvents(){
       const boost = 3 + Math.random()*2;
       state.oppIntent += boost;
       Audio.music.stinger('attack');
-      feedNews('JORNAL NACIONAL', `Figura conhecida endossa publicamente o adversário em horário nobre. +${boost.toFixed(1)}pp pra ele.`, 'bad');
+      feedNews('TV ABERTA', `Figura conhecida grava vídeo endossando o adversário e o corte roda o dia inteiro. +${boost.toFixed(1)}pp pra ele.`, 'bad');
     }
     if(d === 8 && Math.random() < 0.5){
       const boost = 2.5 + Math.random()*2;
       state.oppIntent += boost;
       Audio.music.stinger('attack');
-      feedNews('VIRAL DO DIA', `Vídeo do adversário visitando obra inacabada viralizou. +${boost.toFixed(1)}pp.`, 'bad');
+      feedNews('VIRAL DO DIA', `Vídeo do adversário vistoriando obra da prefeitura viralizou. +${boost.toFixed(1)}pp.`, 'bad');
     }
   }
 
@@ -8724,35 +8458,35 @@ const SABATINA_ROUNDS = [
         d: 6, c: 8, needs: { notBought: true }, fallback: { d: -8, c: -12, riskAdd: 10, msg: 'Adversário projeta print da sua compra. Plateia em silêncio.' } },
       { label: 'EXPLICAR', kind: 'explain', text: '"Foi um erro de um terceirizado, já desfizemos e denunciamos."',
         d: 3, c: 5 },
-      { label: 'DESVIAR', kind: 'deflect', text: '"Você tá com medo dessa pesquisa de ontem, é por isso que está mudando de tema."',
+      { label: 'DESVIAR', kind: 'deflect', text: '"Você tá com medo dessa pesquisa de hoje, é por isso que está mudando de tema."',
         d: 0, c: -3 },
       { label: 'CONCEDER', kind: 'concede', text: '"Você tem razão em parte, vamos discutir o problema real do digital nas campanhas."',
         d: 1, c: 4 },
     ]
   },
   {
-    adv: 'Sua plataforma tem três páginas. A minha tem cento e vinte. Quer comparar?',
+    adv: 'Seu plano tem doze páginas. O meu tem cento e vinte. Quer comparar?',
     youDefault: 'Você sente o golpe.',
     options: [
       { label: 'OBJEÇÃO!', kind: 'objection', text: '"Página é peso de papel, eu tenho prazo e responsável por cada entrega. Cito os três primeiros agora."',
-        d: 5, c: 6, needs: { actsLegal: 4 }, fallback: { d: -2, c: -3, msg: 'Soou hesitante — você não tem muita entrega pra citar.' } },
+        d: 5, c: 6, needs: { actsLegal: 4 }, fallback: { d: -2, c: -3, msg: 'Soou hesitante, porque você não fez muito até aqui.' } },
       { label: 'EXPLICAR', kind: 'explain', text: '"Plano público no meu site, com fonte e cronograma. Quantidade não é qualidade."',
         d: 4, c: 4 },
-      { label: 'DESVIAR', kind: 'deflect', text: '"O senhor lê os 120? Aposto que nem sua equipe leu."',
+      { label: 'DESVIAR', kind: 'deflect', text: '"O senhor leu os 120? Aposto que nem sua equipe leu."',
         d: 1, c: -1 },
-      { label: 'CONCEDER', kind: 'concede', text: '"Você tem mais material escrito. Vou enriquecer o meu até domingo."',
+      { label: 'CONCEDER', kind: 'concede', text: '"Você tem mais material escrito. Vou enriquecer o meu até o debate de amanhã."',
         d: 0, c: 3 },
     ]
   },
   {
-    adv: 'O candidato aqui do lado foi visto numa reunião, sem registro nenhum, com um empresário investigado por sonegação. Quer comentar?',
+    adv: 'Você foi visto numa reunião sem registro com um empresário investigado por sonegação. Quer comentar?',
     youDefault: 'A acusação chega com força.',
     options: [
       { label: 'OBJEÇÃO!', kind: 'objection', text: '"Reunião pra falar de gestão pública. Tudo no meu calendário público — basta consultar."',
         d: 5, c: 6, needs: { notShady: true }, fallback: { d: -10, c: -15, riskAdd: 15, msg: 'A foto da reunião vaza. Plateia treme.' } },
       { label: 'EXPLICAR', kind: 'explain', text: '"Recebi a pessoa porque ela pediu agenda. Não há contrato nem doação. Posso publicar a lista."',
         d: 3, c: 5 },
-      { label: 'DESVIAR', kind: 'deflect', text: '"E os 12 milhões em emendas que o senhor moveu pra sua base? Vamos falar disso?"',
+      { label: 'DESVIAR', kind: 'deflect', text: '"E os 12 milhões em contratos sem licitação que o senhor assinou? Vamos falar disso?"',
         d: 2, c: -2 },
       { label: 'CONCEDER', kind: 'concede', text: '"Foi um erro receber alguém sem checagem. Vou apertar o protocolo."',
         d: 0, c: 4 },
@@ -8762,11 +8496,11 @@ const SABATINA_ROUNDS = [
     adv: 'Última pergunta: por que o eleitor deveria acreditar EM VOCÊ?',
     youDefault: 'O momento de fechar.',
     options: [
-      { label: 'AGUARDE!', kind: 'hold', text: '"Antes de responder: confiram o histórico de cada um. Não responde com discurso, responde com prova."',
+      { label: 'AGUARDE!', kind: 'hold', text: '"Antes de responder: confiram o histórico de cada um. Isso não se responde com discurso; se responde com prova."',
         d: 5, c: 7 },
-      { label: 'EXPLICAR', kind: 'explain', text: '"Porque eu fui à esquina, ouvi, e disse o que penso mesmo quando incomodava meu lado."',
+      { label: 'EXPLICAR', kind: 'explain', text: '"Porque eu fui à esquina, ouvi, e disse o que pensava mesmo quando incomodava meu lado."',
         d: 6, c: 8, bonus: { walk: 3, video: 2 } },
-      { label: 'OBJEÇÃO!', kind: 'objection', text: '"Eu pergunto de volta: por que acreditar em alguém que está acima dos 80% de rejeição?"',
+      { label: 'OBJEÇÃO!', kind: 'objection', text: '"Eu pergunto de volta: por que acreditar em quem passou a campanha espalhando boato?"',
         d: 2, c: -2 },
       { label: 'CONCEDER', kind: 'concede', text: '"Não precisam acreditar em mim. Vão verificar."',
         d: 3, c: 5 },
@@ -8812,7 +8546,7 @@ function showSabatinaRound(idx, score){
             <div class="sab-face">👨‍💼</div>
             <div class="sab-name">ADVERSÁRIO</div>
           </div>
-          <div class="sab-banner">SABATINA AO VIVO — ROUND ${idx+1}/${rounds.length}</div>
+          <div class="sab-banner">SABATINA AO VIVO — RODADA ${idx+1}/${rounds.length}</div>
           <div class="sab-side you">
             <div class="sab-face">🧑‍💼</div>
             <div class="sab-name">VOCÊ</div>
@@ -8856,7 +8590,8 @@ function chooseSabatina(idx, opt, score){
   if(opt.needs){
     let ok = true;
     if(opt.needs.notBought && state.flags.boughtFollowers) ok = false;
-    if(opt.needs.notShady && (state.flags.didWhatsappBlast || state.flags.neuroBots)) ok = false;
+    if(opt.needs.notShady && (state.flags.didWhatsappBlast || state.flags.neuroBots || state.flags.caixa2)) ok = false;
+    if(opt.needs.hadDetector && !state.flags.hadDetector) ok = false;
     if(opt.needs.actsLegal && state.legalActs < opt.needs.actsLegal) ok = false;
     if(!ok && opt.fallback){
       dDelta = opt.fallback.d;
@@ -8883,7 +8618,7 @@ function chooseSabatina(idx, opt, score){
   const modal = back.querySelector('.modal');
   const advReact = dDelta >= 4 ? 'Adversário recua. A plateia vai junto.'
                 : dDelta >= 0 ? 'Adversário rebate, mas não derruba.'
-                : 'Adversário avança. Você perdeu o fio da resposta.';
+                : 'Adversário avança. Você está perdendo o controle da narrativa.';
   modal.querySelector('.body').innerHTML = `
     <div class="sabatina">
       <div class="sabatina-stage ${opt.kind === 'objection' ? 'sab-flash' : ''}">
@@ -8922,7 +8657,7 @@ function finishSabatina(score){
     { intent: state.intent - intentShift, oppIntent: state.oppIntent, money: state.money, risk: state.risk - (score.riskAdd||0), trust: state.trust - trustShift, followers: state.followers },
     snapshotStats()
   );
-  bigNews('PÓS-SABATINA', `Sua intenção variou ${intentShift>=0?'+':''}${intentShift.toFixed(1)} pp depois da sabatina. Amanhã: o debate final.`, intentShift >= 2 ? 'good' : intentShift <= -2 ? 'bad' : 'event');
+  bigNews('PÓS-SABATINA', `Sua intenção variou ${intentShift>=0?'+':''}${intentShift.toFixed(1).replace('.', ',')} pp depois da sabatina. Amanhã: o debate final.`, intentShift >= 2 ? 'good' : intentShift <= -2 ? 'bad' : 'event');
   state.inSabatina = false;
   state.fxLocked = false;
   closeModal();
@@ -8930,10 +8665,10 @@ function finishSabatina(score){
 const DEBATE_QUESTIONS = [
   {
     speaker: 'MEDIADORA',
-    q: '"Como o(a) candidato(a) pretende combater a desigualdade nos primeiros 100 dias de mandato?"',
+    q: '"Como você pretende combater a desigualdade nos primeiros 100 dias de mandato?"',
     options: [
       { tone: 'TÉCNICO', text: 'Cito 3 entregas pros primeiros 100 dias: educação integral em 30 escolas, médico de família 24h e passe livre na periferia.', d: 5, c: 5 },
-      { tone: 'EMOCIONAL', text: 'Conto a história da Dona Tereza que vi na caminhada do bairro Industrial. Esse é o nosso compromisso.', d: 4, c: 6, walkBonus: 4 },
+      { tone: 'EMOCIONAL', text: 'Conto a história da Dona Tereza, que conheci na caminhada pelo bairro Industrial. Esse é o nosso compromisso.', d: 4, c: 6, walkBonus: 4 },
       { tone: 'AGRESSIVO', text: 'Diferente do meu adversário, que aumentou IPTU em 2022, eu vou diminuir tributo de quem tem menos.', d: 3, c: -1 },
       { tone: 'VAGO', text: 'A desigualdade é o maior problema do Brasil. Vamos olhar com carinho pra todas as áreas.', d: -2, c: -3 },
     ]
@@ -8943,19 +8678,19 @@ const DEBATE_QUESTIONS = [
     q: '"Várias campanhas têm sido acusadas de usar IA pra criar fake news. Qual sua posição?"',
     options: [
       { tone: 'TÉCNICO', text: 'Defendo identificação obrigatória de conteúdo sintético, equipes de checagem nas plataformas e velocidade nos TREs.', d: 6, c: 6 },
-      { tone: 'CINICO', text: 'Todo mundo usa. É parte da campanha moderna. Quem não usa fica pra trás.', d: -4, c: -8, illegalPenalty: true },
+      { tone: 'CÍNICO', text: 'Todo mundo usa. É parte da campanha moderna. Quem não usa fica pra trás.', d: -4, c: -8, illegalPenalty: true },
       { tone: 'DEFENSIVO', text: 'Minha campanha não usa fake news. Pode auditar.', d: 2, c: 4, riskPenalty: true },
       { tone: 'AGRESSIVO', text: 'Quem usa fake news é o meu adversário. Os bots dele estão escancarados.', d: 1, c: -2 },
     ]
   },
   {
     speaker: 'ADVERSÁRIO',
-    q: '"Você comprou seguidores e usou bots. Tem documento. Quer comentar?"',
+    q: '"Sua campanha comprou seguidores, usou bots ou fez disparo em massa. Tem documento. Quer comentar?"',
     options: [
       { tone: 'CONFRONTO', text: 'Mentira. Mostre o documento ou retire a calúnia agora.', d: 3, c: 2, illegalKiller: true }, // ruim se de fato fez
-      { tone: 'HONESTO', text: 'Erro de equipe minha contratou um serviço sem checar. Já desfiz, denunciei a empresa e devolvi o engajamento.', d: 4, c: 8 },
+      { tone: 'HONESTO', text: 'Um erro da minha equipe: contrataram um serviço sem checar. Já desfiz, denunciei a empresa e removi o engajamento falso.', d: 4, c: 8, cleanPenalty: true },
       { tone: 'DESVIO', text: 'Vamos falar das pessoas. O senhor tá há 4 anos no cargo e a fila do SUS dobrou.', d: 2, c: -2 },
-      { tone: 'AGRESSIVO', text: 'E você acha que seus disparos no WhatsApp em 2022 ninguém viu?', d: 1, c: -3 },
+      { tone: 'AGRESSIVO', text: 'E o senhor acha que ninguém viu seus disparos no WhatsApp em 2022?', d: 1, c: -3 },
     ]
   },
   {
@@ -8963,18 +8698,18 @@ const DEBATE_QUESTIONS = [
     q: '"Minha família tem 4 pessoas e R$ 2.500 por mês. Como você vai melhorar a vida real da gente?"',
     options: [
       { tone: 'EMOCIONAL', text: 'Olho no olho: vou priorizar quem ganha até 3 salários — passe livre, cesta escolar e médico de família 24h.', d: 6, c: 8, walkBonus: 3 },
-      { tone: 'TÉCNICO', text: 'Aplico o tripé fiscal-social: corte de gasto em publicidade, recomposição da AB, taxa progressiva no IPTU.', d: 4, c: 4 },
-      { tone: 'GENÉRICO', text: 'A senhora pode ter certeza que o seu voto será respeitado.', d: -3, c: -4 },
+      { tone: 'TÉCNICO', text: 'Aplico o tripé fiscal-social: corte de gasto em publicidade, recomposição da atenção básica, IPTU progressivo.', d: 4, c: 4 },
+      { tone: 'GENÉRICO', text: 'A senhora pode ter certeza de que o seu voto será respeitado.', d: -3, c: -4 },
       { tone: 'AGRESSIVO', text: 'A culpa é do meu adversário, que aumentou imposto. Eu vou corrigir isso.', d: 1, c: -2 },
     ]
   },
   {
     speaker: 'MEDIADORA',
-    q: '"Réplica final: por que o eleitor deveria escolher você?"',
+    q: '"Pergunta final: por que o eleitor deveria escolher você?"',
     options: [
-      { tone: 'AUTÊNTICO', text: 'Porque eu fui a esquina, fui ao bairro, ouvi e disse no que acredito mesmo quando incomodava o meu lado.', d: 6, c: 8, walkBonus: 4, videoBonus: 3 },
+      { tone: 'AUTÊNTICO', text: 'Porque eu fui à esquina, fui ao bairro, ouvi e disse no que acredito mesmo quando incomodava o meu lado.', d: 6, c: 8, walkBonus: 4, videoBonus: 3 },
       { tone: 'TÉCNICO', text: 'Porque eu tenho plano com fonte, prazo e responsável por cada entrega.', d: 5, c: 5 },
-      { tone: 'EMOCIONAL', text: 'Pela minha mãe, que perdeu o trabalho, e por todas as Donas Marias dessa cidade.', d: 4, c: 6 },
+      { tone: 'EMOCIONAL', text: 'Pela minha mãe, que perdeu o trabalho, e por todas as Donas Marias desta cidade.', d: 4, c: 6 },
       { tone: 'AGRESSIVO', text: 'Porque eu não vou deixar essa cidade nas mãos de quem já provou que não dá conta.', d: 2, c: -2 },
     ]
   },
@@ -8985,7 +8720,7 @@ const DEBATE_QUESTIONS = [
       { tone: 'VOTO', text: 'Vote consciente. Confira fonte, peça plano, cobre prazo. Sua decisão é maior que qualquer post.', d: 5, c: 8 },
       { tone: 'OBRIGADO', text: 'Obrigado por chegar até aqui. Domingo eu te espero na urna.', d: 3, c: 4 },
       { tone: 'ATAQUE', text: 'No domingo o eleitor decide entre o atraso e o futuro. Conta comigo pro futuro.', d: 2, c: 0 },
-      { tone: 'PIADA', text: '"Pode parecer pouco, mas pra mim é tudo." (gesto de mão no peito)', d: -1, c: -2 },
+      { tone: 'CLICHÊ', text: '"Pode parecer pouco, mas pra mim é tudo." (gesto de mão no peito)', d: -1, c: -2 },
     ]
   }
 ];
@@ -9014,8 +8749,8 @@ function showDebateRound(){
       <h2>DEBATE — RODADA ${debateState.idx+1}/${DEBATE_QUESTIONS.length}</h2>
       <div class="pulse">AO VIVO</div>
       <div class="debate-podia">
-        <div class="podium you"><div class="role">VOCÊ</div><div class="face">🧑‍💼</div><div class="name">Candidato(a)</div><div class="score">${Math.round(state.intent)}%</div></div>
-        <div class="podium med"><div class="role">MEDIAÇÃO</div><div class="face">🎙️</div><div class="name">${q.speaker}</div><div class="score">~</div></div>
+        <div class="podium you"><div class="role">VOCÊ</div><div class="face">🧑‍💼</div><div class="name">Sua campanha</div><div class="score">${Math.round(state.intent)}%</div></div>
+        <div class="podium med"><div class="role">PERGUNTA</div><div class="face">🎙️</div><div class="name">${q.speaker}</div><div class="score">~</div></div>
         <div class="podium opp"><div class="role">ADVERSÁRIO</div><div class="face">👨‍💼</div><div class="name">Adversário</div><div class="score">${Math.round(state.oppIntent)}%</div></div>
       </div>
       <div class="timer"><div id="dtimer" style="width:100%"></div></div>
@@ -9087,11 +8822,11 @@ function chooseAnswer(opt, timedOut){
   // PENALIDADES POR FALTA DE BASE
   if(opt.tone === 'TÉCNICO' && !state.flags.publishedPlatform){
     dDelta -= 3; cDelta -= 4;
-    bonusMsg.push('⚠️ Você falou "técnico" mas nunca publicou plano de governo. Soou improvisado.');
+    bonusMsg.push('⚠️ Você adotou um tom técnico, mas nunca publicou plano de governo. Soou improvisado.');
   }
   if(opt.tone === 'EMOCIONAL' && state.walkCount < 2){
     dDelta -= 3; cDelta -= 3;
-    bonusMsg.push('⚠️ História emocional sem caminhada de campanha — soou ensaiado.');
+    bonusMsg.push('⚠️ Apelo emocional sem ter feito caminhadas de campanha — soou ensaiado.');
   }
   // CONFIANÇA PESA: trust baixo derruba qualquer resposta "vendendo entrega"
   if((opt.tone === 'TÉCNICO' || opt.tone === 'AUTÊNTICO') && state.trust < 40){
@@ -9106,19 +8841,22 @@ function chooseAnswer(opt, timedOut){
   // penalties from history
   if(opt.illegalKiller && (state.flags.boughtFollowers || state.flags.neuroBots || state.flags.didWhatsappBlast)){
     dDelta = -10; cDelta = -15;
-    bonusMsg.push('⚠️ Adversário tinha PROVA. Mentir custou caro.');
+    bonusMsg.push('⚠️ Adversário tinha PROVA de irregularidades da sua campanha. Negar custou caro.');
     state.risk += 15;
     checkCassacao();
   }
+  const _dirty = state.flags.boughtFollowers || state.flags.neuroBots || state.flags.didWhatsappBlast;
+  if(opt.illegalKiller && !_dirty){ dDelta += 3; cDelta += 3; bonusMsg.push('✅ Você não fez nada disso — e disse com firmeza.'); }
+  if(opt.cleanPenalty && !_dirty){ dDelta -= 6; cDelta -= 8; bonusMsg.push('⚠️ Você admitiu algo que não fez. Virou manchete contra você.'); }
   if(opt.illegalPenalty && (state.flags.boughtFollowers || state.flags.neuroBots || state.flags.didWhatsappBlast || state.flags.deepfakedAdv)){
     dDelta -= 3; cDelta -= 5;
-    bonusMsg.push('⚠️ Posição cínica + histórico ilegal: rejeitado.');
+    bonusMsg.push('⚠️ Posição cínica + histórico ilegal: o eleitor rejeitou.');
   }
   if(opt.riskPenalty && state.risk > 50){
     dDelta -= 4; cDelta -= 6;
     bonusMsg.push('⚠️ Risco TSE alto demais pra "minha campanha não usa".');
   }
-  if(timedOut){ bonusMsg.push('⏰ O tempo estourou — você pareceu hesitar.'); dDelta -= 2; cDelta -= 2; }
+  if(timedOut){ bonusMsg.push('⏰ O tempo esgotou — soou como hesitação.'); dDelta -= 2; cDelta -= 2; }
 
   debateState.totalD += dDelta;
   debateState.totalC += cDelta;
@@ -9131,9 +8869,9 @@ function chooseAnswer(opt, timedOut){
     'Adversário tenta: "Vocês podem confiar? Olha o histórico."',
   ];
   const advLinesGood = [
-    'Adversário se cala. Os jurados anotaram seu ponto.',
+    'Adversário cala. Os comentaristas anotaram seu ponto.',
     'Adversário sorri amarelo. Aquela resposta pegou bem.',
-    'Adversário consulta o teleprompter. Recuou da agressividade.',
+    'Adversário perde o fio e olha pro assessor. Recuou da agressividade.',
     'Adversário desvia para outro tema — sinal de que sentiu o golpe.',
   ];
   const pool = dDelta >= 3 ? advLinesGood : advLinesBad;
@@ -9147,7 +8885,7 @@ function chooseAnswer(opt, timedOut){
       <div class="debate-reaction">
         <div style="font-size:36px;margin-bottom:8px">${dDelta >= 4 ? '🔥' : dDelta >= 1 ? '👍' : dDelta >= 0 ? '😐' : '🙈'}</div>
         <div>Você respondeu em tom <b>${opt.tone}</b></div>
-        <div style="color:${dDelta>=0?'var(--green)':'var(--red)'};margin-top:6px;font-size:18px">${dDelta>=0?'+':''}${dDelta.toFixed(1)} pontos de debate · ${cDelta>=0?'+':''}${cDelta.toFixed(1)} pontos de confiança</div>
+        <div style="color:${dDelta>=0?'var(--green)':'var(--red)'};margin-top:6px;font-size:18px">${dDelta>=0?'+':''}${dDelta.toFixed(1).replace('.', ',')} pontos de debate · ${cDelta>=0?'+':''}${cDelta.toFixed(1).replace('.', ',')} pontos de confiança</div>
         ${bonusMsg.length?`<div style="font-size:15px;color:var(--muted);margin-top:6px">${bonusMsg.join('<br>')}</div>`:''}
         <div style="margin-top:10px;color:var(--blue)">${advLine}</div>
       </div>
@@ -9185,7 +8923,7 @@ function finishDebate(){
   clampStats();
   updateHUD();
 
-  feedNews('PESQUISAS FLASH PÓS-DEBATE', `Sua intenção variou ${intentShift>=0?'+':''}${intentShift.toFixed(1)} pp. Confiança ${trustShift>=0?'+':''}${trustShift.toFixed(0)}.`, 'event');
+  feedNews('PESQUISAS FLASH PÓS-DEBATE', `Sua intenção variou ${intentShift>=0?'+':''}${intentShift.toFixed(1)} pp. Confiança ${trustShift>=0?'+':''}${trustShift.toFixed(0)} pontos.`, 'event');
 
   setTimeout(()=>{
     closeModal();
@@ -9202,19 +8940,19 @@ const EMERG_FAKE_NEWS = [
   { headline: 'ADVERSÁRIO USA WALLHACK NO COUNTER-STRIKE DESDE 2008',
     text: 'Análise de demos de 2008 mostra movimentos suspeitos. Comunidade competitiva pede banimento eterno.' },
   { headline: 'KLAPAUCIUS! ADVERSÁRIO PEGO USANDO CHEAT NO THE SIMS PRA TER GRANA INFINITA',
-    text: 'Print do bairro Bairro Sim mostra cofre do candidato com 999.999 simoleões. "É o método dele na vida real também".' },
+    text: 'Print de uma casa em Vila Verde mostra um cofre de campanha com 999.999 simoleões. "É o método dessa campanha na vida real também".' },
   { headline: 'ADVERSÁRIO NUNCA PASSOU DA FASE 2 DO MARIO BROS',
     text: 'Vídeo no YouTube de 2011 prova que ele tentou e desistiu. "Quem desiste do encanador desiste do povo".' },
-  { headline: 'ADVERSÁRIO É CAMPER NO CALL OF DUTY — JURA QUE FOI HACKER',
-    text: 'Servers privados expuseram K/D de 0.4. Reportagem mostra ele acampando no spawn por 14 minutos.' },
+  { headline: 'ADVERSÁRIO É CAMPER NO CALL OF DUTY — JURA QUE FOI HACKEADO',
+    text: 'Servidores privados expuseram K/D de 0,4. Reportagem mostra ele acampando no spawn por 14 minutos.' },
   { headline: 'ADVERSÁRIO USA CÓDIGO MOTHERLODE NO SIMS PRA SIMULAR LIDERANÇA',
     text: '"Ele construiu uma mansão simulando ser empresário bem-sucedido, mas tudo era cheat", diz ex-vizinho virtual.' },
   { headline: 'ADVERSÁRIO ROUBOU CARTAS RARAS NO POKÉMON ESTAMPAS ILUSTRADAS EM 1999',
     text: 'Testemunha do clube infantil afirma: "Ele pegou meu Charizard holográfico e nunca devolveu".' },
-  { headline: 'ADVERSÁRIO COMPROU VBUCKS COM CARTÃO DA MÃE NO FORTNITE',
+  { headline: 'ADVERSÁRIO COMPROU V-BUCKS COM CARTÃO DA MÃE NO FORTNITE',
     text: 'R$ 450 em skins. Mãe descobriu na fatura. "Foi traumatizante", relata fonte próxima à família.' },
-  { headline: 'ADVERSÁRIO TROCOU DE LADO NO ANIMAL CROSSING PRA VENDER NABO MAIS CARO',
-    text: 'Comportamento desleal na ilha do Joãozinho. "Ele só vinha quando o nabo estava 600 sinos".' }
+  { headline: 'ADVERSÁRIO TROCOU DE ILHA NO ANIMAL CROSSING PRA VENDER NABO MAIS CARO',
+    text: 'Comportamento desleal na ilha do Joãozinho. "Ele só vinha quando o nabo estava a 600 sinos".' }
 ];
 
 function showMarketeiroEmergencia(){
@@ -9223,7 +8961,7 @@ function showMarketeiroEmergencia(){
   const xBtn = document.getElementById('modalCloseX');
   if(xBtn) xBtn.style.display = 'none';
   openModal({
-    title: '🎩 MARKETEIRO BATEU NA SUA PORTA',
+    title: '🎩 MARKETEIRO BATEU À SUA PORTA',
     subt: 'Última cartada pós-debate. Pega ou larga.',
     body: `<div style="text-align:left;font-size:16px;line-height:1.5">
       <p style="color:var(--gold);font-style:italic">"O voto ainda tá em aberto. Tenho aqui UMA coisa que pode virar a noite. Mas é arriscado. Se cair, você não se elege e ainda fica inelegível por 8 anos."</p>
@@ -9239,7 +8977,7 @@ function showMarketeiroEmergencia(){
           state.flags.didEmergencyFakeNews = true;
           if(Math.random() < 0.70){
             state.risk = 100;
-            feedNews('TSE — REPRESENTAÇÃO IMEDIATA', `Manchete absurda rastreada até sua campanha em 2 horas. "${item.headline}". Cassação iminente.`, 'bad');
+            feedNews('JUSTIÇA ELEITORAL — REPRESENTAÇÃO IMEDIATA', `Manchete absurda rastreada até sua campanha em 2 horas. "${item.headline}". Cassação iminente.`, 'bad');
             Audio.music.stinger('cassation');
             setTimeout(()=>{ endGame('cassado'); }, 1200);
           } else {
@@ -9299,14 +9037,14 @@ function endGame(kind){
 
   let title, subt, klass, story;
   if(kind === 'vitoria1'){
-    title = 'VITÓRIA NO 1º TURNO'; klass='win'; subt='Você foi eleito.';
+    title = 'VITÓRIA NO 1º TURNO'; klass='win'; subt='Você venceu a eleição.';
     story = `Você termina com ${Math.round(state.intent)}% das intenções, contra ${Math.round(state.oppIntent)}% do adversário. Sua confiança final está em ${Math.round(state.trust)}/100 e o Risco TSE em ${Math.round(state.risk)}/100.`;
   } else if(kind === 'segundoTurno'){
     title = 'VAI PRO 2º TURNO'; klass='tie'; subt='O jogo continua.';
-    story = `Você (${Math.round(state.intent)}%) saiu na frente do adversário (${Math.round(state.oppIntent)}%) mas não atingiu maioria. Confiança ${Math.round(state.trust)}/100, Risco TSE ${Math.round(state.risk)}/100.`;
+    story = `Você (${Math.round(state.intent)}%) terminou à frente ou empatado com o adversário (${Math.round(state.oppIntent)}%), mas sem a margem necessária pra liquidar no 1º turno. Confiança ${Math.round(state.trust)}/100, Risco TSE ${Math.round(state.risk)}/100.`;
   } else if(kind === 'cassado'){
-    title = 'CASSAÇÃO PELO TSE'; klass='cassado'; subt='Sua candidatura caiu.';
-    story = `Risco TSE no máximo. Denúncias somadas suspenderam seu registro.`;
+    title = 'CASSAÇÃO PELA JUSTIÇA ELEITORAL'; klass='cassado'; subt='Sua candidatura caiu.';
+    story = `Risco TSE no máximo. Denúncias somadas levaram à cassação do seu registro.`;
   } else {
     title = 'DERROTA'; klass='lose'; subt='Adversário foi eleito.';
     story = `Você terminou com ${Math.round(state.intent)}%, o adversário com ${Math.round(state.oppIntent)}%. Confiança ${Math.round(state.trust)}/100, Risco TSE ${Math.round(state.risk)}/100.`;
@@ -9315,24 +9053,24 @@ function endGame(kind){
   const lessons = [];
   // Lições contextuais por resultado
   if(kind === 'cassado'){
-    lessons.push('⚖️ O atalho custou a candidatura. A Justiça Eleitoral está cada vez mais equipada pra rastrear IA, bots e disparo em massa.');
+    lessons.push('⚖️ Atalho virou abismo. A Justiça Eleitoral está mais armada pra rastrear IA, bots e disparo em massa.');
   } else if(kind === 'vitoria1'){
     if(state.illegalActs >= 3 || state.risk > 50){
-      lessons.push('🎉 Vitória por um fio. Risco TSE alto ainda pode virar cassação depois da eleição — contestar o resultado por uso ilícito de IA e bots virou estratégia comum.');
+      lessons.push('🎉 Vitória, mas sob risco. Risco TSE alto ainda pode virar cassação pós-eleição — uma das principais estratégias atuais é justamente contestar resultado por uso ilícito de IA/bots.');
     } else if(state.legalActs > state.illegalActs * 3){
-      lessons.push('🎉 Vitória limpa no 1º turno. Você venceu sem precisar trapacear — presença real (caminhada, vídeo, plano público) pesou mais que qualquer truque digital.');
+      lessons.push('🎉 Vitória no 1º turno com campanha majoritariamente limpa — presença real pesou mais que qualquer truque digital.');
     } else {
       lessons.push('🎉 Vitória sólida. Mix equilibrado de presença real e ferramentas digitais.');
     }
   } else if(kind === 'segundoTurno'){
-    lessons.push('🟡 Vai pro 2º turno. Ninguém fechou a conta no primeiro — agora vem uma corrida de mais 3 semanas. O que você construiu até aqui é a base.');
+    lessons.push('🟡 Vai pro 2º turno. Você ficou na frente, mas sem maioria dos votos válidos — agora a campanha vira sprint de 3 semanas. O que você construiu até aqui é a base.');
   } else if(kind === 'derrota'){
     if(state.illegalActs >= 3){
-      lessons.push('😞 Derrota com risco TSE alto e escândalos expostos. A aposta suja da última semana bagunçou a sua própria campanha. Pesquisadores explicam: disparo em massa cria a sensação de que "todo mundo tá falando" — mas isso não vira voto.');
+      lessons.push('😞 Derrota com muitas ações ilegais no currículo — a "bala de prata da última semana" virou desorganização da sua própria campanha. Pesquisadores explicam: disparo gera percepção de que "todos estão falando" mesmo quando não há voto real ali.');
     } else if(state.walkCount + state.videoCount < 6){
-      lessons.push('😞 Derrota. Adversário foi mais à rua e às redes diretamente. Estrategistas classificam presença constante como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
+      lessons.push('😞 Derrota. Você foi pouco à rua e pouco às redes com a própria cara. Estrategistas classificam presença constante como insubstituível: "Muito vídeo mesmo, o candidato falando, aparecendo".');
     } else {
-      lessons.push('😞 Derrota apertada. Você fez a campanha possível em 10 dias — às vezes o adversário tem base mais consolidada.');
+      lessons.push('😞 Derrota. Você fez a campanha possível em 10 dias — às vezes o prefeito no cargo tem base mais consolidada.');
     }
   }
 
@@ -9344,7 +9082,7 @@ function endGame(kind){
 
   // Hábitos virtuosos
   if(state.walkCount >= 4 && (kind === 'vitoria1' || kind === 'segundoTurno')) {
-    lessons.push('🚶 Você foi à rua de verdade. Caminhada rende devagar, mas vira voto firme e confiança que dura.');
+    lessons.push('🚶 Você foi à rua de verdade. Caminhada é lenta, mas vira voto consolidado e confiança duradoura — vantagem que pesquisas espontâneas captam.');
   }
   if(state.videoCount >= 3 && state.trust >= 60){
     lessons.push('🎥 Sua presença "olho no olho" nos vídeos construiu credibilidade. É o que profissionais sérios mais recomendam, segundo a reportagem.');
@@ -9370,7 +9108,7 @@ function endGame(kind){
   backBtn.style.fontFamily="'Press Start 2P',monospace";
   backBtn.style.padding='10px';
   backBtn.style.marginTop='6px';
-  backBtn.textContent = '← VOLTAR PRO DATA FIXERS';
+  backBtn.textContent = '← VOLTAR PRO DATAFIXERS';
   backBtn.addEventListener('click', ()=>{ window.location.href = 'https://datafixers.org/'; });
   ac.appendChild(backBtn);
 
@@ -9390,7 +9128,7 @@ function endGame(kind){
         ${lessons.length ? lessons.join('<br>') : 'Campanha relativamente equilibrada. Confira a reportagem original pra ver o que rolou na vida real.'}
       </div>
       <div style="color:var(--muted);font-size:16px;margin-top:10px">
-        Este jogo é baseado em reportagem investigativa real sobre o uso de IA, neurobots, compra de seguidores, disparos por WhatsApp e ferramentas de monitoramento jurídico que foram oferecidas a candidatos em 2026.
+        Este jogo é baseado em reportagem investigativa real sobre o uso de IA, neurobots, compra de seguidores, disparos por WhatsApp e ferramentas de monitoramento jurídico oferecidas a candidatos nas eleições de 2026. A disputa pela prefeitura aqui é ficção.
       </div>
     </div>
   `;
@@ -9547,12 +9285,8 @@ function buildAvatarRows(){
   const rowsConfig = [
     { prop: 'style',     label: 'CABELO (ESTILO)' },
     { prop: 'hair',      label: 'COR DO CABELO' },
-    { prop: 'skinTone',  label: 'COR DA PELE' },
-    { prop: 'eyeColor',  label: 'COR DOS OLHOS' },
-    { prop: 'outfitColor', label: 'COR DA ROUPA' },
-    { prop: 'outfitPattern', label: 'PADRÃO DA ROUPA' },
-    { prop: 'capeColor', label: 'CAPA / MANTO' },
-    { prop: 'companion', label: 'COMPANHEIRO' },
+    { prop: 'skin',      label: 'COR DA PELE' },
+    { prop: 'shirt',     label: 'COR DA CAMISA' },
     { prop: 'accessory', label: 'ACESSÓRIO / OBJETO' }
   ];
   rowsConfig.forEach(cfg => {
@@ -9566,22 +9300,6 @@ function buildAvatarRows(){
       } else if(cfg.prop === 'accessory'){
         const sel = (state.candidate.look.accessory || 'none') === opt.id ? ' selected' : '';
         return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="accessory" data-val="${opt.id}" aria-label="${opt.id}"><canvas width="32" height="32" data-acc="${opt.id}"></canvas></button>`;
-      } else if(cfg.prop === 'outfitPattern'){
-        const cur = lookIndex(state.candidate.look.outfitPattern, LOOK_OPTIONS.outfitPattern.length-1, 0);
-        const sel = cur === opt.id ? ' selected' : '';
-        return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="outfitPattern" data-val="${opt.id}" aria-label="${opt.label}" title="${opt.label}"><canvas width="32" height="32" data-pattern="${opt.id}"></canvas></button>`;
-      } else if(cfg.prop === 'companion'){
-        const cur = lookIndex(state.candidate.look.companion, LOOK_OPTIONS.companion.length-1, 0);
-        const sel = cur === opt.id ? ' selected' : '';
-        return `<button type="button" class="cc-swatch acc-ic${sel}" data-prop="companion" data-val="${opt.id}" aria-label="${opt.label}" title="${opt.label}"><canvas width="32" height="32" data-pet="${opt.id}"></canvas></button>`;
-      } else if(NUMERIC_LOOK_PROPS[cfg.prop]){
-        const fallback = cfg.prop === 'skinTone' ? 1 : 0;
-        const cur = lookIndex(state.candidate.look[cfg.prop], opts.length-1, fallback);
-        const sel = cur === opt.id ? ' selected' : '';
-        const bg = opt.color === 'transparent'
-          ? 'repeating-linear-gradient(45deg, rgba(255,255,255,.18) 0 4px, rgba(0,0,0,.18) 4px 8px)'
-          : opt.color;
-        return `<button type="button" class="cc-swatch${sel}" data-prop="${cfg.prop}" data-val="${opt.id}" style="background:${bg}" aria-label="${opt.label}" title="${opt.label}"></button>`;
       } else {
         const sel = state.candidate.look[cfg.prop] === opt ? ' selected' : '';
         // aria-label genérico e neutro: pra pele usa "tom N" sem nomear etnia;
@@ -9607,20 +9325,10 @@ function buildAvatarRows(){
     cx.imageSmoothingEnabled = false;
     drawAccessoryIcon(cx, c.dataset.acc);
   });
-  rows.querySelectorAll('canvas[data-pattern]').forEach(c => {
-    const cx = c.getContext('2d');
-    cx.imageSmoothingEnabled = false;
-    drawPatternIcon(cx, parseInt(c.dataset.pattern, 10));
-  });
-  rows.querySelectorAll('canvas[data-pet]').forEach(c => {
-    const cx = c.getContext('2d');
-    cx.imageSmoothingEnabled = false;
-    drawCompanionIcon(cx, parseInt(c.dataset.pet, 10));
-  });
   rows.querySelectorAll('.cc-swatch').forEach(s => {
     s.addEventListener('click', () => {
       const prop = s.dataset.prop;
-      const val  = NUMERIC_LOOK_PROPS[prop] ? parseInt(s.dataset.val, 10) : s.dataset.val;
+      const val  = s.dataset.val;
       state.candidate.look[prop] = val;
       buildAvatarRows();
       updateCCPreview();
@@ -9834,42 +9542,10 @@ function drawAccessoryIcon(cx, accId){
     r(px+8, py+3, 2, 4, '#cf3a3a');
   }
 }
-
-function drawPatternIcon(cx, patternId){
-  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
-  cx.clearRect(0, 0, 32, 32);
-  const c = extendColors(getCandidateColors());
-  const x = 10, y = 8;
-  r(x-1, y, 14, 18, PAL.out);
-  r(x, y+1, 12, 16, c.shirt);
-  r(x, y+1, 12, 2, c.shirtHi);
-  r(x, y+14, 12, 3, c.shirtSh);
-  const mini = extendColors({ ...c, outfitPattern: patternId });
-  drawOutfitPatternSNES(r, x, y-8, 8, mini, 'down');
-  if(patternId === 0){
-    r(x+3, y+8, 6, 1, c.shirtHi);
-  }
-}
-
-function drawCompanionIcon(cx, petId){
-  const r = (x,y,w,h,col) => { cx.fillStyle = col; cx.fillRect(x,y,w,h); };
-  cx.clearRect(0, 0, 32, 32);
-  if(!petId){
-    cx.font = 'bold 10px monospace';
-    cx.fillStyle = '#8a8a94';
-    cx.textAlign = 'center';
-    cx.textBaseline = 'middle';
-    cx.fillText('SEM', 16, 13);
-    cx.fillText('PET', 16, 23);
-    return;
-  }
-  drawCompanionSNES(r, 11, 12, 'right', 1, petId);
-}
-
 function renderWallPoster(){
   const c = state.candidate;
   const nameEl = $('wpName'); if(!nameEl) return;
-  nameEl.textContent = (c.name || 'CANDIDATO').toUpperCase();
+  nameEl.textContent = (c.name || 'SEU NOME').toUpperCase();
   $('wpNum').textContent = c.number || '22';
   $('wpSlogan').textContent = '"' + (c.slogan || '') + '"';
   const can = $('wpCanvas');
@@ -9918,7 +9594,6 @@ function drawPlayerPreview(cx, look){
   r(0, 38, 32, 0.5, '#d2a36b');
   r(0, 42, 32, 0.5, '#64431f');
   const c = extendColors(look || getCandidateColors());
-  drawCompanionBehindPlayer(r, 10, 14, 'down', 0, c.companion);
   drawBodySNES(r, 10, 14, { facing: 'down', frame: 0, moving: false, oy: 0, c });
   drawAccessorySNES(r, 10, 14, 0, c, 'down');
 }
@@ -10097,10 +9772,9 @@ try {
       title: 'CONFIANÇA',
       subt: 'O que essa barra muda no jogo',
       body: `<div style="text-align:left;font-size:16px;line-height:1.5">
-        <p><b style="color:#5fb872">ALTA (>70)</b> — respostas "honestas/autênticas" no debate e sabatina ganham bônus, ataques do adversário tiram menos confiança e até as <b>despesas diárias caem</b> (apoiadores voluntários ajudam).</p>
-        <p><b style="color:#f6c453">MÉDIA (40-70)</b> — neutra. Sem bônus nem penalidade.</p>
-        <p><b style="color:#cf3a3a">BAIXA (&lt;40)</b> — eleitor desconfia. Promessas técnicas no debate caem mal, sabatina rende menos pontos e o algoritmo te ajuda menos.</p>
-        <p style="margin-top:10px;color:var(--muted);font-size:14px">Como subir: vídeos honestos, caminhada na rua, plano de governo publicado, declarações pré-empt­ivas. Como cai: ações ilegais, ataques sofridos sem resposta, escolhas vagas no debate.</p>
+        <p><b style="color:#5fb872">ALTA</b> — acima de 50, indecisos migram pra você e entrevistas saem positivas; acima de 60, memes dão certo com mais frequência; acima de 65, as <b>despesas diárias caem</b> (apoiadores voluntários ajudam); acima de 70, respostas honestas/autênticas no debate ganham bônus.</p>
+        <p><b style="color:#cf3a3a">BAIXA</b> — abaixo de 50, indecisos migram pro adversário e entrevistas viram manchete negativa; abaixo de 40, promessas técnicas no debate caem mal.</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">Como subir: vídeos honestos, caminhada na rua, plano de governo publicado, agenda transparente, responder ataques. Como cai: ações ilegais, ataques do adversário, escolhas vagas no debate.</p>
       </div>`,
       actions: [{ tag: 'legal', title: 'ENTENDI', cost: 0, energy: 0, onClick: closeModal }]
     });
@@ -10128,12 +9802,12 @@ if(_ahClose) _ahClose.addEventListener('click', dismissAudioHint);
 // TUTORIAL — overlay com spotlight no primeiro dia
 // =====================================================================
 const TUTORIAL_STEPS = [
-  { target: null, title: 'BEM-VINDO À CAMPANHA',
-    text: 'Você é candidato a prefeito. Tem <b>10 dias</b> pra virar a eleição. Vamos ver rapidinho como funciona.' },
+  { target: null, title: 'BOAS-VINDAS À CAMPANHA',
+    text: 'Você disputa a prefeitura contra o prefeito atual. Tem <b>10 dias</b> pra vencer a eleição. Vamos ver rapidinho como funciona.' },
   { target: '#hud', title: 'PAINEL DO TOPO',
-    text: 'Aqui aparecem sua <b>% de intenção</b>, a do <b>adversário</b>, o dia atual, a <b>energia</b> diária e o caixa. O objetivo: terminar o dia 10 com mais % que ele.' },
+    text: 'Aqui aparecem sua <b>% de intenção</b>, a do <b>adversário</b>, o dia atual, a <b>energia</b> diária e o caixa. O objetivo: chegar à eleição à frente dele — com 50% ou mais e 5 pontos de vantagem, você vence no 1º turno; só à frente, vai pro 2º turno.' },
   { target: '#scene', title: 'O CENÁRIO',
-    text: 'Ande pelo escritório com <b>WASD/setas</b> (ou D-pad no celular) e fique perto de objetos como celular, computador, TV e porta pra abrir ações.' },
+    text: 'Ande pelo escritório com <b>WASD/setas</b> e clique ou toque em objetos como celular, computador, TV e porta pra abrir ações (no celular, toque no chão ou num móvel).' },
   { target: '#restBtn', title: 'DORMIR — ATALHO',
     text: 'Clicando no <b>💤</b> aqui em cima você encerra o dia atual de qualquer lugar e dorme até amanhã.' },
   { target: '#mapLabels .ml[data-id="bed"]', title: 'OU VÁ ATÉ A CAMA',
@@ -10355,30 +10029,18 @@ if(location.hash === '#sprites'){
         drawBodySNES(frect, 8 + i*22, 76, { facing: 'down', frame: 0, moving: false, oy: 0, c: c3 });
         drawAccessorySNES(frect, 8 + i*22, 76, 0, c3, 'down');
       });
-      // linha 4: padrões de roupa + capas + tons/olhos novos
+      // linha 4: marketeiro + skins variadas + camisas
       drawMarketeiro(8, 112);
-      LOOK_OPTIONS.outfitPattern.forEach((pat, i) => {
-        const capeOpt = LOOK_OPTIONS.capeColor[i % LOOK_OPTIONS.capeColor.length];
-        const sk = LOOK_OPTIONS.skinTone[i % LOOK_OPTIONS.skinTone.length].color;
-        const oc = LOOK_OPTIONS.outfitColor[i % LOOK_OPTIONS.outfitColor.length].color;
-        const eye = LOOK_OPTIONS.eyeColor[i % LOOK_OPTIONS.eyeColor.length].color;
-        const c4 = extendColors({
-          style: ['long','curly','afro','dreads','bun','fade'][i],
-          hair: ['#1a0f24','#cf3a3a','#1a0f24','#3a2010','#f6c453','#5a5a5a'][i],
-          skin: sk, eye, shirt: oc, outfitPattern: pat.id,
-          capeColor: capeOpt.id, cape: capeOpt.id ? capeOpt.color : null
-        });
-        drawBodySNES(frect, 42 + i*24, 112, { facing: 'down', frame: i%4, moving: true, oy: 0, c: c4 });
+      ['#fde7d7','#d4a274','#8a6a4a','#3e2615','#9be099'].forEach((sk, i) => {
+        const c4 = extendColors({ style: ['long','curly','afro','dreads','bun'][i], hair: ['#1a0f24','#cf3a3a','#1a0f24','#3a2010','#f6c453'][i], skin: sk, shirt: ['#e8e0d0','#f6c453','#8a5cf6','#3c7dc0','#e89bc7'][i] });
+        drawBodySNES(frect, 40 + i*24, 112, { facing: 'down', frame: 0, moving: false, oy: 0, c: c4 });
       });
-      // linha 5: companions + perfis andando
-      for(let pet = 1; pet <= 5; pet++){
-        drawCompanionSNES(frect, 8 + (pet-1)*18, 152, ['down','up','left','right','down'][pet-1], pet, pet);
-      }
-      const c5 = extendColors({ style: 'ponytail', hair: '#cf3a3a', skin: '#f3c9a0', eye: '#2f6fc0', shirt: '#3a4a5a', outfitPattern: 4, cape: '#264f94', capeColor: 2 });
+      // linha 5: perfis andando + costas
+      const c5 = extendColors({ style: 'ponytail', hair: '#cf3a3a', skin: '#f3c9a0', shirt: '#3a4a5a' });
       for(let fr = 0; fr < 4; fr++){
-        drawBodySNES(frect, 108 + fr*18, 148, { facing: 'right', frame: fr, moving: true, oy: 0, c: c5 });
-        drawBodySNES(frect, 188 + fr*18, 148, { facing: 'left', frame: fr, moving: true, oy: 0, c: c5 });
-        drawBodySNES(frect, 268 + fr*12, 148, { facing: 'up', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 8 + fr*20, 148, { facing: 'right', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 100 + fr*20, 148, { facing: 'left', frame: fr, moving: true, oy: 0, c: c5 });
+        drawBodySNES(frect, 192 + fr*20, 148, { facing: 'up', frame: fr, moving: true, oy: 0, c: c5 });
       }
     };
   });
