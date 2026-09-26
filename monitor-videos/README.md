@@ -1,24 +1,23 @@
-# Monitor de publicações em vídeo
+# Video reporting monitor
 
-Painel em `https://datafixers.org/monitor-videos/`. O catálogo (`videos.json`) reúne os vídeos incorporados no portfólio e os resultados da busca inicial por “luiz fernando toledo” no canal BBC News Brasil em 25/09/2026. IDs duplicados aparecem uma vez.
+Public panel: https://datafixers.org/monitor-videos/. The page is in English; titles and public comments retain their original language. `videos.json` lists monitored posts, and `data.json` stores dated snapshots. The page sums public **plays/views**, not unique people.
 
-## Ativar a coleta
+## Collection
 
-Configure dois secrets no repositório `luizftoledo/datafixers`:
+The GitHub Actions workflow `.github/workflows/monitor-videos.yml` runs daily at 08:17 UTC. It updates counters and commits `data.json`, then deploys to Cloudflare Pages. Each Monday at 09:17 UTC, it also checks recently published posts for “Luiz Fernando Toledo”, “Luiz Toledo” or `@luizftoledo` in:
 
-- `YOUTUBE_API_KEY`: chave de projeto com a YouTube Data API v3 habilitada.
-- `APIFY_TOKEN`: token da conta Apify para comentários do Instagram (`apify/instagram-comment-scraper`) e busca semanal de novos Reels (`apify/instagram-reel-scraper`). As métricas dos Reels existentes vêm da página pública incorporada do Instagram e continuam sendo atualizadas quando a Apify está indisponível.
+- the BBC News Brasil YouTube channel descriptions, using YouTube Data API v3;
+- Reels from `@bbcbrasil`, using a bounded Apify run;
+- TikTok video search, accepting credited posts from the BBC News Brasil account `@bbcnewsbrasil` and reporting posts from `@luizftoledo`.
 
-Depois execute o workflow **Atualizar monitor de vídeos** em GitHub Actions uma vez. Ele coleta métricas diariamente às **08:17 UTC**, grava o histórico em `data.json` e publica a página no Cloudflare Pages. Às **segundas-feiras, 09:17 UTC**, também procura novos vídeos publicados nos últimos 14 dias no canal da BBC News Brasil no YouTube e Reels da conta `@bbcbrasil` no Instagram. Adiciona ao catálogo apenas vídeos cuja descrição do YouTube ou legenda do Instagram contenha “Luiz Fernando Toledo”, sem duplicar IDs, e coleta suas métricas na mesma execução. A execução manual faz a busca semanal por padrão. Se apenas uma fonte tiver credencial, o workflow ainda registra os dados dessa fonte e mostra a ausência da outra no painel. Sem nenhuma fonte, a execução falha sem alterar o histórico.
+The weekly search uses a 14-day cutoff, a maximum of 150 Instagram Reels and 50 TikTok search results. It adds matching IDs once. This is a bounded discovery window, not an exhaustive archive scan. Byline-free posts, spoken credits, other accounts and content outside the window need to be added to `videos.json` manually.
 
-Para executar localmente: `YOUTUBE_API_KEY=... APIFY_TOKEN=... python3 scripts/update_video_monitor.py`. Passe as chaves pelo ambiente, nunca pelo código ou `data.json`.
+YouTube counters come from `statistics`. Instagram counters come from the public **play** count returned by `zaver.api/instagram-reel-scraper`; this differs from Instagram's older `video_view_count`, which can substantially undercount what the app displays. TikTok counters come from `clockworks/free-tiktok-scraper`. Missing counters stay null. Older snapshots are not rewritten.
 
-## Definições e limites
+Recent top-level YouTube comments are retained as a partial sample. The monitor no longer runs a separate Instagram comment scrape each day, which previously exhausted the monthly quota. It still records Instagram's total public comment count.
 
-- O histórico começa na primeira coleta. Não há série diária retroativa.
-- Os valores são contadores públicos acumulados. A variação é a diferença entre snapshots, que pode ser negativa após correções da plataforma.
-- YouTube: `statistics.viewCount`, `likeCount`, `commentCount`; até 300 comentários principais mais recentes por vídeo via `commentThreads.list`. Respostas não entram na fila.
-- Instagram: curtidas (`edge_liked_by.count`), comentários totais (`edge_media_to_comment.count`) e visualizações (`video_view_count`) da página pública incorporada. Esse contador pode ser diferente das reproduções mostradas pela Apify. Quando o contador de visualizações é menor que o de curtidas, ele é tratado como inconsistente e fica indisponível no painel. O ator de comentários consulta até 20 comentários por URL por execução, sujeito ao limite da conta Apify.
-- A descoberta semanal verifica descrições e legendas públicas, não o áudio nem transcrições. Ela não garante encontrar todos os vídeos, especialmente se forem publicados sem o nome completo, em outra conta ou fora da janela de 14 dias.
-- A fila identifica como novos os comentários **vistos pela primeira vez na coleta**, exceto o conjunto inicial de cada vídeo, marcado como linha de base. Não representa todos os comentários publicados naquele dia.
-- O painel é público e marcado `noindex`. Comentários, nomes de usuário e textos capturados ficam no JSON público. Se for necessário acesso privado, a rota deverá receber proteção de acesso antes da ativação da coleta.
+## Secrets and cost
+
+Set repository secrets `YOUTUBE_API_KEY`, `APIFY_TOKEN`, `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Never put a token in a URL, source file or JSON. The actor runs are restricted to the catalog or a bounded discovery window; usage and remaining credit should be checked in Apify as the catalog grows. Locally, provide keys through environment variables and run `python3 scripts/discover_video_monitor.py` followed by `python3 scripts/update_video_monitor.py`.
+
+The history begins with the first collection. A change is the difference between two snapshots and may be negative after a platform correction. Public comments, author names and comment text in `data.json` are visible to anyone with the URL; the page remains `noindex`.

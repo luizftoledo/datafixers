@@ -1,22 +1,24 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Monitor de publicações em vídeo · Datafixers</title>
+  <meta name="description" content="Public video metrics for reporting by Luiz Fernando Toledo across YouTube, Instagram and TikTok.">
+  <link rel="canonical" href="https://datafixers.org/monitor-videos/">
+  <title>Video reporting monitor · Luiz Fernando Toledo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="https://datafixers.org/">data<span>fixers</span></a><span>Monitor de publicações em vídeo</span><a href="https://luizftoledo.github.io/#short-videos" target="_blank" rel="noopener">Ver portfólio ↗</a></header>
+  <header class="topbar"><a class="brand" href="https://datafixers.org/">data<span>fixers</span></a><span>Video reporting monitor</span><a href="https://luizftoledo.github.io/#short-videos">View portfolio ↗</a></header>
   <main>
-    <div class="heading"><div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>Vídeos publicados</h1><p class="lede">Visualizações, curtidas e comentários dos vídeos reunidos no portfólio.</p></div><div class="stamp" id="stamp">Aguardando dados</div></div>
+    <div class="heading"><div><p class="eyebrow">PUBLIC VIDEO METRICS</p><h1>Reporting in video</h1><p class="lede">A running record of views, likes and comments on videos featuring or crediting Luiz Fernando Toledo.</p></div><div class="stamp" id="stamp">Loading data…</div></div>
     <div class="notice" id="notice" hidden></div>
-    <section class="controls" aria-label="Filtros"><label>Plataforma <select id="platform"><option value="all">Todas</option><option value="youtube">YouTube</option><option value="instagram">Instagram</option></select></label><label>Data do snapshot <select id="date"></select></label><label>Buscar vídeo <input id="search" type="search" placeholder="Título ou link"></label></section>
-    <section class="summary" id="summary" aria-label="Resumo"></section>
-    <div class="layout"><section class="panel videos-panel"><div class="panel-head"><div><h2>Publicações</h2><p id="video-count"></p></div><select id="sort" aria-label="Ordenar vídeos"><option value="views">Mais visualizados</option><option value="growth">Mais visualizações desde a coleta anterior</option><option value="comments">Mais comentários</option><option value="title">Título</option></select></div><div class="table-wrap"><table><thead><tr><th>Vídeo</th><th>Visualizações<br><small>total / variação</small></th><th>Curtidas<br><small>total / variação</small></th><th>Comentários<br><small>total / variação</small></th></tr></thead><tbody id="videos"></tbody></table></div></section><aside class="panel comment-panel"><div class="panel-head"><div><h2>Comentários capturados</h2><p id="comment-count"></p></div><select id="comment-filter" aria-label="Filtrar comentários"><option value="new">Novos na última coleta</option><option value="all">Todos capturados</option></select></div><div id="comments" class="comments"></div></aside></div>
-    <footer><p><strong>Como ler:</strong> “Variação” é a diferença entre dois totais coletados, não uma medida exata de eventos no dia. O YouTube informa visualizações pela API; o Instagram, pelo contador da página pública incorporada. Contadores do Instagram inconsistentes ficam sem valor. Essas medidas não representam pessoas únicas e não são diretamente comparáveis. Os totais somam vídeos e podem incluir a mesma pessoa mais de uma vez.</p><p>Comentários exibidos: comentários públicos recentes capturados pela API do YouTube e, quando disponível, pela Apify no Instagram. A coleta pode ser parcial, inclusive para respostas e posts com restrições. Dados históricos começam na primeira coleta. <a href="https://github.com/luizftoledo/datafixers/tree/main/monitor-videos" target="_blank" rel="noopener">Fonte e metodologia ↗</a></p></footer>
+    <section class="controls" aria-label="Filters"><label>Platform <select id="platform"><option value="all">All platforms</option><option value="youtube">YouTube</option><option value="instagram">Instagram</option><option value="tiktok">TikTok</option></select></label><label>Snapshot date <select id="date"></select></label><label>Find a video <input id="search" type="search" placeholder="Title or link"></label></section>
+    <section class="summary" id="summary" aria-label="Summary"></section>
+    <div class="layout"><section class="panel videos-panel"><div class="panel-head"><div><h2>Videos</h2><p id="video-count"></p></div><select id="sort" aria-label="Sort videos"><option value="views">Most viewed</option><option value="growth">Most views gained</option><option value="comments">Most comments</option><option value="title">Title</option></select></div><div class="table-wrap"><table><thead><tr><th>Video</th><th>Views<br><small>total / change</small></th><th>Likes<br><small>total / change</small></th><th>Comments<br><small>total / change</small></th></tr></thead><tbody id="videos"></tbody></table></div></section><aside class="panel comment-panel"><div class="panel-head"><div><h2>Recent comments</h2><p id="comment-count"></p></div><select id="comment-filter" aria-label="Filter comments"><option value="new">First seen on selected date</option><option value="all">All captured</option></select></div><div id="comments" class="comments"></div></aside></div>
+    <footer><p><strong>How to read this:</strong> Counts are public platform totals at the time shown. A change is the difference between comparable snapshots, not an exact count of activity that day. Changes are blank when the data source changes. Views are plays, not unique people; the same viewer may be counted more than once or on different platforms. Missing figures are left blank. Instagram uses its public play counter, which can differ from older view counters.</p><p>Comments shown here are a partial sample of recent public comments; replies and some restricted posts may be absent. The archive starts with the first collection, so earlier trends are unavailable. <a href="https://github.com/luizftoledo/datafixers/tree/main/monitor-videos" target="_blank" rel="noopener">Method and data ↗</a></p></footer>
   </main>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20260926-3" defer></script>
 </body>
 </html>

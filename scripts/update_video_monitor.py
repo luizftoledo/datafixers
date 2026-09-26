@@ -3,7 +3,6 @@
 import datetime as dt
 import json
 import os
-import re
 import time
 from pathlib import Path
 from urllib.parse import urlencode
@@ -109,63 +108,63 @@ def apify_actor(actor, token, actor_input, timeout_seconds=900):
 
 def instagram(catalog, token):
     videos = [v for v in catalog if v['platform'] == 'instagram']
-    urls = [v['url'] for v in videos]
-    by_code = {v['platformId']: v for v in videos}
     result = {}
-    for video in videos:
-        try:
-            result[video['id']] = instagram_embed(video)
-        except Exception as error:
-            result[video['id']] = {'error': 'Instagram embed: ' + str(error)[:120]}
     if not token:
-        for value in result.values():
-            value['commentsError'] = 'APIFY_TOKEN ausente; comentários não atualizados'
-        return result, []
+        raise RuntimeError('Instagram collection is not configured')
     try:
-        rows = apify_actor('apify/instagram-comment-scraper', token,
-                           {'directUrls': urls, 'resultsLimit': 20, 'includeNestedComments': False})
-    except RuntimeError as error:
-        for value in result.values():
-            value['commentsError'] = str(error)
-        rows = []
-    comments = []
+        rows = apify_actor('zaver.api/instagram-reel-scraper', token,
+                           {'directUrls': [v['url'] for v in videos], 'resultsLimit': 1},
+                           timeout_seconds=900)
+    except RuntimeError:
+        # Do not substitute the legacy embed view counter: it measures a different quantity.
+        raise
+    by_code = {v['platformId']: v for v in videos}
     for row in rows:
-        url = row.get('postUrl') or row.get('inputUrl') or row.get('url') or ''
-        code = next((code for code in by_code if code in url), None)
-        if not code or not row.get('id'):
+        code = row.get('shortcode')
+        if code not in by_code:
             continue
-        comments.append({'id': 'instagram:' + str(row['id']), 'videoId': by_code[code]['id'],
-                         'text': row.get('text') or '', 'author': row.get('ownerUsername') or row.get('username') or '',
-                         'publishedAt': row.get('timestamp') or row.get('createdAt'),
-                         'url': row.get('commentUrl') or by_code[code]['url']})
-    return result, comments
+        plays = to_number(row.get('views'))
+        result[by_code[code]['id']] = {
+            'title': next((line.strip() for line in (row.get('caption') or '').splitlines() if line.strip()),
+                          by_code[code]['portfolioLabel'])[:140],
+            'views': plays,
+            'likes': to_number(row.get('likes')),
+            'comments': to_number(row.get('comments_count')),
+            'source': 'Instagram public play count',
+        }
+    for video in videos:
+        if video['id'] not in result:
+            result[video['id']] = {'error': 'Current Instagram metrics unavailable'}
+    return result, []
 
 
-def instagram_embed(video):
-    code = video['platformId']
-    request = Request('https://www.instagram.com/reel/' + code + '/embed/captioned/',
-                      headers={'User-Agent': 'Mozilla/5.0 (compatible; VideoMonitor/1.0)'})
-    with urlopen(request, timeout=30) as response:
-        page = response.read().decode('utf-8', 'replace')
-
-    def field(name):
-        match = re.search(r'\\"' + name + r'\\":(\d+)', page)
-        return int(match.group(1)) if match else None
-
-    shortcode = re.search(r'\\"shortcode\\":\\"([^\\"]+)', page)
-    if not shortcode or shortcode.group(1) != code:
-        raise RuntimeError('publicação não identificada na página pública')
-    likes = re.search(r'\\"edge_liked_by\\":\{\\"count\\":(\d+)', page)
-    comments = re.search(r'\\"edge_media_to_comment\\":\{\\"count\\":(\d+)', page)
-    if not likes or not comments:
-        raise RuntimeError('contadores públicos indisponíveis')
-    likes, comments = int(likes.group(1)), int(comments.group(1))
-    views = field('video_view_count')
-    # The old embed counter can be stale or reset; a count below likes is not usable.
-    if views is not None and views < likes:
-        views = None
-    return {'title': video['portfolioLabel'], 'views': views, 'likes': likes,
-            'comments': comments, 'source': 'Instagram embed público'}
+def tiktok(catalog, token):
+    videos = [v for v in catalog if v['platform'] == 'tiktok']
+    if not videos:
+        return {}, []
+    if not token:
+        raise RuntimeError('TikTok collection is not configured')
+    rows = apify_actor('clockworks/free-tiktok-scraper', token,
+                       {'postURLs': [v['url'] for v in videos],
+                        'shouldDownloadVideos': False, 'shouldDownloadCovers': False},
+                       timeout_seconds=900)
+    by_id = {v['platformId']: v for v in videos}
+    result = {}
+    for row in rows:
+        video_id = str(row.get('id') or '')
+        if video_id not in by_id:
+            continue
+        result[by_id[video_id]['id']] = {
+            'title': (row.get('text') or by_id[video_id]['portfolioLabel']).splitlines()[0][:140],
+            'views': to_number(row.get('playCount')),
+            'likes': to_number(row.get('diggCount')),
+            'comments': to_number(row.get('commentCount')),
+            'source': 'TikTok public counters',
+        }
+    for video in videos:
+        if video['id'] not in result:
+            result[video['id']] = {'error': 'Current TikTok metrics unavailable'}
+    return result, []
 
 
 def main():
@@ -174,7 +173,8 @@ def main():
     metrics, comments, errors = {}, [], {}
     key = os.getenv('YOUTUBE_API_KEY')
     token = os.getenv('APIFY_TOKEN')
-    for platform, credential, fetcher in [('youtube', key, youtube), ('instagram', token, instagram)]:
+    for platform, credential, fetcher in [('youtube', key, youtube), ('instagram', token, instagram),
+                                          ('tiktok', token, tiktok)]:
         if platform == 'youtube' and not credential:
             errors[platform] = 'Credencial ausente: YOUTUBE_API_KEY'
             continue
@@ -182,11 +182,6 @@ def main():
             found, recent = fetcher(catalog, credential)
             metrics.update(found)
             comments.extend(recent)
-            if platform == 'instagram':
-                comment_error = next((row.get('commentsError') for row in found.values()
-                                      if row.get('commentsError')), None)
-                if comment_error:
-                    errors['instagram_comments'] = comment_error
         except Exception as error:
             errors[platform] = str(error)[:300]
     if not metrics and os.getenv('REQUIRE_DATA') == '1':
@@ -199,16 +194,10 @@ def main():
             row['baseline'] = row['videoId'] not in previously_monitored
             existing[row['id']] = row
     old = {row['videoId']: row for row in data.get('snapshots', []) if row['date'] == TODAY}
-    latest_titles = {}
-    for row in data.get('snapshots', []):
-        if row.get('title') and row['videoId'] not in latest_titles:
-            latest_titles[row['videoId']] = row['title']
     for video_id, row in metrics.items():
         if 'error' in row:
             errors[video_id] = row['error']
             continue
-        if video_id.startswith('instagram:') and latest_titles.get(video_id):
-            row['title'] = latest_titles[video_id]
         old[video_id] = {'videoId': video_id, 'date': TODAY, 'collectedAt': NOW, **row}
     earlier = [row for row in data.get('snapshots', []) if row['date'] != TODAY]
     data = {'generatedAt': NOW, 'snapshots': earlier + list(old.values()),

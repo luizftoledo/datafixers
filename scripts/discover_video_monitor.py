@@ -11,8 +11,10 @@ from urllib.parse import urlencode
 
 YOUTUBE_CHANNEL = 'UCthbIFAxbXTTQEC7EcQvP1Q'
 INSTAGRAM_ACCOUNT = 'bbcbrasil'
+TIKTOK_ACCOUNT = 'bbcnewsbrasil'
+TIKTOK_OWN_ACCOUNT = 'luizftoledo'
 LOOKBACK_DAYS = 14
-NAME = re.compile(r'\bluiz\s+fernando\s+toledo\b')
+NAME = re.compile(r'\b(?:luiz\s+(?:fernando\s+)?toledo|luizftoledo)\b')
 
 
 def mentions_reporter(value):
@@ -63,15 +65,14 @@ def youtube_recent(key, cutoff):
 
 def instagram_recent(token, cutoff):
     actor_input = {
-        'username': [INSTAGRAM_ACCOUNT], 'resultsLimit': 250,
-        'onlyPostsNewerThan': cutoff, 'skipPinnedPosts': True,
-        'includeTranscript': False, 'includeDownloadedVideo': False,
+        'directUrls': [INSTAGRAM_ACCOUNT], 'resultsLimit': 150,
+        'onlyPostsNewerThan': cutoff,
     }
-    rows = apify_actor('apify/instagram-reel-scraper', token, actor_input, timeout_seconds=3600)
+    rows = apify_actor('zaver.api/instagram-reel-scraper', token, actor_input, timeout_seconds=1800)
     found = []
     for row in rows:
-        code = row.get('shortCode') or row.get('shortcode')
-        owner = row.get('ownerUsername') or (row.get('owner') or {}).get('username')
+        code = row.get('shortcode')
+        owner = row.get('username')
         caption = row.get('caption') or ''
         if not code or not owner or owner.casefold() != INSTAGRAM_ACCOUNT or not mentions_reporter(caption):
             continue
@@ -79,6 +80,32 @@ def instagram_recent(token, cutoff):
         found.append({'id': 'instagram:' + code, 'platform': 'instagram',
                       'platformId': code, 'url': 'https://www.instagram.com/reel/' + code + '/',
                       'portfolioLabel': label or 'Reel da BBC News Brasil'})
+    return found
+
+
+def tiktok_recent(token, cutoff):
+    rows = apify_actor('clockworks/free-tiktok-scraper', token, {
+        'searchQueries': ['Luiz Fernando Toledo'], 'searchSection': '/video',
+        'resultsPerPage': 50, 'shouldDownloadVideos': False,
+        'shouldDownloadCovers': False,
+    }, timeout_seconds=1800)
+    found = []
+    for row in rows:
+        author = (row.get('authorMeta') or {}).get('name', '').casefold()
+        caption = row.get('text') or ''
+        published = (row.get('createTimeISO') or '')[:10]
+        video_id = str(row.get('id') or '')
+        credited_bbc = author == TIKTOK_ACCOUNT and mentions_reporter(caption)
+        own_reporting = author == TIKTOK_OWN_ACCOUNT and any(
+            word in caption.casefold() for word in ('bbc', 'investiga', 'reportagem'))
+        if (not (credited_bbc or own_reporting) or not video_id or
+                (published and published < cutoff)):
+            continue
+        label = next((line.strip() for line in caption.splitlines() if line.strip()), '')[:140]
+        found.append({'id': 'tiktok:' + video_id, 'platform': 'tiktok',
+                      'platformId': video_id,
+                      'url': row.get('webVideoUrl') or f'https://www.tiktok.com/@{author}/video/{video_id}',
+                      'portfolioLabel': label or 'BBC News Brasil TikTok video'})
     return found
 
 
@@ -90,6 +117,7 @@ def main():
     for platform, credential, fetch in (
         ('youtube', os.getenv('YOUTUBE_API_KEY'), youtube_recent),
         ('instagram', os.getenv('APIFY_TOKEN'), instagram_recent),
+        ('tiktok', os.getenv('APIFY_TOKEN'), tiktok_recent),
     ):
         if not credential:
             print(f'{platform}: credencial ausente; busca ignorada')

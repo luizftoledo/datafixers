@@ -32,7 +32,7 @@
     "platform": "instagram",
     "platformId": "DcosT9TE5T3",
     "url": "https://www.instagram.com/reel/DcosT9TE5T3/",
-    "portfolioLabel": "BBC News Brasil short video about AI-generated videos sexualising the history of slavery"
+    "portfolioLabel": "⚠️Atenção: esta reportagem aborda vídeos que sexualizam e romantizam a escravidão, com descrições de violência sexual e física contra pessoa"
   },
   {
     "id": "youtube:Nl5eRXVkW9Y",
@@ -81,77 +81,77 @@
     "platform": "instagram",
     "platformId": "DdSBLKPmshO",
     "url": "https://www.instagram.com/reel/DdSBLKPmshO/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "'Só agora entendi tudo' 🔎"
   },
   {
     "id": "instagram:DVwcNVPAQ0_",
     "platform": "instagram",
     "platformId": "DVwcNVPAQ0_",
     "url": "https://www.instagram.com/reel/DVwcNVPAQ0_/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "'Me negociaram para prostituição' 🗣️‼️"
   },
   {
     "id": "instagram:DVOzOrYjtxj",
     "platform": "instagram",
     "platformId": "DVOzOrYjtxj",
     "url": "https://www.instagram.com/reel/DVOzOrYjtxj/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "\"Se eu tivesse desobedecido a minha mãe e ido para Nova York, o que será que teria acontecido comigo?\" ⚠️"
   },
   {
     "id": "instagram:DUi12gSEaFV",
     "platform": "instagram",
     "platformId": "DUi12gSEaFV",
     "url": "https://www.instagram.com/p/DUi12gSEaFV/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "Assédio em escolas cívico-militares no Paraná ⚠️📚"
   },
   {
     "id": "instagram:DPfEs-4lTI3",
     "platform": "instagram",
     "platformId": "DPfEs-4lTI3",
     "url": "https://www.instagram.com/reel/DPfEs-4lTI3/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "Entregas \"para todo o Brasil\" e grupos com mais de 10 mil pessoas ⚠️🥃"
   },
   {
     "id": "instagram:DOgpYz4lKwY",
     "platform": "instagram",
     "platformId": "DOgpYz4lKwY",
     "url": "https://www.instagram.com/reel/DOgpYz4lKwY/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "'Baixa produtividade no home office, atrelada ao tempo de tela' 💻🔍"
   },
   {
     "id": "instagram:DPKauEVD71z",
     "platform": "instagram",
     "platformId": "DPKauEVD71z",
     "url": "https://www.instagram.com/reel/DPKauEVD71z/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "🐯⚠️ Em abril deste ano, o Ibama apreendeu uma jaguatirica no interior do Pará, apelidada de Pituca."
   },
   {
     "id": "instagram:DMq7vPfC4Os",
     "platform": "instagram",
     "platformId": "DMq7vPfC4Os",
     "url": "https://www.instagram.com/reel/DMq7vPfC4Os/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "Você consegue identificar textos feitos por IA? 🤖✍️"
   },
   {
     "id": "instagram:DJUu11hILPM",
     "platform": "instagram",
     "platformId": "DJUu11hILPM",
     "url": "https://www.instagram.com/reel/DJUu11hILPM/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "Os peixes proibidos no Brasil que 'brilham no escuro' e podem render multas de R$ 100 mil 🐠💡🚫"
   },
   {
     "id": "instagram:DKuiChEMt8W",
     "platform": "instagram",
     "platformId": "DKuiChEMt8W",
     "url": "https://www.instagram.com/reel/DKuiChEMt8W/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets"
   },
   {
     "id": "instagram:DNCAw5SIF1J",
     "platform": "instagram",
     "platformId": "DNCAw5SIF1J",
     "url": "https://www.instagram.com/reel/DNCAw5SIF1J/",
-    "portfolioLabel": "Short-form\n          video reporting for social media"
+    "portfolioLabel": "Tarifaço prejudica Estados 'bolsonaristas' 📈"
   },
   {
     "id": "youtube:urDaCInPdvY",
@@ -264,5 +264,33 @@
     "platformId": "tzmMq7WpeUc",
     "url": "https://www.youtube.com/watch?v=tzmMq7WpeUc",
     "portfolioLabel": "Demitido do Itaú por produtividade baixa no home office: 'Trabalhei sete dias seguidos' 💻🔍"
+  },
+  {
+    "id": "tiktok:7611254603199302919",
+    "platform": "tiktok",
+    "platformId": "7611254603199302919",
+    "url": "https://www.tiktok.com/@luizftoledo/video/7611254603199302919",
+    "portfolioLabel": "Nova investigação que fizemos na BBC mostra atuação direta do grupo criminoso de Jeffrey Epstein no Brasil "
+  },
+  {
+    "id": "tiktok:7558381414736006412",
+    "platform": "tiktok",
+    "platformId": "7558381414736006412",
+    "url": "https://www.tiktok.com/@luizftoledo/video/7558381414736006412",
+    "portfolioLabel": "Mostramos na BBC como é o mercado clandestino de garrafas de bebidas alcoólicas."
+  },
+  {
+    "id": "tiktok:7605725958934465810",
+    "platform": "tiktok",
+    "platformId": "7605725958934465810",
+    "url": "https://www.tiktok.com/@luizftoledo/video/7605725958934465810",
+    "portfolioLabel": "Acompanhe nossa investigação sobre o caso no Brasil. #BBCBrasil"
+  },
+  {
+    "id": "tiktok:7605299960917150984",
+    "platform": "tiktok",
+    "platformId": "7605299960917150984",
+    "url": "https://www.tiktok.com/@luizftoledo/video/7605299960917150984",
+    "portfolioLabel": "Investigação que fiz na BBC Brasil sobre assédio sexual em escolas cívico-militares"
   }
 ]
