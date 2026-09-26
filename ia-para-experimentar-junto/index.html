@@ -47,6 +47,14 @@
     .step { padding:18px 0; border-top:2px solid var(--orange); font-size:17px; line-height:1.4; }
     .step b { display:block; font-size:20px; margin-bottom:8px; }
     .step span { color:var(--muted); }
+    .case-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .case { background:var(--paper); border:1px solid #dfd8cb; border-radius:13px; overflow:hidden; }
+    .case img { display:block; width:100%; height:190px; object-fit:cover; object-position:top; background:#eeeae1; border-bottom:1px solid #dfd8cb; }
+    .case-body { padding:23px; }
+    .case h3 { font-size:32px; line-height:1.12; margin:13px 0; }
+    .case p { color:var(--muted); line-height:1.5; font-size:16px; margin:0; }
+    .method { margin-top:23px; padding:20px 24px; border-left:4px solid var(--orange); background:#eee8db; font-size:17px; line-height:1.5; }
+    .method strong { color:var(--ink); }
     .format { display:grid; grid-template-columns:1.2fr 1fr; gap:70px; align-items:start; padding-bottom:80px; }
     .format p { max-width:610px; font-size:20px; line-height:1.6; margin-top:27px; }
     .facts { display:grid; gap:15px; }
@@ -54,7 +62,7 @@
     .fact b { display:block; font-family:Georgia,serif; font-size:30px; font-weight:400; letter-spacing:-.045em; margin:7px 0 8px; }
     .fact span:last-child { color:var(--muted); line-height:1.45; }
     footer { border-top:1px solid var(--line); padding:28px 6.2%; display:flex; justify-content:space-between; gap:25px; color:var(--muted); font-size:13px; }
-    @media(max-width:760px) { .shell { margin:0; border-radius:0; } .topbar { padding:22px 6%; } main { padding:0 6%; } .hero { padding-top:42px; } h1 { font-size:clamp(48px,11vw,80px); } .video-wrap { border-radius:9px; } .section-head,.format { grid-template-columns:1fr; gap:18px; } .ideas { grid-template-columns:1fr; } .idea { min-height:190px; } .idea h3 { margin-top:35px; } .flow { grid-template-columns:1fr; gap:5px; } section { margin-top:66px; } .format { padding-bottom:55px; } footer { flex-direction:column; } }
+    @media(max-width:760px) { .shell { margin:0; border-radius:0; } .topbar { padding:22px 6%; } main { padding:0 6%; } .hero { padding-top:42px; } h1 { font-size:clamp(48px,11vw,80px); } .video-wrap { border-radius:9px; } .section-head,.format { grid-template-columns:1fr; gap:18px; } .ideas,.case-grid { grid-template-columns:1fr; } .idea { min-height:190px; } .idea h3 { margin-top:35px; } .case img { height:220px; } .flow { grid-template-columns:1fr; gap:5px; } section { margin-top:66px; } .format { padding-bottom:55px; } footer { flex-direction:column; } }
   </style>
 </head>
 <body>
@@ -77,7 +85,16 @@
         </div>
         <div class="flow"><div class="step"><b>1. Experimente</b><span>Escolha um projeto que dê vontade de fazer.</span></div><div class="step"><b>2. Compartilhe</b><span>Mostre o que funcionou e onde você travou.</span></div><div class="step"><b>3. Receba feedback</b><span>Troque ideias e continue melhorando com o grupo.</span></div></div>
       </section>
-      <section class="format" id="formato"><div><div class="eyebrow">O formato</div><h2 style="margin-top:25px">Aprenda, teste e converse com outras pessoas.</h2><p>Além dos encontros mensais com o grupo, você terá acesso a quatro horas de conteúdo sobre como usar IA. A proposta é sair da teoria e experimentar em projetos seus, sem precisar chegar com uma ideia pronta.</p></div><div class="facts"><div class="fact"><span class="num">AO VIVO</span><b>Encontros mensais</b><span>Para mostrar projetos, trocar experiências e receber feedback.</span></div><div class="fact"><span class="num">PARA EXPLORAR</span><b>4 horas de conteúdo</b><span>Sobre como usar IA para transformar ideias em experimentos.</span></div></div></section>
+      <section id="investigar">
+        <div class="section-head"><h2>Aprenda a <mark>investigar com IA.</mark></h2><p>Em uma das sessões das quatro horas de conteúdo, partimos de casos reais para mostrar como a IA ajuda a encontrar pistas — e como conferir cada achado na fonte original.</p></div>
+        <div class="case-grid">
+          <article class="case"><img src="medicos-ia.webp" alt="Manchete da BBC News Brasil sobre falsos médicos criados com IA" loading="lazy"><div class="case-body"><span class="num">CÓDIGO-FONTE</span><h3>Quem está por trás dos médicos de IA?</h3><p>Ao examinar a página de venda de um produto ligado ao caso, encontramos um e-mail de contato no código HTML. A aula mostra como seguir e verificar essa pista.</p></div></article>
+          <article class="case"><img src="emenda-juazeirinho.webp" alt="Imagem de reportagem sobre a investigação de uma emenda em Juazeirinho" loading="lazy"><div class="case-body"><span class="num">VÍDEOS E FONTES</span><h3>Onde a emenda foi mencionada?</h3><p>Usamos IA para localizar, em horas de entrevistas e podcasts, trechos sobre uma emenda parlamentar em Juazeirinho — e voltamos aos vídeos para entender o contexto.</p></div></article>
+          <article class="case"><img src="planos-governo.webp" alt="Painel de comparação de planos de governo com análise de trechos repetidos" loading="lazy"><div class="case-body"><span class="num">PADRÕES EM DOCUMENTOS</span><h3>Quais propostas foram copiadas?</h3><p>Comparamos planos de governo para encontrar trechos idênticos entre candidatos. A IA acelera a busca; o método e os documentos sustentam a conclusão.</p></div></article>
+        </div>
+        <div class="method"><strong>O caminho da apuração:</strong> formular a pergunta → encontrar a pista → abrir a fonte original → checar antes de publicar.</div>
+      </section>
+      <section class="format" id="formato"><div><div class="eyebrow">O formato</div><h2 style="margin-top:25px">Aprenda, teste e converse com outras pessoas.</h2><p>Além dos encontros mensais com o grupo, você terá acesso a quatro horas de conteúdo sobre como usar IA. Uma das sessões explora investigações como as acima; a proposta também é experimentar em projetos seus, sem precisar chegar com uma ideia pronta.</p></div><div class="facts"><div class="fact"><span class="num">AO VIVO</span><b>Encontros mensais</b><span>Para mostrar projetos, trocar experiências e receber feedback.</span></div><div class="fact"><span class="num">PARA EXPLORAR</span><b>4 horas de conteúdo</b><span>Incluindo uma sessão sobre como investigar com IA a partir de casos reais.</span></div></div></section>
     </main>
     <footer><span>Com Juliana Faddul e Luiz Fernando Toledo</span><span>Uma proposta para criar, testar e aprender junto.</span></footer>
   </div>
