@@ -12,7 +12,7 @@ The GitHub Actions workflow `.github/workflows/monitor-videos.yml` runs daily at
 
 The weekly search uses a 14-day cutoff, a maximum of 150 Instagram Reels and 50 TikTok search results. It adds matching IDs once. This is a bounded discovery window, not an exhaustive archive scan. Byline-free posts, spoken credits, other accounts and content outside the window need to be added to `videos.json` manually.
 
-YouTube counters come from `statistics`. Instagram counters come from the public **play** count returned by `zaver.api/instagram-reel-scraper`; this differs from Instagram's older `video_view_count`, which can substantially undercount what the app displays. TikTok counters come from `clockworks/free-tiktok-scraper`. Missing counters stay null. Older snapshots are not rewritten.
+YouTube counters come from `statistics`. Instagram counters come from the public **play** count returned by `zaver.api/instagram-reel-scraper`; this differs from Instagram's older `video_view_count`, which can substantially undercount what the app displays. TikTok counters come from `clockworks/free-tiktok-scraper`. Missing counters stay null. If an Instagram play reading falls below an earlier reading from the same source, the highest observed value is retained and `viewsObservedAt` preserves when it was last verified. Older snapshots are not rewritten.
 
 Recent top-level YouTube comments are retained as a partial sample. The monitor no longer runs a separate Instagram comment scrape each day, which previously exhausted the monthly quota. It still records Instagram's total public comment count.
 

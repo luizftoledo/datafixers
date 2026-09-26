@@ -194,10 +194,26 @@ def main():
             row['baseline'] = row['videoId'] not in previously_monitored
             existing[row['id']] = row
     old = {row['videoId']: row for row in data.get('snapshots', []) if row['date'] == TODAY}
+    highest_instagram = {}
+    for past in data.get('snapshots', []):
+        if not (past['videoId'].startswith('instagram:') and
+                past.get('source') == 'Instagram public play count' and
+                past.get('views') is not None):
+            continue
+        previous = highest_instagram.get(past['videoId'])
+        if not previous or past['views'] > previous['views']:
+            highest_instagram[past['videoId']] = past
     for video_id, row in metrics.items():
         if 'error' in row:
             errors[video_id] = row['error']
             continue
+        if video_id.startswith('instagram:') and row.get('views') is not None:
+            prior = highest_instagram.get(video_id)
+            if prior and prior['views'] > row['views']:
+                row['views'] = prior['views']
+                row['viewsObservedAt'] = prior.get('viewsObservedAt') or prior['collectedAt']
+            else:
+                row['viewsObservedAt'] = NOW
         old[video_id] = {'videoId': video_id, 'date': TODAY, 'collectedAt': NOW, **row}
     earlier = [row for row in data.get('snapshots', []) if row['date'] != TODAY]
     data = {'generatedAt': NOW, 'snapshots': earlier + list(old.values()),
