@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T10:49:12+00:00",
+  "generatedAt": "2026-09-26T13:05:26+00:00",
   "snapshots": [
     {
       "videoId": "youtube:QlunKw_CKPY",
@@ -392,9 +392,561 @@
       "comments": 184,
       "source": "Instagram embed público",
       "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "youtube:QlunKw_CKPY",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "AI, Deepfakes and the Fight for Brazil’s Vote - Global Eye, BBC World Service",
+      "views": 22719,
+      "likes": 220,
+      "comments": 21,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:SkX6MKU9gAQ",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "A curiosa linha do tempo da evolução da Inteligência Artificial",
+      "views": 790066,
+      "likes": 20959,
+      "comments": 304,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:r5Ihpa2DQIg",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "The fake alcohol killing people in Brazil - What in the World podcast, BBC World Service",
+      "views": 18598,
+      "likes": 459,
+      "comments": 36,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:65AnDszCevA",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Por que cada vez mais analistas falam em 'bolha' da inteligência artificial prestes a estourar",
+      "views": 314689,
+      "likes": 14135,
+      "comments": 474,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:Nl5eRXVkW9Y",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Brasileira conta à BBC como foi aliciada para Epstein em São Paulo",
+      "views": 44646,
+      "likes": 1683,
+      "comments": 46,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M46TWtihWMs",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Os deepfakes que tentam te enganar - e gerar dinheiro | Eleições 2026",
+      "views": 155307,
+      "likes": 3120,
+      "comments": 148,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HEwY0WKeKjc",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "ChatGPT: o que você não vê",
+      "views": 657627,
+      "likes": 36363,
+      "comments": 1252,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:RhHz-bizvs0",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Como redes sociais estão influenciando ida de jovens para o tráfico",
+      "views": 59368,
+      "likes": 2953,
+      "comments": 211,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:CzK178HYEB8",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Brasil poderia imitar política de detenção em massade Bukele?",
+      "views": 88511,
+      "likes": 4523,
+      "comments": 998,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:ZPbhHhE22uY",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Os médicos falsos feitos por IA que viralizam entre idosos no Brasil",
+      "views": 84615,
+      "likes": 4902,
+      "comments": 403,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:urDaCInPdvY",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Investigations with public records: Presenting Data Fixers at the GIJC",
+      "views": 64,
+      "likes": 0,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rqvT39YIsP0",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Entrevista com Luiz Fernando Toledo, diretor da Abraji e cofundador da Fiquem Sabendo",
+      "views": 1295,
+      "likes": 13,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:dw5q9ZXMaWE",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Data Fixers presentation - #FilLisbon 2022",
+      "views": 115,
+      "likes": 1,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PP8bv7osKMo",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "E Tem Mais: Piratas do ar - 06/07",
+      "views": 778,
+      "likes": 31,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:-hXN1-wq8Kk",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Aula 7 – Como usar ferramentas de IA para apoiar o jornalismo de educação",
+      "views": 713,
+      "likes": 71,
+      "comments": 1,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:4NTyfMsgtY4",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "⚠️🥃 Como funciona a venda de lacres falsos, tampas e garrafas de bebidas alcoólicas no Facebook",
+      "views": 161703,
+      "likes": 9505,
+      "comments": 574,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HNGaWGIAnso",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "⚠️🤖⁠ Como não deixar o ChatGPT atrapalhar seus estudos",
+      "views": 25627,
+      "likes": 2259,
+      "comments": 83,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rTybgh71xFU",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets",
+      "views": 27050,
+      "likes": 1481,
+      "comments": 110,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:3KnxcFxVcF0",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Tarifaço prejudica Estados 'bolsonaristas' 📈",
+      "views": 26366,
+      "likes": 2593,
+      "comments": 216,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PZBbBkKNAxk",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Quem é Dona Maria, a personagem de IA que viraliza falando mal de Lula e do STF",
+      "views": 113626,
+      "likes": 5187,
+      "comments": 853,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:0KVyLHjj1Fs",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Ibama X influenciadora: a briga na Justiça pela guarda da jaguatirica Pituca 🐯⚠️",
+      "views": 198005,
+      "likes": 14795,
+      "comments": 807,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:QcZqdD7_gLA",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Entrevista de emprego feita por IA? 💼📲",
+      "views": 80552,
+      "likes": 5865,
+      "comments": 335,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:gGn1hGMyKt0",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Os bilionários que aparecem nos novos arquivos do caso Epstein — e qual era a atuação dele no Brasil",
+      "views": 344208,
+      "likes": 8855,
+      "comments": 476,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M-Z_CBMsC9k",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Dá para identificar texto gerado por inteligência artificial?",
+      "views": 137003,
+      "likes": 8422,
+      "comments": 241,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:EbfqG95jozQ",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Peixe gigante da Amazônia vira bolsa de luxo de $ 8 mil. Quanto ganham os pescadores? 🎣💰",
+      "views": 92104,
+      "likes": 7130,
+      "comments": 487,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:tzmMq7WpeUc",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Demitido do Itaú por produtividade baixa no home office: 'Trabalhei sete dias seguidos' 💻🔍",
+      "views": 463027,
+      "likes": 25493,
+      "comments": 1579,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "instagram:DcosT9TE5T3",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "⚠️Atenção: esta reportagem aborda vídeos que sexualizam e romantizam a escravidão, com descrições de violência sexual e física contra pessoa",
+      "views": 141535,
+      "likes": 8325,
+      "comments": 346,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DdSBLKPmshO",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "'Só agora entendi tudo' 🔎",
+      "views": 2709003,
+      "likes": 262364,
+      "comments": 6563,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DVwcNVPAQ0_",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "'Me negociaram para prostituição' 🗣️‼️",
+      "views": 116655,
+      "likes": 6360,
+      "comments": 157,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DVOzOrYjtxj",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "\"Se eu tivesse desobedecido a minha mãe e ido para Nova York, o que será que teria acontecido comigo?\" ⚠️",
+      "views": 773274,
+      "likes": 84519,
+      "comments": 1024,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DUi12gSEaFV",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Assédio em escolas cívico-militares no Paraná ⚠️📚",
+      "views": 319380,
+      "likes": 55086,
+      "comments": 2886,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DPfEs-4lTI3",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Entregas \"para todo o Brasil\" e grupos com mais de 10 mil pessoas ⚠️🥃",
+      "views": 106960,
+      "likes": 6734,
+      "comments": 182,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DOgpYz4lKwY",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "'Baixa produtividade no home office, atrelada ao tempo de tela' 💻🔍",
+      "views": 2213814,
+      "likes": 138767,
+      "comments": 3717,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DPKauEVD71z",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "🐯⚠️ Em abril deste ano, o Ibama apreendeu uma jaguatirica no interior do Pará, apelidada de Pituca.",
+      "views": 264859,
+      "likes": 35720,
+      "comments": 1930,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DMq7vPfC4Os",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Você consegue identificar textos feitos por IA? 🤖✍️",
+      "views": 99613,
+      "likes": 10080,
+      "comments": 196,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DJUu11hILPM",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Os peixes proibidos no Brasil que 'brilham no escuro' e podem render multas de R$ 100 mil 🐠💡🚫",
+      "views": null,
+      "likes": 5398,
+      "comments": 184,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DKuiChEMt8W",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets",
+      "views": null,
+      "likes": 2660,
+      "comments": 117,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
+    },
+    {
+      "videoId": "instagram:DNCAw5SIF1J",
+      "date": "2026-09-26",
+      "collectedAt": "2026-09-26T13:05:26+00:00",
+      "title": "Tarifaço prejudica Estados 'bolsonaristas' 📈",
+      "views": 59244,
+      "likes": 6894,
+      "comments": 832,
+      "source": "Instagram embed público",
+      "commentsError": "Limite mensal da conta Apify atingido"
     }
   ],
   "comments": [
+    {
+      "id": "youtube:Ugyw4AZeTUfd3xid3ad4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "“Expressar opiniões sem aparecer e complementar a renda”, que tipo de “trabalho” ou ocupação é essa que uma pessoa se presta a fazer? independente do teor ou o que a motive a fazer. É uma atividade tão improdutiva quanto\no trabalho mal feito dos nossos governantes no poder a quem Daniel “representa” e defende tanto, independente da posição política dele e de qualquer um que se presta a isso. O que ele faz não produz benefício social nenhum, só divide mais as pessoas e ele tá corroborando pra isso como muitos, falta instrução e consciência. Ainda sim e a todo custo, tem quem se aproveite dessa onda de deepfakes pra monetizar e maximizar ainda mais uma parte do problema que só cresce no mundo, sendo só mais um querendo vantagem nisso tudo. Que grande futuro temos pela frente. A necessidade por dinheiro vem extraindo um futuro sabotado por pessoas desinteressadas a dar a volta por cima e contornar a situação de outra forma, ao invés disso elas reforçam e são parte do problema. BLACK MIRROR TOTAL",
+      "author": "@WyrllaneS",
+      "publishedAt": "2026-09-26T11:49:24Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugyw4AZeTUfd3xid3ad4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgxGE9F3bAml6Z16WbF4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Vou ser sincero o Brasil precisa fazer varias reformas. Essas deepfakes deveriam ser proibidas sobre eleição, candidatos, deveriam ser proibidos falar mal do outro, só poderiam falar de suas propostas, noticias falsas a pessoa deveria ser presa, ou noticia manipulada para contar parte da verdade.",
+      "author": "@GabrielSilva-wl5nd",
+      "publishedAt": "2026-09-26T01:59:09Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgxGE9F3bAml6Z16WbF4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugw-3bOxelohjOjB8VN4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Amado Flávio Bolsonaro, o ministro André Mendonça ligou sua família as milícias 😢 Você é miliciano?  Falaram que o também que enviou 200 mil para o Peixe (um criminoso do caso Mariele) 😢😢😢 Que tistreza 😢",
+      "author": "@NegaoAmarelo",
+      "publishedAt": "2026-09-26T01:25:47Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugw-3bOxelohjOjB8VN4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgwD62QWHxFSdDpM20h4AaABAg",
+      "videoId": "youtube:HEwY0WKeKjc",
+      "text": "Realmente não imaginamos oque está por trás das coisas, ainda mas daquelas que vem dos poderosos.",
+      "author": "@Fabinafala",
+      "publishedAt": "2026-09-25T22:55:56Z",
+      "url": "https://www.youtube.com/watch?v=HEwY0WKeKjc&lc=UgwD62QWHxFSdDpM20h4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugz3GaRcpC-UIlBkbhN4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "nada  de  errado  com  histórias fantasiosas de IA\n\na nao ser  ,  assuntos  de interesse publico  , saúde  , bem-estar , finanças  e outros tantos assuntos  , que  sao  partes  muito  muito reais   na vida  dum  ser humano  normal.\ncom  estas  coisas  nao  se brinca",
+      "author": "@hugodosanjos5732",
+      "publishedAt": "2026-09-25T21:24:16Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugz3GaRcpC-UIlBkbhN4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugzc4ideKzFDMr6aJAh4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "E o Peter Jordan é bolsonarista KKKKKKKKKKKK nunca que vai falar com a Globo, ele toma detergente",
+      "author": "@danielklils",
+      "publishedAt": "2026-09-25T19:01:15Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugzc4ideKzFDMr6aJAh4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgwfOx6g05szrgAFkgx4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Daniel, aprende com o povo do Sri Lanka e produz vídeo para engajamento em países ricos. YouTube paga mais para visualizações em países com alto poder de compra.",
+      "author": "@SmilingBakedBaguette",
+      "publishedAt": "2026-09-25T18:40:19Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgwfOx6g05szrgAFkgx4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgzVCo-TGZkYox4VGxd4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Ainda bem q não vi nenhum desses videos 😂só esse agora,obrigada❤",
+      "author": "@AliniVieira-o3s",
+      "publishedAt": "2026-09-25T18:13:24Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgzVCo-TGZkYox4VGxd4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgxoamObqhoPfVEK7zp4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Antigamente era voto de cabresto, depois só as grandes emissoras podiam manipular as eleições, agora a internet que está fazendo isso, que grande novidade, como se o Brasil fosse um país que tivesse a cultura de voto inteligente e consciente.",
+      "author": "@cesareduarte8535",
+      "publishedAt": "2026-09-25T16:46:47Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgxoamObqhoPfVEK7zp4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgwRSigIX4UDOGxbaDt4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Eu não recebo vídeo de política aqui no YouTube,porém,já observei que tem mais da área de saúde,nem abro pra não viciar meu algoritmo.",
+      "author": "@ClaudiaCruz-gf5oq",
+      "publishedAt": "2026-09-25T15:24:51Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgwRSigIX4UDOGxbaDt4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugw6e2aw-HzA5KEWSDJ4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "6:13 \"Nédico\"",
+      "author": "@ianvieira4716",
+      "publishedAt": "2026-09-25T15:03:38Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugw6e2aw-HzA5KEWSDJ4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgwkdXhHxbNPiD5fg9t4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Pior que é que é TÃO óbvio que são vídeos de IA! As pessoas não percebem que as imagens têm um olhar frio, que a voz é automatizada?",
+      "author": "@cecilianovais212",
+      "publishedAt": "2026-09-25T14:06:03Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgwkdXhHxbNPiD5fg9t4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgwEiiaVbvQijS3jZNZ4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "O governo deveria proibir a monetarizacão dos canais do Youtube e TikTok. Só assim essas barbaridades acabam. Não me espantam os canais políticos,  porque a mentira é inerente à política. O que me horroriza são os canais criados para espalhar desinformações sobre saúde e nutrição.  Essas pessoas deviam estar na cadeia. Mas, num país como o nosso, esperar justiça é ilusão.",
+      "author": "@joselitaribeiro7315",
+      "publishedAt": "2026-09-25T13:40:13Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgwEiiaVbvQijS3jZNZ4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugx00zP_ISNuU96seEt4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Sociedade perdida",
+      "author": "@dayvisonmoreiradelima4021",
+      "publishedAt": "2026-09-25T12:41:50Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugx00zP_ISNuU96seEt4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:Ugxygl9FMe3thlJp5jZ4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Reflexo de uma sociedade doente ,presa em farsas sendo controladas e alienadas",
+      "author": "@dayvisonmoreiradelima4021",
+      "publishedAt": "2026-09-25T12:36:17Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=Ugxygl9FMe3thlJp5jZ4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
+    {
+      "id": "youtube:UgxttOlICzbheNxao5R4AaABAg",
+      "videoId": "youtube:M46TWtihWMs",
+      "text": "Imagina as pessoas mais idosas que não tem habilidade alguma com o meio digital, e hoje como todos tem celular....as vezes você tenta explicar pra eles que 80% dos conteúdos hoje são falsos ou fakes mas não adianta....eles acreditam em tudo, mas a tendência é ficar pior, pois o YouTube divulga até propagandas de empresa vendendo algo, e essa empresa nem existe...isso quer dizer que o YouTube não verifica nem o básico para divulgar um anúncio...e sei de varias pessoas que caiu nesse golpe, comprou e nunca recebeu...foi averiguar e a empresa nem existia!!!",
+      "author": "@wagnerleo6060",
+      "publishedAt": "2026-09-25T11:28:12Z",
+      "url": "https://www.youtube.com/watch?v=M46TWtihWMs&lc=UgxttOlICzbheNxao5R4AaABAg",
+      "firstSeen": "2026-09-26",
+      "baseline": false
+    },
     {
       "id": "youtube:UgwpBfh7yNWGOlH9zSp4AaABAg",
       "videoId": "youtube:M46TWtihWMs",
