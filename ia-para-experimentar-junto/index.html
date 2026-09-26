@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e8">
+  <meta name="description" content="Um grupo para experimentar com IA, mostrar projetos e receber feedback. Com Juliana Faddul e Luiz Fernando Toledo.">
+  <title>IA para experimentar junto — Juliana Faddul e Luiz Fernando Toledo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f6f2e8'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23dd724a' stroke-width='7' stroke-dasharray='88 28'/%3E%3Ccircle cx='49' cy='26' r='5' fill='%23dd724a'/%3E%3C/svg%3E">
+  <style>
+    :root { --cream:#f6f2e8; --paper:#fffcf4; --ink:#1e1c1b; --muted:#6a665e; --orange:#dd724a; --line:#d9d2c4; --yellow:#f9ff85; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#f0ede6; color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+    .shell { max-width:1320px; margin:24px auto; background:var(--cream); border:1px solid #d1cabd; border-radius:18px; overflow:hidden; box-shadow:0 18px 55px #29211314; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:28px 6.2%; border-bottom:1px solid #e4ded3; gap:20px; }
+    .brand { font-size:15px; font-weight:800; letter-spacing:-.02em; }
+    .toplink { color:var(--ink); text-decoration:none; font-size:13px; font-weight:700; border-bottom:1px solid var(--orange); padding-bottom:3px; }
+    main { padding:0 6.2%; }
+    .eyebrow { display:flex; gap:14px; align-items:center; text-transform:uppercase; letter-spacing:.19em; color:var(--muted); font-size:13px; font-weight:800; }
+    .eyebrow:before { content:""; width:19px; height:2px; background:var(--orange); }
+    .hero { padding-top:66px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; font-weight:400; letter-spacing:-.055em; }
+    h1 { font-size:clamp(54px,7.25vw,103px); line-height:1.02; max-width:1050px; margin:29px 0 24px; }
+    mark { color:inherit; background:linear-gradient(transparent 19%,var(--yellow) 19%,var(--yellow) 88%,transparent 88%); padding:0 .05em; }
+    .intro { font-size:clamp(20px,2.1vw,28px); line-height:1.38; max-width:820px; margin-bottom:34px; }
+    .intro strong { font-weight:800; }
+    .hero-actions { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:40px; }
+    .button { display:inline-flex; align-items:center; gap:16px; border-radius:100px; background:var(--ink); color:#fff; text-decoration:none; padding:17px 24px; font-size:15px; font-weight:700; transition:transform .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); background:#4a3430; }
+    .duration { color:var(--muted); font-size:14px; }
+    .video-wrap { position:relative; width:100%; aspect-ratio:16/9; background:#eae4d8; overflow:hidden; border:1px solid #d6cfc1; border-radius:15px; box-shadow:0 24px 52px #342a1e20; }
+    video { display:block; width:100%; height:100%; object-fit:cover; }
+    .sound-tip { position:absolute; right:17px; bottom:17px; background:#1e1c1bd9; color:#fff; border-radius:6px; padding:8px 11px; font-size:12px; pointer-events:none; opacity:1; transition:opacity .3s; }
+    .video-wrap.playing .sound-tip { opacity:0; }
+    section { border-top:1px solid var(--line); margin-top:94px; padding-top:52px; }
+    .section-head { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; margin-bottom:35px; }
+    h2 { font-size:clamp(43px,5vw,69px); line-height:1.08; margin:0; }
+    .section-head p { font-size:19px; line-height:1.55; max-width:490px; margin:0 0 5px; }
+    .ideas { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .idea { min-height:260px; padding:26px; background:var(--paper); border:1px solid #dfd8cb; border-radius:13px; display:flex; flex-direction:column; align-items:flex-start; }
+    .num { font-size:13px; color:var(--orange); font-weight:800; letter-spacing:.12em; }
+    .idea h3 { font-size:39px; margin:56px 0 8px; }
+    .idea p { color:var(--muted); line-height:1.45; margin:0; font-size:16px; }
+    .flow { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px; }
+    .step { padding:18px 0; border-top:2px solid var(--orange); font-size:17px; line-height:1.4; }
+    .step b { display:block; font-size:20px; margin-bottom:8px; }
+    .step span { color:var(--muted); }
+    .format { display:grid; grid-template-columns:1.2fr 1fr; gap:70px; align-items:start; padding-bottom:80px; }
+    .format p { max-width:610px; font-size:20px; line-height:1.6; margin-top:27px; }
+    .facts { display:grid; gap:15px; }
+    .fact { background:var(--paper); border:1px solid #ddd6c8; border-radius:13px; padding:24px; }
+    .fact b { display:block; font-family:Georgia,serif; font-size:30px; font-weight:400; letter-spacing:-.045em; margin:7px 0 8px; }
+    .fact span:last-child { color:var(--muted); line-height:1.45; }
+    footer { border-top:1px solid var(--line); padding:28px 6.2%; display:flex; justify-content:space-between; gap:25px; color:var(--muted); font-size:13px; }
+    @media(max-width:760px) { .shell { margin:0; border-radius:0; } .topbar { padding:22px 6%; } main { padding:0 6%; } .hero { padding-top:42px; } h1 { font-size:clamp(48px,11vw,80px); } .video-wrap { border-radius:9px; } .section-head,.format { grid-template-columns:1fr; gap:18px; } .ideas { grid-template-columns:1fr; } .idea { min-height:190px; } .idea h3 { margin-top:35px; } .flow { grid-template-columns:1fr; gap:5px; } section { margin-top:66px; } .format { padding-bottom:55px; } footer { flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="/index_pt.html" style="color:var(--ink);text-decoration:none" aria-label="Voltar para Data Fixers">DATA FIXERS<span style="color:var(--orange)"> ✳</span></a><a class="toplink" href="#como-funciona">Como funciona ↓</a></header>
+    <main>
+      <div class="hero">
+        <div class="eyebrow">Um grupo para colocar ideias no mundo</div>
+        <h1>O mundo <mark>(ainda)</mark> não acabou com a IA.</h1>
+        <p class="intro">Mas quase todo mundo já usa IA de alguma forma. <strong>E se a gente experimentasse junto?</strong></p>
+        <div class="hero-actions"><a class="button" href="#como-funciona">Conheça a proposta <span aria-hidden="true">↗</span></a><span class="duration">Assista ao convite · 18 segundos · com som</span></div>
+        <div class="video-wrap" id="video-wrap"><video controls playsinline preload="metadata" poster="poster.jpg" aria-label="Convite em vídeo para o grupo IA para experimentar junto"><source src="convite-ia.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video><span class="sound-tip">Ative o som no player ♪</span></div>
+      </div>
+      <section id="como-funciona">
+        <div class="section-head"><h2>Traga uma ideia.<br><mark>Tudo vale.</mark></h2><p>Juliana Faddul e Luiz Fernando Toledo, jornalistas que têm experimentado usar IA dentro e fora do trabalho, criaram este grupo para quem quer tentar, compartilhar e receber feedback.</p></div>
+        <div class="ideas">
+          <article class="idea"><span class="num">01 / CRIE</span><h3>Um portfólio</h3><p>Reúna e apresente seus projetos do seu jeito.</p></article>
+          <article class="idea"><span class="num">02 / BRINQUE</span><h3>Um joguinho</h3><p>Faça algo simples para mostrar aos amigos.</p></article>
+          <article class="idea"><span class="num">03 / EXPERIMENTE</span><h3>Uma coleção de memes</h3><p>Teste uma ideia para o X ou para onde quiser.</p></article>
+        </div>
+        <div class="flow"><div class="step"><b>1. Experimente</b><span>Escolha um projeto que dê vontade de fazer.</span></div><div class="step"><b>2. Compartilhe</b><span>Mostre o que funcionou e onde você travou.</span></div><div class="step"><b>3. Receba feedback</b><span>Troque ideias e continue melhorando com o grupo.</span></div></div>
+      </section>
+      <section class="format" id="formato"><div><div class="eyebrow">O formato</div><h2 style="margin-top:25px">Aprenda, teste e converse com outras pessoas.</h2><p>Além dos encontros mensais com o grupo, você terá acesso a quatro horas de conteúdo sobre como usar IA. A proposta é sair da teoria e experimentar em projetos seus, sem precisar chegar com uma ideia pronta.</p></div><div class="facts"><div class="fact"><span class="num">AO VIVO</span><b>Encontros mensais</b><span>Para mostrar projetos, trocar experiências e receber feedback.</span></div><div class="fact"><span class="num">PARA EXPLORAR</span><b>4 horas de conteúdo</b><span>Sobre como usar IA para transformar ideias em experimentos.</span></div></div></section>
+    </main>
+    <footer><span>Com Juliana Faddul e Luiz Fernando Toledo</span><span>Uma proposta para criar, testar e aprender junto.</span></footer>
+  </div>
+  <script>const v=document.querySelector('video'),w=document.getElementById('video-wrap');v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));</script>
+</body>
+</html>
