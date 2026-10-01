@@ -506,6 +506,18 @@ section .section-title::after {
   text-transform: uppercase;
 }
 
+/* Courses sit together as a compact pair after the projects, rather than
+   leaving one course alone in the four-column project grid. */
+#cursos .dashboards-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+#cursos .dashboard-item:nth-child(2n) { border-right: 0; }
+#cursos .course-actions { display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:auto; }
+@media (max-width: 600px) {
+  #cursos .dashboards-grid { grid-template-columns: 1fr !important; }
+  #cursos .dashboard-item { border-right: 0 !important; }
+}
+
 /* ----------------- current projects (01) ----------------- */
 .current-projects-section {
   background: var(--paper) !important;

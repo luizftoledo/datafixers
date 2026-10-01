@@ -30,6 +30,12 @@
     .button { display:inline-flex; align-items:center; gap:16px; border-radius:100px; background:var(--ink); color:#fff; text-decoration:none; padding:17px 24px; font-size:15px; font-weight:700; transition:transform .2s,background .2s; }
     .button:hover { transform:translateY(-2px); background:#4a3430; }
     .duration { color:var(--muted); font-size:14px; }
+    .button-outline { background:transparent; color:var(--ink); border:1px solid var(--ink); }
+    .button-outline:hover { color:#fff; }
+    .waitlist { display:flex; align-items:center; justify-content:space-between; gap:32px; background:var(--paper); border:1px solid #dfd8cb; border-radius:15px; padding:34px 40px; margin-bottom:75px; }
+    .waitlist h2 { font-size:clamp(36px,4vw,54px); margin:10px 0 12px; }
+    .waitlist p { color:var(--muted); font-size:17px; line-height:1.5; max-width:600px; margin:0; }
+    .waitlist .button { flex-shrink:0; justify-content:center; }
     .video-wrap { position:relative; width:100%; aspect-ratio:16/9; background:#eae4d8; overflow:hidden; border:1px solid #d6cfc1; border-radius:15px; box-shadow:0 24px 52px #342a1e20; }
     video { display:block; width:100%; height:100%; object-fit:cover; }
     .sound-tip { position:absolute; right:17px; bottom:17px; background:#1e1c1bd9; color:#fff; border-radius:6px; padding:8px 11px; font-size:12px; pointer-events:none; opacity:1; transition:opacity .3s; }
@@ -62,18 +68,18 @@
     .fact b { display:block; font-family:Georgia,serif; font-size:30px; font-weight:400; letter-spacing:-.045em; margin:7px 0 8px; }
     .fact span:last-child { color:var(--muted); line-height:1.45; }
     footer { border-top:1px solid var(--line); padding:28px 6.2%; display:flex; justify-content:space-between; gap:25px; color:var(--muted); font-size:13px; }
-    @media(max-width:760px) { .shell { margin:0; border-radius:0; } .topbar { padding:22px 6%; } main { padding:0 6%; } .hero { padding-top:42px; } h1 { font-size:clamp(48px,11vw,80px); } .video-wrap { border-radius:9px; } .section-head,.format { grid-template-columns:1fr; gap:18px; } .ideas,.case-grid { grid-template-columns:1fr; } .idea { min-height:190px; } .idea h3 { margin-top:35px; } .case img { height:220px; } .flow { grid-template-columns:1fr; gap:5px; } section { margin-top:66px; } .format { padding-bottom:55px; } footer { flex-direction:column; } }
+    @media(max-width:760px) { .waitlist { flex-direction:column; align-items:stretch; padding:26px; margin-bottom:55px; } .waitlist .button { width:100%; } .shell { margin:0; border-radius:0; } .topbar { padding:22px 6%; } main { padding:0 6%; } .hero { padding-top:42px; } h1 { font-size:clamp(48px,11vw,80px); } .video-wrap { border-radius:9px; } .section-head,.format { grid-template-columns:1fr; gap:18px; } .ideas,.case-grid { grid-template-columns:1fr; } .idea { min-height:190px; } .idea h3 { margin-top:35px; } .case img { height:220px; } .flow { grid-template-columns:1fr; gap:5px; } section { margin-top:66px; } .format { padding-bottom:55px; } footer { flex-direction:column; } }
   </style>
 </head>
 <body>
   <div class="shell">
-    <header class="topbar"><a class="brand" href="/index_pt.html" style="color:var(--ink);text-decoration:none" aria-label="Voltar para Data Fixers">DATA FIXERS<span style="color:var(--orange)"> ✳</span></a><a class="toplink" href="#como-funciona">Como funciona ↓</a></header>
+    <header class="topbar"><a class="brand" href="/index_pt.html" style="color:var(--ink);text-decoration:none" aria-label="Voltar para Data Fixers">DATA FIXERS<span style="color:var(--orange)"> ✳</span></a><a class="toplink" href="#lista-de-espera">Lista de espera ↓</a></header>
     <main>
       <div class="hero">
         <div class="eyebrow">Um grupo para colocar ideias no mundo</div>
         <h1>O mundo <mark>(ainda)</mark> não acabou com a IA.</h1>
         <p class="intro">Mas quase todo mundo já usa IA de alguma forma. <strong>E se a gente experimentasse junto?</strong></p>
-        <div class="hero-actions"><a class="button" href="#como-funciona">Conheça a proposta <span aria-hidden="true">↗</span></a><span class="duration">Assista ao convite · 18 segundos · com som</span></div>
+        <div class="hero-actions"><a class="button" href="#lista-de-espera">Entrar na lista de espera <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#como-funciona">Conheça a proposta <span aria-hidden="true">↗</span></a><span class="duration">Assista ao convite · 18 segundos · com som</span></div>
         <div class="video-wrap" id="video-wrap"><video controls playsinline preload="metadata" poster="poster.jpg" aria-label="Convite em vídeo para o grupo IA para experimentar junto"><source src="convite-ia.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video><span class="sound-tip">Ative o som no player ♪</span></div>
       </div>
       <section id="como-funciona">
@@ -95,6 +101,10 @@
         <div class="method"><strong>O caminho da apuração:</strong> formular a pergunta → encontrar a pista → abrir a fonte original → checar antes de publicar.</div>
       </section>
       <section class="format" id="formato"><div><div class="eyebrow">O formato</div><h2 style="margin-top:25px">Aprenda, teste e converse com outras pessoas.</h2><p>Além dos encontros mensais com o grupo, você terá acesso a quatro horas de conteúdo sobre como usar IA. Uma das sessões explora investigações como as acima; a proposta também é experimentar em projetos seus, sem precisar chegar com uma ideia pronta.</p></div><div class="facts"><div class="fact"><span class="num">AO VIVO</span><b>Encontros mensais</b><span>Para mostrar projetos, trocar experiências e receber feedback.</span></div><div class="fact"><span class="num">PARA EXPLORAR</span><b>4 horas de conteúdo</b><span>Incluindo uma sessão sobre como investigar com IA a partir de casos reais.</span></div></div></section>
+      <section class="waitlist" id="lista-de-espera" aria-labelledby="waitlist-title">
+        <div><div class="eyebrow">Próxima turma</div><h2 id="waitlist-title">Entre na lista de espera.</h2><p>Ainda não temos data de abertura. Deixe seu contato para saber quando o grupo “IA para experimentar junto” começar.</p></div>
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSepI2SLGVb9_Jizwzn9kq5rbafKfXpSLDOe7Cu3KGglP6znlQ/viewform" target="_blank" rel="noopener noreferrer">Entrar na lista de espera <span aria-hidden="true">↗</span></a>
+      </section>
     </main>
     <footer><span>Com Juliana Faddul e Luiz Fernando Toledo</span><span>Uma proposta para criar, testar e aprender junto.</span></footer>
   </div>
