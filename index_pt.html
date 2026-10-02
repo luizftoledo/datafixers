@@ -180,27 +180,25 @@
   <section class="current-projects-section" id="cursos">
     <div class="container">
       <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Cursos</h2>
-      <div class="dashboards-grid">
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="ia-para-experimentar-junto/poster.jpg" alt="IA para experimentar junto — convite em vídeo" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy" />
-            <h3>IA para experimentar junto <span class="badge-new" aria-label="Novo">NEW</span></h3>
-            <p>Um grupo com Juliana Faddul e Luiz Fernando Toledo para criar projetos com IA, compartilhar ideias e receber feedback. Encontros mensais e quatro horas de conteúdo.</p>
-          </div>
-          <div class="course-actions"><a class="dashboard-btn" href="ia-para-experimentar-junto/">Conheça a proposta</a><a class="dashboard-btn" href="ia-para-experimentar-junto/#lista-de-espera">Lista de espera</a></div>
+      <style>
+        #cursos .course-feature { max-width: 1080px; margin: 0 auto; }
+        #cursos .dfhd { display: block; width: 100%; }
+        #cursos .dfhd canvas { display: block; width: 100%; height: auto; border-radius: 12px; background: #2a1a14; box-shadow: 0 16px 40px rgba(17,17,17,.16); }
+        #cursos .course-feature-text { max-width: 760px; margin: 1.6rem auto 0; text-align: center; }
+        #cursos .course-feature-text h3 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 .4rem; }
+        #cursos .course-feature-text .by { opacity: .8; margin: 0 0 .8rem; }
+        #cursos .course-feature .course-actions { justify-content: center; margin-top: 1.2rem; }
+        @media (max-width: 560px) { #cursos .dfhd canvas { border-radius: 8px; } }
+      </style>
+      <div class="course-feature">
+        <a class="dfhd" href="https://cursos.datafixers.org/ia-criatividade/" role="img" aria-label="Ilustração animada: Luiz e Juliana numa sala de aula apresentando os temas do curso na lousa enquanto os alunos acompanham nos notebooks"><canvas width="800" height="400"></canvas></a>
+        <script src="assets/cursos-header-hd2d.js"></script>
+        <div class="course-feature-text">
+          <h3>Da ideia à reportagem <span class="badge-new">NEW</span></h3>
+          <p class="by">Com Luiz Fernando Toledo e Juliana Faddul</p>
+          <p>Cursos para quem quer encontrar boas pautas, investigar e produzir reportagens relevantes, trabalhando de forma independente ou em redações: pautas e narrativa, investigação e dados, financiamento e carreira, criatividade e IA.</p>
+          <div class="course-actions"><a class="dashboard-btn" href="https://cursos.datafixers.org/ia-criatividade/">Conhecer os cursos</a><a class="dashboard-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSepI2SLGVb9_Jizwzn9kq5rbafKfXpSLDOe7Cu3KGglP6znlQ/viewform" target="_blank" rel="noopener">Entrar na lista de espera</a></div>
         </div>
-        <!-- Curso de LAI -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3>Curso de LAI</h3>
-            <p>Investigue gastos públicos com a Lei de Acesso à Informação.</p>
-          </div>
-          <a class="dashboard-btn"
-            href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/"
-            target="_blank">Acesse o curso</a>
-        </div>
-
       </div>
     </div>
   </section>
