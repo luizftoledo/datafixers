@@ -1,5 +1,10 @@
 {
   "version": 1,
-  "include": ["/jose-maria-carvalho", "/jose-maria-carvalho/*"],
+  "include": [
+    "/jose-maria-carvalho",
+    "/jose-maria-carvalho/*",
+    "/mapa-capitais",
+    "/mapa-capitais/*"
+  ],
   "exclude": []
 }
