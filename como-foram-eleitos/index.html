@@ -367,7 +367,7 @@ function fillSel(id){const sel=$('sel');sel.innerHTML='';D.core.C.filter(c=>c.li
 document.querySelectorAll('.lists button').forEach(b=>b.addEventListener('click',()=>{LIST=b.dataset.l;const first=D.core.C.find(c=>c.lista===LIST&&+c.rank===1);fillSel(first.id);setup(first.id)}));
 $('sel').addEventListener('change',e=>setup(e.target.value));
 (async()=>{try{[D.core,D.malhas,D.mun]=await Promise.all([getJSON('data/core.json'),getJSON('data/malhas.json'),getJSON('data/municipios.json')]);
-  const h=location.hash.slice(1);const start=D.core.C.find(c=>c.id===h)||D.core.C.find(c=>c.id==='est-SP-22011');LIST=start.lista;fillSel(start.id);await setup(start.id);requestAnimationFrame(tick)}
+  const h=location.hash.slice(1);const start=D.core.C.find(c=>c.id===h)||D.core.C.find(c=>c.id==='fed-MG-2222');LIST=start.lista;fillSel(start.id);await setup(start.id);requestAnimationFrame(tick)}
   catch(e){$('ti-h').textContent='Não foi possível carregar os dados.';$('t-title').classList.add('on');$('t-title').style.opacity=1}})();
 </script>
 
