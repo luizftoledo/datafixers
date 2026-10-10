@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Os dez mais votados de 2026 para deputado estadual, deputado federal e senador, contados urna por urna com dados do TSE e do Censo 2022.">
+<meta name="description" content="Os dez eleitos mais votados de 2026 para deputado estadual, deputado federal e senador, contados urna por urna com dados do TSE e do Censo 2022.">
 <meta property="og:title" content="Como foram eleitos · Data Fixers">
 <meta property="og:description" content="Os 30 mais votados de 2026 contados urna por urna: mapa por escola, perfil do eleitor e Censo.">
 <meta property="og:image" content="https://datafixers.org/como-foram-eleitos/cover.jpg">
@@ -124,7 +124,7 @@ th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:
     <a class="back" href="/">← Data Fixers</a>
     <div class="kick" style="margin-top:14px">Eleições 2026 · 1º turno</div>
     <h1>Como foram eleitos</h1>
-    <p class="lede" style="margin-top:8px">Os dez mais votados para deputado estadual, deputado federal e senador, contados urna por urna. Escolha um nome, veja a história em vídeo e depois explore os dados.</p>
+    <p class="lede" style="margin-top:8px">Os dez eleitos mais votados para deputado estadual, deputado federal e senador, contados urna por urna. Escolha um nome, veja a história em vídeo e depois explore os dados.</p>
   </header>
 
   <div class="menu">
@@ -209,6 +209,8 @@ th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:
       <li><b>Biografias.</b> Apuração em reportagens publicadas após a eleição e em perfis oficiais, citados em cada caso.</li>
       <li><b>Fotos.</b> Fotos oficiais de urna divulgadas pelo TSE.</li>
     </ul>
+    <h3>Quem entra na lista</h3>
+    <p>Os dez candidatos mais votados de cada cargo entre os que foram eleitos, segundo o campo de situação do TSE (eleito, eleito por quociente partidário ou eleito por média). Votação alta não garante a vaga: no Senado, Simone Tebet e Marina Silva tiveram mais votos que vários eleitos de outros estados, mas ficaram em 3º e 4º em São Paulo e não foram eleitas. A posição citada em cada perfil (por exemplo, “12ª maior votação do país”) é a do ranking geral de votos, incluindo os não eleitos.</p>
     <h3>Conferência</h3>
     <p>A soma dos votos por seção de cada um dos 30 candidatos foi comparada ao total oficial divulgado pelo TSE; os números coincidem em todos os casos.</p>
     <h3>Cálculos</h3>
@@ -261,7 +263,7 @@ async function setup(id){
   $('m-ph').src=`fotos/${C.id}.jpg`;$('m-ph').alt=C.nome;$('ti-p').src=$('bi-p').src=`fotos/${C.id}.jpg`;$('ti-p').alt=$('bi-p').alt=C.nome;
   $('ti-k').textContent=`${cargo} · ${C.partido}-${C.uf}${age(C)?' · '+age(C)+' anos':''}`;
   $('ti-h').textContent=C.situacao.startsWith('Eleit')?`Como ${C.nome} foi eleit${f?'a':'o'}`:`Os ${fmt.format(C.votos)} votos de ${C.nome}`;
-  $('ti-s').textContent=`${pct(C.pct_validos,2)} dos votos válidos de ${C.uf}. ${+C.rank===1?'A maior votação do país para o cargo.':C.rank+'ª maior votação do país para o cargo.'}`;
+  $('ti-s').textContent=`${pct(C.pct_validos,2)} dos votos válidos de ${C.uf}. ${+C.rank_geral===1?'A maior votação do país para o cargo.':C.rank_geral+'ª maior votação do país para o cargo.'}`;
   const M=D.malhas[C.uf];const svg=$('mp');svg.setAttribute('viewBox',`-10 -10 1020 ${M.h+20}`);svg.innerHTML='';
   const p=document.createElementNS(NS,'path');p.setAttribute('d',ufPath(C.uf));p.setAttribute('fill','#15233a');p.setAttribute('stroke','#2b3d5e');p.setAttribute('stroke-width','0.6');svg.appendChild(p);
   const L=(await loadLoc(C.id)).slice(0,1400);const mx=L.length?L[0][2]:1;const ph=[...L.map(q=>q[3]||0)].sort((a,b)=>a-b)[Math.floor(L.length*.95)]||1;
