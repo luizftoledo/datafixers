@@ -292,5 +292,26 @@
     "platformId": "7605299960917150984",
     "url": "https://www.tiktok.com/@luizftoledo/video/7605299960917150984",
     "portfolioLabel": "Investigação que fiz na BBC Brasil sobre assédio sexual em escolas cívico-militares"
+  },
+  {
+    "id": "youtube:IWf9OBAuDXc",
+    "platform": "youtube",
+    "platformId": "IWf9OBAuDXc",
+    "url": "https://www.youtube.com/watch?v=IWf9OBAuDXc",
+    "portfolioLabel": "Os relatos de quem teve post político bloqueado no Instagram nestas eleições"
+  },
+  {
+    "id": "instagram:Dec5sSRMPOn",
+    "platform": "instagram",
+    "platformId": "Dec5sSRMPOn",
+    "url": "https://www.instagram.com/reel/Dec5sSRMPOn/",
+    "portfolioLabel": "Um levantamento da organização CTRL+Z mapeou mais de mil casos de restrição de conteúdo político nas redes sociais no período eleitoral."
+  },
+  {
+    "id": "tiktok:7696285621953793302",
+    "platform": "tiktok",
+    "platformId": "7696285621953793302",
+    "url": "https://www.tiktok.com/@bbcnewsbrasil/video/7696285621953793302",
+    "portfolioLabel": "Um levantamento da organização CTRL+Z mapeou mais de mil casos de restrição de conteúdo político nas redes sociais no período eleitoral."
   }
 ]
