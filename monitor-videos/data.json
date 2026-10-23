@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T00:31:08.011545+00:00",
+  "generatedAt": "2026-10-23T00:38:38.898500+00:00",
   "snapshots": [
     {
       "videoId": "youtube:QlunKw_CKPY",
@@ -12788,6 +12788,16 @@
       "likes": 982,
       "comments": 17,
       "source": "TikTok public counters"
+    },
+    {
+      "videoId": "instagram:DeO_j7PDdQv",
+      "date": "2026-10-23",
+      "collectedAt": "2026-10-23T00:03:43.547758Z",
+      "title": "Projetos de Eduarda Campopiano reproduzem textos de outras casas legislativas",
+      "views": 12394568,
+      "likes": 692886,
+      "comments": 39302,
+      "source": "Instagram public play count"
     }
   ],
   "comments": [

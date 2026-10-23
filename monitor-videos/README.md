@@ -25,3 +25,5 @@ The history begins with the first collection. A change is the difference between
 ### Catalogue backfill — 23 October 2026
 
 Added 11 BBC Instagram/TikTok videos identified in the credited-publication review. Photo/carousel posts were excluded. The 23 October snapshot reuses public TikTok counters and Instagram `play_count` values collected earlier that day; no additional Actor run was started. Where a newer reading was unavailable, the last snapshot was carried forward with its original `collectedAt` and `carriedForward: true`. The interface labels these readings and excludes them from growth comparisons. A later successful daily collection replaces a carried reading normally.
+
+Correction: the Eduarda Campopiano Reel `DeO_j7PDdQv` was added separately after checking the homepage against the catalogue. Its caption has no reporter credit, so a name-only search missed it. The 23 October collection recorded 12,394,568 public plays. The credited-publication search is not a complete inventory of the reporter’s videos.
