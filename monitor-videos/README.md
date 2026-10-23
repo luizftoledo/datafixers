@@ -21,3 +21,7 @@ Recent top-level YouTube comments are retained as a partial sample. The monitor 
 Set repository secrets `YOUTUBE_API_KEY`, `APIFY_TOKEN`, `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Never put a token in a URL, source file or JSON. The actor runs are restricted to the catalog or a bounded discovery window; usage and remaining credit should be checked in Apify as the catalog grows. Locally, provide keys through environment variables and run `python3 scripts/discover_video_monitor.py` followed by `python3 scripts/update_video_monitor.py`.
 
 The history begins with the first collection. A change is the difference between two snapshots and may be negative after a platform correction. Public comments, author names and comment text in `data.json` are visible to anyone with the URL; the page remains `noindex`.
+
+### Catalogue backfill — 23 October 2026
+
+Added 11 BBC Instagram/TikTok videos identified in the credited-publication review. Photo/carousel posts were excluded. The 23 October snapshot reuses public TikTok counters and Instagram `play_count` values collected earlier that day; no additional Actor run was started. Where a newer reading was unavailable, the last snapshot was carried forward with its original `collectedAt` and `carriedForward: true`. The interface labels these readings and excludes them from growth comparisons. A later successful daily collection replaces a carried reading normally.
