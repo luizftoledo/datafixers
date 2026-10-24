@@ -1,3 +1,4 @@
 .statement .manifesto{font-family:"Source Serif 4",serif;font-size:clamp(2.2rem,5vw,5.2rem);line-height:1.06;margin:0;padding-left:5vw;border-left:10px solid var(--gold)}
+.hero{grid-template-columns:1fr;max-width:1140px}.hero-copy{max-width:940px}
 .awards{padding-top:40px}.award-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.award-row a{min-height:230px;padding:28px;border:1px solid var(--line);background:var(--cream);color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:12px}.award-row span{font-size:.76rem;font-weight:800;color:var(--red)}.award-row strong{font-family:"Source Serif 4",serif;font-size:1.65rem;line-height:1.1}.award-row small{margin-top:auto;color:var(--muted)}
 @media(max-width:850px){.award-row{grid-template-columns:1fr}}
