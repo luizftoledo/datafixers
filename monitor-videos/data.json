@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T13:26:00+00:00",
+  "generatedAt": "2026-10-24T12:40:23+00:00",
   "snapshots": [
     {
       "videoId": "youtube:QlunKw_CKPY",
@@ -12768,9 +12768,607 @@
       "comments": 39341,
       "source": "Instagram public play count",
       "viewsObservedAt": "2026-10-23T13:26:00+00:00"
+    },
+    {
+      "videoId": "youtube:QlunKw_CKPY",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Has an AI grandma impacted Brazil’s election? - Global Eye, BBC World Service",
+      "views": 25332,
+      "likes": 226,
+      "comments": 23,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:SkX6MKU9gAQ",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "A curiosa linha do tempo da evolução da Inteligência Artificial",
+      "views": 847076,
+      "likes": 21436,
+      "comments": 309,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:r5Ihpa2DQIg",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "The fake alcohol killing people in Brazil - What in the World podcast, BBC World Service",
+      "views": 19380,
+      "likes": 461,
+      "comments": 38,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:65AnDszCevA",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Por que cada vez mais analistas falam em 'bolha' da inteligência artificial prestes a estourar",
+      "views": 318229,
+      "likes": 14149,
+      "comments": 476,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:Nl5eRXVkW9Y",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Brasileira conta à BBC como foi aliciada para Epstein em São Paulo",
+      "views": 45081,
+      "likes": 1686,
+      "comments": 46,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M46TWtihWMs",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os deepfakes que tentam te enganar - e gerar dinheiro | Eleições 2026",
+      "views": 199947,
+      "likes": 3692,
+      "comments": 163,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HEwY0WKeKjc",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "ChatGPT: o que você não vê",
+      "views": 664510,
+      "likes": 36422,
+      "comments": 1260,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:RhHz-bizvs0",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Como redes sociais estão influenciando ida de jovens para o tráfico",
+      "views": 59651,
+      "likes": 2956,
+      "comments": 211,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:CzK178HYEB8",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Brasil poderia imitar política de detenção em massade Bukele?",
+      "views": 88723,
+      "likes": 4525,
+      "comments": 997,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:ZPbhHhE22uY",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os médicos falsos feitos por IA que viralizam entre idosos no Brasil",
+      "views": 86158,
+      "likes": 4917,
+      "comments": 402,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:urDaCInPdvY",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Investigations with public records: Presenting Data Fixers at the GIJC",
+      "views": 65,
+      "likes": 0,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rqvT39YIsP0",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Entrevista com Luiz Fernando Toledo, diretor da Abraji e cofundador da Fiquem Sabendo",
+      "views": 1315,
+      "likes": 13,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:dw5q9ZXMaWE",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Data Fixers presentation - #FilLisbon 2022",
+      "views": 116,
+      "likes": 1,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PP8bv7osKMo",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "E Tem Mais: Piratas do ar - 06/07",
+      "views": 778,
+      "likes": 31,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:-hXN1-wq8Kk",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Aula 7 – Como usar ferramentas de IA para apoiar o jornalismo de educação",
+      "views": 715,
+      "likes": 71,
+      "comments": 1,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:4NTyfMsgtY4",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "⚠️🥃 Como funciona a venda de lacres falsos, tampas e garrafas de bebidas alcoólicas no Facebook",
+      "views": 161777,
+      "likes": 9500,
+      "comments": 574,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HNGaWGIAnso",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "⚠️🤖⁠ Como não deixar o ChatGPT atrapalhar seus estudos",
+      "views": 25712,
+      "likes": 2262,
+      "comments": 83,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rTybgh71xFU",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets",
+      "views": 27116,
+      "likes": 1481,
+      "comments": 110,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:3KnxcFxVcF0",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Tarifaço prejudica Estados 'bolsonaristas' 📈",
+      "views": 26371,
+      "likes": 2593,
+      "comments": 216,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PZBbBkKNAxk",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Quem é Dona Maria, a personagem de IA que viraliza falando mal de Lula e do STF",
+      "views": 115890,
+      "likes": 5212,
+      "comments": 853,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:0KVyLHjj1Fs",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Ibama X influenciadora: a briga na Justiça pela guarda da jaguatirica Pituca 🐯⚠️",
+      "views": 199340,
+      "likes": 14829,
+      "comments": 808,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:QcZqdD7_gLA",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Entrevista de emprego feita por IA? 💼📲",
+      "views": 82048,
+      "likes": 5896,
+      "comments": 335,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:gGn1hGMyKt0",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os bilionários que aparecem nos novos arquivos do caso Epstein — e qual era a atuação dele no Brasil",
+      "views": 347534,
+      "likes": 8886,
+      "comments": 478,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M-Z_CBMsC9k",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Dá para identificar texto gerado por inteligência artificial?",
+      "views": 139332,
+      "likes": 8473,
+      "comments": 242,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:EbfqG95jozQ",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Peixe gigante da Amazônia vira bolsa de luxo de $ 8 mil. Quanto ganham os pescadores? 🎣💰",
+      "views": 92172,
+      "likes": 7123,
+      "comments": 485,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:tzmMq7WpeUc",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Demitido do Itaú por produtividade baixa no home office: 'Trabalhei sete dias seguidos' 💻🔍",
+      "views": 463193,
+      "likes": 25482,
+      "comments": 1578,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:IWf9OBAuDXc",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os relatos de quem teve post político bloqueado no Instagram nestas eleições",
+      "views": 99625,
+      "likes": 6427,
+      "comments": 430,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "instagram:DcosT9TE5T3",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "⚠️Atenção: esta reportagem aborda vídeos que sexualizam e romantizam a escravidão, com descrições de violência sexual e física contra pessoa",
+      "views": 333664,
+      "likes": 8325,
+      "comments": 343,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DdSBLKPmshO",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "'Só agora entendi tudo' 🔎",
+      "views": 5261857,
+      "likes": 288452,
+      "comments": 7567,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DVwcNVPAQ0_",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "'Me negociaram para prostituição' 🗣️‼️",
+      "views": 327550,
+      "likes": 7783,
+      "comments": 214,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DVOzOrYjtxj",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"Se eu tivesse desobedecido a minha mãe e ido para Nova York, o que será que teria acontecido comigo?\" ⚠️",
+      "views": 1421110,
+      "likes": 84461,
+      "comments": 1024,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DUi12gSEaFV",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Assédio em escolas cívico-militares no Paraná ⚠️📚",
+      "views": 794249,
+      "likes": 60213,
+      "comments": 3564,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DPfEs-4lTI3",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Entregas \"para todo o Brasil\" e grupos com mais de 10 mil pessoas ⚠️🥃",
+      "views": 252400,
+      "likes": 6734,
+      "comments": 182,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DOgpYz4lKwY",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "'Baixa produtividade no home office, atrelada ao tempo de tela' 💻🔍",
+      "views": 4397042,
+      "likes": 141892,
+      "comments": 4062,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DPKauEVD71z",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "🐯⚠️ Em abril deste ano, o Ibama apreendeu uma jaguatirica no interior do Pará, apelidada de Pituca.",
+      "views": 594962,
+      "likes": 35707,
+      "comments": 1930,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DMq7vPfC4Os",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Você consegue identificar textos feitos por IA? 🤖✍️",
+      "views": 278879,
+      "likes": 10075,
+      "comments": 196,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DJUu11hILPM",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os peixes proibidos no Brasil que 'brilham no escuro' e podem render multas de R$ 100 mil 🐠💡🚫",
+      "views": 165377,
+      "likes": 5399,
+      "comments": 184,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DKuiChEMt8W",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets",
+      "views": 106720,
+      "likes": 2658,
+      "comments": 117,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DNCAw5SIF1J",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Tarifaço prejudica Estados 'bolsonaristas' 📈",
+      "views": 161973,
+      "likes": 7158,
+      "comments": 950,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:Dec5sSRMPOn",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Um levantamento da organização CTRL+Z mapeou mais de mil casos de restrição de conteúdo político nas redes sociais no período eleitoral.",
+      "views": 183235,
+      "likes": 9762,
+      "comments": 1093,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DezwnxsHSx-",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Perfis usam mulheres de IA em campanha por Flávio Bolsonaro e Lula",
+      "views": 1808771,
+      "likes": 40528,
+      "comments": 3701,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DaytgtoiXHm",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os médicos falsos feitos por IA que viralizam entre idosos no Brasil ⚠️🩺",
+      "views": 404911,
+      "likes": 16595,
+      "comments": 447,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DXg--VIDJ89",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"Cadê panela batendo, cadê o grito, cadê a revolta? Ou todo mundo virou planta?\" 📲🇧🇷",
+      "views": 837627,
+      "likes": 22917,
+      "comments": 4338,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DQwxTOgFGZk",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"O avanço da tecnologia não tem mais volta\" ⚠️🤖⁠",
+      "views": 313209,
+      "likes": 10457,
+      "comments": 134,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "instagram:DeO_j7PDdQv",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Qualquer semelhança...🤔🇧🇷🗳️",
+      "views": 12427796,
+      "likes": 695444,
+      "comments": 39410,
+      "source": "Instagram public play count",
+      "viewsObservedAt": "2026-10-24T12:40:23+00:00"
+    },
+    {
+      "videoId": "tiktok:7605725958934465810",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Acompanhe nossa investigação sobre o caso no Brasil. #BBCBrasil",
+      "views": 4814,
+      "likes": 190,
+      "comments": 1,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7611254603199302919",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Nova investigação que fizemos na BBC mostra atuação direta do grupo criminoso de Jeffrey Epstein no Brasil ",
+      "views": 19800,
+      "likes": 3878,
+      "comments": 14,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7611233709517311234",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"Se eu tivesse desobedecido a minha mãe e ido para Nova York, o que será que teria acontecido comigo?\" ⚠️",
+      "views": 322100,
+      "likes": 18900,
+      "comments": 176,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7558381414736006412",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Mostramos na BBC como é o mercado clandestino de garrafas de bebidas alcoólicas.",
+      "views": 667,
+      "likes": 42,
+      "comments": 0,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7662535217814539542",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Os médicos falsos feitos por IA que viralizam entre idosos no Brasil ⚠️🩺",
+      "views": 11400,
+      "likes": 395,
+      "comments": 10,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7696285621953793302",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Um levantamento da organização CTRL+Z mapeou mais de mil casos de restrição de conteúdo político nas redes sociais no período eleitoral.",
+      "views": 6850,
+      "likes": 469,
+      "comments": 21,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7605299960917150984",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Investigação que fiz na BBC Brasil sobre assédio sexual em escolas cívico-militares",
+      "views": 3480,
+      "likes": 169,
+      "comments": 0,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7604907888569584918",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Assédio em escolas cívico-militares no Paraná ⚠️📚",
+      "views": 162800,
+      "likes": 16700,
+      "comments": 587,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7570010931246189846",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"O avanço da tecnologia não tem mais volta\" ⚠️🤖⁠",
+      "views": 21400,
+      "likes": 982,
+      "comments": 17,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7685493833873820950",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "'Só agora entendi tudo' 🔎",
+      "views": 286000,
+      "likes": 17500,
+      "comments": 931,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7632274155617930518",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "\"Cadê panela batendo, cadê o grito, cadê a revolta? Ou todo mundo virou planta?\" 📲🇧🇷 ",
+      "views": 195900,
+      "likes": 9906,
+      "comments": 364,
+      "source": "TikTok public counters"
+    },
+    {
+      "videoId": "tiktok:7699579782111005974",
+      "date": "2026-10-24",
+      "collectedAt": "2026-10-24T12:40:23+00:00",
+      "title": "Perfis usam mulheres de IA em campanha por Flávio Bolsonaro e Lula",
+      "views": 59800,
+      "likes": 991,
+      "comments": 40,
+      "source": "TikTok public counters"
     }
   ],
   "comments": [
+    {
+      "id": "youtube:Ugzecxb-vkOtOfQxHG54AaABAg",
+      "videoId": "youtube:IWf9OBAuDXc",
+      "text": "Esse adv não imagina o quanto vai rolar censura se rachadinha for eleito.",
+      "author": "@mtsbr78",
+      "publishedAt": "2026-10-23T23:20:18Z",
+      "url": "https://www.youtube.com/watch?v=IWf9OBAuDXc&lc=Ugzecxb-vkOtOfQxHG54AaABAg",
+      "firstSeen": "2026-10-24",
+      "baseline": false
+    },
     {
       "id": "youtube:UgwzrGVyMP1N1CxIv194AaABAg",
       "videoId": "youtube:SkX6MKU9gAQ",
