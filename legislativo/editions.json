@@ -1,5 +1,165 @@
 [
   {
+    "edition_date": "2026-10-27",
+    "title": "Três deputados concentram 39% do gasto do PL paulista com divulgação do mandato",
+    "status_label": "Levantamento de dados",
+    "proposal": "CEAP-SP-2026",
+    "subtitle": "Feliciano, Luiz Philippe e José Olimpio somam R$ 540,7 mil; levantamento da base da Câmara considera os meses contábeis de janeiro a setembro de 2026.",
+    "id": "2026-10-27-tres-deputados-concentram-39-do-gasto-do-pl-paulista-com-divulgacao-do-mandato",
+    "topic": "Gastos parlamentares",
+    "kind": "daily",
+    "published_at": "2026-10-27T12:54:28.418292+00:00",
+    "house": "camara",
+    "trigger_date": "2026-10-27",
+    "reading_minutes": 4,
+    "politicians": [
+      {
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
+          }
+        ],
+        "name": "Pr. Marco Feliciano",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "party": "PL",
+        "role": "Parlamentar citado"
+      },
+      {
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
+          }
+        ],
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "party": "PL",
+        "role": "Parlamentar citado"
+      },
+      {
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
+          }
+        ],
+        "name": "Missionário José Olimpio",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "uf": "SP",
+        "party": "PL",
+        "role": "Parlamentar citado"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Três deputados federais do PL por São Paulo concentraram 39% das despesas de divulgação do mandato registradas para a sigla no estado nos meses contábeis de janeiro a setembro de 2026. Pr. Marco Feliciano (PL-SP), Luiz Philippe de Orleans e Bragança (PL-SP) e Missionário José Olimpio (PL-SP) somaram R$ 540,7 mil, de um total de R$ 1,39 milhão identificado na base da Câmara consultada em 27 de outubro.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Feliciano aparece com o maior valor do grupo: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. São despesas classificadas como divulgação da atividade parlamentar, custeadas pela cota destinada ao exercício do mandato.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O levantamento identificou 15 deputados do PL paulista com gastos nessa categoria. Os outros 12, juntos, somam R$ 850.529,04. Assim, os três primeiros respondem por quase quatro de cada dez reais registrados no recorte, enquanto o restante se distribui entre os demais parlamentares com despesa.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite despesas de divulgação da atividade parlamentar, mas proíbe gastos de caráter eleitoral. A existência de uma despesa nessa rubrica, por si só, não demonstra que houve propaganda de campanha ou uso irregular da cota.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que os valores mostram",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A comparação reúne os valores líquidos registrados na base oficial, com partido PL e representação por São Paulo. Não é um ranking de todos os deputados do país, nem uma comparação entre partidos. Os R$ 1,39 milhão se referem apenas à divulgação: não incluem passagens, combustível, aluguel de escritório ou outras categorias de despesa.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Embora o recorte alcance setembro, os lançamentos de divulgação encontrados pertencem aos meses contábeis de janeiro a junho. Não há, nessa seleção, registros de julho a setembro. A contagem é pelo mês contábil informado pela Câmara, e não pela data em que o eleitor viu uma publicação ou um anúncio.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra da Câmara impede o uso da cota para divulgação nos 120 dias anteriores às eleições quando o deputado é candidato. O total apurado não permite, isoladamente, concluir que algum dos três descumpriu essa restrição.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Redes sociais e prestação de contas",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em reportagem da Lupa publicada em 6 de agosto de 2026 sobre gastos nacionais com redes sociais, Guilherme France, advogado e pesquisador na Transparência Internacional, explicou que parte do dinheiro destinado às plataformas pode passar por agências contratadas pelos parlamentares. A observação trata daquele levantamento, e não destes três deputados.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "France também defendeu que as notas fiscais tragam informações sobre quantidade de publicações impulsionadas, período e alcance, para permitir avaliar a economicidade do gasto. O contexto ajuda a distinguir duas perguntas: quanto foi registrado e o que efetivamente foi entregue com aquele dinheiro. A soma das despesas responde à primeira.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Os valores desta reportagem correspondem aos registros disponíveis em 27 de outubro. A Câmara dá até 90 dias para a apresentação dos comprovantes e debita a despesa no mês a que ela se refere. Novos documentos podem, portanto, alterar os totais de meses anteriores.",
+        "source_ids": [
+          "S2"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.agencialupa.org/painel-deputometro/2026/08/06/deputados-gastam-quase-r9-milhoes-da-cota-parlamentar-com-redes-sociais/",
+        "title": "Lupa: divulgação parlamentar e redes sociais",
+        "kind": "press",
+        "published_date": ""
+      },
+      {
+        "id": "S2",
+        "url": "https://www2.camara.leg.br/comunicacao/assessoria-de-imprensa/guia-para-jornalistas/cota-parlamentar",
+        "title": "Câmara: guia da cota parlamentar",
+        "kind": "primary",
+        "published_date": ""
+      },
+      {
+        "id": "S4",
+        "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
+        "title": "Levantamento Datafixers sobre a base de despesas da Câmara, janeiro a setembro de 2026",
+        "kind": "analysis",
+        "published_date": "2026-10-27"
+      }
+    ]
+  },
+  {
     "title": "O que propõe o PL 501/2023 sobre atendimento a menores trans",
     "kind": "context",
     "published_at": "2026-10-27T10:51:07.928447+00:00",
@@ -169,11 +329,11 @@
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
         ],
-        "uf": "ES",
-        "role": "Autor do projeto",
         "name": "Magno Malta",
         "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "party": "PL"
+        "uf": "ES",
+        "party": "PL",
+        "role": "Autor do projeto"
       },
       {
         "sources": [
@@ -186,11 +346,11 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
         ],
-        "uf": "SC",
-        "role": "Relator na CDH",
         "name": "Jorge Seif",
         "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "party": "PL"
+        "uf": "SC",
+        "party": "PL",
+        "role": "Relator na CDH"
       }
     ]
   }
