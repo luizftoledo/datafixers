@@ -1174,3 +1174,5 @@ section .section-title::after {
 #projetos .games-covers .project-cover{min-width:0;object-position:center}
 #projetos .project-category{min-width:0}
 #projetos .project-cover{background:var(--paper-alt)}
+
+#projetos .project-cover{display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px;background:var(--paper-alt)}
