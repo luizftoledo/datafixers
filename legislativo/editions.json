@@ -156,6 +156,42 @@
         "kind": "study",
         "published_date": "2022"
       }
+    ],
+    "politicians": [
+      {
+        "sources": [
+          {
+            "title": "Senado: autoria e tramitação do projeto",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
+          },
+          {
+            "title": "Pronunciamento de Magno Malta, 16/12/2025",
+            "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
+          }
+        ],
+        "uf": "ES",
+        "role": "Autor do projeto",
+        "name": "Magno Malta",
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
+        "party": "PL"
+      },
+      {
+        "sources": [
+          {
+            "title": "Agência Senado: trajetória de Jorge Seif",
+            "url": "https://www12.senado.leg.br/noticias/noticias/materias/2022/10/02/jorge-seif-e-o-novo-senador-por-santa-catarina"
+          },
+          {
+            "title": "Senado: relatoria do PL 501/2023",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
+          }
+        ],
+        "uf": "SC",
+        "role": "Relator na CDH",
+        "name": "Jorge Seif",
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
+        "party": "PL"
+      }
     ]
   }
 ]
