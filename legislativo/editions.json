@@ -1,10 +1,10 @@
 [
   {
-    "title": "Projeto no Senado quer criminalizar tratamento psicológico ligado à transição de gênero de menores",
-    "kind": "daily",
+    "title": "O que propõe o PL 501/2023 sobre atendimento a menores trans",
+    "kind": "context",
     "published_at": "2026-10-27T10:51:07.928447+00:00",
-    "status_label": "Em tramitação",
-    "subtitle": "Texto prevê de 8 a 12 anos de prisão para condutas não cirúrgicas e dobra a pena em escolas. Reunião que analisaria a proposta foi cancelada.",
+    "status_label": "Contexto · projeto apresentado em 2023",
+    "subtitle": "Entenda o texto apresentado em 2023. A reunião prevista para 28 de outubro de 2026 foi cancelada, sem votação do projeto.",
     "house": "senado",
     "topic": "Direitos e educação",
     "proposal": "PL 501/2023",
@@ -13,6 +13,14 @@
     "id": "2026-10-27-projeto-no-senado-quer-criminalizar-tratamento-psicologico-ligado-a-transicao-de-genero-de-menores",
     "trigger_date": "2026-10-26",
     "blocks": [
+      {
+        "type": "correction",
+        "text": "27 de outubro de 2026: este texto foi retirado do destaque diário e reclassificado como contexto. Os dispositivos do projeto já haviam sido noticiados pela Folha em 16 de abril de 2025. A reunião prevista para 28 de outubro foi cancelada e o projeto não foi votado nessa ocasião.",
+        "source_ids": [
+          "S1",
+          "S3"
+        ]
+      },
       {
         "type": "paragraph",
         "text": "Um projeto em tramitação no Senado propõe pena de 8 a 12 anos de prisão e multa para quem submeter crianças ou adolescentes a tratamento psicológico, terapia hormonal ou ensino educacional relativo ao que o texto chama de transexualização. A punição seria dobrada se a conduta ocorresse em uma instituição de ensino. A proposta, portanto, alcança práticas que vão além de cirurgias.",
