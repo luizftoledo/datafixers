@@ -14,6 +14,7 @@
     "reading_minutes": 4,
     "politicians": [
       {
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -21,12 +22,12 @@
           }
         ],
         "name": "Pr. Marco Feliciano",
+        "role": "Parlamentar citado",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "party": "PL",
-        "role": "Parlamentar citado"
+        "party": "PL"
       },
       {
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -34,12 +35,12 @@
           }
         ],
         "name": "Luiz Philippe de Orleans e Bragança",
+        "role": "Parlamentar citado",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "party": "PL",
-        "role": "Parlamentar citado"
+        "party": "PL"
       },
       {
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -47,10 +48,9 @@
           }
         ],
         "name": "Missionário José Olimpio",
+        "role": "Parlamentar citado",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP",
-        "party": "PL",
-        "role": "Parlamentar citado"
+        "party": "PL"
       }
     ],
     "blocks": [
@@ -319,6 +319,7 @@
     ],
     "politicians": [
       {
+        "uf": "ES",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -330,12 +331,12 @@
           }
         ],
         "name": "Magno Malta",
+        "role": "Autor do projeto",
         "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "uf": "ES",
-        "party": "PL",
-        "role": "Autor do projeto"
+        "party": "PL"
       },
       {
+        "uf": "SC",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -347,10 +348,9 @@
           }
         ],
         "name": "Jorge Seif",
+        "role": "Relator na CDH",
         "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "uf": "SC",
-        "party": "PL",
-        "role": "Relator na CDH"
+        "party": "PL"
       }
     ]
   }

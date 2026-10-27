@@ -1,18 +1,17 @@
 [
   {
+    "date": "2026-10-27",
+    "id": "sp-turmas-presenciais-eja",
+    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
+    "house": "cmsp",
+    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
     "sources": [
       {
         "title": "Câmara de SP: decisão da Comissão de Educação, 21/10/2026",
         "url": "https://www.saopaulo.sp.leg.br/blog/educacao-de-jovens-e-adultos-projeto-que-proibe-fechamento-de-turmas-presenciais-da-eja-avanca-na-comissao-de-educacao/"
       }
     ],
-    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
-    "date": "2026-10-27",
     "proposal": "PL 14/2020",
-    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
-    "id": "sp-turmas-presenciais-eja",
-    "status": "Parecer favorável em comissão",
-    "house": "cmsp",
     "paragraphs": [
       "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
       "O PL 14/2020 é de Celso Giannazi (PSOL). A proposta trata de quem volta à escola depois da idade prevista para concluir os estudos. O parecer da comissão é uma etapa da tramitação: não transforma a obrigação proposta em lei.",
@@ -20,8 +19,10 @@
       "A notícia registra a presença de Sonaira Fernandes (PL), Adrilles Jorge (União), George Hato (MDB) e Senival Moura (PT), além do autor. A relação de presentes não informa como cada integrante votou."
     ],
     "next_step": "A proposta ainda depende de deliberação em plenário. A notícia oficial não fixa a data dessa votação.",
+    "status": "Parecer favorável em comissão",
     "politicians": [
       {
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara de SP: perfil de Celso Giannazi",
@@ -33,27 +34,25 @@
           }
         ],
         "name": "Celso Giannazi",
+        "role": "Autor do projeto",
         "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara.",
-        "uf": "SP",
-        "party": "PSOL",
-        "role": "Autor do projeto"
+        "party": "PSOL"
       }
     ]
   },
   {
+    "date": "2026-10-27",
+    "id": "alesp-propaganda-politica-escolas",
+    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
+    "house": "alesp",
+    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
     "sources": [
       {
         "title": "Alesp: ficha e tramitação do PL 889/2026",
         "url": "https://www.al.sp.gov.br/propositura/1100005018"
       }
     ],
-    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "date": "2026-10-27",
     "proposal": "PL 889/2026",
-    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
-    "id": "alesp-propaganda-politica-escolas",
-    "status": "Apresentado; prazo de emendas",
-    "house": "alesp",
     "paragraphs": [
       "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
       "A ementa também prevê mecanismos de apuração e medidas administrativas. A proposta recebeu o registro de “Pauta de 1ª sessão (Emenda)” em sua tramitação. Esse registro corresponde à fase de apresentação de emendas; não comprova votação nem aprovação.",
@@ -61,8 +60,10 @@
       "O cadastro consultado não registra votação em plenário ou comissão, parecer ou transformação em norma. Portanto, o projeto não criou uma nova proibição em vigor."
     ],
     "next_step": "Acompanhar emendas, encaminhamento às comissões e pareceres. Estar na pauta para emendas não significa que haverá votação final nesta semana.",
+    "status": "Apresentado; prazo de emendas",
     "politicians": [
       {
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: cadastro e partido de Carla Morando",
@@ -74,14 +75,18 @@
           }
         ],
         "name": "Carla Morando",
+        "role": "Autora do projeto",
         "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB.",
-        "uf": "SP",
-        "party": "PSD",
-        "role": "Autora do projeto"
+        "party": "PSD"
       }
     ]
   },
   {
+    "date": "2026-10-27",
+    "id": "camara-estacionamento-atendimento-pcd",
+    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
+    "house": "camara",
+    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
     "sources": [
       {
         "title": "Câmara: ficha do PL 5662/2026",
@@ -92,13 +97,7 @@
         "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
       }
     ],
-    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "date": "2026-10-27",
     "proposal": "PL 5662/2026",
-    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
-    "id": "camara-estacionamento-atendimento-pcd",
-    "status": "Apresentado",
-    "house": "camara",
     "paragraphs": [
       "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
       "A proposta alcança estabelecimentos públicos e privados e limita a gratuidade ao período necessário para o atendimento. Não se trata de liberar estacionamento em qualquer local ou para qualquer deslocamento.",
@@ -106,8 +105,10 @@
       "A proposta altera a Lei Brasileira de Inclusão e estabelece entrada em vigor 180 dias depois de eventual publicação oficial. Esse prazo só começaria se o texto fosse aprovado e se tornasse lei; não conta da apresentação do projeto."
     ],
     "next_step": "Acompanhar o despacho e a análise nas comissões. Não há aprovação registrada na ficha consultada.",
+    "status": "Apresentado",
     "politicians": [
       {
+        "uf": "RJ",
         "sources": [
           {
             "title": "SBT News: entrevista com Sóstenes, 08/10/2026",
@@ -119,10 +120,9 @@
           }
         ],
         "name": "Sóstenes Cavalcante",
+        "role": "Autor do projeto",
         "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho.",
-        "uf": "RJ",
-        "party": "PL",
-        "role": "Autor do projeto"
+        "party": "PL"
       }
     ]
   }
