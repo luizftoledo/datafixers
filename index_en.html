@@ -11,7 +11,7 @@
   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-xh6AXFs8FZQqz/SEKI+0i0jpa5IJl0ue1bDkMg7KGUsgxFykWG/FsdLrJhWuZ5o7YkZuT4BwrVaewk5ujhP0UA=="
     referrerpolicy="no-referrer" rel="stylesheet" />
-  <link href="styles.css?v=20260526-sub2" rel="stylesheet" />
+  <link href="styles.css?v=20261027-projects" rel="stylesheet" />
   <script>
     (function () {
       try {
@@ -62,39 +62,7 @@
     </div>
   </nav>
 
-  <!-- Promo popup for "10 dias" game (modal, shows once per browser) -->
-  <div id="gamePopup" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.78); align-items:center; justify-content:center; padding:16px;">
-    <div role="dialog" aria-labelledby="gpTitle" aria-modal="true" style="position:relative; max-width:520px; width:100%; background:linear-gradient(135deg,#2a1f37 0%,#3b2e4f 60%,#6b4f8a 100%); border:3px solid #f6c453; border-radius:12px; padding:20px 22px 24px; color:#f5ecd9; box-shadow:0 20px 60px rgba(0,0,0,0.7); max-height:90vh; overflow-y:auto;">
-      <button id="gpClose" type="button" aria-label="Close" style="position:absolute; top:8px; right:12px; background:transparent; border:0; color:#f5ecd9; font-size:28px; line-height:1; cursor:pointer; padding:4px 8px;">×</button>
-      <img src="campanha_10_dias/assets/cover.png" alt="10 dias — election game" style="width:100%; max-width:420px; display:block; margin:8px auto 14px; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.5);" loading="lazy"/>
-      <span style="display:inline-block; background:#f6c453; color:#2a1f37; font-family:'Press Start 2P',monospace; font-size:10px; padding:5px 9px; border-radius:3px; letter-spacing:1px; margin-bottom:10px;">EXPERIMENTAL GAME</span>
-      <h2 id="gpTitle" style="font-size:1.6rem; margin:0 0 10px; color:#f6c453; line-height:1.2;">10 dias — election game</h2>
-      <p style="font-size:1rem; line-height:1.55; margin:0 0 8px; color:#e9dcc7;">
-        I tried turning a <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer" style="color:#f6c453; text-decoration:underline; font-weight:bold;">news story</a> into a simulation game. You are a mayoral candidate with 10 days to convince voters using digital marketing tools. Not all options are legal. Play now!
-      </p>
-      <p style="font-size:0.85rem; color:#c5b89a; margin:0 0 16px; font-style:italic;">⚠ Game available only in Portuguese.</p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="campanha_10_dias/index.html" style="display:inline-block; background:#f6c453; color:#2a1f37; padding:13px 24px; font-family:'Press Start 2P',monospace; font-size:12px; text-decoration:none; border-radius:4px; box-shadow:0 4px 0 rgba(0,0,0,0.35); letter-spacing:0.5px;">▶ PLAY NOW</a>
-        <button id="gpLater" type="button" style="background:transparent; border:2px solid #c5b89a; color:#c5b89a; padding:11px 18px; font-family:'Press Start 2P',monospace; font-size:11px; border-radius:4px; cursor:pointer;">LATER</button>
-      </div>
-    </div>
-  </div>
-  <script>
-  (function(){
-    var KEY = 'gamePopup10diasDismissed_v2';
-    var pop = document.getElementById('gamePopup');
-    if(!pop) return;
-    if(localStorage.getItem(KEY) === '1') return;
-    setTimeout(function(){ pop.style.display = 'flex'; }, 900);
-    function dismiss(){ pop.style.display = 'none'; try { localStorage.setItem(KEY, '1'); } catch(_e){} }
-    document.getElementById('gpClose').addEventListener('click', dismiss);
-    document.getElementById('gpLater').addEventListener('click', dismiss);
-    pop.addEventListener('click', function(e){ if(e.target === pop) dismiss(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop.style.display !== 'none') dismiss(); });
-  })();
-  </script>
-
-  <!-- Hero / tagline -->
+<!-- Hero / tagline -->
   <header class="hero-section" id="top">
     <div class="container">
       <div class="hero-card">
@@ -120,66 +88,12 @@
 
   <!-- Navigation buttons moved under the hero tagline -->
 
-  <section class="current-projects-section" id="projetos" style="padding: 4.5rem 0; background: var(--bg-alt);">
-    <div class="container">
-      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Projects</h2>
-      <div class="dashboards-grid">
-
-        <!-- Como foram eleitos — 2026-10-09 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="como-foram-eleitos/cover.jpg" alt="How they got elected — Nikolas Ferreira, most-voted federal deputy of 2026" style="display:block;width:100%;height:140px;object-fit:cover;object-position:left center;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>How they got elected <span class="badge-new" aria-label="New">NEW</span></h3>
-            <p>The 30 most-voted winners of Brazil's 2026 election for state deputy, federal deputy and senator, counted ballot box by ballot box: an animated story for each, a polling-place map, voter profiles (TSE) and Census data (IBGE).</p>
-          </div>
-          <a class="dashboard-btn" href="como-foram-eleitos/">See the project</a>
-        </div>
-
-        <!-- 10 Days — 2026-05-23 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="campanha_10_dias/assets/cover.png" alt="10 Days — election game" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>10 Days <span class="badge-new" aria-label="New">NEW</span></h3>
-            <p>Pixel art game inspired by a <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer">BBC story</a>: you are a mayoral candidate, 10 days from the first round of voting. Choose between debate, TV airtime, street campaigning, WhatsApp mass messaging, neurobots, deepfakes — with real risk of being barred by Brazil's Electoral Court.</p>
-          </div>
-          <a class="dashboard-btn" href="campanha_10_dias/index.html">Play</a>
-        </div>
-
-        <!-- Buried Signals -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="assets/sinais_enterrados_cover.png" alt="Buried Signals — investigative journalism game" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>Buried Signals</h3>
-            <p>Investigative journalism game: receive an anonymous tip, dig through public records and publish the story.</p>
-          </div>
-          <a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/" target="_blank">Play</a>
-        </div>
-
-        <!-- A LAI que pegou -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-file-invoice"></i></div>
-            <h3>A LAI que pegou</h3>
-            <p>A collection of journalistic investigations that used Brazil's Access to Information Law.</p>
-          </div>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/a-lai-que-pegou/" target="_blank">Explore the project</a>
-        </div>
-
-        <!-- LAI Course -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3>LAI Course</h3>
-            <p>Investigate public spending with Brazil's Access to Information Law. (Course in Portuguese)</p>
-          </div>
-          <a class="dashboard-btn"
-            href="https://www.udemy.com/course/investigue-gastos-publicos-com-a-lei-de-acesso-a-informacao/"
-            target="_blank">Access the course</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="current-projects-section" data-project-layout="four-categories" id="projetos" style="padding: 4.5rem 0; background: var(--bg-alt);">
+<div class="container">
+<h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Projects</h2>
+<div class="dashboards-grid"><!-- DATAFIXERS LEGISLATIVO START --><article class="dashboard-item project-category" id="datafixers-legislativo-project"><div><img alt="Datafixers robot reading bills among legislators" class="project-cover" loading="lazy" src="legislativo/legislativo-symbol.svg" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>Datafixers Legislativo</h3><p>An experimental news website covering Brazil’s legislatures, with content generated entirely by AI.</p></div><div class="project-links"><a class="dashboard-btn" href="legislativo/">Read the news</a></div></article><!-- DATAFIXERS LEGISLATIVO END --><article class="dashboard-item project-category" id="lai-project"><div><img alt="Illustration of information requests and news reporting" class="project-cover" loading="lazy" src="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif?v=4" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>A LAI que Pegou</h3><p>Reporting and investigations using Brazil’s Access to Information Law.</p></div><div class="project-links"><a class="dashboard-btn" href="https://luizftoledo.github.io/a-lai-que-pegou/">Read the project</a></div></article><article class="dashboard-item project-category" id="journalism-games-project"><div><div class="games-covers"><img alt="10 Days" class="project-cover" loading="lazy" src="campanha_10_dias/assets/cover.png" style="display:block;width:100%;height:160px;object-fit:cover;border-radius:4px;margin-bottom:18px"/><img alt="Buried Signals" class="project-cover" loading="lazy" src="assets/sinais_enterrados_cover.png" style="display:block;width:100%;height:160px;object-fit:cover;border-radius:4px;margin-bottom:18px"/></div><h3>Journalism games</h3><p>Simulations of election campaigning and investigative reporting.</p></div><div class="project-links"><a class="dashboard-btn" href="campanha_10_dias/index.html">10 Days</a><a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/">Buried Signals</a></div></article><article class="dashboard-item project-category" id="elections-project"><div><img alt="Map of election results" class="project-cover" loading="lazy" src="como-foram-eleitos/cover.jpg" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>Elections</h3><p>Results by polling station, voter profiles and election polls.</p></div><div class="project-links"><a class="dashboard-btn" href="como-foram-eleitos/">How they got elected</a><a class="dashboard-btn" href="/onde-votaram/">Your candidate and the presidential vote</a><a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/">Election polls</a></div></article></div>
+</div>
+</section>
 
   <div class="section-separator"></div>
 
@@ -207,14 +121,7 @@
         </div>
 
         <!-- Election Polls -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-vote-yea"></i></div>
-            <h3>Election Polls</h3>
-            <p>Polls registered at Brazil's Electoral Court (TSE) with automatic updates twice a day and Telegram alerts.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/" target="_blank">Open dashboard</a>
-        </div>
+        
 
         <!-- LAI Dashboard -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">

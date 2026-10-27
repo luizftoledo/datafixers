@@ -66,35 +66,7 @@
   </nav>
 
   <!-- Popup promocional do jogo "10 dias" (modal que abre uma vez por sessão) -->
-  <div id="gamePopup" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.78); align-items:center; justify-content:center; padding:16px;">
-    <div role="dialog" aria-labelledby="gpTitle" aria-modal="true" style="position:relative; max-width:520px; width:100%; background:linear-gradient(135deg,#2a1f37 0%,#3b2e4f 60%,#6b4f8a 100%); border:3px solid #f6c453; border-radius:12px; padding:20px 22px 24px; color:#f5ecd9; box-shadow:0 20px 60px rgba(0,0,0,0.7); max-height:90vh; overflow-y:auto;">
-      <button id="gpClose" type="button" aria-label="Fechar" style="position:absolute; top:8px; right:12px; background:transparent; border:0; color:#f5ecd9; font-size:28px; line-height:1; cursor:pointer; padding:4px 8px;">×</button>
-      <img src="campanha_10_dias/assets/cover.png" alt="10 dias — jogo eleitoral" style="width:100%; max-width:420px; display:block; margin:8px auto 14px; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.5);" loading="lazy"/>
-      <span style="display:inline-block; background:#f6c453; color:#2a1f37; font-family:'Press Start 2P',monospace; font-size:10px; padding:5px 9px; border-radius:3px; letter-spacing:1px; margin-bottom:10px;">JOGO EXPERIMENTAL</span>
-      <h2 id="gpTitle" style="font-size:1.6rem; margin:0 0 10px; color:#f6c453; line-height:1.2;">10 dias — jogo eleitoral</h2>
-      <p style="font-size:1rem; line-height:1.55; margin:0 0 18px; color:#e9dcc7;">
-        Testei transformar uma <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer" style="color:#f6c453; text-decoration:underline; font-weight:bold;">reportagem</a> em jogo de simulação. Nele, você é um candidato a prefeito e tem 10 dias pra convencer o eleitor com ferramentas de marketing digital. Nem todas as opções possuem autorização legal. Jogue agora!
-      </p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="campanha_10_dias/index.html" style="display:inline-block; background:#f6c453; color:#2a1f37; padding:13px 24px; font-family:'Press Start 2P',monospace; font-size:12px; text-decoration:none; border-radius:4px; box-shadow:0 4px 0 rgba(0,0,0,0.35); letter-spacing:0.5px;">▶ JOGAR AGORA</a>
-        <button id="gpLater" type="button" style="background:transparent; border:2px solid #c5b89a; color:#c5b89a; padding:11px 18px; font-family:'Press Start 2P',monospace; font-size:11px; border-radius:4px; cursor:pointer;">DEPOIS</button>
-      </div>
-    </div>
-  </div>
-  <script>
-  (function(){
-    var KEY = 'gamePopup10diasDismissed_v2';
-    var pop = document.getElementById('gamePopup');
-    if(!pop) return;
-    if(localStorage.getItem(KEY) === '1') return;
-    setTimeout(function(){ pop.style.display = 'flex'; }, 900);
-    function dismiss(){ pop.style.display = 'none'; try { localStorage.setItem(KEY, '1'); } catch(_e){} }
-    document.getElementById('gpClose').addEventListener('click', dismiss);
-    document.getElementById('gpLater').addEventListener('click', dismiss);
-    pop.addEventListener('click', function(e){ if(e.target === pop) dismiss(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop.style.display !== 'none') dismiss(); });
-  })();
-  </script>
+  
 
   <!-- Hero / tagline -->
   <header class="hero-section" id="top">
@@ -122,66 +94,12 @@
 
   <!-- Navigation buttons moved under the hero tagline -->
 
-  <section class="current-projects-section" id="projetos">
-    <div class="container">
-      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Projetos</h2>
-      <div class="dashboards-grid">
-
-        <!-- DATAFIXERS LEGISLATIVO START -->
-        <div class="dashboard-item" id="datafixers-legislativo-project" lang="en" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="legislativo/legislativo-symbol.svg" alt="Datafixers robot reading bills among legislators" style="display:block;width:100%;height:140px;object-fit:contain;margin-bottom:12px" loading="lazy"/>
-            <h3>Datafixers Legislativo</h3>
-            <p>An experimental news website covering Brazil’s legislatures, with content generated entirely by AI.</p>
-          </div>
-          <a class="dashboard-btn" href="legislativo/">Open website</a>
-        </div>
-        <!-- DATAFIXERS LEGISLATIVO END -->
-
-
-        <!-- Como foram eleitos — 2026-10-09 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="como-foram-eleitos/cover.jpg" alt="Como foram eleitos — Nikolas Ferreira, o deputado federal mais votado de 2026" style="display:block;width:100%;height:140px;object-fit:cover;object-position:left center;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>Como foram eleitos <span class="badge-new" aria-label="Novo">NEW</span></h3>
-            <p>Os 30 eleitos mais votados de 2026 para deputado estadual, deputado federal e senador, contados urna por urna: animação de cada um, mapa por escola, perfil do eleitor (TSE) e retrato do Censo (IBGE).</p>
-          </div>
-          <a class="dashboard-btn" href="como-foram-eleitos/">Ver o projeto</a>
-        </div>
-
-        <!-- 10 dias — 2026-05-23 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="campanha_10_dias/assets/cover.png" alt="10 dias — jogo eleitoral" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>10 dias <span class="badge-new" aria-label="Novo">NEW</span></h3>
-            <p>Jogo pixel art inspirado em <a href="https://www.bbc.com/portuguese/articles/c1k2zj3gdg7o" target="_blank" rel="noopener noreferrer">reportagem da BBC</a>: você é candidato a prefeito, faltam 10 dias pro 1º turno. Decide entre debate, programa de TV, caminhada, disparo no WhatsApp, neurobots, deepfakes — com risco real de cassação pelo TSE.</p>
-          </div>
-          <a class="dashboard-btn" href="campanha_10_dias/index.html">Jogar</a>
-        </div>
-
-        <!-- Sinais Enterrados — 2026-05-22 -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <img src="assets/sinais_enterrados_cover.png" alt="Sinais Enterrados — jogo de jornalismo investigativo" style="display:block;width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.08)" loading="lazy"/>
-            <h3>Sinais Enterrados</h3>
-            <p>Jogo de jornalismo investigativo: receba uma dica anônima, investigue documentos públicos e publique a matéria.</p>
-          </div>
-          <a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/" target="_blank">Jogar</a>
-        </div>
-
-        <!-- A LAI que pegou -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-file-invoice"></i></div>
-            <h3>A LAI que pegou</h3>
-            <p>Coletânea de investigações jornalísticas que usaram a Lei de Acesso à Informação.</p>
-          </div>
-          <a class="dashboard-btn" href="https://luizftoledo.github.io/a-lai-que-pegou/" target="_blank">Veja o projeto</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="current-projects-section" data-project-layout="four-categories" id="projetos">
+<div class="container">
+<h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Projetos</h2>
+<div class="dashboards-grid"><!-- DATAFIXERS LEGISLATIVO START --><article class="dashboard-item project-category" id="datafixers-legislativo-project"><div><img alt="Robô Datafixers lendo projetos entre parlamentares" class="project-cover" loading="lazy" src="legislativo/legislativo-symbol.svg" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>Datafixers Legislativo</h3><p>An experimental news website covering Brazil’s legislatures, with content generated entirely by AI.</p></div><div class="project-links"><a class="dashboard-btn" href="legislativo/">Ler reportagens</a></div></article><!-- DATAFIXERS LEGISLATIVO END --><article class="dashboard-item project-category" id="lai-project"><div><img alt="Ilustração de pedidos de acesso à informação e reportagens" class="project-cover" loading="lazy" src="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif?v=4" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>A LAI que Pegou</h3><p>Reportagens e investigações feitas com a Lei de Acesso à Informação.</p></div><div class="project-links"><a class="dashboard-btn" href="https://luizftoledo.github.io/a-lai-que-pegou/">Ler o projeto</a></div></article><article class="dashboard-item project-category" id="journalism-games-project"><div><div class="games-covers"><img alt="10 Days" class="project-cover" loading="lazy" src="campanha_10_dias/assets/cover.png" style="display:block;width:100%;height:160px;object-fit:cover;border-radius:4px;margin-bottom:18px"/><img alt="Buried Signals" class="project-cover" loading="lazy" src="assets/sinais_enterrados_cover.png" style="display:block;width:100%;height:160px;object-fit:cover;border-radius:4px;margin-bottom:18px"/></div><h3>Jogos de jornalismo</h3><p>Simulações sobre campanhas eleitorais e apuração jornalística.</p></div><div class="project-links"><a class="dashboard-btn" href="campanha_10_dias/index.html">10 Dias</a><a class="dashboard-btn" href="https://jogos.datafixers.org/sinais-enterrados/">Sinais Enterrados · Buried Signals</a></div></article><article class="dashboard-item project-category" id="elections-project"><div><img alt="Mapa de resultados eleitorais" class="project-cover" loading="lazy" src="como-foram-eleitos/cover.jpg" style="display:block;width:100%;height:160px;object-fit:contain;border-radius:4px;margin-bottom:18px"/><h3>Eleições</h3><p>Resultados por urna e local de votação, perfil do eleitorado e pesquisas eleitorais.</p></div><div class="project-links"><a class="dashboard-btn" href="como-foram-eleitos/">Como foram eleitos</a><a class="dashboard-btn" href="/onde-votaram/">Seu candidato e o voto para presidente</a><a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/">Pesquisas eleitorais</a></div></article></div>
+</div>
+</section>
 
   <div class="section-separator"></div>
 
@@ -235,14 +153,7 @@
         </div>
 
         <!-- Pesquisas Eleitorais -->
-        <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
-          <div>
-            <div class="dash-icon"><i class="fas fa-vote-yea"></i></div>
-            <h3>Pesquisas Eleitorais</h3>
-            <p>Pesquisas registradas no TSE com atualização automática 2x ao dia e alertas por Telegram.</p>
-          </div>
-          <a class="dashboard-btn" href="https://dashboards.datafixers.org/pesquisas/" target="_blank">Abrir dashboard</a>
-        </div>
+        
 
         <!-- LAI Dashboard -->
         <div class="dashboard-item" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">

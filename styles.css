@@ -1166,3 +1166,11 @@ section .section-title::after {
   .top-nav, .back-to-top, .toggle-stories-btn, .nav-lang-btn { display: none !important; }
   body { background: white; color: black; }
 }
+
+/* Project categories: four blocks, with individual links inside each. */
+#projetos .project-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:auto}
+#projetos .project-links .dashboard-btn{font-size:.86rem;line-height:1.5;margin-top:0;white-space:normal}
+#projetos .games-covers{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#projetos .games-covers .project-cover{min-width:0;object-position:center}
+#projetos .project-category{min-width:0}
+#projetos .project-cover{background:var(--paper-alt)}
