@@ -3,9 +3,15 @@
 const $=s=>document.querySelector(s), names={camara:'Câmara dos Deputados',senado:'Senado',alesp:'Alesp',cmsp:'Câmara de SP',congresso:'Congresso'};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const date=s=>new Date(s.slice(0,10)+'T12:00:00').toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric'});
+const initialHouse=new URLSearchParams(location.search).get('casa');
+function applyHouseFilter(value){document.querySelectorAll('[data-house]').forEach(el=>{el.hidden=!!value&&value!=='all'&&el.dataset.house!==value;});document.querySelectorAll('[data-filter]').forEach(el=>el.classList.toggle('selected',el.dataset.filter===(value||'all')));}
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>applyHouseFilter(b.dataset.filter)));
+if(initialHouse)applyHouseFilter(initialHouse);
+document.querySelectorAll('.subnavigation a').forEach(a=>a.classList.toggle('selected',new URL(a.href).pathname===location.pathname));
 $('#share')?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);$('#share').textContent='Link copiado ✓';}}catch{}});
-if(!$('#stories')){$('#search-toggle')?.addEventListener('click',()=>location.href='../?busca=1');return;}
+if(!$('#stories')){$('#search-toggle')?.addEventListener('click',()=>location.href=document.querySelector('.navhome').href+'?busca=1');return;}
 let all=[],limit=12;const params=new URLSearchParams(location.search),house=params.get('casa'),kind=params.get('tipo');
+if(kind==='weekly'){location.replace('semana/');return;}
 const showSearch=()=>{$('#search-panel').hidden=!$('#search-panel').hidden;if(!$('#search-panel').hidden)$('#search').focus();};
 $('#search-toggle').addEventListener('click',showSearch);if(params.has('busca'))showSearch();
 function render(){let q=$('#search').value.trim().toLocaleLowerCase('pt-BR');let filtered=all.filter(a=>(!house||a.house===house)&&(!kind||a.kind===kind)&&(!q||[a.title,a.subtitle,a.proposal,a.topic].join(' ').toLocaleLowerCase('pt-BR').includes(q)));
@@ -13,6 +19,7 @@ if(house||kind){$('#active-filter').hidden=false;$('#active-filter').innerHTML='
 $('#edition-date').textContent=all.length?'EDIÇÃO DE '+date(all[0].edition_date).toLocaleUpperCase('pt-BR'):'';
 document.querySelectorAll('.navigation a').forEach(a=>{let p=new URL(a.href).searchParams;a.classList.toggle('selected',house?p.get('casa')===house:kind?p.get('tipo')===kind:!p.size);});
 let lead=filtered[0];$('#stories').innerHTML=lead?'<article class="lead"><a class="lead-link" href="'+encodeURIComponent(lead.id)+'/"><div class="lead-meta"><span class="eyebrow">'+esc(names[lead.house])+'</span><span>'+esc(lead.status_label)+'</span></div><h2>'+esc(lead.title)+'</h2><p>'+esc(lead.subtitle)+'</p><div class="lead-bottom"><span>'+esc(lead.topic)+' · '+esc(lead.reading_minutes)+' min</span><span class="read">Ler reportagem <i>↗</i></span></div></a></article>':'<section class="empty"><span class="eyebrow">ARQUIVO</span><h2>'+(q?'Nenhum resultado para esta busca.':'Ainda não há edição publicada nesta seção.')+'</h2><p>'+(q?'Tente outra palavra ou limpe os filtros.':'As próximas edições aparecerão aqui.')+'</p></section>';
+if(!lead&&house&&!q&&document.querySelector('.news-card[data-house="'+CSS.escape(house)+'"]'))$('#stories').innerHTML='';
 $('#result-count').textContent=filtered.length+' '+(filtered.length===1?'reportagem':'reportagens');
 $('#archive-list').innerHTML=filtered.slice(0,limit).map((a,i)=>'<a class="archive-row" href="'+encodeURIComponent(a.id)+'/"><span class="row-number">'+String(i+1).padStart(2,'0')+'</span><div><span class="eyebrow">'+esc(names[a.house])+' · '+esc(a.topic)+'</span><h3>'+esc(a.title)+'</h3><p>'+esc(a.subtitle)+'</p></div><time>'+esc(date(a.edition_date))+'</time><span class="row-arrow">↗</span></a>').join('');$('#more').hidden=filtered.length<=limit;}
 $('#search').addEventListener('input',()=>{limit=12;render();});$('#clear').addEventListener('click',()=>{$('#search').value='';render();});$('#more').addEventListener('click',()=>{limit+=12;render();});
