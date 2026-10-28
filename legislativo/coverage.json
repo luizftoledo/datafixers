@@ -1,11 +1,11 @@
 {
-  "week_start": "2026-10-26",
-  "previous_start": "2026-10-19",
-  "results_end": "2026-10-28",
-  "updated_at": "2026-10-28T07:34:31.761406+00:00",
-  "week_end": "2026-11-01",
   "previous_end": "2026-10-25",
   "results_start": "2026-10-01",
+  "results_end": "2026-10-28",
+  "week_end": "2026-11-01",
+  "updated_at": "2026-10-28T07:34:31.761406+00:00",
+  "previous_start": "2026-10-19",
+  "week_start": "2026-10-26",
   "agenda": [
     {
       "id": "senado-14988",
