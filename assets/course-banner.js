@@ -31,8 +31,9 @@
   }
   function mount() {
     if (dismissed() || document.querySelector('[data-df-course-banner]')) return;
-    const host = document.createElement('aside');
+    const host = document.createElement('df-course-banner');
     host.dataset.dfCourseBanner = 'v1';
+    host.setAttribute('role', 'complementary');
     host.setAttribute('aria-label', copy.region);
     const root = host.attachShadow({ mode: 'open' });
     const style = document.createElement('style');
