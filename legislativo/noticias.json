@@ -1,27 +1,78 @@
 [
   {
+    "id": "sp-agenda-clima-orcamento-28out",
+    "house": "cmsp",
+    "proposal": "PL 752/2026",
+    "date": "2026-10-28",
+    "sources": [
+      {
+        "title": "Agenda oficial de28/10",
+        "url": "https://www.saopaulo.sp.leg.br/agenda_cerimonial/2026-10-28/"
+      },
+      {
+        "title": "Câmara de SP: prazo e escopo do Plenário Virtual",
+        "url": "https://www.saopaulo.sp.leg.br/blog/sistema-do-plenario-virtual-abre-votacao-de-56-projetos-de-vereadores/"
+      }
+    ],
+    "paragraphs": [
+      "A agenda da Câmara Municipal prevê, para 28 de outubro, audiência de Finanças e Orçamento sobre mudanças climáticas na proposta orçamentária de 2027, das 10 h às 12 h, no Auditório Prestes Maia.",
+      "O calendário também prevê sessão ordinária às 15 h, seguida de sessões extraordinárias. Em outra atividade, o prazo da 14ª Sessão Extraordinária Virtual termina às 19 h, para 56 propostas sobre denominações, datas comemorativas e honrarias. A inclusão em pauta e o encerramento do prazo não comprovam aprovação."
+    ],
+    "status": "Agenda prevista",
+    "next_step": "Conferir alterações de agenda e os resultados das sessões e da votação virtual após seus horários de realização.",
+    "title": "Câmara de SP prevê debate sobre clima no orçamento e sessões nesta quarta",
+    "practical": "A audiência discute a proposta de orçamento. As sessões e a votação virtual têm procedimentos distintos; seus resultados precisam ser conferidos depois das deliberações.",
+    "politicians": []
+  },
+  {
+    "id": "alesp-adesao-transparencia-fiscal",
+    "house": "alesp",
+    "proposal": "PL 869/2026",
+    "date": "2026-10-28",
+    "sources": [
+      {
+        "title": "Alesp: notícia da aprovação do PL869/2026 em27/10",
+        "url": "https://www.al.sp.gov.br/noticia/?id=515109"
+      }
+    ],
+    "paragraphs": [
+      "A Assembleia Legislativa de São Paulo informou que aprovou, em sessão extraordinária de 27 de outubro, o PL869/2026, encaminhado pelo Executivo estadual. O projeto autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal 178/2021.",
+      "A notícia oficial informa a aprovação do texto, mas não traz um placar individualizado. Não foram atribuídos votos a deputados com base em presença ou filiação partidária."
+    ],
+    "status": "Aprovado em plenário",
+    "next_step": "Conferir o encaminhamento do texto e eventual publicação de norma; acompanhar a documentação das obrigações assumidas.",
+    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
+    "practical": "O ato aprovado é uma autorização de adesão a um programa fiscal. A aprovação na Alesp não equivale, por si, à publicação de uma nova lei em vigor.",
+    "politicians": []
+  },
+  {
+    "id": "sp-turmas-presenciais-eja",
+    "house": "cmsp",
+    "proposal": "PL 14/2020",
+    "date": "2026-10-27",
     "sources": [
       {
         "title": "Câmara de SP: decisão da Comissão de Educação, 21/10/2026",
         "url": "https://www.saopaulo.sp.leg.br/blog/educacao-de-jovens-e-adultos-projeto-que-proibe-fechamento-de-turmas-presenciais-da-eja-avanca-na-comissao-de-educacao/"
       }
     ],
-    "id": "sp-turmas-presenciais-eja",
-    "date": "2026-10-27",
-    "house": "cmsp",
     "paragraphs": [
       "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
       "O PL 14/2020 é de Celso Giannazi (PSOL). A proposta trata de quem volta à escola depois da idade prevista para concluir os estudos. O parecer da comissão é uma etapa da tramitação: não transforma a obrigação proposta em lei.",
       "Em declaração à Rede Câmara SP reproduzida na notícia oficial, Giannazi criticou o fechamento de turmas pela Prefeitura. A afirmação sobre fechamentos é do vereador. O texto consultado não traz uma resposta da Secretaria nem um levantamento das turmas atingidas.",
       "A notícia registra a presença de Sonaira Fernandes (PL), Adrilles Jorge (União), George Hato (MDB) e Senival Moura (PT), além do autor. A relação de presentes não informa como cada integrante votou."
     ],
-    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
-    "proposal": "PL 14/2020",
+    "status": "Parecer favorável em comissão",
     "next_step": "A proposta ainda depende de deliberação em plenário. A notícia oficial não fixa a data dessa votação.",
     "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
-    "status": "Parecer favorável em comissão",
+    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
     "politicians": [
       {
+        "role": "Autor do projeto",
+        "party": "PSOL",
+        "uf": "SP",
+        "name": "Celso Giannazi",
+        "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara.",
         "sources": [
           {
             "title": "Câmara de SP: perfil de Celso Giannazi",
@@ -31,38 +82,38 @@
             "title": "Registro parlamentar: debate de 09/04/2025",
             "url": "https://app-spregistroconsulta-prd.azurewebsites.net/Home/Html/a915a1a8-e996-44e6-8378-adc44dca8d1b"
           }
-        ],
-        "party": "PSOL",
-        "name": "Celso Giannazi",
-        "uf": "SP",
-        "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara.",
-        "role": "Autor do projeto"
+        ]
       }
     ]
   },
   {
+    "id": "alesp-propaganda-politica-escolas",
+    "house": "alesp",
+    "proposal": "PL 889/2026",
+    "date": "2026-10-27",
     "sources": [
       {
         "title": "Alesp: ficha e tramitação do PL 889/2026",
         "url": "https://www.al.sp.gov.br/propositura/1100005018"
       }
     ],
-    "id": "alesp-propaganda-politica-escolas",
-    "date": "2026-10-27",
-    "house": "alesp",
     "paragraphs": [
       "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
       "A ementa também prevê mecanismos de apuração e medidas administrativas. A proposta recebeu o registro de “Pauta de 1ª sessão (Emenda)” em sua tramitação. Esse registro corresponde à fase de apresentação de emendas; não comprova votação nem aprovação.",
       "No resumo explicativo da ficha oficial, a Alesp informa que a proposta prevê apuração com garantia de defesa e proteção de crianças e adolescentes. Segundo esse resumo, o afastamento preventivo dependeria de risco concreto, e seriam vedadas sanções automáticas ou penalidades não previstas em lei.",
       "O cadastro consultado não registra votação em plenário ou comissão, parecer ou transformação em norma. Portanto, o projeto não criou uma nova proibição em vigor."
     ],
-    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
-    "proposal": "PL 889/2026",
+    "status": "Apresentado; prazo de emendas",
     "next_step": "Acompanhar emendas, encaminhamento às comissões e pareceres. Estar na pauta para emendas não significa que haverá votação final nesta semana.",
     "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "status": "Apresentado; prazo de emendas",
+    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
     "politicians": [
       {
+        "role": "Autora do projeto",
+        "party": "PSD",
+        "uf": "SP",
+        "name": "Carla Morando",
+        "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB.",
         "sources": [
           {
             "title": "Alesp: cadastro e partido de Carla Morando",
@@ -72,16 +123,15 @@
             "title": "ABCdoABC: filiação ao PSD, 01/04/2026",
             "url": "https://www.abcdoabc.com.br/carla-morando-se-filia-ao-psd-projeta-votos/"
           }
-        ],
-        "party": "PSD",
-        "name": "Carla Morando",
-        "uf": "SP",
-        "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB.",
-        "role": "Autora do projeto"
+        ]
       }
     ]
   },
   {
+    "id": "camara-estacionamento-atendimento-pcd",
+    "house": "camara",
+    "proposal": "PL 5662/2026",
+    "date": "2026-10-27",
     "sources": [
       {
         "title": "Câmara: ficha do PL 5662/2026",
@@ -92,22 +142,23 @@
         "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
       }
     ],
-    "id": "camara-estacionamento-atendimento-pcd",
-    "date": "2026-10-27",
-    "house": "camara",
     "paragraphs": [
       "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
       "A proposta alcança estabelecimentos públicos e privados e limita a gratuidade ao período necessário para o atendimento. Não se trata de liberar estacionamento em qualquer local ou para qualquer deslocamento.",
       "O texto prevê que o benefício independeria de o veículo ocupar uma vaga reservada. A condição da pessoa atendida poderia ser comprovada pela credencial prevista na Lei Brasileira de Inclusão ou por outro documento oficial que ateste a deficiência com comprometimento de mobilidade, conforme regulamentação.",
       "A proposta altera a Lei Brasileira de Inclusão e estabelece entrada em vigor 180 dias depois de eventual publicação oficial. Esse prazo só começaria se o texto fosse aprovado e se tornasse lei; não conta da apresentação do projeto."
     ],
-    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
-    "proposal": "PL 5662/2026",
+    "status": "Apresentado",
     "next_step": "Acompanhar o despacho e a análise nas comissões. Não há aprovação registrada na ficha consultada.",
     "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "status": "Apresentado",
+    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
     "politicians": [
       {
+        "role": "Autor do projeto",
+        "party": "PL",
+        "uf": "RJ",
+        "name": "Sóstenes Cavalcante",
+        "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho.",
         "sources": [
           {
             "title": "SBT News: entrevista com Sóstenes, 08/10/2026",
@@ -117,12 +168,7 @@
             "title": "Câmara: íntegra do PL 5662/2026, de Sóstenes Cavalcante",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
           }
-        ],
-        "party": "PL",
-        "name": "Sóstenes Cavalcante",
-        "uf": "RJ",
-        "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho.",
-        "role": "Autor do projeto"
+        ]
       }
     ]
   }
