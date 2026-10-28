@@ -3,9 +3,7 @@
   'use strict';
   if (window.top !== window.self || window.__dfCourseBannerLoaded) return;
   window.__dfCourseBannerLoaded = true;
-  const key = 'df_course_waitlist_v1';
-  const days = 7;
-  const ttl = days * 24 * 60 * 60 * 1000;
+  const key = 'df_course_waitlist_page_v2:' + location.pathname.replace(/\/index\.html$/, '/');
   const form = 'https://docs.google.com/forms/d/e/1FAIpQLSepI2SLGVb9_Jizwzn9kq5rbafKfXpSLDOe7Cu3KGglP6znlQ/viewform';
   const english = /^en(?:-|$)/i.test(document.documentElement.lang);
   const copy = english ? {
@@ -20,14 +18,10 @@
     join: 'Entrar na lista de espera', close: 'Fechar', skip: 'Agora não', region: 'Curso com Luiz Fernando Toledo e Juliana Faddul'
   };
   function dismissed() {
-    if (document.cookie.split(';').some(part => part.trim() === key + '=1')) return true;
-    try { return Number(localStorage.getItem(key)) > Date.now(); } catch { return false; }
+    try { return sessionStorage.getItem(key) === '1'; } catch { return false; }
   }
   function remember() {
-    const shared = /(^|\.)datafixers\.org$/i.test(location.hostname);
-    const secure = location.protocol === 'https:' ? '; Secure' : '';
-    document.cookie = key + '=1; Max-Age=' + ttl / 1000 + '; Path=/; SameSite=Lax' + (shared ? '; Domain=datafixers.org' : '') + secure;
-    try { localStorage.setItem(key, String(Date.now() + ttl)); } catch { /* O botão continua funcionando sem armazenamento. */ }
+    try { sessionStorage.setItem(key, '1'); } catch { /* O botão funciona sem armazenamento. */ }
   }
   function mount() {
     if (dismissed() || document.querySelector('[data-df-course-banner]')) return;

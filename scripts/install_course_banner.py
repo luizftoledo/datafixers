@@ -3,7 +3,7 @@
 import argparse,json,re
 from pathlib import Path
 parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,default=Path('.'));args=parser.parse_args();root=args.root.resolve()
-tag='<script defer src="/assets/course-banner.js?v=20261028-course2" data-df-course-loader></script>'
+tag='<script defer src="/assets/course-banner.js?v=20261028-course3" data-df-course-loader></script>'
 excluded={'.git','node_modules','.wrangler','.venv','venv','_worker','output','test-results','playwright-report'}
 changed=[];total=0
 for p in root.rglob('*.html'):
