@@ -40,6 +40,8 @@ jobs:
             git commit -m 'Atualiza métricas diárias dos vídeos'
             git push
           fi
+      - name: Incluir aviso de curso nas páginas públicas
+        run: python3 scripts/install_course_banner.py --root .
       - name: Publicar painel no Datafixers
         uses: cloudflare/wrangler-action@v3
         with:

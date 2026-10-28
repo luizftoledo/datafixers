@@ -12,6 +12,9 @@ jobs:
       deployments: write
     steps:
       - uses: actions/checkout@v4
+      - name: Incluir aviso de curso nas páginas públicas
+        run: python3 scripts/install_course_banner.py --root .
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
