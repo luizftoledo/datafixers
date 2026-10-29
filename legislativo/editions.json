@@ -14,11 +14,10 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "name": "Ricardo Nunes",
-        "role": "Autor da proposta — Executivo municipal",
-        "party": "MDB",
         "uf": "SP",
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "party": "MDB",
+        "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -28,7 +27,8 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ]
+        ],
+        "name": "Ricardo Nunes"
       }
     ],
     "blocks": [
@@ -159,11 +159,10 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "name": "Dorinaldo Malafaia",
-        "role": "Autor do projeto",
-        "party": "PDT",
         "uf": "AP",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "party": "PDT",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -173,7 +172,8 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "name": "Dorinaldo Malafaia"
       }
     ],
     "blocks": [
@@ -326,17 +326,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "name": "Damares Alves",
-        "role": "Presidente da subcomissão na audiência",
-        "party": "Republicanos",
         "uf": "DF",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "party": "Republicanos",
+        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ]
+        ],
+        "name": "Damares Alves"
       }
     ],
     "blocks": [
@@ -451,43 +451,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "name": "Pr. Marco Feliciano",
-        "role": "Parlamentar citado",
-        "party": "PL",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "name": "Pr. Marco Feliciano"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "role": "Parlamentar citado",
-        "party": "PL",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "name": "Luiz Philippe de Orleans e Bragança"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "name": "Missionário José Olimpio",
-        "role": "Parlamentar citado",
-        "party": "PL",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "party": "PL",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "name": "Missionário José Olimpio"
       }
     ],
     "blocks": [
@@ -756,11 +756,10 @@
     ],
     "politicians": [
       {
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "name": "Magno Malta",
-        "role": "Autor do projeto",
-        "party": "PL",
         "uf": "ES",
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
+        "party": "PL",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -770,14 +769,14 @@
             "title": "Pronunciamento de Magno Malta, 16/12/2025",
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
-        ]
+        ],
+        "name": "Magno Malta"
       },
       {
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "name": "Jorge Seif",
-        "role": "Relator na CDH",
-        "party": "PL",
         "uf": "SC",
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
+        "party": "PL",
+        "role": "Relator na CDH",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -787,7 +786,8 @@
             "title": "Senado: relatoria do PL 501/2023",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
-        ]
+        ],
+        "name": "Jorge Seif"
       }
     ]
   }

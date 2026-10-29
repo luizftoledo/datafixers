@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datafixers.org/legislativo/sitemap.xml
+Sitemap: https://datafixers.org/legislativo/news-sitemap.xml
