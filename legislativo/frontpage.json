@@ -14,10 +14,6 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "uf": "AP",
-        "name": "Dorinaldo Malafaia",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -28,7 +24,11 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "party": "PDT"
+        "name": "Dorinaldo Malafaia",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "party": "PDT",
+        "uf": "AP",
+        "role": "Autor do projeto"
       }
     ],
     "blocks": [
@@ -181,17 +181,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "uf": "DF",
-        "name": "Damares Alves",
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "party": "Republicanos"
+        "name": "Damares Alves",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "party": "Republicanos",
+        "uf": "DF",
+        "role": "Presidente da subcomissão na audiência"
       }
     ],
     "blocks": [
@@ -306,43 +306,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "uf": "SP",
-        "name": "Pr. Marco Feliciano",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "party": "PL"
+        "name": "Pr. Marco Feliciano",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
+        "uf": "SP",
+        "role": "Parlamentar citado"
       },
       {
-        "uf": "SP",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "party": "PL"
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
+        "uf": "SP",
+        "role": "Parlamentar citado"
       },
       {
-        "uf": "SP",
-        "name": "Missionário José Olimpio",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "party": "PL"
+        "name": "Missionário José Olimpio",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "party": "PL",
+        "uf": "SP",
+        "role": "Parlamentar citado"
       }
     ],
     "blocks": [
