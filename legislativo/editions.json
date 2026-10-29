@@ -1,5 +1,150 @@
 [
   {
+    "proposal": "PL 736/2026",
+    "status_label": "Aprovado em primeiro turno",
+    "id": "2026-10-29-projeto-de-nunes-avanca-para-viabilizar-reassentamento-de-890-familias-na-zona-leste",
+    "subtitle": "Câmara de SP aprova em primeiro turno mudança na reserva viária da Jacu-Pêssego; texto ainda não entrega títulos ou novas moradias.",
+    "published_at": "2026-10-29T10:11:58.786052+00:00",
+    "kind": "daily",
+    "house": "cmsp",
+    "edition_date": "2026-10-29",
+    "reading_minutes": 4,
+    "title": "Projeto de Nunes avança para viabilizar reassentamento de 890 famílias na zona leste",
+    "trigger_date": "2026-10-28",
+    "topic": "Moradia",
+    "politicians": [
+      {
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "name": "Ricardo Nunes",
+        "role": "Autor da proposta — Executivo municipal",
+        "party": "MDB",
+        "uf": "SP",
+        "sources": [
+          {
+            "title": "CNN Brasil: trajetória e coligação em 2024",
+            "url": "https://www.cnnbrasil.com.br/eleicoes/ricardo-nunes-mdb-e-reeleito-prefeito-de-sao-paulo/"
+          },
+          {
+            "title": "Câmara de SP: autoria do PL 736/2026",
+            "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Um projeto do prefeito Ricardo Nunes (MDB-SP) para retirar um obstáculo a um plano de reassentamento de 890 famílias na zona leste passou em primeiro turno na Câmara de São Paulo na quarta-feira (28). A proposta altera o desenho legal de um trecho da Jacu-Pêssego, onde a reserva de espaço para a avenida impede a regularização de moradias e o avanço do projeto habitacional, segundo a Prefeitura.",
+        "source_ids": [
+          "S2",
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O PL 736/2026 ainda não é lei. A votação foi simbólica, sem registro individual no painel eletrônico, conforme informou a Câmara. A aprovação inicial também não significa que as famílias já tenham recebido uma escritura ou uma nova casa: o texto modifica os alinhamentos da via, e o reassentamento aparece como finalidade do projeto de urbanização descrito na mensagem do Executivo.",
+        "source_ids": [
+          "S2",
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O problema está em cerca de 700 metros entre a faixa da Transpetro e a divisa com Mauá, no distrito de São Rafael. Na justificativa enviada aos vereadores em setembro, Nunes afirma que a avenida foi executada em um traçado diferente daquele aprovado pela Lei 14.880, de 2009. Assim, parte da área continuou reservada no papel para uma via que acabou construída em outra posição.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Segundo a mesma mensagem, há duas dificuldades: moradias que se pretende regularizar estão na faixa reservada pela lei antiga; e a área junto à Jacu-Pêssego e à Rua Nina Simone, prevista para receber as 890 famílias reassentadas, também está nessa reserva. O projeto aprova uma nova planta e revoga os alinhamentos anteriores apenas no trecho indicado.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "votes",
+        "text": "O governo defendeu a proposta por meio de seu líder, Fabio Riva (MDB). No encaminhamento da votação, Alessandro Guedes (PT) declarou apoio da bancada e anunciou que pretende apresentar uma emenda na segunda votação para tratar de um novo viário em Cidade Tiradentes. A manifestação de uma bancada não permite atribuir um voto individual a cada vereador.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Regularização envolve mais que o documento",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Um estudo publicado pelo Ipea em 2022 ajuda a entender a distância entre mudar uma regra territorial e concluir o atendimento às famílias. Paulo Somlanyi Romeiro, Fernanda Carolina Vieira da Costa e André Simionato Castro defendem que a regularização abranja as dimensões jurídica, urbanística, ambiental e social. Para os autores, integrar um assentamento à cidade exige também infraestrutura e serviços públicos.",
+        "source_ids": [
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "No capítulo sobre financiamento federal, os pesquisadores apontam ainda a necessidade de equipes capacitadas, articulação com cartórios e órgãos ambientais e capacidade orçamentária para as obras. A análise é sobre os obstáculos da regularização no país; não avalia o PL de Nunes nem atesta que essas etapas estejam cumpridas na área da Jacu-Pêssego.",
+        "source_ids": [
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Nunes é prefeito desde 2021, quando assumiu após a morte de Bruno Covas, de quem era vice. Foi reeleito em 2024 com uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos, e o coronel Mello Araújo (PL) como vice. A autoria deste projeto é do Executivo municipal; Riva atua na defesa da proposta na Câmara.",
+        "source_ids": [
+          "S4",
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Se concluída a aprovação e transformado em lei, o projeto substituirá a reserva viária antiga no trecho delimitado. Isso permitiria prosseguir com o plano habitacional descrito pela Prefeitura. Não é uma autorização individual de propriedade para cada família nem uma data de mudança.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "A proposta ainda precisa da segunda votação. Na notícia sobre a decisão, a Câmara anunciou a próxima sessão para 3 de novembro, às 15h, mas isso não assegura que este projeto será votado naquele dia. O texto inicial remete as despesas às dotações orçamentárias próprias, com suplementação se necessária, sem fixar um valor específico para a execução.",
+        "source_ids": [
+          "S2",
+          "S1"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://splegisconsulta.saopaulo.sp.leg.br/Home/TransmitirDocumento?pId=764402&digital=1",
+        "title": "PL 736/2026: texto inicial e mensagem do Executivo, 16/09/2026",
+        "kind": "primary",
+        "published_date": "2026-09-16"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.saopaulo.sp.leg.br/blog/plenario-aprova-projeto-para-regularizar-890-familias/",
+        "title": "Câmara de SP: resultado da sessão de 28/10/2026",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S3",
+        "url": "https://repositorio.ipea.gov.br/server/api/core/bitstreams/0bd6ba2c-396e-46c8-b324-1f6778c68c03/content",
+        "title": "Romeiro, Costa e Castro: financiamento da regularização fundiária, Ipea, 2022",
+        "kind": "study",
+        "published_date": "2022"
+      },
+      {
+        "id": "S4",
+        "url": "https://www.cnnbrasil.com.br/eleicoes/ricardo-nunes-mdb-e-reeleito-prefeito-de-sao-paulo/",
+        "title": "CNN Brasil: trajetória de Nunes e composição da coligação de 2024",
+        "kind": "press",
+        "published_date": "2024-10-27"
+      }
+    ]
+  },
+  {
     "subtitle": "Texto de Dorinaldo Malafaia, relatado por Chico Alencar, avança na Câmara; regras de custeio ficariam para regulamento e a proposta ainda não é lei.",
     "status_label": "Aprovado em comissão",
     "kind": "daily",
@@ -14,6 +159,11 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "name": "Dorinaldo Malafaia",
+        "role": "Autor do projeto",
+        "party": "PDT",
+        "uf": "AP",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -23,12 +173,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "name": "Dorinaldo Malafaia",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "party": "PDT",
-        "uf": "AP",
-        "role": "Autor do projeto"
+        ]
       }
     ],
     "blocks": [
@@ -181,17 +326,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "name": "Damares Alves",
+        "role": "Presidente da subcomissão na audiência",
+        "party": "Republicanos",
+        "uf": "DF",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ],
-        "name": "Damares Alves",
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "party": "Republicanos",
-        "uf": "DF",
-        "role": "Presidente da subcomissão na audiência"
+        ]
       }
     ],
     "blocks": [
@@ -306,43 +451,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "name": "Pr. Marco Feliciano",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "name": "Pr. Marco Feliciano",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
-        "uf": "SP",
-        "role": "Parlamentar citado"
+        ]
       },
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
-        "uf": "SP",
-        "role": "Parlamentar citado"
+        ]
       },
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "name": "Missionário José Olimpio",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "name": "Missionário José Olimpio",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "party": "PL",
-        "uf": "SP",
-        "role": "Parlamentar citado"
+        ]
       }
     ],
     "blocks": [
@@ -611,6 +756,11 @@
     ],
     "politicians": [
       {
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
+        "name": "Magno Malta",
+        "role": "Autor do projeto",
+        "party": "PL",
+        "uf": "ES",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -620,14 +770,14 @@
             "title": "Pronunciamento de Magno Malta, 16/12/2025",
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
-        ],
-        "name": "Magno Malta",
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "party": "PL",
-        "uf": "ES",
-        "role": "Autor do projeto"
+        ]
       },
       {
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
+        "name": "Jorge Seif",
+        "role": "Relator na CDH",
+        "party": "PL",
+        "uf": "SC",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -637,12 +787,7 @@
             "title": "Senado: relatoria do PL 501/2023",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
-        ],
-        "name": "Jorge Seif",
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "party": "PL",
-        "uf": "SC",
-        "role": "Relator na CDH"
+        ]
       }
     ]
   }
