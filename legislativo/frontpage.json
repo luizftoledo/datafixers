@@ -14,9 +14,11 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "name": "Ricardo Nunes",
-        "role": "Autor da proposta — Executivo municipal",
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "party": "MDB",
+        "name": "Ricardo Nunes",
+        "uf": "SP",
+        "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -26,9 +28,7 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ],
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "uf": "SP"
+        ]
       }
     ],
     "blocks": [
@@ -159,9 +159,11 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "name": "Dorinaldo Malafaia",
-        "role": "Autor do projeto",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "party": "PDT",
+        "name": "Dorinaldo Malafaia",
+        "uf": "AP",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -171,9 +173,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "uf": "AP"
+        ]
       }
     ],
     "blocks": [
@@ -326,17 +326,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "name": "Damares Alves",
-        "role": "Presidente da subcomissão na audiência",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "party": "Republicanos",
+        "name": "Damares Alves",
+        "uf": "DF",
+        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ],
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "uf": "DF"
+        ]
       }
     ],
     "blocks": [
@@ -451,43 +451,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "name": "Pr. Marco Feliciano",
-        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
+        "name": "Pr. Marco Feliciano",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP"
+        ]
       },
       {
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP"
+        ]
       },
       {
-        "name": "Missionário José Olimpio",
-        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "party": "PL",
+        "name": "Missionário José Olimpio",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP"
+        ]
       }
     ],
     "blocks": [
