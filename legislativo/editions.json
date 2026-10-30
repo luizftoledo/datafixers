@@ -1,5 +1,264 @@
 [
   {
+    "title": "Parecer na Alesp a favor da Bíblia como material escolar não menciona decisões do STF e do TJ-MG sobre leis semelhantes",
+    "reading_minutes": 5,
+    "kind": "investigation",
+    "edition_date": "2026-10-30",
+    "published_at": "2026-10-30T15:27:07.405564+00:00",
+    "status_label": "Voto do relator na CCJR",
+    "id": "2026-10-30-parecer-na-alesp-a-favor-da-biblia-como-material-escolar-nao-menciona-decisoes-do-stf-e-do-tj-mg-sob",
+    "subtitle": "Alesp já recebeu ao menos sete projetos para levar a Bíblia a escolas e bibliotecas desde 1967; nenhum virou lei",
+    "house": "alesp",
+    "topic": "Educação",
+    "proposal": "PL 670/2026",
+    "trigger_date": "2026-10-27",
+    "politicians": [
+      {
+        "party": "PL",
+        "sources": [
+          {
+            "title": "Alesp: dados abertos e biografia dos deputados",
+            "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
+          }
+        ],
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "uf": "SP",
+        "name": "Gil Diniz Bolsonaro",
+        "role": "Autor do projeto"
+      },
+      {
+        "party": "PP",
+        "sources": [
+          {
+            "title": "Alesp: dados abertos e biografia dos deputados",
+            "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
+          }
+        ],
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "uf": "SP",
+        "name": "Delegado Olim",
+        "role": "Relator na CCJR"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O relator na Comissão de Constituição, Justiça e Redação (CCJR) da Assembleia Legislativa de São Paulo, Delegado Olim (PP), entregou em 27 de outubro voto favorável ao projeto que manda usar a Bíblia como recurso paradidático nas escolas do Estado. O parecer, de uma página, examina apenas a competência para legislar e não menciona a laicidade do Estado nem as decisões do Supremo Tribunal Federal que derrubaram ou limitaram leis estaduais sobre a Bíblia em escolas e bibliotecas.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S17"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O PL 670/2026 é de Gil Diniz Bolsonaro (PL). Não é a primeira tentativa na Alesp. Levantamento do Datafixers Legislativo no sistema de proposições da Assembleia encontrou ao menos sete projetos de lei anteriores, de 1967 a 2017, para levar a Bíblia a escolas ou bibliotecas públicas. Nenhum virou lei. Três foram arquivados. Os outros quatro seguem sem votação em plenário, entre eles um de 2003, de Carlinhos Almeida (PT), e outro de 2013, de Rodrigo Moraes (PSC), que constam como prontos para a ordem do dia.",
+        "source_ids": [
+          "S3",
+          "S5",
+          "S6",
+          "S7",
+          "S8",
+          "S9",
+          "S10",
+          "S11"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "As propostas vieram de partidos diferentes. Além do PT e do PSC, o sistema registra projetos de Waldir Agnello (PTB), em 2003, de Adilson Rossi (PSB), em 2011, e de Gil Lancaster (DEM), em 2017, este sobre exemplares em braile nas bibliotecas. Em outubro de 2021, Carlos Cezar (PSB) apresentou moção de repúdio à decisão do STF que derrubou a lei de Mato Grosso do Sul; a moção foi arquivada.",
+        "source_ids": [
+          "S8",
+          "S9",
+          "S11",
+          "S12"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que o projeto manda fazer",
+        "source_ids": []
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, o texto institui o uso da Bíblia em projetos de História, Literatura, Geografia, Ensino Religioso, Artes e Filosofia. A participação do aluno é opcional, os pais devem ser avisados antes e podem concordar ou discordar por escrito, e quem não participar deve ter atividade alternativa. O governo teria 180 dias para definir diretrizes, incluindo critérios para seleção e adaptação dos conteúdos bíblicos. Apesar de a ementa falar em escolas públicas e particulares, as particulares só aderem se quiserem. O projeto não traz estimativa de custo: diz apenas que as despesas sairão de dotações próprias.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Na justificativa, o autor afirma que a proposta não contraria a laicidade porque usa a Bíblia apenas como recurso cultural e educativo e porque a participação é optativa. Diz ainda que a iniciativa atende a parcela da sociedade paulista que vê na tradição judaico-cristã parte da identidade cultural brasileira.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que os tribunais já decidiram",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em abril de 2021, o STF julgou por unanimidade inconstitucional o trecho de uma lei do Amazonas que obrigava escolas e bibliotecas a ter a Bíblia. A relatora, Cármen Lúcia, escreveu que exigir somente a Bíblia desprestigia outros livros sagrados e quem não tem religião, segundo a Agência Brasil. Em outubro do mesmo ano, o tribunal derrubou, também por unanimidade, lei de Mato Grosso do Sul em vigor desde 2004, na ação relatada por Rosa Weber, conforme o Campo Grande News.",
+        "source_ids": [
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Em setembro de 2025, ao julgar lei do Rio Grande do Norte, o STF não a derrubou, mas fixou que ela permite e não obriga o Estado a manter Bíblias em bibliotecas. Segundo resumo do site Dizer o Direito, o ministro Cristiano Zanin, redator do acórdão, considerou que livros religiosos em espaços públicos não são incompatíveis com a laicidade por si só; o problema é a lei impor um único texto religioso, e a presença dessas obras deve resultar de critérios técnicos, culturais, históricos ou pedagógicos.",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O caso mais próximo do projeto paulista é o de Belo Horizonte. Em setembro de 2025, o Tribunal de Justiça de Minas Gerais suspendeu em liminar a lei municipal que permitia usar a Bíblia como material complementar em escolas, a pedido do PSOL. A desembargadora Teresa Cristina da Cunha Peixoto entendeu que legislar sobre educação é competência da União e que a norma ofende a laicidade, segundo o Jurinews. A decisão admite o uso cultural, histórico ou literário, mas não como leitura obrigatória. A autora da lei, a vereadora Flávia Borja (DC), defendeu que a Bíblia ajudaria professores a tratar de civilizações antigas e gêneros literários. O mérito ainda será julgado pelo Órgão Especial.",
+        "source_ids": [
+          "S16"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Gil Diniz Bolsonaro foi eleito deputado estadual em 2018 e reeleito em 2022 com 196.215 votos. Segundo a biografia publicada pela Alesp, foi assessor do deputado federal Eduardo Bolsonaro e preside a Frente Parlamentar Católica. Delegado Olim, relator do projeto, é delegado de polícia desde 1992 e está no terceiro mandato na Assembleia.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "O que acontece agora: o parecer do relator ainda precisa ser votado pela CCJR. O sistema da Alesp não registra votação do projeto em comissão nem em plenário. O texto ficou em pauta de 6 a 14 de julho e não recebeu emendas.",
+        "source_ids": [
+          "S2",
+          "S3"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.al.sp.gov.br/spl/2026/07/Propositura/1000697588_1000869737_Propositura.pdf",
+        "title": "Alesp: íntegra do PL 670/2026",
+        "kind": "primary",
+        "published_date": "2026-07-03"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.al.sp.gov.br/legis/docs/2026/10/27/310000009929_cv.pdf",
+        "title": "Alesp: voto do relator na CCJR ao PL 670/2026",
+        "kind": "primary",
+        "published_date": "2026-10-27"
+      },
+      {
+        "id": "S3",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1000697588",
+        "title": "Alesp: ficha e situação do PL 670/2026",
+        "kind": "primary",
+        "published_date": "2026-10-30"
+      },
+      {
+        "id": "S4",
+        "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml",
+        "title": "Alesp: dados abertos dos deputados",
+        "kind": "primary",
+        "published_date": "2026-10-30"
+      },
+      {
+        "id": "S5",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/930957",
+        "title": "Alesp: PL 782/1967",
+        "kind": "primary",
+        "published_date": "1967-11-30"
+      },
+      {
+        "id": "S6",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/54757",
+        "title": "Alesp: PL 1037/1999",
+        "kind": "primary",
+        "published_date": "1999-12-14"
+      },
+      {
+        "id": "S7",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/197864",
+        "title": "Alesp: PL 903/2003",
+        "kind": "primary",
+        "published_date": "2003-09-13"
+      },
+      {
+        "id": "S8",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/213792",
+        "title": "Alesp: PL 1168/2003",
+        "kind": "primary",
+        "published_date": "2003-11-18"
+      },
+      {
+        "id": "S9",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1043034",
+        "title": "Alesp: PL 1029/2011",
+        "kind": "primary",
+        "published_date": "2011-10-25"
+      },
+      {
+        "id": "S10",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1159745",
+        "title": "Alesp: PL 679/2013",
+        "kind": "primary",
+        "published_date": "2013-09-28"
+      },
+      {
+        "id": "S11",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1000049885",
+        "title": "Alesp: PL 636/2017",
+        "kind": "primary",
+        "published_date": "2017-07-07"
+      },
+      {
+        "id": "S12",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1000402103",
+        "title": "Alesp: Moção 326/2021",
+        "kind": "primary",
+        "published_date": "2021-10-28"
+      },
+      {
+        "id": "S13",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2021-04/lei-que-obriga-escolas-ter-biblia-e-inconstitucional-decide-stf",
+        "title": "Agência Brasil: STF derruba lei do Amazonas, 13/04/2021",
+        "kind": "secondary",
+        "published_date": "2021-04-13"
+      },
+      {
+        "id": "S14",
+        "url": "https://www.campograndenews.com.br/politica/obrigatoriedade-de-biblias-em-escolas-de-ms-e-derrubada-pelo-stf-apos-17-anos",
+        "title": "Campo Grande News: STF derruba lei de MS, 26/10/2021",
+        "kind": "secondary",
+        "published_date": "2021-10-26"
+      },
+      {
+        "id": "S15",
+        "url": "https://www.dizerodireito.com.br/2025/11/lei-estadual-que-obriga-manutencao-da.html",
+        "title": "Dizer o Direito: ADI 5.255/RN, 04/11/2025",
+        "kind": "secondary",
+        "published_date": "2025-11-04"
+      },
+      {
+        "id": "S16",
+        "url": "https://jurinews.com.br/brasil/competencia-privativa-da-uniao-tj-mg-suspende-lei-que-permite-uso-de-biblias-em-escolas-de-bh",
+        "title": "Jurinews: TJ-MG suspende lei de BH, 30/09/2025",
+        "kind": "secondary",
+        "published_date": "2025-09-30"
+      },
+      {
+        "id": "S17",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/documentos/1000697588?idsTiposDocs=17&idsTiposDocs=144&idsTiposDocs=145&idsTiposDocs=146&idsTiposDocs=20008&idsTiposDocs=20009&incluirCorpo=false&page=0&size=10",
+        "title": "Alesp: pareceres do PL 670/2026",
+        "kind": "primary",
+        "published_date": "2026-10-27"
+      }
+    ]
+  },
+  {
     "status_label": "Aprovado em comissão",
     "trigger_date": "2026-10-28",
     "id": "2026-10-30-comissao-aprova-projeto-de-bacelar-para-incluir-casais-gays-e-mulheres-trans-na-lei-maria-da-penha",
@@ -14,24 +273,20 @@
     "subtitle": "STF já reconheceu a proteção em 2025; proposta explicita alcance na lei e ainda precisa passar por outras etapas no Congresso.",
     "politicians": [
       {
-        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
         "party": "PV",
-        "name": "Bacelar",
-        "uf": "BA",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e trajetória de Bacelar",
             "url": "https://www.camara.leg.br/deputados/69871/biografia"
           }
-        ]
+        ],
+        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
+        "uf": "BA",
+        "name": "Bacelar",
+        "role": "Autor do projeto"
       },
       {
-        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
         "party": "PSOL",
-        "name": "Célia Xakriabá",
-        "uf": "MG",
-        "role": "Relatora na Comissão de Direitos Humanos",
         "sources": [
           {
             "title": "Câmara: biografia de Célia Xakriabá",
@@ -41,7 +296,11 @@
             "title": "Parecer ao PL 891/2025",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
           }
-        ]
+        ],
+        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
+        "uf": "MG",
+        "name": "Célia Xakriabá",
+        "role": "Relatora na Comissão de Direitos Humanos"
       }
     ],
     "blocks": [
@@ -204,11 +463,7 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "party": "MDB",
-        "name": "Ricardo Nunes",
-        "uf": "SP",
-        "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -218,7 +473,11 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ]
+        ],
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "uf": "SP",
+        "name": "Ricardo Nunes",
+        "role": "Autor da proposta — Executivo municipal"
       }
     ],
     "blocks": [
@@ -349,11 +608,7 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "party": "PDT",
-        "name": "Dorinaldo Malafaia",
-        "uf": "AP",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -363,7 +618,11 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "uf": "AP",
+        "name": "Dorinaldo Malafaia",
+        "role": "Autor do projeto"
       }
     ],
     "blocks": [
@@ -516,17 +775,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "party": "Republicanos",
-        "name": "Damares Alves",
-        "uf": "DF",
-        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ]
+        ],
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "uf": "DF",
+        "name": "Damares Alves",
+        "role": "Presidente da subcomissão na audiência"
       }
     ],
     "blocks": [
@@ -641,43 +900,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "name": "Pr. Marco Feliciano",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "name": "Pr. Marco Feliciano",
+        "role": "Parlamentar citado"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "role": "Parlamentar citado"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "party": "PL",
-        "name": "Missionário José Olimpio",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "uf": "SP",
+        "name": "Missionário José Olimpio",
+        "role": "Parlamentar citado"
       }
     ],
     "blocks": [
@@ -946,11 +1205,7 @@
     ],
     "politicians": [
       {
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
         "party": "PL",
-        "name": "Magno Malta",
-        "uf": "ES",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -960,14 +1215,14 @@
             "title": "Pronunciamento de Magno Malta, 16/12/2025",
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
-        ]
+        ],
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
+        "uf": "ES",
+        "name": "Magno Malta",
+        "role": "Autor do projeto"
       },
       {
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
         "party": "PL",
-        "name": "Jorge Seif",
-        "uf": "SC",
-        "role": "Relator na CDH",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -977,7 +1232,11 @@
             "title": "Senado: relatoria do PL 501/2023",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
-        ]
+        ],
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
+        "uf": "SC",
+        "name": "Jorge Seif",
+        "role": "Relator na CDH"
       }
     ]
   }
