@@ -1,10 +1,10 @@
 {
-  "week_end": "2026-11-01",
-  "updated_at": "2026-10-29T10:05:27.353794+00:00",
-  "previous_start": "2026-10-19",
-  "previous_end": "2026-10-25",
   "week_start": "2026-10-26",
-  "results_end": "2026-10-29",
+  "week_end": "2026-11-01",
+  "results_end": "2026-10-30",
+  "previous_end": "2026-10-25",
+  "updated_at": "2026-10-30T08:29:27.222926+00:00",
+  "previous_start": "2026-10-19",
   "results_start": "2026-10-01",
   "agenda": [
     {
@@ -52,113 +52,7 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 06",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82945",
-      "items": [
-        {
-          "title": "PL 6198/2025",
-          "summary": "Estabelece limites objetivos para a dosimetria penal aplicada a agentes de segurança pública, vedando o uso de circunstâncias não previstas em lei relacionadas à função exercida, ao dever institucional, ao uso de armamento institucional, seja em serviço ou fora de serviço, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2593296",
-          "relator": "Coronel Ulysses",
-          "stage": "Parecer do Relator, Dep. Coronel Ulysses (UNIÃO-AC), pela aprovação do PL 6198/25 e dos PLs 6309/25 e 6358/25, apensados, com substitutivo."
-        },
-        {
-          "title": "PL 364/2024",
-          "summary": "Dispõe sobre o Protocolo Nacional de Investigação e Perícias nos Crimes de Feminicídio.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2418344",
-          "relator": "Messias Donato",
-          "stage": "Parecer do Relator, Dep. Messias Donato (UNIÃO-ES), pela aprovação do PL 364/24, pela rejeição do Substitutivo da Comissão de Defesa dos Direitos da Mulher, com substitutivo."
-        },
-        {
-          "title": "PL 6014/2025",
-          "summary": "Institui o Programa Nacional de Segurança nos Estádios “Estádio Seguro”, cria o Cadastro Nacional de Torcedores (CNT) e o Selo “Clube Parceiro da Paz”, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2589231",
-          "relator": "Coronel Ulysses",
-          "stage": "Parecer do Relator, Dep. Coronel Ulysses (UNIÃO-AC), pela aprovação."
-        },
-        {
-          "title": "PL 6315/2025",
-          "summary": "Dispõe sobre o prazo máximo de tramitação dos Processos Administrativos Disciplinares no âmbito das instituições previstas no art. 144 da Constituição Federal, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2595340",
-          "relator": "Aluisio Mendes",
-          "stage": "Parecer do Relator, Dep. Aluisio Mendes (REPUBLIC-MA), pela aprovação do PL 6315/25, e pela rejeição do PL 2347/26, apensado."
-        },
-        {
-          "title": "PL 6317/2025",
-          "summary": "Veda a simultaneidade de Processo Administrativo Disciplinar com Conselho de Disciplina ou Conselho de Justificação, no âmbito das corporações militares estaduais, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2595342",
-          "relator": "Alberto Fraga",
-          "stage": "Parecer do Relator, Dep. Alberto Fraga (PL-DF), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 899/2026",
-          "summary": "Altera a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a custódia de presos da Justiça Federal em estabelecimentos penais da União e sobre a fiscalização de medidas cautelares diversas da prisão pela Polícia Penal Federal.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2606301",
-          "relator": "Delegada Ione",
-          "stage": "Parecer da Relatora, Dep. Delegada Ione (PL-MG), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1147/2026",
-          "summary": "Altera a Lei n.º 13.675, de 11 de junho de 2018, para instituir o Banco Nacional de Monitoramento de Crimes Violentos Letais Intencionais (BCVLI), no âmbito do Sistema Nacional de Informações de Segurança Pública (Sinesp).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2608753",
-          "relator": "Ricardo Maia",
-          "stage": "Parecer do Relator, Dep. Ricardo Maia (MDB-BA), pela aprovação."
-        },
-        {
-          "title": "PL 1207/2026",
-          "summary": "Institui diretrizes nacionais para o aprimoramento do atendimento em saúde às mulheres vítimas de violência e cria instrumentos de avaliação de risco, registro clínico e fluxo integrado de atendimento.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2609444",
-          "relator": "Delegada Adriana Accorsi",
-          "stage": "Parecer da Relatora, Dep. Delegada Adriana Accorsi (PT-GO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1322/2026",
-          "summary": "Dispõe sobre a criação de plataforma tecnológica para notificação em tempo real às vítimas de violência doméstica e familiar acerca da aproximação de agressores submetidos a medidas protetivas de urgência e monitoramento eletrônico.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2611195",
-          "relator": "Gustavo Gayer",
-          "stage": "Parecer do Relator, Dep. Gustavo Gayer (PL-GO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1378/2026",
-          "summary": "Dispõe sobre a autorização para os órgãos das forças de segurança pública dos Estados e do Distrito Federal disponibilizarem armas de fogo aos seus integrantes.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2611632",
-          "relator": "Alberto Fraga",
-          "stage": "Parecer do Relator, Dep. Alberto Fraga (PL-DF), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1729/2026",
-          "summary": "Altera a Lei nº 13.432, de 11 de abril de 2017, para dispor sobre requisitos para o exercício da profissão de detetive particular, suas atribuições e o tratamento de dados pessoais no âmbito da atividade.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2614941",
-          "relator": "Roberto Monteiro Pai",
-          "stage": "Parecer do Relator, Dep. Roberto Monteiro Pai (PL-RJ), pela aprovação, com emenda."
-        },
-        {
-          "title": "PL 1912/2026",
-          "summary": "Altera a Lei nº 11.977, de 7 de julho de 2009, para instituir prioridade no atendimento a profissionais integrantes do Sistema Único de Segurança Pública (Susp) e a militares das Forças Armadas que residam em áreas de risco, no âmbito do Programa Minha Casa, Minha Vida – PMCMV.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2617507",
-          "relator": "Sargento Portugal",
-          "stage": "Parecer do Relator, Dep. Sargento Portugal (PODE-RJ), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1936/2026",
-          "summary": "Dispõe sobre a aquisição, a posse e o porte de arma de fogo no território nacional, institui o Sistema Nacional de Registro de Armas de Fogo (SINRAF) e revoga dispositivos da Lei nº 10.826, de 22 de dezembro de 2003.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2617803",
-          "relator": "Delegado Caveira",
-          "stage": "Parecer do Relator, Dep. Delegado Caveira (PL-PA), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 2106/2026",
-          "summary": "Altera o Decreto-Lei nº 667, de 2 de julho de 1969, que reorganiza as Polícias Militares e os Corpos de Bombeiros Militares dos Estados, dos Territórios e do Distrito Federal, e dá outras providências, para assegurar acesso a plano de saúde a policiais e bombeiros militares.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2620243",
-          "relator": "Sargento Portugal",
-          "stage": "Parecer do Relator, Dep. Sargento Portugal (PODE-RJ), pela aprovação, e pela rejeição da Emenda 1/2026 da CSPCCO."
-        },
-        {
-          "title": "PL 2954/2026",
-          "summary": "Altera a Lei nº 11.350, de 5 de outubro de 2006, para estabelecer protocolos de prevenção e proteção à violência contra os Agentes Comunitários de Saúde e os Agentes de Combate às Endemias.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2630649",
-          "relator": "Messias Donato",
-          "stage": "Parecer do Relator, Dep. Messias Donato (UNIÃO-ES), pela aprovação."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas"
     },
     {
@@ -454,106 +348,7 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 07",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82954",
-      "items": [
-        {
-          "title": "REQ 198/2026 CSAUDE",
-          "summary": "Altera a Lei que dispõe sobre os Conselhos de Medicina para prever medidas administrativas em caso de atraso ou inadimplemento remuneratório perante médicos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2631308",
-          "relator": "Silvia Cristina",
-          "stage": ""
-        },
-        {
-          "title": "PL 4674/2024",
-          "summary": "“Dispõe sobre a disponibilização de exames de ultrassonografia morfológica na rede pública de saúde e dá outras providências.”",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2475487",
-          "relator": "Rogéria Santos",
-          "stage": "Parecer da Relatora, Dep. Rogéria Santos (REPUBLIC-BA), pela aprovação do PL 4674/24, com substitutivo; e pela rejeição do Substitutivo da Comissão de Defesa dos Direitos da Mulher."
-        },
-        {
-          "title": "PL 108/2011",
-          "summary": "Desonera dos tributos federais todos os medicamentos diretamente utilizados no tratamento do diabetes e da hipertensão arterial, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/491061",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação do PL 108/2011,  dos PLs 2102/2011,  2716/2011, 3570/2012, 5926/2013,  6950/2013, PL 7137/2014, 7687/2014, 169/2015, 3791/2015, 5118/2016, 7139/2017, 7924/2017, 3566/2019, 604/2020, 5030/2020, 2537/2021, 2725/2021, 3077/2021, 2065/2022, 2517/2023 e 5564/2023, apensados, com substitutivo; e pela rejeição dos PLs 1097/2011,1988/2011, 2564/2019, 163/2020, 6153/2023, apensados, e da Emenda 1/2011 apresentada ao PL 1097/2011."
-        },
-        {
-          "title": "PL 2902/2022",
-          "summary": "Dispõe sobre a instituição da \"Semana Nacional em Defesa da Saúde Mental dos Profissionais de Segurança Pública\".",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2340659",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (PDT-GO), pela aprovação do PL 2902/22 e dos PLs 4406/23, 4759/23, 1186/24 e 6116/23, apensados, com substitutivo."
-        },
-        {
-          "title": "PL 3210/2024",
-          "summary": "Dispõe sobre a incorporação do exame de sangue PrecivityAD no Sistema Único de Saúde (SUS) para a detecção precoce da doença de Alzheimer e estabelece diretrizes para sua implementação em todo o território nacional.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2453800",
-          "relator": "Rogéria Santos",
-          "stage": "Parecer da Relatora, Dep. Rogéria Santos (REPUBLIC-BA), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 426/2025",
-          "summary": "Dispõe sobre o reconhecimento do trabalho das benzedeiras e dos benzedeiros como prática integrante de atores sociais da cultura popular brasileira e da Política Nacional de Educação Popular em Saúde no Sistema Único de Saúde - PNEPS – SUS e fica reconhecido como de relevante interesse cultural, social e imaterial o benzimento, as benzedeiras e os benzedeiros.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2483881",
-          "relator": "Juliana Cardoso",
-          "stage": "Parecer da Relatora, Dep. Juliana Cardoso (PT-SP), pela aprovação do PL 426/25, na forma do Substitutivo da Comissão de Cultura, com subemendas."
-        },
-        {
-          "title": "PL 465/2025",
-          "summary": "Dispõe sobre a organização dos serviços de saúde para a realização de exames de mamografia e citologia do colo do útero em mulheres com deficiência.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2484047",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1224/2025",
-          "summary": "Institui o “Março Verde”, a ser realizado, anualmente, em março.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2489341",
-          "relator": "Carla Dickson",
-          "stage": "Parecer da Relatora, Dep. Carla Dickson (PL-RN), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1428/2025",
-          "summary": "Institui o Programa Nacional de Acesso à Psicoterapia.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2493533",
-          "relator": "Geraldo Resende",
-          "stage": "Parecer do Relator, Dep. Geraldo Resende (PSDB-MS), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1682/2025",
-          "summary": "Institui o Programa Nacional de Saúde Bucal na Terceira Idade, estabelecendo a obrigatoriedade de avaliação diagnóstica e planejamento terapêutico odontológico em clínicas geriátricas e instituições de longa permanência para idosos, públicas e privadas, no momento da admissão, com o objetivo de promover ações de prevenção, diagnóstico e tratamento das condições de saúde bucal da população com 60 (sessenta) anos ou mais, com foco no cuidado humanizado, multidisciplinar e continuado.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2497597",
-          "relator": "Geraldo Resende",
-          "stage": "Parecer do Relator, Dep. Geraldo Resende (UNIÃO-MS), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 3247/2025",
-          "summary": "Altera a Lei nº 11.350, de 5 de outubro de 2006, para dispor sobre as atividades de Agente Comunitário de Saúde – ACS e de Agente de Combate às Endemias – ACE em áreas de difícil acesso.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2531970",
-          "relator": "Silvia Cristina",
-          "stage": "Parecer da Relatora, Dep. Silvia Cristina (PP-RO), pela aprovação do PL 3247/25, na forma do Substitutivo da Comissão da Amazônia e dos Povos Originários e Tradicionais, com subemenda."
-        },
-        {
-          "title": "PL 4269/2025",
-          "summary": "Dispõe sobre a realização periódica de exames de hemoglobina glicada, perfil lipídico e função renal para o acompanhamento dos cuidados de pessoas com diabetes e doenças associadas, no Sistema Único de Saúde (SUS) dentro do território nacional, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2553944",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com substitutivo; e pela rejeição da Emenda 1/25 apresentada nesta comissão."
-        },
-        {
-          "title": "PL 5758/2025",
-          "summary": "Altera a Lei nº 11.976, de 7 de julho de 2009, para dispor sobre a obrigação dos cartórios de registro civil de encaminhar às Secretarias de Saúde as informações constantes nas certidões de óbito e estabelecer a implementação de sistema informatizado de compartilhamento dessas informações entre os cartórios, o Ministério da Saúde e as Secretarias Estaduais e Municipais de Saúde.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2583130",
-          "relator": "Ana Pimentel",
-          "stage": "Parecer da Relatora, Dep. Ana Pimentel (PT-MG), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1429/2026",
-          "summary": "Dispõe sobre atenção integral à saúde das pessoas com condições pós-covid no âmbito Sistema Único de Saúde.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2612353",
-          "relator": "Geraldo Resende",
-          "stage": "Parecer do Relator, Dep. Geraldo Resende (UNIÃO-MS), pela aprovação, com substitutivo."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas\r\n - Votação de remanejamento de ações orçamentárias de emendas da Comissão à LOA 2026."
     },
     {
@@ -688,141 +483,7 @@
       "status": "Encerrada (Termo)",
       "place": "Anexo II, Plenário 16",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83061",
-      "items": [
-        {
-          "title": "PL 2665/2022",
-          "summary": "Dispõe sobre a instalação obrigatória de dispositivos de segurança nas piscinas coletivas.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2336218",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 2665/22, e dos PLs 417/23, 5196/25, 165/26, apensados, com substitutivo."
-        },
-        {
-          "title": "PL 4102/2020",
-          "summary": "Regulamenta a utilização de materiais transparentes em edificações com mais de vinte metros de altura para evitar colisões de aves.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2259554",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 4102/20, e do PL 877/21, apensado, na forma do Substitutivo Adotado pela Comissão de Meio Ambiente e Desenvolvimento Sustentável."
-        },
-        {
-          "title": "PL 791/2022",
-          "summary": "Altera a Lei nº 9.985, de 18 de julho de 2000, que regulamenta o art. 225, § 1º, incisos I, II, III e VII da Constituição Federal, que institui o Sistema Nacional de Unidades de Conservação da Natureza e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2319094",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 2492/2022",
-          "summary": "Altera a Lei nº 12.587, de 3 de janeiro de 2012, que institui as diretrizes da Política Nacional de Mobilidade Urbana, para dispor sobre a disponibilização de aplicativos gratuitos para os usuários do Sistema Nacional de Mobilidade Urbana.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2335097",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 2492/22, e do PL 5163/25, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 378/2023",
-          "summary": "Altera a Lei nº 11.124, de 2005, que dispõe sobre o Sistema Nacional de Habitação de Interesse Social – SNHIS e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2347315",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 378/23, e dos PLs 2904/23, 3154/23, 4247/24, e 992/25, apensados, com substitutivo; e pela rejeição do PL 2986/24, apensado."
-        },
-        {
-          "title": "PL 4985/2023",
-          "summary": "Institui, nos programas habitacionais públicos ou financiados com recursos públicos, prioridade de atendimento às famílias de que façam parte pessoas com neoplasia maligna.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2395802",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 2675/2024",
-          "summary": "Institui o Programa Bairro +Perto (BAIRRO + PERTO) e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2444817",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 3286/2024",
-          "summary": "Altera a Lei nº 13.146, de 06 de julho de 2015, que institui a Lei Brasileira de Inclusão da Pessoa com Deficiência - Estatuto da Pessoa com Deficiência.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2454684",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 4896/2025",
-          "summary": "Dispõe sobre a priorização de projetos de infraestrutura e serviços essenciais nos estados oriundos de ex-territórios federais em seleções federais de investimentos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2566414",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 5174/2025",
-          "summary": "Dispõe Sobre a Obrigatoriedade de Parada Dos Veículos De Transporte Público Para Pessoas Idosas e Estabelece Penalidades Para as Empresas de Transporte Público que Descumprirem Essa Obrigação.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2572038",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 5174/25, e do PL 6343/25, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 6117/2025",
-          "summary": "Institui a Política Nacional de Cidades Antiviolência, com o objetivo de prevenir a violência e a criminalidade a partir do espaço urbano e da inteligência territorial; e altera as Leis nºs 10.257, de 10 de julho de 2001 (Estatuto da Cidade), 13.675, de 11 de junho de 2018, e 13.756, de 12 de dezembro de 2018, que institui o Fundo Nacional de Segurança Pública (FNSP).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2591153",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 6715/2025",
-          "summary": "Altera a Lei nº 11.445, de 5 de janeiro de 2007, que estabelece as diretrizes nacionais para o saneamento básico, para dispor sobre a transparência de informações relativas ao reúso de água promovido por condomínios edilícios, com divulgação periódica de dados operacionais.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2599308",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 7139/2025",
-          "summary": "Altera a Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos Administrativos), para incluir a resiliência climática e a sustentabilidade como fatores de preferência nas contratações de saneamento básico.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2599748",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação do PL 7139/25, e do PL 7205/25, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 341/2026",
-          "summary": "Dispõe sobre a observância de normas da Associação Brasileira de Normas Técnicas na instalação, operação e manutenção de sistemas de iluminação de áreas externas em locais públicos que utilizem postes metálicos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2601147",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 620/2026",
-          "summary": "Institui a Política Nacional de Comunidades de Vida e Moradia Colaborativa da Pessoa Idosa, cria o Fundo Nacional de Comunidades de Vida da Pessoa Idosa (FNCVPI), estabelece metas nacionais de desinstitucionalização responsável, altera a Lei nº 10.741, de 1º de outubro de 2003, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2603630",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação."
-        },
-        {
-          "title": "PL 741/2026",
-          "summary": "Altera a Lei nº 13.146, de 6 de julho de 2015, para aumentar o percentual de vagas de estacionamento reservadas para veículos que transportem pessoa com deficiência com comprometimento de mobilidade.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2604625",
-          "relator": "Eli Borges",
-          "stage": "Parecer do Relator, Dep. Eli Borges (REPUBLIC-TO), pela aprovação."
-        },
-        {
-          "title": "PL 1035/2026",
-          "summary": "Altera a Lei nº 10.257, de 10 de julho de 2001, e a Lei nº 13.146, de 6 de julho de 2015, para dispor sobre a implantação de espaços de acomodação sensorial em áreas e equipamentos públicos urbanos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2607551",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 1092/2026",
-          "summary": "Dá nova redação ao art. 8º da Lei nº 14.620, de 13 de julho de 2023 (Dispõe sobre o Programa Minha Casa, Minha Vida), para incluir líderes religiosos com reconhecida atuação comunitária entre os grupos prioritários de atendimento no Programa Minha Casa, Minha Vida.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2607963",
-          "relator": "Eli Borges",
-          "stage": "Parecer do Relator, Dep. Eli Borges (REPUBLIC-TO), pela aprovação."
-        },
-        {
-          "title": "PL 1233/2026",
-          "summary": "Altera a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para instituir a obrigatoriedade de sistemas de orientação por proximidade e realidade aumentada nos edifícios públicos federais, visando à ampliação da autonomia das pessoas com deficiência e pessoas idosas.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2609696",
-          "relator": "Duda Ramos",
-          "stage": "Parecer do Relator, Dep. Duda Ramos (PODE-RR), pela aprovação, com substitutivo."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas\r\n Votação de indicações de beneficiários para emendas da comissão à LOA"
     },
     {
@@ -834,92 +495,7 @@
       "status": "Encerrada",
       "place": "Anexo II, Plenário 04",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82961",
-      "items": [
-        {
-          "title": "PL 1224/2019",
-          "summary": "Altera a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para prever ações de monitoramento e acompanhamento que assegurem às crianças e adolescentes com deficiência acesso prioritário a órteses, próteses e tecnologias assistivas necessárias á frequência e á aprendizagem escolares.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2319821",
-          "relator": "Laura Carneiro",
-          "stage": "Parecer da Relatora, Dep. Laura Carneiro (PSD-RJ), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PL 1224/19, e do Substitutivo da Comissão de Educação; e pela inadequação financeira e orçamentária do PL 3259/20, apensado."
-        },
-        {
-          "title": "PLP 242/2013",
-          "summary": "Altera a Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal), para estabelecer condições para a realização de transferências voluntárias da União às entidades de direito privado e de utilidade pública.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/565008",
-          "relator": "Kim Kataguiri",
-          "stage": "Parecer do Relator, Dep. Kim Kataguiri (MISSÃO-SP), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PLP 24/13 e dos PLP'S 371/14, 149/15, 285/16 e 364/17, apensados; e, no mérito, pela aprovação do PLP 24/13 e dos PLP'S 371/14, 149/15, 285/16 e 364/17, apensados, com substitutivo."
-        },
-        {
-          "title": "PLP 218/2020",
-          "summary": "Institui a Contribuição Social sobre Serviços Digitais incidente sobre a receita bruta de serviços digitais prestados pelas grandes empresas de tecnologia (CSSD), destinada ao financiamento de programas de renda básica.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2260638",
-          "relator": "Merlong Solano",
-          "stage": "Parecer do Relator, Dep. Merlong Solano (PT-PI), pela compatibilidade e adequação financeira e orçamentária do PLP 218, e do PLP 241/2020, apensado; e, no mérito, pela aprovação do PLP 218, e do PLP 241/2020, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 5515/2019",
-          "summary": "Cria a Zona Franca da Indústria da Moda Íntima, nas condições que estabelece.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2225292",
-          "relator": "Sidney Leite",
-          "stage": "Parecer do Relator, Dep. Sidney Leite (PSD-AM), pela incompatibilidade e inadequação financeira e orçamentária."
-        },
-        {
-          "title": "PL 2841/2022",
-          "summary": "Cria a Zona Franca do Vale do Jequitinhonha, nas condições que estabelece.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2339408",
-          "relator": "Sidney Leite",
-          "stage": "Parecer do Relator, Dep. Sidney Leite (PSD-AM), pela incompatibilidade e inadequação financeira e orçamentária."
-        },
-        {
-          "title": "PL 5422/2013",
-          "summary": "Acrescenta §§ 9º e 10 ao art. 15 da Lei nº 8.666, de 21 de junho de 1993, para determinar que, nas compras de medicamentos e produtos para a saúde destinados ao Sistema Unico de Saúde (SUS), os bens adquiridos estejam identificados de forma a impedir desvios e comercialização indevida.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/573290",
-          "relator": "Laura Carneiro",
-          "stage": "Parecer do Relator, Dep. Laura Carneiro (PSD-RJ), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PL 5422/13, dos PLs 4385/12, e 6410/13, apensados, e da Emenda 1/2012 da Comissão de Seguridade Social e Família - CSSF; e, no mérito, pela aprovação do PL 5422/13, dos PLs 4385/12, e 6410/13, apensados, e pela rejeição da Emenda 1/12 da CSSF."
-        },
-        {
-          "title": "PL 340/2022",
-          "summary": "Dispõe sobre a organização de seção de bibliotecas públicas mantidas pelo Estado e pelas universidades federais que seja especializada para uso dos cegos e das pessoas com grave deficiência visual, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2314958",
-          "relator": "Florentino Neto",
-          "stage": ""
-        },
-        {
-          "title": "PL 665/2011",
-          "summary": "Dispõe sobre ao acesso gratuito dos portadores de hiperplasia benigna ou câncer de próstata aos medicamentos que necessitam.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/494243",
-          "relator": "Merlong Solano",
-          "stage": ""
-        },
-        {
-          "title": "PL 10813/2018",
-          "summary": "Institui o Programa Nacional de Prevenção à Gravidez Precoce.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2183668",
-          "relator": "Laura Carneiro",
-          "stage": "Parecer da Relatora, Dep. Laura Carneiro (PSD-RJ), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PL 8013/18, e do Substitutivo da Comissão de Previdência, Assistência Social e Família."
-        },
-        {
-          "title": "PL 1436/2019",
-          "summary": "Torna obrigatória a inserção de cláusula protetora de direitos humanos em contratos de financiamentos concedidos pelas instituições financeiras controladas pela União.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2193789",
-          "relator": "Josenildo",
-          "stage": "Parecer do Relator, Dep. Josenildo (PDT-AP), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PL 1436/19, do PL 2742/23, apensado, e do Substitutivo da Comissão de Direitos Humanos, Minorias e Igualdade Racial - CDHMIR; e, no mérito, pela rejeição do PL 1436/19, do PL 2742/23, apensado, e do Substitutivo da CDHMIR."
-        },
-        {
-          "title": "PL 5773/2023",
-          "summary": "Altera a Lei 14.133, de 1º de abril de 2021.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2408101",
-          "relator": "Paulo Guedes",
-          "stage": "Parecer do Relator, Dep. Paulo Guedes (PT-MG), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária; e, no mérito, pela aprovação."
-        },
-        {
-          "title": "PL 1220/2025",
-          "summary": "Altera a Lei nº 8.036, de 11 maio de 1990, que dispõe sobre o Fundo de Garantia do Tempo de Serviço, e dá outras providências, para prever requisitos formais para novas propostas legislativas referentes a saque ou aplicação de recursos do FGTS",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2489283",
-          "relator": "Florentino Neto",
-          "stage": "Parecer do Relator, Dep. Florentino Neto (PT-PI), pela não implicação da matéria em aumento ou diminuição da receita ou da despesa públicas, não cabendo pronunciamento quanto à adequação financeira e orçamentária do PL 1220/2025; e, no mérito, pela aprovação."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas"
     },
     {
@@ -1089,78 +665,7 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 05",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83060",
-      "items": [
-        {
-          "title": "REQ 38/2026 CDE",
-          "summary": "Institui o Marco de Fomento à Economia Digital no Brasil.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2587636",
-          "relator": "Zé Adriano",
-          "stage": ""
-        },
-        {
-          "title": "REQ 41/2026 CDE",
-          "summary": "Institui instrumentos transitórios para a desconcentração da oferta no mercado brasileiro de gás natural, estabelece o Comitê Gestor da Promoção da Concorrência no Mercado de Gás Natural (GEGÁS) e autoriza à ANP a aplicação de recursos do fundo de PD&I para a elaboração de novas regulamentações no setor de óleo e gás, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2583948",
-          "relator": "Arnaldo Jardim",
-          "stage": ""
-        },
-        {
-          "title": "PLP 100/2026",
-          "summary": "Estabelece normas gerais de direito financeiro, governança e responsabilidade na gestão dos fundos extra orçamentários, encargos e subsídios do setor elétrico, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2615068",
-          "relator": "Julio Lopes",
-          "stage": "Parecer do Relator, Dep. Julio Lopes (PP-RJ), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PDL 397/2023",
-          "summary": "Susta o Decreto nº 11.768, de 6 de novembro de 2023, que autoriza a reversão do processo de dissolução societária da empresa pública Centro Nacional de Tecnologia Eletrônica Avançada S.A. - Ceitec.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2402642",
-          "relator": "Zé Adriano",
-          "stage": "Parecer do Relator, Dep. Zé Adriano (PP-AC), pela rejeição do PDL 397/23, e do PDL 398/23, apensado."
-        },
-        {
-          "title": "PDL 107/2024",
-          "summary": "Susta os efeitos da Resolução Resolução GECEX nº 573/2024, do Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC), que revoga Ex-tarifários para Bens de Capital e Bens de Informática e Telecomunicação.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2424361",
-          "relator": "Lafayette de Andrada",
-          "stage": "Parecer do Relator, Dep. Lafayette de Andrada (PL-MG), pela aprovação."
-        },
-        {
-          "title": "PL 9539/2018",
-          "summary": "Dispõe sobre o contrato de parceria entre academias e demais estabelecimentos de prestação de serviços relacionados a condicionamento físico ou prática desportiva, e profissionais que desejem prestar serviços nesses estabelecimentos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2167875",
-          "relator": "Luiz Gastão",
-          "stage": "Parecer do Relator, Dep. Luiz Gastão (PSD-CE), pela aprovação do PL 9539/19 e do PL 10971/18, apensado, e do Substitutivo da Comissão de Trabalho, com subemenda."
-        },
-        {
-          "title": "PL 507/2020",
-          "summary": "Modifica os artigos 1º e 2º, da Lei nº 8.857, de 8 de março de 1994, para ampliar a abrangência da Área de Livre Comércio de Brasiléia, com extensão para o Município de Epitaciolândia - ALCB, no Estado do Acre.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2238367",
-          "relator": "Zé Adriano",
-          "stage": "Parecer do Relator, Dep. Zé Adriano (PP-AC), pela aprovação do PL 507/20, com substitutivo, e pela rejeição dos PLs 2261/22 e 2572/22, apensados."
-        },
-        {
-          "title": "PL 600/2021",
-          "summary": "Altera o Decreto-Lei nº 986, de 21 de outubro de 1969, para proibir o uso de grampos galvanizados nas embalagens de produtos alimentícios.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2270917",
-          "relator": "Lafayette de Andrada",
-          "stage": ""
-        },
-        {
-          "title": "PL 2575/2025",
-          "summary": "Dispõe sobre a obrigatoriedade de provedores de aplicações de internet manterem representação legal no território nacional.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2516979",
-          "relator": "Jadyel Alencar",
-          "stage": "Parecer do Relator, Dep. Jadyel Alencar (REPUBLIC-PI), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 6331/2025",
-          "summary": "Proíbe a importação de tilápia e subprodutos, e dá outras providências",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2595706",
-          "relator": "Jadyel Alencar",
-          "stage": "Parecer do Relator, Dep. Jadyel Alencar (REPUBLIC-PI), pela rejeição."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas"
     },
     {
@@ -1172,43 +677,7 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 14",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82796",
-      "items": [
-        {
-          "title": "PL 452/2020",
-          "summary": "Altera o art. 23 da Lei n° 10.865, de 30 de abril de 2004, para que os coeficientes de redução da Contribuição para o PIS/Pasep e da COFINS incidentes sobre combustíveis sejam calculados proporcionalmente à redução das alíquotas de ICMS.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2238159",
-          "relator": "Evair Vieira de Melo",
-          "stage": "Parecer do Relator, Dep. Evair Vieira de Melo (REPUBLIC-ES), pela rejeição."
-        },
-        {
-          "title": "PL 1182/2023",
-          "summary": "Estabelece desconto sobre as tarifas de energia elétrica aplicáveis aos abrigos que acolham pessoas carentes que sejam LGBTQIAP+ mediante alteração da Lei nº 12.212, de 20 de janeiro de 2010.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2351536",
-          "relator": "Junio Amaral",
-          "stage": ""
-        },
-        {
-          "title": "PL 1228/2023",
-          "summary": "Dispõe sobre aquisição, pelas distribuidoras, de créditos de energia elétrica provenientes de micro e minigeração distribuída de unidades enquadradas como agricultura familiar e microempreendedor individual enquanto durar o financiamento dos equipamentos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2351862",
-          "relator": "Júnior Ferrari",
-          "stage": "Parecer do Relator, Dep. Júnior Ferrari (PSD-PA), pela aprovação do PL 1.228/2023 e do PL 3.066/2023 apensado, com substitutivo."
-        },
-        {
-          "title": "PL 2300/2025",
-          "summary": "Dispõe sobre medidas de incentivo à produção, comercialização e uso do etanol combustível, visando à redução do custo dos combustíveis no Brasil e ao fortalecimento da matriz energética nacional, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2508754",
-          "relator": "Rafael Fera",
-          "stage": "Parecer do Relator, Dep. Rafael Fera (PODE-RO), pela aprovação, com emendas."
-        },
-        {
-          "title": "PL 2569/2025",
-          "summary": "Dispõe sobre o custeio exclusivo pelo Tesouro Nacional das políticas públicas na Conta de Desenvolvimento Energético não relacionadas ao setor elétrico.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2516889",
-          "relator": "Joaquim Passarinho",
-          "stage": "Parecer do Relator, Dep. Joaquim Passarinho (PL-PA), pela aprovação, com substitutivo."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas"
     },
     {
@@ -1817,71 +1286,7 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 07",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83069",
-      "items": [
-        {
-          "title": "PL 2373/2023",
-          "summary": "Dispõe sobre a Violência Obstétrica e Ginecológica na assistência à saúde da mulher no âmbito dos serviços públicos e privados de saúde.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2360347",
-          "relator": "Rogéria Santos",
-          "stage": "Parecer da Relatora, Dep. Rogéria Santos (REPUBLIC-BA), pela aprovação do PL 2373/23 e do PL 6204/25, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 2965/2021",
-          "summary": "Altera a Lei nº 9.656, de 3 de junho de 1998, para equiparar a filho do consumidor titular de plano privado de assistência à saúde seu enteado, bem como a criança ou o adolescente que seja por ele tutelado ou que, por determinação judicial, esteja sob sua guarda; e altera a Lei nº 8.213, de 24 de julho de 1991, para promover equiparação análoga em relação a filho do segurado do Regime Geral de Previdência Social (RGPS).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2354262",
-          "relator": "Laura Carneiro",
-          "stage": "Parecer da Relatora, Dep. Laura Carneiro (PSD-RJ), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 842/2020",
-          "summary": "Altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), e a Lei no 6.015, de 31 de dezembro de 1973 (Lei de Registros Públicos), para dispor sobre a averbação da exclusão, no registro civil, da filiação, bem como do sobrenome do genitor (a) que for condenado por crime de violência sexual, lesão corporal de natureza grave ou gravíssima ou de tortura cometidos contra seu filho (a).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2241736",
-          "relator": "Daniela do Waguinho",
-          "stage": ""
-        },
-        {
-          "title": "PL 3748/2024",
-          "summary": "Institui a \"Semana Nacional de Combate à Ludopatia e Proteção de Crianças e Adolescentes contra os Perigos dos Jogos de Azar\" e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2459446",
-          "relator": "Silvia Cristina",
-          "stage": ""
-        },
-        {
-          "title": "PL 4567/2024",
-          "summary": "Inclui na Lei nº 12.933, de 26 de dezembro de 2023, que “dispõe sobre o benefício do pagamento de meia-entrada para estudantes, idosos, pessoas com deficiência e jovens de 15 a 29 anos comprovadamente carentes em espetáculos artístico-culturais e esportivos”, gratuidade para crianças menores de três anos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2472801",
-          "relator": "Nely Aquino",
-          "stage": "Parecer da Relatora, Dep. Nely Aquino (PODE-MG), pela aprovação."
-        },
-        {
-          "title": "PL 4593/2024",
-          "summary": "Altera a Lei nº 6.015, de 31 de dezembro de 1973, Lei dos Registros Públicos, dispondo sobre a obrigatoriedade da comunicação de registro de nascimento sem identificação de paternidade à Defensoria Pública, ao Ministério Público e ao Conselho Tutelar.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2473157",
-          "relator": "Meire Serafim",
-          "stage": "Parecer da Relatora, Dep. Meire Serafim (UNIÃO-AC), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 4731/2024",
-          "summary": "Altera a Lei 8.069, de 13 de julho de 1990, que “dispõe sobre o Estatuto da Criança e do Adolescente e dá outras providências” para determinar prioridade de atendimento em unidades de saúde para crianças e adolescentes acompanhados por membro do Conselho Tutelar no exercício de suas funções.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2476609",
-          "relator": "Silvia Cristina",
-          "stage": "Parecer da Relatora, Dep. Silvia Cristina (PP-RO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 3597/2025",
-          "summary": "Dispõe sobre diretrizes nacionais para a atuação dos Conselhos Tutelares nos casos de violência sexual contra crianças e adolescentes associada à fome ou extrema vulnerabilidade social.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2538305",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 128/2026",
-          "summary": "Altera a da Lei nº \t13.756, de 12 de dezembro de 2018, para destinar percentual do produto da arrecadação dos operadores da loteria de apostas de quota fixa para o Fundo Nacional de Assistência Social - FNAS.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2600299",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com emendas."
-        }
-      ],
+      "items": [],
       "note": "Discussão e votação de propostas legislativas\r\n Deliberação das Indicações de Beneficiários às programações da LOA - Emendas da Comissão RP-8"
     },
     {
@@ -1990,50 +1395,26 @@
       "note": "IV Colóquio Franco-Brasileiro de Direito Constitucional\r\n A Câmara dos Deputados promoverá o IV Colóquio Franco-Brasileiro de Direito Constitucional, que reunirá conferencistas para debater os desafios e consensos que moldarão o futuro do Direito Constitucional.\r\nDe caráter acadêmico, o evento reunirá professores, juristas, diplomatas, consultores legislativos e especialistas brasileiros e franceses para o debate de temas relacionados ao Direito Constitucional, ao constitucionalismo comparado, ao controle de constitucionalidade, à justiça constitucional e às relações entre Brasil e França.\r\nO evento será transmitido pelo canal da Câmara no YouTube, e os inscritos terão direito a certificado de participação."
     },
     {
+      "id": "camara-83128",
+      "house": "camara",
+      "date": "2026-10-29",
+      "time": "09:49",
+      "title": "Eventos — Reunião Técnica",
+      "status": "Convocada",
+      "place": "Anexo II, Plenário 08",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83128",
+      "items": [],
+      "note": "Dualidade Judicial da Reforma Tributária"
+    },
+    {
       "id": "senado-14997",
       "house": "senado",
       "date": "2026-10-29",
       "time": "10:00",
       "title": "Frente Parlamentar pela Paz Mundial — 2ª Reunião",
-      "status": "Agendada",
+      "status": "Realizada",
       "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 2",
       "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/14997",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-10-29-0",
-      "house": "cmsp",
-      "date": "2026-10-29",
-      "time": "12:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Extraordinária de Defesa dos Direitos da Criança, do Adolescente e da Juventude",
-      "status": "Prevista",
-      "place": "Sala Tiradentes (8º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "alesp-2026-10-29-1",
-      "house": "alesp",
-      "date": "2026-10-29",
-      "time": "14:00",
-      "title": "162ª Sessão Ordinária - Expediente",
-      "status": "Prevista",
-      "place": "Plenário Juscelino Kubitschek",
-      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-10-29-1",
-      "house": "cmsp",
-      "date": "2026-10-29",
-      "time": "14:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Trânsito, Transporte, Mobilidade Urbana e Atividade Econômica",
-      "status": "Prevista",
-      "place": "Auditório Prestes Maia (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
       "items": [],
       "note": ""
     },
@@ -2043,21 +1424,9 @@
       "date": "2026-10-29",
       "time": "15:00",
       "title": "Comissão de Direitos Humanos e Legislação Participativa — 6º Evento",
-      "status": "Agendada",
+      "status": "Realizada",
       "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 6",
       "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15001",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-10-29-2",
-      "house": "cmsp",
-      "date": "2026-10-29",
-      "time": "16:30",
-      "title": "Reunião da Comissão Especial com Objetivo de Emitir Parecer sobre Denúncia contra o Prefeito do Município de São Paulo - RPP 11/2026",
-      "status": "Prevista",
-      "place": "Plenário 1º de Maio (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
       "items": [],
       "note": ""
     },
@@ -2084,6 +1453,42 @@
       "source_url": "https://www.saopaulo.sp.leg.br/blog/camara-de-sp-aprova-46-projetos-em-sessao-virtual/",
       "items": [],
       "note": "Encerrada em28/10 às19h:46 aprovados,9 retirados e1 pendente. Resultado informado no portal da Câmara."
+    },
+    {
+      "id": "alesp-2026-10-30-0",
+      "house": "alesp",
+      "date": "2026-10-30",
+      "time": "08:00",
+      "title": "CANCELADO Sessão Solene de Entrega de Colar de Honra ao Mérito à Associação Industriais de Panificação",
+      "status": "Cancelada",
+      "place": "Salão dos Espelhos",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "alesp-2026-10-30-1",
+      "house": "alesp",
+      "date": "2026-10-30",
+      "time": "13:00",
+      "title": "CANCELADO Seminários DBAH - Crianças no ambiente digital",
+      "status": "Cancelada",
+      "place": "Auditório Teotônio Vilela",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "alesp-2026-10-30-2",
+      "house": "alesp",
+      "date": "2026-10-30",
+      "time": "18:30",
+      "title": "CANCELADO Sessão Solene em Homenagem ao Grupo Calebe",
+      "status": "Cancelada",
+      "place": "Salão dos Espelhos",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
+      "items": [],
+      "note": ""
     }
   ],
   "results": [

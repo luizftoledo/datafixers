@@ -1,5 +1,195 @@
 [
   {
+    "status_label": "Aprovado em comissão",
+    "trigger_date": "2026-10-28",
+    "id": "2026-10-30-comissao-aprova-projeto-de-bacelar-para-incluir-casais-gays-e-mulheres-trans-na-lei-maria-da-penha",
+    "house": "camara",
+    "published_at": "2026-10-30T08:34:20.623884+00:00",
+    "proposal": "PL 891/2025",
+    "title": "Comissão aprova projeto de Bacelar para incluir casais gays e mulheres trans na Lei Maria da Penha",
+    "topic": "Direitos civis",
+    "reading_minutes": 4,
+    "kind": "daily",
+    "edition_date": "2026-10-30",
+    "subtitle": "STF já reconheceu a proteção em 2025; proposta explicita alcance na lei e ainda precisa passar por outras etapas no Congresso.",
+    "politicians": [
+      {
+        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
+        "party": "PV",
+        "name": "Bacelar",
+        "uf": "BA",
+        "sources": [
+          {
+            "title": "Câmara: biografia e trajetória de Bacelar",
+            "url": "https://www.camara.leg.br/deputados/69871/biografia"
+          }
+        ],
+        "role": "Autor do projeto"
+      },
+      {
+        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
+        "party": "PSOL",
+        "name": "Célia Xakriabá",
+        "uf": "MG",
+        "sources": [
+          {
+            "title": "Câmara: biografia de Célia Xakriabá",
+            "url": "https://www.camara.leg.br/deputados/206018/biografia"
+          },
+          {
+            "title": "Parecer ao PL 891/2025",
+            "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
+          }
+        ],
+        "role": "Relatora na Comissão de Direitos Humanos"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A Comissão de Direitos Humanos da Câmara aprovou na quarta-feira (28) um projeto de Bacelar (PV-BA) para escrever na Lei Maria da Penha que a proteção alcança casais homoafetivos, inclusive de homens, e relações que envolvam travestis e mulheres transexuais. O texto exige que fatores do contexto coloquem a vítima em posição de subordinação dentro da relação.",
+        "source_ids": [
+          "S3",
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O avanço do PL 891/2025 não inaugura essa proteção. Em fevereiro de 2025, o Supremo Tribunal Federal já havia decidido que a lei pode alcançar esses grupos, reconhecendo a omissão do Congresso. A proposta procura levar essa previsão ao texto legal. Ainda precisa passar pela Comissão de Constituição e Justiça e pelo Senado antes de poder virar lei.",
+        "source_ids": [
+          "S4",
+          "S2",
+          "S6"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O parecer aprovado é de Célia Xakriabá (PSOL-MG), favorável ao projeto de Bacelar. A relatora argumenta que a medida concretiza os princípios da igualdade e da não discriminação, sem abandonar a proteção das mulheres que orienta a Lei Maria da Penha. A decisão desta semana aprova o parecer na comissão; não é aprovação final do Congresso nem sanção presidencial. O parecer registra que não havia emendas ao final do prazo regimental e recomenda a aprovação, sem apresentar um substitutivo. A comissão analisou o mérito relativo aos direitos humanos e às minorias.",
+        "source_ids": [
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "O projeto altera o parágrafo único do artigo 5º, que trata das relações abrangidas pela lei. A redação pretendida explicita os casais e as pessoas protegidas e mantém a condição ligada à posição de subalternidade da vítima. Quem busca proteção contra violência doméstica não deve interpretar a tramitação como sinal de que o reconhecimento judicial de 2025 deixou de existir.",
+        "source_ids": [
+          "S1",
+          "S4"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que o STF já decidiu",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "No Mandado de Injunção 7452, provocado pela Associação Brasileira de Famílias HomoTransAfetivas, o STF reconheceu, por unanimidade, a omissão legislativa. O julgamento terminou em 21 de fevereiro de 2025. Segundo o tribunal, a existência de projetos em tramitação não eliminava essa omissão.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Moraes fundamentou a decisão no dever estatal de proteger as diferentes famílias. Para homens em relações homoafetivas, destacou a subordinação da vítima; para travestis e mulheres transexuais, a identidade social feminina. Essa fundamentação é de 2025.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Zanin, Mendonça e Fachin fizeram uma ressalva: admitiram medidas protetivas de urgência para homens em relacionamentos homoafetivos, mas afastaram sanções penais cujo tipo pressupõe vítima mulher. Acesso à proteção e aplicação de todos os crimes são questões distintas.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "votes",
+        "text": "O registro de votação de 28 de outubro informa a aprovação do parecer e identifica o projeto afetado, mas não traz nele uma lista de votos individuais. O Atlas Público já havia noticiado a deliberação como simbólica. Esse dado não permite dizer que cada integrante da comissão votou a favor, contra ou esteve ausente.",
+        "source_ids": [
+          "S3",
+          "S5"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Bacelar é administrador e deputado pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. Célia Xakriabá, professora e deputada por Minas Gerais no mandato de 2023 a 2027, atua pelo PSOL e é a relatora, não a autora da proposta.",
+        "source_ids": [
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "O projeto tramita em caráter conclusivo nas comissões, em regime ordinário. A análise na CCJ ainda é uma etapa necessária na Câmara. A aprovação de outubro sucede a apresentação da proposta em março de 2025 e do parecer em novembro daquele ano; essas datas anteriores não devem ser confundidas com a deliberação ocorrida agora.",
+        "source_ids": [
+          "S2",
+          "S1",
+          "S3"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2865056",
+        "title": "PL 891/2025: texto inicial",
+        "kind": "primary",
+        "published_date": "2025-03-11"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908",
+        "title": "Parecer de Célia Xakriabá ao PL 891/2025",
+        "kind": "primary",
+        "published_date": "2025-11-25"
+      },
+      {
+        "id": "S3",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2486460-21",
+        "title": "Câmara: votação do parecer de 28/10/2026",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S4",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-amplia-protecao-da-lei-maria-da-penha-a-casais-homoafetivos-do-sexo-masculino-travestis-e-transexuais/",
+        "title": "STF: decisão no MI 7452 e fundamentos, 24/02/2025",
+        "kind": "primary",
+        "published_date": "2025-02-24"
+      },
+      {
+        "id": "S5",
+        "url": "https://atlaspublico.com.br/camara/noticias/comissao-de-direitos-humanos-aprova-parecer-favoravel-a-95727",
+        "title": "Atlas Público: aprovação já noticiada em 28/10/2026",
+        "kind": "press",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S6",
+        "url": "https://www.camara.leg.br/noticias/1157473-projeto-estende-lei-maria-da-penha-a-casais-homoafetivos-masculinos/",
+        "title": "Agência Câmara: proposta já noticiada em 06/02/2026",
+        "kind": "primary",
+        "published_date": "2026-02-06"
+      },
+      {
+        "id": "S7",
+        "url": "https://www.camara.leg.br/deputados/69871/biografia",
+        "title": "Biografia de Bacelar, consulta em 30/10/2026",
+        "kind": "primary",
+        "published_date": ""
+      },
+      {
+        "id": "S8",
+        "url": "https://www.camara.leg.br/deputados/206018/biografia",
+        "title": "Biografia de Célia Xakriabá, consulta em 30/10/2026",
+        "kind": "primary",
+        "published_date": ""
+      }
+    ]
+  },
+  {
     "proposal": "PL 736/2026",
     "status_label": "Aprovado em primeiro turno",
     "id": "2026-10-29-projeto-de-nunes-avanca-para-viabilizar-reassentamento-de-890-familias-na-zona-leste",
@@ -14,10 +204,10 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "uf": "SP",
         "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "party": "MDB",
-        "role": "Autor da proposta — Executivo municipal",
+        "name": "Ricardo Nunes",
+        "uf": "SP",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -28,7 +218,7 @@
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
         ],
-        "name": "Ricardo Nunes"
+        "role": "Autor da proposta — Executivo municipal"
       }
     ],
     "blocks": [
@@ -159,10 +349,10 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "uf": "AP",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "party": "PDT",
-        "role": "Autor do projeto",
+        "name": "Dorinaldo Malafaia",
+        "uf": "AP",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -173,7 +363,7 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "name": "Dorinaldo Malafaia"
+        "role": "Autor do projeto"
       }
     ],
     "blocks": [
@@ -326,17 +516,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "uf": "DF",
         "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "party": "Republicanos",
-        "role": "Presidente da subcomissão na audiência",
+        "name": "Damares Alves",
+        "uf": "DF",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "name": "Damares Alves"
+        "role": "Presidente da subcomissão na audiência"
       }
     ],
     "blocks": [
@@ -451,43 +641,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "role": "Parlamentar citado",
+        "name": "Pr. Marco Feliciano",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "name": "Pr. Marco Feliciano"
+        "role": "Parlamentar citado"
       },
       {
-        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "role": "Parlamentar citado",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "name": "Luiz Philippe de Orleans e Bragança"
+        "role": "Parlamentar citado"
       },
       {
-        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "party": "PL",
-        "role": "Parlamentar citado",
+        "name": "Missionário José Olimpio",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "name": "Missionário José Olimpio"
+        "role": "Parlamentar citado"
       }
     ],
     "blocks": [
