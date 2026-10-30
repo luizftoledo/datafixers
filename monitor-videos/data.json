@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T15:13:29+00:00",
+  "generatedAt": "2026-10-30T15:02:40+00:00",
   "snapshots": [
     {
       "videoId": "youtube:QlunKw_CKPY",
@@ -15270,6 +15270,276 @@
       "title": "Os relatos de quem teve post político bloqueado no Instagram nestas eleições",
       "views": 100858,
       "likes": 6485,
+      "comments": 429,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:QlunKw_CKPY",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Has an AI grandma impacted Brazil’s election? - Global Eye, BBC World Service",
+      "views": 25568,
+      "likes": 228,
+      "comments": 23,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:SkX6MKU9gAQ",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "A curiosa linha do tempo da evolução da Inteligência Artificial",
+      "views": 854378,
+      "likes": 21492,
+      "comments": 303,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:r5Ihpa2DQIg",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "The fake alcohol killing people in Brazil - What in the World podcast, BBC World Service",
+      "views": 19635,
+      "likes": 461,
+      "comments": 38,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:65AnDszCevA",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Por que cada vez mais analistas falam em 'bolha' da inteligência artificial prestes a estourar",
+      "views": 318752,
+      "likes": 14150,
+      "comments": 475,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:Nl5eRXVkW9Y",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Brasileira conta à BBC como foi aliciada para Epstein em São Paulo",
+      "views": 45165,
+      "likes": 1689,
+      "comments": 46,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M46TWtihWMs",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Os deepfakes que tentam te enganar - e gerar dinheiro | Eleições 2026",
+      "views": 200609,
+      "likes": 3704,
+      "comments": 163,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HEwY0WKeKjc",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "ChatGPT: o que você não vê",
+      "views": 665857,
+      "likes": 36431,
+      "comments": 1261,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:RhHz-bizvs0",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Como redes sociais estão influenciando ida de jovens para o tráfico",
+      "views": 59693,
+      "likes": 2955,
+      "comments": 210,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:CzK178HYEB8",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Brasil poderia imitar política de detenção em massade Bukele?",
+      "views": 88768,
+      "likes": 4525,
+      "comments": 996,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:ZPbhHhE22uY",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Os médicos falsos feitos por IA que viralizam entre idosos no Brasil",
+      "views": 86332,
+      "likes": 4916,
+      "comments": 401,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:urDaCInPdvY",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Investigations with public records: Presenting Data Fixers at the GIJC",
+      "views": 65,
+      "likes": 0,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rqvT39YIsP0",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Entrevista com Luiz Fernando Toledo, diretor da Abraji e cofundador da Fiquem Sabendo",
+      "views": 1316,
+      "likes": 13,
+      "comments": 0,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:dw5q9ZXMaWE",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Data Fixers presentation - #FilLisbon 2022",
+      "views": 116,
+      "likes": 1,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PP8bv7osKMo",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "E Tem Mais: Piratas do ar - 06/07",
+      "views": 778,
+      "likes": 31,
+      "comments": 2,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:-hXN1-wq8Kk",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Aula 7 – Como usar ferramentas de IA para apoiar o jornalismo de educação",
+      "views": 716,
+      "likes": 71,
+      "comments": 1,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:4NTyfMsgtY4",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "⚠️🥃 Como funciona a venda de lacres falsos, tampas e garrafas de bebidas alcoólicas no Facebook",
+      "views": 161781,
+      "likes": 9501,
+      "comments": 572,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:HNGaWGIAnso",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "⚠️🤖⁠ Como não deixar o ChatGPT atrapalhar seus estudos",
+      "views": 25740,
+      "likes": 2262,
+      "comments": 83,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:rTybgh71xFU",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "🦫 🤳🏻 Os influencers que ganham fama exibindo animais selvagens como pets",
+      "views": 27118,
+      "likes": 1481,
+      "comments": 110,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:3KnxcFxVcF0",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Tarifaço prejudica Estados 'bolsonaristas' 📈",
+      "views": 26371,
+      "likes": 2593,
+      "comments": 216,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:PZBbBkKNAxk",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Quem é Dona Maria, a personagem de IA que viraliza falando mal de Lula e do STF",
+      "views": 116259,
+      "likes": 5215,
+      "comments": 852,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:0KVyLHjj1Fs",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Ibama X influenciadora: a briga na Justiça pela guarda da jaguatirica Pituca 🐯⚠️",
+      "views": 199608,
+      "likes": 14843,
+      "comments": 809,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:QcZqdD7_gLA",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Entrevista de emprego feita por IA? 💼📲",
+      "views": 82312,
+      "likes": 5906,
+      "comments": 339,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:gGn1hGMyKt0",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Os bilionários que aparecem nos novos arquivos do caso Epstein — e qual era a atuação dele no Brasil",
+      "views": 348403,
+      "likes": 8894,
+      "comments": 478,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:M-Z_CBMsC9k",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Dá para identificar texto gerado por inteligência artificial?",
+      "views": 139785,
+      "likes": 8474,
+      "comments": 242,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:EbfqG95jozQ",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Peixe gigante da Amazônia vira bolsa de luxo de $ 8 mil. Quanto ganham os pescadores? 🎣💰",
+      "views": 92178,
+      "likes": 7119,
+      "comments": 484,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:tzmMq7WpeUc",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Demitido do Itaú por produtividade baixa no home office: 'Trabalhei sete dias seguidos' 💻🔍",
+      "views": 463217,
+      "likes": 25480,
+      "comments": 1578,
+      "source": "YouTube Data API"
+    },
+    {
+      "videoId": "youtube:IWf9OBAuDXc",
+      "date": "2026-10-30",
+      "collectedAt": "2026-10-30T15:02:40+00:00",
+      "title": "Os relatos de quem teve post político bloqueado no Instagram nestas eleições",
+      "views": 100908,
+      "likes": 6486,
       "comments": 429,
       "source": "YouTube Data API"
     }
@@ -42976,6 +43246,16 @@
       "baseline": false
     },
     {
+      "id": "youtube:Ugwzd0A8-TMTrpllf4l4AaABAg",
+      "videoId": "youtube:4NTyfMsgtY4",
+      "text": "Que surpresa a Meta passar pano pra crimes onlines, mesmo os explícitos.... \nEnquanto estiver lucrando e ninguém denunciou publicamente, tá tudo certo ,\"sou apenas um divulgador inocente não posso ser incriminado só por saber que o crime está acontecendo\"...",
+      "author": "@MrBumcleaver",
+      "publishedAt": "2025-10-06T23:19:19Z",
+      "url": "https://www.youtube.com/watch?v=4NTyfMsgtY4&lc=Ugwzd0A8-TMTrpllf4l4AaABAg",
+      "firstSeen": "2026-10-30",
+      "baseline": false
+    },
+    {
       "id": "youtube:UgwLvNq6TTJt3hYg3OB4AaABAg",
       "videoId": "youtube:0KVyLHjj1Fs",
       "text": "Bem, eu tô do lado do Ibama. Pessoal tem que entender que animal silvestre não é Pet!!!!",
@@ -54584,6 +54864,16 @@
       "url": "https://www.youtube.com/watch?v=EbfqG95jozQ&lc=Ugw-Th_ijuQYjiQ0zFh4AaABAg",
       "firstSeen": "2026-09-25",
       "baseline": true
+    },
+    {
+      "id": "youtube:UgzvcODTpiWmyrTwSgF4AaABAg",
+      "videoId": "youtube:EbfqG95jozQ",
+      "text": "É o problema da ganância pelo lucro .\nQuando entrar em extinção e a natureza cobrar o preço , todos vão aprender algo .",
+      "author": "@josemariopereiradias5370",
+      "publishedAt": "2025-08-21T23:43:42Z",
+      "url": "https://www.youtube.com/watch?v=EbfqG95jozQ&lc=UgzvcODTpiWmyrTwSgF4AaABAg",
+      "firstSeen": "2026-10-30",
+      "baseline": false
     },
     {
       "id": "youtube:UgxOX4vb-zR-o6FLXpx4AaABAg",
