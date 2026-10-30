@@ -5,3 +5,5 @@
 @media(max-width:850px){.award-row{grid-template-columns:1fr}}
 
 .hero-copy .dek a,.timeline p a{color:inherit;text-decoration:underline;text-underline-offset:3px}.reporting-cases .impact-grid article{border-top:2px solid var(--blue)}.reporting-cases h3{line-height:1.2}.site-header nav{flex-wrap:wrap;gap:12px 20px}@media(max-width:600px){.site-header{height:auto;min-height:76px;gap:14px;padding-top:14px;padding-bottom:14px}.site-header nav{justify-content:flex-end;gap:8px 12px}}
+
+.reporting-cases .impact-grid{background:transparent;gap:22px}.reporting-cases .impact-grid article{background:var(--cream);border:1px solid var(--line);border-top:2px solid var(--blue);padding:28px}.reporting-cases .impact-grid h3{color:var(--ink);margin-top:0}.reporting-cases .impact-grid p{color:var(--muted)}.reporting-cases .impact-grid a{color:var(--blue)}
