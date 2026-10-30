@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://datafixers.org/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/index_pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datafixers.org/" />
+  </url>
+  <url>
+    <loc>https://datafixers.org/index_pt.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/index_pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datafixers.org/" />
+  </url>
+  <url>
+    <loc>https://datafixers.org/como-foram-eleitos/</loc>
+  </url>
+  <url>
+    <loc>https://datafixers.org/monitor-videos/</loc>
+  </url>
+  <url>
+    <loc>https://datafixers.org/a_lai_que_pegou/</loc>
+  </url>
+  <url>
+    <loc>https://datafixers.org/ia-para-experimentar-junto/</loc>
+  </url>
+</urlset>

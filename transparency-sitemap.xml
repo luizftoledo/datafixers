@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://datafixers.org/transparency/</loc><lastmod>2026-10-30</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/"/></url><url><loc>https://datafixers.org/transparencia/</loc><lastmod>2026-10-30</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/"/></url>
+  <url>
+    <loc>https://datafixers.org/transparency/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/" />
+  </url>
+  <url>
+    <loc>https://datafixers.org/transparencia/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/" />
+  </url>
+  <url>
+    <loc>https://datafixers.org/transparency/methodology.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/methodology.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/metodologia.html" />
+  </url>
+  <url>
+    <loc>https://datafixers.org/transparencia/metodologia.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/methodology.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/metodologia.html" />
+  </url>
 </urlset>

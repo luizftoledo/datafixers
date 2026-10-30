@@ -5,3 +5,5 @@ Sitemap: https://datafixers.org/legislativo/sitemap.xml
 Sitemap: https://datafixers.org/legislativo/news-sitemap.xml
 
 Sitemap: https://datafixers.org/transparency-sitemap.xml
+
+Sitemap: https://datafixers.org/sitemap.xml

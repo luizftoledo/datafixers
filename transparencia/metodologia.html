@@ -2,16 +2,34 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Metodologia do ranking — Data Fixers</title>
+  <title>Ranking de requerentes da LAI: metodologia | Luiz Fernando Toledo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="/assets/course-banner.js?v=20261028-course3" data-df-course-loader></script>
+
+  <meta name="description" content="Fontes, identificação do requerente, cálculo e limites do ranking de pedidos de informação ao governo federal entre 2012 e 2026.">
+  <link rel="canonical" href="https://datafixers.org/transparencia/metodologia.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:title" content="Ranking de requerentes da LAI: metodologia | Luiz Fernando Toledo">
+  <meta property="og:description" content="Fontes, identificação do requerente, cálculo e limites do ranking de pedidos de informação ao governo federal entre 2012 e 2026.">
+  <meta property="og:url" content="https://datafixers.org/transparencia/metodologia.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Data Fixers">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://luizftoledo.github.io/images/luiz-fernando-toledo.jpg">
+  <meta property="og:image:alt" content="Luiz Fernando Toledo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ranking de requerentes da LAI: metodologia | Luiz Fernando Toledo">
+  <meta name="twitter:description" content="Fontes, identificação do requerente, cálculo e limites do ranking de pedidos de informação ao governo federal entre 2012 e 2026.">
+  <meta name="twitter:image" content="https://luizftoledo.github.io/images/luiz-fernando-toledo.jpg">
+  <link rel="alternate" hreflang="en" href="https://datafixers.org/transparency/methodology.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://datafixers.org/transparencia/metodologia.html">
 </head>
 <body>
   <header class="site-header"><a class="brand" href="/index_pt.html"><img src="../images/datafixers_logo.svg" alt="Data Fixers"></a><nav><a href="index.html">Voltar à página</a><a href="../transparency/methodology.html" lang="en">EN</a></nav></header>
   <main><article class="section" style="max-width:900px">
-    <p class="eyebrow">METODOLOGIA</p><h2>Ranking de requerentes de informação</h2>
+    <p class="eyebrow">METODOLOGIA</p><h1 style="font:600 clamp(2.2rem,5vw,4rem)/1.1 Georgia,serif">Ranking de requerentes de informação</h1>
     <p><strong>Fonte.</strong> Arquivos anuais “Dados dos pedidos de acesso à informação e solicitantes”, publicados pela Controladoria-Geral da União na página Dados Abertos — LAI da Plataforma Fala.BR.</p>
     <p><strong>Unidade.</strong> Cada linha corresponde a um protocolo. Removemos eventuais duplicidades de protocolo dentro de cada arquivo anual e contamos os registros por <code>IdSolicitante</code>, identificador único disponibilizado pela própria CGU.</p>
     <p><strong>Anonimato.</strong> Registros com <code>IdSolicitante=0</code> ou identificador vazio não podem ser atribuídos a uma pessoa. Eles entram no total de pedidos, mas não no ranking. Por isso, o resultado se refere aos <em>requerentes identificáveis</em>, e não a todos os requerentes.</p>
