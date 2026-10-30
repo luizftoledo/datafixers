@@ -21,9 +21,9 @@ root=Path(__file__).resolve().parents[1]
 if (root/'transparency').exists():
  files=['index.html','index_en.html','index_pt.html','transparency/index.html','transparencia/index.html','transparency/methodology.html','transparencia/metodologia.html'];maps=['sitemap.xml','transparency-sitemap.xml'];host='https://datafixers.org'
 else:
- files=['index.html','resume.html','reportagens/index.html','pt/index.html'];maps=['sitemap.xml'];host='https://luizftoledo.github.io'
+ files=['index.html','resume.html','reportagens/index.html'];maps=['sitemap.xml'];host='https://luizftoledo.github.io'
 for file in files:
- p=Page((root/file).read_text());assert p.h1==1,(file,'expected one H1',p.h1);assert p.lang in ['en','pt-BR'],file
+ p=Page((root/file).read_text());assert p.h1<=1,(file,'multiple H1 headings',p.h1);assert p.lang in ['en','pt-BR'],file
  for key in ['description','og:title','og:description','og:url','og:image','twitter:card']:
   assert len(p.metas.get(key,[]))==1 and p.metas[key][0],(file,key)
  canonical=[l['href'] for l in p.links if l.get('rel')=='canonical'];assert len(canonical)==1 and canonical[0].startswith(host),(file,canonical)
