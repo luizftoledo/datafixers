@@ -9,28 +9,27 @@
     "title": "Comissão aprova projeto de Bacelar para incluir casais gays e mulheres trans na Lei Maria da Penha",
     "topic": "Direitos civis",
     "reading_minutes": 4,
-    "kind": "daily",
+    "kind": "context",
     "edition_date": "2026-10-30",
     "subtitle": "STF já reconheceu a proteção em 2025; proposta explicita alcance na lei e ainda precisa passar por outras etapas no Congresso.",
     "politicians": [
       {
-        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
-        "party": "PV",
         "name": "Bacelar",
-        "uf": "BA",
+        "role": "Autor do projeto",
+        "party": "PV",
         "sources": [
           {
             "title": "Câmara: biografia e trajetória de Bacelar",
             "url": "https://www.camara.leg.br/deputados/69871/biografia"
           }
         ],
-        "role": "Autor do projeto"
+        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
+        "uf": "BA"
       },
       {
-        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
-        "party": "PSOL",
         "name": "Célia Xakriabá",
-        "uf": "MG",
+        "role": "Relatora na Comissão de Direitos Humanos",
+        "party": "PSOL",
         "sources": [
           {
             "title": "Câmara: biografia de Célia Xakriabá",
@@ -41,7 +40,8 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
           }
         ],
-        "role": "Relatora na Comissão de Direitos Humanos"
+        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
+        "uf": "MG"
       }
     ],
     "blocks": [
@@ -204,10 +204,9 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "party": "MDB",
         "name": "Ricardo Nunes",
-        "uf": "SP",
+        "role": "Autor da proposta — Executivo municipal",
+        "party": "MDB",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -218,7 +217,8 @@
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
         ],
-        "role": "Autor da proposta — Executivo municipal"
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "uf": "SP"
       }
     ],
     "blocks": [
@@ -349,10 +349,9 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "party": "PDT",
         "name": "Dorinaldo Malafaia",
-        "uf": "AP",
+        "role": "Autor do projeto",
+        "party": "PDT",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -363,7 +362,8 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "role": "Autor do projeto"
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "uf": "AP"
       }
     ],
     "blocks": [
@@ -516,17 +516,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "party": "Republicanos",
         "name": "Damares Alves",
-        "uf": "DF",
+        "role": "Presidente da subcomissão na audiência",
+        "party": "Republicanos",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "role": "Presidente da subcomissão na audiência"
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "uf": "DF"
       }
     ],
     "blocks": [
@@ -641,43 +641,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
         "name": "Pr. Marco Feliciano",
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "role": "Parlamentar citado"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
         "name": "Luiz Philippe de Orleans e Bragança",
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "role": "Parlamentar citado"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "party": "PL",
         "name": "Missionário José Olimpio",
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "role": "Parlamentar citado"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "uf": "SP"
       }
     ],
     "blocks": [
@@ -946,10 +946,9 @@
     ],
     "politicians": [
       {
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "party": "PL",
         "name": "Magno Malta",
-        "uf": "ES",
+        "role": "Autor do projeto",
+        "party": "PL",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -960,13 +959,13 @@
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
         ],
-        "role": "Autor do projeto"
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
+        "uf": "ES"
       },
       {
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "party": "PL",
         "name": "Jorge Seif",
-        "uf": "SC",
+        "role": "Relator na CDH",
+        "party": "PL",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -977,7 +976,8 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
         ],
-        "role": "Relator na CDH"
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
+        "uf": "SC"
       }
     ]
   }
