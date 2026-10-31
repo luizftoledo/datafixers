@@ -15,29 +15,29 @@
     "politicians": [
       {
         "party": "PL",
+        "name": "Gil Diniz Bolsonaro",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "role": "Autor do projeto",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "uf": "SP",
-        "name": "Gil Diniz Bolsonaro",
-        "role": "Autor do projeto"
+        ]
       },
       {
         "party": "PP",
+        "name": "Delegado Olim",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP",
-        "name": "Delegado Olim",
-        "role": "Relator na CCJR"
+        ]
       }
     ],
     "blocks": [
@@ -274,6 +274,10 @@
     "politicians": [
       {
         "party": "MDB",
+        "name": "Ricardo Nunes",
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "role": "Autor da proposta — Executivo municipal",
+        "uf": "SP",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -283,11 +287,7 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ],
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "uf": "SP",
-        "name": "Ricardo Nunes",
-        "role": "Autor da proposta — Executivo municipal"
+        ]
       }
     ],
     "blocks": [
@@ -419,6 +419,10 @@
     "politicians": [
       {
         "party": "PDT",
+        "name": "Dorinaldo Malafaia",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "role": "Autor do projeto",
+        "uf": "AP",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -428,11 +432,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "uf": "AP",
-        "name": "Dorinaldo Malafaia",
-        "role": "Autor do projeto"
+        ]
       }
     ],
     "blocks": [
@@ -586,16 +586,16 @@
     "politicians": [
       {
         "party": "Republicanos",
+        "name": "Damares Alves",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "role": "Presidente da subcomissão na audiência",
+        "uf": "DF",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ],
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "uf": "DF",
-        "name": "Damares Alves",
-        "role": "Presidente da subcomissão na audiência"
+        ]
       }
     ],
     "blocks": [
@@ -711,42 +711,42 @@
     "politicians": [
       {
         "party": "PL",
+        "name": "Pr. Marco Feliciano",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "name": "Pr. Marco Feliciano",
-        "role": "Parlamentar citado"
+        ]
       },
       {
         "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "role": "Parlamentar citado"
+        ]
       },
       {
         "party": "PL",
+        "name": "Missionário José Olimpio",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP",
-        "name": "Missionário José Olimpio",
-        "role": "Parlamentar citado"
+        ]
       }
     ],
     "blocks": [
