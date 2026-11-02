@@ -35,3 +35,4 @@ footer .experiment-notice a{color:inherit;text-decoration:underline}
 @media(min-width:1001px){.front-card:nth-child(-n+2) h3{font-size:21px}.front-card:nth-child(-n+2) p{display:none}}
 @media(max-width:1000px) and (min-width:701px){.frontpage{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}.frontpage #stories{grid-column:1/-1;grid-row:auto;border-right:0;padding-right:0;border-bottom:1px solid var(--line)}}
 @media(max-width:700px){.frontpage{grid-template-columns:1fr;margin-top:16px;gap:0}.frontpage #stories{grid-column:1;grid-row:auto;padding-right:0;border-right:0;border-bottom:1px solid var(--ink)}.frontpage .lead h2{font-size:32px}.front-card{padding:22px 0}.front-card h3{font-size:23px}.front-card p{font-size:14px}.front-card time{font-size:11px}}
+.agenda-past{margin:10px 0 40px;border-top:1px solid var(--line);padding-top:18px}.agenda-past summary{cursor:pointer;font-weight:700;font-size:14px}.agenda-past .agenda-card{opacity:.7}

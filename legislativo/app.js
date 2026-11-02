@@ -27,3 +27,5 @@ $('#recent-list').innerHTML=previous.slice(0,8).map(a=>'<a class="front-card" hr
 $('#search').addEventListener('input',render);$('#clear').addEventListener('click',()=>{$('#search').value='';render();});
 fetch('frontpage.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{all=data;render();}).catch(()=>{if($('#stories .lead'))return;$('#stories').innerHTML='<section class="empty"><h2>Não foi possível carregar a edição.</h2><p>Atualize a página para tentar novamente.</p></section>';});
 })();
+
+(function(){const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo'}).format(new Date());const past=document.querySelector('[data-past]');document.querySelectorAll('[data-upcoming]').forEach(list=>{list.querySelectorAll('.agenda-card[data-date]').forEach(card=>{if(card.dataset.date<today){if(past)past.prepend(card);else card.remove();}});const empty=list.parentElement.querySelector('[data-upcoming-empty]');if(empty)empty.hidden=!!list.querySelector('.agenda-card');});})();

@@ -1,5 +1,281 @@
 [
   {
+    "topic": "Economia",
+    "trigger_date": "2026-10-28",
+    "subtitle": "Congresso deixou duas MPs caducarem e aprovou o conteúdo em seis dias, sem passar por comissões; emendas foram rejeitadas porque o prazo vencia no mesmo dia",
+    "id": "2026-11-02-parecer-do-senado-diz-que-pacote-da-cana-nao-afeta-despesas-o-da-camara-sobre-o-mesmo-texto-cita-ate",
+    "status_label": "Aprovado pelo Congresso; aguarda sanção",
+    "edition_date": "2026-11-02",
+    "reading_minutes": 5,
+    "published_at": "2026-11-02T14:30:25.430882+00:00",
+    "proposal": "PL 5649/2026",
+    "kind": "daily",
+    "title": "Parecer do Senado diz que pacote da cana não afeta despesas; o da Câmara, sobre o mesmo texto, cita até R$ 10,27 bilhões",
+    "house": "camara",
+    "politicians": [
+      {
+        "party": "Republicanos",
+        "uf": "PE",
+        "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
+        "sources": [
+          {
+            "title": "Câmara: histórico parlamentar de Augusto Coutinho",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160665/historico"
+          },
+          {
+            "title": "Câmara: justificação do PL 5.649/2026",
+            "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
+          }
+        ],
+        "role": "Autor do projeto",
+        "name": "Augusto Coutinho"
+      },
+      {
+        "party": "PP",
+        "uf": "PE",
+        "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
+        "sources": [
+          {
+            "title": "Câmara: histórico parlamentar de Lula da Fonte",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/220669/historico"
+          },
+          {
+            "title": "Câmara: parecer de plenário ao PL 5.649/2026",
+            "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
+          }
+        ],
+        "role": "Relator na Câmara",
+        "name": "Lula da Fonte"
+      },
+      {
+        "party": "PSD",
+        "uf": "PE",
+        "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
+        "sources": [
+          {
+            "title": "Senado: senadores em exercício",
+            "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/atual"
+          },
+          {
+            "title": "Senado: Parecer nº 210/2026-Plen",
+            "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
+          }
+        ],
+        "role": "Relator no Senado",
+        "name": "Fernando Dueire"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O Senado aprovou em 28 de outubro, no dia em que a Medida Provisória 1.374 perdia a validade, um projeto que repete o conteúdo dela e o de outra MP já vencida. O parecer do relator, Fernando Dueire (PSD-PE), afirma que a nova lei não produz efeitos diretos ou indiretos sobre receitas ou despesas da União. O parecer aprovado na Câmara na véspera, sobre o mesmo texto, registra outra conta: impacto de R$ 270 milhões com a subvenção aos produtores de cana do Nordeste e impacto orçamentário de até R$ 10 bilhões com o uso de dinheiro do fundo federal de ciência e tecnologia.",
+        "source_ids": [
+          "S8",
+          "S3",
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O PL 5.649/2026, de Augusto Coutinho (Republicanos-PE), foi apresentado na Câmara em 22 de outubro e chegou à Casa Civil para sanção em 29 de outubro. Somados o custo estimado da subvenção e os tetos das linhas de crédito, o texto autoriza até R$ 24,77 bilhões em 2026: R$ 12 por tonelada de cana entregue às usinas do Nordeste na safra 2025/2026, estimados em R$ 270 milhões, até R$ 10 bilhões do superávit do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) para crédito à compra de equipamentos agrícolas e até R$ 14,5 bilhões da União para financiar caminhões e ônibus pelo BNDES. O texto também permite usar o Fundo de Garantia à Exportação em seguro de crédito interno para o setor de aviação civil.",
+        "source_ids": [
+          "S4",
+          "S7",
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Os comunicados oficiais das duas casas trataram só de parte do pacote. A Agência Câmara informou o valor por tonelada, o impacto de R$ 270 milhões e os R$ 14,5 bilhões para a frota. O texto do Senado citou o auxílio, a frota e o fato de a MP 1.374 não ter sido analisada pela comissão mista do Congresso. Nenhum dos dois mencionou os R$ 10 bilhões do FNDCT.",
+        "source_ids": [
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Seis dias e nenhuma comissão",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A MP 1.374 é de 30 de junho. Pela justificação do próprio autor, o projeto existe porque o Congresso não votou a medida e ela ia perder a vigência. O relator na Câmara, Lula da Fonte (PP-PE), registrou que o texto também recupera um artigo da MP 1.353, de 30 de abril, que já estava sem eficácia desde 27 de agosto, segundo o Senado, citado pelo Estadão Conteúdo. É desse artigo que vem a linha de R$ 14,5 bilhões para a frota.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S12",
+          "S16"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto foi distribuído a cinco comissões da Câmara, mas não passou por nenhuma. Com a urgência, o relator deu o parecer direto no plenário, em nome de todas elas. No Senado, o relator também foi designado direto para o plenário. Dueire rejeitou as duas emendas apresentadas, que chamou de meritórias, e defendeu votar o texto como veio da Câmara para evitar uma lacuna entre o fim da MP, cujo prazo se encerrava naquele dia, e a vigência da nova lei. Uma, de Carlos Portinho (PL-RJ), estendia a subvenção a produtores de café e a municípios do Rio de Janeiro; a outra, de Zequinha Marinho (Podemos-PA), incluía máquinas florestais e rodoviárias na linha do FNDCT. O PL pediu destaque para votar a emenda de Portinho em separado e depois o retirou.",
+        "source_ids": [
+          "S4",
+          "S3",
+          "S7",
+          "S8",
+          "S9",
+          "S10"
+        ]
+      },
+      {
+        "type": "votes",
+        "text": "As votações foram simbólicas, sem registro de voto individual. Na Câmara, o plenário aprovou a urgência às 20h36 de 27 de outubro e o substitutivo do relator às 21h03. O Senado aprovou o texto sem mudanças em 28 de outubro.",
+        "source_ids": [
+          "S6",
+          "S5",
+          "S16",
+          "S7"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O dinheiro da ciência",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Nenhuma comissão das duas casas chegou a examinar o uso do FNDCT. Em moção aprovada em 30 de julho e divulgada em 28 de agosto, a Sociedade Brasileira para o Progresso da Ciência (SBPC) pediu ao Congresso que examinasse de forma específica e aprofundada a mudança feita pela MP 1.374 na lei do FNDCT. A entidade calculou que os R$ 10 bilhões superam em cerca de 13% os R$ 8,85 bilhões do plano de investimentos não reembolsáveis do fundo para 2026 e correspondem a cerca de 31% do plano reembolsável, de R$ 32,08 bilhões. Afirmou ainda que a medida não foi discutida com o Conselho Diretor do FNDCT e que o setor agropecuário dispõe de R$ 525,1 bilhões no Plano Safra 2026/2027 para a agricultura empresarial.",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A defesa do texto está nos pareceres. Lula da Fonte argumentou que os produtores de cana do Nordeste foram atingidos ao mesmo tempo por estiagem, queda do preço internacional do açúcar e a tarifa adicional de 50% dos Estados Unidos sobre o açúcar brasileiro. Sobre a frota, disse que a linha não concede subsídio nem subvenção com impacto nas contas federais. Dueire escreveu que a lei apenas autoriza programas que o Executivo já executa, sujeitos à disponibilidade de orçamento.",
+        "source_ids": [
+          "S3",
+          "S8"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, o fornecedor independente de cana do Nordeste que não é sócio da usina pode receber R$ 12 por tonelada entregue na safra 2025/2026, comprovada por nota fiscal; a expectativa é de 2.250 beneficiados, segundo o Estadão Conteúdo. Os R$ 10 bilhões do FNDCT viram empréstimo à Finep com juros equivalentes à TR e 15 anos para devolver ao fundo, e são repassados como crédito rural. Caminhoneiros autônomos, cooperados, microempreendedores e empresas de transporte podem financiar caminhões, ônibus e implementos novos de fabricação nacional; caminhões seminovos, só autônomos, MEIs e cooperados.",
+        "source_ids": [
+          "S1",
+          "S16"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "O texto aguarda sanção do presidente Lula, que pode vetar trechos. Depois, o pagamento da subvenção e as condições das linhas dependem de regulamento do Executivo e de normas do Conselho Monetário Nacional.",
+        "source_ids": [
+          "S7",
+          "S1"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186764",
+        "title": "Câmara: autógrafo do PL 5.649/2026 enviado ao Senado",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833",
+        "title": "Câmara: texto original e justificação do PL 5.649/2026",
+        "kind": "primary",
+        "published_date": "2026-10-22"
+      },
+      {
+        "id": "S3",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543",
+        "title": "Câmara: parecer de plenário do relator Lula da Fonte",
+        "kind": "primary",
+        "published_date": "2026-10-27"
+      },
+      {
+        "id": "S4",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2648807/tramitacoes",
+        "title": "Câmara: tramitação do PL 5.649/2026",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S5",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2648807-19",
+        "title": "Câmara: votação do substitutivo em plenário, 27/10",
+        "kind": "primary",
+        "published_date": "2026-10-27"
+      },
+      {
+        "id": "S6",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2648808-8",
+        "title": "Câmara: votação da urgência, 27/10",
+        "kind": "primary",
+        "published_date": "2026-10-27"
+      },
+      {
+        "id": "S7",
+        "url": "https://legis.senado.leg.br/dadosabertos/processo/9118102",
+        "title": "Senado: tramitação do PL 5.649/2026",
+        "kind": "primary",
+        "published_date": "2026-10-29"
+      },
+      {
+        "id": "S8",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73",
+        "title": "Senado: Parecer nº 210/2026-Plen, de Fernando Dueire",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S9",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/3f09d0c1-7e76-40df-8a92-4646e97e7af5",
+        "title": "Senado: emenda de Carlos Portinho",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S10",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/9ef97a6e-d48c-4153-b309-754924e2483f",
+        "title": "Senado: emenda de Zequinha Marinho",
+        "kind": "primary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S12",
+        "url": "https://legis.senado.leg.br/dadosabertos/processo?sigla=MPV&numero=1353&ano=2026",
+        "title": "Senado: situação da MP 1.353/2026",
+        "kind": "primary",
+        "published_date": "2026-08-27"
+      },
+      {
+        "id": "S13",
+        "url": "https://www.camara.leg.br/noticias/1314366-camara-aprova-apoio-financeiro-a-produtores-de-cana-de-acucar-no-nordeste",
+        "title": "Agência Câmara: aprovação do PL 5.649/2026, 27/10/2026",
+        "kind": "secondary",
+        "published_date": "2026-10-27"
+      },
+      {
+        "id": "S14",
+        "url": "https://www12.senado.leg.br/institucional/presidencia/consultarnoticia?noticia_id=senado-aprova-auxilio-a-produtores-de-cana-de-acucar-do-nordeste-e-amplia-adicional-de-fronteira-para-servidores",
+        "title": "Senado: aprovação do auxílio à cana, 28/10/2026",
+        "kind": "secondary",
+        "published_date": "2026-10-28"
+      },
+      {
+        "id": "S15",
+        "url": "https://portal.sbpcnet.org.br/noticias/sbpc-encaminha-mocao-sobre-a-destinacao-de-r-10-bilhoes-do-superavit-financeiro-do-fndct-a-linha-de-credito-rural/",
+        "title": "SBPC: moção sobre os R$ 10 bilhões do FNDCT, 28/08/2026",
+        "kind": "secondary",
+        "published_date": "2026-08-28"
+      },
+      {
+        "id": "S16",
+        "url": "https://eixos.com.br/combustiveis-e-bioenergia/biocombustiveis/senado-aprova-pl-com-subvencao-a-produtores-de-cana-de-acucar-do-nordeste-e-move-agricola/",
+        "title": "Estadão Conteúdo, via eixos: Senado aprova subvenção e Move Agrícola, 29/10/2026",
+        "kind": "secondary",
+        "published_date": "2026-10-29"
+      }
+    ]
+  },
+  {
     "title": "Parecer na Alesp a favor da Bíblia como material escolar não menciona decisões do STF e do TJ-MG sobre leis semelhantes",
     "reading_minutes": 5,
     "kind": "investigation",
@@ -15,29 +291,29 @@
     "politicians": [
       {
         "party": "PL",
-        "name": "Gil Diniz Bolsonaro",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "role": "Autor do projeto",
         "uf": "SP",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "role": "Autor do projeto",
+        "name": "Gil Diniz Bolsonaro"
       },
       {
         "party": "PP",
-        "name": "Delegado Olim",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "role": "Relator na CCJR",
         "uf": "SP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim"
       }
     ],
     "blocks": [
@@ -274,10 +550,8 @@
     "politicians": [
       {
         "party": "MDB",
-        "name": "Ricardo Nunes",
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "role": "Autor da proposta — Executivo municipal",
         "uf": "SP",
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -287,7 +561,9 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ]
+        ],
+        "role": "Autor da proposta — Executivo municipal",
+        "name": "Ricardo Nunes"
       }
     ],
     "blocks": [
@@ -419,10 +695,8 @@
     "politicians": [
       {
         "party": "PDT",
-        "name": "Dorinaldo Malafaia",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "role": "Autor do projeto",
         "uf": "AP",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -432,7 +706,9 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "role": "Autor do projeto",
+        "name": "Dorinaldo Malafaia"
       }
     ],
     "blocks": [
@@ -586,16 +862,16 @@
     "politicians": [
       {
         "party": "Republicanos",
-        "name": "Damares Alves",
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "role": "Presidente da subcomissão na audiência",
         "uf": "DF",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ]
+        ],
+        "role": "Presidente da subcomissão na audiência",
+        "name": "Damares Alves"
       }
     ],
     "blocks": [
@@ -711,42 +987,42 @@
     "politicians": [
       {
         "party": "PL",
-        "name": "Pr. Marco Feliciano",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "role": "Parlamentar citado",
+        "name": "Pr. Marco Feliciano"
       },
       {
         "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "role": "Parlamentar citado",
+        "name": "Luiz Philippe de Orleans e Bragança"
       },
       {
         "party": "PL",
-        "name": "Missionário José Olimpio",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "role": "Parlamentar citado",
         "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "role": "Parlamentar citado",
+        "name": "Missionário José Olimpio"
       }
     ],
     "blocks": [
@@ -856,15 +1132,26 @@
     ]
   },
   {
-    "id": "notas/sp-agenda-clima-orcamento-28out",
-    "title": "Câmara de SP prevê debate sobre clima no orçamento e sessões nesta quarta",
-    "subtitle": "A agenda da Câmara Municipal prevê, para 28 de outubro, audiência de Finanças e Orçamento sobre mudanças climáticas na proposta orçamentária de 2027, das 10 h às 12 h, no Auditório Prestes Maia.",
-    "house": "cmsp",
+    "id": "notas/senado-adicional-fronteira-mp1375",
+    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
+    "subtitle": "O Senado aprovou em 28 de outubro o projeto de lei de conversão da Medida Provisória 1.375/2026, relatado por Eduardo Gomes (PL-TO). O texto amplia as carreiras de servidores federais com direito à indenização paga a quem trabalha em localidades de fronteira, entre elas servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
+    "house": "senado",
     "topic": "Notas",
     "kind": "note",
-    "proposal": "PL 752/2026",
+    "proposal": "MPV 1375/2026",
     "edition_date": "2026-10-28",
     "published_at": "2026-10-28"
+  },
+  {
+    "id": "notas/camara-consulta-ginecologica-sus",
+    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
+    "subtitle": "O plenário da Câmara aprovou em 27 de outubro o substitutivo da relatora Flávia Morais (MDB-GO) ao PL 5.239/2025, de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG). Segundo a ementa, o texto trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 5239/2025",
+    "edition_date": "2026-10-27",
+    "published_at": "2026-10-27"
   },
   {
     "id": "notas/alesp-adesao-transparencia-fiscal",
