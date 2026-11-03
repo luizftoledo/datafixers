@@ -1,5 +1,184 @@
 [
   {
+    "trigger_date": "2026-11-03",
+    "topic": "Poder Legislativo",
+    "edition_date": "2026-11-03",
+    "subtitle": "Estoque cresceu 54% em três anos e meio; o veto mais antigo é de um projeto de 2000, e a Constituição paulista dá 30 dias para a deliberação",
+    "id": "2026-11-03-alesp-acumula-798-vetos-sem-votacao-nenhum-dos-519-que-estavam-na-pauta-em-marco-de-2023-saiu-dela",
+    "reading_minutes": 5,
+    "published_at": "2026-11-03T14:38:59.977438+00:00",
+    "status_label": "Levantamento de dados",
+    "kind": "investigation",
+    "title": "Alesp acumula 798 vetos sem votação; nenhum dos 519 que estavam na pauta em março de 2023 saiu dela",
+    "proposal": "Vetos na Ordem do Dia",
+    "house": "alesp",
+    "politicians": [],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A pauta de votações do plenário da Assembleia Legislativa de São Paulo (Alesp) para esta terça-feira (3) tem 843 itens. Desses, 798 são vetos de governadores a projetos aprovados pelos deputados, à espera de deliberação. Um levantamento do Datafixers nas Ordens do Dia oficiais mostra que nenhum dos 519 vetos que já estavam na pauta em 30 de março de 2023 saiu dela desde então. No mesmo período, entraram 279, o que elevou o estoque em 54%.",
+        "source_ids": [
+          "S1",
+          "S12",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A Constituição paulista dá à Assembleia 30 dias, a partir do recebimento, para deliberar sobre um veto. Esgotado o prazo, o veto vai para a Ordem do Dia da sessão seguinte e fica lá até a votação final. É o que explica a lista: os vetos não votados se acumulam na pauta a cada sessão. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra já foi mais dura. Em fevereiro de 2006, a Emenda Constitucional 21 determinou que o veto vencido trancasse as demais proposições até ser votado. Três meses depois, a Emenda 22 retirou essa expressão, com efeito retroativo a 15 de fevereiro. No Congresso, o veto presidencial vencido continua a travar a pauta das sessões conjuntas.",
+        "source_ids": [
+          "S7",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Projetos de 2000 ainda à espera",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O veto mais antigo da lista atinge o PL 312/2000, de Campos Machado, que obrigava postos a informar a natureza, a procedência e a qualidade dos combustíveis vendidos. Ao todo, 142 vetos atingem projetos apresentados antes de 2015, e 368, projetos anteriores a 2019. Entre eles estão o PL 1126/2003, que criava classes hospitalares nos hospitais do SUS paulista, e o PL 551/2003, que obrigava a instalação de hidrômetros individuais em cada unidade de consumo.",
+        "source_ids": [
+          "S1",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O estoque passou de 519 vetos em março de 2023 para 666 em novembro de 2024, 743 em novembro de 2025 e 798 em julho de 2026. Entre julho e esta terça, a lista ficou igual: nenhum veto entrou e nenhum saiu. Dos 798, 593 são vetos totais, que barram o projeto inteiro, e 205 são parciais. Ao menos 190 atingem projetos apresentados a partir de 2023, já no governo Tarcísio de Freitas (Republicanos).",
+        "source_ids": [
+          "S12",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O acúmulo já tinha sido noticiado. Em 13 de julho, o Correio da Manhã contou 796 vetos na pauta, 188 deles da gestão Tarcísio, com saúde (39) e educação (25) como as áreas mais atingidas. O jornal registrou que, pelo regimento interno, os vetos têm prioridade e precisam ser votados antes dos projetos comuns; só os que tramitam em urgência passam à frente. O primeiro item da pauta desta terça, em regime de urgência, é o mesmo de março de 2023: o PLC 31/2017, do governo, que altera a lei de vencimentos dos procuradores do Estado, com votação adiada.",
+        "source_ids": [
+          "S8",
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem controla a pauta",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em abril de 2025, o Brasil de Fato informou que Tarcísio havia vetado 238 projetos de deputados em pouco mais de dois anos e atribuiu a falta de votação ao presidente da Alesp, André do Prado (PL), aliado do governador. Segundo o site, o regimento permite votar os vetos, mas a decisão de pautá-los cabe ao presidente, que se recusava a fazê-lo. Na mesma reportagem, Paula Nunes (PSOL) criticou que a Assembleia sirva apenas para chancelar os projetos do governador, e Reis (PT) defendeu seu projeto que cria o Dia do Veto, o PL 1476/2023, para que o plenário se dedique às propostas vetadas em 28 de setembro. O projeto recebeu parecer favorável na Comissão de Direitos Humanos em fevereiro de 2026, segundo a tramitação oficial.",
+        "source_ids": [
+          "S9",
+          "S13"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A resposta pública de Prado, registrada pela Jovem Pan em maio de 2025, foi criar um grupo de trabalho com a Casa Civil do governo para ajustar os projetos antes da votação e reduzir os vetos. Ele também pediu à Secretaria Geral Parlamentar um estudo sobre os vetos da Ordem do Dia, para avaliar a relevância atual de cada proposta e se alguma já foi contemplada por lei posterior. Entre as pautas de novembro de 2024 e de novembro de 2026, período que inclui o anúncio, nenhum veto foi retirado, e o estoque subiu de 666 para 798.",
+        "source_ids": [
+          "S10",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "No Congresso Nacional, onde as duas casas votam vetos presidenciais em sessão conjunta, havia 97 vetos aguardando análise no fim de julho, segundo o Correio da Manhã. A última sessão destinada a eles tinha ocorrido em maio, e outra, prevista para junho, foi cancelada por falta de acordo.",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, enquanto um veto total não é votado, o projeto aprovado pelos deputados não vira lei. Se a Assembleia rejeitar o veto pela maioria absoluta, o texto volta ao governador para promulgação; se ele não o fizer em 48 horas, a promulgação cabe ao presidente da Assembleia. Nos vetos parciais, a pendência se limita aos dispositivos barrados pelo governo.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Os 798 vetos constam da Ordem do Dia da 163ª sessão ordinária, marcada para esta terça. A lista se repete a cada sessão até que cada veto seja votado.",
+        "source_ids": [
+          "S1",
+          "S7"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.al.sp.gov.br/legis/docs/2026/10/29/310000011649.html",
+        "title": "Alesp: Ordem do Dia da 163ª Sessão Ordinária, 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-10-29"
+      },
+      {
+        "id": "S3",
+        "url": "https://www.al.sp.gov.br/spl/Arquivo/1000485658_1000622942_2023_03_29_Pauta_1000485658.pdf",
+        "title": "Alesp: Ordem do Dia da 11ª Sessão Ordinária, 30/3/2023",
+        "kind": "primary",
+        "published_date": "2023-03-29"
+      },
+      {
+        "id": "S7",
+        "url": "https://www.al.sp.gov.br/repositorio/legislacao/constituicao/1989/compilacao-constituicao-0-05.10.1989.html",
+        "title": "Constituição do Estado de São Paulo, artigo 28 (texto compilado)",
+        "kind": "primary",
+        "published_date": "1989-10-05"
+      },
+      {
+        "id": "S8",
+        "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/estado-de-sao-paulo/2026/07/301624-alesp-acumula-796-vetos-na-pauta-188-sao-da-gestao-tarcisio-de-freitas.html",
+        "title": "Correio da Manhã: Alesp acumula 796 vetos na pauta, 13/7/2026",
+        "kind": "press",
+        "published_date": "2026-07-13"
+      },
+      {
+        "id": "S9",
+        "url": "https://www.brasildefato.com.br/2025/04/02/em-dois-anos-tarcisio-de-freitas-ja-vetou-238-projetos-aprovados-por-deputados-da-assembleia-de-sp/",
+        "title": "Brasil de Fato: Tarcísio vetou 238 projetos em dois anos, 2/4/2025",
+        "kind": "press",
+        "published_date": "2025-04-02"
+      },
+      {
+        "id": "S10",
+        "url": "https://jovempan.com.br/noticias/alesp-cria-grupo-de-trabalho-para-reduzir-vetos-de-tarcisio-de-freitas/",
+        "title": "Jovem Pan: Alesp cria grupo de trabalho para reduzir vetos, 6/5/2025",
+        "kind": "press",
+        "published_date": "2025-05-06"
+      },
+      {
+        "id": "S11",
+        "url": "https://www.correiodamanha.com.br/politica/2026/07/306960-congresso-volta-com-87-vetos-travando-a-pauta.html",
+        "title": "Correio da Manhã: Congresso volta com 87 vetos travando a pauta, 30/7/2026",
+        "kind": "press",
+        "published_date": "2026-07-30"
+      },
+      {
+        "id": "S12",
+        "url": "https://www.al.sp.gov.br/alesp/ordem-do-dia/",
+        "title": "Levantamento Datafixers: vetos na Ordem do Dia da Alesp, março de 2023 a novembro de 2026",
+        "kind": "analysis",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S13",
+        "url": "https://www3.al.sp.gov.br/repositorio/dados-abertos/output/json/tramitacao-atual.json",
+        "title": "Alesp, dados abertos: PL 1476/2023 (Dia do Veto) e última tramitação",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      }
+    ]
+  },
+  {
     "topic": "Economia",
     "trigger_date": "2026-10-28",
     "subtitle": "Congresso deixou duas MPs caducarem e aprovou o conteúdo em seis dias, sem passar por comissões; emendas foram rejeitadas porque o prazo vencia no mesmo dia",
@@ -14,8 +193,10 @@
     "house": "camara",
     "politicians": [
       {
-        "party": "Republicanos",
+        "role": "Autor do projeto",
         "uf": "PE",
+        "party": "Republicanos",
+        "name": "Augusto Coutinho",
         "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
         "sources": [
           {
@@ -26,13 +207,13 @@
             "title": "Câmara: justificação do PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
-        ],
-        "role": "Autor do projeto",
-        "name": "Augusto Coutinho"
+        ]
       },
       {
-        "party": "PP",
+        "role": "Relator na Câmara",
         "uf": "PE",
+        "party": "PP",
+        "name": "Lula da Fonte",
         "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
         "sources": [
           {
@@ -43,13 +224,13 @@
             "title": "Câmara: parecer de plenário ao PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
-        ],
-        "role": "Relator na Câmara",
-        "name": "Lula da Fonte"
+        ]
       },
       {
-        "party": "PSD",
+        "role": "Relator no Senado",
         "uf": "PE",
+        "party": "PSD",
+        "name": "Fernando Dueire",
         "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
         "sources": [
           {
@@ -60,9 +241,7 @@
             "title": "Senado: Parecer nº 210/2026-Plen",
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
-        ],
-        "role": "Relator no Senado",
-        "name": "Fernando Dueire"
+        ]
       }
     ],
     "blocks": [
@@ -290,30 +469,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "party": "PL",
+        "role": "Autor do projeto",
         "uf": "SP",
+        "party": "PL",
+        "name": "Gil Diniz Bolsonaro",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "role": "Autor do projeto",
-        "name": "Gil Diniz Bolsonaro"
+        ]
       },
       {
-        "party": "PP",
+        "role": "Relator na CCJR",
         "uf": "SP",
+        "party": "PP",
+        "name": "Delegado Olim",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "role": "Relator na CCJR",
-        "name": "Delegado Olim"
+        ]
       }
     ],
     "blocks": [
@@ -549,8 +728,10 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "party": "MDB",
+        "role": "Autor da proposta — Executivo municipal",
         "uf": "SP",
+        "party": "MDB",
+        "name": "Ricardo Nunes",
         "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "sources": [
           {
@@ -561,9 +742,7 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ],
-        "role": "Autor da proposta — Executivo municipal",
-        "name": "Ricardo Nunes"
+        ]
       }
     ],
     "blocks": [
@@ -694,8 +873,10 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "party": "PDT",
+        "role": "Autor do projeto",
         "uf": "AP",
+        "party": "PDT",
+        "name": "Dorinaldo Malafaia",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "sources": [
           {
@@ -706,9 +887,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "role": "Autor do projeto",
-        "name": "Dorinaldo Malafaia"
+        ]
       }
     ],
     "blocks": [
@@ -861,17 +1040,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "party": "Republicanos",
+        "role": "Presidente da subcomissão na audiência",
         "uf": "DF",
+        "party": "Republicanos",
+        "name": "Damares Alves",
         "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ],
-        "role": "Presidente da subcomissão na audiência",
-        "name": "Damares Alves"
+        ]
       }
     ],
     "blocks": [
@@ -986,43 +1165,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "party": "PL",
+        "role": "Parlamentar citado",
         "uf": "SP",
+        "party": "PL",
+        "name": "Pr. Marco Feliciano",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "role": "Parlamentar citado",
-        "name": "Pr. Marco Feliciano"
+        ]
       },
       {
-        "party": "PL",
+        "role": "Parlamentar citado",
         "uf": "SP",
+        "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "role": "Parlamentar citado",
-        "name": "Luiz Philippe de Orleans e Bragança"
+        ]
       },
       {
-        "party": "PL",
+        "role": "Parlamentar citado",
         "uf": "SP",
+        "party": "PL",
+        "name": "Missionário José Olimpio",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "role": "Parlamentar citado",
-        "name": "Missionário José Olimpio"
+        ]
       }
     ],
     "blocks": [
