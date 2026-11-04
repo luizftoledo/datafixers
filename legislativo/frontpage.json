@@ -1,5 +1,299 @@
 [
   {
+    "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
+    "status_label": "Aprovada; aguarda promulgação",
+    "reading_minutes": 5,
+    "published_at": "2026-11-04T14:30:19.374387+00:00",
+    "proposal": "PEC 18/2025",
+    "house": "senado",
+    "edition_date": "2026-11-04",
+    "trigger_date": "2026-11-03",
+    "subtitle": "Relator havia rejeitado a emenda por afastar o fundo de sua finalidade; a Mesa disse que o texto não estava no primeiro turno, e o trecho lido em plenário não cita as Forças Armadas",
+    "kind": "daily",
+    "title": "PEC da Segurança vai à promulgação com uso de fundo em GLO que a Câmara não votou, aprovado como \"emenda de redação\"",
+    "topic": "Segurança pública",
+    "politicians": [
+      {
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "uf": "RJ",
+        "role": "Autor da Emenda 85",
+        "sources": [
+          {
+            "title": "Senado: perfil de Carlos Portinho",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5936"
+          },
+          {
+            "title": "Senado: tramitação da PEC 18/2025",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
+          },
+          {
+            "title": "O Antagonista, 15/10/2026",
+            "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
+          }
+        ],
+        "name": "Carlos Portinho",
+        "party": "PL"
+      },
+      {
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "uf": "SE",
+        "role": "Relator no Senado",
+        "sources": [
+          {
+            "title": "Senado: perfil de Rogério Carvalho",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5352"
+          },
+          {
+            "title": "Senado: tramitação da PEC 18/2025",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
+          }
+        ],
+        "name": "Rogério Carvalho",
+        "party": "PT"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A PEC da Segurança Pública (PEC 18/2025), aprovada pelo Senado na terça-feira (3) e enviada à promulgação, recebeu em plenário um trecho que os deputados não votaram: os recursos do Fundo Nacional de Segurança Pública poderão ser distribuídos a estados, Distrito Federal e municípios \"inclusive para fins de operações de garantia da lei e da ordem\". O acréscimo foi tratado como emenda de redação, e a proposta seguiu sem nova análise da Câmara.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S5"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A mudança nasceu da Emenda 85, de Carlos Portinho (PL-RJ). No parecer apresentado na mesma sessão, o relator, Rogério Carvalho (PT-SE), pediu a rejeição: escreveu que usar o fundo em ações das Forças Armadas \"afasta o Fundo de sua finalidade\", que elas não estão entre os órgãos de segurança pública do artigo 144 da Constituição e que a medida \"dilui os recursos\" que a Câmara quis assegurar. Para ele, as necessidades militares devem ser atendidas \"por dotações próprias\". Em 14 de outubro, um destaque sobre o tema já havia caído na CCJ, pela ausência de quem o defendia.",
+        "source_ids": [
+          "S3",
+          "S10"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O acordo veio depois, em plenário, negociado pelo líder do MDB, Eduardo Braga (AM), com Portinho e o relator. As notas taquigráficas registram a ressalva do próprio Braga, que propôs a emenda de redação \"se a SGM entender que isso é de redação\", referência à Secretaria-Geral da Mesa. O presidente do Senado, Davi Alcolumbre (União-AP), relatou então a posição da Mesa: a emenda \"não pode ser apenas acatada como emenda de redação porque já foi votada em primeiro turno, e esse texto não estava no primeiro turno\". Ainda assim, ela foi votada como redação, em votação nominal com exigência de 49 votos. O placar foi de 67 a 0.",
+        "source_ids": [
+          "S2",
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que mudou no texto",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "No texto que veio da Câmara, o parágrafo 11 do artigo 144 terminava com a distribuição dos recursos a estados, Distrito Federal e municípios \"na forma da lei\". A versão lida por Alcolumbre insere a menção à garantia da lei e da ordem, a GLO, antes desse fecho. Como a frase trata dos dois fundos citados no parágrafo, o acréscimo alcança também o Fundo Penitenciário Nacional, que a emenda original não mencionava. O parecer com a redação do segundo turno não constava da lista de documentos da PEC na manhã desta quarta (4), e a leitura em plenário é o registro disponível.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S5"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A emenda original era mais ampla. Previa dinheiro do fundo para as Forças Armadas também em defesa civil e no combate a delitos de fronteira e ambientais. Braga sugeriu limitar a frase às ações militares em GLO, mas o texto final, sugerido pela Mesa, não cita as Forças Armadas. A Agência Senado informou que o trecho possibilita o ressarcimento dos militares, e Portinho disse em plenário que elas terão direito a se ressarcir. O que foi lido fala em distribuir recursos a estados e municípios, e deixa a execução para uma lei.",
+        "source_ids": [
+          "S2",
+          "S4",
+          "S6"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Braga defendeu o acordo com o argumento de que, em GLO ou em funções urbanas, as Forças Armadas \"teriam que ser ressarcidas\". Portinho afirmou que a GLO ocorre quando os militares são convocados e que \"é o Estado que pede\". Em 15 de outubro, ao tratar das emendas do PL, ele dissera a jornalistas, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com a volta do texto à Câmara.",
+        "source_ids": [
+          "S2",
+          "S9"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto o fundo tem e quanto custa uma GLO",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo empenhou R$ 2,22 bilhões em 2025 e pagou R$ 1,78 bilhão, segundo o Portal da Transparência. Em 2026, os empenhos somavam R$ 2,19 bilhões até esta quarta. A PEC manda repassar metade dos recursos a estados e Distrito Federal, sem convênio. O Senado retirou do texto, por outro lado, o artigo 139 aprovado pelos deputados, que destinava aos fundos de segurança e penitenciário 30% do produto da arrecadação das apostas de quota fixa, após deduções. O corte, proposto na CCJ em setembro e noticiado na época, foi classificado como ajuste redacional, segundo o Poder360, por se tratar de supressão.",
+        "source_ids": [
+          "S1",
+          "S5",
+          "S7",
+          "S11"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média dá cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. Só a Copa das Confederações de 2013 custou R$ 418 milhões, e a Operação Rio de Janeiro, de 2017 e 2018, R$ 234 milhões. A comparação indica a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito da emenda sobre o fundo.",
+        "source_ids": [
+          "S7",
+          "S8",
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Os dois caminhos da mesma sessão",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Na mesma noite, Carvalho rejeitou outros pedidos de mudança para evitar a volta à Câmara. \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado. As emendas que reduziam a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram separadas da PEC e viraram propostas autônomas, por 38 votos a 36. Levantamento por partido mostra PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) a favor da separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve. Santana votou pela separação da própria emenda.",
+        "source_ids": [
+          "S5",
+          "S6",
+          "S15"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra geral é que uma mudança de conteúdo devolve a PEC à casa de origem, como lembrou a CNN Brasil antes da votação. O regimento do Senado admite, no segundo turno, só emendas que não envolvam o mérito. Em 2002, ao julgar a emenda da CPMF, o Supremo aceitou uma supressão feita pelo Senado porque ela não representou \"alteração substancial\" que justificasse o retorno. O caso da PEC da Segurança é de acréscimo, e as notas taquigráficas do acordo não explicam por que o novo trecho não altera a substância.",
+        "source_ids": [
+          "S12",
+          "S13",
+          "S14",
+          "S2"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, se o texto lido em plenário for o promulgado, a Constituição passará a citar operações de GLO entre os usos dos fundos de segurança e penitenciário. Quem recebe, quanto e em quais condições dependerá de lei. Nada no trecho obriga o fundo a pagar por uma GLO, porque o texto usa a expressão \"poderão ser distribuídos\".",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "votes",
+        "text": "Primeiro turno: 73 votos a 0. Emenda 85, no texto acordado: 67 a 0. Segundo turno: 75 a 0. Separação das emendas da maioridade penal: 38 a 36, com uma abstenção.",
+        "source_ids": [
+          "S5"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Pelo regimento, concluída a votação no Senado, é convocada sessão para a promulgação; a ficha da PEC não informava data até a manhã desta quarta. O registro da sessão manda as emendas da maioridade penal à CCJ, mas Alcolumbre disse que aguardará um pedido de calendário especial. Na Câmara, uma comissão especial analisa a PEC 32/2015, sobre o mesmo tema.",
+        "source_ids": [
+          "S14",
+          "S5",
+          "S6",
+          "S3"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/e5475586-1999-43b5-b386-a7876649a4ca",
+        "title": "Câmara dos Deputados: texto da PEC 18/2025 enviado ao Senado",
+        "kind": "primary",
+        "published_date": "2026-03-10"
+      },
+      {
+        "id": "S2",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/8be99b91-030f-4360-bc7e-63e070e8174c",
+        "title": "Senado: Acordo de Plenário sobre a Emenda 85, notas taquigráficas de 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S3",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/778b70bb-7970-4586-b850-1c1f2fc72e6a",
+        "title": "Senado: Parecer 212/2026-PLEN, do relator Rogério Carvalho",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S4",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/0f3d23b0-2415-4b78-9ff9-d5ff7ae627fd",
+        "title": "Senado: Emenda 85 à PEC 18/2025, de Carlos Portinho",
+        "kind": "primary",
+        "published_date": "2026-10-14"
+      },
+      {
+        "id": "S5",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
+        "title": "Senado: tramitação da PEC 18/2025, registro de 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S6",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-aprova-pec-da-seguranca-publica-sem-reducao-da-maioridade-penal",
+        "title": "Agência Senado: Senado aprova PEC da Segurança Pública sem redução da maioridade penal, 3/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S7",
+        "url": "https://portaldatransparencia.gov.br/orgaos/30911",
+        "title": "Portal da Transparência: execução do Fundo Nacional de Segurança Pública, 2023 a 2026",
+        "kind": "primary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S8",
+        "url": "https://www.gov.br/defesa/pt-br/arquivos/exercicios_e_operacoes/glo/6-glo-2010_2022_custos_e_efetivos_jan_2022.pdf",
+        "title": "Ministério da Defesa: efetivos e custos de GLO, 2010 a 2022",
+        "kind": "primary",
+        "published_date": "2022-01-31"
+      },
+      {
+        "id": "S9",
+        "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/",
+        "title": "O Antagonista: PL vai cobrar segurança jurídica na PEC da Segurança, diz Portinho, 15/10/2026",
+        "kind": "press",
+        "published_date": "2026-10-15"
+      },
+      {
+        "id": "S10",
+        "url": "https://www.congressoemfoco.com.br/noticia/123231/ccj-conclui-votacao-da-pec-da-seguranca-e-envia-texto-ao-plenario",
+        "title": "Congresso em Foco: CCJ conclui votação da PEC da Segurança, 14/10/2026",
+        "kind": "press",
+        "published_date": "2026-10-14"
+      },
+      {
+        "id": "S11",
+        "url": "https://www.poder360.com.br/poder-congresso/ccj-do-senado-aprova-texto-principal-da-pec-da-seguranca/",
+        "title": "Poder360: CCJ do Senado aprova texto principal da PEC da Segurança, 2/9/2026",
+        "kind": "press",
+        "published_date": "2026-09-02"
+      },
+      {
+        "id": "S12",
+        "url": "https://www.cnnbrasil.com.br/blogs/adriana-de-luca/nacional/brasil/pec-da-seguranca-volta-ao-senado-em-impasse-sobre-maioridade-penal/",
+        "title": "CNN Brasil: PEC da Segurança volta ao Senado em impasse sobre maioridade penal, 3/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S13",
+        "url": "https://juris.damasio.com.br/jurisprudencia/julgado/284/cpmf-2",
+        "title": "Informativo 284 do STF: julgamento sobre a emenda da CPMF (reprodução)",
+        "kind": "press",
+        "published_date": "2002-10-03"
+      },
+      {
+        "id": "S14",
+        "url": "https://legis.senado.leg.br/norma/563958/publicacao/16433779",
+        "title": "Regimento Interno do Senado Federal, artigos 354 a 369",
+        "kind": "primary",
+        "published_date": ""
+      },
+      {
+        "id": "S15",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
+        "title": "Levantamento Datafixers: votos por partido no desmembramento das emendas da maioridade penal",
+        "kind": "analysis",
+        "published_date": "2026-11-04"
+      }
+    ]
+  },
+  {
     "trigger_date": "2026-11-03",
     "topic": "Poder Legislativo",
     "edition_date": "2026-11-03",
@@ -193,11 +487,9 @@
     "house": "camara",
     "politicians": [
       {
-        "role": "Autor do projeto",
-        "uf": "PE",
-        "party": "Republicanos",
-        "name": "Augusto Coutinho",
         "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
+        "uf": "PE",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Augusto Coutinho",
@@ -207,14 +499,14 @@
             "title": "Câmara: justificação do PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
-        ]
+        ],
+        "name": "Augusto Coutinho",
+        "party": "Republicanos"
       },
       {
-        "role": "Relator na Câmara",
-        "uf": "PE",
-        "party": "PP",
-        "name": "Lula da Fonte",
         "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
+        "uf": "PE",
+        "role": "Relator na Câmara",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Lula da Fonte",
@@ -224,14 +516,14 @@
             "title": "Câmara: parecer de plenário ao PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
-        ]
+        ],
+        "name": "Lula da Fonte",
+        "party": "PP"
       },
       {
-        "role": "Relator no Senado",
-        "uf": "PE",
-        "party": "PSD",
-        "name": "Fernando Dueire",
         "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
+        "uf": "PE",
+        "role": "Relator no Senado",
         "sources": [
           {
             "title": "Senado: senadores em exercício",
@@ -241,7 +533,9 @@
             "title": "Senado: Parecer nº 210/2026-Plen",
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
-        ]
+        ],
+        "name": "Fernando Dueire",
+        "party": "PSD"
       }
     ],
     "blocks": [
@@ -469,30 +763,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "role": "Autor do projeto",
-        "uf": "SP",
-        "party": "PL",
-        "name": "Gil Diniz Bolsonaro",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "uf": "SP",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "name": "Gil Diniz Bolsonaro",
+        "party": "PL"
       },
       {
-        "role": "Relator na CCJR",
-        "uf": "SP",
-        "party": "PP",
-        "name": "Delegado Olim",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "uf": "SP",
+        "role": "Relator na CCJR",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "name": "Delegado Olim",
+        "party": "PP"
       }
     ],
     "blocks": [
@@ -728,11 +1022,9 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "role": "Autor da proposta — Executivo municipal",
-        "uf": "SP",
-        "party": "MDB",
-        "name": "Ricardo Nunes",
         "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
+        "uf": "SP",
+        "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -742,7 +1034,9 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ]
+        ],
+        "name": "Ricardo Nunes",
+        "party": "MDB"
       }
     ],
     "blocks": [
@@ -873,11 +1167,9 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "role": "Autor do projeto",
-        "uf": "AP",
-        "party": "PDT",
-        "name": "Dorinaldo Malafaia",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "uf": "AP",
+        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -887,7 +1179,9 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "name": "Dorinaldo Malafaia",
+        "party": "PDT"
       }
     ],
     "blocks": [
@@ -1040,17 +1334,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "role": "Presidente da subcomissão na audiência",
-        "uf": "DF",
-        "party": "Republicanos",
-        "name": "Damares Alves",
         "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
+        "uf": "DF",
+        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ]
+        ],
+        "name": "Damares Alves",
+        "party": "Republicanos"
       }
     ],
     "blocks": [
@@ -1165,43 +1459,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "party": "PL",
-        "name": "Pr. Marco Feliciano",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "name": "Pr. Marco Feliciano",
+        "party": "PL"
       },
       {
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "party": "PL"
       },
       {
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "party": "PL",
-        "name": "Missionário José Olimpio",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "uf": "SP",
+        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "name": "Missionário José Olimpio",
+        "party": "PL"
       }
     ],
     "blocks": [
