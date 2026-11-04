@@ -4,75 +4,81 @@
     "published_at": "2026-11-04T18:15:50.590164+00:00",
     "kind": "daily",
     "reading_minutes": 5,
-    "title": "Senado pode votar hoje redução da maioridade penal para 16 anos em crimes hediondos",
-    "subtitle": "Proposta é do líder do PT e tem aval de Lula, segundo reportagens. Oposição defende punição mais ampla, e líder do governo pede mais tempo de debate",
+    "title": "Proposta de maioridade penal no Senado não inclui tráfico, 28% dos casos de jovens internados",
+    "subtitle": "O texto do líder do PT, que pode ser votado nesta semana, vale só para crimes hediondos. A lei não põe o tráfico de drogas nessa lista, e a proposta da oposição o cita de forma expressa",
     "topic": "Segurança pública",
     "trigger_date": "2026-11-03",
     "edition_date": "2026-11-04",
     "id": "2026-11-04-63-dos-81-senadores-assinaram-propostas-para-reduzir-a-maioridade-penal-mas-o-senado-tirou-o-tema-da",
-    "status_label": "Votação prevista para 4/11, ainda sem confirmação",
+    "status_label": "Pode ser votada nesta semana",
     "proposal": "PEC 20/2026",
     "politicians": [],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O Senado pode votar nesta quarta-feira (4) uma proposta que reduz a maioridade penal de 18 para 16 anos em crimes hediondos, como homicídio qualificado, latrocínio e estupro. O texto é do líder do PT, Camilo Santana (CE), e tem o aval do governo Lula, segundo reportagens. Até a tarde, a votação dependia de acordo: o líder do MDB, Eduardo Braga (AM), buscava apoio para levar a proposta direto ao plenário, sem passar por comissão.",
+        "text": "A proposta para reduzir a maioridade penal que o Senado pode votar nesta semana não alcança o tráfico de drogas, o segundo ato mais comum entre os jovens internados no Brasil. O texto do líder do PT, Camilo Santana (CE), baixa a idade de 18 para 16 anos apenas para \"crimes considerados formalmente hediondos\", e o tráfico não está na lista legal desses crimes.",
         "source_ids": [
+          "S5",
+          "S7",
+          "S22"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O tráfico responde por 3.735 dos 13.367 registros de atos atribuídos a adolescentes e jovens em internação ou semiliberdade em agosto de 2025, ou 27,9%, segundo o levantamento nacional do Ministério dos Direitos Humanos. Só o roubo aparece mais, com 29,1%. O levantamento não inclui Minas Gerais, que não enviou dados.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A lei dos crimes hediondos lista casos como homicídio qualificado, latrocínio, estupro e roubo com arma de fogo. O tráfico de drogas aparece em outro artigo, ao lado de tortura e terrorismo, com regras igualmente duras, mas sem ser chamado de hediondo. Por isso a palavra \"formalmente\" pesa: a proposta da oposição, de Rogerio Marinho (PL-RN), cita hediondos e tráfico separadamente.",
+        "source_ids": [
+          "S4",
+          "S5",
+          "S22"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O argumento de Camilo para mudar a lei é que organizações criminosas recrutam adolescentes para tarefas de maior risco. A lei considera hediondo o crime de organização criminosa voltada a crime hediondo ou equiparado, o que pode alcançar um jovem acusado de integrar uma facção. O adolescente que responder apenas por tráfico seguiria sob o Estatuto da Criança e do Adolescente até os 18 anos. Parlamentares de direita defendem ampliar o texto.",
+        "source_ids": [
+          "S5",
           "S18",
-          "S19",
-          "S21"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos. Com a mudança, jovens de 16 e 17 anos acusados de crimes hediondos passariam a responder como adultos. Nos demais crimes, a idade continuaria em 18 anos.",
-        "source_ids": [
-          "S5"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Por ser uma mudança na Constituição, a proposta precisa de 49 votos entre os 81 senadores, em duas votações. Depois, vai à Câmara, onde precisa de 308 votos, também em duas votações.",
-        "source_ids": [
-          "S19"
+          "S22"
         ]
       },
       {
         "type": "heading",
-        "text": "Como o tema voltou",
+        "text": "O que muda e como fica a votação",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "A pressa surgiu na noite de terça-feira (3). Ao aprovar a reforma da segurança pública, o Senado retirou dela as propostas sobre maioridade penal, por 38 votos a 36, para evitar que a reforma voltasse à Câmara. Logo depois, Braga sugeriu votar o texto de Camilo no dia seguinte, e o presidente do Senado, Davi Alcolumbre (União-AP), concordou em esperar o pedido antes de enviar as propostas à Comissão de Constituição e Justiça.",
+        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos. Com a proposta, jovens de 16 e 17 anos acusados de crimes hediondos passariam a responder como adultos. Ela precisa de 49 votos entre os 81 senadores, em duas votações, e depois de 308 votos na Câmara, também em duas votações.",
         "source_ids": [
-          "S2",
-          "S13",
+          "S5",
           "S19"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O relator da reforma, Rogério Carvalho (PT-SE), disse nesta quarta que o Senado votaria \"hoje\". Camilo foi mais cauteloso: \"Se não votar amanhã, vota na próxima semana\". A líder do governo, Teresa Leitão (PT-PE), disse que o debate \"não pode ser feito de afogadilho\". Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos, mas fora da reforma.",
+        "text": "O Senado retirou o tema da reforma da segurança pública na terça-feira (3), por 38 votos a 36, para evitar que a reforma voltasse à Câmara. Logo depois, o líder do MDB, Eduardo Braga (AM), passou a buscar apoio para levar o texto de Camilo direto ao plenário, sem passar por comissão. O relator da reforma, Rogério Carvalho (PT-SE), falou em votar nesta quarta (4). Camilo admitiu que pode ficar para a semana seguinte, e a líder do governo, Teresa Leitão (PT-PE), disse que o debate \"não pode ser feito de afogadilho\".",
         "source_ids": [
-          "S11",
+          "S2",
+          "S13",
           "S18",
           "S19",
           "S20"
         ]
       },
       {
-        "type": "heading",
-        "text": "O que quer a oposição",
-        "source_ids": []
-      },
-      {
         "type": "paragraph",
-        "text": "A proposta de Rogerio Marinho (PL-RN), líder da oposição, é mais ampla: 16 anos para qualquer crime e 14 anos para crimes hediondos, tortura, tráfico, terrorismo e organização criminosa. Nesta quarta, ele disse ter assinado o pedido de Braga e não apresentar, por ora, outra proposta. O líder do PL, Carlos Portinho (RJ), afirmou que o partido ainda vai disputar o alcance no voto, e parlamentares de direita podem tentar ampliar o texto em plenário.",
+        "text": "Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos. Marinho, que defende 16 anos para qualquer crime e 14 para os mais graves, disse nesta quarta ter assinado o pedido de Braga. O líder do PL, Carlos Portinho (RJ), afirmou que o partido ainda vai disputar o alcance no voto.",
         "source_ids": [
           "S4",
-          "S18",
-          "S19"
+          "S11",
+          "S18"
         ]
       },
       {
@@ -109,16 +115,16 @@
       },
       {
         "type": "paragraph",
-        "text": "A diferença entre as duas propostas aparece no tipo de crime. Roubo e tráfico somam 57% dos 13.367 registros. Homicídio, latrocínio, estupro e feminicídio somam 14%, ou 1.882 registros. Ou seja: a proposta de Marinho alcançaria todos os que têm 16 anos ou mais, além de parte dos de 14 e 15. A de Camilo atingiria uma parte bem menor. A conta é aproximada: a tabela não cruza crime e idade, não separa os homicídios qualificados, que a lei trata como hediondos, e uma pessoa pode ter mais de um registro.",
+        "text": "Não é possível calcular quantos seriam alcançados pela proposta de Camilo. Homicídio, latrocínio, estupro e feminicídio somam 14% dos registros, mas a tabela não separa os homicídios qualificados. O roubo, maior categoria, seria alcançado em parte, porque a lei trata como hediondo o roubo com arma de fogo, e a tabela também não faz essa divisão. A proposta de Marinho alcançaria todos os que têm 16 anos ou mais, além de parte dos de 14 e 15.",
         "source_ids": [
-          "S5",
           "S7",
-          "S8"
+          "S8",
+          "S22"
         ]
       },
       {
         "type": "paragraph",
-        "text": "As duas emendas usam o mesmo argumento: facções recrutam adolescentes porque a punição é limitada. Nenhuma das duas traz estimativa de custo ou do número de jovens que iriam para a prisão. O sistema para adolescentes operava com 75,2% de ocupação em agosto de 2025.",
+        "text": "Nenhuma das duas propostas traz estimativa de custo ou do número de jovens que iriam para a prisão. O sistema para adolescentes operava com 75,2% de ocupação em agosto de 2025.",
         "source_ids": [
           "S4",
           "S5",
@@ -298,9 +304,16 @@
         "title": "Senado: PEC 20/2026, de Camilo Santana",
         "kind": "primary",
         "published_date": "2026-11-03"
+      },
+      {
+        "id": "S22",
+        "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8072-25-julho-1990-372192-normaatualizada-pl.html",
+        "title": "Lei 8.072/1990, dos crimes hediondos, texto atualizado",
+        "kind": "primary",
+        "published_date": "1990-07-25"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-04T18:55:19.161684+00:00"
   },
   {
     "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
@@ -317,11 +330,9 @@
     "topic": "Segurança pública",
     "politicians": [
       {
-        "name": "Carlos Portinho",
-        "uf": "RJ",
         "role": "Autor da Emenda 85",
+        "uf": "RJ",
         "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "party": "PL",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -335,14 +346,14 @@
             "title": "O Antagonista, 15/10/2026",
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
-        ]
+        ],
+        "name": "Carlos Portinho",
+        "party": "PL"
       },
       {
-        "name": "Rogério Carvalho",
-        "uf": "SE",
         "role": "Relator no Senado",
+        "uf": "SE",
         "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "party": "PT",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -352,7 +363,9 @@
             "title": "Senado: tramitação da PEC 18/2025",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
-        ]
+        ],
+        "name": "Rogério Carvalho",
+        "party": "PT"
       }
     ],
     "blocks": [
@@ -799,11 +812,9 @@
     "house": "camara",
     "politicians": [
       {
-        "name": "Augusto Coutinho",
-        "uf": "PE",
         "role": "Autor do projeto",
+        "uf": "PE",
         "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
-        "party": "Republicanos",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Augusto Coutinho",
@@ -813,14 +824,14 @@
             "title": "Câmara: justificação do PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
-        ]
+        ],
+        "name": "Augusto Coutinho",
+        "party": "Republicanos"
       },
       {
-        "name": "Lula da Fonte",
-        "uf": "PE",
         "role": "Relator na Câmara",
+        "uf": "PE",
         "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
-        "party": "PP",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Lula da Fonte",
@@ -830,14 +841,14 @@
             "title": "Câmara: parecer de plenário ao PL 5.649/2026",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
-        ]
+        ],
+        "name": "Lula da Fonte",
+        "party": "PP"
       },
       {
-        "name": "Fernando Dueire",
-        "uf": "PE",
         "role": "Relator no Senado",
+        "uf": "PE",
         "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
-        "party": "PSD",
         "sources": [
           {
             "title": "Senado: senadores em exercício",
@@ -847,7 +858,9 @@
             "title": "Senado: Parecer nº 210/2026-Plen",
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
-        ]
+        ],
+        "name": "Fernando Dueire",
+        "party": "PSD"
       }
     ],
     "blocks": [
@@ -1076,30 +1089,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "name": "Gil Diniz Bolsonaro",
-        "uf": "SP",
         "role": "Autor do projeto",
+        "uf": "SP",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "party": "PL",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "name": "Gil Diniz Bolsonaro",
+        "party": "PL"
       },
       {
-        "name": "Delegado Olim",
-        "uf": "SP",
         "role": "Relator na CCJR",
+        "uf": "SP",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "party": "PP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "name": "Delegado Olim",
+        "party": "PP"
       }
     ],
     "blocks": [
@@ -1336,24 +1349,22 @@
     "subtitle": "O projeto não cria uma proteção nova: leva para o texto da lei o que o tribunal decidiu. Ainda precisa de outra comissão da Câmara e do Senado",
     "politicians": [
       {
-        "name": "Bacelar",
-        "uf": "BA",
         "role": "Autor do projeto",
+        "uf": "BA",
         "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
-        "party": "PV",
         "sources": [
           {
             "title": "Câmara: biografia e trajetória de Bacelar",
             "url": "https://www.camara.leg.br/deputados/69871/biografia"
           }
-        ]
+        ],
+        "name": "Bacelar",
+        "party": "PV"
       },
       {
-        "name": "Célia Xakriabá",
-        "uf": "MG",
         "role": "Relatora na Comissão de Direitos Humanos",
+        "uf": "MG",
         "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
-        "party": "PSOL",
         "sources": [
           {
             "title": "Câmara: biografia de Célia Xakriabá",
@@ -1363,7 +1374,9 @@
             "title": "Parecer ao PL 891/2025",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
           }
-        ]
+        ],
+        "name": "Célia Xakriabá",
+        "party": "PSOL"
       }
     ],
     "blocks": [
@@ -1527,11 +1540,9 @@
     "topic": "Moradia",
     "politicians": [
       {
-        "name": "Ricardo Nunes",
-        "uf": "SP",
         "role": "Autor da proposta — Executivo municipal",
+        "uf": "SP",
         "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "party": "MDB",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -1541,7 +1552,9 @@
             "title": "Câmara de SP: autoria do PL 736/2026",
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
-        ]
+        ],
+        "name": "Ricardo Nunes",
+        "party": "MDB"
       }
     ],
     "blocks": [
@@ -1673,11 +1686,9 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "name": "Dorinaldo Malafaia",
-        "uf": "AP",
         "role": "Autor do projeto",
+        "uf": "AP",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "party": "PDT",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1687,7 +1698,9 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "name": "Dorinaldo Malafaia",
+        "party": "PDT"
       }
     ],
     "blocks": [
@@ -1841,17 +1854,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "name": "Damares Alves",
-        "uf": "DF",
         "role": "Presidente da subcomissão na audiência",
+        "uf": "DF",
         "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "party": "Republicanos",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
-        ]
+        ],
+        "name": "Damares Alves",
+        "party": "Republicanos"
       }
     ],
     "blocks": [
@@ -1967,43 +1980,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "name": "Pr. Marco Feliciano",
-        "uf": "SP",
         "role": "Parlamentar citado",
+        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "name": "Pr. Marco Feliciano",
+        "party": "PL"
       },
       {
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "uf": "SP",
         "role": "Parlamentar citado",
+        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "party": "PL"
       },
       {
-        "name": "Missionário José Olimpio",
-        "uf": "SP",
         "role": "Parlamentar citado",
+        "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "name": "Missionário José Olimpio",
+        "party": "PL"
       }
     ],
     "blocks": [
@@ -2274,11 +2287,9 @@
     "updated_at": "2026-11-04T18:41:51.957862+00:00",
     "politicians": [
       {
-        "name": "Magno Malta",
-        "uf": "ES",
         "role": "Autor do projeto",
+        "uf": "ES",
         "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "party": "PL",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -2288,14 +2299,14 @@
             "title": "Pronunciamento de Magno Malta, 16/12/2025",
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
-        ]
+        ],
+        "name": "Magno Malta",
+        "party": "PL"
       },
       {
-        "name": "Jorge Seif",
-        "uf": "SC",
         "role": "Relator na CDH",
+        "uf": "SC",
         "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "party": "PL",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -2305,7 +2316,9 @@
             "title": "Senado: relatoria do PL 501/2023",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
-        ]
+        ],
+        "name": "Jorge Seif",
+        "party": "PL"
       }
     ]
   }
