@@ -14,8 +14,6 @@
     "topic": "Segurança pública",
     "politicians": [
       {
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "role": "Autor da Emenda 85",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -30,13 +28,13 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
-        "uf": "RJ",
+        "role": "Autor da Emenda 85",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
         "party": "PL",
-        "name": "Carlos Portinho"
+        "name": "Carlos Portinho",
+        "uf": "RJ"
       },
       {
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "role": "Relator no Senado",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -47,9 +45,11 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
-        "uf": "SE",
+        "role": "Relator no Senado",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
         "party": "PT",
-        "name": "Rogério Carvalho"
+        "name": "Rogério Carvalho",
+        "uf": "SE"
       }
     ],
     "blocks": [
@@ -496,8 +496,6 @@
     "house": "camara",
     "politicians": [
       {
-        "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Augusto Coutinho",
@@ -508,13 +506,13 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
         ],
-        "uf": "PE",
+        "role": "Autor do projeto",
+        "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
         "party": "Republicanos",
-        "name": "Augusto Coutinho"
+        "name": "Augusto Coutinho",
+        "uf": "PE"
       },
       {
-        "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
-        "role": "Relator na Câmara",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Lula da Fonte",
@@ -525,13 +523,13 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
         ],
-        "uf": "PE",
+        "role": "Relator na Câmara",
+        "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
         "party": "PP",
-        "name": "Lula da Fonte"
+        "name": "Lula da Fonte",
+        "uf": "PE"
       },
       {
-        "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
-        "role": "Relator no Senado",
         "sources": [
           {
             "title": "Senado: senadores em exercício",
@@ -542,9 +540,11 @@
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
         ],
-        "uf": "PE",
+        "role": "Relator no Senado",
+        "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
         "party": "PSD",
-        "name": "Fernando Dueire"
+        "name": "Fernando Dueire",
+        "uf": "PE"
       }
     ],
     "blocks": [
@@ -759,50 +759,50 @@
     "updated_at": "2026-11-04T16:24:23.825745+00:00"
   },
   {
-    "title": "Parecer na Alesp a favor da Bíblia como material escolar não menciona decisões do STF e do TJ-MG sobre leis semelhantes",
+    "title": "Deputado dá aval a usar a Bíblia nas escolas de SP sem citar decisões da Justiça contra leis parecidas",
     "reading_minutes": 5,
     "kind": "investigation",
     "edition_date": "2026-10-30",
     "published_at": "2026-10-30T15:27:07.405564+00:00",
-    "status_label": "Voto do relator na CCJR",
+    "status_label": "Aguarda votação em comissão da Assembleia",
     "id": "2026-10-30-parecer-na-alesp-a-favor-da-biblia-como-material-escolar-nao-menciona-decisoes-do-stf-e-do-tj-mg-sob",
-    "subtitle": "Alesp já recebeu ao menos sete projetos para levar a Bíblia a escolas e bibliotecas desde 1967; nenhum virou lei",
+    "subtitle": "O projeto leva a Bíblia a aulas de história, literatura e outras matérias, com participação opcional. Desde 1967, ao menos sete propostas para levá-la a escolas e bibliotecas passaram pela Assembleia, e nenhuma virou lei",
     "house": "alesp",
     "topic": "Educação",
     "proposal": "PL 670/2026",
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "uf": "SP",
+        "role": "Autor do projeto",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
         "party": "PL",
-        "name": "Gil Diniz Bolsonaro"
+        "name": "Gil Diniz Bolsonaro",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "role": "Relator na CCJR",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "uf": "SP",
+        "role": "Relator na CCJR",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "party": "PP",
-        "name": "Delegado Olim"
+        "name": "Delegado Olim",
+        "uf": "SP"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O relator na Comissão de Constituição, Justiça e Redação (CCJR) da Assembleia Legislativa de São Paulo, Delegado Olim (PP), entregou em 27 de outubro voto favorável ao projeto que manda usar a Bíblia como recurso paradidático nas escolas do Estado. O parecer, de uma página, examina apenas a competência para legislar e não menciona a laicidade do Estado nem as decisões do Supremo Tribunal Federal que derrubaram ou limitaram leis estaduais sobre a Bíblia em escolas e bibliotecas.",
+        "text": "O projeto que manda usar a Bíblia como material de apoio nas aulas das escolas de São Paulo recebeu um voto favorável em 27 de outubro. O autor do voto é o deputado Delegado Olim (PP), encarregado de analisar a proposta na Comissão de Constituição, Justiça e Redação da Assembleia Legislativa (Alesp). O documento, de uma página, trata apenas de quem tem poder para fazer essa lei. Não fala da separação entre Estado e religião nem das decisões do Supremo Tribunal Federal (STF) que derrubaram ou limitaram leis estaduais sobre a Bíblia em escolas e bibliotecas. Também não cita a decisão da Justiça de Minas Gerais sobre lei parecida em Belo Horizonte.",
         "source_ids": [
           "S2",
           "S3",
@@ -811,7 +811,7 @@
       },
       {
         "type": "paragraph",
-        "text": "O PL 670/2026 é de Gil Diniz Bolsonaro (PL). Não é a primeira tentativa na Alesp. Levantamento do Datafixers Legislativo no sistema de proposições da Assembleia encontrou ao menos sete projetos de lei anteriores, de 1967 a 2017, para levar a Bíblia a escolas ou bibliotecas públicas. Nenhum virou lei. Três foram arquivados. Os outros quatro seguem sem votação em plenário, entre eles um de 2003, de Carlinhos Almeida (PT), e outro de 2013, de Rodrigo Moraes (PSC), que constam como prontos para a ordem do dia.",
+        "text": "O projeto, de número 670/2026, é de Gil Diniz Bolsonaro (PL). Não é a primeira tentativa. Levantamento do Datafixers Legislativo no sistema da Assembleia encontrou ao menos sete projetos anteriores, de 1967 a 2017, para levar a Bíblia a escolas ou bibliotecas públicas. Nenhum virou lei. Três foram arquivados. Os outros quatro seguem sem votação de todos os deputados, entre eles um de 2003, de Carlinhos Almeida (PT), e outro de 2013, de Rodrigo Moraes (PSC), que constam como prontos para entrar na lista de votações.",
         "source_ids": [
           "S3",
           "S5",
@@ -825,7 +825,7 @@
       },
       {
         "type": "paragraph",
-        "text": "As propostas vieram de partidos diferentes. Além do PT e do PSC, o sistema registra projetos de Waldir Agnello (PTB), em 2003, de Adilson Rossi (PSB), em 2011, e de Gil Lancaster (DEM), em 2017, este sobre exemplares em braile nas bibliotecas. Em outubro de 2021, Carlos Cezar (PSB) apresentou moção de repúdio à decisão do STF que derrubou a lei de Mato Grosso do Sul; a moção foi arquivada.",
+        "text": "As propostas vieram de partidos diferentes. Além do PT e do PSC, o sistema registra projetos de Waldir Agnello (PTB), em 2003, de Adilson Rossi (PSB), em 2011, e de Gil Lancaster (DEM), em 2017, este sobre exemplares em braile nas bibliotecas. Em outubro de 2021, Carlos Cezar (PSB) apresentou um protesto formal, a moção de repúdio, contra a decisão do STF que derrubou a lei de Mato Grosso do Sul. A moção foi arquivada.",
         "source_ids": [
           "S8",
           "S9",
@@ -840,14 +840,14 @@
       },
       {
         "type": "practical",
-        "text": "Na prática, o texto institui o uso da Bíblia em projetos de História, Literatura, Geografia, Ensino Religioso, Artes e Filosofia. A participação do aluno é opcional, os pais devem ser avisados antes e podem concordar ou discordar por escrito, e quem não participar deve ter atividade alternativa. O governo teria 180 dias para definir diretrizes, incluindo critérios para seleção e adaptação dos conteúdos bíblicos. Apesar de a ementa falar em escolas públicas e particulares, as particulares só aderem se quiserem. O projeto não traz estimativa de custo: diz apenas que as despesas sairão de dotações próprias.",
+        "text": "Na prática, o texto manda usar a Bíblia em projetos de História, Literatura, Geografia, Ensino Religioso, Artes e Filosofia. A participação do aluno é opcional, os pais devem ser avisados antes e podem concordar ou discordar por escrito, e quem não participar deve ter atividade alternativa. O governo teria 180 dias para definir as regras, incluindo critérios para escolher e adaptar os conteúdos bíblicos. O projeto cita escolas públicas e particulares, mas as particulares só aderem se quiserem. Não há estimativa de custo: o texto diz apenas que as despesas sairão do orçamento.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Na justificativa, o autor afirma que a proposta não contraria a laicidade porque usa a Bíblia apenas como recurso cultural e educativo e porque a participação é optativa. Diz ainda que a iniciativa atende a parcela da sociedade paulista que vê na tradição judaico-cristã parte da identidade cultural brasileira.",
+        "text": "Na justificativa, o autor afirma que a proposta não fere a separação entre Estado e religião porque usa a Bíblia apenas como recurso cultural e educativo e porque a participação é opcional. Diz ainda que a iniciativa atende a parcela da sociedade paulista que vê na tradição judaico-cristã parte da identidade cultural brasileira.",
         "source_ids": [
           "S1"
         ]
@@ -859,7 +859,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Em abril de 2021, o STF julgou por unanimidade inconstitucional o trecho de uma lei do Amazonas que obrigava escolas e bibliotecas a ter a Bíblia. A relatora, Cármen Lúcia, escreveu que exigir somente a Bíblia desprestigia outros livros sagrados e quem não tem religião, segundo a Agência Brasil. Em outubro do mesmo ano, o tribunal derrubou, também por unanimidade, lei de Mato Grosso do Sul em vigor desde 2004, na ação relatada por Rosa Weber, conforme o Campo Grande News.",
+        "text": "Em abril de 2021, o STF considerou por unanimidade inconstitucional o trecho de uma lei do Amazonas que obrigava escolas e bibliotecas a ter a Bíblia. A ministra Cármen Lúcia, relatora do caso, escreveu que exigir somente a Bíblia desprestigia outros livros sagrados e quem não tem religião, segundo a Agência Brasil. Em outubro do mesmo ano, o tribunal derrubou, também por unanimidade, lei de Mato Grosso do Sul em vigor desde 2004, em caso relatado pela ministra Rosa Weber, conforme o Campo Grande News.",
         "source_ids": [
           "S13",
           "S14"
@@ -867,14 +867,14 @@
       },
       {
         "type": "paragraph",
-        "text": "Em setembro de 2025, ao julgar lei do Rio Grande do Norte, o STF não a derrubou, mas fixou que ela permite e não obriga o Estado a manter Bíblias em bibliotecas. Segundo resumo do site Dizer o Direito, o ministro Cristiano Zanin, redator do acórdão, considerou que livros religiosos em espaços públicos não são incompatíveis com a laicidade por si só; o problema é a lei impor um único texto religioso, e a presença dessas obras deve resultar de critérios técnicos, culturais, históricos ou pedagógicos.",
+        "text": "Em setembro de 2025, ao julgar lei do Rio Grande do Norte, o STF não a derrubou, mas fixou que ela permite e não obriga o Estado a manter Bíblias em bibliotecas. Segundo resumo do site Dizer o Direito, o ministro Cristiano Zanin, autor do texto final da decisão, considerou que livros religiosos em espaços públicos não são, por si só, incompatíveis com um Estado sem religião oficial. O problema é a lei impor um único texto religioso, e a presença dessas obras deve resultar de critérios técnicos, culturais, históricos ou pedagógicos.",
         "source_ids": [
           "S15"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O caso mais próximo do projeto paulista é o de Belo Horizonte. Em setembro de 2025, o Tribunal de Justiça de Minas Gerais suspendeu em liminar a lei municipal que permitia usar a Bíblia como material complementar em escolas, a pedido do PSOL. A desembargadora Teresa Cristina da Cunha Peixoto entendeu que legislar sobre educação é competência da União e que a norma ofende a laicidade, segundo o Jurinews. A decisão admite o uso cultural, histórico ou literário, mas não como leitura obrigatória. A autora da lei, a vereadora Flávia Borja (DC), defendeu que a Bíblia ajudaria professores a tratar de civilizações antigas e gêneros literários. O mérito ainda será julgado pelo Órgão Especial.",
+        "text": "O caso mais próximo do projeto paulista é o de Belo Horizonte. Em setembro de 2025, o Tribunal de Justiça de Minas Gerais suspendeu em decisão provisória a lei municipal que permitia usar a Bíblia como material complementar em escolas, a pedido do PSOL. A desembargadora Teresa Cristina da Cunha Peixoto entendeu que fazer leis sobre educação cabe à União e que a norma fere a separação entre Estado e religião, segundo o Jurinews. A decisão admite o uso cultural, histórico ou literário, mas não como leitura obrigatória. A autora da lei, a vereadora Flávia Borja (DC), defendeu que a Bíblia ajudaria professores a tratar de civilizações antigas e gêneros literários. A decisão final caberá ao Órgão Especial do tribunal.",
         "source_ids": [
           "S16"
         ]
@@ -888,7 +888,7 @@
       },
       {
         "type": "next",
-        "text": "O que acontece agora: o parecer do relator ainda precisa ser votado pela CCJR. O sistema da Alesp não registra votação do projeto em comissão nem em plenário. O texto ficou em pauta de 6 a 14 de julho e não recebeu emendas.",
+        "text": "O que acontece agora: a comissão ainda precisa votar a recomendação de Olim. O sistema da Alesp não registra votação do projeto em comissão nem entre todos os deputados. O texto ficou aberto a pedidos de mudança de 6 a 14 de julho e não recebeu nenhum.",
         "source_ids": [
           "S2",
           "S3"
@@ -1015,7 +1015,8 @@
         "kind": "primary",
         "published_date": "2026-10-27"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
     "status_label": "Aprovado em comissão",
@@ -1024,29 +1025,27 @@
     "house": "camara",
     "published_at": "2026-10-30T08:34:20.623884+00:00",
     "proposal": "PL 891/2025",
-    "title": "Comissão aprova projeto de Bacelar para incluir casais gays e mulheres trans na Lei Maria da Penha",
+    "title": "Comissão da Câmara aprova pôr na Lei Maria da Penha a proteção a casais gays e mulheres trans que o Supremo já reconheceu em 2025",
     "topic": "Direitos civis",
     "reading_minutes": 4,
     "kind": "context",
     "edition_date": "2026-10-30",
-    "subtitle": "STF já reconheceu a proteção em 2025; proposta explicita alcance na lei e ainda precisa passar por outras etapas no Congresso.",
+    "subtitle": "O projeto não cria uma proteção nova: leva para o texto da lei o que o tribunal decidiu. Ainda precisa de outra comissão da Câmara e do Senado",
     "politicians": [
       {
-        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e trajetória de Bacelar",
             "url": "https://www.camara.leg.br/deputados/69871/biografia"
           }
         ],
-        "uf": "BA",
+        "role": "Autor do projeto",
+        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
         "party": "PV",
-        "name": "Bacelar"
+        "name": "Bacelar",
+        "uf": "BA"
       },
       {
-        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
-        "role": "Relatora na Comissão de Direitos Humanos",
         "sources": [
           {
             "title": "Câmara: biografia de Célia Xakriabá",
@@ -1057,15 +1056,17 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
           }
         ],
-        "uf": "MG",
+        "role": "Relatora na Comissão de Direitos Humanos",
+        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
         "party": "PSOL",
-        "name": "Célia Xakriabá"
+        "name": "Célia Xakriabá",
+        "uf": "MG"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A Comissão de Direitos Humanos da Câmara aprovou na quarta-feira (28) um projeto de Bacelar (PV-BA) para escrever na Lei Maria da Penha que a proteção alcança casais homoafetivos, inclusive de homens, e relações que envolvam travestis e mulheres transexuais. O texto exige que fatores do contexto coloquem a vítima em posição de subordinação dentro da relação.",
+        "text": "Casais gays, travestis e mulheres trans podem ter a proteção da Lei Maria da Penha escrita na própria lei. A Comissão de Direitos Humanos da Câmara aprovou na quarta-feira (28) um projeto de Bacelar (PV-BA) com essa mudança, que inclui casais de homens. O texto exige que o contexto coloque a vítima em posição de subordinação dentro da relação.",
         "source_ids": [
           "S3",
           "S1"
@@ -1073,7 +1074,7 @@
       },
       {
         "type": "paragraph",
-        "text": "O avanço do PL 891/2025 não inaugura essa proteção. Em fevereiro de 2025, o Supremo Tribunal Federal já havia decidido que a lei pode alcançar esses grupos, reconhecendo a omissão do Congresso. A proposta procura levar essa previsão ao texto legal. Ainda precisa passar pela Comissão de Constituição e Justiça e pelo Senado antes de poder virar lei.",
+        "text": "A proteção não começa agora. Em fevereiro de 2025, o Supremo Tribunal Federal (STF) decidiu que a lei pode alcançar esses grupos e reconheceu que o Congresso havia sido omisso. O projeto leva essa previsão ao texto da lei. Ainda precisa passar pela Comissão de Constituição e Justiça (CCJ) e pelo Senado antes de virar lei.",
         "source_ids": [
           "S4",
           "S2",
@@ -1082,7 +1083,7 @@
       },
       {
         "type": "paragraph",
-        "text": "O parecer aprovado é de Célia Xakriabá (PSOL-MG), favorável ao projeto de Bacelar. A relatora argumenta que a medida concretiza os princípios da igualdade e da não discriminação, sem abandonar a proteção das mulheres que orienta a Lei Maria da Penha. A decisão desta semana aprova o parecer na comissão; não é aprovação final do Congresso nem sanção presidencial. O parecer registra que não havia emendas ao final do prazo regimental e recomenda a aprovação, sem apresentar um substitutivo. A comissão analisou o mérito relativo aos direitos humanos e às minorias.",
+        "text": "A deputada encarregada de analisar o projeto na comissão, Célia Xakriabá (PSOL-MG), recomendou aprovar o texto sem mudanças. Ela argumenta que a medida aplica os princípios da igualdade e da não discriminação sem abandonar a proteção das mulheres, que orienta a Lei Maria da Penha. A comissão analisou o tema do ponto de vista dos direitos humanos e das minorias. É uma etapa, não a aprovação final do Congresso.",
         "source_ids": [
           "S2",
           "S3"
@@ -1090,7 +1091,7 @@
       },
       {
         "type": "practical",
-        "text": "O projeto altera o parágrafo único do artigo 5º, que trata das relações abrangidas pela lei. A redação pretendida explicita os casais e as pessoas protegidas e mantém a condição ligada à posição de subalternidade da vítima. Quem busca proteção contra violência doméstica não deve interpretar a tramitação como sinal de que o reconhecimento judicial de 2025 deixou de existir.",
+        "text": "O projeto muda o trecho que define as relações abrangidas pela lei (parágrafo único do artigo 5º). A nova redação cita os casais e as pessoas protegidas e mantém a exigência de que a vítima esteja em posição de subordinação. Para quem busca proteção contra violência doméstica, a decisão do STF de 2025 não deixou de existir por causa deste projeto.",
         "source_ids": [
           "S1",
           "S4"
@@ -1103,28 +1104,28 @@
       },
       {
         "type": "paragraph",
-        "text": "No Mandado de Injunção 7452, provocado pela Associação Brasileira de Famílias HomoTransAfetivas, o STF reconheceu, por unanimidade, a omissão legislativa. O julgamento terminou em 21 de fevereiro de 2025. Segundo o tribunal, a existência de projetos em tramitação não eliminava essa omissão.",
+        "text": "A decisão veio de uma ação da Associação Brasileira de Famílias HomoTransAfetivas, o Mandado de Injunção 7452, tipo de processo usado quando falta uma lei para garantir um direito. Por unanimidade, o STF reconheceu a omissão do Congresso. O julgamento terminou em 21 de fevereiro de 2025. Segundo o tribunal, ter projetos em andamento não eliminava essa omissão.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Moraes fundamentou a decisão no dever estatal de proteger as diferentes famílias. Para homens em relações homoafetivas, destacou a subordinação da vítima; para travestis e mulheres transexuais, a identidade social feminina. Essa fundamentação é de 2025.",
+        "text": "O ministro Alexandre de Moraes baseou a decisão no dever do Estado de proteger as diferentes famílias. Para homens em relações homoafetivas, destacou a subordinação da vítima; para travestis e mulheres transexuais, a identidade social feminina.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Zanin, Mendonça e Fachin fizeram uma ressalva: admitiram medidas protetivas de urgência para homens em relacionamentos homoafetivos, mas afastaram sanções penais cujo tipo pressupõe vítima mulher. Acesso à proteção e aplicação de todos os crimes são questões distintas.",
+        "text": "Os ministros Cristiano Zanin, André Mendonça e Edson Fachin fizeram uma ressalva: aceitaram medidas protetivas de urgência para homens em relacionamentos homoafetivos, mas não a punição de crimes que pressupõem vítima mulher. Ter acesso à proteção e aplicar todos os crimes são coisas diferentes.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "votes",
-        "text": "O registro de votação de 28 de outubro informa a aprovação do parecer e identifica o projeto afetado, mas não traz nele uma lista de votos individuais. O Atlas Público já havia noticiado a deliberação como simbólica. Esse dado não permite dizer que cada integrante da comissão votou a favor, contra ou esteve ausente.",
+        "text": "A Câmara registrou a aprovação em 28 de outubro, mas não uma lista de votos individuais. O Atlas Público já havia noticiado a votação como simbólica. Não é possível dizer quem votou a favor, contra ou faltou.",
         "source_ids": [
           "S3",
           "S5"
@@ -1132,7 +1133,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Bacelar é administrador e deputado pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. Célia Xakriabá, professora e deputada por Minas Gerais no mandato de 2023 a 2027, atua pelo PSOL e é a relatora, não a autora da proposta.",
+        "text": "Bacelar é administrador e deputado pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. Célia Xakriabá, professora e deputada por Minas Gerais no mandato de 2023 a 2027, é do PSOL e analisou o projeto na comissão; não é a autora.",
         "source_ids": [
           "S7",
           "S8"
@@ -1140,7 +1141,7 @@
       },
       {
         "type": "next",
-        "text": "O projeto tramita em caráter conclusivo nas comissões, em regime ordinário. A análise na CCJ ainda é uma etapa necessária na Câmara. A aprovação de outubro sucede a apresentação da proposta em março de 2025 e do parecer em novembro daquele ano; essas datas anteriores não devem ser confundidas com a deliberação ocorrida agora.",
+        "text": "A próxima etapa na Câmara é a CCJ. Se aprovado nas comissões, o projeto pode seguir sem votação de todos os deputados. Ele foi apresentado em março de 2025, a análise de Célia Xakriabá é de novembro daquele ano, e a votação na comissão ocorreu agora.",
         "source_ids": [
           "S2",
           "S1",
@@ -1205,25 +1206,24 @@
         "kind": "primary",
         "published_date": ""
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
     "proposal": "PL 736/2026",
-    "status_label": "Aprovado em primeiro turno",
+    "status_label": "Aprovado na primeira de duas votações",
     "id": "2026-10-29-projeto-de-nunes-avanca-para-viabilizar-reassentamento-de-890-familias-na-zona-leste",
-    "subtitle": "Câmara de SP aprova em primeiro turno mudança na reserva viária da Jacu-Pêssego; texto ainda não entrega títulos ou novas moradias.",
+    "subtitle": "Um trecho da avenida Jacu-Pêssego foi construído fora do traçado previsto em lei de 2009, e a área que ficou reservada no papel trava moradias. Falta outra votação, e o texto não entrega casas nem escrituras",
     "published_at": "2026-10-29T10:11:58.786052+00:00",
     "kind": "daily",
     "house": "cmsp",
     "edition_date": "2026-10-29",
     "reading_minutes": 4,
-    "title": "Projeto de Nunes avança para viabilizar reassentamento de 890 famílias na zona leste",
+    "title": "Vereadores de SP aprovam em primeira votação mudança que libera área para reassentar 890 famílias na zona leste",
     "trigger_date": "2026-10-28",
     "topic": "Moradia",
     "politicians": [
       {
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -1234,15 +1234,17 @@
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
         ],
-        "uf": "SP",
+        "role": "Autor da proposta — Executivo municipal",
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
         "party": "MDB",
-        "name": "Ricardo Nunes"
+        "name": "Ricardo Nunes",
+        "uf": "SP"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Um projeto do prefeito Ricardo Nunes (MDB-SP) para retirar um obstáculo a um plano de reassentamento de 890 famílias na zona leste passou em primeiro turno na Câmara de São Paulo na quarta-feira (28). A proposta altera o desenho legal de um trecho da Jacu-Pêssego, onde a reserva de espaço para a avenida impede a regularização de moradias e o avanço do projeto habitacional, segundo a Prefeitura.",
+        "text": "Uma área na zona leste de São Paulo reservada para uma avenida construída em outra posição pode ser liberada para receber 890 famílias que a Prefeitura quer reassentar, ou seja, transferir para novas moradias. Os vereadores aprovaram na quarta-feira (28), na primeira de duas votações, um projeto do prefeito Ricardo Nunes (MDB-SP) que redesenha um trecho da Jacu-Pêssego. Segundo a Prefeitura, a reserva de espaço para a via impede a regularização de moradias e o avanço do projeto habitacional.",
         "source_ids": [
           "S2",
           "S1"
@@ -1250,7 +1252,7 @@
       },
       {
         "type": "paragraph",
-        "text": "O PL 736/2026 ainda não é lei. A votação foi simbólica, sem registro individual no painel eletrônico, conforme informou a Câmara. A aprovação inicial também não significa que as famílias já tenham recebido uma escritura ou uma nova casa: o texto modifica os alinhamentos da via, e o reassentamento aparece como finalidade do projeto de urbanização descrito na mensagem do Executivo.",
+        "text": "O projeto ainda não é lei. A votação foi simbólica, sem registro do voto de cada vereador, segundo a Câmara. As famílias também não recebem agora escritura nem casa nova: o texto só muda o desenho oficial da via, e o reassentamento é a finalidade do plano de urbanização descrito pela Prefeitura.",
         "source_ids": [
           "S2",
           "S1"
@@ -1258,21 +1260,21 @@
       },
       {
         "type": "paragraph",
-        "text": "O problema está em cerca de 700 metros entre a faixa da Transpetro e a divisa com Mauá, no distrito de São Rafael. Na justificativa enviada aos vereadores em setembro, Nunes afirma que a avenida foi executada em um traçado diferente daquele aprovado pela Lei 14.880, de 2009. Assim, parte da área continuou reservada no papel para uma via que acabou construída em outra posição.",
+        "text": "O problema está em cerca de 700 metros entre a faixa da Transpetro e a divisa com Mauá, no distrito de São Rafael. Na justificativa enviada aos vereadores em setembro, Nunes afirma que a avenida foi feita em um traçado diferente do aprovado pela Lei 14.880, de 2009. Assim, parte da área continuou reservada no papel para uma via que acabou construída em outra posição.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Segundo a mesma mensagem, há duas dificuldades: moradias que se pretende regularizar estão na faixa reservada pela lei antiga; e a área junto à Jacu-Pêssego e à Rua Nina Simone, prevista para receber as 890 famílias reassentadas, também está nessa reserva. O projeto aprova uma nova planta e revoga os alinhamentos anteriores apenas no trecho indicado.",
+        "text": "Segundo a Prefeitura, há duas dificuldades: moradias que se pretende regularizar estão na faixa reservada pela lei antiga, e o terreno junto à Jacu-Pêssego e à Rua Nina Simone, previsto para receber as 890 famílias, também está. O projeto aprova um novo mapa e cancela o traçado anterior apenas nesse trecho.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "votes",
-        "text": "O governo defendeu a proposta por meio de seu líder, Fabio Riva (MDB). No encaminhamento da votação, Alessandro Guedes (PT) declarou apoio da bancada e anunciou que pretende apresentar uma emenda na segunda votação para tratar de um novo viário em Cidade Tiradentes. A manifestação de uma bancada não permite atribuir um voto individual a cada vereador.",
+        "text": "O líder do governo na Câmara, Fabio Riva (MDB), defendeu a proposta. Alessandro Guedes (PT) declarou o apoio da bancada do partido e disse que pretende propor, na segunda votação, uma mudança para tratar de um novo sistema de vias em Cidade Tiradentes. O apoio de uma bancada não permite atribuir voto a cada vereador.",
         "source_ids": [
           "S2"
         ]
@@ -1284,21 +1286,21 @@
       },
       {
         "type": "paragraph",
-        "text": "Um estudo publicado pelo Ipea em 2022 ajuda a entender a distância entre mudar uma regra territorial e concluir o atendimento às famílias. Paulo Somlanyi Romeiro, Fernanda Carolina Vieira da Costa e André Simionato Castro defendem que a regularização abranja as dimensões jurídica, urbanística, ambiental e social. Para os autores, integrar um assentamento à cidade exige também infraestrutura e serviços públicos.",
+        "text": "Um estudo publicado pelo Ipea em 2022 ajuda a entender a distância entre mudar uma regra e concluir o atendimento às famílias. Paulo Somlanyi Romeiro, Fernanda Carolina Vieira da Costa e André Simionato Castro defendem que regularizar um território vá além do documento e inclua questões urbanas, ambientais e sociais. Para os autores, integrá-lo à cidade exige também infraestrutura e serviços públicos.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "paragraph",
-        "text": "No capítulo sobre financiamento federal, os pesquisadores apontam ainda a necessidade de equipes capacitadas, articulação com cartórios e órgãos ambientais e capacidade orçamentária para as obras. A análise é sobre os obstáculos da regularização no país; não avalia o PL de Nunes nem atesta que essas etapas estejam cumpridas na área da Jacu-Pêssego.",
+        "text": "Os pesquisadores apontam ainda a necessidade de equipes capacitadas, articulação com cartórios e órgãos ambientais e dinheiro para as obras. O estudo trata do país; não avalia o projeto de Nunes nem atesta que essas etapas estejam cumpridas na área da Jacu-Pêssego.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Nunes é prefeito desde 2021, quando assumiu após a morte de Bruno Covas, de quem era vice. Foi reeleito em 2024 com uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos, e o coronel Mello Araújo (PL) como vice. A autoria deste projeto é do Executivo municipal; Riva atua na defesa da proposta na Câmara.",
+        "text": "Nunes é prefeito desde 2021, quando assumiu após a morte de Bruno Covas, de quem era vice. Foi reeleito em 2024 com uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos, e o coronel Mello Araújo (PL) como vice. O projeto é da Prefeitura; Riva o defende na Câmara.",
         "source_ids": [
           "S4",
           "S1",
@@ -1307,14 +1309,14 @@
       },
       {
         "type": "practical",
-        "text": "Se concluída a aprovação e transformado em lei, o projeto substituirá a reserva viária antiga no trecho delimitado. Isso permitiria prosseguir com o plano habitacional descrito pela Prefeitura. Não é uma autorização individual de propriedade para cada família nem uma data de mudança.",
+        "text": "Se virar lei, o projeto substituirá a reserva antiga nesse trecho, o que permitiria seguir com o plano habitacional descrito pela Prefeitura. Não dá propriedade a cada família nem marca data de mudança.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "next",
-        "text": "A proposta ainda precisa da segunda votação. Na notícia sobre a decisão, a Câmara anunciou a próxima sessão para 3 de novembro, às 15h, mas isso não assegura que este projeto será votado naquele dia. O texto inicial remete as despesas às dotações orçamentárias próprias, com suplementação se necessária, sem fixar um valor específico para a execução.",
+        "text": "Falta a segunda votação. Na notícia sobre a decisão, a Câmara anunciou a sessão seguinte para 3 de novembro, às 15h, o que não assegurava a votação do projeto naquele dia. O texto não fixa valor para executar o plano: diz que as despesas sairão do orçamento, com reforço se necessário.",
         "source_ids": [
           "S2",
           "S1"
@@ -1350,10 +1352,11 @@
         "kind": "press",
         "published_date": "2024-10-27"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
-    "subtitle": "Texto de Dorinaldo Malafaia, relatado por Chico Alencar, avança na Câmara; regras de custeio ficariam para regulamento e a proposta ainda não é lei.",
+    "subtitle": "O Brasil teve 118 mil casos em 2025, quase todos na Amazônia. O texto também põe em lei o programa de combate à doença, criado em 2003, mas não diz quanto cada um pagaria e ainda precisa de outras votações",
     "status_label": "Aprovado em comissão",
     "kind": "daily",
     "trigger_date": "2026-10-27",
@@ -1362,13 +1365,11 @@
     "edition_date": "2026-10-28",
     "topic": "Saúde pública",
     "reading_minutes": 4,
-    "title": "Comissão aprova tornar permanente o combate à malária e cobrar prevenção de empreendimentos de risco",
+    "title": "Empreendimentos com risco de espalhar malária teriam de pagar a prevenção, prevê projeto que avançou na Câmara",
     "house": "camara",
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1379,15 +1380,17 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "uf": "AP",
+        "role": "Autor do projeto",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "party": "PDT",
-        "name": "Dorinaldo Malafaia"
+        "name": "Dorinaldo Malafaia",
+        "uf": "AP"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A Comissão da Amazônia da Câmara aprovou na terça-feira (27) transformar o combate à malária em uma política permanente prevista em lei. O texto também exige que responsáveis por empreendimentos com potencial de favorecer a doença elaborem e financiem ações de controle. O objetivo é dar continuidade à prevenção, ao diagnóstico e ao tratamento, sobretudo nas populações mais vulneráveis da Amazônia.",
+        "text": "Quem tocar um empreendimento com potencial de favorecer a malária teria de elaborar e pagar ações de controle da doença, segundo um projeto aprovado na terça-feira (27) pela Comissão da Amazônia da Câmara. O texto também transforma o combate à malária em política permanente, prevista em lei, para manter prevenção, diagnóstico e tratamento, sobretudo nas populações mais vulneráveis da Amazônia.",
         "source_ids": [
           "S1",
           "S2"
@@ -1395,49 +1398,49 @@
       },
       {
         "type": "paragraph",
-        "text": "A decisão é uma etapa da tramitação. O PL 1956/2026, apresentado por Dorinaldo Malafaia (PDT-AP), recebeu um substitutivo de Chico Alencar (PSOL-RJ). Ainda depende de outras comissões da Câmara e de análise do Senado antes de poder virar lei. A aprovação desta semana não cria, por si, uma nova regra em vigor para pacientes ou empresas.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O programa já existe: foi instituído por uma portaria do Ministério da Saúde de 2003. A mudança proposta é dar a ele uma base legal própria e caráter permanente. No parecer, Alencar argumenta que o enfrentamento de uma doença endêmica precisa de estabilidade institucional e financiamento previsível, em vez de depender de mudanças de prioridade entre governos.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O substitutivo, porém, não fixa uma quantia para cada empreendimento pagar. Os critérios, os parâmetros e a metodologia de cálculo do financiamento seriam definidos em regulamento. O relator acolheu ajustes sugeridos pela área técnica do Ministério da Saúde para evitar que fórmulas detalhadas na lei dificultassem a gestão e a divisão de responsabilidades financeiras no SUS.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Pelo artigo 8º, o responsável pelo empreendimento financiaria um plano de controle com base na avaliação de seu potencial de gerar ou agravar risco de transmissão. A aprovação desse plano e a emissão do atestado de condição sanitária dependeriam da comprovação do financiamento e da execução das ações. O texto vincula o custeio à prevenção do risco sanitário, não a uma cobrança indistinta de toda atividade econômica.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A dimensão do problema aparece nos registros do Ministério da Saúde: o Brasil teve 118.037 casos de malária contraídos no próprio território em 2025. Mais de 99% dos casos de transmissão local se concentram na região amazônica. A pasta ressalta que diagnóstico e tratamento oportunos são fundamentais para evitar formas graves e mortes.",
+        "text": "O Brasil teve 118.037 casos de malária contraídos no próprio território em 2025, segundo o Ministério da Saúde. Mais de 99% dos casos de transmissão local estão na região amazônica. A pasta ressalta que diagnóstico e tratamento feitos a tempo são fundamentais para evitar formas graves e mortes.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A distância dos serviços ajuda a explicar por que continuidade e recursos importam. Em apresentação no Congresso Brasileiro de Medicina Tropical de agosto de 2026, o pesquisador Andre Siqueira, do INI/Fiocruz, abordou as dificuldades para controlar a malária na Terra Indígena Yanomami. Segundo relato publicado pelo instituto em 27 de agosto, a extensão do território, a mobilidade das comunidades e o acesso por aeronaves, barcos e longas caminhadas interferem nas ações de saúde.",
+        "text": "O projeto ainda não é lei, e nada muda por enquanto para pacientes ou empresas. Foi apresentado por Dorinaldo Malafaia (PDT-AP) e reescrito por Chico Alencar (PSOL-RJ), o deputado encarregado de analisá-lo na comissão, chamado de relator. Ainda depende de outras comissões da Câmara e do Senado.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O programa já existe: foi criado por uma portaria do Ministério da Saúde em 2003. A mudança é dar a ele uma lei própria e caráter permanente. Alencar argumenta que uma doença endêmica, que persiste em uma região, precisa de estabilidade e de dinheiro previsível, em vez de depender das prioridades de cada governo.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto, porém, não fixa quanto cada empreendimento pagaria. Os critérios e o cálculo ficariam para uma regulamentação posterior. Alencar acolheu ajustes sugeridos pela área técnica do Ministério da Saúde para evitar que fórmulas detalhadas na lei dificultassem a gestão e a divisão das contas no SUS.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O responsável pagaria um plano de controle conforme o risco de o empreendimento gerar ou agravar a transmissão. A aprovação do plano e o atestado sanitário do empreendimento dependeriam da comprovação do pagamento e da execução das ações. A cobrança se liga ao risco de transmissão, não a toda atividade econômica.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A distância dos serviços ajuda a explicar por que continuidade e recursos importam. Em apresentação no Congresso Brasileiro de Medicina Tropical de agosto de 2026, o pesquisador Andre Siqueira, da Fiocruz, tratou das dificuldades para controlar a malária na Terra Indígena Yanomami. Segundo relato publicado pelo instituto em 27 de agosto, a extensão do território, a mobilidade das comunidades e o acesso por aeronaves, barcos e longas caminhadas interferem nas ações de saúde.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Malafaia é enfermeiro, foi secretário municipal de Saúde de Macapá e dirigiu a vigilância em saúde no Amapá. A biografia oficial registra sua atuação como vice-líder do governo no Congresso desde 2023. O parecer de Alencar sustenta o mérito da iniciativa, mas incorpora ressalvas técnicas sobre como financiar e executar a política.",
+        "text": "Malafaia é enfermeiro, foi secretário municipal de Saúde de Macapá e dirigiu a vigilância em saúde no Amapá. A biografia oficial registra sua atuação como vice-líder do governo no Congresso desde 2023. Alencar defende a proposta, mas incorporou ressalvas técnicas sobre como pagar e executar a política.",
         "source_ids": [
           "S6",
           "S2"
@@ -1445,14 +1448,14 @@
       },
       {
         "type": "practical",
-        "text": "Se o projeto concluir a tramitação, o programa teria seus objetivos de prevenção, diagnóstico, tratamento e vigilância estabelecidos em lei. As ações seriam incorporadas aos planos de saúde da União, dos estados e dos municípios. O texto não garante uma transferência imediata de dinheiro: o financiamento continuaria sujeito ao planejamento, ao orçamento e às normas do SUS.",
+        "text": "Se o projeto virar lei, o programa teria seus objetivos de prevenção, diagnóstico, tratamento e vigilância definidos em lei. As ações entrariam no planejamento de saúde da União, dos estados e dos municípios. O texto não garante dinheiro imediato: o pagamento continuaria dependendo do orçamento e das regras do SUS.",
         "source_ids": [
           "S2"
         ]
       },
       {
         "type": "votes",
-        "text": "A Comissão da Amazônia aprovou o parecer com substitutivo em 27 de outubro. O registro da Câmara identifica o objeto aprovado; a cobertura do Atlas Público informa que a votação foi simbólica, sem votos individuais. Não há nessa decisão uma lista nominal que permita atribuir voto favorável ou contrário a cada deputado.",
+        "text": "A comissão aprovou o texto de Alencar em 27 de outubro. Segundo o Atlas Público, a votação foi simbólica, sem registro do voto de cada deputado. Por isso não é possível dizer quem votou a favor ou contra.",
         "source_ids": [
           "S1",
           "S5"
@@ -1460,7 +1463,7 @@
       },
       {
         "type": "next",
-        "text": "A proposta tem tramitação ordinária e apreciação conclusiva pelas comissões. O despacho prevê análise da Comissão de Saúde, de Finanças e Tributação e de Constituição e Justiça e de Cidadania. A decisão da Comissão da Amazônia deve ser distinguida da aprovação final da Câmara, e o texto ainda pode sofrer alterações nessas etapas.",
+        "text": "O projeto ainda passa pelas comissões de Saúde, de Finanças e Tributação e de Constituição e Justiça e de Cidadania, e o texto pode mudar nessas etapas. Se for aprovado nelas, pode seguir sem votação de todos os deputados.",
         "source_ids": [
           "S2",
           "S7"
@@ -1517,7 +1520,8 @@
         "kind": "primary",
         "published_date": "2026-10-27"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
     "status_label": "Audiência realizada",
@@ -1529,28 +1533,28 @@
     "reading_minutes": 4,
     "edition_date": "2026-10-28",
     "house": "senado",
-    "title": "Lideranças cobram água potável no Senado; Funai anuncia prestação de contas aos Yanomami",
-    "subtitle": "Em audiência, representantes indígenas pediram continuidade dos projetos; órgão promete explicar em novembro o andamento das ações às lideranças.",
+    "title": "Indígenas cobram no Senado água própria para beber no território Yanomami, e Funai promete explicar em novembro o que foi feito",
+    "subtitle": "Um líder indígena disse que o garimpo deixou águas impróprias para consumo e que projetos param quando o dinheiro acaba. A audiência não aprovou verba nem lei",
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "uf": "DF",
+        "role": "Presidente da subcomissão na audiência",
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
         "party": "Republicanos",
-        "name": "Damares Alves"
+        "name": "Damares Alves",
+        "uf": "DF"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A cobrança por água própria para consumo e pela continuidade de projetos de alimentação chegou ao Senado na terça-feira (27), em audiência sobre a Terra Indígena Yanomami. Na reunião, a presidente da Funai, Lúcia Alberta Baré, anunciou uma oficina de prestação de contas para todas as lideranças do território em novembro. A promessa é explicar o andamento das ações de diferentes órgãos, não apenas as da fundação.",
+        "text": "Lideranças indígenas cobraram no Senado, na terça-feira (27), água própria para beber e a continuidade de projetos de alimentação, em audiência sobre a Terra Indígena Yanomami. A presidente da Funai, Lúcia Alberta Baré, prometeu reunir em novembro todas as lideranças do território para explicar o andamento das ações de diferentes órgãos, não apenas as da fundação.",
         "source_ids": [
           "S1"
         ]
@@ -1564,14 +1568,14 @@
       },
       {
         "type": "paragraph",
-        "text": "Ao falar do acesso à água, Edson disse que atividades de garimpo tornaram inadequadas para consumo águas usadas pelas comunidades. A cobrança relacionou a proteção ambiental ao abastecimento e à alimentação: os projetos não se encerram na entrega de equipamentos ou de insumos, mas precisam continuar funcionando onde vivem as famílias.",
+        "text": "Ao falar do acesso à água, Edson disse que atividades de garimpo tornaram inadequadas para consumo águas usadas pelas comunidades. A cobrança ligou a proteção do ambiente ao abastecimento e à comida: entregar equipamentos não basta, os projetos precisam continuar funcionando onde as famílias vivem.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A resposta anunciada pela Funai foi reunir as lideranças para mostrar a situação de cada projeto. Lúcia disse que os órgãos responsáveis participarão da apresentação e que prestar contas e dialogar com os povos indígenas faz parte de suas obrigações. O anúncio foi feito na audiência; a oficina ainda é uma atividade futura, e não uma prestação de contas já concluída.",
+        "text": "A Funai respondeu com a promessa de reunir as lideranças e mostrar a situação de cada projeto. Lúcia disse que os órgãos responsáveis participarão e que prestar contas e dialogar com os povos indígenas faz parte de suas obrigações. Por enquanto é um anúncio: o encontro ainda não aconteceu.",
         "source_ids": [
           "S1"
         ]
@@ -1586,21 +1590,21 @@
       },
       {
         "type": "paragraph",
-        "text": "Naquela publicação da UnB, a professora Mônica Nogueira, do Centro de Desenvolvimento Sustentável, explicou que o plano foi construído com pesquisadores indígenas. A proposta combina recuperação ambiental, formação de agentes indígenas e conhecimento tradicional. Esse contexto ajuda a situar a cobrança feita ao Senado: a participação das comunidades não se limita à consulta inicial sobre o que recuperar.",
+        "text": "Naquela publicação da UnB, a professora Mônica Nogueira, do Centro de Desenvolvimento Sustentável, explicou que o plano foi construído com pesquisadores indígenas. A proposta combina recuperação ambiental, formação de agentes indígenas e conhecimento tradicional. As comunidades, portanto, participaram da construção do plano, não só de uma consulta inicial.",
         "source_ids": [
           "S2"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Há evidência científica anterior de que o dano ambiental também é um problema de saúde. Em junho de 2024, a Fiotec divulgou, com informações da Agência Fiocruz, pesquisa em nove aldeias Ninam de Roraima. O estudo encontrou mercúrio nas amostras de cabelo dos participantes. O médico e pesquisador Paulo Basta destacou a vulnerabilidade das crianças, especialmente as menores de cinco anos. A pesquisa descreve aquela população estudada; não é um levantamento de todos os Yanomami em 2026.",
+        "text": "Uma pesquisa anterior mostra que o dano ambiental também é um problema de saúde. Em junho de 2024, a Fiotec divulgou, com informações da Agência Fiocruz, estudo em nove aldeias Ninam de Roraima. Foi encontrado mercúrio, metal usado no garimpo de ouro, nas amostras de cabelo dos participantes. O médico e pesquisador Paulo Basta destacou a vulnerabilidade das crianças, especialmente as menores de cinco anos. A pesquisa descreve aquela população; não é um levantamento de todos os Yanomami em 2026.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Presidente da subcomissão, Damares Alves (Republicanos-DF) disse que pretende levantar quanto diferentes órgãos destinam à recuperação ambiental. Na própria audiência, apresentou-se como oposição ao governo, mas afirmou que as ações no território não podem ser interrompidas e que tem a responsabilidade de convencer colegas sobre a necessidade dos recursos. Trata-se de um compromisso de fiscalização e articulação, sem votação de novas verbas naquela reunião.",
+        "text": "Presidente da subcomissão, a senadora Damares Alves (Republicanos-DF) disse que pretende levantar quanto diferentes órgãos destinam à recuperação ambiental. Na audiência, apresentou-se como oposição ao governo, mas afirmou que as ações no território não podem ser interrompidas e que tem a responsabilidade de convencer colegas sobre a necessidade dos recursos. Nenhuma verba nova foi votada naquela reunião.",
         "source_ids": [
           "S1"
         ]
@@ -1614,7 +1618,7 @@
       },
       {
         "type": "next",
-        "text": "Os próximos pontos de acompanhamento são a realização da oficina anunciada para novembro e a apresentação do levantamento de recursos prometido pela subcomissão. O compromisso de explicar o andamento dos projetos precisa ser distinguido da comprovação de que a água chegou ou de que a recuperação ambiental terminou. A oficina poderá permitir às lideranças conhecer e cobrar a situação de cada ação.",
+        "text": "Os próximos pontos a acompanhar são o encontro anunciado para novembro e o levantamento de recursos prometido pela subcomissão. Explicar o andamento dos projetos não é o mesmo que comprovar que a água chegou ou que a recuperação ambiental terminou.",
         "source_ids": [
           "S1"
         ]
@@ -1642,14 +1646,15 @@
         "kind": "press",
         "published_date": "2024-06-05"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
     "edition_date": "2026-10-27",
-    "title": "Três deputados concentram 39% do gasto do PL paulista com divulgação do mandato",
+    "title": "Três deputados federais do PL de SP gastaram R$ 540,7 mil de dinheiro público para divulgar o mandato, 39% do total do partido no estado",
     "status_label": "Levantamento de dados",
     "proposal": "CEAP-SP-2026",
-    "subtitle": "Feliciano, Luiz Philippe e José Olimpio somam R$ 540,7 mil; levantamento da base da Câmara considera os meses contábeis de janeiro a setembro de 2026.",
+    "subtitle": "Marco Feliciano, Luiz Philippe de Orleans e Bragança e José Olimpio lideram a lista de 2026, com registros de janeiro a junho. A verba pode pagar comunicação do mandato, mas não propaganda eleitoral",
     "id": "2026-10-27-tres-deputados-concentram-39-do-gasto-do-pl-paulista-com-divulgacao-do-mandato",
     "topic": "Gastos parlamentares",
     "kind": "daily",
@@ -1659,70 +1664,70 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "name": "Pr. Marco Feliciano"
+        "name": "Pr. Marco Feliciano",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança"
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "role": "Parlamentar citado",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "uf": "SP",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "party": "PL",
-        "name": "Missionário José Olimpio"
+        "name": "Missionário José Olimpio",
+        "uf": "SP"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Três deputados federais do PL por São Paulo concentraram 39% das despesas de divulgação do mandato registradas para a sigla no estado nos meses contábeis de janeiro a setembro de 2026. Pr. Marco Feliciano (PL-SP), Luiz Philippe de Orleans e Bragança (PL-SP) e Missionário José Olimpio (PL-SP) somaram R$ 540,7 mil, de um total de R$ 1,39 milhão identificado na base da Câmara consultada em 27 de outubro.",
+        "text": "Três deputados federais do PL por São Paulo gastaram R$ 540,7 mil de dinheiro público em 2026 para divulgar seus mandatos. Pr. Marco Feliciano, Luiz Philippe de Orleans e Bragança e Missionário José Olimpio respondem por 39% do R$ 1,39 milhão que os deputados do partido no estado gastaram com isso, segundo a base de despesas da Câmara consultada em 27 de outubro.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Feliciano aparece com o maior valor do grupo: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. São despesas classificadas como divulgação da atividade parlamentar, custeadas pela cota destinada ao exercício do mandato.",
+        "text": "Feliciano tem o maior valor: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. O dinheiro sai da cota parlamentar, a verba que a Câmara reserva para as despesas do mandato.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O levantamento identificou 15 deputados do PL paulista com gastos nessa categoria. Os outros 12, juntos, somam R$ 850.529,04. Assim, os três primeiros respondem por quase quatro de cada dez reais registrados no recorte, enquanto o restante se distribui entre os demais parlamentares com despesa.",
+        "text": "Quinze deputados do PL paulista tiveram gastos desse tipo. Os outros 12, juntos, somam R$ 850.529,04. Ou seja: quase quatro de cada dez reais foram gastos por três deputados.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "practical",
-        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite despesas de divulgação da atividade parlamentar, mas proíbe gastos de caráter eleitoral. A existência de uma despesa nessa rubrica, por si só, não demonstra que houve propaganda de campanha ou uso irregular da cota.",
+        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite esse tipo de despesa, mas proíbe gastos de caráter eleitoral. O fato de haver uma despesa de divulgação, por si só, não demonstra que houve propaganda de campanha ou uso irregular da verba.",
         "source_ids": [
           "S2"
         ]
@@ -1734,21 +1739,21 @@
       },
       {
         "type": "paragraph",
-        "text": "A comparação reúne os valores líquidos registrados na base oficial, com partido PL e representação por São Paulo. Não é um ranking de todos os deputados do país, nem uma comparação entre partidos. Os R$ 1,39 milhão se referem apenas à divulgação: não incluem passagens, combustível, aluguel de escritório ou outras categorias de despesa.",
+        "text": "A conta considera apenas deputados do PL que representam São Paulo. Não é um ranking nacional nem uma comparação entre partidos. O R$ 1,39 milhão se refere só à divulgação: não inclui passagens, combustível, aluguel de escritório ou outros gastos.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Embora o recorte alcance setembro, os lançamentos de divulgação encontrados pertencem aos meses contábeis de janeiro a junho. Não há, nessa seleção, registros de julho a setembro. A contagem é pelo mês contábil informado pela Câmara, e não pela data em que o eleitor viu uma publicação ou um anúncio.",
+        "text": "O levantamento foi até setembro, mas os gastos de divulgação encontrados são de janeiro a junho. Não há registros de julho a setembro. A data usada é o mês a que a Câmara atribui a despesa, não o dia em que o eleitor viu uma publicação ou um anúncio.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A regra da Câmara impede o uso da cota para divulgação nos 120 dias anteriores às eleições quando o deputado é candidato. O total apurado não permite, isoladamente, concluir que algum dos três descumpriu essa restrição.",
+        "text": "A regra da Câmara impede o uso da verba para divulgação nos 120 dias anteriores às eleições quando o deputado é candidato. O total apurado não permite, sozinho, concluir que algum dos três descumpriu essa restrição.",
         "source_ids": [
           "S2"
         ]
@@ -1767,7 +1772,7 @@
       },
       {
         "type": "paragraph",
-        "text": "France também defendeu que as notas fiscais tragam informações sobre quantidade de publicações impulsionadas, período e alcance, para permitir avaliar a economicidade do gasto. O contexto ajuda a distinguir duas perguntas: quanto foi registrado e o que efetivamente foi entregue com aquele dinheiro. A soma das despesas responde à primeira.",
+        "text": "France também defendeu que as notas fiscais tragam a quantidade de publicações impulsionadas, o período e o alcance, para permitir avaliar se o preço pago foi adequado. São duas perguntas diferentes: quanto foi gasto e o que foi entregue com aquele dinheiro. A soma das despesas responde só à primeira.",
         "source_ids": [
           "S1"
         ]
@@ -1802,14 +1807,15 @@
         "kind": "analysis",
         "published_date": "2026-10-27"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00"
   },
   {
-    "title": "O que propõe o PL 501/2023 sobre atendimento a menores trans",
+    "title": "Entenda o projeto no Senado que prevê de 8 a 12 anos de prisão para tratamento psicológico e ensino ligados à transição de gênero de menores",
     "kind": "context",
     "published_at": "2026-10-27T10:51:07.928447+00:00",
     "status_label": "Contexto · projeto apresentado em 2023",
-    "subtitle": "Entenda o texto apresentado em 2023. A reunião prevista para 28 de outubro de 2026 foi cancelada, sem votação do projeto.",
+    "subtitle": "O texto é de 2023. A pena dobraria em escolas e, para cirurgias, seria de 12 a 20 anos. A reunião que analisaria o projeto em 28 de outubro foi cancelada, e nada mudou na lei",
     "house": "senado",
     "topic": "Direitos e educação",
     "proposal": "PL 501/2023",
@@ -1828,21 +1834,21 @@
       },
       {
         "type": "paragraph",
-        "text": "Um projeto em tramitação no Senado propõe pena de 8 a 12 anos de prisão e multa para quem submeter crianças ou adolescentes a tratamento psicológico, terapia hormonal ou ensino educacional relativo ao que o texto chama de transexualização. A punição seria dobrada se a conduta ocorresse em uma instituição de ensino. A proposta, portanto, alcança práticas que vão além de cirurgias.",
+        "text": "Um projeto no Senado propõe pena de 8 a 12 anos de prisão e multa para quem submeter crianças ou adolescentes a tratamento psicológico, terapia hormonal ou ensino educacional relativo ao que o texto chama de transexualização, o processo de transição de gênero. A pena seria dobrada em escolas. A proposta, portanto, vai além de cirurgias.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O PL 501/2023, do senador Magno Malta (PL-ES), estava na pauta da Comissão de Direitos Humanos para 28 de outubro. Mas a tramitação oficial registrou, em 26 de outubro, que a reunião foi cancelada e a matéria não foi apreciada. A proposta continua pronta para voltar à pauta; essa movimentação não representa aprovação do texto.",
+        "text": "O projeto, de número 501/2023, é do senador Magno Malta (PL-ES) e seria analisado pela Comissão de Direitos Humanos em 28 de outubro. O registro oficial do Senado informa que, em 26 de outubro, a reunião foi cancelada. O texto não foi votado e pode voltar à lista de votações da comissão.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "practical",
-        "text": "Se o projeto virar lei com a redação atual, os novos crimes não ficariam restritos a procedimentos médicos. O texto inclui expressamente tratamento psicológico e ensino educacional relacionados à transição de gênero. Nas escolas, a aplicação em dobro elevaria a faixa prevista para essas condutas de 8 a 12 anos para 16 a 24 anos de prisão, além da multa. O dispositivo também prevê interdição ou cassação da autorização de funcionamento do estabelecimento.",
+        "text": "Se o projeto virar lei como está, os novos crimes não ficariam restritos a procedimentos médicos. O texto inclui expressamente tratamento psicológico e ensino relacionados à transição de gênero. Nas escolas, a pena dobrada passaria a ser de 16 a 24 anos de prisão, além da multa. A escola também poderia ser interditada ou perder a autorização para funcionar.",
         "source_ids": [
           "S4"
         ]
@@ -1854,14 +1860,14 @@
       },
       {
         "type": "paragraph",
-        "text": "Para intervenção cirúrgica em crianças e adolescentes, a proposta estabelece outra faixa: de 12 a 20 anos de reclusão e multa. A distinção aparece no artigo que Malta quer acrescentar ao Estatuto da Criança e do Adolescente. Já o parágrafo sobre práticas não cirúrgicas lista terapia hormonal, ensino e tratamento psicológico e acrescenta uma categoria aberta: qualquer outro meio não cirúrgico relativo à transexualização.",
+        "text": "Para cirurgias em crianças e adolescentes, a pena proposta é maior: de 12 a 20 anos de prisão e multa. As regras seriam acrescentadas ao Estatuto da Criança e do Adolescente. O trecho sobre o que não é cirurgia lista terapia hormonal, ensino e tratamento psicológico e inclui ainda qualquer outro meio não cirúrgico relativo à transexualização.",
         "source_ids": [
           "S4"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A redação não detalha quais atividades educacionais ou modalidades de atendimento psicológico seriam enquadradas nessa previsão. Em vez de descrever uma intervenção clínica específica para cada conduta, reúne essas atividades no mesmo parágrafo. Essa é a parte do projeto que conecta a discussão penal ao cotidiano de profissionais de saúde, escolas e famílias de jovens trans.",
+        "text": "O texto não detalha quais atividades de ensino ou formas de atendimento psicológico seriam punidas. É esse trecho que leva a discussão criminal ao dia a dia de profissionais de saúde, escolas e famílias de jovens trans.",
         "source_ids": [
           "S4"
         ]
@@ -1881,7 +1887,7 @@
       },
       {
         "type": "votes",
-        "text": "O relator na Comissão de Direitos Humanos é Jorge Seif (PL-SC). Seu relatório, recebido em 22 de setembro de 2026, recomenda aprovar a proposta. Esse parecer expressa a posição do relator: não é resultado de uma votação do colegiado. A reunião cancelada não produziu votos que permitam listar senadores favoráveis, contrários ou ausentes naquela deliberação.",
+        "text": "O senador encarregado de analisar o projeto na Comissão de Direitos Humanos, chamado de relator, é Jorge Seif (PL-SC). Seu relatório, recebido em 22 de setembro de 2026, recomenda aprovar a proposta. É a posição dele, não a da comissão: como a reunião foi cancelada, não houve votos de senadores.",
         "source_ids": [
           "S1",
           "S5"
@@ -1889,7 +1895,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Seif sustenta que a proposta reforça a proteção da infância e cita a Resolução 2.427/2025 do Conselho Federal de Medicina. A norma estabelece restrições médicas para bloqueadores hormonais e terapia hormonal em menores de idade. O projeto de lei acrescentaria punições de prisão e inclui também ensino e tratamento psicológico entre as condutas descritas.",
+        "text": "Seif diz que a proposta reforça a proteção da infância e cita a Resolução 2.427/2025 do Conselho Federal de Medicina, que restringe bloqueadores hormonais e terapia hormonal em menores de idade. O projeto vai além dessa norma: acrescenta pena de prisão e inclui ensino e tratamento psicológico.",
         "source_ids": [
           "S5",
           "S2",
@@ -1905,14 +1911,14 @@
       },
       {
         "type": "paragraph",
-        "text": "Na reportagem da Folha de abril de 2025, o psicólogo e professor da UFMG Marco Aurélio Máximo Prado criticou barreiras ao atendimento de jovens trans e afirmou que negar acesso ao cuidado pode produzir sofrimento e levar à busca de hormônios sem acompanhamento seguro. A declaração foi dada naquele debate, mais de um ano antes da movimentação atual no Senado.",
+        "text": "Na reportagem da Folha de abril de 2025, o psicólogo e professor da UFMG Marco Aurélio Máximo Prado criticou barreiras ao atendimento de jovens trans e afirmou que negar acesso ao cuidado pode produzir sofrimento e levar à busca de hormônios sem acompanhamento seguro. A declaração é de mais de um ano antes da reunião cancelada.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "next",
-        "text": "Depois da Comissão de Direitos Humanos, o despacho do Senado prevê análise pelas comissões de Assuntos Sociais e de Constituição e Justiça, esta com decisão terminativa. A proposta ainda precisa percorrer essas etapas. O cancelamento da reunião de 28 de outubro deixou pendente a primeira análise na CDH; nenhuma das novas penas descritas no projeto entrou em vigor por causa dessa tramitação.",
+        "text": "Depois da Comissão de Direitos Humanos, o projeto ainda passaria pelas comissões de Assuntos Sociais e de Constituição e Justiça. A decisão da última vale pelo Senado, sem votação de todos os senadores, salvo recurso. Nenhuma das penas descritas no projeto está em vigor.",
         "source_ids": [
           "S1"
         ]
@@ -1962,10 +1968,9 @@
         "published_date": "2022"
       }
     ],
+    "updated_at": "2026-11-04T17:33:07.085372+00:00",
     "politicians": [
       {
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "role": "Autor do projeto",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -1976,13 +1981,13 @@
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
         ],
-        "uf": "ES",
+        "role": "Autor do projeto",
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
         "party": "PL",
-        "name": "Magno Malta"
+        "name": "Magno Malta",
+        "uf": "ES"
       },
       {
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "role": "Relator na CDH",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -1993,9 +1998,11 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
         ],
-        "uf": "SC",
+        "role": "Relator na CDH",
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
         "party": "PL",
-        "name": "Jorge Seif"
+        "name": "Jorge Seif",
+        "uf": "SC"
       }
     ]
   }
