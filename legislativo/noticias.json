@@ -1,14 +1,16 @@
 [
   {
-    "status": "Aprovado; aguarda sanção",
+    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
     "paragraphs": [
       "O Senado aprovou em 28 de outubro o projeto de lei de conversão da Medida Provisória 1.375/2026, relatado por Eduardo Gomes (PL-TO). O texto amplia as carreiras de servidores federais com direito à indenização paga a quem trabalha em localidades de fronteira, entre elas servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
       "A partir de janeiro de 2027, a indenização será de R$ 191 por dia de efetivo trabalho, segundo o Senado. A Câmara havia aprovado a MP na véspera, na forma do projeto de lei de conversão."
     ],
+    "next_step": "O texto aguarda sanção ou veto do presidente da República.",
     "house": "senado",
-    "practical": "Servidores das carreiras incluídas que trabalham em unidades de fronteira passam a receber a indenização diária, nos termos da regulamentação.",
-    "id": "senado-adicional-fronteira-mp1375",
     "date": "2026-10-28",
+    "proposal": "MPV 1375/2026",
+    "status": "Aprovado; aguarda sanção",
+    "id": "senado-adicional-fronteira-mp1375",
     "sources": [
       {
         "title": "Senado: aprovação do adicional de fronteira, 28/10/2026",
@@ -19,21 +21,21 @@
         "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2637101-42"
       }
     ],
-    "proposal": "MPV 1375/2026",
-    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
-    "next_step": "O texto aguarda sanção ou veto do presidente da República.",
+    "practical": "Servidores das carreiras incluídas que trabalham em unidades de fronteira passam a receber a indenização diária, nos termos da regulamentação.",
     "politicians": []
   },
   {
-    "status": "Aprovado na Câmara",
+    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
     "paragraphs": [
       "O plenário da Câmara aprovou em 27 de outubro o substitutivo da relatora Flávia Morais (MDB-GO) ao PL 5.239/2025, de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG). Segundo a ementa, o texto trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas.",
       "A votação foi simbólica. O parecer foi dado em plenário em nome da Comissão de Saúde e de outras comissões. O autógrafo foi enviado ao Senado em 29 de outubro."
     ],
+    "next_step": "Distribuição e análise no Senado.",
     "house": "camara",
-    "practical": "A proposta só passa a valer se for aprovada pelo Senado e sancionada; até lá, o atendimento segue as regras atuais do SUS.",
-    "id": "camara-consulta-ginecologica-sus",
     "date": "2026-10-27",
+    "proposal": "PL 5239/2025",
+    "status": "Aprovado na Câmara",
+    "id": "camara-consulta-ginecologica-sus",
     "sources": [
       {
         "title": "Câmara: ficha e tramitação do PL 5.239/2025",
@@ -44,57 +46,56 @@
         "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2572799-46"
       }
     ],
-    "proposal": "PL 5239/2025",
-    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
-    "next_step": "Distribuição e análise no Senado.",
+    "practical": "A proposta só passa a valer se for aprovada pelo Senado e sancionada; até lá, o atendimento segue as regras atuais do SUS.",
     "politicians": []
   },
   {
-    "status": "Aprovado em plenário",
+    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
     "paragraphs": [
       "A Assembleia Legislativa de São Paulo informou que aprovou, em sessão extraordinária de 27 de outubro, o PL869/2026, encaminhado pelo Executivo estadual. O projeto autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal 178/2021.",
       "A notícia oficial informa a aprovação do texto, mas não traz um placar individualizado. Não foram atribuídos votos a deputados com base em presença ou filiação partidária."
     ],
+    "next_step": "Conferir o encaminhamento do texto e eventual publicação de norma; acompanhar a documentação das obrigações assumidas.",
     "house": "alesp",
-    "practical": "O ato aprovado é uma autorização de adesão a um programa fiscal. A aprovação na Alesp não equivale, por si, à publicação de uma nova lei em vigor.",
-    "id": "alesp-adesao-transparencia-fiscal",
     "date": "2026-10-28",
+    "proposal": "PL 869/2026",
+    "status": "Aprovado em plenário",
+    "id": "alesp-adesao-transparencia-fiscal",
     "sources": [
       {
         "title": "Alesp: notícia da aprovação do PL869/2026 em27/10",
         "url": "https://www.al.sp.gov.br/noticia/?id=515109"
       }
     ],
-    "proposal": "PL 869/2026",
-    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
-    "next_step": "Conferir o encaminhamento do texto e eventual publicação de norma; acompanhar a documentação das obrigações assumidas.",
+    "practical": "O ato aprovado é uma autorização de adesão a um programa fiscal. A aprovação na Alesp não equivale, por si, à publicação de uma nova lei em vigor.",
     "politicians": []
   },
   {
-    "status": "Parecer favorável em comissão",
+    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
     "paragraphs": [
       "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
       "O PL 14/2020 é de Celso Giannazi (PSOL). A proposta trata de quem volta à escola depois da idade prevista para concluir os estudos. O parecer da comissão é uma etapa da tramitação: não transforma a obrigação proposta em lei.",
       "Em declaração à Rede Câmara SP reproduzida na notícia oficial, Giannazi criticou o fechamento de turmas pela Prefeitura. A afirmação sobre fechamentos é do vereador. O texto consultado não traz uma resposta da Secretaria nem um levantamento das turmas atingidas.",
       "A notícia registra a presença de Sonaira Fernandes (PL), Adrilles Jorge (União), George Hato (MDB) e Senival Moura (PT), além do autor. A relação de presentes não informa como cada integrante votou."
     ],
+    "next_step": "A proposta ainda depende de deliberação em plenário. A notícia oficial não fixa a data dessa votação.",
     "house": "cmsp",
-    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
-    "id": "sp-turmas-presenciais-eja",
     "date": "2026-10-27",
+    "proposal": "PL 14/2020",
+    "status": "Parecer favorável em comissão",
+    "id": "sp-turmas-presenciais-eja",
     "sources": [
       {
         "title": "Câmara de SP: decisão da Comissão de Educação, 21/10/2026",
         "url": "https://www.saopaulo.sp.leg.br/blog/educacao-de-jovens-e-adultos-projeto-que-proibe-fechamento-de-turmas-presenciais-da-eja-avanca-na-comissao-de-educacao/"
       }
     ],
-    "proposal": "PL 14/2020",
-    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
-    "next_step": "A proposta ainda depende de deliberação em plenário. A notícia oficial não fixa a data dessa votação.",
+    "practical": "Se o projeto for aprovado e virar lei, a manutenção das turmas presenciais passará a ser uma obrigação prevista na legislação municipal. O parecer favorável, sozinho, ainda não cria essa garantia.",
     "politicians": [
       {
-        "role": "Autor do projeto",
         "party": "PSOL",
+        "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara.",
+        "name": "Celso Giannazi",
         "sources": [
           {
             "title": "Câmara de SP: perfil de Celso Giannazi",
@@ -105,37 +106,37 @@
             "url": "https://app-spregistroconsulta-prd.azurewebsites.net/Home/Html/a915a1a8-e996-44e6-8378-adc44dca8d1b"
           }
         ],
-        "name": "Celso Giannazi",
-        "uf": "SP",
-        "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara."
+        "role": "Autor do projeto",
+        "uf": "SP"
       }
     ]
   },
   {
-    "status": "Apresentado; prazo de emendas",
+    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
     "paragraphs": [
       "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
       "A ementa também prevê mecanismos de apuração e medidas administrativas. A proposta recebeu o registro de “Pauta de 1ª sessão (Emenda)” em sua tramitação. Esse registro corresponde à fase de apresentação de emendas; não comprova votação nem aprovação.",
       "No resumo explicativo da ficha oficial, a Alesp informa que a proposta prevê apuração com garantia de defesa e proteção de crianças e adolescentes. Segundo esse resumo, o afastamento preventivo dependeria de risco concreto, e seriam vedadas sanções automáticas ou penalidades não previstas em lei.",
       "O cadastro consultado não registra votação em plenário ou comissão, parecer ou transformação em norma. Portanto, o projeto não criou uma nova proibição em vigor."
     ],
+    "next_step": "Acompanhar emendas, encaminhamento às comissões e pareceres. Estar na pauta para emendas não significa que haverá votação final nesta semana.",
     "house": "alesp",
-    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
-    "id": "alesp-propaganda-politica-escolas",
     "date": "2026-10-27",
+    "proposal": "PL 889/2026",
+    "status": "Apresentado; prazo de emendas",
+    "id": "alesp-propaganda-politica-escolas",
     "sources": [
       {
         "title": "Alesp: ficha e tramitação do PL 889/2026",
         "url": "https://www.al.sp.gov.br/propositura/1100005018"
       }
     ],
-    "proposal": "PL 889/2026",
-    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "next_step": "Acompanhar emendas, encaminhamento às comissões e pareceres. Estar na pauta para emendas não significa que haverá votação final nesta semana.",
+    "practical": "A proposta busca estabelecer restrições à atuação em sala de aula e procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
     "politicians": [
       {
-        "role": "Autora do projeto",
         "party": "PSD",
+        "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB.",
+        "name": "Carla Morando",
         "sources": [
           {
             "title": "Alesp: cadastro e partido de Carla Morando",
@@ -146,24 +147,25 @@
             "url": "https://www.abcdoabc.com.br/carla-morando-se-filia-ao-psd-projeta-votos/"
           }
         ],
-        "name": "Carla Morando",
-        "uf": "SP",
-        "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB."
+        "role": "Autora do projeto",
+        "uf": "SP"
       }
     ]
   },
   {
-    "status": "Apresentado",
+    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
     "paragraphs": [
       "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
       "A proposta alcança estabelecimentos públicos e privados e limita a gratuidade ao período necessário para o atendimento. Não se trata de liberar estacionamento em qualquer local ou para qualquer deslocamento.",
       "O texto prevê que o benefício independeria de o veículo ocupar uma vaga reservada. A condição da pessoa atendida poderia ser comprovada pela credencial prevista na Lei Brasileira de Inclusão ou por outro documento oficial que ateste a deficiência com comprometimento de mobilidade, conforme regulamentação.",
       "A proposta altera a Lei Brasileira de Inclusão e estabelece entrada em vigor 180 dias depois de eventual publicação oficial. Esse prazo só começaria se o texto fosse aprovado e se tornasse lei; não conta da apresentação do projeto."
     ],
+    "next_step": "Acompanhar o despacho e a análise nas comissões. Não há aprovação registrada na ficha consultada.",
     "house": "camara",
-    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
-    "id": "camara-estacionamento-atendimento-pcd",
     "date": "2026-10-27",
+    "proposal": "PL 5662/2026",
+    "status": "Apresentado",
+    "id": "camara-estacionamento-atendimento-pcd",
     "sources": [
       {
         "title": "Câmara: ficha do PL 5662/2026",
@@ -174,13 +176,12 @@
         "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
       }
     ],
-    "proposal": "PL 5662/2026",
-    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "next_step": "Acompanhar o despacho e a análise nas comissões. Não há aprovação registrada na ficha consultada.",
+    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento vinculado ao serviço durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
     "politicians": [
       {
-        "role": "Autor do projeto",
         "party": "PL",
+        "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho.",
+        "name": "Sóstenes Cavalcante",
         "sources": [
           {
             "title": "SBT News: entrevista com Sóstenes, 08/10/2026",
@@ -191,9 +192,8 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
           }
         ],
-        "name": "Sóstenes Cavalcante",
-        "uf": "RJ",
-        "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho."
+        "role": "Autor do projeto",
+        "uf": "RJ"
       }
     ]
   }
