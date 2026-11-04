@@ -1,21 +1,20 @@
 [
   {
     "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
-    "status_label": "Aprovada; aguarda promulgação",
+    "status_label": "Aprovada; falta a sessão do Congresso que a inclui na Constituição",
     "reading_minutes": 5,
     "published_at": "2026-11-04T14:30:19.374387+00:00",
     "proposal": "PEC 18/2025",
     "house": "senado",
     "edition_date": "2026-11-04",
     "trigger_date": "2026-11-03",
-    "subtitle": "Relator havia rejeitado a emenda por afastar o fundo de sua finalidade; a Mesa disse que o texto não estava no primeiro turno, e o trecho lido em plenário não cita as Forças Armadas",
+    "subtitle": "A reforma da segurança vai entrar na Constituição com um trecho incluído na noite da votação, sobre o fundo que financia as polícias. O relator era contra, e o Senado tratou a mudança como simples ajuste de texto",
     "kind": "daily",
-    "title": "PEC da Segurança vai à promulgação com uso de fundo em GLO que a Câmara não votou, aprovado como \"emenda de redação\"",
+    "title": "Senado abre verba da segurança pública para operações militares, e deputados não votaram a mudança",
     "topic": "Segurança pública",
     "politicians": [
       {
         "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "uf": "RJ",
         "role": "Autor da Emenda 85",
         "sources": [
           {
@@ -31,12 +30,12 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
-        "name": "Carlos Portinho",
-        "party": "PL"
+        "uf": "RJ",
+        "party": "PL",
+        "name": "Carlos Portinho"
       },
       {
         "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "uf": "SE",
         "role": "Relator no Senado",
         "sources": [
           {
@@ -48,102 +47,120 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
-        "name": "Rogério Carvalho",
-        "party": "PT"
+        "uf": "SE",
+        "party": "PT",
+        "name": "Rogério Carvalho"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A PEC da Segurança Pública (PEC 18/2025), aprovada pelo Senado na terça-feira (3) e enviada à promulgação, recebeu em plenário um trecho que os deputados não votaram: os recursos do Fundo Nacional de Segurança Pública poderão ser distribuídos a estados, Distrito Federal e municípios \"inclusive para fins de operações de garantia da lei e da ordem\". O acréscimo foi tratado como emenda de redação, e a proposta seguiu sem nova análise da Câmara.",
+        "text": "O Senado aprovou na terça-feira (3) a PEC da Segurança Pública, uma mudança na Constituição que reorganiza o combate ao crime no país. Na noite da votação, os senadores acrescentaram um trecho que os deputados não votaram: o dinheiro do Fundo Nacional de Segurança Pública, criado para financiar os órgãos de segurança, também poderá servir a operações de Garantia da Lei e da Ordem (GLO). São as operações em que militares atuam na segurança pública, como na Copa das Confederações de 2013 e no Rio de Janeiro em 2017 e 2018.",
         "source_ids": [
           "S1",
           "S2",
-          "S5"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A mudança nasceu da Emenda 85, de Carlos Portinho (PL-RJ). No parecer apresentado na mesma sessão, o relator, Rogério Carvalho (PT-SE), pediu a rejeição: escreveu que usar o fundo em ações das Forças Armadas \"afasta o Fundo de sua finalidade\", que elas não estão entre os órgãos de segurança pública do artigo 144 da Constituição e que a medida \"dilui os recursos\" que a Câmara quis assegurar. Para ele, as necessidades militares devem ser atendidas \"por dotações próprias\". Em 14 de outubro, um destaque sobre o tema já havia caído na CCJ, pela ausência de quem o defendia.",
-        "source_ids": [
           "S3",
-          "S10"
+          "S5",
+          "S8"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O acordo veio depois, em plenário, negociado pelo líder do MDB, Eduardo Braga (AM), com Portinho e o relator. As notas taquigráficas registram a ressalva do próprio Braga, que propôs a emenda de redação \"se a SGM entender que isso é de redação\", referência à Secretaria-Geral da Mesa. O presidente do Senado, Davi Alcolumbre (União-AP), relatou então a posição da Mesa: a emenda \"não pode ser apenas acatada como emenda de redação porque já foi votada em primeiro turno, e esse texto não estava no primeiro turno\". Ainda assim, ela foi votada como redação, em votação nominal com exigência de 49 votos. O placar foi de 67 a 0.",
+        "text": "O fundo empenhou R$ 2,22 bilhões em 2025, segundo o Portal da Transparência, e a PEC manda repassar metade a estados e ao Distrito Federal. Se uma lei autorizar o gasto, as operações militares vão disputar esse dinheiro. O relator da PEC, Rogério Carvalho (PT-SE), foi contra a emenda que deu origem ao trecho. Escreveu que ela \"afasta o Fundo de sua finalidade\", \"dilui os recursos\" das forças de segurança e que as necessidades militares devem ser pagas \"por dotações próprias\", ou seja, pelo orçamento das Forças Armadas.",
+        "source_ids": [
+          "S1",
+          "S3",
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A proposta foi de Carlos Portinho (PL-RJ), líder do PL no Senado. Ele defendeu que os militares sejam ressarcidos quando chamados a atuar: \"É o Estado que pede\", disse. O líder do MDB, Eduardo Braga (AM), negociou um acordo com Portinho e o relator na própria sessão, e o trecho passou por 67 votos a 0.",
         "source_ids": [
           "S2",
           "S5",
-          "S6"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que mudou no texto",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "No texto que veio da Câmara, o parágrafo 11 do artigo 144 terminava com a distribuição dos recursos a estados, Distrito Federal e municípios \"na forma da lei\". A versão lida por Alcolumbre insere a menção à garantia da lei e da ordem, a GLO, antes desse fecho. Como a frase trata dos dois fundos citados no parágrafo, o acréscimo alcança também o Fundo Penitenciário Nacional, que a emenda original não mencionava. O parecer com a redação do segundo turno não constava da lista de documentos da PEC na manhã desta quarta (4), e a leitura em plenário é o registro disponível.",
-        "source_ids": [
-          "S1",
-          "S2",
-          "S4",
-          "S5"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A emenda original era mais ampla. Previa dinheiro do fundo para as Forças Armadas também em defesa civil e no combate a delitos de fronteira e ambientais. Braga sugeriu limitar a frase às ações militares em GLO, mas o texto final, sugerido pela Mesa, não cita as Forças Armadas. A Agência Senado informou que o trecho possibilita o ressarcimento dos militares, e Portinho disse em plenário que elas terão direito a se ressarcir. O que foi lido fala em distribuir recursos a estados e municípios, e deixa a execução para uma lei.",
-        "source_ids": [
-          "S2",
-          "S4",
-          "S6"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Braga defendeu o acordo com o argumento de que, em GLO ou em funções urbanas, as Forças Armadas \"teriam que ser ressarcidas\". Portinho afirmou que a GLO ocorre quando os militares são convocados e que \"é o Estado que pede\". Em 15 de outubro, ao tratar das emendas do PL, ele dissera a jornalistas, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com a volta do texto à Câmara.",
-        "source_ids": [
-          "S2",
+          "S6",
           "S9"
         ]
       },
       {
         "type": "heading",
-        "text": "Quanto o fundo tem e quanto custa uma GLO",
+        "text": "Por que os deputados não votaram",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "O fundo empenhou R$ 2,22 bilhões em 2025 e pagou R$ 1,78 bilhão, segundo o Portal da Transparência. Em 2026, os empenhos somavam R$ 2,19 bilhões até esta quarta. A PEC manda repassar metade dos recursos a estados e Distrito Federal, sem convênio. O Senado retirou do texto, por outro lado, o artigo 139 aprovado pelos deputados, que destinava aos fundos de segurança e penitenciário 30% do produto da arrecadação das apostas de quota fixa, após deduções. O corte, proposto na CCJ em setembro e noticiado na época, foi classificado como ajuste redacional, segundo o Poder360, por se tratar de supressão.",
+        "text": "Uma mudança na Constituição precisa passar pela Câmara e pelo Senado. Se os senadores alteram o conteúdo, o texto volta aos deputados, como lembrou a CNN Brasil antes da votação. Carvalho rejeitou outros pedidos de mudança justamente para evitar essa volta: \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado.",
         "source_ids": [
-          "S1",
-          "S5",
-          "S7",
-          "S11"
+          "S6",
+          "S12"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média dá cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. Só a Copa das Confederações de 2013 custou R$ 418 milhões, e a Operação Rio de Janeiro, de 2017 e 2018, R$ 234 milhões. A comparação indica a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito da emenda sobre o fundo.",
+        "text": "O acordo foi incluir o trecho como \"emenda de redação\", nome dado a ajustes que não mudam o conteúdo. A frase, porém, não está no texto aprovado pela Câmara. O presidente do Senado, Davi Alcolumbre (União-AP), relatou em plenário que a equipe técnica da Casa apontava o problema: \"esse texto não estava no primeiro turno\", a primeira das duas votações do Senado. O trecho foi votado mesmo assim, e a proposta seguiu sem voltar aos deputados. Em outubro, Portinho havia dito, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com o retorno à Câmara.",
         "source_ids": [
-          "S7",
-          "S8",
+          "S1",
           "S2",
-          "S3"
+          "S5",
+          "S9"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Em 2002, o Supremo aceitou que um corte feito pelo Senado em outra mudança constitucional não voltasse à Câmara, porque não era \"alteração substancial\". Neste caso houve acréscimo, e o registro do acordo não explica por que ele não mudaria o conteúdo.",
+        "source_ids": [
+          "S2",
+          "S13"
         ]
       },
       {
         "type": "heading",
-        "text": "Os dois caminhos da mesma sessão",
+        "text": "O que foi anunciado e o que o texto diz",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "Na mesma noite, Carvalho rejeitou outros pedidos de mudança para evitar a volta à Câmara. \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado. As emendas que reduziam a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram separadas da PEC e viraram propostas autônomas, por 38 votos a 36. Levantamento por partido mostra PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) a favor da separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve. Santana votou pela separação da própria emenda.",
+        "text": "A Agência Senado informou que o trecho permite ressarcir as Forças Armadas. A frase lida em plenário não cita as Forças Armadas. Ela diz que os recursos poderão ser distribuídos a estados, Distrito Federal e municípios, \"inclusive para fins de operações de garantia da lei e da ordem\", na forma de uma lei. Quem recebe e quanto ainda terá de ser definido. A frase vale também para o Fundo Penitenciário Nacional, que a emenda original não mencionava. O texto final não constava da lista de documentos da PEC na manhã desta quarta (4), e a referência é a leitura em plenário.",
+        "source_ids": [
+          "S2",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custam essas operações",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média é de cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. A Copa das Confederações custou R$ 418 milhões, e a operação no Rio, R$ 234 milhões. A comparação dá a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito sobre o fundo.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo também perdeu uma receita prevista pelos deputados. O Senado retirou o artigo que destinava às verbas de segurança e de presídios 30% da arrecadação das bets, depois de descontar prêmios, imposto e despesas das empresas. Esse corte foi noticiado em setembro.",
+        "source_ids": [
+          "S1",
+          "S5",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A outra disputa da noite: maioridade penal",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "As propostas de reduzir a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram retiradas da PEC e vão tramitar à parte, por 38 votos a 36. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram pela separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve.",
         "source_ids": [
           "S5",
           "S6",
@@ -151,37 +168,26 @@
         ]
       },
       {
-        "type": "paragraph",
-        "text": "A regra geral é que uma mudança de conteúdo devolve a PEC à casa de origem, como lembrou a CNN Brasil antes da votação. O regimento do Senado admite, no segundo turno, só emendas que não envolvam o mérito. Em 2002, ao julgar a emenda da CPMF, o Supremo aceitou uma supressão feita pelo Senado porque ela não representou \"alteração substancial\" que justificasse o retorno. O caso da PEC da Segurança é de acréscimo, e as notas taquigráficas do acordo não explicam por que o novo trecho não altera a substância.",
-        "source_ids": [
-          "S12",
-          "S13",
-          "S14",
-          "S2"
-        ]
-      },
-      {
         "type": "practical",
-        "text": "Na prática, se o texto lido em plenário for o promulgado, a Constituição passará a citar operações de GLO entre os usos dos fundos de segurança e penitenciário. Quem recebe, quanto e em quais condições dependerá de lei. Nada no trecho obriga o fundo a pagar por uma GLO, porque o texto usa a expressão \"poderão ser distribuídos\".",
+        "text": "Na prática, se a frase lida em plenário for a publicada, a Constituição passará a citar operações militares de GLO entre os usos dos fundos de segurança e de presídios. Nada muda de imediato: o trecho diz que os recursos \"poderão\" ser distribuídos, e os detalhes dependem de lei.",
         "source_ids": [
           "S2"
         ]
       },
       {
         "type": "votes",
-        "text": "Primeiro turno: 73 votos a 0. Emenda 85, no texto acordado: 67 a 0. Segundo turno: 75 a 0. Separação das emendas da maioridade penal: 38 a 36, com uma abstenção.",
+        "text": "Primeira votação: 73 a 0. Trecho sobre as operações militares: 67 a 0. Segunda votação: 75 a 0. Separação da maioridade penal: 38 a 36, com uma abstenção.",
         "source_ids": [
           "S5"
         ]
       },
       {
         "type": "next",
-        "text": "Pelo regimento, concluída a votação no Senado, é convocada sessão para a promulgação; a ficha da PEC não informava data até a manhã desta quarta. O registro da sessão manda as emendas da maioridade penal à CCJ, mas Alcolumbre disse que aguardará um pedido de calendário especial. Na Câmara, uma comissão especial analisa a PEC 32/2015, sobre o mesmo tema.",
+        "text": "A PEC entra na Constituição em sessão do Congresso, ainda sem data na página da proposta até a manhã desta quarta. As propostas sobre maioridade penal seguem em separado no Senado, e uma comissão da Câmara analisa o mesmo tema.",
         "source_ids": [
-          "S14",
+          "S3",
           "S5",
-          "S6",
-          "S3"
+          "S14"
         ]
       }
     ],
@@ -291,35 +297,37 @@
         "kind": "analysis",
         "published_date": "2026-11-04"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T16:24:23.825745+00:00"
   },
   {
     "trigger_date": "2026-11-03",
     "topic": "Poder Legislativo",
     "edition_date": "2026-11-03",
-    "subtitle": "Estoque cresceu 54% em três anos e meio; o veto mais antigo é de um projeto de 2000, e a Constituição paulista dá 30 dias para a deliberação",
+    "subtitle": "Quando o governador barra um projeto, a Assembleia tem 30 dias para decidir se aceita ou derruba o veto. Desde 2023, nenhum saiu da lista, que inclui propostas sobre hospitais e postos de combustível",
     "id": "2026-11-03-alesp-acumula-798-vetos-sem-votacao-nenhum-dos-519-que-estavam-na-pauta-em-marco-de-2023-saiu-dela",
     "reading_minutes": 5,
     "published_at": "2026-11-03T14:38:59.977438+00:00",
     "status_label": "Levantamento de dados",
     "kind": "investigation",
-    "title": "Alesp acumula 798 vetos sem votação; nenhum dos 519 que estavam na pauta em março de 2023 saiu dela",
+    "title": "Deputados de SP têm 798 vetos de governadores sem votar, alguns sobre projetos de 2000, e a fila só cresce",
     "proposal": "Vetos na Ordem do Dia",
     "house": "alesp",
     "politicians": [],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A pauta de votações do plenário da Assembleia Legislativa de São Paulo (Alesp) para esta terça-feira (3) tem 843 itens. Desses, 798 são vetos de governadores a projetos aprovados pelos deputados, à espera de deliberação. Um levantamento do Datafixers nas Ordens do Dia oficiais mostra que nenhum dos 519 vetos que já estavam na pauta em 30 de março de 2023 saiu dela desde então. No mesmo período, entraram 279, o que elevou o estoque em 54%.",
+        "text": "Quando o governador veta um projeto aprovado pelos deputados, a Assembleia Legislativa de São Paulo (Alesp) deveria decidir em 30 dias se aceita ou derruba o veto. A pauta do plenário desta terça-feira (3) mostra outra realidade: são 798 vetos à espera. Enquanto um veto total não é votado, o projeto não vira lei. Um levantamento do Datafixers nas pautas oficiais mostra que nenhum dos 519 vetos que estavam na lista em 30 de março de 2023 saiu dela. Desde então entraram mais 279, alta de 54%.",
         "source_ids": [
           "S1",
-          "S12",
-          "S3"
+          "S3",
+          "S7",
+          "S12"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A Constituição paulista dá à Assembleia 30 dias, a partir do recebimento, para deliberar sobre um veto. Esgotado o prazo, o veto vai para a Ordem do Dia da sessão seguinte e fica lá até a votação final. É o que explica a lista: os vetos não votados se acumulam na pauta a cada sessão. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
+        "text": "Vencido o prazo de 30 dias, o veto vai para a pauta da sessão seguinte e fica lá até ser votado. Por isso a lista só aumenta: dos 843 itens da pauta desta terça, 798 são vetos. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
         "source_ids": [
           "S7"
         ]
@@ -470,12 +478,13 @@
         "kind": "primary",
         "published_date": "2026-11-03"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T16:24:23.825745+00:00"
   },
   {
     "topic": "Economia",
     "trigger_date": "2026-10-28",
-    "subtitle": "Congresso deixou duas MPs caducarem e aprovou o conteúdo em seis dias, sem passar por comissões; emendas foram rejeitadas porque o prazo vencia no mesmo dia",
+    "subtitle": "O relator no Senado escreveu que a lei não afeta as despesas da União; o da Câmara, sobre o mesmo texto, citou impacto de até R$ 10,27 bilhões. Nenhuma comissão analisou o projeto",
     "id": "2026-11-02-parecer-do-senado-diz-que-pacote-da-cana-nao-afeta-despesas-o-da-camara-sobre-o-mesmo-texto-cita-ate",
     "status_label": "Aprovado pelo Congresso; aguarda sanção",
     "edition_date": "2026-11-02",
@@ -483,12 +492,11 @@
     "published_at": "2026-11-02T14:30:25.430882+00:00",
     "proposal": "PL 5649/2026",
     "kind": "daily",
-    "title": "Parecer do Senado diz que pacote da cana não afeta despesas; o da Câmara, sobre o mesmo texto, cita até R$ 10,27 bilhões",
+    "title": "Pacote de até R$ 24,8 bilhões para cana, máquinas agrícolas e caminhões passou no Congresso em seis dias, com contas diferentes na Câmara e no Senado",
     "house": "camara",
     "politicians": [
       {
         "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
-        "uf": "PE",
         "role": "Autor do projeto",
         "sources": [
           {
@@ -500,12 +508,12 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
         ],
-        "name": "Augusto Coutinho",
-        "party": "Republicanos"
+        "uf": "PE",
+        "party": "Republicanos",
+        "name": "Augusto Coutinho"
       },
       {
         "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
-        "uf": "PE",
         "role": "Relator na Câmara",
         "sources": [
           {
@@ -517,12 +525,12 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
         ],
-        "name": "Lula da Fonte",
-        "party": "PP"
+        "uf": "PE",
+        "party": "PP",
+        "name": "Lula da Fonte"
       },
       {
         "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
-        "uf": "PE",
         "role": "Relator no Senado",
         "sources": [
           {
@@ -534,14 +542,15 @@
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
         ],
-        "name": "Fernando Dueire",
-        "party": "PSD"
+        "uf": "PE",
+        "party": "PSD",
+        "name": "Fernando Dueire"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O Senado aprovou em 28 de outubro, no dia em que a Medida Provisória 1.374 perdia a validade, um projeto que repete o conteúdo dela e o de outra MP já vencida. O parecer do relator, Fernando Dueire (PSD-PE), afirma que a nova lei não produz efeitos diretos ou indiretos sobre receitas ou despesas da União. O parecer aprovado na Câmara na véspera, sobre o mesmo texto, registra outra conta: impacto de R$ 270 milhões com a subvenção aos produtores de cana do Nordeste e impacto orçamentário de até R$ 10 bilhões com o uso de dinheiro do fundo federal de ciência e tecnologia.",
+        "text": "O Congresso aprovou em seis dias um pacote que autoriza até R$ 24,77 bilhões em 2026 para produtores de cana do Nordeste, compra de equipamentos agrícolas e financiamento de caminhões e ônibus. As contas sobre o custo divergem. O relator no Senado, Fernando Dueire (PSD-PE), escreveu que a lei não produz efeitos sobre receitas ou despesas da União. O parecer aprovado na Câmara na véspera, sobre o mesmo texto, registra R$ 270 milhões de impacto com o auxílio à cana e até R$ 10 bilhões com o uso de dinheiro do fundo federal de ciência e tecnologia. O projeto repete duas medidas provisórias, leis temporárias do governo, que o Congresso deixou perder a validade.",
         "source_ids": [
           "S8",
           "S3",
@@ -746,7 +755,8 @@
         "kind": "secondary",
         "published_date": "2026-10-29"
       }
-    ]
+    ],
+    "updated_at": "2026-11-04T16:24:23.825745+00:00"
   },
   {
     "title": "Parecer na Alesp a favor da Bíblia como material escolar não menciona decisões do STF e do TJ-MG sobre leis semelhantes",
@@ -764,7 +774,6 @@
     "politicians": [
       {
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "uf": "SP",
         "role": "Autor do projeto",
         "sources": [
           {
@@ -772,12 +781,12 @@
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "name": "Gil Diniz Bolsonaro",
-        "party": "PL"
+        "uf": "SP",
+        "party": "PL",
+        "name": "Gil Diniz Bolsonaro"
       },
       {
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP",
         "role": "Relator na CCJR",
         "sources": [
           {
@@ -785,8 +794,9 @@
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "name": "Delegado Olim",
-        "party": "PP"
+        "uf": "SP",
+        "party": "PP",
+        "name": "Delegado Olim"
       }
     ],
     "blocks": [
@@ -1023,7 +1033,6 @@
     "politicians": [
       {
         "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "uf": "SP",
         "role": "Autor da proposta — Executivo municipal",
         "sources": [
           {
@@ -1035,8 +1044,9 @@
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
         ],
-        "name": "Ricardo Nunes",
-        "party": "MDB"
+        "uf": "SP",
+        "party": "MDB",
+        "name": "Ricardo Nunes"
       }
     ],
     "blocks": [
@@ -1168,7 +1178,6 @@
     "politicians": [
       {
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "uf": "AP",
         "role": "Autor do projeto",
         "sources": [
           {
@@ -1180,8 +1189,9 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "name": "Dorinaldo Malafaia",
-        "party": "PDT"
+        "uf": "AP",
+        "party": "PDT",
+        "name": "Dorinaldo Malafaia"
       }
     ],
     "blocks": [
@@ -1335,7 +1345,6 @@
     "politicians": [
       {
         "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "uf": "DF",
         "role": "Presidente da subcomissão na audiência",
         "sources": [
           {
@@ -1343,8 +1352,9 @@
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "name": "Damares Alves",
-        "party": "Republicanos"
+        "uf": "DF",
+        "party": "Republicanos",
+        "name": "Damares Alves"
       }
     ],
     "blocks": [
@@ -1460,7 +1470,6 @@
     "politicians": [
       {
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
         "role": "Parlamentar citado",
         "sources": [
           {
@@ -1468,12 +1477,12 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "name": "Pr. Marco Feliciano",
-        "party": "PL"
+        "uf": "SP",
+        "party": "PL",
+        "name": "Pr. Marco Feliciano"
       },
       {
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
         "role": "Parlamentar citado",
         "sources": [
           {
@@ -1481,12 +1490,12 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "party": "PL"
+        "uf": "SP",
+        "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança"
       },
       {
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP",
         "role": "Parlamentar citado",
         "sources": [
           {
@@ -1494,8 +1503,9 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "name": "Missionário José Olimpio",
-        "party": "PL"
+        "uf": "SP",
+        "party": "PL",
+        "name": "Missionário José Olimpio"
       }
     ],
     "blocks": [
