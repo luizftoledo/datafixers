@@ -1,5 +1,258 @@
 [
   {
+    "title": "Feriado proposto para o autismo em SP garante só a folga; exames e campanhas são opcionais",
+    "house": "alesp",
+    "published_at": "2026-11-05T14:35:07.863748+00:00",
+    "proposal": "PL 588/2026",
+    "id": "2026-11-05-feriado-proposto-para-o-autismo-em-sp-garante-so-a-folga-exames-e-campanhas-sao-opcionais",
+    "reading_minutes": 5,
+    "subtitle": "Texto não obriga nenhuma ação de saúde nem informa custo, e em fevereiro Tarcísio vetou outro feriado estadual por considerá-lo inconstitucional",
+    "edition_date": "2026-11-05",
+    "trigger_date": "2026-11-04",
+    "topic": "Saúde e direitos",
+    "kind": "daily",
+    "status_label": "Em análise nas comissões",
+    "politicians": [
+      {
+        "party": "PL",
+        "name": "Oseias de Madureira",
+        "role": "Autor do projeto",
+        "uf": "SP",
+        "sources": [
+          {
+            "title": "Alesp: autoria do PL 588/2026",
+            "url": "https://www.al.sp.gov.br/propositura/?id=1000695090"
+          },
+          {
+            "title": "Metrópoles: PL filia deputados evangélicos que estavam no PSD, 16/3/2026",
+            "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
+          }
+        ],
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026."
+      },
+      {
+        "party": "PP",
+        "name": "Delegado Olim",
+        "role": "Relator na CCJR",
+        "uf": "SP",
+        "sources": [
+          {
+            "title": "Alesp: dados abertos e biografia dos deputados",
+            "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
+          }
+        ],
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Um projeto na Assembleia Legislativa de São Paulo quer transformar o 2 de abril, Dia da Conscientização sobre o Autismo, em feriado em todo o estado. O único efeito automático do texto é o feriado. Campanhas, triagem, exames e atendimento em unidade móvel aparecem com a palavra \"poderá\": só acontecem se o governo decidir fazê-los.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O estado tem cerca de 547 mil pessoas com diagnóstico de autismo, o maior número do país, segundo dados do Censo 2022 publicados pelo Diario de Pernambuco em maio de 2025. Na justificativa do projeto, o autor, Oseias de Madureira (PL), diz que muitas delas enfrentam dificuldade para conseguir atendimento especializado, terapias, exames e diagnóstico precoce, com longas filas de espera. O texto não cria vaga, prazo de atendimento nem verba específica para isso.",
+        "source_ids": [
+          "S12",
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto passou em 4 de novembro pela Comissão de Constituição, Justiça e Redação, que examina se as propostas respeitam a lei. A notícia oficial da Assembleia diz que o feriado teria por finalidade conscientizar a sociedade e ampliar o conhecimento sobre o autismo. Não menciona que as ações são opcionais nem que, em fevereiro, o governador Tarcísio de Freitas vetou outro feriado estadual por considerá-lo inconstitucional.",
+        "source_ids": [
+          "S3",
+          "S4",
+          "S5"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que o texto manda fazer",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O artigo 1º institui o feriado. O artigo 3º diz que o poder público \"poderá\" promover ações educativas, de saúde e de assistência, em parceria com instituições públicas e privadas. A unidade móvel de triagem e exames também é uma possibilidade, não uma obrigação. Sobre o gasto, o texto só diz que ele sairá do orçamento já existente, sem informar valor. Também não trata do funcionamento de escolas, ambulatórios e centros de terapia nesse dia, embora o autor cite as dificuldades de inclusão nas escolas como um dos motivos do projeto e espere palestras e seminários na data.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "São Paulo já tem uma data para o tema. A Lei 17.353, de 2021, criou a Semana de Conscientização sobre o Autismo, na primeira semana de abril, que coincide com o dia 2. Essa lei nasceu maior: incluía um programa permanente de orientação sobre autismo para profissionais de saúde e educação. O então governador João Doria vetou essa parte, com o argumento de que os deputados não podem determinar ações do Executivo, e as secretarias de Saúde e Educação disseram que já faziam capacitação. O veto segue sem votação na pauta da Assembleia mais de cinco anos depois.",
+        "source_ids": [
+          "S9",
+          "S10",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O veto de fevereiro",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em 26 de fevereiro, Tarcísio vetou por inteiro o projeto de Gil Diniz (PL) que tornava o 25 de janeiro feriado em todo o estado. A mensagem de veto diz que criar feriado é assunto de direito do trabalho, reservado à União, e que a lei federal de 1995 permite ao estado um único feriado próprio, sua data magna. Em São Paulo, é o 9 de julho. O governo admite exceção, especialmente para datas de alta importância para grupos étnicos. Esse veto também aguarda votação.",
+        "source_ids": [
+          "S5",
+          "S11"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A análise do projeto do autismo na comissão não trata de nada disso. O voto do relator, Delegado Olim (PP), resume o projeto e conclui em uma frase que a matéria é de natureza legislativa e de iniciativa concorrente, isto é, que deputados podem propor o tema. Não cita a lei federal, o veto de fevereiro nem decisões da Justiça. O projeto do 25 de janeiro recebeu conclusão parecida na comissão antes de ser vetado. Na reunião de 4 de novembro, a comissão deu aval a 105 projetos.",
+        "source_ids": [
+          "S2",
+          "S14",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O argumento do veto não encerra a discussão. Em 19 de junho, depois do veto, o Supremo Tribunal Federal manteve por unanimidade o feriado estadual de Corpus Christi no Rio de Janeiro, contestado pela Confederação Nacional do Comércio. No voto, a ministra Cármen Lúcia afirma que a lei federal não impede estados de criar outros feriados para proteger bens culturais imateriais e chama de premissa de senso comum a ideia de que o Brasil tem feriados demais. O projeto paulista, porém, não apresenta o 2 de abril como patrimônio cultural: seu objetivo declarado é a conscientização, a orientação e a promoção da saúde.",
+        "source_ids": [
+          "S8",
+          "S7",
+          "S1"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Outros feriados na fila",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Desde 2023, deputados paulistas de PT, PSDB, PSOL, PL e PSD apresentaram ao menos oito projetos para criar feriado estadual, segundo levantamento nos dados abertos da Assembleia. Um virou lei, o da Consciência Negra, de 2023, data que depois se tornou feriado nacional. Um foi vetado, o do 25 de janeiro. Os outros seis seguem sem decisão final: terça de Carnaval, Quarta-Feira de Cinzas para bancos, Iemanjá, Corpus Christi, Reforma Protestante e autismo. O da Reforma Protestante teve pedido de urgência publicado.",
+        "source_ids": [
+          "S6",
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto do autismo não traz estimativa do que um dia a mais de feriado custaria ao comércio, aos serviços ou ao governo. No caso do Rio, a Confederação do Comércio alegou elevados custos para a economia, argumento que o Supremo não aceitou. Até esta publicação, a defesa conhecida do projeto é a justificativa do autor, para quem a data permitirá um dia de reflexão e mobilização. Não foi localizada manifestação pública de entidades de pessoas autistas ou de empresas sobre a proposta.",
+        "source_ids": [
+          "S1",
+          "S7"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, nada muda por enquanto: o 2 de abril segue sem feriado estadual. Se o projeto virar lei como está, o estado ganha um feriado. Nenhum atendimento, exame ou campanha passa a ser obrigatório, e quem aguarda terapia ou diagnóstico não ganha prazo novo.",
+        "source_ids": [
+          "S1",
+          "S4"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "O projeto ainda precisa passar pelas comissões de Defesa dos Direitos das Pessoas com Deficiência e de Finanças, Orçamento e Planejamento. Depois, depende da votação dos deputados e da decisão do governador, que pode sancionar ou vetar.",
+        "source_ids": [
+          "S4"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.al.sp.gov.br/spl/2026/06/Propositura/1000695090_1000867124_Propositura.pdf",
+        "title": "Alesp: Projeto de Lei 588/2026, texto e justificativa",
+        "kind": "primary",
+        "published_date": "2026-06-12"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.al.sp.gov.br/legis/docs/2026/8/3/310000000335_cv.pdf",
+        "title": "Alesp: voto do relator Delegado Olim sobre o PL 588/2026",
+        "kind": "primary",
+        "published_date": "2026-08-03"
+      },
+      {
+        "id": "S3",
+        "url": "https://www.al.sp.gov.br/noticia/?04/11/2026/comissao-da-alesp-da-aval-a-pl-que-transforma-dia-da-conscientizacao-sobre-tea-em-feriado-estadual",
+        "title": "Alesp: Comissão dá aval a PL que transforma Dia da Conscientização sobre TEA em feriado estadual, 4/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S4",
+        "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/detalhes/principais/1000695090",
+        "title": "Alesp: situação e tramitação do PL 588/2026",
+        "kind": "primary",
+        "published_date": "2026-11-05"
+      },
+      {
+        "id": "S5",
+        "url": "https://www.al.sp.gov.br/spl/2026/03/Acessorio/1000679730_1000849459_Acessorio.pdf",
+        "title": "Alesp: Mensagem A-033/2026 do governador, veto total ao PL 49/2024",
+        "kind": "primary",
+        "published_date": "2026-03-02"
+      },
+      {
+        "id": "S6",
+        "url": "https://www3.al.sp.gov.br/repositorio/dados-abertos/output/json/proposituras.json",
+        "title": "Levantamento Datafixers: projetos de feriado estadual na Alesp, 2023 a 2026",
+        "kind": "analysis",
+        "published_date": "2026-11-05"
+      },
+      {
+        "id": "S7",
+        "url": "https://arq.migalhas.com.br/arquivos/2026/6/777B0AF284651C_votocarmen.pdf",
+        "title": "STF: voto da ministra Cármen Lúcia na ADI 7.898 (reproduzido pelo Migalhas)",
+        "kind": "press",
+        "published_date": "2026-06-19"
+      },
+      {
+        "id": "S8",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-criacao-de-feriado-de-corpus-christi-no-estado-do-rio-de-janeiro/",
+        "title": "STF: Supremo valida feriado de Corpus Christi no Rio de Janeiro",
+        "kind": "primary",
+        "published_date": "2026-06-22"
+      },
+      {
+        "id": "S9",
+        "url": "https://www.al.sp.gov.br/repositorio/legislacao/lei/2021/lei-17353-31.03.2021.html",
+        "title": "Lei estadual 17.353, de 31/3/2021",
+        "kind": "primary",
+        "published_date": "2021-03-31"
+      },
+      {
+        "id": "S10",
+        "url": "https://www.al.sp.gov.br/spl/2021/04/Acessorio/1000364526_1000428607_Acessorio.doc",
+        "title": "Alesp: Mensagem A-055/2021, veto parcial ao PL 925/2019",
+        "kind": "primary",
+        "published_date": "2021-04-01"
+      },
+      {
+        "id": "S11",
+        "url": "https://www.al.sp.gov.br/legis/docs/2026/10/29/310000011649.html",
+        "title": "Alesp: Ordem do Dia da 163ª Sessão Ordinária, 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-10-29"
+      },
+      {
+        "id": "S12",
+        "url": "https://www.diariodepernambuco.com.br/vida-urbana/2025/05/3894175-pernambuco-e-o-oitavo-estado-com-maior-numero-de-pessoas-com-autismo.html",
+        "title": "Diario de Pernambuco: dados do Censo 2022 sobre autismo por estado, maio de 2025",
+        "kind": "press",
+        "published_date": "2025-05-23"
+      },
+      {
+        "id": "S14",
+        "url": "https://www.al.sp.gov.br/spl/2025/12/Acessorio/1000622384_1000842768_Acessorio.pdf",
+        "title": "Alesp: Parecer 1961/2025 da Comissão de Educação e Cultura sobre o PL 49/2024",
+        "kind": "primary",
+        "published_date": "2025-08-20"
+      }
+    ]
+  },
+  {
     "house": "senado",
     "published_at": "2026-11-04T18:15:50.590164+00:00",
     "kind": "daily",
@@ -374,6 +627,10 @@
     "topic": "Segurança pública",
     "politicians": [
       {
+        "party": "PL",
+        "name": "Carlos Portinho",
+        "role": "Autor da Emenda 85",
+        "uf": "RJ",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -388,13 +645,13 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
-        "uf": "RJ",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "role": "Autor da Emenda 85",
-        "party": "PL",
-        "name": "Carlos Portinho"
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025."
       },
       {
+        "party": "PT",
+        "name": "Rogério Carvalho",
+        "role": "Relator no Senado",
+        "uf": "SE",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -405,11 +662,7 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
-        "uf": "SE",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "role": "Relator no Senado",
-        "party": "PT",
-        "name": "Rogério Carvalho"
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT)."
       }
     ],
     "blocks": [
@@ -856,6 +1109,10 @@
     "house": "camara",
     "politicians": [
       {
+        "party": "Republicanos",
+        "name": "Augusto Coutinho",
+        "role": "Autor do projeto",
+        "uf": "PE",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Augusto Coutinho",
@@ -866,13 +1123,13 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833"
           }
         ],
-        "uf": "PE",
-        "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula.",
-        "role": "Autor do projeto",
-        "party": "Republicanos",
-        "name": "Augusto Coutinho"
+        "profile": "Engenheiro, é deputado federal por Pernambuco desde 2011; no primeiro mandato estava no Solidariedade e começou a legislatura de 2023 no Republicanos. É o autor do PL 5.649/2026, apresentado para manter as medidas da MP 1.374, editada pelo governo Lula."
       },
       {
+        "party": "PP",
+        "name": "Lula da Fonte",
+        "role": "Relator na Câmara",
+        "uf": "PE",
         "sources": [
           {
             "title": "Câmara: histórico parlamentar de Lula da Fonte",
@@ -883,13 +1140,13 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186543"
           }
         ],
-        "uf": "PE",
-        "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões.",
-        "role": "Relator na Câmara",
-        "party": "PP",
-        "name": "Lula da Fonte"
+        "profile": "Deputado federal por Pernambuco na legislatura iniciada em 2023, filiado ao PP. Relatou o PL 5.649/2026 no plenário da Câmara em nome de cinco comissões."
       },
       {
+        "party": "PSD",
+        "name": "Fernando Dueire",
+        "role": "Relator no Senado",
+        "uf": "PE",
         "sources": [
           {
             "title": "Senado: senadores em exercício",
@@ -900,11 +1157,7 @@
             "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25c87be4-68d4-4396-aea9-b0a2fe2e2a73"
           }
         ],
-        "uf": "PE",
-        "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado.",
-        "role": "Relator no Senado",
-        "party": "PSD",
-        "name": "Fernando Dueire"
+        "profile": "Senador por Pernambuco no exercício do mandato como primeiro suplente de Jarbas Vasconcelos. Foi o relator de plenário do PL 5.649/2026 no Senado."
       }
     ],
     "blocks": [
@@ -1133,30 +1386,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
+        "party": "PL",
+        "name": "Gil Diniz Bolsonaro",
+        "role": "Autor do projeto",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "role": "Autor do projeto",
-        "party": "PL",
-        "name": "Gil Diniz Bolsonaro"
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica."
       },
       {
+        "party": "PP",
+        "name": "Delegado Olim",
+        "role": "Relator na CCJR",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "role": "Relator na CCJR",
-        "party": "PP",
-        "name": "Delegado Olim"
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
       }
     ],
     "blocks": [
@@ -1393,19 +1646,23 @@
     "subtitle": "O projeto não cria uma proteção nova: leva para o texto da lei o que o tribunal decidiu. Ainda precisa de outra comissão da Câmara e do Senado",
     "politicians": [
       {
+        "party": "PV",
+        "name": "Bacelar",
+        "role": "Autor do projeto",
+        "uf": "BA",
         "sources": [
           {
             "title": "Câmara: biografia e trajetória de Bacelar",
             "url": "https://www.camara.leg.br/deputados/69871/biografia"
           }
         ],
-        "uf": "BA",
-        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025.",
-        "role": "Autor do projeto",
-        "party": "PV",
-        "name": "Bacelar"
+        "profile": "Administrador e deputado federal pela Bahia desde 2015. Filiou-se ao PV em 2022 e foi vice-líder do governo entre março de 2023 e maio de 2025, segundo a biografia da Câmara. É o autor do PL 891/2025."
       },
       {
+        "party": "PSOL",
+        "name": "Célia Xakriabá",
+        "role": "Relatora na Comissão de Direitos Humanos",
+        "uf": "MG",
         "sources": [
           {
             "title": "Câmara: biografia de Célia Xakriabá",
@@ -1416,11 +1673,7 @@
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3055908"
           }
         ],
-        "uf": "MG",
-        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial.",
-        "role": "Relatora na Comissão de Direitos Humanos",
-        "party": "PSOL",
-        "name": "Célia Xakriabá"
+        "profile": "Professora e deputada federal por Minas Gerais no mandato de 2023 a 2027, pelo PSOL. Sua biografia registra atuação como vice-líder da federação PSOL-Rede em períodos anteriores. É a relatora do PL 891/2025 na Comissão de Direitos Humanos, Minorias e Igualdade Racial."
       }
     ],
     "blocks": [
@@ -1584,6 +1837,10 @@
     "topic": "Moradia",
     "politicians": [
       {
+        "party": "MDB",
+        "name": "Ricardo Nunes",
+        "role": "Autor da proposta — Executivo municipal",
+        "uf": "SP",
         "sources": [
           {
             "title": "CNN Brasil: trajetória e coligação em 2024",
@@ -1594,11 +1851,7 @@
             "url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado/815462"
           }
         ],
-        "uf": "SP",
-        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal.",
-        "role": "Autor da proposta — Executivo municipal",
-        "party": "MDB",
-        "name": "Ricardo Nunes"
+        "profile": "Prefeito de São Paulo desde 2021, após ter sido vice de Bruno Covas. Reeleito em 2024, teve o coronel Mello Araújo (PL) como vice e uma coligação que reuniu MDB, PL, PSD e Republicanos, entre outros partidos. O PL 736/2026 é de autoria do Executivo municipal."
       }
     ],
     "blocks": [
@@ -1739,6 +1992,10 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
+        "party": "PDT",
+        "name": "Dorinaldo Malafaia",
+        "role": "Autor do projeto",
+        "uf": "AP",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1749,11 +2006,7 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "uf": "AP",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "role": "Autor do projeto",
-        "party": "PDT",
-        "name": "Dorinaldo Malafaia"
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023."
       }
     ],
     "blocks": [
@@ -1907,17 +2160,17 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
+        "party": "Republicanos",
+        "name": "Damares Alves",
+        "role": "Presidente da subcomissão na audiência",
+        "uf": "DF",
         "sources": [
           {
             "title": "Senado: registro da audiência de27/10/2026",
             "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14999"
           }
         ],
-        "uf": "DF",
-        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos.",
-        "role": "Presidente da subcomissão na audiência",
-        "party": "Republicanos",
-        "name": "Damares Alves"
+        "profile": "Senadora pelo Distrito Federal e presidente da Subcomissão Permanente dos Povos Indígenas Yanomami na audiência de27 de outubro de2026. Na reunião, apresentou-se como oposição ao governo, mas defendeu a continuidade das ações no território e o acompanhamento de seus recursos."
       }
     ],
     "blocks": [
@@ -2033,43 +2286,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
+        "party": "PL",
+        "name": "Pr. Marco Feliciano",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
-        "party": "PL",
-        "name": "Pr. Marco Feliciano"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
       },
       {
+        "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
-        "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
       },
       {
+        "party": "PL",
+        "name": "Missionário José Olimpio",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "role": "Parlamentar citado",
-        "party": "PL",
-        "name": "Missionário José Olimpio"
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado."
       }
     ],
     "blocks": [
@@ -2340,6 +2593,10 @@
     "updated_at": "2026-11-04T18:41:51.957862+00:00",
     "politicians": [
       {
+        "party": "PL",
+        "name": "Magno Malta",
+        "role": "Autor do projeto",
+        "uf": "ES",
         "sources": [
           {
             "title": "Senado: autoria e tramitação do projeto",
@@ -2350,13 +2607,13 @@
             "url": "https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/519205"
           }
         ],
-        "uf": "ES",
-        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023.",
-        "role": "Autor do projeto",
-        "party": "PL",
-        "name": "Magno Malta"
+        "profile": "Senador pelo Espírito Santo e aliado de Jair Bolsonaro. Em discurso no Senado de dezembro de 2025, defendeu o ex-presidente e a anistia aos envolvidos nos atos de 8 de janeiro. É o autor do PL 501/2023."
       },
       {
+        "party": "PL",
+        "name": "Jorge Seif",
+        "role": "Relator na CDH",
+        "uf": "SC",
         "sources": [
           {
             "title": "Agência Senado: trajetória de Jorge Seif",
@@ -2367,11 +2624,7 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/155877"
           }
         ],
-        "uf": "SC",
-        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos.",
-        "role": "Relator na CDH",
-        "party": "PL",
-        "name": "Jorge Seif"
+        "profile": "Senador por Santa Catarina, eleito para seu primeiro mandato em 2022. Empresário do setor pesqueiro, foi secretário nacional de Aquicultura e Pesca no governo Jair Bolsonaro. É o relator do PL 501/2023 na Comissão de Direitos Humanos."
       }
     ]
   }
