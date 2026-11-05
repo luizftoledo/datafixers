@@ -1,11 +1,11 @@
 {
+  "results_end": "2026-11-04",
+  "week_end": "2026-11-08",
+  "updated_at": "2026-11-05T01:22:20.278818+00:00",
   "results_start": "2026-10-26",
   "previous_start": "2026-10-26",
-  "updated_at": "2026-11-04T14:18:45.794355+00:00",
-  "week_start": "2026-11-02",
   "previous_end": "2026-11-01",
-  "week_end": "2026-11-08",
-  "results_end": "2026-11-04",
+  "week_start": "2026-11-02",
   "agenda": [
     {
       "id": "cmsp-session-8276",
@@ -530,7 +530,855 @@
       "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 01",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83054",
-      "items": [],
+      "items": [
+        {
+          "title": "PL 1834/2023",
+          "summary": "Altera a Lei n. 11.343/2006, Lei de Drogas, para criar causa de aumento de pena, quando o delito é praticado por meio de fraude, dissimulação ou qualquer outro ardil, com o fim de atribuir a responsabilidade pelo delito a terceiro inocente, estabelecendo-se que, no concurso entre causas de aumento no dispositivo previstas, aplicar-se-ão estas conjuntamente.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2355896",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade, técnica legislativa e, no mérito, pela aprovação."
+        },
+        {
+          "title": "PL 182/2025",
+          "summary": "Altera a Política Nacional de Busca de Pessoas Desaparecidas incorporando o uso da tecnologia de câmeras de segurança e reconhecimento facial para além de outras medidas.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2482618",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade, técnica legislativa e, no mérito, pela aprovação deste e do Substitutivo da Comissão de Relações Exteriores e de Defesa Nacional, na forma do Substitutivo da Comissão de Previdência, Assistência Social, Infância, Adolescência e Família, com a Subemenda da Comissão de Finanças e Tributação, com subemenda."
+        },
+        {
+          "title": "PL 2500/2025",
+          "summary": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, e a Lei nº 7.210, de 11 de julho de 1984 – Lei de Execução Penal, para endurecer os requisitos de progressão de regime e livramento condicional de reincidentes em crimes patrimoniais praticados com violência ou grave ameaça à pessoa.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2515664",
+          "relator": "Bia Kicis",
+          "stage": "Parecer da Relatora, Dep. Bia Kicis (PL-DF), pela constitucionalidade, juridicidade e técnica legislativa e, no mérito, pela aprovação deste, com substitutivo."
+        },
+        {
+          "title": "PDL 385/2025",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Comunicação Comunitária Educativa e Cultural Constantina - Rádio FM para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Constantina, Estado do Rio Grande do Sul.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2532234",
+          "relator": "Covatti Filho",
+          "stage": "Parecer do Relator, Dep. Covatti Filho (PP-RS), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 559/2025",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Cultural de Paulo Bento para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Paulo Bento, Estado do Rio Grande do Sul.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2547265",
+          "relator": "Covatti Filho",
+          "stage": "Parecer do Relator, Dep. Covatti Filho (PP-RS), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 635/2025",
+          "summary": "Aprova o ato que renova a permissão outorgada à R A Sistema de Radiodifusão Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Santa Rita, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2551001",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 670/2025",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Virginius da Gama e Melo para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de João Pessoa, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2560565",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 994/2025",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária Trizidelense de Radiodifusão Lider FM a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Trizidela do Vale, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2583519",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1003/2025",
+          "summary": "Aprova o ato que renova a concessão outorgada à Rádio Difusora Coroados Ltda. para explorar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão sonora em onda média no município de São Fidelis, estado do Rio de Janeiro.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2583529",
+          "relator": "Carlos Jordy",
+          "stage": "Parecer do Relator, Dep. Carlos Jordy (PL-RJ), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1037/2025",
+          "summary": "Aprova o ato que renova a concessão outorgada à Rádio Sociedade Nova Esperança Ltda. para explorar serviço de radiodifusão sonora em onda média, de âmbito regional, no Município de Nova Esperança, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2589812",
+          "relator": "Diego Garcia",
+          "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1054/2025",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Comunitária de Comunicação, Cultura e Desenvolvimento para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Reserva do Iguaçu, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2589830",
+          "relator": "Diego Garcia",
+          "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1064/2025",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação dos Amigos Solidários de Francisco Alves para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Francisco Alves, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2589842",
+          "relator": "Diego Garcia",
+          "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1084/2025",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Comunitária Clube do Machadinho de Radiodifusão para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Lauro Müller, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2589863",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1132/2025",
+          "summary": "Aprova o ato que renova a outorga atribuída ao Grupo Frajola de Comunicação Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Capim Grosso, Estado da Bahia.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2592202",
+          "relator": "Félix Mendonça Júnior",
+          "stage": "Parecer do Relator, Dep. Félix Mendonça Júnior (PDT-BA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1135/2025",
+          "summary": "Aprova o ato que renova a concessão outorgada à Rádio Club de Nova Aurora Ltda., atualmente denominada Rádio Clube Cristalina Ltda., para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Nova Aurora, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2592208",
+          "relator": "Diego Garcia",
+          "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1143/2025",
+          "summary": "Aprova o ato que autoriza a Associação Rádio Comunitária Diamante FM a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Palmeiras, Estado da Bahia.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2592223",
+          "relator": "Félix Mendonça Júnior",
+          "stage": "Parecer do Relator, Dep. Félix Mendonça Júnior (PDT-BA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1168/2025",
+          "summary": "Aprova o ato que autoriza a Associação de Rádio Difusão Comunitária Amigos do Rádio - ARDCAR a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Palmital, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2596080",
+          "relator": "Diego Garcia",
+          "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 1190/2025",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio 101 FM de São Lourenço do Oeste Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de São Lourenço do Oeste, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2596119",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 28/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Nagib Haickel para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de Imperatriz, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2603827",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 30/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária para Jovens de Radiodifusão Rio Preto a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São José do Rio Preto, Estado de São Paulo",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2603829",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 32/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Art Studio Rádio Difusão Ltda., posteriormente transferida à VIP Rádio e Televisão Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Itanhaém, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2603831",
+          "relator": "Fausto Pinato",
+          "stage": ""
+        },
+        {
+          "title": "PDL 33/2026",
+          "summary": "Aprova o ato que renova a outorga à Rádio Notícias Brasileiras Ltda., atualmente denominada Sistema Pinotti de Comunicação Ltda., para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Matão, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2603832",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 95/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Sociedade Econômica de Comunicação Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de  Blumenau, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2607022",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 115/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rede Tabajara FM de Comunicações Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Tubarão, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2608727",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 128/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Prelazia de Balsas para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de Balsas, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2608740",
+          "relator": "Marreca Filho",
+          "stage": "Parecer do Relator, Dep. Marreca Filho (PRD-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 133/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária de Radiodifusão de Encano do Norte a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Indaial, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2608747",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 151/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à GTOLL Telecomunicações Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Irineópolis, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2610497",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 212/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária, Cultural e Desenvolvimento Social de Fortaleza dos Valos - ACODEFOVA a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Fortaleza dos Valos, Estado do Rio Grande do Sul.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2615092",
+          "relator": "Covatti Filho",
+          "stage": "Parecer do Relator, Dep. Covatti Filho (PP-RS), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 221/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Rainha FM Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Bento Gonçalves, Estado do Rio Grande do Sul.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2615104",
+          "relator": "Covatti Filho",
+          "stage": "Parecer do Relator, Dep. Covatti Filho (PP-RS), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 234/2026",
+          "summary": "Aprova o ato que renova a outorga à Sociedade Rádio Liberdade Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Guaratinguetá, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2615117",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 276/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Comunicação Comunitária dos Moradores de São Roberto-MA a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São Roberto, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621422",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 279/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à Rádio Curimã Ltda. para explorar serviço de radiodifusão de sons e imagens em tecnologia digital, no Município de Imperatriz, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621425",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 282/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Atlântico Sul Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Fortaleza, Estado do Ceará.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621428",
+          "relator": "Luiz Gastão",
+          "stage": "Parecer do Relator, Dep. Luiz Gastão (PSD-CE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 289/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação das Mulheres de Nazaré da Mata para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Nazaré da Mata, Estado de Pernambuco.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621435",
+          "relator": "Maria Arraes",
+          "stage": "Parecer da Relatora, Dep. Maria Arraes (PSB-PE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 299/2026",
+          "summary": "Aprova o ato que autoriza a Associação Antônia Dora a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Sigefredo Pacheco, Estado do Piauí.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621445",
+          "relator": "Flávio Nogueira",
+          "stage": "Parecer do Relator, Dep. Flávio Nogueira (PT-PI), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 302/2026",
+          "summary": "Aprova o ato que renova a outorga à Rádio Cultura Araraquara Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Araraquara, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621448",
+          "relator": "Orlando Silva",
+          "stage": "Parecer do Relator, Dep. Orlando Silva (PCdoB-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 308/2026",
+          "summary": "Aprova o ato que autoriza a Associação Cultural e Social de Paulistana - ASCOP a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Paulistana, Estado do Piauí.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621454",
+          "relator": "Flávio Nogueira",
+          "stage": "Parecer do Relator, Dep. Flávio Nogueira (PT-PI), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 311/2026",
+          "summary": "Aprova o ato que autoriza a ADAF – Associação Desportiva Avenida de Futebol a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Morro do Chapéu do Piauí, Estado do Piauí.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621457",
+          "relator": "Flávio Nogueira",
+          "stage": "Parecer do Relator, Dep. Flávio Nogueira (PT-PI), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 314/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Jovem Pira Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Piracaia, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621463",
+          "relator": "Orlando Silva",
+          "stage": "Parecer do Relator, Dep. Orlando Silva (PCdoB-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 321/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Cidade FM de Lauro Muller Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Lauro Muller, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621474",
+          "relator": "Ana Paula Lima",
+          "stage": "Parecer da Relatora, Dep. Ana Paula Lima (PT-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 340/2026",
+          "summary": "Aprova o ato que autoriza a Associação Cultural e Comunitária Norte Ponte Altense a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Ponte Alta do Norte, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621504",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 345/2026",
+          "summary": "Aprova o ato que autoriza a Associação Rádio Cultural a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Concórdia, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2621510",
+          "relator": "Zé Trovão",
+          "stage": "Parecer do Relator, Dep. Zé Trovão (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 360/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Amigos Moradores de Mandaguari para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Mandaguari, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2623104",
+          "relator": "Dilceu Sperafico",
+          "stage": "Parecer do Relator, Dep. Dilceu Sperafico (PP-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 370/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária do Povo a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Jaciara, Estado do Mato Grosso.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2623115",
+          "relator": "Juarez Costa",
+          "stage": "Parecer do Relator, Dep. Juarez Costa (REPUBLIC-MT), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 411/2026",
+          "summary": "Aprova o ato que renova a outorga à Sociedade de Cultura Rádio Caiari Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Porto Velho, Estado de Rondônia.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626916",
+          "relator": "Silvia Cristina",
+          "stage": "Parecer da Relatora, Dep. Silvia Cristina (PP-RO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 415/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária e de Comunicação de Doutor Camargo - ACDC a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Doutor Camargo, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626972",
+          "relator": "Felipe Francischini",
+          "stage": "Parecer do Relator, Dep. Felipe Francischini (PODE-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 426/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Radiodifusão Marrecas a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Francisco Beltrão, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626983",
+          "relator": "Pedro Lupion",
+          "stage": "Parecer do Relator, Dep. Pedro Lupion (REPUBLIC-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 428/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Desenvolvimento Cultural e Artístico da Comunidade de São João do Triunfo para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São João do Triunfo, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626985",
+          "relator": "Pedro Lupion",
+          "stage": "Parecer do Relator, Dep. Pedro Lupion (REPUBLIC-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 431/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Beneficente Cultural Rusczak para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Rio Negrinho, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626988",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 432/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Comunitária e Cultural de Seara para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Seara, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626990",
+          "relator": "Julia Zanatta",
+          "stage": "Parecer da Relatora, Dep. Julia Zanatta (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 438/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Cidade SE Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Criciúma, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2626996",
+          "relator": "Zé Trovão",
+          "stage": "Parecer do Relator, Dep. Zé Trovão (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 446/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à SOMPUR - Radiodifusão Ltda., transferida à Fundação Maranata de Comunicação Social para executar serviço de radiodifusão sonora em frequência modulada, no Município de Florianópolis, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2627004",
+          "relator": "Zé Trovão",
+          "stage": "Parecer do Relator, Dep. Zé Trovão (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 447/2026",
+          "summary": "Aprova o ato que renova outorga à FM Cinderela Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Colorado, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2627005",
+          "relator": "Toninho Wandscheer",
+          "stage": "Parecer do Relator, Dep. Toninho Wandscheer (PP-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 449/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Champagnat, posteriormente transferida à Fundação Nova Campo Largo Rádio e Televisão Educativa para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de Curitiba, Estado do Paraná.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2627007",
+          "relator": "Toninho Wandscheer",
+          "stage": "Parecer do Relator, Dep. Toninho Wandscheer (PP-PR), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 451/2026",
+          "summary": "Aprova o ato que autoriza a Associação Cultural Alvorecer a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Rio Rufino, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2627009",
+          "relator": "Zé Trovão",
+          "stage": "Parecer do Relator, Dep. Zé Trovão (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 492/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Virginius da Gama e Melo para executar serviço de radiodifusão sonora em frequência modulada com fins exclusivamente educativos no Município de Campina Grande, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629044",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 493/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Radiodifusão Comunitária Cristã de Mamanguape a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Mamanguape, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629045",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 496/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Radiodifusão Comunitária de Itabaiana para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Itabaiana, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629049",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 498/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Comunitária da Cidade de Quixaba para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Quixaba, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629051",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 512/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Educacional Salesiana Dom Bosco para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de Fortaleza, Estado do Ceará.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629065",
+          "relator": "Luiz Gastão",
+          "stage": "Parecer do Relator, Dep. Luiz Gastão (PSD-CE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 514/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à TV Minas Sul Ltda. para explorar serviço de radiodifusão de sons e imagens, no Município de Varginha, Estado de Minas Gerais.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629067",
+          "relator": "Nikolas Ferreira",
+          "stage": "Parecer do Relator, Dep. Nikolas Ferreira (PL-MG), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 529/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária de Radiodifusão Cruzeiro a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Japi, Estado do Rio Grande do Norte.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629083",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 532/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Sucesso FM Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Maracanaú, Estado do Ceará.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629086",
+          "relator": "Luiz Gastão",
+          "stage": "Parecer do Relator, Dep. Luiz Gastão (PSD-CE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 533/2026",
+          "summary": "Aprova o ato que outorga permissão à Rádio Pinhais Ltda. para explorar serviço de radiodifusão sonora em frequência modulada, no Município de Catanduvas, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629087",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 537/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária União Potengi a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São Paulo do Potengi, Estado do Rio Grande do Norte.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2629091",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 584/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Radiodifusão Comunitária de São João do Carú a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São João do Carú, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2631474",
+          "relator": "Rubens Pereira Júnior",
+          "stage": "Parecer do Relator, Dep. Rubens Pereira Júnior (PT-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 588/2026",
+          "summary": "Aprova o ato que autoriza a Associação Fonte Limpa - AFL a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Cajapió, Estado do Maranhão.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2631482",
+          "relator": "Aluisio Mendes",
+          "stage": "Parecer do Relator, Dep. Aluisio Mendes (REPUBLIC-MA), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 589/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária de Comunicação Social Força Jovem a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Cajazeiras do Piauí, Estado do Piauí.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2631483",
+          "relator": "Flávio Nogueira",
+          "stage": "Parecer do Relator, Dep. Flávio Nogueira (PT-PI), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 600/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Oito de Setembro Ltda. para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão sonora em onda tropical, posteriormente adaptado para serviço de radiodifusão sonora em frequência Modulada, no Município de Descalvado, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2631499",
+          "relator": "Pr. Marco Feliciano",
+          "stage": ""
+        },
+        {
+          "title": "PDL 604/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio FM Jardim de Cajobi Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Cajobi, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2631506",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 624/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à TV Serra Azul Ltda. para explorar serviço de radiodifusão de sons e imagens, no Município de Mateus Leme, Estado de Minas Gerais.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634318",
+          "relator": "Nikolas Ferreira",
+          "stage": "Parecer do Relator, Dep. Nikolas Ferreira (PL-MG), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 626/2026",
+          "summary": "Aprova o ato que renova a outorga conferida à Organização Radiodifusão de Cesário Lange Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Cesário Lange, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634320",
+          "relator": "Alencar Santana",
+          "stage": "Parecer do Relator, Dep. Alencar Santana (PT-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 627/2026",
+          "summary": "Aprova o ato que renova a outorga à Sociedade Rádio Club Altinópolis Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Altinópolis, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634321",
+          "relator": "Alencar Santana",
+          "stage": "Parecer do Relator, Dep. Alencar Santana (PT-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 628/2026",
+          "summary": "Aprova o ato que autoriza a Associação Amigos de São João do Cariri a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São João do Cariri, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634322",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 640/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Costa do Sol Ltda. para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão sonora em frequência modulada no Município de Fortaleza, Estado do Ceará.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634334",
+          "relator": "Luiz Gastão",
+          "stage": "Parecer do Relator, Dep. Luiz Gastão (PSD-CE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 643/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Rádio Comunitária e Defesa do Meio Ambiente Pró-Guaramirim para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Guaramirim, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634337",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 644/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação Comunitária Pro-Cultural e Comunicação de São Domingos para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de São Domingos, Estado do Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634338",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 648/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à Sociedade Rádio Clube de Blumenau Ltda., posteriormente transferida à Rádio Clube de Indaial Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Indaial, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634342",
+          "relator": "Ana Paula Lima",
+          "stage": "Parecer da Relatora, Dep. Ana Paula Lima (PT-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 649/2026",
+          "summary": "Aprova o ato que renova a outorga conferida à Rádio Difusora Santa Cantarina Ltda., posteriormente transferida à Sociedade Boavista de Comunicações Ltda., para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Lages, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634344",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 651/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio FM Fronteira Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Três Barras, Estado do Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634346",
+          "relator": "Ana Paula Lima",
+          "stage": "Parecer da Relatora, Dep. Ana Paula Lima (PT-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 658/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Dinâmica de Santa Fé Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Santa Fé do Sul, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634353",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 663/2026",
+          "summary": "Aprova o ato que renova a outorga à Rádio Clube de Blumenau Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Blumenau, Estado do Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634359",
+          "relator": "Ana Paula Lima",
+          "stage": "Parecer da Relatora, Dep. Ana Paula Lima (PT-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 664/2026",
+          "summary": "Aprova o ato que renova outorga à Rádio Difusora de Xanxerê Ltda para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Xanxerê, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634360",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 665/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Cidade São José Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de São José, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634361",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 669/2026",
+          "summary": "Aprova o ato que outorga concessão à Fundação Cultural Santa Maria de Deus para executar serviço de radiodifusão de sons e imagens, com fins exclusivamente educativos, no Município de Ituiutaba, Estado de Minas Gerais.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634366",
+          "relator": "Nikolas Ferreira",
+          "stage": "Parecer do Relator, Dep. Nikolas Ferreira (PL-MG), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 670/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Empresa de Radiodifusão Tijucas FM Ltda. para executar serviço de radiodifusão sonora em frequência modulada no Município de Tijucas, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634367",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 674/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Paraíba TV/FM Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Paudalho, Estado de Pernambuco.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2634373",
+          "relator": "Maria Arraes",
+          "stage": "Parecer da Relatora, Dep. Maria Arraes (PSB-PE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 698/2026",
+          "summary": "Aprova o ato que renova a autorização outorgada à Associação de Radiodifusão Comunitária de Xambioá Aratocxam para executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Xambioá, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636916",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 700/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária e Cultural de Radiodifusão Metropolitana FM a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Floresta, Estado de Pernambuco.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636918",
+          "relator": "Waldemar Oliveira",
+          "stage": "Parecer do Relator, Dep. Waldemar Oliveira (AVANTE-PE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 702/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Fundação Cultural São Judas Tadeu para executar serviço de radiodifusão sonora em frequência modulada, com fins exclusivamente educativos, no Município de Colinas do Tocantins, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636920",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 705/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à Rádio Clube de Lages S.A., atualmente denominada Rádio Clube de Lages Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Lages, Estado do Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636923",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 707/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Som de Gurupi Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Gurupi, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636929",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 712/2026",
+          "summary": "Aprova o ato que autoriza o Instituto Augustinópolis de Incentivo a Educação e Cultura a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Augustinópolis, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636934",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 715/2026",
+          "summary": "Aprova o ato que autoriza o Instituto Tocantinópolis de Comunicação a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Tocantinópolis, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636938",
+          "relator": "Julio Cesar Ribeiro",
+          "stage": ""
+        },
+        {
+          "title": "PDL 725/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária, Cultural e Educacional de Casinhas a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Casinhas, Estado de Pernambuco.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636949",
+          "relator": "Maria Arraes",
+          "stage": "Parecer da Relatora, Dep. Maria Arraes (PSB-PE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 728/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à Televisão Rio Formoso Ltda. para explorar serviço de radiodifusão de sons e imagens, no Município de Gurupi, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636952",
+          "relator": "Bia Kicis",
+          "stage": "Parecer da Relatora, Dep. Bia Kicis (PL-DF), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 735/2026",
+          "summary": "Aprova o ato que renova a concessão outorgada à Televisão Xanxerê Ltda. para explorar serviço de radiodifusão de sons e imagens, no Município de Xanxerê, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636959",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 741/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Correio do Vale Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Mamanguape, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636965",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 744/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária e Cultural de Conceição do Tocantins a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Conceição do Tocantins, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636969",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 746/2026",
+          "summary": "Aprova o ato que autoriza a Associação Rádio Comunitária Roma FM a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Nova Roma, Estado de Goiás.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636971",
+          "relator": "Bia Kicis",
+          "stage": "Parecer da Relatora, Dep. Bia Kicis (PL-DF), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 750/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à DJ Comunicações e Exploração de Serviços de Radiodifusão Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Guaramirim, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636975",
+          "relator": "Caroline de Toni",
+          "stage": "Parecer da Relatora, Dep. Caroline de Toni (PL-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 756/2026",
+          "summary": "Aprova o ato que renova a outorga à Sociedade Rádio Difusora Batatais Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Batatais, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636981",
+          "relator": "Orlando Silva",
+          "stage": "Parecer do Relator, Dep. Orlando Silva (PCdoB-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 757/2026",
+          "summary": "Aprova o ato que renova a outorga à Rádio Clube Tijucas Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Tijucas, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636982",
+          "relator": "Ana Paula Lima",
+          "stage": "Parecer da Relatora, Dep. Ana Paula Lima (PT-SC), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 760/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Rádio Comunitária de Carnaubeira da Penha a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Carnaubeira da Penha, Estado de Pernambuco.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2636985",
+          "relator": "Waldemar Oliveira",
+          "stage": "Parecer do Relator, Dep. Waldemar Oliveira (AVANTE-PE), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 773/2026",
+          "summary": "Aprova o ato que autoriza a Associação de Radiodifusão da Comunidade de Várzea - ARCV a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Várzea, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639026",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 776/2026",
+          "summary": "Aprova o ato que autoriza a Associação Comunitária de Guarita de Comunicação a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Itabaiana, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639029",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 778/2026",
+          "summary": "Aprova o ato que autoriza a Associação Cultural e de Radiodifusão Comunitária Marcione Nunes Pereira a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Sousa, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639031",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 783/2026",
+          "summary": "Aprova o ato que autoriza a Organização de Radiodifusão Destaque de Brasilândia a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Nova Brasilândia D'Oeste, Estado de Rondônia.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639036",
+          "relator": "Silvia Cristina",
+          "stage": "Parecer da Relatora, Dep. Silvia Cristina (PP-RO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 795/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Difusora Colíder Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Marcelândia, Estado do Mato Grosso.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639048",
+          "relator": "Juarez Costa",
+          "stage": "Parecer do Relator, Dep. Juarez Costa (REPUBLIC-MT), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 802/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio e Televisão Paraibana Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de João Pessoa, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639055",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 804/2026",
+          "summary": "Aprova o ato que renova a outorga à Rede Litorânea de Rádio Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de João Pessoa, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639057",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 810/2026",
+          "summary": "Aprova o ato que autoriza a Associação dos Moradores do Angelim - AMA a executar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão comunitária no Município de Sousa, Estado da Paraíba.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639063",
+          "relator": "Mersinho Lucena",
+          "stage": "Parecer do Relator, Dep. Mersinho Lucena (PSD-PB), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 813/2026",
+          "summary": "Aprova o ato que renova a outorga à Sociedade Rádio Difusora Lucélia Ltda. para explorar, pelo prazo de dez anos, sem direito de exclusividade, serviço de radiodifusão sonora em onda média, posteriormente adaptado para o serviço de radiodifusão sonora em frequência modulada, no Município de Lucélia, Estado de São Paulo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639067",
+          "relator": "Fausto Pinato",
+          "stage": "Parecer do Relator, Dep. Fausto Pinato (UNIÃO-SP), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 820/2026",
+          "summary": "Aprova o ato que renova a outorga à Kyno Filmes Produções Cinematográficas Ltda. para explorar serviço de radiodifusão sonora em onda média, posteriormente adaptado para serviço de radiodifusão sonora em frequência modulada, no Município de Araguatins, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639074",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 829/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Padre Luso Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Porto Nacional, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639083",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 834/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Princesa Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Lages, Estado de Santa Catarina.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639088",
+          "relator": "Caroline de Toni",
+          "stage": ""
+        },
+        {
+          "title": "PDL 835/2026",
+          "summary": "Aprova o ato que renova a permissão outorgada à Rádio Som de Gurupi Ltda. para executar serviço de radiodifusão sonora em frequência modulada, no Município de Gurupi, Estado do Tocantins.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639089",
+          "relator": "Ricardo Ayres",
+          "stage": "Parecer do Relator, Dep. Ricardo Ayres (REPUBLIC-TO), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PDL 837/2026",
+          "summary": "Aprova o ato que outorga permissão à Frequência Brasileira de Comunicações Ltda. para explorar serviço de radiodifusão sonora em frequência modulada, no Município de Congonhal, Estado de Minas Gerais.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2639091",
+          "relator": "Rafael Simoes",
+          "stage": "Parecer do Relator, Dep. Rafael Simoes (UNIÃO-MG), pela constitucionalidade, juridicidade e técnica legislativa."
+        },
+        {
+          "title": "PL 2046/2011",
+          "summary": "Acrescenta dispositivos à Lei nº 11.343, de 23 de agosto de 2006, para tratar de medidas preventivas ao uso de drogas.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/515930",
+          "relator": "Diego Garcia",
+          "stage": ""
+        },
+        {
+          "title": "PL 2721/2015",
+          "summary": "Altera a Lei nº Lei nº 9.394, de 20 de dezembro de 1996, que \"Estabelece as diretrizes e bases da educação nacional.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/1672555",
+          "relator": "Félix Mendonça Júnior",
+          "stage": ""
+        },
+        {
+          "title": "PL 2918/2025",
+          "summary": "Acrescenta o procedimento judicial de homologação de acordo extrajudicial e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2526398",
+          "relator": "Pompeo de Mattos",
+          "stage": "Parecer do Relator, Dep. Pompeo de Mattos (PDT-RS), pela constitucionalidade, juridicidade, técnica legislativa e, no mérito, pela aprovação deste, com emenda."
+        }
+      ],
       "note": "Discussão e votação de propostas legislativas"
     },
     {
@@ -542,8 +1390,199 @@
       "status": "Encerrada",
       "place": "Plenário da Câmara dos Deputados",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83141",
-      "items": [],
+      "items": [
+        {
+          "title": "PL 2879/2011",
+          "summary": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro, para dispor sobre a sinalização vertical da travessia de pedestre.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/530513",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 1932/2021",
+          "summary": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para determinar que o abastecimento de medicamentos e de produtos para a saúde nos entes da federação será controlado por meio de sistema integrado de acompanhamento em tempo real do consumo e do estoque.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2305879",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 3511/2026",
+          "summary": "Cria a Política Nacional de Residência em Área Profissional da Saúde.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2270540",
+          "relator": "Ana Pimentel",
+          "stage": ""
+        },
+        {
+          "title": "REQ 3721/2026",
+          "summary": "Reconhece o artesanato tradicional do Estado do Maranhão como manifestação da cultura nacional.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2637478",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 4057/2026",
+          "summary": "Dispõe sobre o regime jurídico específico das associações civis sem fins lucrativos de utilidade pública que instituam sistemas de beneficência e assistência mútua de interesse social.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2643842",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REC 68/2019",
+          "summary": "Permite a celebração de convênios ou parcerias pelo Instituto Nacional de Propriedade Intelectual",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2198408",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REC 19/2022",
+          "summary": "Altera os arts. 642-A e 883 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-lei nº 5.452, de 1º de maio de 1943, para dispor sobre a penhora sobre o faturamento da empresa.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2204445",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 3099/2019",
+          "summary": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2204495",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 79/2020",
+          "summary": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2596596",
+          "relator": "Arthur Oliveira Maia",
+          "stage": ""
+        },
+        {
+          "title": "PL 2994/2020",
+          "summary": "Altera a Lei nº 11.771, de 17 de setembro de 2008, para dispor sobre o Turismo Colaborativo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2254065",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 2726/2022",
+          "summary": "Institui a Política Nacional de Convivência Sociocultural e Economia Solidária (PNCS).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2336566",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 2374/2023",
+          "summary": "Altera a Lei n.º 11.947, de 16 de junho de 2009 e a Lei n.º 14.113, de 25 de dezembro de 2020 de modo a assegurar que haja a inclusão das escolas comunitárias e o repasse direto dos recursos do Programa Nacional de Alimentação Escolar – PNAE e do Programa Dinheiro Direto na Escola – PDDE, e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2360367",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5902/2023",
+          "summary": "Altera o Decreto-Lei nº 2848, de 07 de dezembro de 1940 – Código Penal, para dispor sobre o uso de drones no espaço aéreo dos presídios.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2410357",
+          "relator": "Nikolas Ferreira",
+          "stage": ""
+        },
+        {
+          "title": "PL 4674/2024",
+          "summary": "“Dispõe sobre a disponibilização de exames de ultrassonografia morfológica na rede pública de saúde e dá outras providências.”",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2475487",
+          "relator": "Laura Carneiro",
+          "stage": "Parecer proferido em Plenário pela Relatora, Dep. Laura Carneiro (PSD-RJ) pela:\r\n• Comissão de Previdência, Assistência Social, Infância, Adolescência e Família, que conclui pela aprovação do Projeto de Lei nº 4.674, de 2024, na forma do Substitutivo adotado pelo relator da Comissão de Saúde.\r\n• Comissão de Saúde, que conclui pela aprovação do Projeto de Lei nº 4.674, de 2024, na forma do Substitutivo adotado.\r\n• Comissão de Finanças e Tributação, que conclui pela compatibilidade e adequação financeira e orçamentária do Projeto de Lei nº 4.674, de 2024, e do Substitutivo Adotado pela Comissão de Defesa dos Direitos da Mulher e do Substitutivo Adotado pelo relator da Comissão de Saúde.\r\n• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa do Projeto de Lei nº 4.674, de 2024, do Substitutivo Adotado pela na Comissão de Defesa dos Direitos da Mulher e do Substitutivo Adotado pelo relator da Comissão de Saúde."
+        },
+        {
+          "title": "PL 4674/2024",
+          "summary": "“Dispõe sobre a disponibilização de exames de ultrassonografia morfológica na rede pública de saúde e dá outras providências.”",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2475487",
+          "relator": "Laura Carneiro",
+          "stage": "Parecer proferido em Plenário pela Relatora, Dep. Laura Carneiro (PSD-RJ) pela:\r\n• Comissão de Previdência, Assistência Social, Infância, Adolescência e Família, que conclui pela aprovação do Projeto de Lei nº 4.674, de 2024, na forma do Substitutivo adotado pelo relator da Comissão de Saúde.\r\n• Comissão de Saúde, que conclui pela aprovação do Projeto de Lei nº 4.674, de 2024, na forma do Substitutivo adotado.\r\n• Comissão de Finanças e Tributação, que conclui pela compatibilidade e adequação financeira e orçamentária do Projeto de Lei nº 4.674, de 2024, e do Substitutivo Adotado pela Comissão de Defesa dos Direitos da Mulher e do Substitutivo Adotado pelo relator da Comissão de Saúde.\r\n• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa do Projeto de Lei nº 4.674, de 2024, do Substitutivo Adotado pela na Comissão de Defesa dos Direitos da Mulher e do Substitutivo Adotado pelo relator da Comissão de Saúde."
+        },
+        {
+          "title": "PL 2475/2025",
+          "summary": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2515534",
+          "relator": "Delegado Matheus Laiola",
+          "stage": ""
+        },
+        {
+          "title": "PL 3220/2025",
+          "summary": "Institui o Dia Nacional da Consolidação da Independência do Brasil.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2531613",
+          "relator": "Lídice da Mata",
+          "stage": ""
+        },
+        {
+          "title": "PL 4159/2025",
+          "summary": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2551091",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5815/2025",
+          "summary": "Institui e cria o Programa Nacional de Acompanhamento Anual Pediátrico/Médico e Emocional/Psicossocial da Infância e Adolescência - PNAPE, com o objetivo de colocar crianças e adolescentes, os filhos da sociedade brasileira, a salvo das mais  diversas forma de transtorno mental, negligência, discriminação, exploração, violência, automutilação, crueldade, opressão, tráfico humano e especialmente prevenindo abuso e exploração sexual (Lei Augusto Cury). A partir da Lei Augusto Cury o Estado brasileiro não será apenas o  responsável teórico pelo desenvolvimento saudável dos seus filhos, mas acompanhará anualmente este desenvolvimento! Os predadores sexuais, em destaque, saberão que o Estado Brasileiro estará de olho em suas crianças e adolescentes através de escuta ativa e periódica.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2584437",
+          "relator": "Waldemar Oliveira",
+          "stage": ""
+        },
+        {
+          "title": "PL 5542/2026",
+          "summary": "Altera a Lei nº 11.340, de 7 de agosto de 2006 – Lei Maria da Penha, a fim de estabelecer garantias mínimas para a execução da monitoração eletrônica como medida protetiva de urgência, inclusive quanto à emissão de alertas sonoros e luminosos, à utilização excepcional de mecanismo de contenção física remota e à proteção da vítima.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2647427",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 565/2020",
+          "summary": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para tratar de ações de educação em saúde executadas pelos profissionais do Sistema Único de Saúde.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2238560",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5974/2023",
+          "summary": "Dispõe sobre a permissão de reprodução adaptada de obras para pessoas com deficiência intelectual.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2412504",
+          "relator": "",
+          "stage": ""
+        }
+      ],
       "note": "Sessão Deliberativa Extraordinária Semipresencial (AM nº 123/2020)"
+    },
+    {
+      "id": "cmsp-session-8277",
+      "house": "cmsp",
+      "date": "2026-11-04",
+      "time": "",
+      "title": "Pauta de sessão plenária",
+      "status": "Prevista",
+      "place": "",
+      "source_url": "https://splegisconsulta.saopaulo.sp.leg.br/SessaoPlnrPautasV2/Index?avoidDataTable=true",
+      "items": [],
+      "note": "54 itens na pauta. Inclusão não significa aprovação."
+    },
+    {
+      "id": "cmsp-session-8278",
+      "house": "cmsp",
+      "date": "2026-11-04",
+      "time": "",
+      "title": "Pauta de sessão plenária",
+      "status": "Prevista",
+      "place": "",
+      "source_url": "https://splegisconsulta.saopaulo.sp.leg.br/SessaoPlnrPautasV2/Index?avoidDataTable=true",
+      "items": [],
+      "note": "225 itens na pauta. Inclusão não significa aprovação."
+    },
+    {
+      "id": "cmsp-session-8279",
+      "house": "cmsp",
+      "date": "2026-11-04",
+      "time": "",
+      "title": "Pauta de sessão plenária",
+      "status": "Prevista",
+      "place": "",
+      "source_url": "https://splegisconsulta.saopaulo.sp.leg.br/SessaoPlnrPautasV2/Index?avoidDataTable=true",
+      "items": [],
+      "note": "49 itens na pauta. Inclusão não significa aprovação."
     },
     {
       "id": "camara-83162",
@@ -551,7 +1590,7 @@
       "date": "2026-11-04",
       "time": "09:00",
       "title": "Comissão de Desenvolvimento Econômico — Mesa Redonda",
-      "status": "Em Andamento",
+      "status": "Encerrada",
       "place": "",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83162",
       "items": [],
@@ -575,7 +1614,7 @@
       "date": "2026-11-04",
       "time": "09:30",
       "title": "Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural — Mesa Redonda",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83144",
       "items": [],
@@ -599,7 +1638,7 @@
       "date": "2026-11-04",
       "time": "09:46",
       "title": "Comissão de Saúde — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 07",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83117",
       "items": [
@@ -809,107 +1848,77 @@
       "status": "Encerrada (Termo)",
       "place": "Anexo II, Plenário 08",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83135",
+      "items": [],
+      "note": "Discussão e votação de propostas legislativas"
+    },
+    {
+      "id": "senado-15011",
+      "house": "senado",
+      "date": "2026-11-04",
+      "time": "10:00",
+      "title": "Comissão de Assuntos Econômicos — 24ª Reunião Ordinária Semipresencial",
+      "status": "Realizada",
+      "place": "Anexo II, Ala Senador Alexandre Costa, Plenário nº 19",
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15011",
       "items": [
         {
-          "title": "PL 2114/2024",
-          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990, que dispõe sobre a proteção do consumidor e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2437040",
-          "relator": "Márcio Marinho",
-          "stage": "Parecer do Relator, Dep. Márcio Marinho (REPUBLIC-BA), pela aprovação do PL 2114/2024, com substitutivo."
+          "title": "PRS 50/2026",
+          "summary": "Altera a Resolução do Senado Federal nº 43, de 2001, para excepcionar da vedação à contratação de operações de crédito nos 120 dias anteriores ao término do mandato do Chefe do Poder Executivo as operações de reestruturação e recomposição do principal de dívidas dos Estados, do Distrito Federal e dos Municípios.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175606",
+          "relator": "Senador Eduardo Braga (MDB)",
+          "stage": "Favorável ao projeto."
         },
         {
-          "title": "PL 613/2020",
-          "summary": "Altera a Lei nº 7.565, de 19 de dezembro 1986, a Lei 11.771, de 17 setembro 2008, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2238889",
-          "relator": "Clodoaldo Magalhães",
+          "title": "PL 675/2022",
+          "summary": "Altera a Lei nº 8.212, de 24 de julho de 1991, para dispor sobre a contribuição previdenciária de estudantes bolsistas das entidades federais de ensino e dá outras providências.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/152339",
+          "relator": "Senador Plínio Valério (PSDB)",
+          "stage": "Pela aprovação do Projeto de Lei nº 675, de 2022, com a Emenda nº 2- CE; pela rejeição da Emenda n°1-T e prejudicialidade do Projeto de Lei nº 2849, de 2023."
+        },
+        {
+          "title": "PL 5165/2026",
+          "summary": "Dispõe sobre a Cédula de Serviço (CS).",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175567",
+          "relator": "Senador Eduardo Braga (MDB)",
+          "stage": "Pela aprovação do projeto, com cinco emendas apresentadas."
+        },
+        {
+          "title": "REQ 107/2026 - CAE",
+          "summary": "Requer a realização de audiência pública para instruir a deliberação do Senado Federal sobre a alíquota de referência da CBS para 2027",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176156",
+          "relator": "",
           "stage": ""
         },
         {
-          "title": "PL 248/2021",
-          "summary": "Altera o Decreto 7.962, de 15 de março de 2013, para dispor que todo e qualquer anúncio de hospedagem em Agência de Turismo Online deve exibir o CNPJ do estabelecimento.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2269433",
-          "relator": "Carlos Henrique Gaguim",
-          "stage": "Parecer do Relator, Dep. Carlos Henrique Gaguim (UNIÃO-TO), pela aprovação do PL 248/21, e da Emenda da Comissão de Turismo."
-        },
-        {
-          "title": "PL 1461/2021",
-          "summary": "Altera a Lei nº 9.472, de 16 de julho de 1997, para dispor sobre o direito ao restabelecimento de serviço de telecomunicações suspenso.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2278550",
-          "relator": "Márcio Marinho",
-          "stage": "Parecer do Relator, Dep. Márcio Marinho (REPUBLIC-BA), pela aprovação do PL 1461/21, na forma do Substitutivo adotado pela Comissão de Comunicação."
-        },
-        {
-          "title": "PL 4119/2021",
-          "summary": "Dispõe sobre procedimentos para autorização de débitos em conta de depósitos e em conta-salário.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2307976",
-          "relator": "Gilson Marques",
-          "stage": "Parecer do Relator, Dep. Gilson Marques (NOVO-SC), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 3513/2023",
-          "summary": "Regulamenta a atividade de distribuição e revenda de gás liquefeito de petróleo (GLP), autoriza o envasilhamento dos recipientes transportáveis de terceiros em pontos de reabastecimento e o enchimento fracionado de botijões por agente distribuidor de GLP",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2373720",
-          "relator": "Daniel Almeida",
-          "stage": "Parecer do Relator, Dep. Daniel Almeida (PCdoB-BA), pela rejeição."
-        },
-        {
-          "title": "PL 2393/2024",
-          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990, “que dispõe sobre a proteção do consumidor e dá outras providências”, para incluir, como causa obstativa da decadência, a formalização de reclamação junto a órgão de defesa do consumidor.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2440839",
-          "relator": "Vinicius Carvalho",
-          "stage": "Parecer do Relator, Dep. Vinicius Carvalho (PL-SP), pela aprovação do PL 2393/24, e da Emenda 1/24 da CDC, com substitutivo."
-        },
-        {
-          "title": "PL 4152/2024",
-          "summary": "Regulamenta o transporte aéreo de animais domésticos em território nacional e altera a Lei nº 9.605, de 12 de fevereiro de 1998 (Lei dos Crimes Ambientais).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2465777",
-          "relator": "Aureo Ribeiro",
-          "stage": "Parecer do Relator, Dep. Aureo Ribeiro (SOLIDARI-RJ), pela aprovação."
-        },
-        {
-          "title": "PL 395/2025",
-          "summary": "Altera o art. 6º da Lei nº 8.078, de 11 de setembro de 1990, a fim de incluir no rol de direitos básicos do consumidor a comunicação direta com o fornecedor por meio dos canais de atendimento disponibilizados, inclusive telefônico, sem custos para o consumidor, para fins de informação, reclamação, contestação, suspensão, cancelamento ou devolução de produtos e serviços.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2483701",
-          "relator": "Celso Russomanno",
+          "title": "REQ 109/2026 - CAE",
+          "summary": "Requer realização de audiência pública, com o objetivo de instruir o PL 5165/2026, que “dispõe sobre a Cédula de Serviço (CS)",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176171",
+          "relator": "",
           "stage": ""
         },
         {
-          "title": "PL 446/2025",
-          "summary": "Dispõe sobre a autorização para produção e comercialização de produtos e serviços KOSHER no território nacional e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2483957",
-          "relator": "Duarte Jr.",
-          "stage": "Parecer do Relator, Dep. Duarte Jr. (AVANTE-MA), pela aprovação."
-        },
-        {
-          "title": "PL 1293/2025",
-          "summary": "Altera a Lei nº 11.326, de 24 de julho de 2006, para dispor sobre selo identificador dos alimentos isentos de glúten produzidos pela agricultura familiar.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2490676",
-          "relator": "Nilto Tatto",
-          "stage": "Parecer do Relator, Dep. Nilto Tatto (PT-SP), pela aprovação."
-        },
-        {
-          "title": "PL 1517/2025",
-          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990, para disciplinar o cancelamento de contratos de prestação de serviços celebrados por meio eletrônico.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2494937",
-          "relator": "Gilson Marques",
-          "stage": "Parecer do Relator, Dep. Gilson Marques (NOVO-SC), pela aprovação do PL 1517/25, dos PLs 6647/25 e 535/26, apensados, e da Emenda 1/25, apresentada nesta Comissão, com substitutivo."
-        },
-        {
-          "title": "PL 3569/2025",
-          "summary": "Dispõe sobre a obrigatoriedade da divulgação, por meio da internet, da lista de material escolar pelas instituições de ensino da educação básica.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2538276",
-          "relator": "Julia Zanatta",
+          "title": "REQ 110/2026 - CAE",
+          "summary": "Requer que na Audiência Pública objeto do REQ 107/2026 - CAE seja incluído o convidado: Exmo. Sr. Deputado Federal LUIZ CARLOS HAULY.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176183",
+          "relator": "",
           "stage": ""
         },
         {
-          "title": "PL 71/2026",
-          "summary": "Dispõe sobre a utilização de informações relativas ao Fundo Garantidor de Créditos (FGC) na comunicação comercial de instituições integrantes do Sistema Financeiro Nacional",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2600135",
-          "relator": "Erika Hilton",
-          "stage": "Parecer da Relatora, Dep. Erika Hilton (PSOL-SP), pela aprovação do PL 71/26, e do PL 295/26, apensado, com substitutivo."
+          "title": "REQ 108/2026 - CAE",
+          "summary": "Requer nos termos do art. 58, § 2º, II, da Constituição Federal e do art. 93, II, do Regimento Interno do Senado Federal, a realização de audiência pública, com o objetivo de debater o tema tratado na Medida Provisória nº 1.394,de 2026,",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176159",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 111/2026 - CAE",
+          "summary": "Requer realização de audiência pública para debater a necessidade de redução da Selic.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176186",
+          "relator": "",
+          "stage": ""
         }
       ],
-      "note": "Discussão e votação de propostas legislativas"
+      "note": ""
     },
     {
       "id": "senado-14993",
@@ -1289,47 +2298,6 @@
       "note": ""
     },
     {
-      "id": "senado-15011",
-      "house": "senado",
-      "date": "2026-11-04",
-      "time": "10:00",
-      "title": "Comissão de Assuntos Econômicos — 24ª Reunião Ordinária Semipresencial",
-      "status": "Reaberta",
-      "place": "Anexo II, Ala Senador Alexandre Costa, Plenário nº 19",
-      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15011",
-      "items": [
-        {
-          "title": "PRS 50/2026",
-          "summary": "Altera a Resolução do Senado Federal nº 43, de 2001, para excepcionar da vedação à contratação de operações de crédito nos 120 dias anteriores ao término do mandato do Chefe do Poder Executivo as operações de reestruturação e recomposição do principal de dívidas dos Estados, do Distrito Federal e dos Municípios.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175606",
-          "relator": "Senador Eduardo Braga (MDB)",
-          "stage": "Favorável ao projeto."
-        },
-        {
-          "title": "PL 675/2022",
-          "summary": "Altera a Lei nº 8.212, de 24 de julho de 1991, para dispor sobre a contribuição previdenciária de estudantes bolsistas das entidades federais de ensino e dá outras providências.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/152339",
-          "relator": "Senador Plínio Valério (PSDB)",
-          "stage": "Pela aprovação do Projeto de Lei nº 675, de 2022, com a Emenda nº 2- CE; pela rejeição da Emenda n°1-T e prejudicialidade do Projeto de Lei nº 2849, de 2023."
-        },
-        {
-          "title": "PL 5165/2026",
-          "summary": "Dispõe sobre a Cédula de Serviço (CS).",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175567",
-          "relator": "Senador Eduardo Braga (MDB)",
-          "stage": "Pela aprovação do projeto, com cinco emendas apresentadas."
-        },
-        {
-          "title": "REQ 107/2026 - CAE",
-          "summary": "Requer a realização de audiência pública para instruir a deliberação do Senado Federal sobre a alíquota de referência da CBS para 2027",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176156",
-          "relator": "",
-          "stage": ""
-        }
-      ],
-      "note": ""
-    },
-    {
       "id": "camara-83138",
       "house": "camara",
       "date": "2026-11-04",
@@ -1390,7 +2358,7 @@
       "date": "2026-11-04",
       "time": "10:05",
       "title": "Comissão de Educação — Reunião Deliberativa",
-      "status": "Em Andamento",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 10",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82780",
       "items": [
@@ -1543,7 +2511,7 @@
       "date": "2026-11-04",
       "time": "10:08",
       "title": "Comissão de Meio Ambiente e Desenvolvimento Sustentável — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 12",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83130",
       "items": [
@@ -1707,7 +2675,7 @@
       "date": "2026-11-04",
       "time": "10:11",
       "title": "Comissão de Finanças e Tributação — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 04",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83113",
       "items": [
@@ -1734,6 +2702,13 @@
         },
         {
           "title": "REQ 52/2026 CFT",
+          "summary": "Institui a Contribuição Social sobre Serviços Digitais incidente sobre a receita bruta de serviços digitais prestados pelas grandes empresas de tecnologia (CSSD), destinada ao financiamento de programas de renda básica.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2260638",
+          "relator": "Merlong Solano",
+          "stage": ""
+        },
+        {
+          "title": "REQ 53/2026 CFT",
           "summary": "Institui a Contribuição Social sobre Serviços Digitais incidente sobre a receita bruta de serviços digitais prestados pelas grandes empresas de tecnologia (CSSD), destinada ao financiamento de programas de renda básica.",
           "url": "https://www.camara.leg.br/propostas-legislativas/2260638",
           "relator": "Merlong Solano",
@@ -1818,7 +2793,7 @@
       "date": "2026-11-04",
       "time": "10:11",
       "title": "Comissão de Desenvolvimento Econômico — Audiência Pública",
-      "status": "Em Andamento",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 05",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83121",
       "items": [],
@@ -1830,7 +2805,7 @@
       "date": "2026-11-04",
       "time": "10:13",
       "title": "Comissão de Ciência, Tecnologia e Inovação — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 13",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83134",
       "items": [
@@ -1892,7 +2867,7 @@
       "date": "2026-11-04",
       "time": "10:15",
       "title": "Comissão de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural — Reunião Deliberativa",
-      "status": "Em Andamento",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 06",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82874",
       "items": [
@@ -1982,7 +2957,7 @@
       "date": "2026-11-04",
       "time": "10:24",
       "title": "Comissão de Minas e Energia — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 14",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83118",
       "items": [
@@ -2057,7 +3032,7 @@
       "date": "2026-11-04",
       "time": "10:32",
       "title": "Comissão de Relações Exteriores e de Defesa Nacional — Reunião Deliberativa",
-      "status": "Em Andamento",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 03",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83030",
       "items": [
@@ -2105,7 +3080,7 @@
       "date": "2026-11-04",
       "time": "10:46",
       "title": "Comissão de Meio Ambiente e Desenvolvimento Sustentável — Audiência Pública",
-      "status": "Em Andamento",
+      "status": "Encerrada",
       "place": "Anexo II, Plenário 12",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83137",
       "items": [],
@@ -2117,7 +3092,7 @@
       "date": "2026-11-04",
       "time": "10:51",
       "title": "Comissão de Constituição e Justiça e de Cidadania — Reunião Deliberativa",
-      "status": "Encerrada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 01",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83058",
       "items": [
@@ -2699,24 +3674,12 @@
       "note": "Discussão e votação de propostas legislativas"
     },
     {
-      "id": "camara-83078",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "11:00",
-      "title": "Plenário — Sessão Não Deliberativa Solene",
-      "status": "Convocada",
-      "place": "Plenário da Câmara dos Deputados",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83078",
-      "items": [],
-      "note": "Homenagem a Roberto Santos, Waldir Pires, Milton Santos e Luís Henrique Dias Tavares\r\n Homenagem ao centenário do geógrafo Milton Santos"
-    },
-    {
       "id": "senado-15008",
       "house": "senado",
       "date": "2026-11-04",
       "time": "11:00",
       "title": "Comissão de Direitos Humanos e Legislação Participativa — 72ª Reunião Extraordinária Semipresencial",
-      "status": "Aberta",
+      "status": "Realizada",
       "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 6",
       "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15008",
       "items": [
@@ -2817,33 +3780,42 @@
           "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176035",
           "relator": "",
           "stage": ""
+        },
+        {
+          "title": "PL 1822/2024",
+          "summary": "Altera a Lei nº 11.343, de 23 de agosto de 2006, para dispor sobre a internação de adolescentes usuários ou dependentes de drogas em situação de risco e instituir o acolhimento familiar conjunto em comunidades terapêuticas.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174758",
+          "relator": "Senadora Damares Alves (REPUBLICANOS)",
+          "stage": "Favorável ao projeto."
+        },
+        {
+          "title": "REQ 134/2026 - CDH",
+          "summary": "Requer avaliar os avanços, os desafios e as providências adotadas pelos órgãos públicos responsáveis pela busca, investigação e localização de crianças e adolescentes desaparecidos no Brasil.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176181",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 135/2026 - CDH",
+          "summary": "Requer realização de diligência externa no Estado do Rio de Janeiro, com o objetivo de acompanhar in loco as providências relacionadas ao desaparecimento do menino Edson Davi Silva Almeida, ocorrido em 4 de janeiro de 2024, na Praia da Barra da Tijuca, no Município do Rio de Janeiro.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176187",
+          "relator": "",
+          "stage": ""
         }
       ],
       "note": ""
     },
     {
-      "id": "cmsp-2026-11-04-0",
-      "house": "cmsp",
+      "id": "camara-83078",
+      "house": "camara",
       "date": "2026-11-04",
-      "time": "11:30",
-      "title": "Audiência Pública Semipresencial da Comissão Permanente de Constituição, Justiça e Legislação Participativa",
-      "status": "Prevista",
-      "place": "Salão Nobre (8º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
+      "time": "11:37",
+      "title": "Plenário — Sessão Não Deliberativa Solene",
+      "status": "Encerrada",
+      "place": "Plenário da Câmara dos Deputados",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83078",
       "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-11-04-1",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "11:30",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Finanças e Orçamento",
-      "status": "Prevista",
-      "place": "Auditório Prestes Maia (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
+      "note": "Homenagem a Roberto Santos, Waldir Pires, Milton Santos e Luís Henrique Dias Tavares\r\n Homenagem ao centenário do geógrafo Milton Santos"
     },
     {
       "id": "camara-83131",
@@ -2858,14 +3830,175 @@
       "note": "Discussão e votação de propostas legislativas\r\n A - 11ª Votação de indicações e alterações de beneficiários para emendas da comissão à LOA 2026"
     },
     {
-      "id": "cmsp-2026-11-04-2",
-      "house": "cmsp",
+      "id": "camara-83150",
+      "house": "camara",
       "date": "2026-11-04",
-      "time": "13:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Política Urbana, Metropolitana e Meio Ambiente",
+      "time": "13:30",
+      "title": "Comissão de Turismo — Reunião Deliberativa",
+      "status": "Cancelada",
+      "place": "Anexo II, Plenário 05",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83150",
+      "items": [],
+      "note": "Deliberação das indicações às programações da LOA 2026 oriundas de emendas."
+    },
+    {
+      "id": "alesp-2026-11-04-5",
+      "house": "alesp",
+      "date": "2026-11-04",
+      "time": "14:00",
+      "title": "Reunião da Comissão de Segurança Pública e Assuntos Penitenciários com a finalidade de apreciar pauta com 169 itens.",
       "status": "Prevista",
-      "place": "Auditório Prestes Maia (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
+      "place": "Plenário José Bonifácio",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "camara-83149",
+      "house": "camara",
+      "date": "2026-11-04",
+      "time": "14:00",
+      "title": "Comissão Especial destinada a proferir parecer ao Projeto de Lei Complementar nº 108, de 2021, do Senado Federal, que \"altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir o enquadramento como Microempreendedor Individual (MEI) de pessoa com receita bruta anual igual ou inferior a R$ 130.000,00 (cento e trinta mil reais), bem como para permitir que o MEI contrate até 2 (dois) empregados\" — Reunião Deliberativa",
+      "status": "Cancelada",
+      "place": "Anexo II, Plenário 06",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83149",
+      "items": [
+        {
+          "title": "PLP 108/2021",
+          "summary": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir o enquadramento como Microempreendedor Individual (MEI) de pessoa com receita bruta anual igual ou inferior a                     R$ 130.000,00 (cento e trinta mil reais), bem como para permitir que o MEI contrate até 2 (dois) empregados",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2295251",
+          "relator": "Jorge Goetten",
+          "stage": ""
+        }
+      ],
+      "note": "Discussão e votação do parecer do relator, Dep. Jorge Goetten.\r\n Discussão e votação do Parecer do Relator, Deputado Jorge Goetten."
+    },
+    {
+      "id": "senado-15009",
+      "house": "senado",
+      "date": "2026-11-04",
+      "time": "14:00",
+      "title": "Comissão de Agricultura e Reforma Agrária — 20ª Reunião Extraordinária Semipresencial",
+      "status": "Realizada",
+      "place": "Anexo II, Ala Senador Alexandre Costa, Plenário nº 7",
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15009",
+      "items": [
+        {
+          "title": "PL 810/2020",
+          "summary": "Altera a Lei nº 8.629, de 25 de fevereiro de 1993 (Lei da Reforma Agrária), para prever a adoção de medidas de estímulo e de facilitação da titulação de terras a mulheres trabalhadoras rurais da agricultura familiar no âmbito da reforma agrária e para incluir grupos prioritários no processo de seleção do Programa Nacional de Reforma Agrária.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/159464",
+          "relator": "Senador Wellington Fagundes (PL)",
+          "stage": "Pela aprovação do Projeto na forma da Emenda nº 4-CDH (Substitutivo) e pela rejeição das Emendas nºs 5 e 6."
+        },
+        {
+          "title": "PL 2648/2022",
+          "summary": "Altera a Lei nº 10.438, de 26 de abril de 2002, para criar a Subclasse Rural por Autogestão na classificação de consumidores de energia elétrica.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/154920",
+          "relator": "Senador Beto Faro (PT)",
+          "stage": "Pela aprovação do Projeto."
+        },
+        {
+          "title": "PL 1/2024",
+          "summary": "Altera a Lei nº 11.947, de 16 de junho de 2009, que dispõe sobre o atendimento da alimentação escolar, para estimular o cumprimento de percentual mínimo de aquisição de gêneros alimentícios da agricultura familiar para o Programa Nacional de Alimentação Escolar.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/161856",
+          "relator": "Senadora Professora Dorinha Seabra (UNIÃO)",
+          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta."
+        },
+        {
+          "title": "PL 3002/2024",
+          "summary": "Dispõe sobre a Política Brasileira da Alimentação Escolar, seus fins e mecanismos de formulação e aplicação; institui o Programa Nacional de Alimentação Escolar; altera a Lei n° 9.394, de 20 de dezembro de 1996; revoga os arts. 1º a 21 da Lei nº 11.947, de 16 de junho de 2009; e dá outras providências.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/164817",
+          "relator": "Senador Jaime Bagattoli (PL)",
+          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta e pela rejeição da Emenda nº 2."
+        },
+        {
+          "title": "PL 290/2025",
+          "summary": "Altera a Lei nº 12.651, de 25 de maio de 2012, que dispõe sobre a proteção da vegetação nativa, para incluir novas disposições ao Programa de Regularização Ambiental (PRA) e determinar efeitos suspensivos aos embargos.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/167123",
+          "relator": "Senador Jaime Bagattoli (PL)",
+          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta."
+        },
+        {
+          "title": "PL 5861/2025",
+          "summary": "Altera a Lei nº 9.427, de 26 de dezembro de 1996, para conceder desconto integral nas tarifas de uso dos sistemas elétricos de transmissão e de distribuição para empreendimentos de geração de energia elétrica a partir da biomassa da casca de arroz.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171656",
+          "relator": "Senador Hamilton Mourão (REPUBLICANOS)",
+          "stage": "Pela aprovação do Projeto."
+        },
+        {
+          "title": "PL 1115/2022",
+          "summary": "Institui a Política Nacional de Controle e Erradicação do Mormo e da Anemia Infecciosa Equina (AIE).",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/152938",
+          "relator": "Senadora Eliziane Gama (PSD)",
+          "stage": "Pela aprovação do Projeto."
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "senado-15003",
+      "house": "senado",
+      "date": "2026-11-04",
+      "time": "14:00",
+      "title": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor — 8ª Reunião Extraordinária Semipresencial",
+      "status": "Realizada",
+      "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 6",
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15003",
+      "items": [
+        {
+          "title": "PFS 2/2026",
+          "summary": "Proposta de Fiscalização e Controle com o objetivo de apurar, com o auxílio do Tribunal de Contas da União (TCU), possíveis fraudes estruturadas no pagamento de benefícios previdenciários e na contratação de créditos consignados, especialmente no que se refere a eventuais esquemas de desvio de recursos, concessões irregulares, manipulação de cadastros, intermediação indevida junto a órgãos da administração pública federal e movimentações financeiras atípicas associadas a operadores privados eventualmente vinculados ao esquema.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174116",
+          "relator": "Senador Eduardo Girão (NOVO)",
+          "stage": "Pela admissibilidade e aprovação da matéria com o plano de execução e a metodologia de avaliação apresentados"
+        },
+        {
+          "title": "PL 3221/2021",
+          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990, para vedar as ligações telefônicas excessivas ao consumidor inadimplente.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/149871",
+          "relator": "Senador Dr. Hiran (PP)",
+          "stage": "Pela aprovação do projeto, pela rejeição das emendas 1 e 2 e pela aprovação da emenda 3, nos termos do substitutivo"
+        },
+        {
+          "title": "PL 805/2024",
+          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para coibir a chamada “obsolescência programada” e regular o direito ao reparo.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/162652",
+          "relator": "Senador Dr. Hiran (PP)",
+          "stage": "Pela aprovação com as 4 emendas apresentadas na CCT"
+        },
+        {
+          "title": "REQ 34/2026 - CTFC",
+          "summary": "Requer, nos termos do art. 58, § 2º, II, da Constituição Federal e do art. 93, II, do Regimento Interno do Senado Federal, a realização de audiência pública, em conjunto com a Comissão de Assuntos Sociais, com o objetivo de debater sobre a crescente precarização do trabalho médico no Brasil.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174983",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 35/2026 - CTFC",
+          "summary": "Nos termos do art. 71, inciso IV, da Constituição Federal, combinado com o art. 90, inciso X, do Regimento Interno do Senado Federal, requer que seja solicitado, ao Tribunal de Contas da União, a realização de auditoria operacional e de conformidade no Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis - IBAMA, destinada a avaliar se a autarquia vem exercendo de forma adequada a supervisão e o controle da competência federal delegada à Secretaria de Meio Ambiente e Recursos Hídricos do Estado do Piauí - SEMARH/PI por meio do Acordo de Cooperação Técnica nº 30/2025, especificamente no licenciamento ambiental do Terminal de Uso Privado de Luís Correia, conhecido como Porto Piauí.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175539",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PFS 1/2026",
+          "summary": "Proposta de Fiscalização e Controle com o objetivo de apurar, com o auxílio do Tribunal de Contas da União, possíveis irregularidades na decretação da liquidação do Banco Master e em atos prévios e conexos determinantes para sua ocorrência, inclusive de eventuais omissões de responsabilidade de agentes da Administração Pública, direta ou indireta - em especial de dirigentes do Banco Central do Brasil e da Comissão de Valores Mobiliários - e de administradores de instituições financeiras controladas pelo Poder Público, de qualquer nível, e de fundos de previdência, públicos ou privados.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172787",
+          "relator": "Senadora Damares Alves (REPUBLICANOS)",
+          "stage": "Pela admissibilidade e aprovação da proposta de fiscalização e controle"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "alesp-2026-11-04-6",
+      "house": "alesp",
+      "date": "2026-11-04",
+      "time": "14:01",
+      "title": "164ª Sessão Ordinária - Expediente",
+      "status": "Prevista",
+      "place": "Plenário Juscelino Kubitschek",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
       "items": [],
       "note": ""
     },
@@ -2873,9 +4006,9 @@
       "id": "camara-83152",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "13:29",
+      "time": "14:04",
       "title": "Comissão de Cultura — Reunião Deliberativa",
-      "status": "Convocada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 10",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83152",
       "items": [],
@@ -2885,9 +4018,9 @@
       "id": "camara-83123",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "13:30",
+      "time": "14:10",
       "title": "Comissão de Cultura — Reunião Deliberativa",
-      "status": "Convocada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 10",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83123",
       "items": [
@@ -3011,27 +4144,210 @@
           "stage": "Parecer do Relator, Dep. Diego Garcia (UNIÃO-PR), pela aprovação, com emenda."
         }
       ],
-      "note": "Discussão e votação de propostas legislativas\r\n (PAUTA SUJEITA À ALTERAÇÃO)"
+      "note": "Discussão e votação de propostas legislativas"
     },
     {
-      "id": "camara-83150",
+      "id": "camara-83124",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "13:30",
-      "title": "Comissão de Turismo — Reunião Deliberativa",
-      "status": "Cancelada",
-      "place": "Anexo II, Plenário 05",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83150",
+      "time": "14:10",
+      "title": "Comissão de Minas e Energia / Comissão de Desenvolvimento Econômico — Audiência Pública",
+      "status": "Encerrada",
+      "place": "Anexo II, Plenário 11",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83124",
       "items": [],
-      "note": "Deliberação das indicações às programações da LOA 2026 oriundas de emendas."
+      "note": "Debate sobre o PL 5802/25, que institui instrumentos transitórios para a desconcentração da oferta no mercado brasileiro de gás natural, estabelece o GEGÁS e autoriza à ANP a aplicação de recursos\r\n Requerimentos nºs 67/2026-CME e 41/2026-CDE,  do Deputado Arnaldo Jardim.\r\n\r\nCONVIDADOS:\r\n\r\n1.Marcello Gomes Weydt, Diretor do Departamento de Gás Natural da Secretaria Nacional de Petróleo, Gás Natural e Biocombustíveis do Ministério de Minas e Energia - MME; (CONFIRMADO)\r\n\r\n2. Uallace Moreira Lima , Secretário de Desenvolvimento Industrial, Inovação, Comércio e Serviços do Ministério de Desenvolvimento, Indústria, Comércio e Serviços - MDIC; (CONFIRMADO)\r\n\r\n3. Artur Watt, Diretor-Geral da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis - ANP; (CONFIRMADO)\r\n\r\n4. Rennaly Patricio Sousa, Especialista em Políticas e Indústria da Confederação Nacional da Indústria - CNI (CONFIRMADA);\n\r\n\r\n5. Álvaro Ferreira Tupiassu,  Gerente Executivo de Gás e Energia da Petrobras;\n (CONFIRMADO)\r\n\r\n6. Rogério Manso, Presidente Executivo da  \nAssociação de Empresas de Transporte de Gás Natural por Gasoduto - ATGás; (CONFIRMADO)\r\n\r\n7. Alberto Cotrim, Superintendente de Relações Institucionais do Instituto Aço Brasil; (CONFIRMADO)\r\n\r\n8. Rogério Cauby, Conselheiro Executivo do Movimento Brasil Competitivo - MBC; (CONFIRMADO)\r\n\r\n9. Ticiana Alvares, Diretora Técnica do Instituto de Estudos Estratégicos de Petróleo, Gás Natural e Biocombustíveis - INEEP; (CONFIRMADA)\r\n\r\n10. Fernando Montera, Gerente Executivo de Regulação e Transporte de Gás Natural do Instituto Brasileiro de Petróleo e Gás- IBP;  (CONFIRMADO)\r\n\r\n11. Fernanda Fiorentini Costa, Advogada da Associação Brasileira das Indústrias de Vidro - ABIVIDRO; (CONFIRMADA)\r\n\r\n12. Sylvie D´Apote, Conselheira Técnica do Instituto de Petróleo, Gás e Energia - IPEGEN; (CONFIRMADA)\r\n\r\n13. Rodrigo Araújo, Diretor da Federação Única dos Petroleiros - FUP\n;  (CONFIRMADO)\r\n\r\n14.  Gustavo José Simões, Diretor da Associação de Engenheiros da Petrobrás - AEPET; (CONFIRMADO)\r\n\r\n15. Helder Queiroz, Professor de Economia da Energia do Instituto de Economia da Universidade Federal do Rio de Janeiro - UFRJ.\r\n\r\n16. Paulo Pedrosa, Presidente da Associação dos Grandes Consumidores Industriais de Energia e Consumidores Livres - ABRACE. (CONFIRMADO)"
+    },
+    {
+      "id": "camara-83122",
+      "house": "camara",
+      "date": "2026-11-04",
+      "time": "14:13",
+      "title": "Comissão de Direitos Humanos, Minorias e Igualdade Racial — Reunião Deliberativa",
+      "status": "Encerrada",
+      "place": "Anexo II, Plenário 09",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83122",
+      "items": [
+        {
+          "title": "PL 8032/2014",
+          "summary": "Amplia a proteção de que trata a Lei 11.340, de 7 de agosto de 2006 - Lei Maria da Penha - às pessoas transexuais e transgêneros.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/623761",
+          "relator": "Daiana Santos",
+          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, do PL 842/2022, do PL 993/2022, do PL 994/2022, e do PL 1058/2023, apensados, com substitutivo."
+        },
+        {
+          "title": "PL 2943/2021",
+          "summary": "Proíbe o recebimento de recursos públicos por emissoras de TV e rádio que veiculem programas que promovam a homofobia, por um período de 10 anos.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2295992",
+          "relator": "Natália Bonavides",
+          "stage": "Parecer da Relatora, Dep. Natália Bonavides (PT-RN), pela aprovação deste e do PL 59/2024, apensado, na forma do substitutivo."
+        },
+        {
+          "title": "PL 2017/2022",
+          "summary": "Altera a Lei nº 8.906, de 4 de julho de 1994, que “Dispõe sobre o Estatuto da Advocacia e a Ordem dos Advogados do Brasil (OAB)”.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2332462",
+          "relator": "Alice Portugal",
+          "stage": "Parecer da Relatora, Dep. Alice Portugal (PCdoB-BA), pela aprovação deste, com substitutivo, e pela rejeição da Emenda 1/2026 da CDHMIR."
+        },
+        {
+          "title": "PL 3278/2023",
+          "summary": "Dispõe sobre a criação do Dia Nacional da Visibilidade Lésbica.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2371631",
+          "relator": "Natália Bonavides",
+          "stage": ""
+        },
+        {
+          "title": "PL 5275/2023",
+          "summary": "Estabelece o sexo biológico como critério único de definição de  \"sexo\" para fins de definição, coordenação e execução de políticas públicas, altera o art. 38 da lei 14.600, de 19 de junho de 2023, e estabelece outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2400132",
+          "relator": "Erika Hilton",
+          "stage": "Parecer da Relatora, Dep. Erika Hilton (PSOL-SP), pela rejeição deste, e do PL 1173/2026, apensado."
+        },
+        {
+          "title": "PL 1316/2024",
+          "summary": "Estabelece a criação da 'Casa de Acolhimento e Diversidade' destinada ao atendimento e acolhimento humanizado do público LGBTQIA+ em situação de violência e vulnerabilidade social; define estrutura e serviços\na serem oferecidos; prevê fontes de financiamento; e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2427811",
+          "relator": "Daiana Santos",
+          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação na forma do substitutivo."
+        },
+        {
+          "title": "PL 3307/2024",
+          "summary": "Institui a Política Nacional de Capacitação e Formação Continuada de Profissionais de Saúde Pública no Atendimento a Mulheres Lésbicas e Bissexuais no Sistema Único de Saúde.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2455018",
+          "relator": "Tarcísio Motta",
+          "stage": "Parecer do Relator, Dep. Tarcísio Motta (PSOL-RJ), pela aprovação."
+        },
+        {
+          "title": "PL 3389/2024",
+          "summary": "Estabelece o dia 13 de abril como o \"Dia Nacional de Enfrentamento ao Lesbocídio – Lei Luana Barbosa\" e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2456114",
+          "relator": "Daiana Santos",
+          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, na forma do substitutivo."
+        },
+        {
+          "title": "PL 3389/2024",
+          "summary": "Estabelece o dia 13 de abril como o \"Dia Nacional de Enfrentamento ao Lesbocídio – Lei Luana Barbosa\" e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2456114",
+          "relator": "Daiana Santos",
+          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, na forma do substitutivo."
+        },
+        {
+          "title": "PL 3914/2024",
+          "summary": "Veda a reserva de vagas específicas para pessoas “transgênero” em instituições de ensino superior públicas e privadas, bem como em concursos públicos para ingresso no serviço público federal, estadual e municipal.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2462126",
+          "relator": "Erika Hilton",
+          "stage": "Parecer da Relatora, Dep. Erika Hilton (PSOL-SP), pela rejeição."
+        },
+        {
+          "title": "PL 130/2025",
+          "summary": "Institui a Política Nacional de Saúde Mental para Pessoas Trans e Travestis e autoriza a criação de ambulatórios de atendimento multidisciplinar para pessoas trans e travestis em todas as capitais brasileiras.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2482470",
+          "relator": "Daiana Santos",
+          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, na forma do substitutivo."
+        },
+        {
+          "title": "PL 827/2025",
+          "summary": "Institui o dia 15 de fevereiro como Dia Nacional do Enfrentamento ao Transfeminicídio, in memoriam à travesti Dandara dos Santos, e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2486213",
+          "relator": "Talíria Petrone",
+          "stage": "Parecer da Relatora, Dep. Talíria Petrone (PSOL-RJ), pela aprovação do PL 827/2025, na forma do substitutivo."
+        }
+      ],
+      "note": "Discussão e votação de propostas legislativas"
+    },
+    {
+      "id": "camara-83120",
+      "house": "camara",
+      "date": "2026-11-04",
+      "time": "14:20",
+      "title": "Comissão de Previdência, Assistência Social, Infância, Adolescência e Família — Reunião Deliberativa",
+      "status": "Encerrada (Final)",
+      "place": "Anexo II, Plenário 07",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83120",
+      "items": [
+        {
+          "title": "PL 2373/2023",
+          "summary": "Dispõe sobre a Violência Obstétrica e Ginecológica na assistência à saúde da mulher no âmbito dos serviços públicos e privados de saúde.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2360347",
+          "relator": "Rogéria Santos",
+          "stage": "Parecer da Relatora, Dep. Rogéria Santos (REPUBLIC-BA), pela aprovação do PL 2373/23 e do PL 6204/25, apensado, com substitutivo."
+        },
+        {
+          "title": "PL 2965/2021",
+          "summary": "Altera a Lei nº 9.656, de 3 de junho de 1998, para equiparar a filho do consumidor titular de plano privado de assistência à saúde seu enteado, bem como a criança ou o adolescente que seja por ele tutelado ou que, por determinação judicial, esteja sob sua guarda; e altera a Lei nº 8.213, de 24 de julho de 1991, para promover equiparação análoga em relação a filho do segurado do Regime Geral de Previdência Social (RGPS).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2354262",
+          "relator": "Laura Carneiro",
+          "stage": "Parecer da Relatora, Dep. Laura Carneiro (PSD-RJ), pela aprovação, com substitutivo."
+        },
+        {
+          "title": "PL 842/2020",
+          "summary": "Altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), e a Lei no 6.015, de 31 de dezembro de 1973 (Lei de Registros Públicos), para dispor sobre a averbação da exclusão, no registro civil, da filiação, bem como do sobrenome do genitor (a) que for condenado por crime de violência sexual, lesão corporal de natureza grave ou gravíssima ou de tortura cometidos contra seu filho (a).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2241736",
+          "relator": "Daniela do Waguinho",
+          "stage": ""
+        },
+        {
+          "title": "PL 4567/2024",
+          "summary": "Inclui na Lei nº 12.933, de 26 de dezembro de 2023, que “dispõe sobre o benefício do pagamento de meia-entrada para estudantes, idosos, pessoas com deficiência e jovens de 15 a 29 anos comprovadamente carentes em espetáculos artístico-culturais e esportivos”, gratuidade para crianças menores de três anos.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2472801",
+          "relator": "Nely Aquino",
+          "stage": "Parecer da Relatora, Dep. Nely Aquino (PODE-MG), pela aprovação."
+        },
+        {
+          "title": "PL 4593/2024",
+          "summary": "Altera a Lei nº 6.015, de 31 de dezembro de 1973, Lei dos Registros Públicos, dispondo sobre a obrigatoriedade da comunicação de registro de nascimento sem identificação de paternidade à Defensoria Pública, ao Ministério Público e ao Conselho Tutelar.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2473157",
+          "relator": "Meire Serafim",
+          "stage": "Parecer da Relatora, Dep. Meire Serafim (UNIÃO-AC), pela aprovação, com substitutivo."
+        },
+        {
+          "title": "PL 3597/2025",
+          "summary": "Dispõe sobre diretrizes nacionais para a atuação dos Conselhos Tutelares nos casos de violência sexual contra crianças e adolescentes associada à fome ou extrema vulnerabilidade social.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2538305",
+          "relator": "Flávia Morais",
+          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com substitutivo."
+        },
+        {
+          "title": "PL 128/2026",
+          "summary": "Altera a da Lei nº \t13.756, de 12 de dezembro de 2018, para destinar percentual do produto da arrecadação dos operadores da loteria de apostas de quota fixa para o Fundo Nacional de Assistência Social - FNAS.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2600299",
+          "relator": "Flávia Morais",
+          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com emendas."
+        }
+      ],
+      "note": "Discussão e votação de propostas legislativas\r\n Deliberação das Indicações de Beneficiários às programações da LOA - Emendas da Comissão RP-8"
+    },
+    {
+      "id": "senado-15014",
+      "house": "senado",
+      "date": "2026-11-04",
+      "time": "14:30",
+      "title": "Comissão Mista da Medida Provisória n° 1379, de 2026 — 1ª Reunião Semipresencial",
+      "status": "Realizada",
+      "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 2",
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15014",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "camara-83146",
+      "house": "camara",
+      "date": "2026-11-04",
+      "time": "14:42",
+      "title": "Comissão Externa de Prevenção e Enfrentamento da Violência Sexual Infantojuvenil — Audiência Pública e Deliberação",
+      "status": "Encerrada",
+      "place": "Anexo II, Plenário 08",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83146",
+      "items": [],
+      "note": "Audiência pública e votação de requerimentos\r\n Tema: Plataformas digitais de compartilhamento de vídeos de conteúdo sexual envolvendo crianças e adolescentes, e debater a necessidade de aprimoramento legislativo para a apuração.\r\n\r\nConvidados:\r\n\r\n1) ANDREA HOFFMANN FORMIGA (Confirmada)\r\n   Presidente-Executiva\r\n   Instituto Isabel\r\n\r\n2) FABRÍCIO GUIMARÃES MADRUGA LOPES (Confirmado)\r\n   Superintendente de Fiscalização\r\n   Agência Nacional de Proteção de Dados - ANPD\r\n\r\n3) LAÍS JORDY SANT'ANNA SOARES DE MATTOS (Confirmada)\r\n   Advogada e Influencer Digital\r\n\r\n(Requerimento nº 24/2026, do Dep. Fernando Rodolfo)\r\n(Requerimento nº 26/2026, do Dep. Fernando Rodolfo)"
     },
     {
       "id": "camara-83159",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "13:55",
+      "time": "14:44",
       "title": "Plenário — Sessão Deliberativa",
-      "status": "Convocada",
+      "status": "Encerrada",
       "place": "Plenário da Câmara dos Deputados",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83159",
       "items": [
@@ -3078,6 +4394,20 @@
           "stage": ""
         },
         {
+          "title": "PL 3220/2019",
+          "summary": "Dispõe sobre o compartilhamento de infraestrutura física aérea de titularidade de prestadoras de serviços de distribuição de energia elétrica com prestadoras de serviços de telecomunicações, altera a Lei nº 9.427, de 26 de dezembro de 1996, a Lei nº 9.472, de 16 de julho de 1997, e a Lei nº 14.947, de 2 de agosto de 2024, e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2617269",
+          "relator": "Juscelino Filho",
+          "stage": ""
+        },
+        {
+          "title": "PL 3220/2019",
+          "summary": "Dispõe sobre o compartilhamento de infraestrutura física aérea de titularidade de prestadoras de serviços de distribuição de energia elétrica com prestadoras de serviços de telecomunicações, altera a Lei nº 9.427, de 26 de dezembro de 1996, a Lei nº 9.472, de 16 de julho de 1997, e a Lei nº 14.947, de 2 de agosto de 2024, e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2617269",
+          "relator": "Juscelino Filho",
+          "stage": ""
+        },
+        {
           "title": "PL 79/2020",
           "summary": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
           "url": "https://www.camara.leg.br/propostas-legislativas/2596596",
@@ -3113,6 +4443,13 @@
           "stage": ""
         },
         {
+          "title": "PL 5902/2023",
+          "summary": "Altera o Decreto-Lei nº 2848, de 07 de dezembro de 1940 – Código Penal, para dispor sobre o uso de drones no espaço aéreo dos presídios.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2410357",
+          "relator": "Nikolas Ferreira",
+          "stage": ""
+        },
+        {
           "title": "PL 2475/2025",
           "summary": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
           "url": "https://www.camara.leg.br/propostas-legislativas/2515534",
@@ -3127,10 +4464,24 @@
           "stage": ""
         },
         {
+          "title": "PL 3220/2025",
+          "summary": "Institui o Dia Nacional da Consolidação da Independência do Brasil.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2531613",
+          "relator": "Lídice da Mata",
+          "stage": ""
+        },
+        {
           "title": "PL 4159/2025",
           "summary": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
           "url": "https://www.camara.leg.br/propostas-legislativas/2551091",
           "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5815/2025",
+          "summary": "Institui e cria o Programa Nacional de Acompanhamento Anual Pediátrico/Médico e Emocional/Psicossocial da Infância e Adolescência - PNAPE, com o objetivo de colocar crianças e adolescentes, os filhos da sociedade brasileira, a salvo das mais  diversas forma de transtorno mental, negligência, discriminação, exploração, violência, automutilação, crueldade, opressão, tráfico humano e especialmente prevenindo abuso e exploração sexual (Lei Augusto Cury). A partir da Lei Augusto Cury o Estado brasileiro não será apenas o  responsável teórico pelo desenvolvimento saudável dos seus filhos, mas acompanhará anualmente este desenvolvimento! Os predadores sexuais, em destaque, saberão que o Estado Brasileiro estará de olho em suas crianças e adolescentes através de escuta ativa e periódica.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2584437",
+          "relator": "Waldemar Oliveira",
           "stage": ""
         },
         {
@@ -3165,25 +4516,13 @@
       "note": "Sessão Deliberativa Extraordinária Semipresencial (AM nº 123/2020)"
     },
     {
-      "id": "alesp-2026-11-04-3",
+      "id": "alesp-2026-11-04-8",
       "house": "alesp",
       "date": "2026-11-04",
-      "time": "14:00",
-      "title": "164ª Sessão Ordinária - Expediente",
+      "time": "15:00",
+      "title": "Reunião da Comissão de Constituição, Justiça e Redação com a finalidade de apreciar pauta com 108 itens.",
       "status": "Prevista",
-      "place": "Plenário Juscelino Kubitschek",
-      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "alesp-2026-11-04-6",
-      "house": "alesp",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Reunião da Comissão de Segurança Pública e Assuntos Penitenciários com a finalidade de apreciar pauta com 169 itens.",
-      "status": "Prevista",
-      "place": "Plenário José Bonifácio",
+      "place": "Plenário Dom Pedro I",
       "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
       "items": [],
       "note": ""
@@ -3192,9 +4531,9 @@
       "id": "camara-82674",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "14:00",
+      "time": "15:00",
       "title": "Comissão de Defesa dos Direitos da Mulher — Reunião Deliberativa",
-      "status": "Convocada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 14",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82674",
       "items": [
@@ -3328,398 +4667,24 @@
       "note": "Discussão e votação de propostas legislativas"
     },
     {
-      "id": "camara-83052",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Legislação Participativa — Reunião Deliberativa",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 03",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83052",
-      "items": [],
-      "note": "Discussão e votação de propostas legislativas"
-    },
-    {
-      "id": "camara-83120",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Previdência, Assistência Social, Infância, Adolescência e Família — Reunião Deliberativa",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 07",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83120",
-      "items": [
-        {
-          "title": "PL 2373/2023",
-          "summary": "Dispõe sobre a Violência Obstétrica e Ginecológica na assistência à saúde da mulher no âmbito dos serviços públicos e privados de saúde.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2360347",
-          "relator": "Rogéria Santos",
-          "stage": "Parecer da Relatora, Dep. Rogéria Santos (REPUBLIC-BA), pela aprovação do PL 2373/23 e do PL 6204/25, apensado, com substitutivo."
-        },
-        {
-          "title": "PL 2965/2021",
-          "summary": "Altera a Lei nº 9.656, de 3 de junho de 1998, para equiparar a filho do consumidor titular de plano privado de assistência à saúde seu enteado, bem como a criança ou o adolescente que seja por ele tutelado ou que, por determinação judicial, esteja sob sua guarda; e altera a Lei nº 8.213, de 24 de julho de 1991, para promover equiparação análoga em relação a filho do segurado do Regime Geral de Previdência Social (RGPS).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2354262",
-          "relator": "Laura Carneiro",
-          "stage": "Parecer da Relatora, Dep. Laura Carneiro (PSD-RJ), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 842/2020",
-          "summary": "Altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), e a Lei no 6.015, de 31 de dezembro de 1973 (Lei de Registros Públicos), para dispor sobre a averbação da exclusão, no registro civil, da filiação, bem como do sobrenome do genitor (a) que for condenado por crime de violência sexual, lesão corporal de natureza grave ou gravíssima ou de tortura cometidos contra seu filho (a).",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2241736",
-          "relator": "Daniela do Waguinho",
-          "stage": ""
-        },
-        {
-          "title": "PL 4567/2024",
-          "summary": "Inclui na Lei nº 12.933, de 26 de dezembro de 2023, que “dispõe sobre o benefício do pagamento de meia-entrada para estudantes, idosos, pessoas com deficiência e jovens de 15 a 29 anos comprovadamente carentes em espetáculos artístico-culturais e esportivos”, gratuidade para crianças menores de três anos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2472801",
-          "relator": "Nely Aquino",
-          "stage": "Parecer da Relatora, Dep. Nely Aquino (PODE-MG), pela aprovação."
-        },
-        {
-          "title": "PL 4593/2024",
-          "summary": "Altera a Lei nº 6.015, de 31 de dezembro de 1973, Lei dos Registros Públicos, dispondo sobre a obrigatoriedade da comunicação de registro de nascimento sem identificação de paternidade à Defensoria Pública, ao Ministério Público e ao Conselho Tutelar.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2473157",
-          "relator": "Meire Serafim",
-          "stage": "Parecer da Relatora, Dep. Meire Serafim (UNIÃO-AC), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 3597/2025",
-          "summary": "Dispõe sobre diretrizes nacionais para a atuação dos Conselhos Tutelares nos casos de violência sexual contra crianças e adolescentes associada à fome ou extrema vulnerabilidade social.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2538305",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com substitutivo."
-        },
-        {
-          "title": "PL 128/2026",
-          "summary": "Altera a da Lei nº \t13.756, de 12 de dezembro de 2018, para destinar percentual do produto da arrecadação dos operadores da loteria de apostas de quota fixa para o Fundo Nacional de Assistência Social - FNAS.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2600299",
-          "relator": "Flávia Morais",
-          "stage": "Parecer da Relatora, Dep. Flávia Morais (MDB-GO), pela aprovação, com emendas."
-        }
-      ],
-      "note": "Discussão e votação de propostas legislativas\r\n Deliberação das Indicações de Beneficiários às programações da LOA - Emendas da Comissão RP-8"
-    },
-    {
-      "id": "camara-83122",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Direitos Humanos, Minorias e Igualdade Racial — Reunião Deliberativa",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 09",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83122",
-      "items": [
-        {
-          "title": "PL 8032/2014",
-          "summary": "Amplia a proteção de que trata a Lei 11.340, de 7 de agosto de 2006 - Lei Maria da Penha - às pessoas transexuais e transgêneros.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/623761",
-          "relator": "Daiana Santos",
-          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, do PL 842/2022, do PL 993/2022, do PL 994/2022, e do PL 1058/2023, apensados, com substitutivo."
-        },
-        {
-          "title": "PL 2943/2021",
-          "summary": "Proíbe o recebimento de recursos públicos por emissoras de TV e rádio que veiculem programas que promovam a homofobia, por um período de 10 anos.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2295992",
-          "relator": "Natália Bonavides",
-          "stage": "Parecer da Relatora, Dep. Natália Bonavides (PT-RN), pela aprovação deste e do PL 59/2024, apensado, na forma do substitutivo."
-        },
-        {
-          "title": "PL 2017/2022",
-          "summary": "Altera a Lei nº 8.906, de 4 de julho de 1994, que “Dispõe sobre o Estatuto da Advocacia e a Ordem dos Advogados do Brasil (OAB)”.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2332462",
-          "relator": "Alice Portugal",
-          "stage": "Parecer da Relatora, Dep. Alice Portugal (PCdoB-BA), pela aprovação deste, com substitutivo, e pela rejeição da Emenda 1/2026 da CDHMIR."
-        },
-        {
-          "title": "PL 3278/2023",
-          "summary": "Dispõe sobre a criação do Dia Nacional da Visibilidade Lésbica.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2371631",
-          "relator": "Natália Bonavides",
-          "stage": ""
-        },
-        {
-          "title": "PL 5275/2023",
-          "summary": "Estabelece o sexo biológico como critério único de definição de  \"sexo\" para fins de definição, coordenação e execução de políticas públicas, altera o art. 38 da lei 14.600, de 19 de junho de 2023, e estabelece outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2400132",
-          "relator": "Erika Hilton",
-          "stage": "Parecer da Relatora, Dep. Erika Hilton (PSOL-SP), pela rejeição deste, e do PL 1173/2026, apensado."
-        },
-        {
-          "title": "PL 1316/2024",
-          "summary": "Estabelece a criação da 'Casa de Acolhimento e Diversidade' destinada ao atendimento e acolhimento humanizado do público LGBTQIA+ em situação de violência e vulnerabilidade social; define estrutura e serviços\na serem oferecidos; prevê fontes de financiamento; e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2427811",
-          "relator": "Daiana Santos",
-          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação na forma do substitutivo."
-        },
-        {
-          "title": "PL 3307/2024",
-          "summary": "Institui a Política Nacional de Capacitação e Formação Continuada de Profissionais de Saúde Pública no Atendimento a Mulheres Lésbicas e Bissexuais no Sistema Único de Saúde.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2455018",
-          "relator": "Tarcísio Motta",
-          "stage": "Parecer do Relator, Dep. Tarcísio Motta (PSOL-RJ), pela aprovação."
-        },
-        {
-          "title": "PL 3389/2024",
-          "summary": "Estabelece o dia 13 de abril como o \"Dia Nacional de Enfrentamento ao Lesbocídio – Lei Luana Barbosa\" e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2456114",
-          "relator": "Daiana Santos",
-          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, na forma do substitutivo."
-        },
-        {
-          "title": "PL 3914/2024",
-          "summary": "Veda a reserva de vagas específicas para pessoas “transgênero” em instituições de ensino superior públicas e privadas, bem como em concursos públicos para ingresso no serviço público federal, estadual e municipal.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2462126",
-          "relator": "Erika Hilton",
-          "stage": "Parecer da Relatora, Dep. Erika Hilton (PSOL-SP), pela rejeição."
-        },
-        {
-          "title": "PL 130/2025",
-          "summary": "Institui a Política Nacional de Saúde Mental para Pessoas Trans e Travestis e autoriza a criação de ambulatórios de atendimento multidisciplinar para pessoas trans e travestis em todas as capitais brasileiras.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2482470",
-          "relator": "Daiana Santos",
-          "stage": "Parecer da Relatora, Dep. Daiana Santos (PCdoB-RS), pela aprovação deste, na forma do substitutivo."
-        },
-        {
-          "title": "PL 827/2025",
-          "summary": "Institui o dia 15 de fevereiro como Dia Nacional do Enfrentamento ao Transfeminicídio, in memoriam à travesti Dandara dos Santos, e dá outras providências.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2486213",
-          "relator": "Talíria Petrone",
-          "stage": "Parecer da Relatora, Dep. Talíria Petrone (PSOL-RJ), pela aprovação do PL 827/2025, na forma do substitutivo."
-        }
-      ],
-      "note": "Discussão e votação de propostas legislativas"
-    },
-    {
-      "id": "camara-83124",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Minas e Energia / Comissão de Desenvolvimento Econômico — Audiência Pública",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 11",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83124",
-      "items": [],
-      "note": "Debate sobre o PL 5802/25 que institui instrumentos transitórios para a desconcentração da oferta no mercado brasileiro de gás natural, estabelece o GEGÁS e autoriza à ANP a aplicação de recursos\r\n Requerimentos nºs 67/2026-CME e 41/2026-CDE,  do Deputado Arnaldo Jardim.\r\n\r\n\r\nCONVIDADOS:\r\n\r\n1.Marcello Gomes Weydt, Diretor do Departamento de Gás Natural, da Secretaria Nacional de Petróleo, Gás Natural e Biocombustíveis  do Ministério de Minas e Energia - MME;\r\n\n (CONFIRMADO)\r\n\r\n2. Uallace Moreira Lima , Secretário de Desenvolvimento Industrial, Inovação, Comércio e Serviços do Ministério de Desenvolvimento, Indústria, Comércio e Serviços - MDIC; \r\n\n(CONFIRMADO)\r\n\r\n3. Artur Watt, Diretor-Geral da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis - ANP\n; (CONFIRMADO)\r\n\r\n4. Rennaly Patricio Sousa, especialista em Políticas e Indústria da Confederação Nacional da Indústria - CNI (CONFIRMADA);\n\r\n\r\n5. Álvaro Ferreira Tupiassu,  Gerente Executivo de Gás e Energia da Petrobras;\n (CONFIRMADO)\r\n\r\n6. Rogério Manso, Presidente Executivo da  \nAssociação de Empresas de Transporte de Gás Natural por Gasoduto - ATGás; (CONFIRMADO)\r\n\r\n7. Alberto Cotrim, Superintendente de Relações Institucionaise do Instituto Aço Brasil;\r\n\n (CONFIRMADO)\r\n\r\n8. Rogério Cauby, Conselheiro Executivo do Movimento Brasil Competitivo - MBC; (CONFIRMADO)\r\n\r\n9. Ticiana Alvares, Diretora Técnica do Instituto de Estudos Estratégicos de Petróleo, Gás Natural e Biocombustíveis - INEEP; (CONFIRMADA)\r\n\r\n10. Fernando Montera, Gerente Executivo de Regulação e Transporte de Gás Natural do Instituto Brasileiro de Petróleo e Gás- IBP;  (CONFIRMADO)\r\n\r\n11. Representante da Associação Brasileira das Indústrias de Vidro - ABIVIDRO; (CONFIRMADA)\r\n\r\n12. Sylvie D´Apote, Representante do Instituto de Petróleo, Gás e Energia - IPEGEN; (CONFIRMADA)\r\n\r\n13. Rodrigo Araújo, Diretor da Federação Única dos Petroleiros - FUP\n;  (CONFIRMADO)\r\n\r\n14.  Gustavo José Simões, Diretor da Associação de Engenheiros da Petrobrás - AEPET; (CONFIRMADO)\r\n\r\n15. Helder Queiroz, Professor de Economia da Energia do Instituto de Economia da Universidade Federal do Rio de Janiero - UFRJ. (CONFIRMADO)\r\n\r\n16. Paulo Pedrosa, Presidente da Associação dos Grandes Consumidores Industriais de Energia e Consumidores Livres - ABRACE."
-    },
-    {
-      "id": "camara-83146",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão Externa de Prevenção e Enfrentamento da Violência Sexual Infantojuvenil — Audiência Pública e Deliberação",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 08",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83146",
-      "items": [],
-      "note": "Audiência pública e votação de requerimentos\r\n Tema: Plataformas digitais de compartilhamento de vídeos de conteúdo sexual envolvendo crianças e adolescentes, e debater a necessidade de aprimoramento legislativo para a apuração.\r\n\r\nConvidados:\r\n\r\n1) ANDREA HOFFMANN FORMIGA (Confirmada)\r\n   Presidente-Executiva\r\n   Instituto Isabel\r\n\r\n2) FABRÍCIO GUIMARÃES MADRUGA LOPES (Confirmado)\r\n   Superintendente de Fiscalização\r\n   Agência Nacional de Proteção de Dados - ANPD\r\n\r\n3) LAÍS JORDY SANT'ANNA SOARES DE MATTOS (Confirmada)\r\n   Advogada e Influencer Digital\r\n\r\n(Requerimento nº 24/2026, do Dep. Fernando Rodolfo)\r\n(Requerimento nº 26/2026, do Dep. Fernando Rodolfo)"
-    },
-    {
-      "id": "camara-83149",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão Especial destinada a proferir parecer ao Projeto de Lei Complementar nº 108, de 2021, do Senado Federal, que \"altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir o enquadramento como Microempreendedor Individual (MEI) de pessoa com receita bruta anual igual ou inferior a R$ 130.000,00 (cento e trinta mil reais), bem como para permitir que o MEI contrate até 2 (dois) empregados\" — Reunião Deliberativa",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 06",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83149",
-      "items": [
-        {
-          "title": "PLP 108/2021",
-          "summary": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir o enquadramento como Microempreendedor Individual (MEI) de pessoa com receita bruta anual igual ou inferior a                     R$ 130.000,00 (cento e trinta mil reais), bem como para permitir que o MEI contrate até 2 (dois) empregados",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2295251",
-          "relator": "Jorge Goetten",
-          "stage": ""
-        }
-      ],
-      "note": "Discussão e votação do parecer do relator, Dep. Jorge Goetten.\r\n Discussão e votação do Parecer do Relator, Deputado Jorge Goetten."
-    },
-    {
-      "id": "cmsp-2026-11-04-3",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Saúde, Promoção Social, Trabalho e Mulher",
-      "status": "Prevista",
-      "place": "Salão Nobre (8º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-11-04-4",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Educação, Cultura e Esportes",
-      "status": "Prevista",
-      "place": "Sala Tiradentes (8º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-11-04-5",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Constituição, Justiça e Legislação Participativa",
-      "status": "Prevista",
-      "place": "Auditório Prestes Maia (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-11-04-6",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Reunião Ordinária Semipresencial da Comissão Permanente de Administração Pública",
-      "status": "Prevista",
-      "place": "Plenário 1º de Maio (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "senado-15009",
+      "id": "senado-15004",
       "house": "senado",
       "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Agricultura e Reforma Agrária — 20ª Reunião Extraordinária Semipresencial",
-      "status": "Agendada",
-      "place": "Anexo II, Ala Senador Alexandre Costa, Plenário nº 7",
-      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15009",
-      "items": [
-        {
-          "title": "PL 810/2020",
-          "summary": "Altera a Lei nº 8.629, de 25 de fevereiro de 1993 (Lei da Reforma Agrária), para prever a adoção de medidas de estímulo e de facilitação da titulação de terras a mulheres trabalhadoras rurais da agricultura familiar no âmbito da reforma agrária e para incluir grupos prioritários no processo de seleção do Programa Nacional de Reforma Agrária.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/159464",
-          "relator": "Senador Wellington Fagundes (PL)",
-          "stage": "Pela aprovação do Projeto na forma da Emenda nº 4-CDH (Substitutivo) e pela rejeição das Emendas nºs 5 e 6."
-        },
-        {
-          "title": "PL 2648/2022",
-          "summary": "Altera a Lei nº 10.438, de 26 de abril de 2002, para criar a Subclasse Rural por Autogestão na classificação de consumidores de energia elétrica.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/154920",
-          "relator": "Senador Beto Faro (PT)",
-          "stage": "Pela aprovação do Projeto."
-        },
-        {
-          "title": "PL 1/2024",
-          "summary": "Altera a Lei nº 11.947, de 16 de junho de 2009, que dispõe sobre o atendimento da alimentação escolar, para estimular o cumprimento de percentual mínimo de aquisição de gêneros alimentícios da agricultura familiar para o Programa Nacional de Alimentação Escolar.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/161856",
-          "relator": "Senadora Professora Dorinha Seabra (UNIÃO)",
-          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta."
-        },
-        {
-          "title": "PL 3002/2024",
-          "summary": "Dispõe sobre a Política Brasileira da Alimentação Escolar, seus fins e mecanismos de formulação e aplicação; institui o Programa Nacional de Alimentação Escolar; altera a Lei n° 9.394, de 20 de dezembro de 1996; revoga os arts. 1º a 21 da Lei nº 11.947, de 16 de junho de 2009; e dá outras providências.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/164817",
-          "relator": "Senador Jaime Bagattoli (PL)",
-          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta e pela rejeição da Emenda nº 2."
-        },
-        {
-          "title": "PL 290/2025",
-          "summary": "Altera a Lei nº 12.651, de 25 de maio de 2012, que dispõe sobre a proteção da vegetação nativa, para incluir novas disposições ao Programa de Regularização Ambiental (PRA) e determinar efeitos suspensivos aos embargos.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/167123",
-          "relator": "Senador Jaime Bagattoli (PL)",
-          "stage": "Pela aprovação do Projeto na forma do Substitutivo que apresenta."
-        },
-        {
-          "title": "PL 5861/2025",
-          "summary": "Altera a Lei nº 9.427, de 26 de dezembro de 1996, para conceder desconto integral nas tarifas de uso dos sistemas elétricos de transmissão e de distribuição para empreendimentos de geração de energia elétrica a partir da biomassa da casca de arroz.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171656",
-          "relator": "Senador Hamilton Mourão (REPUBLICANOS)",
-          "stage": "Pela aprovação do Projeto."
-        },
-        {
-          "title": "PL 1115/2022",
-          "summary": "Institui a Política Nacional de Controle e Erradicação do Mormo e da Anemia Infecciosa Equina (AIE).",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/152938",
-          "relator": "Senadora Eliziane Gama (PSD)",
-          "stage": "Pela aprovação do Projeto."
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "senado-15003",
-      "house": "senado",
-      "date": "2026-11-04",
-      "time": "14:00",
-      "title": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor — 8ª Reunião Extraordinária Semipresencial",
-      "status": "Agendada",
+      "time": "15:00",
+      "title": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor — 9ª Reunião Extraordinária Semipresencial",
+      "status": "Realizada",
       "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 6",
-      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15003",
-      "items": [
-        {
-          "title": "PFS 2/2026",
-          "summary": "Proposta de Fiscalização e Controle com o objetivo de apurar, com o auxílio do Tribunal de Contas da União (TCU), possíveis fraudes estruturadas no pagamento de benefícios previdenciários e na contratação de créditos consignados, especialmente no que se refere a eventuais esquemas de desvio de recursos, concessões irregulares, manipulação de cadastros, intermediação indevida junto a órgãos da administração pública federal e movimentações financeiras atípicas associadas a operadores privados eventualmente vinculados ao esquema.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174116",
-          "relator": "Senador Eduardo Girão (NOVO)",
-          "stage": "Pela admissibilidade e aprovação da matéria com o plano de execução e a metodologia de avaliação apresentados"
-        },
-        {
-          "title": "PL 3221/2021",
-          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990, para vedar as ligações telefônicas excessivas ao consumidor inadimplente.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/149871",
-          "relator": "Senador Dr. Hiran (PP)",
-          "stage": "Pela aprovação do projeto, pela rejeição das emendas 1 e 2 e pela aprovação da emenda 3, nos termos do substitutivo"
-        },
-        {
-          "title": "PL 805/2024",
-          "summary": "Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para coibir a chamada “obsolescência programada” e regular o direito ao reparo.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/162652",
-          "relator": "Senador Dr. Hiran (PP)",
-          "stage": "Pela aprovação com as 4 emendas apresentadas na CCT"
-        },
-        {
-          "title": "REQ 34/2026 - CTFC",
-          "summary": "Requer, nos termos do art. 58, § 2º, II, da Constituição Federal e do art. 93, II, do Regimento Interno do Senado Federal, a realização de audiência pública, em conjunto com a Comissão de Assuntos Sociais, com o objetivo de debater sobre a crescente precarização do trabalho médico no Brasil.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174983",
-          "relator": "",
-          "stage": ""
-        },
-        {
-          "title": "REQ 35/2026 - CTFC",
-          "summary": "Nos termos do art. 71, inciso IV, da Constituição Federal, combinado com o art. 90, inciso X, do Regimento Interno do Senado Federal, requer que seja solicitado, ao Tribunal de Contas da União, a realização de auditoria operacional e de conformidade no Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis - IBAMA, destinada a avaliar se a autarquia vem exercendo de forma adequada a supervisão e o controle da competência federal delegada à Secretaria de Meio Ambiente e Recursos Hídricos do Estado do Piauí - SEMARH/PI por meio do Acordo de Cooperação Técnica nº 30/2025, especificamente no licenciamento ambiental do Terminal de Uso Privado de Luís Correia, conhecido como Porto Piauí.",
-          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175539",
-          "relator": "",
-          "stage": ""
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "camara-83142",
-      "house": "camara",
-      "date": "2026-11-04",
-      "time": "14:30",
-      "title": "Comissão de Defesa dos Direitos da Mulher — Reunião Deliberativa",
-      "status": "Convocada",
-      "place": "Anexo II, Plenário 14",
-      "source_url": "https://www.camara.leg.br/evento-legislativo/83142",
-      "items": [
-        {
-          "title": "REQ 57/2026 CMULHER",
-          "summary": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre crimes praticados em razão de misoginia.",
-          "url": "https://www.camara.leg.br/propostas-legislativas/2612930",
-          "relator": "",
-          "stage": ""
-        }
-      ],
-      "note": "Discussão e votação de requerimentos"
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15004",
+      "items": [],
+      "note": "Logo após a 8ª reunião da CTFC"
     },
     {
       "id": "camara-83143",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "14:30",
+      "time": "15:02",
       "title": "Comissão Especial destinada a proferir parecer à Proposta de Emenda à Constituição nº 32, de 2015, do Sr. Gonzaga Patriota, que \"altera a redação dos artigos 14 e 228 da Constituição Federal, para estabelecer a plena maioridade civil e penal aos dezesseis anos de idade\", e apensadas — Reunião Deliberativa",
-      "status": "Convocada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 13",
       "source_url": "https://www.camara.leg.br/evento-legislativo/83143",
       "items": [
@@ -3818,60 +4783,44 @@
       "note": "Discussão e votação de requerimentos\r\n Votação de Requerimentos"
     },
     {
-      "id": "senado-15014",
-      "house": "senado",
+      "id": "camara-83052",
+      "house": "camara",
       "date": "2026-11-04",
-      "time": "14:30",
-      "title": "Comissão Mista da Medida Provisória n° 1379, de 2026 — 1ª Reunião Semipresencial",
-      "status": "Agendada",
-      "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 2",
-      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15014",
+      "time": "15:39",
+      "title": "Comissão de Legislação Participativa — Reunião Deliberativa",
+      "status": "Encerrada",
+      "place": "Anexo II, Plenário 03",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83052",
       "items": [],
-      "note": ""
+      "note": "Discussão e votação de propostas legislativas"
     },
     {
-      "id": "alesp-2026-11-04-8",
-      "house": "alesp",
+      "id": "camara-83142",
+      "house": "camara",
       "date": "2026-11-04",
-      "time": "15:00",
-      "title": "Reunião da Comissão de Constituição, Justiça e Redação com a finalidade de apreciar pauta com 108 itens.",
-      "status": "Prevista",
-      "place": "Plenário Dom Pedro I",
-      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "cmsp-2026-11-04-7",
-      "house": "cmsp",
-      "date": "2026-11-04",
-      "time": "15:00",
-      "title": "Sessão Ordinária e, após, Sessões Extraordinárias",
-      "status": "Prevista",
-      "place": "Plenário 1º de Maio (1º andar)",
-      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
-      "items": [],
-      "note": ""
-    },
-    {
-      "id": "senado-15004",
-      "house": "senado",
-      "date": "2026-11-04",
-      "time": "15:00",
-      "title": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor — 9ª Reunião Extraordinária Semipresencial",
-      "status": "Agendada",
-      "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 6",
-      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15004",
-      "items": [],
-      "note": "Logo após a 8ª reunião da CTFC"
+      "time": "15:50",
+      "title": "Comissão de Defesa dos Direitos da Mulher — Reunião Deliberativa",
+      "status": "Encerrada (Final)",
+      "place": "Anexo II, Plenário 14",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83142",
+      "items": [
+        {
+          "title": "REQ 57/2026 CMULHER",
+          "summary": "Altera a Lei nº 7.716, de 5 de janeiro de 1989, e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre crimes praticados em razão de misoginia.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2612930",
+          "relator": "",
+          "stage": ""
+        }
+      ],
+      "note": "Discussão e votação de requerimentos"
     },
     {
       "id": "camara-82971",
       "house": "camara",
       "date": "2026-11-04",
-      "time": "16:00",
+      "time": "16:16",
       "title": "Subcomissão Especial para debater e acompanhar a tramitação do Projeto de Lei nº 657, de 2025, que altera que altera a Lei nº 9.394, de 20 de dezembro de 1996, de diretrizes e bases da educação nacional (LDB), para dispensar a existência de diagnóstico clínico ou apresentação de laudo médico para educação especial — Audiência Pública",
-      "status": "Convocada",
+      "status": "Encerrada (Final)",
       "place": "Anexo II, Plenário 04",
       "source_url": "https://www.camara.leg.br/evento-legislativo/82971",
       "items": [],
@@ -9799,7 +10748,7 @@
       "note": ""
     },
     {
-      "id": "alesp-2026-11-05-1",
+      "id": "alesp-2026-11-05-0",
       "house": "alesp",
       "date": "2026-11-05",
       "time": "10:00",
@@ -9811,7 +10760,111 @@
       "note": ""
     },
     {
-      "id": "cmsp-2026-11-05-8",
+      "id": "camara-83188",
+      "house": "camara",
+      "date": "2026-11-05",
+      "time": "10:00",
+      "title": "Plenário — Sessão Deliberativa",
+      "status": "Convocada",
+      "place": "Plenário da Câmara dos Deputados",
+      "source_url": "https://www.camara.leg.br/evento-legislativo/83188",
+      "items": [
+        {
+          "title": "PL 2879/2011",
+          "summary": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro, para dispor sobre a sinalização vertical da travessia de pedestre.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/530513",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 1932/2021",
+          "summary": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para determinar que o abastecimento de medicamentos e de produtos para a saúde nos entes da federação será controlado por meio de sistema integrado de acompanhamento em tempo real do consumo e do estoque.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2305879",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "REQ 4057/2026",
+          "summary": "Dispõe sobre o regime jurídico específico das associações civis sem fins lucrativos de utilidade pública que instituam sistemas de beneficência e assistência mútua de interesse social.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2643842",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 3099/2019",
+          "summary": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2204495",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 79/2020",
+          "summary": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2596596",
+          "relator": "Arthur Oliveira Maia",
+          "stage": ""
+        },
+        {
+          "title": "PL 2994/2020",
+          "summary": "Altera a Lei nº 11.771, de 17 de setembro de 2008, para dispor sobre o Turismo Colaborativo.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2254065",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 2726/2022",
+          "summary": "Institui a Política Nacional de Convivência Sociocultural e Economia Solidária (PNCS).",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2336566",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 2374/2023",
+          "summary": "Altera a Lei n.º 11.947, de 16 de junho de 2009 e a Lei n.º 14.113, de 25 de dezembro de 2020 de modo a assegurar que haja a inclusão das escolas comunitárias e o repasse direto dos recursos do Programa Nacional de Alimentação Escolar – PNAE e do Programa Dinheiro Direto na Escola – PDDE, e dá outras providências.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2360367",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 2475/2025",
+          "summary": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2515534",
+          "relator": "Delegado Matheus Laiola",
+          "stage": ""
+        },
+        {
+          "title": "PL 4159/2025",
+          "summary": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2551091",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5542/2026",
+          "summary": "Altera a Lei nº 11.340, de 7 de agosto de 2006 – Lei Maria da Penha, a fim de estabelecer garantias mínimas para a execução da monitoração eletrônica como medida protetiva de urgência, inclusive quanto à emissão de alertas sonoros e luminosos, à utilização excepcional de mecanismo de contenção física remota e à proteção da vítima.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2647427",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 565/2020",
+          "summary": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para tratar de ações de educação em saúde executadas pelos profissionais do Sistema Único de Saúde.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2238560",
+          "relator": "",
+          "stage": ""
+        },
+        {
+          "title": "PL 5974/2023",
+          "summary": "Dispõe sobre a permissão de reprodução adaptada de obras para pessoas com deficiência intelectual.",
+          "url": "https://www.camara.leg.br/propostas-legislativas/2412504",
+          "relator": "",
+          "stage": ""
+        }
+      ],
+      "note": "Sessão Deliberativa Extraordinária Semipresencial (AM nº 123/2020)"
+    },
+    {
+      "id": "cmsp-2026-11-05-0",
       "house": "cmsp",
       "date": "2026-11-05",
       "time": "10:00",
@@ -9823,7 +10876,19 @@
       "note": ""
     },
     {
-      "id": "alesp-2026-11-05-3",
+      "id": "alesp-2026-11-05-1",
+      "house": "alesp",
+      "date": "2026-11-05",
+      "time": "14:00",
+      "title": "165ª Sessão Ordinária - Expediente",
+      "status": "Prevista",
+      "place": "Plenário Juscelino Kubitschek",
+      "source_url": "https://www.al.sp.gov.br/alesp/agenda/",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "alesp-2026-11-05-4",
       "house": "alesp",
       "date": "2026-11-05",
       "time": "14:00",
@@ -9835,10 +10900,42 @@
       "note": ""
     },
     {
-      "id": "cmsp-2026-11-07-9",
+      "id": "cmsp-2026-11-05-1",
+      "house": "cmsp",
+      "date": "2026-11-05",
+      "time": "14:00",
+      "title": "Reunião Ordinária Semipresencial da Comissão Parlamentar de Inquérito (CPI) - Devedores",
+      "status": "Prevista",
+      "place": "Plenário 1º de Maio (1º andar)",
+      "source_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/agenda-da-camara/",
+      "items": [],
+      "note": ""
+    },
+    {
+      "id": "senado-15016",
+      "house": "senado",
+      "date": "2026-11-05",
+      "time": "14:00",
+      "title": "Comissão Mista da Medida Provisória n° 1379, de 2026 — 2ª Reunião Semipresencial",
+      "status": "Agendada",
+      "place": "Anexo II, Ala Senador Nilo Coelho, Plenário nº 2",
+      "source_url": "https://legis.senado.leg.br/atividade/comissoes/reuniao/15016",
+      "items": [
+        {
+          "title": "MPV 1379/2026",
+          "summary": "Altera a Lei nº 15.473, de 22 de julho de 2026, que altera a Lei nº 9.818, de 23 de agosto de 1999, e a Lei nº 12.712, de 30 de agosto de 2012, para fortalecer e modernizar o sistema brasileiro de apoio oficial ao crédito à exportação.",
+          "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175261",
+          "relator": "Senadora Leany Lemos (PSB)",
+          "stage": ""
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "cmsp-2026-11-07-2",
       "house": "cmsp",
       "date": "2026-11-07",
-      "time": "10:00",
+      "time": "13:00",
       "title": "Audiência Pública da Comissão Permanente de Finanças e Orçamento Local: CEU Casa Blanca Professor Solon Borges dos Reis Pauta: PL 752/26 - Orçamento 2027",
       "status": "Prevista",
       "place": "Atividades Externas / Outros",
@@ -9848,6 +10945,123 @@
     }
   ],
   "results": [
+    {
+      "id": "senado-prs50-2026-20261104",
+      "house": "senado",
+      "date": "2026-11-04",
+      "title": "Troca de dívidas de estados e municípios nos últimos 120 dias de mandato",
+      "proposal": "PRS 50/2026",
+      "result": "Aprovado",
+      "body": "Plenário",
+      "source_url": "https://www12.senado.leg.br/noticias/materias/2026/11/04/senado-permite-que-estados-e-municipios-renegociem-dividas-durante-final-de-mandato",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Senado em 4/11.",
+      "note": "Vai à promulgação."
+    },
+    {
+      "id": "senado-pdl359-2024-20261104",
+      "house": "senado",
+      "date": "2026-11-04",
+      "title": "Protocolo sobre exposições internacionais e mundiais",
+      "proposal": "PDL 359/2024",
+      "result": "Aprovado",
+      "body": "Plenário",
+      "source_url": "https://www12.senado.leg.br/noticias/materias/2026/11/04/aprovacao-de-protocolo-pelo-senado-permitira-ao-brasil-sediar-expos-mundiais",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Senado em 4/11.",
+      "note": "Vai à promulgação."
+    },
+    {
+      "id": "cmsp-pl736-2026-20261104",
+      "house": "cmsp",
+      "date": "2026-11-04",
+      "title": "Alinhamento viário da Jacu-Pêssego ligado ao reassentamento de 890 famílias",
+      "proposal": "PL 736/2026",
+      "result": "Aprovado em segundo turno",
+      "body": "Plenário",
+      "source_url": "https://www.saopaulo.sp.leg.br/blog/mais-de-850-familias-da-zona-leste-terao-os-imoveis-regularizados-apos-aprovacao-de-projeto-no-plenario/",
+      "nominal": [],
+      "summary": "Resultado informado pela Câmara Municipal em 4/11.",
+      "note": "Votação simbólica. Segue para sanção."
+    },
+    {
+      "id": "cmsp-pl699-2026-20261104",
+      "house": "cmsp",
+      "date": "2026-11-04",
+      "title": "Reajuste da gratificação dos auditores da Controladoria Geral do Município",
+      "proposal": "PL 699/2026",
+      "result": "Aprovado em segundo turno",
+      "body": "Plenário",
+      "source_url": "https://www.saopaulo.sp.leg.br/blog/mais-de-850-familias-da-zona-leste-terao-os-imoveis-regularizados-apos-aprovacao-de-projeto-no-plenario/",
+      "nominal": [],
+      "summary": "Resultado informado pela Câmara Municipal em 4/11.",
+      "note": "Contrários: bancada do PSOL, Rubinho Nunes, Cris Monteiro e Janaina Paschoal. Não há lista nominal completa na notícia consultada."
+    },
+    {
+      "id": "camara-urgencia-pl2167-2026-20261104",
+      "house": "camara",
+      "date": "2026-11-04",
+      "title": "Urgência para modalidade do Fies com contrapartida de serviço de saúde mental no SUS",
+      "proposal": "PL 2167/2026",
+      "result": "Urgência aprovada",
+      "body": "Plenário",
+      "source_url": "https://www.camara.leg.br/noticias/1315954-deputados-aprovam-urgencia-para-projeto-que-cria-nova-modalidade-para-fies",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Câmara em 4/11.",
+      "note": "Aprovou-se a urgência, não o projeto."
+    },
+    {
+      "id": "camara-pl5902-2023-20261104",
+      "house": "camara",
+      "date": "2026-11-04",
+      "title": "Crime de sobrevoo não autorizado de presídios com drones",
+      "proposal": "PL 5902/2023",
+      "result": "Aprovado com substitutivo",
+      "body": "Plenário",
+      "source_url": "https://www.camara.leg.br/noticias/1315957-camara-aprova-proposta-que-criminaliza-sobrevoo-nao-autorizado-de-drones-perto-de-presidios",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Câmara em 4/11.",
+      "note": "Vai ao Senado. Não é lei em vigor."
+    },
+    {
+      "id": "camara-pl5815-2025-20261104",
+      "house": "camara",
+      "date": "2026-11-04",
+      "title": "Programa de acompanhamento pediátrico e psicossocial de crianças e adolescentes no SUS",
+      "proposal": "PL 5815/2025",
+      "result": "Aprovado",
+      "body": "Plenário",
+      "source_url": "https://www.camara.leg.br/noticias/1316057-camara-aprova-criacao-de-programa-para-acompanhamento-psicossocial-de-criancas-e-adolescentes",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Câmara em 4/11.",
+      "note": "Vai ao Senado. Não é lei em vigor."
+    },
+    {
+      "id": "camara-pl3220-2025-20261104",
+      "house": "camara",
+      "date": "2026-11-04",
+      "title": "Dia Nacional da Consolidação da Independência do Brasil, em 2 de julho",
+      "proposal": "PL 3220/2025",
+      "result": "Aprovado",
+      "body": "Plenário",
+      "source_url": "https://www.camara.leg.br/noticias/1315988-camara-aprova-criacao-do-dia-nacional-da-consolidacao-da-independencia-do-brasil",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Câmara em 4/11.",
+      "note": "Vai ao Senado. Não é lei em vigor."
+    },
+    {
+      "id": "camara-pl3220-2019-20261104",
+      "house": "camara",
+      "date": "2026-11-04",
+      "title": "Uso de postes de energia por empresas de telecomunicações",
+      "proposal": "PL 3220/2019",
+      "result": "Aprovado com substitutivo",
+      "body": "Plenário",
+      "source_url": "https://www.camara.leg.br/noticias/1315992-camara-aprova-regras-para-o-uso-de-postes-por-empresas-de-energia-e-teles",
+      "nominal": [],
+      "summary": "Resultado informado pela Agência Câmara em 4/11.",
+      "note": "Volta ao Senado. Não é lei em vigor."
+    },
     {
       "id": "senado-4426",
       "house": "senado",
@@ -13378,7 +14592,7 @@
       "id": "camara-2475487-76",
       "house": "camara",
       "date": "2026-11-03",
-      "title": "Aprovado o Substitutivo ao Projeto de Lei nº 4.674, de 2024, da Comissão de Saúde.",
+      "title": "Aprovado o Substitutivo ao Projeto de Lei nº 4.674, de 2024, adotado pela relatora da Comissão de Saúde.",
       "proposal": "",
       "result": "Aprovado",
       "body": "PLEN",

@@ -5,22 +5,23 @@
     "kind": "daily",
     "reading_minutes": 5,
     "title": "Proposta de maioridade penal no Senado não inclui tráfico, 28% dos casos de jovens internados",
-    "subtitle": "O texto do líder do PT, que pode ser votado nesta semana, vale só para crimes hediondos. A lei não põe o tráfico de drogas nessa lista, e a proposta da oposição o cita de forma expressa",
+    "subtitle": "A votação no Senado ficou para depois da Câmara. O texto do líder do PT vale só para crimes hediondos, e a lei não põe o tráfico de drogas nessa lista",
     "topic": "Segurança pública",
     "trigger_date": "2026-11-03",
     "edition_date": "2026-11-04",
     "id": "2026-11-04-63-dos-81-senadores-assinaram-propostas-para-reduzir-a-maioridade-penal-mas-o-senado-tirou-o-tema-da",
-    "status_label": "Pode ser votada nesta semana",
+    "status_label": "Votação adiada; Senado espera a Câmara",
     "proposal": "PEC 20/2026",
     "politicians": [],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A proposta para reduzir a maioridade penal que o Senado pode votar nesta semana não alcança o tráfico de drogas, o segundo ato mais comum entre os jovens internados no Brasil. O texto do líder do PT, Camilo Santana (CE), baixa a idade de 18 para 16 anos apenas para \"crimes considerados formalmente hediondos\", e o tráfico não está na lista legal desses crimes.",
+        "text": "A proposta para reduzir a maioridade penal com mais chance de acordo no Senado não alcança o tráfico de drogas, o segundo ato mais comum entre os jovens internados no Brasil. O texto do líder do PT, Camilo Santana (CE), baixa a idade de 18 para 16 anos apenas para \"crimes considerados formalmente hediondos\", e o tráfico não está na lista legal desses crimes. Na quarta-feira (4), o presidente do Senado, Davi Alcolumbre (União-AP), avisou que não vai votar o tema agora e vai esperar a Câmara.",
         "source_ids": [
           "S5",
           "S7",
-          "S22"
+          "S22",
+          "S23"
         ]
       },
       {
@@ -55,7 +56,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos. Com a proposta, jovens de 16 e 17 anos acusados de crimes hediondos passariam a responder como adultos. Ela precisa de 49 votos entre os 81 senadores, em duas votações, e depois de 308 votos na Câmara, também em duas votações.",
+        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos. Com a proposta, jovens de 16 e 17 anos acusados de crimes hediondos passariam a responder como adultos. Uma mudança na Constituição precisa de 49 votos entre os 81 senadores e de 308 na Câmara, em duas votações em cada casa.",
         "source_ids": [
           "S5",
           "S19"
@@ -63,22 +64,36 @@
       },
       {
         "type": "paragraph",
-        "text": "O Senado retirou o tema da reforma da segurança pública na terça-feira (3), por 38 votos a 36, para evitar que a reforma voltasse à Câmara. Logo depois, o líder do MDB, Eduardo Braga (AM), passou a buscar apoio para levar o texto de Camilo direto ao plenário, sem passar por comissão. O relator da reforma, Rogério Carvalho (PT-SE), falou em votar nesta quarta (4). Camilo admitiu que pode ficar para a semana seguinte, e a líder do governo, Teresa Leitão (PT-PE), disse que o debate \"não pode ser feito de afogadilho\".",
+        "text": "O Senado retirou o tema da reforma da segurança pública na terça-feira (3), por 38 votos a 36, para evitar que a reforma voltasse à Câmara. As duas emendas viraram propostas separadas: a PEC 20/2026, de Camilo, e a PEC 19/2026, de Marinho. O líder do MDB, Eduardo Braga (AM), reuniu assinaturas de mais de 50 senadores para levar o tema direto ao plenário, sem passar por comissão. Na sessão de quarta, Alcolumbre disse ter atendido a um pedido do presidente da Câmara, Hugo Motta (Republicanos-PB), que se comprometeu a votar o texto dos deputados ainda em novembro.",
         "source_ids": [
           "S2",
           "S13",
-          "S18",
-          "S19",
-          "S20"
+          "S23",
+          "S25"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos. Marinho, que defende 16 anos para qualquer crime e 14 para os mais graves, disse nesta quarta ter assinado o pedido de Braga. O líder do PL, Carlos Portinho (RJ), afirmou que o partido ainda vai disputar o alcance no voto.",
+        "text": "Braga pediu um limite: se a Câmara não decidir até 1º de dezembro, o Senado votaria as suas propostas. O líder do PL, Carlos Portinho (RJ), disse que Alcolumbre descumpriu o combinado na véspera: \"compromisso é para ser cumprido\". Alessandro Vieira (MDB-SE) defendeu outro caminho, um projeto já aprovado pelo Senado em 2025 que não muda a idade, mas aumenta o tempo máximo de internação, e que está na Câmara.",
+        "source_ids": [
+          "S23"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto que anda agora é mais amplo que o de Camilo. A PEC 32/2015, do ex-deputado Gonzaga Patriota, diz que a maioridade é atingida aos 16 anos, para responder por crimes e para os atos da vida civil, sem separar tipos de crime. Com essa redação, o tráfico entraria. O relator, Mendonça Filho (PL-PE), ainda não apresentou parecer e pode mudar o texto, e Guilherme Derrite (PP-SP) defendeu na comissão baixar a idade para 14 anos em crimes hediondos.",
+        "source_ids": [
+          "S23",
+          "S24",
+          "S26"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos. Marinho defende 16 anos para qualquer crime e 14 para os mais graves.",
         "source_ids": [
           "S4",
-          "S11",
-          "S18"
+          "S11"
         ]
       },
       {
@@ -142,9 +157,10 @@
       },
       {
         "type": "practical",
-        "text": "Nada muda por enquanto. Mesmo que o Senado aprove a proposta, quem tem menos de 18 anos continua respondendo pelo Estatuto da Criança e do Adolescente até que a Câmara também aprove o texto e a mudança entre na Constituição.",
+        "text": "Nada muda por enquanto. O Senado não vai votar antes da Câmara, e quem tem menos de 18 anos continua respondendo pelo Estatuto da Criança e do Adolescente até que as duas casas aprovem a mudança e ela entre na Constituição.",
         "source_ids": [
-          "S19"
+          "S19",
+          "S23"
         ]
       },
       {
@@ -157,10 +173,10 @@
       },
       {
         "type": "next",
-        "text": "Se não houver acordo nesta quarta, Camilo fala em votar na próxima semana. Na Câmara, a comissão especial sobre o tema aprovou nesta quarta pedidos de audiências públicas com vítimas e familiares e sobre o recrutamento de adolescentes por facções. O relatório é esperado até a primeira semana de dezembro.",
+        "text": "Mendonça Filho disse que apresenta o parecer no final de novembro, depois de audiências públicas aprovadas pela comissão especial, cujo presidente rejeitou o pedido de plebiscito sobre o tema. Alcolumbre disse que, quando o texto chegar ao Senado, \"nós vamos votar\".",
         "source_ids": [
-          "S9",
-          "S18"
+          "S24",
+          "S25"
         ]
       }
     ],
@@ -311,9 +327,37 @@
         "title": "Lei 8.072/1990, dos crimes hediondos, texto atualizado",
         "kind": "primary",
         "published_date": "1990-07-25"
+      },
+      {
+        "id": "S23",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/04/reducao-da-maioridade-penal-senado-aguardara-votacao-de-pec-da-camara",
+        "title": "Agência Senado: Senado aguardará votação de PEC da Câmara, 4/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S24",
+        "url": "https://www.camara.leg.br/noticias/1316048-relator-da-pec-da-maioridade-penal-deve-apresentar-parecer-no-final-do-mes",
+        "title": "Agência Câmara: relator da PEC da Maioridade Penal deve apresentar parecer no final do mês, 4/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S25",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/alcolumbre-retira-maioridade-penal-da-pauta-e-vai-aguardar-camara",
+        "title": "Agência Brasil: Alcolumbre retira maioridade penal da pauta e vai aguardar Câmara, 4/11/2026",
+        "kind": "secondary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S26",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1328804",
+        "title": "Câmara: texto da PEC 32/2015, de Gonzaga Patriota",
+        "kind": "primary",
+        "published_date": "2015-05-05"
       }
     ],
-    "updated_at": "2026-11-04T18:55:19.161684+00:00"
+    "updated_at": "2026-11-05T01:23:57.924910+00:00"
   },
   {
     "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
@@ -330,9 +374,6 @@
     "topic": "Segurança pública",
     "politicians": [
       {
-        "role": "Autor da Emenda 85",
-        "uf": "RJ",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -347,13 +388,13 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
-        "name": "Carlos Portinho",
-        "party": "PL"
+        "uf": "RJ",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "role": "Autor da Emenda 85",
+        "party": "PL",
+        "name": "Carlos Portinho"
       },
       {
-        "role": "Relator no Senado",
-        "uf": "SE",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -364,8 +405,11 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
-        "name": "Rogério Carvalho",
-        "party": "PT"
+        "uf": "SE",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "role": "Relator no Senado",
+        "party": "PT",
+        "name": "Rogério Carvalho"
       }
     ],
     "blocks": [
@@ -812,30 +856,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "role": "Autor do projeto",
+        "sources": [
+          {
+            "title": "Alesp: dados abertos e biografia dos deputados",
+            "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
+          }
+        ],
         "uf": "SP",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "sources": [
-          {
-            "title": "Alesp: dados abertos e biografia dos deputados",
-            "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
-          }
-        ],
-        "name": "Gil Diniz Bolsonaro",
-        "party": "PL"
+        "role": "Autor do projeto",
+        "party": "PL",
+        "name": "Gil Diniz Bolsonaro"
       },
       {
-        "role": "Relator na CCJR",
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "name": "Delegado Olim",
-        "party": "PP"
+        "uf": "SP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "party": "PP",
+        "name": "Delegado Olim"
       }
     ],
     "blocks": [
@@ -1072,9 +1116,6 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "role": "Autor do projeto",
-        "uf": "AP",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1085,8 +1126,11 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "name": "Dorinaldo Malafaia",
-        "party": "PDT"
+        "uf": "AP",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "role": "Autor do projeto",
+        "party": "PDT",
+        "name": "Dorinaldo Malafaia"
       }
     ],
     "blocks": [
@@ -1240,43 +1284,43 @@
     "reading_minutes": 4,
     "politicians": [
       {
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "name": "Pr. Marco Feliciano",
-        "party": "PL"
-      },
-      {
-        "role": "Parlamentar citado",
         "uf": "SP",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "name": "Pr. Marco Feliciano"
+      },
+      {
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "party": "PL"
+        "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "name": "Luiz Philippe de Orleans e Bragança"
       },
       {
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "name": "Missionário José Olimpio",
-        "party": "PL"
+        "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "role": "Parlamentar citado",
+        "party": "PL",
+        "name": "Missionário José Olimpio"
       }
     ],
     "blocks": [
@@ -1385,6 +1429,61 @@
       }
     ],
     "updated_at": "2026-11-04T18:41:51.957862+00:00"
+  },
+  {
+    "id": "notas/cmsp-aumento-auditores-controladoria",
+    "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
+    "subtitle": "A Câmara Municipal de São Paulo aprovou em 4 de novembro, em segunda votação, o PL 699/2026, da gestão Ricardo Nunes (MDB), que reajusta a gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%, e os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
+    "house": "cmsp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 699/2026",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/senado-dividas-fim-de-mandato",
+    "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
+    "subtitle": "O Senado aprovou em 4 de novembro um projeto de resolução de Renan Filho (MDB-AL) que permite a estados, ao Distrito Federal e a municípios substituir dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, a Resolução 43, de 2001, proibia esse tipo de operação nesse período, com poucas exceções.",
+    "house": "senado",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PRS 50/2026",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/camara-postes-energia-teles",
+    "title": "Câmara aprova regras para postes e livra de multa tele que pedir regularização",
+    "subtitle": "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. Pelo texto do relator, Juscelino Filho (PSDB-MA), as teles terão 180 dias para pedir a regularização dos cabos instalados sem contrato. Quem pedir no prazo não leva multa, mas terá de pagar pelo uso e fazer as adequações técnicas.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 3220/2019",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/camara-drones-presidios",
+    "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
+    "subtitle": "A Câmara aprovou em 4 de novembro o projeto de Kim Kataguiri (Missão-SP), relatado por Nikolas Ferreira (PL-MG), que prevê reclusão de 1 a 5 anos e multa para o sobrevoo não autorizado de presídios com drones. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 5902/2023",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/alesp-carreira-professores-adiada",
+    "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
+    "subtitle": "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro. Segundo o InfoMoney, a análise de 3 de novembro foi adiada depois que professores e estudantes ocuparam a galeria da Alesp, e a Casa informou não haver previsão de voto nesta semana. O texto está na Ordem do Dia de 4 de novembro como votação adiada.",
+    "house": "alesp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 1316/2025",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
   },
   {
     "id": "notas/senado-adicional-fronteira-mp1375",
