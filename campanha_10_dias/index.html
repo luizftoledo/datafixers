@@ -2606,7 +2606,8 @@ function track(event, data){
   };
   try {
     if(navigator.sendBeacon){
-      const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+      // text/plain evita o preflight CORS, que o navegador bloqueia em sendBeacon (credenciais + origem '*')
+      const blob = new Blob([JSON.stringify(payload)], { type: 'text/plain;charset=UTF-8' });
       navigator.sendBeacon(TELEMETRY.endpoint, blob);
     } else {
       fetch(TELEMETRY.endpoint, {

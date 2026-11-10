@@ -157,3 +157,6 @@ images/.DS_Store
 ibama.db
 dashboard-ibama/*.sqlite.gz
 dashboard-ibama/*.sqlite
+
+# Wrangler local cache
+.wrangler/
