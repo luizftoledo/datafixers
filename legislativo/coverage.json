@@ -1,11 +1,11 @@
 {
-  "previous_end": "2026-11-01",
-  "results_start": "2026-10-26",
   "results_end": "2026-11-04",
   "previous_start": "2026-10-26",
   "week_start": "2026-11-02",
-  "week_end": "2026-11-08",
   "updated_at": "2026-11-05T01:22:20.278818+00:00",
+  "previous_end": "2026-11-01",
+  "week_end": "2026-11-08",
+  "results_start": "2026-10-26",
   "agenda": [
     {
       "id": "cmsp-session-8276",

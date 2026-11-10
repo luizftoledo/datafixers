@@ -1,5 +1,11 @@
 [
   {
+    "act": {
+      "title": "Lei nº 18.499, de 28 de outubro de 2026",
+      "url": "https://www.doe.sp.gov.br/executivo/leis/lei-n-18499-de-28-de-outubro-de-2026-202610281152102243849",
+      "organ": "Governo do Estado de São Paulo",
+      "doe_id": "55190af7-deba-4293-3911-08df2e3dc023"
+    },
     "sources": [
       {
         "title": "Diário Oficial do Estado de SP — Lei nº 18.499, de 28/10/2026",
@@ -14,30 +20,30 @@
         "url": "https://www2.camara.leg.br/legin/fed/leicom/2021/leicomplementar-178-13-janeiro-2021-790988-normaatualizada-pl.html"
       }
     ],
-    "subtitle": "Tarcísio sancionou um dia depois da votação a lei que converte o Programa de Ajuste Fiscal no programa federal de 2021; o texto tem dois artigos e não cita o efeito sobre a dívida.",
     "date": "2026-10-29",
-    "paragraphs": [
-      "O governador Tarcísio de Freitas sancionou a Lei nº 18.499, de 28 de outubro, publicada no Diário Oficial do Estado de 29 de outubro. Ela autoriza o Executivo a converter o Programa de Reestruturação e de Ajuste Fiscal, regime que rege a relação do estado com a União desde a renegociação das dívidas estaduais nos anos 1990, no Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal nº 178, de 2021.",
-      "O projeto (PL 869/2026), enviado pelo governo, foi aprovado pela Assembleia Legislativa em sessão extraordinária na noite de 27 de outubro, depois de reunião conjunta das comissões de Constituição e Justiça e de Finanças. A lei foi assinada no dia seguinte.",
-      "A lei tem dois artigos: um autoriza a conversão e o outro determina vigência imediata. O texto não trata de valores. Segundo a Secretaria da Fazenda e Planejamento, citada pela Alesp, a adesão deve garantir espaço fiscal de até 1,5% da receita corrente líquida para operações de crédito em 2027, desde que o estado cumpra as metas. O estado também se compromete a contrair novas dívidas apenas nos termos do programa e a compartilhar dados contábeis e fiscais com o Tesouro Nacional.",
-      "A Alesp não divulgou o placar da votação na notícia sobre a aprovação. O governo não publicou estimativa em reais do espaço para novos empréstimos."
-    ],
+    "subtitle": "A lei tem dois artigos e não cita valores. O tamanho da dívida atual do estado não muda",
+    "title": "SP muda acordo com o governo federal e pode ganhar espaço para novos empréstimos em 2027",
+    "practical": "A mudança não altera o tamanho da dívida atual do estado com o governo federal. Ela muda as regras de acompanhamento e, segundo a Fazenda estadual, pode permitir novos empréstimos em 2027, se o estado cumprir as metas.",
+    "id": "sp-programa-fiscal-uniao-emprestimos",
     "focus": [
       "governador"
     ],
-    "act": {
-      "title": "Lei nº 18.499, de 28 de outubro de 2026",
-      "url": "https://www.doe.sp.gov.br/executivo/leis/lei-n-18499-de-28-de-outubro-de-2026-202610281152102243849",
-      "organ": "Governo do Estado de São Paulo",
-      "doe_id": "55190af7-deba-4293-3911-08df2e3dc023"
-    },
-    "published_at": "2026-10-30T10:01:05-03:00",
-    "id": "sp-programa-fiscal-uniao-emprestimos",
-    "title": "SP troca acordo fiscal com a União de 1997 por programa que pode abrir espaço para novos empréstimos em 2027",
     "source": "doe",
-    "practical": "A mudança não altera o tamanho da dívida atual do estado com a União. Ela muda as regras de acompanhamento e, segundo a Fazenda estadual, pode permitir que SP contrate novos empréstimos em 2027 até 1,5% da receita corrente líquida, se cumprir as metas do programa."
+    "paragraphs": [
+      "O governo de São Paulo trocou as regras do acordo que mantém com o governo federal sobre suas dívidas desde os anos 1990. Segundo a Fazenda estadual, a mudança pode permitir novos empréstimos em 2027. O tamanho da dívida atual não muda.",
+      "A lei foi assinada pelo governador Tarcísio de Freitas em 28 de outubro e publicada no Diário Oficial do Estado no dia seguinte. A Assembleia Legislativa havia aprovado o projeto na noite de 27 de outubro.",
+      "A lei tem dois artigos: um autoriza a troca do programa antigo por um programa federal criado em 2021, e o outro manda a regra valer de imediato. O texto não trata de valores.",
+      "Segundo a Secretaria da Fazenda e Planejamento, citada pela Assembleia, a adesão deve permitir empréstimos de até 1,5% da receita corrente líquida do estado em 2027, desde que as metas sejam cumpridas. O estado também se compromete a só contrair novas dívidas dentro das regras do programa e a compartilhar dados de suas contas com o Tesouro Nacional.",
+      "A Assembleia não divulgou o placar da votação. O governo não publicou estimativa em reais do espaço para novos empréstimos."
+    ],
+    "published_at": "2026-10-30T10:01:05-03:00"
   },
   {
+    "act": {
+      "title": "Portaria GM/MPO nº 485, de 27 de outubro de 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/mpo-n-485-de-27-de-outubro-de-2026-740664166",
+      "organ": "Ministério do Planejamento e Orçamento"
+    },
     "sources": [
       {
         "title": "Diário Oficial da União — Portaria GM/MPO nº 485, de 27/10/2026",
@@ -48,31 +54,31 @@
         "url": "https://mercadoeconsumo.com.br/28/10/2026/economia/governo-libera-credito-de-r-52-bilhoes-para-reforcar-assistencia-social-e-saude/"
       }
     ],
-    "subtitle": "Portaria do Planejamento transfere R$ 4,73 bilhões ao benefício de pessoas com deficiência sem receita nova: o dinheiro sai de reservas e de outras despesas do Orçamento de 2026.",
     "date": "2026-10-28",
-    "paragraphs": [
-      "A Portaria GM/MPO nº 485, publicada no Diário Oficial da União de 28 de outubro e assinada pelo ministro do Planejamento e Orçamento, Bruno Moretti, abre crédito suplementar de R$ 5,17 bilhões no Orçamento de 2026. Do total, R$ 4,73 bilhões (91%) vão para o Fundo Nacional de Assistência Social, na ação que paga o Benefício de Prestação Continuada (BPC) à pessoa com deficiência e a Renda Mensal Vitalícia por invalidez.",
-      "O crédito não traz dinheiro novo. A portaria diz que os recursos decorrem de anulação de dotações orçamentárias. Pelas tabelas do anexo, R$ 1,54 bilhão sai de reservas de contingência. Outro R$ 1,08 bilhão sai de três subvenções que o Tesouro paga em empréstimos rurais: R$ 444 milhões do Pronaf, voltado à agricultura familiar, R$ 421 milhões de operações de investimento rural e agroindustrial e R$ 213 milhões de operações de custeio agropecuário. A transferência da União à Conta de Desenvolvimento Energético, fundo do setor elétrico criado pela Lei 10.438, de 2002, perde R$ 621 milhões.",
-      "Também são cancelados R$ 409 milhões de aposentadorias e pensões do Ministério da Educação, R$ 182 milhões de bônus de servidores inativos, R$ 174 milhões de transferências de participações da produção de petróleo e gás a estados e municípios e R$ 119 milhões da folha de servidores da Polícia Rodoviária Federal.",
-      "Na Saúde, a portaria tira e devolve R$ 347 milhões da mesma ação de medicamentos do componente especializado do SUS, redistribuindo o valor entre localidades. A pasta perde R$ 61 milhões da estruturação de unidades de atenção especializada e R$ 41 milhões de políticas de atenção primária; os R$ 41 milhões vão para a assistência farmacêutica da atenção básica.",
-      "A portaria não informa por que cada dotação deixou de ser necessária, nem se os subsídios ao crédito rural tiveram procura menor que a prevista. A cobertura publicada sobre o ato, como a do site Mercado&Consumo com informações da Agência Brasil, registrou o crédito de R$ 5,2 bilhões e o destino ao BPC, sem o valor retirado de cada programa."
-    ],
+    "subtitle": "O benefício pago a pessoas com deficiência recebe R$ 4,73 bilhões a mais em 2026. O dinheiro não é novo: sai de reservas e de outras despesas",
+    "title": "Para pagar o BPC, governo tira R$ 1,08 bilhão do crédito rural e R$ 621 milhões da energia",
+    "practical": "O ato não cria benefício nem muda o valor pago a quem recebe o BPC: completa a verba de 2026. Para isso, o governo usa R$ 1,54 bilhão de reservas e retira R$ 1,08 bilhão das ajudas ao crédito rural e R$ 621 milhões do fundo do setor elétrico.",
+    "id": "bpc-cortes-credito-rural-energia",
     "focus": [
       "cortes e remanejamentos",
       "presidente"
     ],
-    "act": {
-      "title": "Portaria GM/MPO nº 485, de 27 de outubro de 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/mpo-n-485-de-27-de-outubro-de-2026-740664166",
-      "organ": "Ministério do Planejamento e Orçamento"
-    },
-    "published_at": "2026-10-30T10:01:02-03:00",
-    "id": "bpc-cortes-credito-rural-energia",
-    "title": "Para reforçar o BPC, governo cancela R$ 1,08 bilhão de subsídio ao crédito rural e R$ 621 milhões do fundo do setor elétrico",
     "source": "dou",
-    "practical": "O ato não cria benefício nem muda o valor pago a quem recebe o BPC: completa a verba de 2026 da ação. Para cobrir esse reforço, o governo usa R$ 1,54 bilhão de reservas e retira R$ 1,08 bilhão das subvenções ao crédito rural e R$ 621 milhões da conta de subsídios do setor elétrico."
+    "paragraphs": [
+      "O governo federal reforçou em R$ 4,73 bilhões a verba de 2026 do Benefício de Prestação Continuada (BPC) pago a pessoas com deficiência. O dinheiro não é novo: sai de reservas e de outras despesas, como o subsídio a empréstimos rurais.",
+      "A medida está em portaria do Ministério do Planejamento e Orçamento publicada no Diário Oficial da União de 28 de outubro. Ao todo, ela movimenta R$ 5,17 bilhões no Orçamento de 2026, e 91% vão para o benefício.",
+      "Pelas tabelas da portaria, R$ 1,54 bilhão sai de reservas. Outro R$ 1,08 bilhão sai de três ajudas que o governo paga em empréstimos rurais, entre elas R$ 444 milhões do Pronaf, voltado à agricultura familiar. O repasse federal à Conta de Desenvolvimento Energético, fundo do setor elétrico, perde R$ 621 milhões.",
+      "Também são cancelados R$ 409 milhões de aposentadorias e pensões do Ministério da Educação e R$ 119 milhões da folha de servidores da Polícia Rodoviária Federal. Na Saúde, a pasta perde R$ 61 milhões da estruturação de unidades de atendimento especializado.",
+      "A portaria não informa por que cada verba deixou de ser necessária, nem se os subsídios ao crédito rural tiveram procura menor que a prevista. A cobertura publicada, como a do site Mercado&Consumo com informações da Agência Brasil, registrou o reforço ao benefício sem o valor retirado de cada programa."
+    ],
+    "published_at": "2026-10-30T10:01:02-03:00"
   },
   {
+    "act": {
+      "title": "Decreto nº 65.667, de 26 de outubro de 2026",
+      "url": "https://legislacao.prefeitura.sp.gov.br/leis/decreto-65667-de-26-de-outubro-de-2026",
+      "organ": "Prefeitura de São Paulo"
+    },
     "sources": [
       {
         "title": "Catálogo de Legislação Municipal — Decreto nº 65.667, de 26/10/2026",
@@ -83,27 +89,23 @@
         "url": "https://diariodotransporte.com.br/2026/10/27/prefeitura-de-sao-paulo-acrescenta-r-3353-milhoes-aos-subsidios-dos-onibus-recursos-superam-r-1-bilhao-so-em-outubro-de-2026-e-inflacao-desde-2017/"
       }
     ],
-    "subtitle": "Decreto de Ricardo Nunes reforça o orçamento de 2026 em R$ 1,39 bilhão; a cobertura vem quase toda de excesso de arrecadação, e a arborização urbana perde R$ 8 milhões.",
     "date": "2026-10-27",
-    "paragraphs": [
-      "O prefeito Ricardo Nunes assinou em 26 de outubro o Decreto nº 65.667, que abre crédito suplementar de R$ 1,39 bilhão no orçamento municipal de 2026. É o maior dos decretos de crédito assinados pela prefeitura naquela data; os demais vão de R$ 7,2 mil a R$ 20,3 milhões.",
-      "A maior parte vai para a saúde: R$ 455,8 milhões para a manutenção e operação da atenção hospitalar e de urgência e emergência e R$ 443,3 milhões para a atenção básica, especialidades e serviços. O subsídio dos ônibus, na ação de compensações tarifárias do sistema de ônibus, recebe R$ 335,3 milhões. O decreto também reserva R$ 47,6 milhões para engenharia de tráfego, R$ 20 milhões para a reforma do Autódromo de Interlagos e R$ 15 milhões para campanhas e eventos.",
-      "Segundo o decreto, R$ 1,35 bilhão vem do excesso de arrecadação, isto é, receita acima da prevista no orçamento. O restante, R$ 36,5 milhões, sai de outras dotações. R$ 23 milhões trocam de linha dentro da área de condenações judiciais. Outros R$ 13,5 milhões saem da Secretaria do Verde e do Meio Ambiente, sendo R$ 8 milhões da promoção da arborização urbana.",
-      "O reforço aos ônibus soma-se a outros dois feitos em outubro, segundo levantamento do Diário do Transporte: R$ 271,8 milhões no dia 5 e R$ 393,9 milhões no dia 16. Com os três, a ação passa de R$ 6,225 bilhões previstos na lei orçamentária para cerca de R$ 7,23 bilhões, acima dos R$ 7,12 bilhões pagos em 2025, segundo a SPTrans citada pelo site."
-    ],
+    "subtitle": "O dinheiro vem de arrecadação acima da prevista. A arborização urbana perde R$ 8 milhões",
+    "title": "Prefeitura de SP põe R$ 899 milhões a mais na saúde e R$ 335 milhões nos ônibus",
+    "practical": "A prefeitura usa receita acima da prevista para pagar despesas já em andamento: R$ 899 milhões vão para a rede de saúde e R$ 335 milhões para as empresas de ônibus. Em outubro, o subsídio do transporte recebeu R$ 1 bilhão a mais do que o previsto no orçamento.",
+    "id": "nunes-credito-saude-onibus",
     "focus": [
       "prefeito",
       "cortes e remanejamentos"
     ],
-    "act": {
-      "title": "Decreto nº 65.667, de 26 de outubro de 2026",
-      "url": "https://legislacao.prefeitura.sp.gov.br/leis/decreto-65667-de-26-de-outubro-de-2026",
-      "organ": "Prefeitura de São Paulo"
-    },
-    "published_at": "2026-10-30T10:01:04-03:00",
-    "id": "nunes-credito-saude-onibus",
-    "title": "Arrecadação acima da prevista paga R$ 899 milhões extras para hospitais e postos e R$ 335 milhões para ônibus em SP",
     "source": "doc",
-    "practical": "A prefeitura usa receita acima da prevista para pagar despesas já em andamento: R$ 899 milhões vão para a rede de saúde e R$ 335 milhões para as empresas de ônibus. Em outubro, o subsídio do transporte recebeu R$ 1 bilhão a mais do que o previsto no orçamento."
+    "paragraphs": [
+      "A Prefeitura de São Paulo reforçou o orçamento de 2026 em R$ 1,39 bilhão, quase todo com arrecadação acima da prevista. A maior parte vai para hospitais e postos de saúde, e R$ 335,3 milhões vão para o subsídio dos ônibus.",
+      "O decreto foi assinado pelo prefeito Ricardo Nunes em 26 de outubro. Na saúde, são R$ 455,8 milhões para hospitais e atendimento de urgência e emergência e R$ 443,3 milhões para a atenção básica, especialidades e serviços.",
+      "O decreto também reserva R$ 47,6 milhões para engenharia de tráfego, R$ 20 milhões para a reforma do Autódromo de Interlagos e R$ 15 milhões para campanhas e eventos.",
+      "Segundo o decreto, R$ 1,35 bilhão vem de receita acima da prevista no orçamento. O restante, R$ 36,5 milhões, sai de outras verbas. A Secretaria do Verde e do Meio Ambiente perde R$ 13,5 milhões, sendo R$ 8 milhões da arborização urbana.",
+      "O reforço aos ônibus soma-se a outros dois feitos em outubro, segundo levantamento do Diário do Transporte. Com os três, a verba do subsídio passa de R$ 6,225 bilhões previstos para cerca de R$ 7,23 bilhões. Em 2025, foram pagos R$ 7,12 bilhões, segundo a SPTrans citada pelo site."
+    ],
+    "published_at": "2026-10-30T10:01:04-03:00"
   }
 ]

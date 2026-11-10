@@ -14,6 +14,11 @@
     "topic": "Segurança pública",
     "politicians": [
       {
+        "name": "Carlos Portinho",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "role": "Autor da Emenda 85",
+        "uf": "RJ",
+        "party": "PL",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -27,14 +32,14 @@
             "title": "O Antagonista, 15/10/2026",
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
-        ],
-        "uf": "RJ",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "party": "PL",
-        "role": "Autor da Emenda 85",
-        "name": "Carlos Portinho"
+        ]
       },
       {
+        "name": "Rogério Carvalho",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "role": "Relator no Senado",
+        "uf": "SE",
+        "party": "PT",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -44,12 +49,7 @@
             "title": "Senado: tramitação da PEC 18/2025",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
-        ],
-        "uf": "SE",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "party": "PT",
-        "role": "Relator no Senado",
-        "name": "Rogério Carvalho"
+        ]
       }
     ],
     "blocks": [
@@ -303,7 +303,7 @@
   {
     "id": "notas/cmsp-aumento-auditores-controladoria",
     "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
-    "subtitle": "A Câmara Municipal de São Paulo aprovou em 4 de novembro, em segunda votação, o PL 699/2026, da gestão Ricardo Nunes (MDB), que reajusta a gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%, e os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
+    "subtitle": "A Câmara Municipal de São Paulo aprovou em 4 de novembro um aumento na gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%.",
     "house": "cmsp",
     "topic": "Notas",
     "kind": "note",
@@ -516,7 +516,7 @@
   {
     "id": "notas/senado-dividas-fim-de-mandato",
     "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
-    "subtitle": "O Senado aprovou em 4 de novembro um projeto de resolução de Renan Filho (MDB-AL) que permite a estados, ao Distrito Federal e a municípios substituir dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, a Resolução 43, de 2001, proibia esse tipo de operação nesse período, com poucas exceções.",
+    "subtitle": "O Senado aprovou em 4 de novembro uma regra que permite a estados, ao Distrito Federal e a municípios trocar dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, uma norma de 2001 proibia esse tipo de operação nesse período, com poucas exceções.",
     "house": "senado",
     "topic": "Notas",
     "kind": "note",
@@ -526,8 +526,8 @@
   },
   {
     "id": "notas/camara-postes-energia-teles",
-    "title": "Câmara aprova regras para postes e livra de multa tele que pedir regularização",
-    "subtitle": "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. Pelo texto do relator, Juscelino Filho (PSDB-MA), as teles terão 180 dias para pedir a regularização dos cabos instalados sem contrato. Quem pedir no prazo não leva multa, mas terá de pagar pelo uso e fazer as adequações técnicas.",
+    "title": "Câmara aprova regras para cabos em postes e livra de multa empresa que se regularizar",
+    "subtitle": "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. As empresas terão 180 dias para pedir a regularização dos cabos instalados sem contrato.",
     "house": "camara",
     "topic": "Notas",
     "kind": "note",
@@ -538,7 +538,7 @@
   {
     "id": "notas/camara-drones-presidios",
     "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
-    "subtitle": "A Câmara aprovou em 4 de novembro o projeto de Kim Kataguiri (Missão-SP), relatado por Nikolas Ferreira (PL-MG), que prevê reclusão de 1 a 5 anos e multa para o sobrevoo não autorizado de presídios com drones. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
+    "subtitle": "A Câmara aprovou em 4 de novembro um projeto que prevê prisão de 1 a 5 anos e multa para quem sobrevoar presídios com drones sem autorização. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
     "house": "camara",
     "topic": "Notas",
     "kind": "note",
@@ -549,7 +549,7 @@
   {
     "id": "notas/alesp-carreira-professores-adiada",
     "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
-    "subtitle": "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro. Segundo o InfoMoney, a análise de 3 de novembro foi adiada depois que professores e estudantes ocuparam a galeria da Alesp, e a Casa informou não haver previsão de voto nesta semana. O texto está na Ordem do Dia de 4 de novembro como votação adiada.",
+    "subtitle": "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro e está sem data. Segundo o InfoMoney, a análise foi adiada depois que professores e estudantes ocuparam a galeria da Assembleia Legislativa.",
     "house": "alesp",
     "topic": "Notas",
     "kind": "note",
@@ -572,43 +572,43 @@
     "reading_minutes": 2,
     "politicians": [
       {
+        "name": "Pr. Marco Feliciano",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "name": "Pr. Marco Feliciano"
+        ]
       },
       {
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "name": "Luiz Philippe de Orleans e Bragança"
+        ]
       },
       {
+        "name": "Missionário José Olimpio",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "name": "Missionário José Olimpio"
+        ]
       }
     ],
     "blocks": [
@@ -732,8 +732,8 @@
   },
   {
     "id": "notas/senado-adicional-fronteira-mp1375",
-    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
-    "subtitle": "O Senado aprovou em 28 de outubro o projeto de lei de conversão da Medida Provisória 1.375/2026, relatado por Eduardo Gomes (PL-TO). O texto amplia as carreiras de servidores federais com direito à indenização paga a quem trabalha em localidades de fronteira, entre elas servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
+    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais",
+    "subtitle": "Servidores federais que trabalham em localidades de fronteira vão receber R$ 191 por dia de trabalho a partir de janeiro de 2027, segundo o Senado. O texto aprovado pelos senadores em 28 de outubro também amplia as carreiras com direito ao pagamento.",
     "house": "senado",
     "topic": "Notas",
     "kind": "note",
@@ -744,7 +744,7 @@
   {
     "id": "notas/alesp-adesao-transparencia-fiscal",
     "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
-    "subtitle": "A Assembleia Legislativa de São Paulo informou que aprovou, em sessão extraordinária de 27 de outubro, o PL869/2026, encaminhado pelo Executivo estadual. O projeto autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal 178/2021.",
+    "subtitle": "A Assembleia Legislativa de São Paulo informou que aprovou, em 27 de outubro, um projeto do governo estadual que autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado por lei federal de 2021.",
     "house": "alesp",
     "topic": "Notas",
     "kind": "note",
@@ -754,8 +754,8 @@
   },
   {
     "id": "notas/camara-consulta-ginecologica-sus",
-    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
-    "subtitle": "O plenário da Câmara aprovou em 27 de outubro o substitutivo da relatora Flávia Morais (MDB-GO) ao PL 5.239/2025, de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG). Segundo a ementa, o texto trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas.",
+    "title": "Câmara aprova primeira consulta ginecológica no SUS a partir dos 10 anos",
+    "subtitle": "A Câmara aprovou em 27 de outubro um projeto que trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas. O texto segue para o Senado e ainda não vale.",
     "house": "camara",
     "topic": "Notas",
     "kind": "note",
@@ -765,8 +765,8 @@
   },
   {
     "id": "notas/sp-turmas-presenciais-eja",
-    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
-    "subtitle": "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
+    "title": "Comissão de vereadores de SP apoia manter aulas presenciais para jovens e adultos",
+    "subtitle": "Uma comissão da Câmara Municipal de São Paulo apoiou, em 21 de outubro, o projeto que obriga a prefeitura a manter turmas presenciais da Educação de Jovens e Adultos (EJA). São as turmas de quem volta à escola depois da idade prevista para concluir os estudos.",
     "house": "cmsp",
     "topic": "Notas",
     "kind": "note",
@@ -777,7 +777,7 @@
   {
     "id": "notas/alesp-propaganda-politica-escolas",
     "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "subtitle": "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
+    "subtitle": "Um projeto publicado pela Assembleia Legislativa de São Paulo em 23 de outubro propõe regras contra propaganda de partidos e constrangimento de estudantes durante as aulas. A autora é Carla Morando (PSD). O projeto não foi votado e não criou nenhuma proibição.",
     "house": "alesp",
     "topic": "Notas",
     "kind": "note",
@@ -788,7 +788,7 @@
   {
     "id": "notas/camara-estacionamento-atendimento-pcd",
     "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "subtitle": "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
+    "subtitle": "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento de serviços de saúde e reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. Nada muda por enquanto: o projeto não foi aprovado.",
     "house": "camara",
     "topic": "Notas",
     "kind": "note",
@@ -811,6 +811,11 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
+        "name": "Oseias de Madureira",
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
+        "role": "Autor do projeto",
+        "uf": "SP",
+        "party": "PL",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -820,25 +825,20 @@
             "title": "Metrópoles: PL filia deputados evangélicos que estavam no PSD, 16/3/2026",
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
-        "party": "PL",
-        "role": "Autor do projeto",
-        "name": "Oseias de Madureira"
+        ]
       },
       {
+        "name": "Delegado Olim",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "uf": "SP",
+        "party": "PP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "party": "PP",
-        "role": "Relator na CCJR",
-        "name": "Delegado Olim"
+        ]
       }
     ],
     "blocks": [
@@ -1438,30 +1438,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
+        "name": "Gil Diniz Bolsonaro",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "role": "Autor do projeto",
+        "uf": "SP",
+        "party": "PL",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "party": "PL",
-        "role": "Autor do projeto",
-        "name": "Gil Diniz Bolsonaro"
+        ]
       },
       {
+        "name": "Delegado Olim",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "uf": "SP",
+        "party": "PP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "uf": "SP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "party": "PP",
-        "role": "Relator na CCJR",
-        "name": "Delegado Olim"
+        ]
       }
     ],
     "blocks": [
@@ -1719,6 +1719,11 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
+        "name": "Dorinaldo Malafaia",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "role": "Autor do projeto",
+        "uf": "AP",
+        "party": "PDT",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1728,12 +1733,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "uf": "AP",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "party": "PDT",
-        "role": "Autor do projeto",
-        "name": "Dorinaldo Malafaia"
+        ]
       }
     ],
     "blocks": [
