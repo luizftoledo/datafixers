@@ -2,21 +2,18 @@
   {
     "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
     "status_label": "Aprovada; falta a sessão do Congresso que a inclui na Constituição",
-    "reading_minutes": 5,
+    "reading_minutes": 3,
     "published_at": "2026-11-04T14:30:19.374387+00:00",
     "proposal": "PEC 18/2025",
     "house": "senado",
     "edition_date": "2026-11-04",
     "trigger_date": "2026-11-03",
-    "subtitle": "A reforma da segurança vai entrar na Constituição com um trecho incluído na noite da votação, sobre o fundo que financia as polícias. O relator era contra, e o Senado tratou a mudança como simples ajuste de texto",
+    "subtitle": "O trecho entrou na noite da votação e não passou pelos deputados. Quem recebe o dinheiro e quanto ainda depende de lei",
     "kind": "daily",
     "title": "Senado aprova uso de verba da segurança pública em operações militares",
     "topic": "Segurança pública",
     "politicians": [
       {
-        "uf": "RJ",
-        "role": "Autor da Emenda 85",
-        "name": "Carlos Portinho",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -31,13 +28,13 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
+        "uf": "RJ",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
         "party": "PL",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025."
+        "role": "Autor da Emenda 85",
+        "name": "Carlos Portinho"
       },
       {
-        "uf": "SE",
-        "role": "Relator no Senado",
-        "name": "Rogério Carvalho",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -48,14 +45,17 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
+        "uf": "SE",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
         "party": "PT",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT)."
+        "role": "Relator no Senado",
+        "name": "Rogério Carvalho"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O Senado aprovou na terça-feira (3) a PEC da Segurança Pública, uma mudança na Constituição que reorganiza o combate ao crime no país. Na noite da votação, os senadores acrescentaram um trecho que os deputados não votaram: o dinheiro do Fundo Nacional de Segurança Pública, criado para financiar os órgãos de segurança, também poderá servir a operações de Garantia da Lei e da Ordem (GLO). São as operações em que militares atuam na segurança pública, como na Copa das Confederações de 2013 e no Rio de Janeiro em 2017 e 2018.",
+        "text": "O Senado aprovou na terça-feira (3) uma mudança na Constituição que permite usar dinheiro do fundo que financia os órgãos de segurança em operações feitas por militares. O trecho entrou na noite da votação e não passou pelos deputados.",
         "source_ids": [
           "S1",
           "S2",
@@ -65,21 +65,85 @@
         ]
       },
       {
+        "type": "heading",
+        "text": "O que muda",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "O fundo empenhou R$ 2,22 bilhões em 2025, segundo o Portal da Transparência, e a PEC manda repassar metade a estados e ao Distrito Federal. Se uma lei autorizar o gasto, as operações militares vão disputar esse dinheiro. O relator da PEC, Rogério Carvalho (PT-SE), foi contra a emenda que deu origem ao trecho. Escreveu que ela \"afasta o Fundo de sua finalidade\", \"dilui os recursos\" das forças de segurança e que as necessidades militares devem ser pagas \"por dotações próprias\", ou seja, pelo orçamento das Forças Armadas.",
+        "text": "A mudança está na reforma da segurança pública, que reorganiza o combate ao crime no país. Pela frase lida na sessão, o dinheiro do Fundo Nacional de Segurança Pública poderá ser distribuído a estados, Distrito Federal e municípios \"inclusive para fins de operações de garantia da lei e da ordem\". São as operações de Garantia da Lei e da Ordem (GLO), em que militares atuam na segurança pública, como na Copa das Confederações de 2013 e no Rio de Janeiro em 2017 e 2018.",
         "source_ids": [
           "S1",
+          "S2",
           "S3",
-          "S7"
+          "S4",
+          "S5",
+          "S6",
+          "S8"
         ]
       },
       {
         "type": "paragraph",
-        "text": "A proposta foi de Carlos Portinho (PL-RJ), líder do PL no Senado. Ele defendeu que os militares sejam ressarcidos quando chamados a atuar: \"É o Estado que pede\", disse. O líder do MDB, Eduardo Braga (AM), negociou um acordo com Portinho e o relator na própria sessão, e o trecho passou por 67 votos a 0.",
+        "text": "A frase vale também para o Fundo Penitenciário Nacional. A Agência Senado informou que o trecho permite ressarcir as Forças Armadas, mas a frase não cita as Forças Armadas. Quem recebe e quanto ainda terá de ser definido em lei. O texto final não constava da lista de documentos da proposta na manhã de quarta (4), e a referência é a leitura feita na sessão.",
         "source_ids": [
           "S2",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quando vale",
+        "source_ids": []
+      },
+      {
+        "type": "practical",
+        "text": "Nada muda de imediato. Se a frase lida na sessão for a publicada, a Constituição passará a citar operações militares entre os usos dos fundos de segurança e de presídios. O trecho diz que os recursos \"poderão\" ser distribuídos, e os detalhes dependem de lei.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custa e quem paga",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo comprometeu R$ 2,22 bilhões em gastos em 2025, segundo o Portal da Transparência, e a reforma manda repassar metade a estados e ao Distrito Federal. Se uma lei autorizar, as operações militares vão disputar esse dinheiro. Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações desse tipo de 2010 a janeiro de 2022, com parte dos valores estimada. A média é de cerca de R$ 220 milhões por ano, ou 10% do que o fundo comprometeu em 2025. Os documentos da votação não trazem estimativa do efeito sobre o fundo.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo também perdeu uma receita prevista pelos deputados. O Senado retirou o artigo que destinava às verbas de segurança e de presídios 30% da arrecadação das bets, depois de descontar prêmios, imposto e despesas das empresas.",
+        "source_ids": [
+          "S1",
+          "S5",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem propôs e quem foi contra",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A proposta foi de Carlos Portinho (PL-RJ), líder do PL no Senado. Ele defendeu que os militares sejam ressarcidos quando chamados a atuar: \"É o Estado que pede\", disse. Rogério Carvalho (PT-SE), senador responsável pelo texto da reforma, foi contra. Escreveu que a ideia \"afasta o Fundo de sua finalidade\" e \"dilui os recursos\" das forças de segurança, e que as necessidades militares devem ser pagas pelo orçamento das Forças Armadas. O líder do MDB, Eduardo Braga (AM), negociou um acordo entre os dois na própria sessão, e o trecho passou por 67 votos a 0.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
           "S5",
           "S6",
+          "S7",
           "S9"
         ]
       },
@@ -90,20 +154,14 @@
       },
       {
         "type": "paragraph",
-        "text": "Uma mudança na Constituição precisa passar pela Câmara e pelo Senado. Se os senadores alteram o conteúdo, o texto volta aos deputados, como lembrou a CNN Brasil antes da votação. Carvalho rejeitou outros pedidos de mudança justamente para evitar essa volta: \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado.",
-        "source_ids": [
-          "S6",
-          "S12"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O acordo foi incluir o trecho como \"emenda de redação\", nome dado a ajustes que não mudam o conteúdo. A frase, porém, não está no texto aprovado pela Câmara. O presidente do Senado, Davi Alcolumbre (União-AP), relatou em plenário que a equipe técnica da Casa apontava o problema: \"esse texto não estava no primeiro turno\", a primeira das duas votações do Senado. O trecho foi votado mesmo assim, e a proposta seguiu sem voltar aos deputados. Em outubro, Portinho havia dito, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com o retorno à Câmara.",
+        "text": "Uma mudança na Constituição precisa passar pela Câmara e pelo Senado. Se os senadores alteram o conteúdo, o texto volta aos deputados. O acordo foi incluir o trecho como \"emenda de redação\", nome dado a ajustes que não mudam o conteúdo. A frase, porém, não está no texto aprovado pela Câmara. O presidente do Senado, Davi Alcolumbre (União-AP), relatou que a equipe técnica da Casa apontava o problema: \"esse texto não estava no primeiro turno\", a primeira das duas votações do Senado. O trecho foi votado mesmo assim, e a proposta seguiu sem voltar aos deputados.",
         "source_ids": [
           "S1",
           "S2",
           "S5",
-          "S9"
+          "S6",
+          "S9",
+          "S12"
         ]
       },
       {
@@ -115,52 +173,8 @@
         ]
       },
       {
-        "type": "heading",
-        "text": "O que foi anunciado e o que o texto diz",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "A Agência Senado informou que o trecho permite ressarcir as Forças Armadas. A frase lida em plenário não cita as Forças Armadas. Ela diz que os recursos poderão ser distribuídos a estados, Distrito Federal e municípios, \"inclusive para fins de operações de garantia da lei e da ordem\", na forma de uma lei. Quem recebe e quanto ainda terá de ser definido. A frase vale também para o Fundo Penitenciário Nacional, que a emenda original não mencionava. O texto final não constava da lista de documentos da PEC na manhã desta quarta (4), e a referência é a leitura em plenário.",
-        "source_ids": [
-          "S2",
-          "S4",
-          "S5",
-          "S6"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Quanto custam essas operações",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média é de cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. A Copa das Confederações custou R$ 418 milhões, e a operação no Rio, R$ 234 milhões. A comparação dá a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito sobre o fundo.",
-        "source_ids": [
-          "S2",
-          "S3",
-          "S7",
-          "S8"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O fundo também perdeu uma receita prevista pelos deputados. O Senado retirou o artigo que destinava às verbas de segurança e de presídios 30% da arrecadação das bets, depois de descontar prêmios, imposto e despesas das empresas. Esse corte foi noticiado em setembro.",
-        "source_ids": [
-          "S1",
-          "S5",
-          "S11"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "A outra disputa da noite: maioridade penal",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "As propostas de reduzir a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram retiradas da PEC e vão tramitar à parte, por 38 votos a 36. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram pela separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve.",
+        "type": "votes",
+        "text": "Primeira votação da reforma: 73 a 0. Trecho sobre as operações militares: 67 a 0. Segunda votação: 75 a 0. Retirada das propostas de reduzir a maioridade penal, que serão analisadas à parte: 38 a 36, com uma abstenção.",
         "source_ids": [
           "S5",
           "S6",
@@ -168,22 +182,8 @@
         ]
       },
       {
-        "type": "practical",
-        "text": "Na prática, se a frase lida em plenário for a publicada, a Constituição passará a citar operações militares de GLO entre os usos dos fundos de segurança e de presídios. Nada muda de imediato: o trecho diz que os recursos \"poderão\" ser distribuídos, e os detalhes dependem de lei.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "votes",
-        "text": "Primeira votação: 73 a 0. Trecho sobre as operações militares: 67 a 0. Segunda votação: 75 a 0. Separação da maioridade penal: 38 a 36, com uma abstenção.",
-        "source_ids": [
-          "S5"
-        ]
-      },
-      {
         "type": "next",
-        "text": "A PEC entra na Constituição em sessão do Congresso, ainda sem data na página da proposta até a manhã desta quarta. As propostas sobre maioridade penal seguem em separado no Senado, e uma comissão da Câmara analisa o mesmo tema.",
+        "text": "A reforma entra na Constituição em sessão do Congresso, ainda sem data na página da proposta até a manhã de quarta (4). As propostas sobre maioridade penal seguem em separado no Senado, e uma comissão da Câmara analisa o mesmo tema.",
         "source_ids": [
           "S3",
           "S5",
@@ -298,7 +298,7 @@
         "published_date": "2026-11-04"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-10T09:10:06.844000+00:00"
   },
   {
     "id": "notas/cmsp-aumento-auditores-controladoria",
@@ -317,7 +317,7 @@
     "edition_date": "2026-11-03",
     "subtitle": "Quando o governador barra um projeto, a Assembleia tem 30 dias para decidir se aceita ou derruba o veto. Desde 2023, nenhum saiu da lista, que inclui propostas sobre hospitais e postos de combustível",
     "id": "2026-11-03-alesp-acumula-798-vetos-sem-votacao-nenhum-dos-519-que-estavam-na-pauta-em-marco-de-2023-saiu-dela",
-    "reading_minutes": 5,
+    "reading_minutes": 3,
     "published_at": "2026-11-03T14:38:59.977438+00:00",
     "status_label": "Levantamento de dados",
     "kind": "investigation",
@@ -328,7 +328,22 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Quando o governador veta um projeto aprovado pelos deputados, a Assembleia Legislativa de São Paulo (Alesp) deveria decidir em 30 dias se aceita ou derruba o veto. A pauta do plenário desta terça-feira (3) mostra outra realidade: são 798 vetos à espera. Enquanto um veto total não é votado, o projeto não vira lei. Um levantamento do Datafixers nas pautas oficiais mostra que nenhum dos 519 vetos que estavam na lista em 30 de março de 2023 saiu dela. Desde então entraram mais 279, alta de 54%.",
+        "text": "A Assembleia Legislativa de São Paulo tem 798 vetos de governadores à espera de votação. Veto é quando o governador barra um projeto aprovado pelos deputados. Enquanto um veto total não é votado, o projeto não vira lei.",
+        "source_ids": [
+          "S1",
+          "S3",
+          "S7",
+          "S12"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que o levantamento mostra",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A Assembleia deveria decidir em 30 dias se aceita ou derruba cada veto. Um levantamento do Datafixers nas pautas oficiais mostra que nenhum dos 519 vetos que estavam na lista em março de 2023 saiu dela. Desde então entraram mais 279, alta de 54%. Dos 843 itens da pauta de terça-feira (3), 798 são vetos.",
         "source_ids": [
           "S1",
           "S3",
@@ -338,47 +353,45 @@
       },
       {
         "type": "paragraph",
-        "text": "Vencido o prazo de 30 dias, o veto vai para a pauta da sessão seguinte e fica lá até ser votado. Por isso a lista só aumenta: dos 843 itens da pauta desta terça, 798 são vetos. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
+        "text": "Dos 798, 593 são vetos totais, que barram o projeto inteiro, e 205 são parciais. Ao menos 190 atingem projetos apresentados a partir de 2023, já no governo Tarcísio de Freitas (Republicanos). Entre julho e esta terça, a lista ficou igual: nenhum veto entrou e nenhum saiu.",
         "source_ids": [
-          "S7"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A regra já foi mais dura. Em fevereiro de 2006, a Emenda Constitucional 21 determinou que o veto vencido trancasse as demais proposições até ser votado. Três meses depois, a Emenda 22 retirou essa expressão, com efeito retroativo a 15 de fevereiro. No Congresso, o veto presidencial vencido continua a travar a pauta das sessões conjuntas.",
-        "source_ids": [
-          "S7",
-          "S11"
+          "S8",
+          "S12"
         ]
       },
       {
         "type": "heading",
-        "text": "Projetos de 2000 ainda à espera",
+        "text": "Que projetos estão parados",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "O veto mais antigo da lista atinge o PL 312/2000, de Campos Machado, que obrigava postos a informar a natureza, a procedência e a qualidade dos combustíveis vendidos. Ao todo, 142 vetos atingem projetos apresentados antes de 2015, e 368, projetos anteriores a 2019. Entre eles estão o PL 1126/2003, que criava classes hospitalares nos hospitais do SUS paulista, e o PL 551/2003, que obrigava a instalação de hidrômetros individuais em cada unidade de consumo.",
+        "text": "O veto mais antigo atinge um projeto de 2000, de Campos Machado, que obrigava postos a informar a procedência e a qualidade dos combustíveis vendidos. Ao todo, 142 vetos atingem projetos apresentados antes de 2015. Entre eles estão um que criava classes hospitalares nos hospitais do SUS paulista e outro que obrigava a instalação de hidrômetros individuais em cada unidade de consumo.",
         "source_ids": [
           "S1",
           "S12"
         ]
       },
       {
+        "type": "heading",
+        "text": "Por que a lista não anda",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "O estoque passou de 519 vetos em março de 2023 para 666 em novembro de 2024, 743 em novembro de 2025 e 798 em julho de 2026. Entre julho e esta terça, a lista ficou igual: nenhum veto entrou e nenhum saiu. Dos 798, 593 são vetos totais, que barram o projeto inteiro, e 205 são parciais. Ao menos 190 atingem projetos apresentados a partir de 2023, já no governo Tarcísio de Freitas (Republicanos).",
+        "text": "Vencido o prazo de 30 dias, o veto vai para a pauta da sessão seguinte e fica lá até ser votado. Para derrubá-lo, é preciso o voto da maioria absoluta dos deputados. A regra já foi mais dura: em fevereiro de 2006, um veto vencido passou a travar as demais votações. Três meses depois, essa trava foi retirada. No Congresso, o veto presidencial vencido continua a travar a pauta das sessões conjuntas.",
         "source_ids": [
-          "S12",
-          "S8"
+          "S7",
+          "S11"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O acúmulo já tinha sido noticiado. Em 13 de julho, o Correio da Manhã contou 796 vetos na pauta, 188 deles da gestão Tarcísio, com saúde (39) e educação (25) como as áreas mais atingidas. O jornal registrou que, pelo regimento interno, os vetos têm prioridade e precisam ser votados antes dos projetos comuns; só os que tramitam em urgência passam à frente. O primeiro item da pauta desta terça, em regime de urgência, é o mesmo de março de 2023: o PLC 31/2017, do governo, que altera a lei de vencimentos dos procuradores do Estado, com votação adiada.",
+        "text": "Pelas regras internas da Assembleia, os vetos têm prioridade sobre os projetos comuns, registrou o Correio da Manhã em julho. Só os projetos com pedido de pressa passam à frente.",
         "source_ids": [
-          "S8",
           "S1",
-          "S3"
+          "S3",
+          "S8"
         ]
       },
       {
@@ -388,7 +401,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Em abril de 2025, o Brasil de Fato informou que Tarcísio havia vetado 238 projetos de deputados em pouco mais de dois anos e atribuiu a falta de votação ao presidente da Alesp, André do Prado (PL), aliado do governador. Segundo o site, o regimento permite votar os vetos, mas a decisão de pautá-los cabe ao presidente, que se recusava a fazê-lo. Na mesma reportagem, Paula Nunes (PSOL) criticou que a Assembleia sirva apenas para chancelar os projetos do governador, e Reis (PT) defendeu seu projeto que cria o Dia do Veto, o PL 1476/2023, para que o plenário se dedique às propostas vetadas em 28 de setembro. O projeto recebeu parecer favorável na Comissão de Direitos Humanos em fevereiro de 2026, segundo a tramitação oficial.",
+        "text": "Em abril de 2025, o Brasil de Fato informou que Tarcísio havia vetado 238 projetos de deputados em pouco mais de dois anos. O site atribuiu a falta de votação ao presidente da Assembleia, André do Prado (PL), aliado do governador, a quem cabe decidir o que entra em votação.",
         "source_ids": [
           "S9",
           "S13"
@@ -396,7 +409,15 @@
       },
       {
         "type": "paragraph",
-        "text": "A resposta pública de Prado, registrada pela Jovem Pan em maio de 2025, foi criar um grupo de trabalho com a Casa Civil do governo para ajustar os projetos antes da votação e reduzir os vetos. Ele também pediu à Secretaria Geral Parlamentar um estudo sobre os vetos da Ordem do Dia, para avaliar a relevância atual de cada proposta e se alguma já foi contemplada por lei posterior. Entre as pautas de novembro de 2024 e de novembro de 2026, período que inclui o anúncio, nenhum veto foi retirado, e o estoque subiu de 666 para 798.",
+        "text": "Na mesma reportagem, Paula Nunes (PSOL) criticou que a Assembleia sirva apenas para confirmar os projetos do governador. Reis (PT) defendeu seu projeto que cria o Dia do Veto, em 28 de setembro, para que os deputados se dediquem às propostas vetadas.",
+        "source_ids": [
+          "S9",
+          "S13"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A resposta pública de Prado, registrada pela Jovem Pan em maio de 2025, foi criar um grupo de trabalho com o governo para ajustar os projetos antes da votação e reduzir os vetos. Ele também pediu um estudo sobre a relevância atual de cada proposta vetada. Entre novembro de 2024 e novembro de 2026, nenhum veto foi retirado, e a lista subiu de 666 para 798.",
         "source_ids": [
           "S10",
           "S12"
@@ -404,21 +425,21 @@
       },
       {
         "type": "paragraph",
-        "text": "No Congresso Nacional, onde as duas casas votam vetos presidenciais em sessão conjunta, havia 97 vetos aguardando análise no fim de julho, segundo o Correio da Manhã. A última sessão destinada a eles tinha ocorrido em maio, e outra, prevista para junho, foi cancelada por falta de acordo.",
+        "text": "No Congresso Nacional, havia 97 vetos presidenciais aguardando análise no fim de julho, segundo o Correio da Manhã.",
         "source_ids": [
           "S11"
         ]
       },
       {
         "type": "practical",
-        "text": "Na prática, enquanto um veto total não é votado, o projeto aprovado pelos deputados não vira lei. Se a Assembleia rejeitar o veto pela maioria absoluta, o texto volta ao governador para promulgação; se ele não o fizer em 48 horas, a promulgação cabe ao presidente da Assembleia. Nos vetos parciais, a pendência se limita aos dispositivos barrados pelo governo.",
+        "text": "Na prática, enquanto um veto total não é votado, o projeto aprovado pelos deputados não vira lei. Se a Assembleia derrubar o veto pela maioria absoluta, o texto volta ao governador para ser publicado como lei. Se ele não o fizer em 48 horas, a tarefa cabe ao presidente da Assembleia.",
         "source_ids": [
           "S7"
         ]
       },
       {
         "type": "next",
-        "text": "Os 798 vetos constam da Ordem do Dia da 163ª sessão ordinária, marcada para esta terça. A lista se repete a cada sessão até que cada veto seja votado.",
+        "text": "Os 798 vetos constam da pauta da sessão de terça-feira (3). A lista se repete a cada sessão até que cada veto seja votado.",
         "source_ids": [
           "S1",
           "S7"
@@ -490,7 +511,7 @@
         "published_date": "2026-11-03"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-10T09:10:06.856096+00:00"
   },
   {
     "id": "notas/senado-dividas-fim-de-mandato",
@@ -548,59 +569,64 @@
     "published_at": "2026-10-27T12:54:28.418292+00:00",
     "house": "camara",
     "trigger_date": "2026-10-27",
-    "reading_minutes": 4,
+    "reading_minutes": 2,
     "politicians": [
       {
-        "uf": "SP",
-        "role": "Parlamentar citado",
-        "name": "Pr. Marco Feliciano",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
+        "role": "Parlamentar citado",
+        "name": "Pr. Marco Feliciano"
       },
       {
-        "uf": "SP",
-        "role": "Parlamentar citado",
-        "name": "Luiz Philippe de Orleans e Bragança",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
+        "role": "Parlamentar citado",
+        "name": "Luiz Philippe de Orleans e Bragança"
       },
       {
-        "uf": "SP",
-        "role": "Parlamentar citado",
-        "name": "Missionário José Olimpio",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado."
+        "role": "Parlamentar citado",
+        "name": "Missionário José Olimpio"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Três deputados federais do PL por São Paulo gastaram R$ 540,7 mil de dinheiro público em 2026 para divulgar seus mandatos. Pr. Marco Feliciano, Luiz Philippe de Orleans e Bragança e Missionário José Olimpio respondem por 39% do R$ 1,39 milhão que os deputados do partido no estado gastaram com isso, segundo a base de despesas da Câmara consultada em 27 de outubro.",
+        "text": "Três deputados federais do PL por São Paulo gastaram R$ 540,7 mil de dinheiro público em 2026 para divulgar seus mandatos. O valor equivale a 39% do R$ 1,39 milhão que os deputados do partido no estado gastaram com isso.",
         "source_ids": [
           "S4"
         ]
       },
       {
+        "type": "heading",
+        "text": "O que os valores mostram",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "Feliciano tem o maior valor: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. O dinheiro sai da cota parlamentar, a verba que a Câmara reserva para as despesas do mandato.",
+        "text": "Os três são Pr. Marco Feliciano, Luiz Philippe de Orleans e Bragança e Missionário José Olimpio. Feliciano tem o maior valor: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. Os dados são da base de despesas da Câmara, consultada em 27 de outubro.",
         "source_ids": [
           "S4"
         ]
@@ -613,18 +639,6 @@
         ]
       },
       {
-        "type": "practical",
-        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite esse tipo de despesa, mas proíbe gastos de caráter eleitoral. O fato de haver uma despesa de divulgação, por si só, não demonstra que houve propaganda de campanha ou uso irregular da verba.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que os valores mostram",
-        "source_ids": []
-      },
-      {
         "type": "paragraph",
         "text": "A conta considera apenas deputados do PL que representam São Paulo. Não é um ranking nacional nem uma comparação entre partidos. O R$ 1,39 milhão se refere só à divulgação: não inclui passagens, combustível, aluguel de escritório ou outros gastos.",
         "source_ids": [
@@ -633,9 +647,28 @@
       },
       {
         "type": "paragraph",
-        "text": "O levantamento foi até setembro, mas os gastos de divulgação encontrados são de janeiro a junho. Não há registros de julho a setembro. A data usada é o mês a que a Câmara atribui a despesa, não o dia em que o eleitor viu uma publicação ou um anúncio.",
+        "text": "Os gastos de divulgação encontrados são de janeiro a junho. Não há registros de julho a setembro.",
         "source_ids": [
           "S4"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que a regra permite",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O dinheiro sai da cota parlamentar, a verba que a Câmara reserva para as despesas do mandato.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite esse tipo de despesa, mas proíbe gastos de caráter eleitoral. Uma despesa de divulgação, por si só, não demonstra que houve propaganda de campanha ou uso irregular da verba.",
+        "source_ids": [
+          "S2"
         ]
       },
       {
@@ -647,26 +680,26 @@
       },
       {
         "type": "heading",
-        "text": "Redes sociais e prestação de contas",
+        "text": "O que a soma não responde",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "Em reportagem da Lupa publicada em 6 de agosto de 2026 sobre gastos nacionais com redes sociais, Guilherme France, advogado e pesquisador na Transparência Internacional, explicou que parte do dinheiro destinado às plataformas pode passar por agências contratadas pelos parlamentares. A observação trata daquele levantamento, e não destes três deputados.",
+        "text": "Em reportagem da Lupa de agosto de 2026 sobre gastos nacionais com redes sociais, o advogado Guilherme France, pesquisador na Transparência Internacional, explicou que parte do dinheiro pode passar por agências contratadas pelos parlamentares. A observação trata daquele levantamento, e não destes três deputados.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "paragraph",
-        "text": "France também defendeu que as notas fiscais tragam a quantidade de publicações impulsionadas, o período e o alcance, para permitir avaliar se o preço pago foi adequado. São duas perguntas diferentes: quanto foi gasto e o que foi entregue com aquele dinheiro. A soma das despesas responde só à primeira.",
+        "text": "France também defendeu que as notas fiscais tragam a quantidade de publicações pagas, o período e o alcance. São duas perguntas diferentes: quanto foi gasto e o que foi entregue com aquele dinheiro. A soma das despesas responde só à primeira.",
         "source_ids": [
           "S1"
         ]
       },
       {
         "type": "next",
-        "text": "Os valores desta reportagem correspondem aos registros disponíveis em 27 de outubro. A Câmara dá até 90 dias para a apresentação dos comprovantes e debita a despesa no mês a que ela se refere. Novos documentos podem, portanto, alterar os totais de meses anteriores.",
+        "text": "Os valores correspondem aos registros disponíveis em 27 de outubro. A Câmara dá até 90 dias para a apresentação dos comprovantes, e novos documentos podem alterar os totais de meses anteriores.",
         "source_ids": [
           "S2"
         ]
@@ -695,7 +728,7 @@
         "published_date": "2026-10-27"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-10T09:10:07.157998+00:00"
   },
   {
     "id": "notas/senado-adicional-fronteira-mp1375",
@@ -769,8 +802,8 @@
     "published_at": "2026-11-05T14:35:07.863748+00:00",
     "proposal": "PL 588/2026",
     "id": "2026-11-05-feriado-proposto-para-o-autismo-em-sp-garante-so-a-folga-exames-e-campanhas-sao-opcionais",
-    "reading_minutes": 5,
-    "subtitle": "Texto não obriga nenhuma ação de saúde nem informa custo, e em fevereiro Tarcísio vetou outro feriado estadual por considerá-lo inconstitucional",
+    "reading_minutes": 3,
+    "subtitle": "Projeto não obriga nenhuma ação de saúde nem informa custo. Em fevereiro, o governador barrou outro feriado estadual",
     "edition_date": "2026-11-05",
     "trigger_date": "2026-11-04",
     "topic": "Saúde e direitos",
@@ -778,9 +811,6 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
-        "uf": "SP",
-        "role": "Autor do projeto",
-        "name": "Oseias de Madureira",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -791,119 +821,44 @@
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
         "party": "PL",
-        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026."
+        "role": "Autor do projeto",
+        "name": "Oseias de Madureira"
       },
       {
-        "uf": "SP",
-        "role": "Relator na CCJR",
-        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "party": "PP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Um projeto na Assembleia Legislativa de São Paulo quer transformar o 2 de abril, Dia da Conscientização sobre o Autismo, em feriado em todo o estado. O único efeito automático do texto é o feriado. Campanhas, triagem, exames e atendimento em unidade móvel aparecem com a palavra \"poderá\": só acontecem se o governo decidir fazê-los.",
+        "text": "Um projeto na Assembleia Legislativa de São Paulo quer transformar o 2 de abril, Dia da Conscientização sobre o Autismo, em feriado em todo o estado. O texto garante só a folga: campanhas, exames e atendimento só acontecem se o governo decidir fazê-los.",
         "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O estado tem cerca de 547 mil pessoas com diagnóstico de autismo, o maior número do país, segundo dados do Censo 2022 publicados pelo Diario de Pernambuco em maio de 2025. Na justificativa do projeto, o autor, Oseias de Madureira (PL), diz que muitas delas enfrentam dificuldade para conseguir atendimento especializado, terapias, exames e diagnóstico precoce, com longas filas de espera. O texto não cria vaga, prazo de atendimento nem verba específica para isso.",
-        "source_ids": [
-          "S12",
-          "S1"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O projeto passou em 4 de novembro pela Comissão de Constituição, Justiça e Redação, que examina se as propostas respeitam a lei. A notícia oficial da Assembleia diz que o feriado teria por finalidade conscientizar a sociedade e ampliar o conhecimento sobre o autismo. Não menciona que as ações são opcionais nem que, em fevereiro, o governador Tarcísio de Freitas vetou outro feriado estadual por considerá-lo inconstitucional.",
-        "source_ids": [
-          "S3",
-          "S4",
-          "S5"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que o texto manda fazer",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "O artigo 1º institui o feriado. O artigo 3º diz que o poder público \"poderá\" promover ações educativas, de saúde e de assistência, em parceria com instituições públicas e privadas. A unidade móvel de triagem e exames também é uma possibilidade, não uma obrigação. Sobre o gasto, o texto só diz que ele sairá do orçamento já existente, sem informar valor. Também não trata do funcionamento de escolas, ambulatórios e centros de terapia nesse dia, embora o autor cite as dificuldades de inclusão nas escolas como um dos motivos do projeto e espere palestras e seminários na data.",
-        "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "São Paulo já tem uma data para o tema. A Lei 17.353, de 2021, criou a Semana de Conscientização sobre o Autismo, na primeira semana de abril, que coincide com o dia 2. Essa lei nasceu maior: incluía um programa permanente de orientação sobre autismo para profissionais de saúde e educação. O então governador João Doria vetou essa parte, com o argumento de que os deputados não podem determinar ações do Executivo, e as secretarias de Saúde e Educação disseram que já faziam capacitação. O veto segue sem votação na pauta da Assembleia mais de cinco anos depois.",
-        "source_ids": [
-          "S9",
-          "S10",
-          "S11"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O veto de fevereiro",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Em 26 de fevereiro, Tarcísio vetou por inteiro o projeto de Gil Diniz (PL) que tornava o 25 de janeiro feriado em todo o estado. A mensagem de veto diz que criar feriado é assunto de direito do trabalho, reservado à União, e que a lei federal de 1995 permite ao estado um único feriado próprio, sua data magna. Em São Paulo, é o 9 de julho. O governo admite exceção, especialmente para datas de alta importância para grupos étnicos. Esse veto também aguarda votação.",
-        "source_ids": [
-          "S5",
-          "S11"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A análise do projeto do autismo na comissão não trata de nada disso. O voto do relator, Delegado Olim (PP), resume o projeto e conclui em uma frase que a matéria é de natureza legislativa e de iniciativa concorrente, isto é, que deputados podem propor o tema. Não cita a lei federal, o veto de fevereiro nem decisões da Justiça. O projeto do 25 de janeiro recebeu conclusão parecida na comissão antes de ser vetado. Na reunião de 4 de novembro, a comissão deu aval a 105 projetos.",
-        "source_ids": [
-          "S2",
-          "S14",
-          "S3"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O argumento do veto não encerra a discussão. Em 19 de junho, depois do veto, o Supremo Tribunal Federal manteve por unanimidade o feriado estadual de Corpus Christi no Rio de Janeiro, contestado pela Confederação Nacional do Comércio. No voto, a ministra Cármen Lúcia afirma que a lei federal não impede estados de criar outros feriados para proteger bens culturais imateriais e chama de premissa de senso comum a ideia de que o Brasil tem feriados demais. O projeto paulista, porém, não apresenta o 2 de abril como patrimônio cultural: seu objetivo declarado é a conscientização, a orientação e a promoção da saúde.",
-        "source_ids": [
-          "S8",
-          "S7",
           "S1"
         ]
       },
       {
         "type": "heading",
-        "text": "Outros feriados na fila",
+        "text": "O que muda",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "Desde 2023, deputados paulistas de PT, PSDB, PSOL, PL e PSD apresentaram ao menos oito projetos para criar feriado estadual, segundo levantamento nos dados abertos da Assembleia. Um virou lei, o da Consciência Negra, de 2023, data que depois se tornou feriado nacional. Um foi vetado, o do 25 de janeiro. Os outros seis seguem sem decisão final: terça de Carnaval, Quarta-Feira de Cinzas para bancos, Iemanjá, Corpus Christi, Reforma Protestante e autismo. O da Reforma Protestante teve pedido de urgência publicado.",
+        "text": "O artigo 1º cria o feriado. O artigo 3º diz que o poder público \"poderá\" promover ações educativas, de saúde e de assistência, em parceria com instituições públicas e privadas. A unidade móvel de triagem e exames também é uma possibilidade, não uma obrigação.",
         "source_ids": [
-          "S6",
-          "S7"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O projeto do autismo não traz estimativa do que um dia a mais de feriado custaria ao comércio, aos serviços ou ao governo. No caso do Rio, a Confederação do Comércio alegou elevados custos para a economia, argumento que o Supremo não aceitou. Até esta publicação, a defesa conhecida do projeto é a justificativa do autor, para quem a data permitirá um dia de reflexão e mobilização. Não foi localizada manifestação pública de entidades de pessoas autistas ou de empresas sobre a proposta.",
-        "source_ids": [
-          "S1",
-          "S7"
+          "S1"
         ]
       },
       {
@@ -915,8 +870,104 @@
         ]
       },
       {
+        "type": "heading",
+        "text": "Quem é afetado",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O estado tem cerca de 547 mil pessoas com diagnóstico de autismo, o maior número do país, segundo dados do Censo 2022 publicados pelo Diario de Pernambuco. O autor do projeto, Oseias de Madureira (PL), diz que muitas delas enfrentam longas filas de espera por terapias, exames e diagnóstico. O texto não cria vaga, prazo de atendimento nem verba específica para isso.",
+        "source_ids": [
+          "S1",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto também não trata do funcionamento de escolas, ambulatórios e centros de terapia no dia do feriado.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custa",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto só diz que o gasto sairá do orçamento já existente, sem informar valor. Também não traz estimativa do que um dia a mais de feriado custaria ao comércio, aos serviços ou ao governo.",
+        "source_ids": [
+          "S1",
+          "S7"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que pode barrar o feriado",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em 26 de fevereiro, o governador Tarcísio de Freitas barrou por inteiro o projeto de Gil Diniz (PL) que tornava o 25 de janeiro feriado em todo o estado. O argumento foi que criar feriado é assunto de direito do trabalho, reservado ao governo federal. Segundo o governo paulista, a lei federal de 1995 permite ao estado um único feriado próprio, que em São Paulo é o 9 de julho.",
+        "source_ids": [
+          "S5",
+          "S11"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Esse argumento não encerra a discussão. Em 19 de junho, o Supremo Tribunal Federal manteve por unanimidade o feriado estadual de Corpus Christi no Rio de Janeiro. A ministra Cármen Lúcia afirmou que a lei federal não impede estados de criar outros feriados para proteger bens culturais imateriais. O projeto paulista, porém, não apresenta o 2 de abril como patrimônio cultural.",
+        "source_ids": [
+          "S1",
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto passou em 4 de novembro pela comissão que examina se as propostas respeitam a lei. A análise não cita a lei federal, a decisão de fevereiro nem decisões da Justiça. Na mesma reunião, a comissão deu aval a 105 projetos.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S14"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Outros feriados na fila",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Desde 2023, deputados paulistas de PT, PSDB, PSOL, PL e PSD apresentaram ao menos oito projetos para criar feriado estadual, segundo levantamento nos dados abertos da Assembleia. Um virou lei, o da Consciência Negra, data que depois se tornou feriado nacional. Um foi barrado pelo governador, o do 25 de janeiro. Os outros seis seguem sem decisão final.",
+        "source_ids": [
+          "S6",
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "São Paulo já tem uma data para o tema: uma lei de 2021 criou a Semana de Conscientização sobre o Autismo, na primeira semana de abril.",
+        "source_ids": [
+          "S9",
+          "S10",
+          "S11"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Não foi localizada manifestação pública de entidades de pessoas autistas ou de empresas sobre a proposta.",
+        "source_ids": [
+          "S1",
+          "S7"
+        ]
+      },
+      {
         "type": "next",
-        "text": "O projeto ainda precisa passar pelas comissões de Defesa dos Direitos das Pessoas com Deficiência e de Finanças, Orçamento e Planejamento. Depois, depende da votação dos deputados e da decisão do governador, que pode sancionar ou vetar.",
+        "text": "O projeto ainda precisa passar por duas comissões, a de direitos das pessoas com deficiência e a de finanças. Depois, depende da votação dos deputados e da decisão do governador, que pode aceitar ou barrar o texto.",
         "source_ids": [
           "S4"
         ]
@@ -1014,15 +1065,16 @@
         "kind": "primary",
         "published_date": "2025-08-20"
       }
-    ]
+    ],
+    "updated_at": "2026-11-10T09:10:06.851781+00:00"
   },
   {
     "house": "senado",
     "published_at": "2026-11-04T18:15:50.590164+00:00",
     "kind": "daily",
-    "reading_minutes": 5,
-    "title": "Proposta de maioridade penal no Senado não inclui tráfico, 28% dos casos de jovens internados",
-    "subtitle": "A votação no Senado ficou para depois da Câmara. O texto do líder do PT vale só para crimes hediondos, e a lei não põe o tráfico de drogas nessa lista",
+    "reading_minutes": 3,
+    "title": "Proposta de maioridade penal no Senado deixa de fora o tráfico de drogas",
+    "subtitle": "O tráfico é o segundo ato mais comum entre jovens internados. A votação ficou para depois da Câmara, e nada muda por enquanto",
     "topic": "Segurança pública",
     "trigger_date": "2026-11-03",
     "edition_date": "2026-11-04",
@@ -1033,7 +1085,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A proposta para reduzir a maioridade penal com mais chance de acordo no Senado não alcança o tráfico de drogas, o segundo ato mais comum entre os jovens internados no Brasil. O texto do líder do PT, Camilo Santana (CE), baixa a idade de 18 para 16 anos apenas para \"crimes considerados formalmente hediondos\", e o tráfico não está na lista legal desses crimes. Na quarta-feira (4), o presidente do Senado, Davi Alcolumbre (União-AP), avisou que não vai votar o tema agora e vai esperar a Câmara.",
+        "text": "A proposta de reduzir a maioridade penal com mais chance de acordo no Senado não alcança o tráfico de drogas, o segundo ato mais comum entre os jovens internados no Brasil. Nada muda por enquanto: o Senado decidiu esperar a Câmara.",
         "source_ids": [
           "S5",
           "S7",
@@ -1042,38 +1094,13 @@
         ]
       },
       {
-        "type": "paragraph",
-        "text": "O tráfico responde por 3.735 dos 13.367 registros de atos atribuídos a adolescentes e jovens em internação ou semiliberdade em agosto de 2025, ou 27,9%, segundo o levantamento nacional do Ministério dos Direitos Humanos. Só o roubo aparece mais, com 29,1%. O levantamento não inclui Minas Gerais, que não enviou dados.",
-        "source_ids": [
-          "S7"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A lei dos crimes hediondos lista casos como homicídio qualificado, latrocínio, estupro e roubo com arma de fogo. O tráfico de drogas aparece em outro artigo, ao lado de tortura e terrorismo, com regras igualmente duras, mas sem ser chamado de hediondo. Por isso a palavra \"formalmente\" pesa: a proposta da oposição, de Rogerio Marinho (PL-RN), cita hediondos e tráfico separadamente.",
-        "source_ids": [
-          "S4",
-          "S5",
-          "S22"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O argumento de Camilo para mudar a lei é que organizações criminosas recrutam adolescentes para tarefas de maior risco. A lei considera hediondo o crime de organização criminosa voltada a crime hediondo ou equiparado, o que pode alcançar um jovem acusado de integrar uma facção. O adolescente que responder apenas por tráfico seguiria sob o Estatuto da Criança e do Adolescente até os 18 anos. Parlamentares de direita defendem ampliar o texto.",
-        "source_ids": [
-          "S5",
-          "S18",
-          "S22"
-        ]
-      },
-      {
         "type": "heading",
-        "text": "O que muda e como fica a votação",
+        "text": "O que a proposta muda",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos. Com a proposta, jovens de 16 e 17 anos acusados de crimes hediondos passariam a responder como adultos. Uma mudança na Constituição precisa de 49 votos entre os 81 senadores e de 308 na Câmara, em duas votações em cada casa.",
+        "text": "Hoje, quem tem menos de 18 anos não vai para a prisão comum. Responde pelo Estatuto da Criança e do Adolescente, e o tempo máximo de internação é de três anos.",
         "source_ids": [
           "S5",
           "S19"
@@ -1081,24 +1108,70 @@
       },
       {
         "type": "paragraph",
-        "text": "O Senado retirou o tema da reforma da segurança pública na terça-feira (3), por 38 votos a 36, para evitar que a reforma voltasse à Câmara. As duas emendas viraram propostas separadas: a PEC 20/2026, de Camilo, e a PEC 19/2026, de Marinho. O líder do MDB, Eduardo Braga (AM), reuniu assinaturas de mais de 50 senadores para levar o tema direto ao plenário, sem passar por comissão. Na sessão de quarta, Alcolumbre disse ter atendido a um pedido do presidente da Câmara, Hugo Motta (Republicanos-PB), que se comprometeu a votar o texto dos deputados ainda em novembro.",
+        "text": "O texto do líder do PT, Camilo Santana (CE), baixa a idade de 18 para 16 anos apenas para \"crimes considerados formalmente hediondos\". A lei lista como hediondos casos como homicídio qualificado, latrocínio, estupro e roubo com arma de fogo. O tráfico de drogas aparece em outro artigo, com regras igualmente duras, mas sem ser chamado de hediondo.",
+        "source_ids": [
+          "S4",
+          "S5",
+          "S7",
+          "S22",
+          "S23"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A proposta da oposição, de Rogerio Marinho (PL-RN), cita hediondos e tráfico separadamente. Marinho defende 16 anos para qualquer crime e 14 para os mais graves. Pelo texto de Camilo, o adolescente que responder apenas por tráfico seguiria sob o Estatuto até os 18 anos.",
+        "source_ids": [
+          "S4",
+          "S5",
+          "S11",
+          "S18",
+          "S22"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem é afetado",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O tráfico responde por 27,9% dos 13.367 registros de atos atribuídos a adolescentes e jovens em internação ou semiliberdade em agosto de 2025. Só o roubo aparece mais, com 29,1%. Os dados são do levantamento nacional do Ministério dos Direitos Humanos, que não inclui Minas Gerais. Havia 12.203 pessoas nessa situação, e 6.815 delas tinham 16 ou 17 anos.",
+        "source_ids": [
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Não é possível calcular quantos seriam alcançados pela proposta de Camilo, porque a tabela não separa os homicídios qualificados nem o roubo com arma de fogo. Nenhuma das duas propostas traz estimativa de custo ou do número de jovens que iriam para a prisão.",
+        "source_ids": [
+          "S4",
+          "S5",
+          "S7",
+          "S8",
+          "S22"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que ainda falta",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Uma mudança na Constituição precisa de 49 votos entre os 81 senadores e de 308 na Câmara, em duas votações em cada casa. Na quarta-feira (4), o presidente do Senado, Davi Alcolumbre (União-AP), avisou que não vai votar o tema agora. Disse ter atendido a um pedido do presidente da Câmara, Hugo Motta (Republicanos-PB), que se comprometeu a votar o texto dos deputados ainda em novembro.",
         "source_ids": [
           "S2",
+          "S5",
           "S13",
+          "S19",
           "S23",
           "S25"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Braga pediu um limite: se a Câmara não decidir até 1º de dezembro, o Senado votaria as suas propostas. O líder do PL, Carlos Portinho (RJ), disse que Alcolumbre descumpriu o combinado na véspera: \"compromisso é para ser cumprido\". Alessandro Vieira (MDB-SE) defendeu outro caminho, um projeto já aprovado pelo Senado em 2025 que não muda a idade, mas aumenta o tempo máximo de internação, e que está na Câmara.",
-        "source_ids": [
-          "S23"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O texto que anda agora é mais amplo que o de Camilo. A PEC 32/2015, do ex-deputado Gonzaga Patriota, diz que a maioridade é atingida aos 16 anos, para responder por crimes e para os atos da vida civil, sem separar tipos de crime. Com essa redação, o tráfico entraria. O relator, Mendonça Filho (PL-PE), ainda não apresentou parecer e pode mudar o texto, e Guilherme Derrite (PP-SP) defendeu na comissão baixar a idade para 14 anos em crimes hediondos.",
+        "text": "O texto da Câmara é mais amplo que o de Camilo. Diz que a maioridade é atingida aos 16 anos, sem separar tipos de crime, e com essa redação o tráfico entraria. O deputado responsável pelo texto, Mendonça Filho (PL-PE), ainda pode mudá-lo.",
         "source_ids": [
           "S23",
           "S24",
@@ -1107,25 +1180,22 @@
       },
       {
         "type": "paragraph",
-        "text": "Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos. Marinho defende 16 anos para qualquer crime e 14 para os mais graves.",
+        "text": "O líder do MDB, Eduardo Braga (AM), pediu um limite: se a Câmara não decidir até 1º de dezembro, o Senado votaria as suas propostas. O líder do PL, Carlos Portinho (RJ), disse que Alcolumbre descumpriu o combinado na véspera: \"compromisso é para ser cumprido\".",
         "source_ids": [
-          "S4",
-          "S11"
+          "S23"
         ]
       },
       {
+        "type": "heading",
+        "text": "Quem apoia e quem contesta",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "Os dois lados já registraram apoio à ideia: 63 dos 81 senadores assinaram ao menos uma das duas propostas, 28 a de Camilo e 37 a de Marinho, com dois nomes nas duas listas, segundo levantamento do Datafixers nos registros do Senado. Assinar não é prometer voto, e a assinatura pode servir só para que o texto seja discutido.",
+        "text": "Dos 81 senadores, 63 assinaram ao menos uma das duas propostas, segundo levantamento do Datafixers nos registros do Senado. Assinar não é prometer voto. Em pesquisa Datafolha de outubro, 80% disseram ser a favor de reduzir a idade para 16 anos, e 18% disseram ser contra.",
         "source_ids": [
           "S4",
           "S5",
-          "S6"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Fora do Senado, o apoio é amplo. Em pesquisa Datafolha de 13 e 14 de outubro, 80% disseram ser a favor de reduzir de 18 para 16 anos, e 18% disseram ser contra. O apoio era de 70% entre eleitores de Lula e de 89% entre os de Flávio Bolsonaro (PL). O tema entrou na campanha, e Marinho e Camilo coordenavam as campanhas dos dois. Lula venceu em 25 de outubro.",
-        "source_ids": [
           "S6",
           "S10",
           "S11",
@@ -1133,39 +1203,16 @@
         ]
       },
       {
-        "type": "heading",
-        "text": "Quem seria atingido",
-        "source_ids": []
-      },
-      {
         "type": "paragraph",
-        "text": "Em agosto de 2025, havia 12.203 pessoas em internação ou semiliberdade, segundo o levantamento nacional do Ministério dos Direitos Humanos, que não inclui Minas Gerais porque o estado não enviou dados. Do total, 6.815 (56%) tinham 16 ou 17 anos, e 2.046 (17%) tinham 14 ou 15. Outras 3.152 já tinham 18 anos ou mais e cumpriam medida por atos anteriores.",
-        "source_ids": [
-          "S7",
-          "S8"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Não é possível calcular quantos seriam alcançados pela proposta de Camilo. Homicídio, latrocínio, estupro e feminicídio somam 14% dos registros, mas a tabela não separa os homicídios qualificados. O roubo, maior categoria, seria alcançado em parte, porque a lei trata como hediondo o roubo com arma de fogo, e a tabela também não faz essa divisão. A proposta de Marinho alcançaria todos os que têm 16 anos ou mais, além de parte dos de 14 e 15.",
-        "source_ids": [
-          "S7",
-          "S8",
-          "S22"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Nenhuma das duas propostas traz estimativa de custo ou do número de jovens que iriam para a prisão. O sistema para adolescentes operava com 75,2% de ocupação em agosto de 2025.",
+        "text": "Em entrevista em 15 de outubro, Lula disse ser favorável a reduzir para 16 anos em crimes hediondos.",
         "source_ids": [
           "S4",
-          "S5",
-          "S7"
+          "S11"
         ]
       },
       {
         "type": "paragraph",
-        "text": "Há dúvida sobre o efeito e sobre a validade da mudança. Estudo de pesquisadores da UFPE comparou países e não encontrou redução da violência onde a idade é menor; o resultado foi uma correlação no sentido oposto, o que não prova causa. No parecer, Carvalho registrou que parte dos juristas considera a idade de 18 anos uma cláusula pétrea, trecho da Constituição que não pode ser alterado, enquanto outra corrente aceita a mudança.",
+        "text": "Há dúvida sobre o efeito e sobre a validade da mudança. Estudo de pesquisadores da Universidade Federal de Pernambuco (UFPE) comparou países e não encontrou redução da violência onde a idade é menor. Um relatório do Senado registrou que parte dos juristas considera a idade de 18 anos um trecho da Constituição que não pode ser alterado, enquanto outra corrente aceita a mudança.",
         "source_ids": [
           "S1",
           "S16",
@@ -1182,7 +1229,7 @@
       },
       {
         "type": "votes",
-        "text": "Retirada do tema da reforma, em 3 de novembro: 38 a 36, com uma abstenção. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram a favor. PL (12), Republicanos (6) e a maior parte de PP (7 a 1) votaram contra. Esse voto não decidiu se a idade deve mudar.",
+        "text": "Retirada do tema da reforma da segurança, em 3 de novembro: 38 a 36, com uma abstenção. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram a favor. PL (12), Republicanos (6) e a maior parte de PP (7 a 1) votaram contra. Esse voto não decidiu se a idade deve mudar.",
         "source_ids": [
           "S2",
           "S6"
@@ -1190,7 +1237,7 @@
       },
       {
         "type": "next",
-        "text": "Mendonça Filho disse que apresenta o parecer no final de novembro, depois de audiências públicas aprovadas pela comissão especial, cujo presidente rejeitou o pedido de plebiscito sobre o tema. Alcolumbre disse que, quando o texto chegar ao Senado, \"nós vamos votar\".",
+        "text": "Mendonça Filho disse que apresenta sua versão do texto no final de novembro, depois de audiências públicas. Alcolumbre disse que, quando o texto chegar ao Senado, \"nós vamos votar\".",
         "source_ids": [
           "S24",
           "S25"
@@ -1374,53 +1421,53 @@
         "published_date": "2015-05-05"
       }
     ],
-    "updated_at": "2026-11-05T01:23:57.924910+00:00"
+    "updated_at": "2026-11-10T09:10:06.848250+00:00"
   },
   {
     "title": "Deputado recomenda aprovar uso da Bíblia nas escolas de SP",
-    "reading_minutes": 5,
+    "reading_minutes": 2,
     "kind": "investigation",
     "edition_date": "2026-10-30",
     "published_at": "2026-10-30T15:27:07.405564+00:00",
     "status_label": "Aguarda votação em comissão da Assembleia",
     "id": "2026-10-30-parecer-na-alesp-a-favor-da-biblia-como-material-escolar-nao-menciona-decisoes-do-stf-e-do-tj-mg-sob",
-    "subtitle": "O projeto leva a Bíblia a aulas de história, literatura e outras matérias, com participação opcional. Desde 1967, ao menos sete propostas para levá-la a escolas e bibliotecas passaram pela Assembleia, e nenhuma virou lei",
+    "subtitle": "A participação dos alunos seria opcional. Desde 1967, ao menos sete propostas para levar a Bíblia a escolas e bibliotecas passaram pela Assembleia, e nenhuma virou lei",
     "house": "alesp",
     "topic": "Educação",
     "proposal": "PL 670/2026",
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "uf": "SP",
-        "role": "Autor do projeto",
-        "name": "Gil Diniz Bolsonaro",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
         "party": "PL",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica."
+        "role": "Autor do projeto",
+        "name": "Gil Diniz Bolsonaro"
       },
       {
-        "uf": "SP",
-        "role": "Relator na CCJR",
-        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "uf": "SP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "party": "PP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O projeto que manda usar a Bíblia como material de apoio nas aulas das escolas de São Paulo recebeu um voto favorável em 27 de outubro. O autor do voto é o deputado Delegado Olim (PP), encarregado de analisar a proposta na Comissão de Constituição, Justiça e Redação da Assembleia Legislativa (Alesp). O documento, de uma página, trata apenas de quem tem poder para fazer essa lei. Não fala da separação entre Estado e religião nem das decisões do Supremo Tribunal Federal (STF) que derrubaram ou limitaram leis estaduais sobre a Bíblia em escolas e bibliotecas. Também não cita a decisão da Justiça de Minas Gerais sobre lei parecida em Belo Horizonte.",
+        "text": "O projeto que manda usar a Bíblia como material de apoio nas aulas das escolas de São Paulo recebeu um voto favorável na Assembleia Legislativa em 27 de outubro. O voto não menciona decisões da Justiça que derrubaram ou limitaram leis parecidas em outros estados.",
         "source_ids": [
           "S2",
           "S3",
@@ -1428,8 +1475,82 @@
         ]
       },
       {
+        "type": "heading",
+        "text": "O que o projeto manda fazer",
+        "source_ids": []
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, o texto manda usar a Bíblia em projetos de História, Literatura, Geografia, Ensino Religioso, Artes e Filosofia. A participação do aluno é opcional, os pais devem ser avisados antes, e quem não participar deve ter atividade alternativa. As escolas particulares só aderem se quiserem. Não há estimativa de custo: o texto diz apenas que as despesas sairão do orçamento.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
         "type": "paragraph",
-        "text": "O projeto, de número 670/2026, é de Gil Diniz Bolsonaro (PL). Não é a primeira tentativa. Levantamento do Datafixers Legislativo no sistema da Assembleia encontrou ao menos sete projetos anteriores, de 1967 a 2017, para levar a Bíblia a escolas ou bibliotecas públicas. Nenhum virou lei. Três foram arquivados. Os outros quatro seguem sem votação de todos os deputados, entre eles um de 2003, de Carlinhos Almeida (PT), e outro de 2013, de Rodrigo Moraes (PSC), que constam como prontos para entrar na lista de votações.",
+        "text": "O projeto é de Gil Diniz Bolsonaro (PL). Ele afirma que a proposta não fere a separação entre Estado e religião, porque usa a Bíblia apenas como recurso cultural e educativo e porque a participação é opcional.",
+        "source_ids": [
+          "S1",
+          "S3",
+          "S5",
+          "S6",
+          "S7",
+          "S8",
+          "S9",
+          "S10",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que os tribunais já decidiram",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em abril de 2021, o Supremo Tribunal Federal (STF) considerou inconstitucional, por unanimidade, o trecho de uma lei do Amazonas que obrigava escolas e bibliotecas a ter a Bíblia. A ministra Cármen Lúcia escreveu que exigir somente a Bíblia desprestigia outros livros sagrados e quem não tem religião, segundo a Agência Brasil. Em outubro do mesmo ano, o tribunal derrubou lei de Mato Grosso do Sul em vigor desde 2004.",
+        "source_ids": [
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Em setembro de 2025, ao julgar lei do Rio Grande do Norte, o STF fixou que ela permite e não obriga o Estado a manter Bíblias em bibliotecas. Segundo resumo do site Dizer o Direito, o problema apontado é a lei impor um único texto religioso.",
+        "source_ids": [
+          "S15"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O caso mais próximo é o de Belo Horizonte. Em setembro de 2025, o Tribunal de Justiça de Minas Gerais suspendeu, em decisão provisória, a lei municipal que permitia usar a Bíblia como material complementar em escolas. A decisão admite o uso cultural, histórico ou literário, mas não como leitura obrigatória, segundo o Jurinews. A autora da lei, a vereadora Flávia Borja (DC), defendeu que a Bíblia ajudaria professores a tratar de civilizações antigas e gêneros literários.",
+        "source_ids": [
+          "S16"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que diz o voto",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O autor do voto é o deputado Delegado Olim (PP), encarregado de analisar a proposta na comissão que examina se os projetos respeitam a Constituição. O documento, de uma página, trata apenas de quem tem poder para fazer essa lei. Não fala da separação entre Estado e religião nem das decisões dos tribunais.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S4",
+          "S17"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Sete tentativas desde 1967",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Levantamento do Datafixers Legislativo no sistema da Assembleia encontrou ao menos sete projetos anteriores, de 1967 a 2017, para levar a Bíblia a escolas ou bibliotecas públicas. Nenhum virou lei. Três foram arquivados, e os outros quatro seguem sem votação de todos os deputados.",
         "source_ids": [
           "S3",
           "S5",
@@ -1443,7 +1564,7 @@
       },
       {
         "type": "paragraph",
-        "text": "As propostas vieram de partidos diferentes. Além do PT e do PSC, o sistema registra projetos de Waldir Agnello (PTB), em 2003, de Adilson Rossi (PSB), em 2011, e de Gil Lancaster (DEM), em 2017, este sobre exemplares em braile nas bibliotecas. Em outubro de 2021, Carlos Cezar (PSB) apresentou um protesto formal, a moção de repúdio, contra a decisão do STF que derrubou a lei de Mato Grosso do Sul. A moção foi arquivada.",
+        "text": "As propostas vieram de partidos diferentes, entre eles PT e PSB.",
         "source_ids": [
           "S8",
           "S9",
@@ -1452,61 +1573,8 @@
         ]
       },
       {
-        "type": "heading",
-        "text": "O que o projeto manda fazer",
-        "source_ids": []
-      },
-      {
-        "type": "practical",
-        "text": "Na prática, o texto manda usar a Bíblia em projetos de História, Literatura, Geografia, Ensino Religioso, Artes e Filosofia. A participação do aluno é opcional, os pais devem ser avisados antes e podem concordar ou discordar por escrito, e quem não participar deve ter atividade alternativa. O governo teria 180 dias para definir as regras, incluindo critérios para escolher e adaptar os conteúdos bíblicos. O projeto cita escolas públicas e particulares, mas as particulares só aderem se quiserem. Não há estimativa de custo: o texto diz apenas que as despesas sairão do orçamento.",
-        "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Na justificativa, o autor afirma que a proposta não fere a separação entre Estado e religião porque usa a Bíblia apenas como recurso cultural e educativo e porque a participação é opcional. Diz ainda que a iniciativa atende a parcela da sociedade paulista que vê na tradição judaico-cristã parte da identidade cultural brasileira.",
-        "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que os tribunais já decidiram",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Em abril de 2021, o STF considerou por unanimidade inconstitucional o trecho de uma lei do Amazonas que obrigava escolas e bibliotecas a ter a Bíblia. A ministra Cármen Lúcia, relatora do caso, escreveu que exigir somente a Bíblia desprestigia outros livros sagrados e quem não tem religião, segundo a Agência Brasil. Em outubro do mesmo ano, o tribunal derrubou, também por unanimidade, lei de Mato Grosso do Sul em vigor desde 2004, em caso relatado pela ministra Rosa Weber, conforme o Campo Grande News.",
-        "source_ids": [
-          "S13",
-          "S14"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Em setembro de 2025, ao julgar lei do Rio Grande do Norte, o STF não a derrubou, mas fixou que ela permite e não obriga o Estado a manter Bíblias em bibliotecas. Segundo resumo do site Dizer o Direito, o ministro Cristiano Zanin, autor do texto final da decisão, considerou que livros religiosos em espaços públicos não são, por si só, incompatíveis com um Estado sem religião oficial. O problema é a lei impor um único texto religioso, e a presença dessas obras deve resultar de critérios técnicos, culturais, históricos ou pedagógicos.",
-        "source_ids": [
-          "S15"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O caso mais próximo do projeto paulista é o de Belo Horizonte. Em setembro de 2025, o Tribunal de Justiça de Minas Gerais suspendeu em decisão provisória a lei municipal que permitia usar a Bíblia como material complementar em escolas, a pedido do PSOL. A desembargadora Teresa Cristina da Cunha Peixoto entendeu que fazer leis sobre educação cabe à União e que a norma fere a separação entre Estado e religião, segundo o Jurinews. A decisão admite o uso cultural, histórico ou literário, mas não como leitura obrigatória. A autora da lei, a vereadora Flávia Borja (DC), defendeu que a Bíblia ajudaria professores a tratar de civilizações antigas e gêneros literários. A decisão final caberá ao Órgão Especial do tribunal.",
-        "source_ids": [
-          "S16"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Gil Diniz Bolsonaro foi eleito deputado estadual em 2018 e reeleito em 2022 com 196.215 votos. Segundo a biografia publicada pela Alesp, foi assessor do deputado federal Eduardo Bolsonaro e preside a Frente Parlamentar Católica. Delegado Olim, relator do projeto, é delegado de polícia desde 1992 e está no terceiro mandato na Assembleia.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
         "type": "next",
-        "text": "O que acontece agora: a comissão ainda precisa votar a recomendação de Olim. O sistema da Alesp não registra votação do projeto em comissão nem entre todos os deputados. O texto ficou aberto a pedidos de mudança de 6 a 14 de julho e não recebeu nenhum.",
+        "text": "A comissão ainda precisa votar a recomendação de Olim. O sistema da Assembleia não registra votação do projeto em comissão nem entre todos os deputados.",
         "source_ids": [
           "S2",
           "S3"
@@ -1634,7 +1702,7 @@
         "published_date": "2026-10-27"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-10T09:10:07.016480+00:00"
   },
   {
     "subtitle": "O Brasil teve 118 mil casos em 2025, quase todos na Amazônia. O texto também põe em lei o programa de combate à doença, criado em 2003, mas não diz quanto cada um pagaria e ainda precisa de outras votações",
@@ -1645,15 +1713,12 @@
     "published_at": "2026-10-28T07:55:21.794748+00:00",
     "edition_date": "2026-10-28",
     "topic": "Saúde pública",
-    "reading_minutes": 4,
+    "reading_minutes": 2,
     "title": "Projeto na Câmara obriga empreendimentos de risco a pagar prevenção da malária",
     "house": "camara",
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "uf": "AP",
-        "role": "Autor do projeto",
-        "name": "Dorinaldo Malafaia",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1664,79 +1729,96 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
+        "uf": "AP",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "party": "PDT",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023."
+        "role": "Autor do projeto",
+        "name": "Dorinaldo Malafaia"
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Quem tocar um empreendimento com potencial de favorecer a malária teria de elaborar e pagar ações de controle da doença, segundo um projeto aprovado na terça-feira (27) pela Comissão da Amazônia da Câmara. O texto também transforma o combate à malária em política permanente, prevista em lei, para manter prevenção, diagnóstico e tratamento, sobretudo nas populações mais vulneráveis da Amazônia.",
+        "text": "Um projeto aprovado em uma comissão da Câmara na terça-feira (27) obriga quem tocar um empreendimento que possa favorecer a malária a pagar ações de controle da doença. O texto ainda não é lei, e nada muda por enquanto para pacientes ou empresas.",
         "source_ids": [
           "S1",
           "S2"
         ]
       },
       {
+        "type": "heading",
+        "text": "O que muda",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "O Brasil teve 118.037 casos de malária contraídos no próprio território em 2025, segundo o Ministério da Saúde. Mais de 99% dos casos de transmissão local estão na região amazônica. A pasta ressalta que diagnóstico e tratamento feitos a tempo são fundamentais para evitar formas graves e mortes.",
+        "text": "O responsável pagaria um plano de controle conforme o risco de o empreendimento gerar ou agravar a transmissão. A aprovação do plano e o atestado sanitário do empreendimento dependeriam da comprovação do pagamento e da execução das ações.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto também transforma o combate à malária em política permanente, prevista em lei. O programa já existe: foi criado por uma norma do Ministério da Saúde em 2003.",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Se o projeto virar lei, o programa teria seus objetivos de prevenção, diagnóstico, tratamento e vigilância definidos em lei. O texto não garante dinheiro imediato: o pagamento continuaria dependendo do orçamento e das regras do SUS.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem é afetado",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O Brasil teve 118.037 casos de malária contraídos no próprio território em 2025, segundo o Ministério da Saúde. Mais de 99% dos casos de transmissão local estão na região amazônica.",
         "source_ids": [
           "S3"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O projeto ainda não é lei, e nada muda por enquanto para pacientes ou empresas. Foi apresentado por Dorinaldo Malafaia (PDT-AP) e reescrito por Chico Alencar (PSOL-RJ), o deputado encarregado de analisá-lo na comissão, chamado de relator. Ainda depende de outras comissões da Câmara e do Senado.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O programa já existe: foi criado por uma portaria do Ministério da Saúde em 2003. A mudança é dar a ele uma lei própria e caráter permanente. Alencar argumenta que uma doença endêmica, que persiste em uma região, precisa de estabilidade e de dinheiro previsível, em vez de depender das prioridades de cada governo.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O texto, porém, não fixa quanto cada empreendimento pagaria. Os critérios e o cálculo ficariam para uma regulamentação posterior. Alencar acolheu ajustes sugeridos pela área técnica do Ministério da Saúde para evitar que fórmulas detalhadas na lei dificultassem a gestão e a divisão das contas no SUS.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O responsável pagaria um plano de controle conforme o risco de o empreendimento gerar ou agravar a transmissão. A aprovação do plano e o atestado sanitário do empreendimento dependeriam da comprovação do pagamento e da execução das ações. A cobrança se liga ao risco de transmissão, não a toda atividade econômica.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A distância dos serviços ajuda a explicar por que continuidade e recursos importam. Em apresentação no Congresso Brasileiro de Medicina Tropical de agosto de 2026, o pesquisador Andre Siqueira, da Fiocruz, tratou das dificuldades para controlar a malária na Terra Indígena Yanomami. Segundo relato publicado pelo instituto em 27 de agosto, a extensão do território, a mobilidade das comunidades e o acesso por aeronaves, barcos e longas caminhadas interferem nas ações de saúde.",
+        "text": "O acesso é parte do problema. Segundo relato publicado pela Fiocruz em agosto de 2026, o pesquisador Andre Siqueira apontou as dificuldades na Terra Indígena Yanomami. A extensão do território e o acesso por aeronaves, barcos e longas caminhadas interferem nas ações de saúde.",
         "source_ids": [
           "S4"
         ]
       },
       {
+        "type": "heading",
+        "text": "Quanto custa e quem paga",
+        "source_ids": []
+      },
+      {
         "type": "paragraph",
-        "text": "Malafaia é enfermeiro, foi secretário municipal de Saúde de Macapá e dirigiu a vigilância em saúde no Amapá. A biografia oficial registra sua atuação como vice-líder do governo no Congresso desde 2023. Alencar defende a proposta, mas incorporou ressalvas técnicas sobre como pagar e executar a política.",
+        "text": "O texto não fixa quanto cada empreendimento pagaria. Os critérios e o cálculo ficariam para regras posteriores.",
         "source_ids": [
-          "S6",
           "S2"
         ]
       },
       {
-        "type": "practical",
-        "text": "Se o projeto virar lei, o programa teria seus objetivos de prevenção, diagnóstico, tratamento e vigilância definidos em lei. As ações entrariam no planejamento de saúde da União, dos estados e dos municípios. O texto não garante dinheiro imediato: o pagamento continuaria dependendo do orçamento e das regras do SUS.",
+        "type": "heading",
+        "text": "Quem propôs",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto foi apresentado por Dorinaldo Malafaia (PDT-AP), enfermeiro e ex-secretário municipal de Saúde de Macapá. Foi reescrito por Chico Alencar (PSOL-RJ), o deputado encarregado de analisá-lo na comissão. Alencar argumenta que uma doença que persiste em uma região precisa de dinheiro previsível, em vez de depender das prioridades de cada governo.",
         "source_ids": [
-          "S2"
+          "S2",
+          "S6"
         ]
       },
       {
         "type": "votes",
-        "text": "A comissão aprovou o texto de Alencar em 27 de outubro. Segundo o Atlas Público, a votação foi simbólica, sem registro do voto de cada deputado. Por isso não é possível dizer quem votou a favor ou contra.",
+        "text": "A Comissão da Amazônia aprovou o texto de Alencar em 27 de outubro. Segundo o Atlas Público, a votação foi simbólica, sem registro do voto de cada deputado. Por isso não é possível dizer quem votou a favor ou contra.",
         "source_ids": [
           "S1",
           "S5"
@@ -1744,7 +1826,7 @@
       },
       {
         "type": "next",
-        "text": "O projeto ainda passa pelas comissões de Saúde, de Finanças e Tributação e de Constituição e Justiça e de Cidadania, e o texto pode mudar nessas etapas. Se for aprovado nelas, pode seguir sem votação de todos os deputados.",
+        "text": "O projeto ainda passa por três comissões da Câmara e pelo Senado, e o texto pode mudar nessas etapas.",
         "source_ids": [
           "S2",
           "S7"
@@ -1802,6 +1884,6 @@
         "published_date": "2026-10-27"
       }
     ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+    "updated_at": "2026-11-10T09:10:07.160109+00:00"
   }
 ]
