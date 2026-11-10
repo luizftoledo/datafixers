@@ -1,5 +1,769 @@
 [
   {
+    "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
+    "status_label": "Aprovada; falta a sessão do Congresso que a inclui na Constituição",
+    "reading_minutes": 5,
+    "published_at": "2026-11-04T14:30:19.374387+00:00",
+    "proposal": "PEC 18/2025",
+    "house": "senado",
+    "edition_date": "2026-11-04",
+    "trigger_date": "2026-11-03",
+    "subtitle": "A reforma da segurança vai entrar na Constituição com um trecho incluído na noite da votação, sobre o fundo que financia as polícias. O relator era contra, e o Senado tratou a mudança como simples ajuste de texto",
+    "kind": "daily",
+    "title": "Senado aprova uso de verba da segurança pública em operações militares",
+    "topic": "Segurança pública",
+    "politicians": [
+      {
+        "uf": "RJ",
+        "role": "Autor da Emenda 85",
+        "name": "Carlos Portinho",
+        "sources": [
+          {
+            "title": "Senado: perfil de Carlos Portinho",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5936"
+          },
+          {
+            "title": "Senado: tramitação da PEC 18/2025",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
+          },
+          {
+            "title": "O Antagonista, 15/10/2026",
+            "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
+          }
+        ],
+        "party": "PL",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025."
+      },
+      {
+        "uf": "SE",
+        "role": "Relator no Senado",
+        "name": "Rogério Carvalho",
+        "sources": [
+          {
+            "title": "Senado: perfil de Rogério Carvalho",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5352"
+          },
+          {
+            "title": "Senado: tramitação da PEC 18/2025",
+            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
+          }
+        ],
+        "party": "PT",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT)."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O Senado aprovou na terça-feira (3) a PEC da Segurança Pública, uma mudança na Constituição que reorganiza o combate ao crime no país. Na noite da votação, os senadores acrescentaram um trecho que os deputados não votaram: o dinheiro do Fundo Nacional de Segurança Pública, criado para financiar os órgãos de segurança, também poderá servir a operações de Garantia da Lei e da Ordem (GLO). São as operações em que militares atuam na segurança pública, como na Copa das Confederações de 2013 e no Rio de Janeiro em 2017 e 2018.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S5",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo empenhou R$ 2,22 bilhões em 2025, segundo o Portal da Transparência, e a PEC manda repassar metade a estados e ao Distrito Federal. Se uma lei autorizar o gasto, as operações militares vão disputar esse dinheiro. O relator da PEC, Rogério Carvalho (PT-SE), foi contra a emenda que deu origem ao trecho. Escreveu que ela \"afasta o Fundo de sua finalidade\", \"dilui os recursos\" das forças de segurança e que as necessidades militares devem ser pagas \"por dotações próprias\", ou seja, pelo orçamento das Forças Armadas.",
+        "source_ids": [
+          "S1",
+          "S3",
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A proposta foi de Carlos Portinho (PL-RJ), líder do PL no Senado. Ele defendeu que os militares sejam ressarcidos quando chamados a atuar: \"É o Estado que pede\", disse. O líder do MDB, Eduardo Braga (AM), negociou um acordo com Portinho e o relator na própria sessão, e o trecho passou por 67 votos a 0.",
+        "source_ids": [
+          "S2",
+          "S5",
+          "S6",
+          "S9"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Por que os deputados não votaram",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Uma mudança na Constituição precisa passar pela Câmara e pelo Senado. Se os senadores alteram o conteúdo, o texto volta aos deputados, como lembrou a CNN Brasil antes da votação. Carvalho rejeitou outros pedidos de mudança justamente para evitar essa volta: \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado.",
+        "source_ids": [
+          "S6",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O acordo foi incluir o trecho como \"emenda de redação\", nome dado a ajustes que não mudam o conteúdo. A frase, porém, não está no texto aprovado pela Câmara. O presidente do Senado, Davi Alcolumbre (União-AP), relatou em plenário que a equipe técnica da Casa apontava o problema: \"esse texto não estava no primeiro turno\", a primeira das duas votações do Senado. O trecho foi votado mesmo assim, e a proposta seguiu sem voltar aos deputados. Em outubro, Portinho havia dito, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com o retorno à Câmara.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S5",
+          "S9"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Em 2002, o Supremo aceitou que um corte feito pelo Senado em outra mudança constitucional não voltasse à Câmara, porque não era \"alteração substancial\". Neste caso houve acréscimo, e o registro do acordo não explica por que ele não mudaria o conteúdo.",
+        "source_ids": [
+          "S2",
+          "S13"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que foi anunciado e o que o texto diz",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A Agência Senado informou que o trecho permite ressarcir as Forças Armadas. A frase lida em plenário não cita as Forças Armadas. Ela diz que os recursos poderão ser distribuídos a estados, Distrito Federal e municípios, \"inclusive para fins de operações de garantia da lei e da ordem\", na forma de uma lei. Quem recebe e quanto ainda terá de ser definido. A frase vale também para o Fundo Penitenciário Nacional, que a emenda original não mencionava. O texto final não constava da lista de documentos da PEC na manhã desta quarta (4), e a referência é a leitura em plenário.",
+        "source_ids": [
+          "S2",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custam essas operações",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média é de cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. A Copa das Confederações custou R$ 418 milhões, e a operação no Rio, R$ 234 milhões. A comparação dá a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito sobre o fundo.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O fundo também perdeu uma receita prevista pelos deputados. O Senado retirou o artigo que destinava às verbas de segurança e de presídios 30% da arrecadação das bets, depois de descontar prêmios, imposto e despesas das empresas. Esse corte foi noticiado em setembro.",
+        "source_ids": [
+          "S1",
+          "S5",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A outra disputa da noite: maioridade penal",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "As propostas de reduzir a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram retiradas da PEC e vão tramitar à parte, por 38 votos a 36. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram pela separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve.",
+        "source_ids": [
+          "S5",
+          "S6",
+          "S15"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, se a frase lida em plenário for a publicada, a Constituição passará a citar operações militares de GLO entre os usos dos fundos de segurança e de presídios. Nada muda de imediato: o trecho diz que os recursos \"poderão\" ser distribuídos, e os detalhes dependem de lei.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "votes",
+        "text": "Primeira votação: 73 a 0. Trecho sobre as operações militares: 67 a 0. Segunda votação: 75 a 0. Separação da maioridade penal: 38 a 36, com uma abstenção.",
+        "source_ids": [
+          "S5"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "A PEC entra na Constituição em sessão do Congresso, ainda sem data na página da proposta até a manhã desta quarta. As propostas sobre maioridade penal seguem em separado no Senado, e uma comissão da Câmara analisa o mesmo tema.",
+        "source_ids": [
+          "S3",
+          "S5",
+          "S14"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/e5475586-1999-43b5-b386-a7876649a4ca",
+        "title": "Câmara dos Deputados: texto da PEC 18/2025 enviado ao Senado",
+        "kind": "primary",
+        "published_date": "2026-03-10"
+      },
+      {
+        "id": "S2",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/8be99b91-030f-4360-bc7e-63e070e8174c",
+        "title": "Senado: Acordo de Plenário sobre a Emenda 85, notas taquigráficas de 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S3",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/778b70bb-7970-4586-b850-1c1f2fc72e6a",
+        "title": "Senado: Parecer 212/2026-PLEN, do relator Rogério Carvalho",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S4",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/0f3d23b0-2415-4b78-9ff9-d5ff7ae627fd",
+        "title": "Senado: Emenda 85 à PEC 18/2025, de Carlos Portinho",
+        "kind": "primary",
+        "published_date": "2026-10-14"
+      },
+      {
+        "id": "S5",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
+        "title": "Senado: tramitação da PEC 18/2025, registro de 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S6",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-aprova-pec-da-seguranca-publica-sem-reducao-da-maioridade-penal",
+        "title": "Agência Senado: Senado aprova PEC da Segurança Pública sem redução da maioridade penal, 3/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S7",
+        "url": "https://portaldatransparencia.gov.br/orgaos/30911",
+        "title": "Portal da Transparência: execução do Fundo Nacional de Segurança Pública, 2023 a 2026",
+        "kind": "primary",
+        "published_date": "2026-11-04"
+      },
+      {
+        "id": "S8",
+        "url": "https://www.gov.br/defesa/pt-br/arquivos/exercicios_e_operacoes/glo/6-glo-2010_2022_custos_e_efetivos_jan_2022.pdf",
+        "title": "Ministério da Defesa: efetivos e custos de GLO, 2010 a 2022",
+        "kind": "primary",
+        "published_date": "2022-01-31"
+      },
+      {
+        "id": "S9",
+        "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/",
+        "title": "O Antagonista: PL vai cobrar segurança jurídica na PEC da Segurança, diz Portinho, 15/10/2026",
+        "kind": "press",
+        "published_date": "2026-10-15"
+      },
+      {
+        "id": "S10",
+        "url": "https://www.congressoemfoco.com.br/noticia/123231/ccj-conclui-votacao-da-pec-da-seguranca-e-envia-texto-ao-plenario",
+        "title": "Congresso em Foco: CCJ conclui votação da PEC da Segurança, 14/10/2026",
+        "kind": "press",
+        "published_date": "2026-10-14"
+      },
+      {
+        "id": "S11",
+        "url": "https://www.poder360.com.br/poder-congresso/ccj-do-senado-aprova-texto-principal-da-pec-da-seguranca/",
+        "title": "Poder360: CCJ do Senado aprova texto principal da PEC da Segurança, 2/9/2026",
+        "kind": "press",
+        "published_date": "2026-09-02"
+      },
+      {
+        "id": "S12",
+        "url": "https://www.cnnbrasil.com.br/blogs/adriana-de-luca/nacional/brasil/pec-da-seguranca-volta-ao-senado-em-impasse-sobre-maioridade-penal/",
+        "title": "CNN Brasil: PEC da Segurança volta ao Senado em impasse sobre maioridade penal, 3/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S13",
+        "url": "https://juris.damasio.com.br/jurisprudencia/julgado/284/cpmf-2",
+        "title": "Informativo 284 do STF: julgamento sobre a emenda da CPMF (reprodução)",
+        "kind": "press",
+        "published_date": "2002-10-03"
+      },
+      {
+        "id": "S14",
+        "url": "https://legis.senado.leg.br/norma/563958/publicacao/16433779",
+        "title": "Regimento Interno do Senado Federal, artigos 354 a 369",
+        "kind": "primary",
+        "published_date": ""
+      },
+      {
+        "id": "S15",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
+        "title": "Levantamento Datafixers: votos por partido no desmembramento das emendas da maioridade penal",
+        "kind": "analysis",
+        "published_date": "2026-11-04"
+      }
+    ],
+    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+  },
+  {
+    "id": "notas/cmsp-aumento-auditores-controladoria",
+    "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
+    "subtitle": "A Câmara Municipal de São Paulo aprovou em 4 de novembro, em segunda votação, o PL 699/2026, da gestão Ricardo Nunes (MDB), que reajusta a gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%, e os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
+    "house": "cmsp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 699/2026",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "trigger_date": "2026-11-03",
+    "topic": "Poder Legislativo",
+    "edition_date": "2026-11-03",
+    "subtitle": "Quando o governador barra um projeto, a Assembleia tem 30 dias para decidir se aceita ou derruba o veto. Desde 2023, nenhum saiu da lista, que inclui propostas sobre hospitais e postos de combustível",
+    "id": "2026-11-03-alesp-acumula-798-vetos-sem-votacao-nenhum-dos-519-que-estavam-na-pauta-em-marco-de-2023-saiu-dela",
+    "reading_minutes": 5,
+    "published_at": "2026-11-03T14:38:59.977438+00:00",
+    "status_label": "Levantamento de dados",
+    "kind": "investigation",
+    "title": "Assembleia de SP acumula 798 vetos de governadores sem votar",
+    "proposal": "Vetos na Ordem do Dia",
+    "house": "alesp",
+    "politicians": [],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Quando o governador veta um projeto aprovado pelos deputados, a Assembleia Legislativa de São Paulo (Alesp) deveria decidir em 30 dias se aceita ou derruba o veto. A pauta do plenário desta terça-feira (3) mostra outra realidade: são 798 vetos à espera. Enquanto um veto total não é votado, o projeto não vira lei. Um levantamento do Datafixers nas pautas oficiais mostra que nenhum dos 519 vetos que estavam na lista em 30 de março de 2023 saiu dela. Desde então entraram mais 279, alta de 54%.",
+        "source_ids": [
+          "S1",
+          "S3",
+          "S7",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Vencido o prazo de 30 dias, o veto vai para a pauta da sessão seguinte e fica lá até ser votado. Por isso a lista só aumenta: dos 843 itens da pauta desta terça, 798 são vetos. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra já foi mais dura. Em fevereiro de 2006, a Emenda Constitucional 21 determinou que o veto vencido trancasse as demais proposições até ser votado. Três meses depois, a Emenda 22 retirou essa expressão, com efeito retroativo a 15 de fevereiro. No Congresso, o veto presidencial vencido continua a travar a pauta das sessões conjuntas.",
+        "source_ids": [
+          "S7",
+          "S11"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Projetos de 2000 ainda à espera",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O veto mais antigo da lista atinge o PL 312/2000, de Campos Machado, que obrigava postos a informar a natureza, a procedência e a qualidade dos combustíveis vendidos. Ao todo, 142 vetos atingem projetos apresentados antes de 2015, e 368, projetos anteriores a 2019. Entre eles estão o PL 1126/2003, que criava classes hospitalares nos hospitais do SUS paulista, e o PL 551/2003, que obrigava a instalação de hidrômetros individuais em cada unidade de consumo.",
+        "source_ids": [
+          "S1",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O estoque passou de 519 vetos em março de 2023 para 666 em novembro de 2024, 743 em novembro de 2025 e 798 em julho de 2026. Entre julho e esta terça, a lista ficou igual: nenhum veto entrou e nenhum saiu. Dos 798, 593 são vetos totais, que barram o projeto inteiro, e 205 são parciais. Ao menos 190 atingem projetos apresentados a partir de 2023, já no governo Tarcísio de Freitas (Republicanos).",
+        "source_ids": [
+          "S12",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O acúmulo já tinha sido noticiado. Em 13 de julho, o Correio da Manhã contou 796 vetos na pauta, 188 deles da gestão Tarcísio, com saúde (39) e educação (25) como as áreas mais atingidas. O jornal registrou que, pelo regimento interno, os vetos têm prioridade e precisam ser votados antes dos projetos comuns; só os que tramitam em urgência passam à frente. O primeiro item da pauta desta terça, em regime de urgência, é o mesmo de março de 2023: o PLC 31/2017, do governo, que altera a lei de vencimentos dos procuradores do Estado, com votação adiada.",
+        "source_ids": [
+          "S8",
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem controla a pauta",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em abril de 2025, o Brasil de Fato informou que Tarcísio havia vetado 238 projetos de deputados em pouco mais de dois anos e atribuiu a falta de votação ao presidente da Alesp, André do Prado (PL), aliado do governador. Segundo o site, o regimento permite votar os vetos, mas a decisão de pautá-los cabe ao presidente, que se recusava a fazê-lo. Na mesma reportagem, Paula Nunes (PSOL) criticou que a Assembleia sirva apenas para chancelar os projetos do governador, e Reis (PT) defendeu seu projeto que cria o Dia do Veto, o PL 1476/2023, para que o plenário se dedique às propostas vetadas em 28 de setembro. O projeto recebeu parecer favorável na Comissão de Direitos Humanos em fevereiro de 2026, segundo a tramitação oficial.",
+        "source_ids": [
+          "S9",
+          "S13"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A resposta pública de Prado, registrada pela Jovem Pan em maio de 2025, foi criar um grupo de trabalho com a Casa Civil do governo para ajustar os projetos antes da votação e reduzir os vetos. Ele também pediu à Secretaria Geral Parlamentar um estudo sobre os vetos da Ordem do Dia, para avaliar a relevância atual de cada proposta e se alguma já foi contemplada por lei posterior. Entre as pautas de novembro de 2024 e de novembro de 2026, período que inclui o anúncio, nenhum veto foi retirado, e o estoque subiu de 666 para 798.",
+        "source_ids": [
+          "S10",
+          "S12"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "No Congresso Nacional, onde as duas casas votam vetos presidenciais em sessão conjunta, havia 97 vetos aguardando análise no fim de julho, segundo o Correio da Manhã. A última sessão destinada a eles tinha ocorrido em maio, e outra, prevista para junho, foi cancelada por falta de acordo.",
+        "source_ids": [
+          "S11"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, enquanto um veto total não é votado, o projeto aprovado pelos deputados não vira lei. Se a Assembleia rejeitar o veto pela maioria absoluta, o texto volta ao governador para promulgação; se ele não o fizer em 48 horas, a promulgação cabe ao presidente da Assembleia. Nos vetos parciais, a pendência se limita aos dispositivos barrados pelo governo.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Os 798 vetos constam da Ordem do Dia da 163ª sessão ordinária, marcada para esta terça. A lista se repete a cada sessão até que cada veto seja votado.",
+        "source_ids": [
+          "S1",
+          "S7"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.al.sp.gov.br/legis/docs/2026/10/29/310000011649.html",
+        "title": "Alesp: Ordem do Dia da 163ª Sessão Ordinária, 3/11/2026",
+        "kind": "primary",
+        "published_date": "2026-10-29"
+      },
+      {
+        "id": "S3",
+        "url": "https://www.al.sp.gov.br/spl/Arquivo/1000485658_1000622942_2023_03_29_Pauta_1000485658.pdf",
+        "title": "Alesp: Ordem do Dia da 11ª Sessão Ordinária, 30/3/2023",
+        "kind": "primary",
+        "published_date": "2023-03-29"
+      },
+      {
+        "id": "S7",
+        "url": "https://www.al.sp.gov.br/repositorio/legislacao/constituicao/1989/compilacao-constituicao-0-05.10.1989.html",
+        "title": "Constituição do Estado de São Paulo, artigo 28 (texto compilado)",
+        "kind": "primary",
+        "published_date": "1989-10-05"
+      },
+      {
+        "id": "S8",
+        "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/estado-de-sao-paulo/2026/07/301624-alesp-acumula-796-vetos-na-pauta-188-sao-da-gestao-tarcisio-de-freitas.html",
+        "title": "Correio da Manhã: Alesp acumula 796 vetos na pauta, 13/7/2026",
+        "kind": "press",
+        "published_date": "2026-07-13"
+      },
+      {
+        "id": "S9",
+        "url": "https://www.brasildefato.com.br/2025/04/02/em-dois-anos-tarcisio-de-freitas-ja-vetou-238-projetos-aprovados-por-deputados-da-assembleia-de-sp/",
+        "title": "Brasil de Fato: Tarcísio vetou 238 projetos em dois anos, 2/4/2025",
+        "kind": "press",
+        "published_date": "2025-04-02"
+      },
+      {
+        "id": "S10",
+        "url": "https://jovempan.com.br/noticias/alesp-cria-grupo-de-trabalho-para-reduzir-vetos-de-tarcisio-de-freitas/",
+        "title": "Jovem Pan: Alesp cria grupo de trabalho para reduzir vetos, 6/5/2025",
+        "kind": "press",
+        "published_date": "2025-05-06"
+      },
+      {
+        "id": "S11",
+        "url": "https://www.correiodamanha.com.br/politica/2026/07/306960-congresso-volta-com-87-vetos-travando-a-pauta.html",
+        "title": "Correio da Manhã: Congresso volta com 87 vetos travando a pauta, 30/7/2026",
+        "kind": "press",
+        "published_date": "2026-07-30"
+      },
+      {
+        "id": "S12",
+        "url": "https://www.al.sp.gov.br/alesp/ordem-do-dia/",
+        "title": "Levantamento Datafixers: vetos na Ordem do Dia da Alesp, março de 2023 a novembro de 2026",
+        "kind": "analysis",
+        "published_date": "2026-11-03"
+      },
+      {
+        "id": "S13",
+        "url": "https://www3.al.sp.gov.br/repositorio/dados-abertos/output/json/tramitacao-atual.json",
+        "title": "Alesp, dados abertos: PL 1476/2023 (Dia do Veto) e última tramitação",
+        "kind": "primary",
+        "published_date": "2026-11-03"
+      }
+    ],
+    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+  },
+  {
+    "id": "notas/senado-dividas-fim-de-mandato",
+    "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
+    "subtitle": "O Senado aprovou em 4 de novembro um projeto de resolução de Renan Filho (MDB-AL) que permite a estados, ao Distrito Federal e a municípios substituir dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, a Resolução 43, de 2001, proibia esse tipo de operação nesse período, com poucas exceções.",
+    "house": "senado",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PRS 50/2026",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/camara-postes-energia-teles",
+    "title": "Câmara aprova regras para postes e livra de multa tele que pedir regularização",
+    "subtitle": "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. Pelo texto do relator, Juscelino Filho (PSDB-MA), as teles terão 180 dias para pedir a regularização dos cabos instalados sem contrato. Quem pedir no prazo não leva multa, mas terá de pagar pelo uso e fazer as adequações técnicas.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 3220/2019",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/camara-drones-presidios",
+    "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
+    "subtitle": "A Câmara aprovou em 4 de novembro o projeto de Kim Kataguiri (Missão-SP), relatado por Nikolas Ferreira (PL-MG), que prevê reclusão de 1 a 5 anos e multa para o sobrevoo não autorizado de presídios com drones. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 5902/2023",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "id": "notas/alesp-carreira-professores-adiada",
+    "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
+    "subtitle": "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro. Segundo o InfoMoney, a análise de 3 de novembro foi adiada depois que professores e estudantes ocuparam a galeria da Alesp, e a Casa informou não haver previsão de voto nesta semana. O texto está na Ordem do Dia de 4 de novembro como votação adiada.",
+    "house": "alesp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 1316/2025",
+    "edition_date": "2026-11-04",
+    "published_at": "2026-11-04"
+  },
+  {
+    "edition_date": "2026-10-27",
+    "title": "Três deputados do PL de SP gastam R$ 540 mil com divulgação do mandato",
+    "status_label": "Levantamento de dados",
+    "proposal": "CEAP-SP-2026",
+    "subtitle": "Marco Feliciano, Luiz Philippe de Orleans e Bragança e José Olimpio lideram a lista de 2026, com registros de janeiro a junho. A verba pode pagar comunicação do mandato, mas não propaganda eleitoral",
+    "id": "2026-10-27-tres-deputados-concentram-39-do-gasto-do-pl-paulista-com-divulgacao-do-mandato",
+    "topic": "Gastos parlamentares",
+    "kind": "daily",
+    "published_at": "2026-10-27T12:54:28.418292+00:00",
+    "house": "camara",
+    "trigger_date": "2026-10-27",
+    "reading_minutes": 4,
+    "politicians": [
+      {
+        "uf": "SP",
+        "role": "Parlamentar citado",
+        "name": "Pr. Marco Feliciano",
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
+          }
+        ],
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
+      },
+      {
+        "uf": "SP",
+        "role": "Parlamentar citado",
+        "name": "Luiz Philippe de Orleans e Bragança",
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
+          }
+        ],
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
+      },
+      {
+        "uf": "SP",
+        "role": "Parlamentar citado",
+        "name": "Missionário José Olimpio",
+        "sources": [
+          {
+            "title": "Câmara: cadastro e situação do mandato",
+            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
+          }
+        ],
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Três deputados federais do PL por São Paulo gastaram R$ 540,7 mil de dinheiro público em 2026 para divulgar seus mandatos. Pr. Marco Feliciano, Luiz Philippe de Orleans e Bragança e Missionário José Olimpio respondem por 39% do R$ 1,39 milhão que os deputados do partido no estado gastaram com isso, segundo a base de despesas da Câmara consultada em 27 de outubro.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Feliciano tem o maior valor: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. O dinheiro sai da cota parlamentar, a verba que a Câmara reserva para as despesas do mandato.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Quinze deputados do PL paulista tiveram gastos desse tipo. Os outros 12, juntos, somam R$ 850.529,04. Ou seja: quase quatro de cada dez reais foram gastos por três deputados.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite esse tipo de despesa, mas proíbe gastos de caráter eleitoral. O fato de haver uma despesa de divulgação, por si só, não demonstra que houve propaganda de campanha ou uso irregular da verba.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que os valores mostram",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A conta considera apenas deputados do PL que representam São Paulo. Não é um ranking nacional nem uma comparação entre partidos. O R$ 1,39 milhão se refere só à divulgação: não inclui passagens, combustível, aluguel de escritório ou outros gastos.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O levantamento foi até setembro, mas os gastos de divulgação encontrados são de janeiro a junho. Não há registros de julho a setembro. A data usada é o mês a que a Câmara atribui a despesa, não o dia em que o eleitor viu uma publicação ou um anúncio.",
+        "source_ids": [
+          "S4"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra da Câmara impede o uso da verba para divulgação nos 120 dias anteriores às eleições quando o deputado é candidato. O total apurado não permite, sozinho, concluir que algum dos três descumpriu essa restrição.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Redes sociais e prestação de contas",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Em reportagem da Lupa publicada em 6 de agosto de 2026 sobre gastos nacionais com redes sociais, Guilherme France, advogado e pesquisador na Transparência Internacional, explicou que parte do dinheiro destinado às plataformas pode passar por agências contratadas pelos parlamentares. A observação trata daquele levantamento, e não destes três deputados.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "France também defendeu que as notas fiscais tragam a quantidade de publicações impulsionadas, o período e o alcance, para permitir avaliar se o preço pago foi adequado. São duas perguntas diferentes: quanto foi gasto e o que foi entregue com aquele dinheiro. A soma das despesas responde só à primeira.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Os valores desta reportagem correspondem aos registros disponíveis em 27 de outubro. A Câmara dá até 90 dias para a apresentação dos comprovantes e debita a despesa no mês a que ela se refere. Novos documentos podem, portanto, alterar os totais de meses anteriores.",
+        "source_ids": [
+          "S2"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.agencialupa.org/painel-deputometro/2026/08/06/deputados-gastam-quase-r9-milhoes-da-cota-parlamentar-com-redes-sociais/",
+        "title": "Lupa: divulgação parlamentar e redes sociais",
+        "kind": "press",
+        "published_date": ""
+      },
+      {
+        "id": "S2",
+        "url": "https://www2.camara.leg.br/comunicacao/assessoria-de-imprensa/guia-para-jornalistas/cota-parlamentar",
+        "title": "Câmara: guia da cota parlamentar",
+        "kind": "primary",
+        "published_date": ""
+      },
+      {
+        "id": "S4",
+        "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
+        "title": "Levantamento Datafixers sobre a base de despesas da Câmara, janeiro a setembro de 2026",
+        "kind": "analysis",
+        "published_date": "2026-10-27"
+      }
+    ],
+    "updated_at": "2026-11-04T18:41:51.957862+00:00"
+  },
+  {
+    "id": "notas/senado-adicional-fronteira-mp1375",
+    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
+    "subtitle": "O Senado aprovou em 28 de outubro o projeto de lei de conversão da Medida Provisória 1.375/2026, relatado por Eduardo Gomes (PL-TO). O texto amplia as carreiras de servidores federais com direito à indenização paga a quem trabalha em localidades de fronteira, entre elas servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
+    "house": "senado",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "MPV 1375/2026",
+    "edition_date": "2026-10-28",
+    "published_at": "2026-10-28"
+  },
+  {
+    "id": "notas/alesp-adesao-transparencia-fiscal",
+    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
+    "subtitle": "A Assembleia Legislativa de São Paulo informou que aprovou, em sessão extraordinária de 27 de outubro, o PL869/2026, encaminhado pelo Executivo estadual. O projeto autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal 178/2021.",
+    "house": "alesp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 869/2026",
+    "edition_date": "2026-10-28",
+    "published_at": "2026-10-28"
+  },
+  {
+    "id": "notas/camara-consulta-ginecologica-sus",
+    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
+    "subtitle": "O plenário da Câmara aprovou em 27 de outubro o substitutivo da relatora Flávia Morais (MDB-GO) ao PL 5.239/2025, de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG). Segundo a ementa, o texto trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 5239/2025",
+    "edition_date": "2026-10-27",
+    "published_at": "2026-10-27"
+  },
+  {
+    "id": "notas/sp-turmas-presenciais-eja",
+    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
+    "subtitle": "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
+    "house": "cmsp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 14/2020",
+    "edition_date": "2026-10-27",
+    "published_at": "2026-10-27"
+  },
+  {
+    "id": "notas/alesp-propaganda-politica-escolas",
+    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
+    "subtitle": "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
+    "house": "alesp",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 889/2026",
+    "edition_date": "2026-10-27",
+    "published_at": "2026-10-27"
+  },
+  {
+    "id": "notas/camara-estacionamento-atendimento-pcd",
+    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
+    "subtitle": "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "PL 5662/2026",
+    "edition_date": "2026-10-27",
+    "published_at": "2026-10-27"
+  },
+  {
     "title": "Feriado proposto para o autismo em SP garante só a folga; exames e campanhas são opcionais",
     "house": "alesp",
     "published_at": "2026-11-05T14:35:07.863748+00:00",
@@ -14,10 +778,9 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
-        "party": "PL",
-        "name": "Oseias de Madureira",
-        "role": "Autor do projeto",
         "uf": "SP",
+        "role": "Autor do projeto",
+        "name": "Oseias de Madureira",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -28,19 +791,20 @@
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
         ],
+        "party": "PL",
         "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026."
       },
       {
-        "party": "PP",
-        "name": "Delegado Olim",
-        "role": "Relator na CCJR",
         "uf": "SP",
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "party": "PP",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
       }
     ],
@@ -613,488 +1377,6 @@
     "updated_at": "2026-11-05T01:23:57.924910+00:00"
   },
   {
-    "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
-    "status_label": "Aprovada; falta a sessão do Congresso que a inclui na Constituição",
-    "reading_minutes": 5,
-    "published_at": "2026-11-04T14:30:19.374387+00:00",
-    "proposal": "PEC 18/2025",
-    "house": "senado",
-    "edition_date": "2026-11-04",
-    "trigger_date": "2026-11-03",
-    "subtitle": "A reforma da segurança vai entrar na Constituição com um trecho incluído na noite da votação, sobre o fundo que financia as polícias. O relator era contra, e o Senado tratou a mudança como simples ajuste de texto",
-    "kind": "daily",
-    "title": "Senado aprova uso de verba da segurança pública em operações militares",
-    "topic": "Segurança pública",
-    "politicians": [
-      {
-        "party": "PL",
-        "name": "Carlos Portinho",
-        "role": "Autor da Emenda 85",
-        "uf": "RJ",
-        "sources": [
-          {
-            "title": "Senado: perfil de Carlos Portinho",
-            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5936"
-          },
-          {
-            "title": "Senado: tramitação da PEC 18/2025",
-            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
-          },
-          {
-            "title": "O Antagonista, 15/10/2026",
-            "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
-          }
-        ],
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025."
-      },
-      {
-        "party": "PT",
-        "name": "Rogério Carvalho",
-        "role": "Relator no Senado",
-        "uf": "SE",
-        "sources": [
-          {
-            "title": "Senado: perfil de Rogério Carvalho",
-            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5352"
-          },
-          {
-            "title": "Senado: tramitação da PEC 18/2025",
-            "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
-          }
-        ],
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT)."
-      }
-    ],
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "O Senado aprovou na terça-feira (3) a PEC da Segurança Pública, uma mudança na Constituição que reorganiza o combate ao crime no país. Na noite da votação, os senadores acrescentaram um trecho que os deputados não votaram: o dinheiro do Fundo Nacional de Segurança Pública, criado para financiar os órgãos de segurança, também poderá servir a operações de Garantia da Lei e da Ordem (GLO). São as operações em que militares atuam na segurança pública, como na Copa das Confederações de 2013 e no Rio de Janeiro em 2017 e 2018.",
-        "source_ids": [
-          "S1",
-          "S2",
-          "S3",
-          "S5",
-          "S8"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O fundo empenhou R$ 2,22 bilhões em 2025, segundo o Portal da Transparência, e a PEC manda repassar metade a estados e ao Distrito Federal. Se uma lei autorizar o gasto, as operações militares vão disputar esse dinheiro. O relator da PEC, Rogério Carvalho (PT-SE), foi contra a emenda que deu origem ao trecho. Escreveu que ela \"afasta o Fundo de sua finalidade\", \"dilui os recursos\" das forças de segurança e que as necessidades militares devem ser pagas \"por dotações próprias\", ou seja, pelo orçamento das Forças Armadas.",
-        "source_ids": [
-          "S1",
-          "S3",
-          "S7"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A proposta foi de Carlos Portinho (PL-RJ), líder do PL no Senado. Ele defendeu que os militares sejam ressarcidos quando chamados a atuar: \"É o Estado que pede\", disse. O líder do MDB, Eduardo Braga (AM), negociou um acordo com Portinho e o relator na própria sessão, e o trecho passou por 67 votos a 0.",
-        "source_ids": [
-          "S2",
-          "S5",
-          "S6",
-          "S9"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Por que os deputados não votaram",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Uma mudança na Constituição precisa passar pela Câmara e pelo Senado. Se os senadores alteram o conteúdo, o texto volta aos deputados, como lembrou a CNN Brasil antes da votação. Carvalho rejeitou outros pedidos de mudança justamente para evitar essa volta: \"Isso impediria a promulgação imediata\", disse, segundo a Agência Senado.",
-        "source_ids": [
-          "S6",
-          "S12"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O acordo foi incluir o trecho como \"emenda de redação\", nome dado a ajustes que não mudam o conteúdo. A frase, porém, não está no texto aprovado pela Câmara. O presidente do Senado, Davi Alcolumbre (União-AP), relatou em plenário que a equipe técnica da Casa apontava o problema: \"esse texto não estava no primeiro turno\", a primeira das duas votações do Senado. O trecho foi votado mesmo assim, e a proposta seguiu sem voltar aos deputados. Em outubro, Portinho havia dito, segundo O Antagonista, que mudanças deveriam seguir o rito adequado, mesmo com o retorno à Câmara.",
-        "source_ids": [
-          "S1",
-          "S2",
-          "S5",
-          "S9"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Em 2002, o Supremo aceitou que um corte feito pelo Senado em outra mudança constitucional não voltasse à Câmara, porque não era \"alteração substancial\". Neste caso houve acréscimo, e o registro do acordo não explica por que ele não mudaria o conteúdo.",
-        "source_ids": [
-          "S2",
-          "S13"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que foi anunciado e o que o texto diz",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "A Agência Senado informou que o trecho permite ressarcir as Forças Armadas. A frase lida em plenário não cita as Forças Armadas. Ela diz que os recursos poderão ser distribuídos a estados, Distrito Federal e municípios, \"inclusive para fins de operações de garantia da lei e da ordem\", na forma de uma lei. Quem recebe e quanto ainda terá de ser definido. A frase vale também para o Fundo Penitenciário Nacional, que a emenda original não mencionava. O texto final não constava da lista de documentos da PEC na manhã desta quarta (4), e a referência é a leitura em plenário.",
-        "source_ids": [
-          "S2",
-          "S4",
-          "S5",
-          "S6"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Quanto custam essas operações",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Tabela do Ministério da Defesa soma R$ 2,66 bilhões em operações de GLO de 2010 a janeiro de 2022, com parte dos valores estimada. A média é de cerca de R$ 220 milhões por ano, ou 10% do que o fundo empenhou em 2025. A Copa das Confederações custou R$ 418 milhões, e a operação no Rio, R$ 234 milhões. A comparação dá a ordem de grandeza: o parecer e as notas da votação não trazem estimativa do efeito sobre o fundo.",
-        "source_ids": [
-          "S2",
-          "S3",
-          "S7",
-          "S8"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O fundo também perdeu uma receita prevista pelos deputados. O Senado retirou o artigo que destinava às verbas de segurança e de presídios 30% da arrecadação das bets, depois de descontar prêmios, imposto e despesas das empresas. Esse corte foi noticiado em setembro.",
-        "source_ids": [
-          "S1",
-          "S5",
-          "S11"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "A outra disputa da noite: maioridade penal",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "As propostas de reduzir a maioridade penal, de Rogerio Marinho (PL-RN) e Camilo Santana (PT-CE), foram retiradas da PEC e vão tramitar à parte, por 38 votos a 36. PT (9), PSB (7) e a maior parte de PSD (10 a 3) e MDB (7 a 2) votaram pela separação. PL (12), Republicanos (6) e PP (7 a 1) votaram contra. Portinho se absteve.",
-        "source_ids": [
-          "S5",
-          "S6",
-          "S15"
-        ]
-      },
-      {
-        "type": "practical",
-        "text": "Na prática, se a frase lida em plenário for a publicada, a Constituição passará a citar operações militares de GLO entre os usos dos fundos de segurança e de presídios. Nada muda de imediato: o trecho diz que os recursos \"poderão\" ser distribuídos, e os detalhes dependem de lei.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "votes",
-        "text": "Primeira votação: 73 a 0. Trecho sobre as operações militares: 67 a 0. Segunda votação: 75 a 0. Separação da maioridade penal: 38 a 36, com uma abstenção.",
-        "source_ids": [
-          "S5"
-        ]
-      },
-      {
-        "type": "next",
-        "text": "A PEC entra na Constituição em sessão do Congresso, ainda sem data na página da proposta até a manhã desta quarta. As propostas sobre maioridade penal seguem em separado no Senado, e uma comissão da Câmara analisa o mesmo tema.",
-        "source_ids": [
-          "S3",
-          "S5",
-          "S14"
-        ]
-      }
-    ],
-    "sources": [
-      {
-        "id": "S1",
-        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/e5475586-1999-43b5-b386-a7876649a4ca",
-        "title": "Câmara dos Deputados: texto da PEC 18/2025 enviado ao Senado",
-        "kind": "primary",
-        "published_date": "2026-03-10"
-      },
-      {
-        "id": "S2",
-        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/8be99b91-030f-4360-bc7e-63e070e8174c",
-        "title": "Senado: Acordo de Plenário sobre a Emenda 85, notas taquigráficas de 3/11/2026",
-        "kind": "primary",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S3",
-        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/778b70bb-7970-4586-b850-1c1f2fc72e6a",
-        "title": "Senado: Parecer 212/2026-PLEN, do relator Rogério Carvalho",
-        "kind": "primary",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S4",
-        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/0f3d23b0-2415-4b78-9ff9-d5ff7ae627fd",
-        "title": "Senado: Emenda 85 à PEC 18/2025, de Carlos Portinho",
-        "kind": "primary",
-        "published_date": "2026-10-14"
-      },
-      {
-        "id": "S5",
-        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
-        "title": "Senado: tramitação da PEC 18/2025, registro de 3/11/2026",
-        "kind": "primary",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S6",
-        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-aprova-pec-da-seguranca-publica-sem-reducao-da-maioridade-penal",
-        "title": "Agência Senado: Senado aprova PEC da Segurança Pública sem redução da maioridade penal, 3/11/2026",
-        "kind": "press",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S7",
-        "url": "https://portaldatransparencia.gov.br/orgaos/30911",
-        "title": "Portal da Transparência: execução do Fundo Nacional de Segurança Pública, 2023 a 2026",
-        "kind": "primary",
-        "published_date": "2026-11-04"
-      },
-      {
-        "id": "S8",
-        "url": "https://www.gov.br/defesa/pt-br/arquivos/exercicios_e_operacoes/glo/6-glo-2010_2022_custos_e_efetivos_jan_2022.pdf",
-        "title": "Ministério da Defesa: efetivos e custos de GLO, 2010 a 2022",
-        "kind": "primary",
-        "published_date": "2022-01-31"
-      },
-      {
-        "id": "S9",
-        "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/",
-        "title": "O Antagonista: PL vai cobrar segurança jurídica na PEC da Segurança, diz Portinho, 15/10/2026",
-        "kind": "press",
-        "published_date": "2026-10-15"
-      },
-      {
-        "id": "S10",
-        "url": "https://www.congressoemfoco.com.br/noticia/123231/ccj-conclui-votacao-da-pec-da-seguranca-e-envia-texto-ao-plenario",
-        "title": "Congresso em Foco: CCJ conclui votação da PEC da Segurança, 14/10/2026",
-        "kind": "press",
-        "published_date": "2026-10-14"
-      },
-      {
-        "id": "S11",
-        "url": "https://www.poder360.com.br/poder-congresso/ccj-do-senado-aprova-texto-principal-da-pec-da-seguranca/",
-        "title": "Poder360: CCJ do Senado aprova texto principal da PEC da Segurança, 2/9/2026",
-        "kind": "press",
-        "published_date": "2026-09-02"
-      },
-      {
-        "id": "S12",
-        "url": "https://www.cnnbrasil.com.br/blogs/adriana-de-luca/nacional/brasil/pec-da-seguranca-volta-ao-senado-em-impasse-sobre-maioridade-penal/",
-        "title": "CNN Brasil: PEC da Segurança volta ao Senado em impasse sobre maioridade penal, 3/11/2026",
-        "kind": "press",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S13",
-        "url": "https://juris.damasio.com.br/jurisprudencia/julgado/284/cpmf-2",
-        "title": "Informativo 284 do STF: julgamento sobre a emenda da CPMF (reprodução)",
-        "kind": "press",
-        "published_date": "2002-10-03"
-      },
-      {
-        "id": "S14",
-        "url": "https://legis.senado.leg.br/norma/563958/publicacao/16433779",
-        "title": "Regimento Interno do Senado Federal, artigos 354 a 369",
-        "kind": "primary",
-        "published_date": ""
-      },
-      {
-        "id": "S15",
-        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
-        "title": "Levantamento Datafixers: votos por partido no desmembramento das emendas da maioridade penal",
-        "kind": "analysis",
-        "published_date": "2026-11-04"
-      }
-    ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
-  },
-  {
-    "trigger_date": "2026-11-03",
-    "topic": "Poder Legislativo",
-    "edition_date": "2026-11-03",
-    "subtitle": "Quando o governador barra um projeto, a Assembleia tem 30 dias para decidir se aceita ou derruba o veto. Desde 2023, nenhum saiu da lista, que inclui propostas sobre hospitais e postos de combustível",
-    "id": "2026-11-03-alesp-acumula-798-vetos-sem-votacao-nenhum-dos-519-que-estavam-na-pauta-em-marco-de-2023-saiu-dela",
-    "reading_minutes": 5,
-    "published_at": "2026-11-03T14:38:59.977438+00:00",
-    "status_label": "Levantamento de dados",
-    "kind": "investigation",
-    "title": "Assembleia de SP acumula 798 vetos de governadores sem votar",
-    "proposal": "Vetos na Ordem do Dia",
-    "house": "alesp",
-    "politicians": [],
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Quando o governador veta um projeto aprovado pelos deputados, a Assembleia Legislativa de São Paulo (Alesp) deveria decidir em 30 dias se aceita ou derruba o veto. A pauta do plenário desta terça-feira (3) mostra outra realidade: são 798 vetos à espera. Enquanto um veto total não é votado, o projeto não vira lei. Um levantamento do Datafixers nas pautas oficiais mostra que nenhum dos 519 vetos que estavam na lista em 30 de março de 2023 saiu dela. Desde então entraram mais 279, alta de 54%.",
-        "source_ids": [
-          "S1",
-          "S3",
-          "S7",
-          "S12"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Vencido o prazo de 30 dias, o veto vai para a pauta da sessão seguinte e fica lá até ser votado. Por isso a lista só aumenta: dos 843 itens da pauta desta terça, 798 são vetos. Para derrubar um veto, é preciso o voto da maioria absoluta dos deputados.",
-        "source_ids": [
-          "S7"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A regra já foi mais dura. Em fevereiro de 2006, a Emenda Constitucional 21 determinou que o veto vencido trancasse as demais proposições até ser votado. Três meses depois, a Emenda 22 retirou essa expressão, com efeito retroativo a 15 de fevereiro. No Congresso, o veto presidencial vencido continua a travar a pauta das sessões conjuntas.",
-        "source_ids": [
-          "S7",
-          "S11"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Projetos de 2000 ainda à espera",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "O veto mais antigo da lista atinge o PL 312/2000, de Campos Machado, que obrigava postos a informar a natureza, a procedência e a qualidade dos combustíveis vendidos. Ao todo, 142 vetos atingem projetos apresentados antes de 2015, e 368, projetos anteriores a 2019. Entre eles estão o PL 1126/2003, que criava classes hospitalares nos hospitais do SUS paulista, e o PL 551/2003, que obrigava a instalação de hidrômetros individuais em cada unidade de consumo.",
-        "source_ids": [
-          "S1",
-          "S12"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O estoque passou de 519 vetos em março de 2023 para 666 em novembro de 2024, 743 em novembro de 2025 e 798 em julho de 2026. Entre julho e esta terça, a lista ficou igual: nenhum veto entrou e nenhum saiu. Dos 798, 593 são vetos totais, que barram o projeto inteiro, e 205 são parciais. Ao menos 190 atingem projetos apresentados a partir de 2023, já no governo Tarcísio de Freitas (Republicanos).",
-        "source_ids": [
-          "S12",
-          "S8"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O acúmulo já tinha sido noticiado. Em 13 de julho, o Correio da Manhã contou 796 vetos na pauta, 188 deles da gestão Tarcísio, com saúde (39) e educação (25) como as áreas mais atingidas. O jornal registrou que, pelo regimento interno, os vetos têm prioridade e precisam ser votados antes dos projetos comuns; só os que tramitam em urgência passam à frente. O primeiro item da pauta desta terça, em regime de urgência, é o mesmo de março de 2023: o PLC 31/2017, do governo, que altera a lei de vencimentos dos procuradores do Estado, com votação adiada.",
-        "source_ids": [
-          "S8",
-          "S1",
-          "S3"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Quem controla a pauta",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Em abril de 2025, o Brasil de Fato informou que Tarcísio havia vetado 238 projetos de deputados em pouco mais de dois anos e atribuiu a falta de votação ao presidente da Alesp, André do Prado (PL), aliado do governador. Segundo o site, o regimento permite votar os vetos, mas a decisão de pautá-los cabe ao presidente, que se recusava a fazê-lo. Na mesma reportagem, Paula Nunes (PSOL) criticou que a Assembleia sirva apenas para chancelar os projetos do governador, e Reis (PT) defendeu seu projeto que cria o Dia do Veto, o PL 1476/2023, para que o plenário se dedique às propostas vetadas em 28 de setembro. O projeto recebeu parecer favorável na Comissão de Direitos Humanos em fevereiro de 2026, segundo a tramitação oficial.",
-        "source_ids": [
-          "S9",
-          "S13"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A resposta pública de Prado, registrada pela Jovem Pan em maio de 2025, foi criar um grupo de trabalho com a Casa Civil do governo para ajustar os projetos antes da votação e reduzir os vetos. Ele também pediu à Secretaria Geral Parlamentar um estudo sobre os vetos da Ordem do Dia, para avaliar a relevância atual de cada proposta e se alguma já foi contemplada por lei posterior. Entre as pautas de novembro de 2024 e de novembro de 2026, período que inclui o anúncio, nenhum veto foi retirado, e o estoque subiu de 666 para 798.",
-        "source_ids": [
-          "S10",
-          "S12"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "No Congresso Nacional, onde as duas casas votam vetos presidenciais em sessão conjunta, havia 97 vetos aguardando análise no fim de julho, segundo o Correio da Manhã. A última sessão destinada a eles tinha ocorrido em maio, e outra, prevista para junho, foi cancelada por falta de acordo.",
-        "source_ids": [
-          "S11"
-        ]
-      },
-      {
-        "type": "practical",
-        "text": "Na prática, enquanto um veto total não é votado, o projeto aprovado pelos deputados não vira lei. Se a Assembleia rejeitar o veto pela maioria absoluta, o texto volta ao governador para promulgação; se ele não o fizer em 48 horas, a promulgação cabe ao presidente da Assembleia. Nos vetos parciais, a pendência se limita aos dispositivos barrados pelo governo.",
-        "source_ids": [
-          "S7"
-        ]
-      },
-      {
-        "type": "next",
-        "text": "Os 798 vetos constam da Ordem do Dia da 163ª sessão ordinária, marcada para esta terça. A lista se repete a cada sessão até que cada veto seja votado.",
-        "source_ids": [
-          "S1",
-          "S7"
-        ]
-      }
-    ],
-    "sources": [
-      {
-        "id": "S1",
-        "url": "https://www.al.sp.gov.br/legis/docs/2026/10/29/310000011649.html",
-        "title": "Alesp: Ordem do Dia da 163ª Sessão Ordinária, 3/11/2026",
-        "kind": "primary",
-        "published_date": "2026-10-29"
-      },
-      {
-        "id": "S3",
-        "url": "https://www.al.sp.gov.br/spl/Arquivo/1000485658_1000622942_2023_03_29_Pauta_1000485658.pdf",
-        "title": "Alesp: Ordem do Dia da 11ª Sessão Ordinária, 30/3/2023",
-        "kind": "primary",
-        "published_date": "2023-03-29"
-      },
-      {
-        "id": "S7",
-        "url": "https://www.al.sp.gov.br/repositorio/legislacao/constituicao/1989/compilacao-constituicao-0-05.10.1989.html",
-        "title": "Constituição do Estado de São Paulo, artigo 28 (texto compilado)",
-        "kind": "primary",
-        "published_date": "1989-10-05"
-      },
-      {
-        "id": "S8",
-        "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/estado-de-sao-paulo/2026/07/301624-alesp-acumula-796-vetos-na-pauta-188-sao-da-gestao-tarcisio-de-freitas.html",
-        "title": "Correio da Manhã: Alesp acumula 796 vetos na pauta, 13/7/2026",
-        "kind": "press",
-        "published_date": "2026-07-13"
-      },
-      {
-        "id": "S9",
-        "url": "https://www.brasildefato.com.br/2025/04/02/em-dois-anos-tarcisio-de-freitas-ja-vetou-238-projetos-aprovados-por-deputados-da-assembleia-de-sp/",
-        "title": "Brasil de Fato: Tarcísio vetou 238 projetos em dois anos, 2/4/2025",
-        "kind": "press",
-        "published_date": "2025-04-02"
-      },
-      {
-        "id": "S10",
-        "url": "https://jovempan.com.br/noticias/alesp-cria-grupo-de-trabalho-para-reduzir-vetos-de-tarcisio-de-freitas/",
-        "title": "Jovem Pan: Alesp cria grupo de trabalho para reduzir vetos, 6/5/2025",
-        "kind": "press",
-        "published_date": "2025-05-06"
-      },
-      {
-        "id": "S11",
-        "url": "https://www.correiodamanha.com.br/politica/2026/07/306960-congresso-volta-com-87-vetos-travando-a-pauta.html",
-        "title": "Correio da Manhã: Congresso volta com 87 vetos travando a pauta, 30/7/2026",
-        "kind": "press",
-        "published_date": "2026-07-30"
-      },
-      {
-        "id": "S12",
-        "url": "https://www.al.sp.gov.br/alesp/ordem-do-dia/",
-        "title": "Levantamento Datafixers: vetos na Ordem do Dia da Alesp, março de 2023 a novembro de 2026",
-        "kind": "analysis",
-        "published_date": "2026-11-03"
-      },
-      {
-        "id": "S13",
-        "url": "https://www3.al.sp.gov.br/repositorio/dados-abertos/output/json/tramitacao-atual.json",
-        "title": "Alesp, dados abertos: PL 1476/2023 (Dia do Veto) e última tramitação",
-        "kind": "primary",
-        "published_date": "2026-11-03"
-      }
-    ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
-  },
-  {
     "title": "Deputado recomenda aprovar uso da Bíblia nas escolas de SP",
     "reading_minutes": 5,
     "kind": "investigation",
@@ -1109,29 +1391,29 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "party": "PL",
-        "name": "Gil Diniz Bolsonaro",
-        "role": "Autor do projeto",
         "uf": "SP",
+        "role": "Autor do projeto",
+        "name": "Gil Diniz Bolsonaro",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "party": "PL",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica."
       },
       {
-        "party": "PP",
-        "name": "Delegado Olim",
-        "role": "Relator na CCJR",
         "uf": "SP",
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
+        "party": "PP",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp."
       }
     ],
@@ -1369,10 +1651,9 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "party": "PDT",
-        "name": "Dorinaldo Malafaia",
-        "role": "Autor do projeto",
         "uf": "AP",
+        "role": "Autor do projeto",
+        "name": "Dorinaldo Malafaia",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1383,6 +1664,7 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
+        "party": "PDT",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023."
       }
     ],
@@ -1521,287 +1803,5 @@
       }
     ],
     "updated_at": "2026-11-04T18:41:51.957862+00:00"
-  },
-  {
-    "edition_date": "2026-10-27",
-    "title": "Três deputados do PL de SP gastam R$ 540 mil com divulgação do mandato",
-    "status_label": "Levantamento de dados",
-    "proposal": "CEAP-SP-2026",
-    "subtitle": "Marco Feliciano, Luiz Philippe de Orleans e Bragança e José Olimpio lideram a lista de 2026, com registros de janeiro a junho. A verba pode pagar comunicação do mandato, mas não propaganda eleitoral",
-    "id": "2026-10-27-tres-deputados-concentram-39-do-gasto-do-pl-paulista-com-divulgacao-do-mandato",
-    "topic": "Gastos parlamentares",
-    "kind": "daily",
-    "published_at": "2026-10-27T12:54:28.418292+00:00",
-    "house": "camara",
-    "trigger_date": "2026-10-27",
-    "reading_minutes": 4,
-    "politicians": [
-      {
-        "party": "PL",
-        "name": "Pr. Marco Feliciano",
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "sources": [
-          {
-            "title": "Câmara: cadastro e situação do mandato",
-            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
-          }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
-      },
-      {
-        "party": "PL",
-        "name": "Luiz Philippe de Orleans e Bragança",
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "sources": [
-          {
-            "title": "Câmara: cadastro e situação do mandato",
-            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
-          }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular."
-      },
-      {
-        "party": "PL",
-        "name": "Missionário José Olimpio",
-        "role": "Parlamentar citado",
-        "uf": "SP",
-        "sources": [
-          {
-            "title": "Câmara: cadastro e situação do mandato",
-            "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
-          }
-        ],
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado."
-      }
-    ],
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Três deputados federais do PL por São Paulo gastaram R$ 540,7 mil de dinheiro público em 2026 para divulgar seus mandatos. Pr. Marco Feliciano, Luiz Philippe de Orleans e Bragança e Missionário José Olimpio respondem por 39% do R$ 1,39 milhão que os deputados do partido no estado gastaram com isso, segundo a base de despesas da Câmara consultada em 27 de outubro.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Feliciano tem o maior valor: R$ 196.750. Luiz Philippe vem em seguida, com R$ 174.467,27, e José Olimpio, com R$ 169.500. O dinheiro sai da cota parlamentar, a verba que a Câmara reserva para as despesas do mandato.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "Quinze deputados do PL paulista tiveram gastos desse tipo. Os outros 12, juntos, somam R$ 850.529,04. Ou seja: quase quatro de cada dez reais foram gastos por três deputados.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
-        "type": "practical",
-        "text": "O dinheiro pode pagar comunicação sobre o trabalho do deputado. A Câmara permite esse tipo de despesa, mas proíbe gastos de caráter eleitoral. O fato de haver uma despesa de divulgação, por si só, não demonstra que houve propaganda de campanha ou uso irregular da verba.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O que os valores mostram",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "A conta considera apenas deputados do PL que representam São Paulo. Não é um ranking nacional nem uma comparação entre partidos. O R$ 1,39 milhão se refere só à divulgação: não inclui passagens, combustível, aluguel de escritório ou outros gastos.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O levantamento foi até setembro, mas os gastos de divulgação encontrados são de janeiro a junho. Não há registros de julho a setembro. A data usada é o mês a que a Câmara atribui a despesa, não o dia em que o eleitor viu uma publicação ou um anúncio.",
-        "source_ids": [
-          "S4"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A regra da Câmara impede o uso da verba para divulgação nos 120 dias anteriores às eleições quando o deputado é candidato. O total apurado não permite, sozinho, concluir que algum dos três descumpriu essa restrição.",
-        "source_ids": [
-          "S2"
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Redes sociais e prestação de contas",
-        "source_ids": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Em reportagem da Lupa publicada em 6 de agosto de 2026 sobre gastos nacionais com redes sociais, Guilherme France, advogado e pesquisador na Transparência Internacional, explicou que parte do dinheiro destinado às plataformas pode passar por agências contratadas pelos parlamentares. A observação trata daquele levantamento, e não destes três deputados.",
-        "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "France também defendeu que as notas fiscais tragam a quantidade de publicações impulsionadas, o período e o alcance, para permitir avaliar se o preço pago foi adequado. São duas perguntas diferentes: quanto foi gasto e o que foi entregue com aquele dinheiro. A soma das despesas responde só à primeira.",
-        "source_ids": [
-          "S1"
-        ]
-      },
-      {
-        "type": "next",
-        "text": "Os valores desta reportagem correspondem aos registros disponíveis em 27 de outubro. A Câmara dá até 90 dias para a apresentação dos comprovantes e debita a despesa no mês a que ela se refere. Novos documentos podem, portanto, alterar os totais de meses anteriores.",
-        "source_ids": [
-          "S2"
-        ]
-      }
-    ],
-    "sources": [
-      {
-        "id": "S1",
-        "url": "https://www.agencialupa.org/painel-deputometro/2026/08/06/deputados-gastam-quase-r9-milhoes-da-cota-parlamentar-com-redes-sociais/",
-        "title": "Lupa: divulgação parlamentar e redes sociais",
-        "kind": "press",
-        "published_date": ""
-      },
-      {
-        "id": "S2",
-        "url": "https://www2.camara.leg.br/comunicacao/assessoria-de-imprensa/guia-para-jornalistas/cota-parlamentar",
-        "title": "Câmara: guia da cota parlamentar",
-        "kind": "primary",
-        "published_date": ""
-      },
-      {
-        "id": "S4",
-        "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
-        "title": "Levantamento Datafixers sobre a base de despesas da Câmara, janeiro a setembro de 2026",
-        "kind": "analysis",
-        "published_date": "2026-10-27"
-      }
-    ],
-    "updated_at": "2026-11-04T18:41:51.957862+00:00"
-  },
-  {
-    "id": "notas/cmsp-aumento-auditores-controladoria",
-    "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
-    "subtitle": "A Câmara Municipal de São Paulo aprovou em 4 de novembro, em segunda votação, o PL 699/2026, da gestão Ricardo Nunes (MDB), que reajusta a gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%, e os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
-    "house": "cmsp",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 699/2026",
-    "edition_date": "2026-11-04",
-    "published_at": "2026-11-04"
-  },
-  {
-    "id": "notas/senado-dividas-fim-de-mandato",
-    "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
-    "subtitle": "O Senado aprovou em 4 de novembro um projeto de resolução de Renan Filho (MDB-AL) que permite a estados, ao Distrito Federal e a municípios substituir dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, a Resolução 43, de 2001, proibia esse tipo de operação nesse período, com poucas exceções.",
-    "house": "senado",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PRS 50/2026",
-    "edition_date": "2026-11-04",
-    "published_at": "2026-11-04"
-  },
-  {
-    "id": "notas/camara-postes-energia-teles",
-    "title": "Câmara aprova regras para postes e livra de multa tele que pedir regularização",
-    "subtitle": "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. Pelo texto do relator, Juscelino Filho (PSDB-MA), as teles terão 180 dias para pedir a regularização dos cabos instalados sem contrato. Quem pedir no prazo não leva multa, mas terá de pagar pelo uso e fazer as adequações técnicas.",
-    "house": "camara",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 3220/2019",
-    "edition_date": "2026-11-04",
-    "published_at": "2026-11-04"
-  },
-  {
-    "id": "notas/camara-drones-presidios",
-    "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
-    "subtitle": "A Câmara aprovou em 4 de novembro o projeto de Kim Kataguiri (Missão-SP), relatado por Nikolas Ferreira (PL-MG), que prevê reclusão de 1 a 5 anos e multa para o sobrevoo não autorizado de presídios com drones. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
-    "house": "camara",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 5902/2023",
-    "edition_date": "2026-11-04",
-    "published_at": "2026-11-04"
-  },
-  {
-    "id": "notas/alesp-carreira-professores-adiada",
-    "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
-    "subtitle": "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro. Segundo o InfoMoney, a análise de 3 de novembro foi adiada depois que professores e estudantes ocuparam a galeria da Alesp, e a Casa informou não haver previsão de voto nesta semana. O texto está na Ordem do Dia de 4 de novembro como votação adiada.",
-    "house": "alesp",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 1316/2025",
-    "edition_date": "2026-11-04",
-    "published_at": "2026-11-04"
-  },
-  {
-    "id": "notas/senado-adicional-fronteira-mp1375",
-    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais; texto vai à sanção",
-    "subtitle": "O Senado aprovou em 28 de outubro o projeto de lei de conversão da Medida Provisória 1.375/2026, relatado por Eduardo Gomes (PL-TO). O texto amplia as carreiras de servidores federais com direito à indenização paga a quem trabalha em localidades de fronteira, entre elas servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
-    "house": "senado",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "MPV 1375/2026",
-    "edition_date": "2026-10-28",
-    "published_at": "2026-10-28"
-  },
-  {
-    "id": "notas/camara-consulta-ginecologica-sus",
-    "title": "Projeto que prevê primeira consulta ginecológica no SUS a partir dos 10 anos segue para o Senado",
-    "subtitle": "O plenário da Câmara aprovou em 27 de outubro o substitutivo da relatora Flávia Morais (MDB-GO) ao PL 5.239/2025, de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG). Segundo a ementa, o texto trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas.",
-    "house": "camara",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 5239/2025",
-    "edition_date": "2026-10-27",
-    "published_at": "2026-10-27"
-  },
-  {
-    "id": "notas/alesp-adesao-transparencia-fiscal",
-    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
-    "subtitle": "A Assembleia Legislativa de São Paulo informou que aprovou, em sessão extraordinária de 27 de outubro, o PL869/2026, encaminhado pelo Executivo estadual. O projeto autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado pela Lei Complementar federal 178/2021.",
-    "house": "alesp",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 869/2026",
-    "edition_date": "2026-10-28",
-    "published_at": "2026-10-28"
-  },
-  {
-    "id": "notas/sp-turmas-presenciais-eja",
-    "title": "Projeto para manter turmas presenciais da EJA avança em comissão de SP",
-    "subtitle": "A Comissão de Educação, Cultura e Esportes da Câmara Municipal de São Paulo deu parecer favorável ao projeto que pretende obrigar a Secretaria Municipal de Educação a manter turmas presenciais da Educação de Jovens e Adultos (EJA). A decisão ocorreu em 21 de outubro, segundo notícia publicada pela própria Câmara.",
-    "house": "cmsp",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 14/2020",
-    "edition_date": "2026-10-27",
-    "published_at": "2026-10-27"
-  },
-  {
-    "id": "notas/alesp-propaganda-politica-escolas",
-    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "subtitle": "Um projeto publicado pela Alesp em 23 de outubro propõe regras contra propaganda político-partidária, proselitismo e constrangimento de estudantes durante atividades pedagógicas. O PL 889/2026 é de Carla Morando (PSD).",
-    "house": "alesp",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 889/2026",
-    "edition_date": "2026-10-27",
-    "published_at": "2026-10-27"
-  },
-  {
-    "id": "notas/camara-estacionamento-atendimento-pcd",
-    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "subtitle": "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento ligado a serviços de saúde, habilitação ou reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. O PL 5662/2026 é de Sóstenes Cavalcante (PL-RJ).",
-    "house": "camara",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "PL 5662/2026",
-    "edition_date": "2026-10-27",
-    "published_at": "2026-10-27"
   }
 ]
