@@ -8,7 +8,7 @@ excluded={'.git','node_modules','.wrangler','.venv','venv','_worker','output','t
 changed=[];total=0
 for p in root.rglob('*.html'):
  rel=p.relative_to(root)
- if any(x in excluded for x in rel.parts) or rel.parts[0]=='jose-maria-carvalho':continue
+ if any(x in excluded for x in rel.parts) or rel.parts[0] in {'jose-maria-carvalho','enem'}:continue
  html=p.read_text(encoding='utf-8');
  if not re.search(r'<(?:html|head|body)\b',html,re.I):continue
  total+=1
