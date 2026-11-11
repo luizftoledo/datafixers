@@ -1,5 +1,273 @@
 [
   {
+    "proposal": "MP 1.376/2026",
+    "edition_date": "2026-11-11",
+    "title": "Senado decide hoje socorro a produtores rurais endividados; texto amplia quem pode pedir",
+    "topic": "Economia e crédito rural",
+    "trigger_date": "2026-11-10",
+    "kind": "daily",
+    "subtitle": "Versão aprovada na Câmara inclui cigarros eletrônicos e não tem estimativa de custo; o prazo para votar termina nesta quarta-feira",
+    "house": "senado",
+    "status_label": "Aprovado na Câmara; vai ao Senado",
+    "published_at": "2026-11-11T14:24:15.447365+00:00",
+    "id": "2026-11-11-senado-decide-hoje-socorro-a-produtores-rurais-endividados-texto-amplia-quem-pode-pedir",
+    "reading_minutes": 4,
+    "politicians": [
+      {
+        "name": "Paulo Pimenta",
+        "sources": [
+          {
+            "title": "Câmara: cadastro de Paulo Pimenta (PT-RS)",
+            "url": "https://www.camara.leg.br/deputados/74400"
+          },
+          {
+            "title": "InfoMoney: Pimenta como líder do governo e relator da MP, 11/11/2026",
+            "url": "https://www.infomoney.com.br/politica/congresso-inclui-jabuti-para-liberar-vapes-em-medida-provisoria-de-dividas-rurais/"
+          }
+        ],
+        "party": "PT",
+        "role": "Relator da comissão mista",
+        "profile": "Deputado federal pelo Rio Grande do Sul e líder do governo na Câmara. Foi relator da comissão mista que analisou a medida provisória e redigiu a versão aprovada em 10/11/2026.",
+        "uf": "RS"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O Senado pode votar hoje o texto que permite a produtores rurais com perdas de safra trocar dívidas atrasadas por empréstimos de até dez anos, com juros de 5% a 12% ao ano. Se a votação não ocorrer até o fim do dia, as regras atuais perdem a validade.",
+        "source_ids": [
+          "S1",
+          "S11",
+          "S3",
+          "S4",
+          "S7"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que muda",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O governo autorizou em julho linhas de crédito para quem perdeu pelo menos 30% da renda esperada em duas ou mais safras entre 2019 e 2025. A Câmara aprovou na terça-feira (10) uma versão alterada pelo deputado **Paulo Pimenta (PT-RS)**, que amplia o alcance.",
+        "source_ids": [
+          "S2",
+          "S3",
+          "S6"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Entram dívidas que seguiam em atraso em 31 de outubro de 2026, e não mais em 31 de maio. O atraso conta desde 2021, e não desde 2024. Quem renegociou pela medida de 2025 pode pedir de novo com nova perda.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Entram também empréstimos de capital de giro e cédulas de produto rural devidas a cooperativas e fornecedores de insumos. Pequenos e médios produtores podem provar as perdas com laudo coletivo, em vez de um por propriedade.",
+        "source_ids": [
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Nas áreas das superintendências de desenvolvimento da Amazônia, do Nordeste e do Centro-Oeste, a perda de renda exigida cai de 30% para 25%. O prazo de 120 dias para contratar só começa com a regulamentação da lei.",
+        "source_ids": [
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Limites e juros ficam como estavam. No caso geral, agricultores familiares trocam até R$ 400 mil, a 6% ao ano. Pequenos e médios, até R$ 2 milhões, a 9%. Os demais, até R$ 4 milhões, a 12%.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem é afetado",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O governo anunciou em julho que o pacote alcançaria mais de R$ 100 bilhões em dívidas. Não há número oficial do contratado: o senador Zequinha Marinho (Podemos-PA) citou R$ 14,34 bilhões, e a senadora Tereza Cristina (PP-MS), cerca de R$ 24 bilhões.",
+        "source_ids": [
+          "S3",
+          "S4",
+          "S9"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custa e quem paga",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Os empréstimos saem dos bancos e podem ter o juro reduzido pelo Tesouro, nos limites que o Ministério da Fazenda definir. Para o texto original, o governo estimou R$ 48,29 milhões de despesa com essa redução em 2026.",
+        "source_ids": [
+          "S1",
+          "S8"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A nota técnica diz que o número vale só para 2026 e que alterações exigem análise própria. As fontes públicas consultadas não trazem estimativa de custo da versão aprovada na Câmara. Em julho, a Fazenda estimou impacto anual abaixo de R$ 4 bilhões para o texto original, sem detalhar o cálculo, segundo a Brasil 61.",
+        "source_ids": [
+          "S8",
+          "S9"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto autoriza a União a entrar num fundo privado que cobriria inadimplência de crédito rural. O valor do aporte fica para regulamento; a Brasil 61 informou em julho que seriam R$ 2 bilhões.",
+        "source_ids": [
+          "S1",
+          "S9"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que mais entrou no texto",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "A versão da Câmara inclui assuntos sem relação com crédito rural. Um trecho manda a Anvisa definir os requisitos para vender cigarros eletrônicos, proibidos no país desde 2009, segundo o InfoMoney. O texto também permite fabricá-los para exportação.",
+        "source_ids": [
+          "S10"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O texto dispensa lojas francas (duty free) de parte das exigências da importação comum. Fixa 30 de junho de 2027 como último dia para pedir à Caixa Econômica Federal habilitação de contratos do Fundo de Compensação de Variações Salariais. Saiu o trecho dos carros elétricos seminovos.",
+        "source_ids": [
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem é contra",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Na comissão mista, o deputado Afonso Hamm (PP-RS) votou contra e chamou as mudanças de avanços tímidos. Tereza Cristina e o senador Jaime Bagattoli (PL-RO) apoiam a medida, mas a chamam de insuficiente e cobram outro projeto, aprovado pelo Senado em junho e parado na Câmara.",
+        "source_ids": [
+          "S3"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, um produtor de porte médio com dívida de R$ 3 milhões e perda de renda comprovada pode trocá-la por dois empréstimos. O de R$ 2 milhões tem juros de 9% ao ano; o de R$ 1 milhão, 12%. Os juros somam R$ 300 mil por ano, cerca de R$ 25 mil por mês, nos dois primeiros anos; depois entram as parcelas, em até oito anos.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "O Senado tem sessão marcada para as 14h desta quarta-feira (11), último dia de validade da medida. Se aprovar o texto sem mudanças, ele segue para o presidente da República, que pode assinar ou vetar.",
+        "source_ids": [
+          "S3",
+          "S4",
+          "S7"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3192871",
+        "title": "Câmara: Projeto de Lei de Conversão 16/2026 (texto aprovado da MP 1.376/2026)",
+        "kind": "primary",
+        "published_date": "2026-11-10"
+      },
+      {
+        "id": "S2",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3163739",
+        "title": "Presidência da República: Medida Provisória 1.376, de 15/7/2026 (texto original)",
+        "kind": "primary",
+        "published_date": "2026-07-15"
+      },
+      {
+        "id": "S3",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/10/comissao-altera-mp-de-renegociacao-de-dividas-rurais-para-ampliar-beneficiarios",
+        "title": "Agência Senado: Comissão altera MP de renegociação de dívidas rurais para ampliar beneficiários, 10/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-10"
+      },
+      {
+        "id": "S4",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/10/zequinha-marinho-defende-medida-provisoria-de-renegociacao-de-dividas-rurais",
+        "title": "Agência Senado: Zequinha Marinho defende medida provisória de renegociação de dívidas rurais, 10/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-10"
+      },
+      {
+        "id": "S6",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639957/tramitacoes",
+        "title": "Câmara: tramitação e votação da MPV 1376/2026 em 10/11/2026",
+        "kind": "primary",
+        "published_date": "2026-11-10"
+      },
+      {
+        "id": "S7",
+        "url": "https://legis.senado.leg.br/dadosabertos/plenario/agenda/atual/iCal",
+        "title": "Senado: agenda de sessões do Plenário (consulta de 11/11/2026)",
+        "kind": "primary",
+        "published_date": "2026-11-11"
+      },
+      {
+        "id": "S8",
+        "url": "https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-de-adequacao-orcamentaria-e-financeira/nota_tecnica_mpv_1376_2026.pdf",
+        "title": "Consultoria de Orçamento da Câmara: Nota Técnica 12018/2026 sobre a MP 1.376/2026",
+        "kind": "primary",
+        "published_date": "2026-07-20"
+      },
+      {
+        "id": "S9",
+        "url": "https://brasil61.com/n/apos-acordo-governo-publica-mp-para-renegociacao-das-dividas-rurais-bras2616735",
+        "title": "Brasil 61: Após acordo, governo publica MP para renegociação das dívidas rurais, 16/7/2026",
+        "kind": "press",
+        "published_date": "2026-07-16"
+      },
+      {
+        "id": "S10",
+        "url": "https://www.infomoney.com.br/politica/congresso-inclui-jabuti-para-liberar-vapes-em-medida-provisoria-de-dividas-rurais/",
+        "title": "InfoMoney: Congresso inclui jabuti para liberar vapes em medida provisória de dívidas rurais, 11/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-11"
+      },
+      {
+        "id": "S11",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/09/08/congresso-prorroga-medidas-provisorias-sobre-dividas-rurais-e-desenrola-adimplentes",
+        "title": "Agência Senado: Congresso prorroga medidas provisórias sobre dívidas rurais, 8/9/2026",
+        "kind": "press",
+        "published_date": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "id": "notas/camara-mp-dividas-rurais",
+    "title": "Câmara amplia renegociação de dívidas rurais; Senado ainda precisa votar",
+    "subtitle": "A Câmara aprovou em 10 de novembro, em votação simbólica, a medida provisória que abre linhas de crédito para produtores rurais quitarem ou trocarem dívidas de financiamento rural e de Cédulas de Produto Rural (CPR). O texto agora depende do Senado.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "MPV 1376/2026",
+    "edition_date": "2026-11-10",
+    "published_at": "2026-11-10"
+  },
+  {
     "id": "2026-11-04-pec-da-seguranca-vai-a-promulgacao-com-uso-de-fundo-em-glo-que-a-camara-nao-votou-aprovado-como-emen",
     "status_label": "Aprovada; falta a sessão do Congresso que a inclui na Constituição",
     "reading_minutes": 3,
@@ -14,9 +282,6 @@
     "topic": "Segurança pública",
     "politicians": [
       {
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "uf": "RJ",
-        "role": "Autor da Emenda 85",
         "name": "Carlos Portinho",
         "sources": [
           {
@@ -32,12 +297,12 @@
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Autor da Emenda 85",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "uf": "RJ"
       },
       {
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "uf": "SE",
-        "role": "Relator no Senado",
         "name": "Rogério Carvalho",
         "sources": [
           {
@@ -49,7 +314,10 @@
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
         ],
-        "party": "PT"
+        "party": "PT",
+        "role": "Relator no Senado",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "uf": "SE"
       }
     ],
     "blocks": [
@@ -299,17 +567,6 @@
       }
     ],
     "updated_at": "2026-11-10T09:10:06.844000+00:00"
-  },
-  {
-    "id": "notas/camara-mp-dividas-rurais",
-    "title": "Câmara amplia renegociação de dívidas rurais; Senado ainda precisa votar",
-    "subtitle": "A Câmara aprovou em 10 de novembro, em votação simbólica, a medida provisória que abre linhas de crédito para produtores rurais quitarem ou trocarem dívidas de financiamento rural e de Cédulas de Produto Rural (CPR). O texto agora depende do Senado.",
-    "house": "camara",
-    "topic": "Notas",
-    "kind": "note",
-    "proposal": "MPV 1376/2026",
-    "edition_date": "2026-11-10",
-    "published_at": "2026-11-10"
   },
   {
     "id": "notas/cmsp-aumento-auditores-controladoria",
@@ -583,9 +840,6 @@
     "reading_minutes": 2,
     "politicians": [
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "name": "Pr. Marco Feliciano",
         "sources": [
           {
@@ -593,12 +847,12 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "name": "Luiz Philippe de Orleans e Bragança",
         "sources": [
           {
@@ -606,12 +860,12 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP",
-        "role": "Parlamentar citado",
         "name": "Missionário José Olimpio",
         "sources": [
           {
@@ -619,7 +873,10 @@
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Parlamentar citado",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "uf": "SP"
       }
     ],
     "blocks": [
@@ -822,9 +1079,6 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
-        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
-        "uf": "SP",
-        "role": "Autor do projeto",
         "name": "Oseias de Madureira",
         "sources": [
           {
@@ -836,12 +1090,12 @@
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Autor do projeto",
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP",
-        "role": "Relator na CCJR",
         "name": "Delegado Olim",
         "sources": [
           {
@@ -849,7 +1103,10 @@
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "party": "PP"
+        "party": "PP",
+        "role": "Relator na CCJR",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "uf": "SP"
       }
     ],
     "blocks": [
@@ -1449,9 +1706,6 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "uf": "SP",
-        "role": "Autor do projeto",
         "name": "Gil Diniz Bolsonaro",
         "sources": [
           {
@@ -1459,12 +1713,12 @@
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "party": "PL"
+        "party": "PL",
+        "role": "Autor do projeto",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "uf": "SP"
       },
       {
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP",
-        "role": "Relator na CCJR",
         "name": "Delegado Olim",
         "sources": [
           {
@@ -1472,7 +1726,10 @@
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
         ],
-        "party": "PP"
+        "party": "PP",
+        "role": "Relator na CCJR",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "uf": "SP"
       }
     ],
     "blocks": [
@@ -1730,9 +1987,6 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "uf": "AP",
-        "role": "Autor do projeto",
         "name": "Dorinaldo Malafaia",
         "sources": [
           {
@@ -1744,7 +1998,10 @@
             "url": "https://www.camara.leg.br/deputados/220573"
           }
         ],
-        "party": "PDT"
+        "party": "PDT",
+        "role": "Autor do projeto",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "uf": "AP"
       }
     ],
     "blocks": [
