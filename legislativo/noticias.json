@@ -1,5 +1,46 @@
 [
   {
+    "id": "camara-mp-dividas-rurais",
+    "status": "Aprovado na Câmara; falta o Senado",
+    "paragraphs": [
+      "A Câmara aprovou em 10 de novembro, em votação simbólica, a medida provisória que abre linhas de crédito para produtores rurais quitarem ou trocarem dívidas de financiamento rural e de Cédulas de Produto Rural (CPR). O texto agora depende do Senado.",
+      "Segundo a CNN Brasil, a versão aprovada, do relator Paulo Pimenta (PT-RS), muda três pontos: a data de referência das dívidas em atraso que podem ser renegociadas passa de 31 de agosto para 31 de outubro de 2026; o prazo para contratar a renegociação passa a ser de 120 dias após a publicação da lei, prorrogáveis por mais 120; e laudos técnicos coletivos podem comprovar perdas de produtores de pequeno e médio porte que já tinham crédito do Pronaf ou do Pronamp.",
+      "A medida foi publicada em 15 de julho. Pelo registro do Congresso Nacional, a vigência termina em 11 de novembro. A CNN Brasil informa que o texto foi combinado com a Frente Parlamentar da Agropecuária e que o relator disse não ter conversado com o Executivo sobre possíveis vetos. A reportagem não informa o custo para a União; o texto condiciona a execução à disponibilidade de orçamento e às regras do Ministério da Fazenda."
+    ],
+    "house": "camara",
+    "title": "Câmara amplia renegociação de dívidas rurais; Senado ainda precisa votar",
+    "proposal": "MPV 1376/2026",
+    "sources": [
+      {
+        "title": "Câmara: votações da sessão de 10/11/2026 (MPV 1.376/2026)",
+        "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2639957/votacoes"
+      },
+      {
+        "title": "Congresso Nacional: MP 1.376/2026",
+        "url": "https://www.congressonacional.leg.br/materias/medidas-provisorias/-/mpv/175190"
+      },
+      {
+        "title": "CNN Brasil: Prestes a perder a validade, Câmara aprova MP que renegocia dívidas rurais, 10/11/2026",
+        "url": "https://www.cnnbrasil.com.br/agro/prestes-a-perder-a-validade-camara-aprova-mp-que-renegocia-dividas-rurais/"
+      }
+    ],
+    "next_step": "O Senado precisa votar antes de 11 de novembro, data final de vigência registrada pelo Congresso. Se mudar o texto, ele volta à Câmara; depois da votação final, vai à sanção.",
+    "practical": "Produtor com dívida rural em atraso até 31 de outubro poderá pedir a renegociação se o texto virar lei. Isso só vale depois da votação do Senado, da sanção do presidente e das regras do Ministério da Fazenda.",
+    "date": "2026-11-10",
+    "politicians": []
+  },
+  {
+    "id": "cmsp-aumento-auditores-controladoria",
+    "status": "Aprovado em segunda votação",
+    "paragraphs": [
+      "A Câmara Municipal de São Paulo aprovou em 4 de novembro um aumento na gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%.",
+      "O projeto é da gestão Ricardo Nunes (MDB). Segundo o Metrópoles, os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
+      "Votaram contra a bancada do PSOL e os vereadores Rubinho Nunes (União), Cris Monteiro (Novo) e Janaina Paschoal (PP), segundo a Câmara. PT e PSB votaram a favor depois de a prefeitura prometer um projeto para os analistas em 2027, segundo o Metrópoles.",
+      "Janaina chamou o aumento de \"completamente desproporcional\" e criticou o trabalho do órgão. O Metrópoles informou que a Controladoria publicou um relatório em 2026, contra 30 relatórios de auditoria em 2019. O líder do governo, Fabio Riva (MDB), disse que o reajuste serve para manter servidores que outros governos pagariam melhor."
+    ],
+    "house": "cmsp",
+    "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
+    "proposal": "PL 699/2026",
     "sources": [
       {
         "title": "Câmara de SP: resultado da sessão de 4/11/2026",
@@ -10,90 +51,88 @@
         "url": "https://www.metropoles.com/sao-paulo/camara-municipal-de-sp-aprova-aumento-a-auditores-em-meio-a-criticas"
       }
     ],
-    "proposal": "PL 699/2026",
-    "date": "2026-11-04",
-    "title": "Vereadores de SP aprovam aumento de até 57% para auditores da Controladoria",
-    "practical": "O reajuste vale para os auditores da Controladoria. Os analistas de políticas públicas dependem de um projeto que a prefeitura prometeu enviar em 2027.",
-    "id": "cmsp-aumento-auditores-controladoria",
-    "status": "Aprovado em segunda votação",
-    "house": "cmsp",
-    "paragraphs": [
-      "A Câmara Municipal de São Paulo aprovou em 4 de novembro um aumento na gratificação dos auditores de controle interno da Controladoria Geral do Município. Segundo o Metrópoles, o aumento chega a 57%.",
-      "O projeto é da gestão Ricardo Nunes (MDB). Segundo o Metrópoles, os novos auditores vão começar ganhando mais do que analistas de políticas públicas com dez anos de carreira, categoria que ficou de fora.",
-      "Votaram contra a bancada do PSOL e os vereadores Rubinho Nunes (União), Cris Monteiro (Novo) e Janaina Paschoal (PP), segundo a Câmara. PT e PSB votaram a favor depois de a prefeitura prometer um projeto para os analistas em 2027, segundo o Metrópoles.",
-      "Janaina chamou o aumento de \"completamente desproporcional\" e criticou o trabalho do órgão. O Metrópoles informou que a Controladoria publicou um relatório em 2026, contra 30 relatórios de auditoria em 2019. O líder do governo, Fabio Riva (MDB), disse que o reajuste serve para manter servidores que outros governos pagariam melhor."
-    ],
     "next_step": "O texto segue para o prefeito.",
+    "practical": "O reajuste vale para os auditores da Controladoria. Os analistas de políticas públicas dependem de um projeto que a prefeitura prometeu enviar em 2027.",
+    "date": "2026-11-04",
     "politicians": []
   },
   {
+    "id": "senado-dividas-fim-de-mandato",
+    "status": "Aprovado; falta a publicação",
+    "paragraphs": [
+      "O Senado aprovou em 4 de novembro uma regra que permite a estados, ao Distrito Federal e a municípios trocar dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, uma norma de 2001 proibia esse tipo de operação nesse período, com poucas exceções.",
+      "A troca não pode trazer dinheiro novo para gastar. O valor dos pagamentos futuros da nova dívida, convertido para valores de hoje, não pode superar o da dívida antiga. O governo terá de publicar antes os cálculos da comparação.",
+      "A proposta é de Renan Filho (MDB-AL). Eduardo Braga (MDB-AM), senador que analisou o texto, disse que pelo menos 12 estados podem ser beneficiados, sem listar quais na notícia do Senado. A proposta teve apoio do comitê de secretários estaduais de Fazenda."
+    ],
+    "house": "senado",
+    "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
+    "proposal": "PRS 50/2026",
     "sources": [
       {
         "title": "Agência Senado: Senado permite que estados e municípios renegociem dívidas durante final de mandato, 4/11/2026",
         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/04/senado-permite-que-estados-e-municipios-renegociem-dividas-durante-final-de-mandato"
       }
     ],
-    "proposal": "PRS 50/2026",
-    "date": "2026-11-04",
-    "title": "Senado libera estados e cidades a trocar dívidas nos últimos meses de mandato",
-    "practical": "Governos em fim de mandato poderão renegociar dívidas sem esperar o sucessor. Os pagamentos da nova dívida ficam para os governos seguintes, e os cálculos terão de ser publicados antes da assinatura.",
-    "id": "senado-dividas-fim-de-mandato",
-    "status": "Aprovado; falta a publicação",
-    "house": "senado",
-    "paragraphs": [
-      "O Senado aprovou em 4 de novembro uma regra que permite a estados, ao Distrito Federal e a municípios trocar dívidas antigas por novas nos últimos 120 dias do mandato de governadores e prefeitos. Até agora, uma norma de 2001 proibia esse tipo de operação nesse período, com poucas exceções.",
-      "A troca não pode trazer dinheiro novo para gastar. O valor dos pagamentos futuros da nova dívida, convertido para valores de hoje, não pode superar o da dívida antiga. O governo terá de publicar antes os cálculos da comparação.",
-      "A proposta é de Renan Filho (MDB-AL). Eduardo Braga (MDB-AM), senador que analisou o texto, disse que pelo menos 12 estados podem ser beneficiados, sem listar quais na notícia do Senado. A proposta teve apoio do comitê de secretários estaduais de Fazenda."
-    ],
     "next_step": "A regra ainda precisa ser publicada e não depende da assinatura do presidente da República.",
+    "practical": "Governos em fim de mandato poderão renegociar dívidas sem esperar o sucessor. Os pagamentos da nova dívida ficam para os governos seguintes, e os cálculos terão de ser publicados antes da assinatura.",
+    "date": "2026-11-04",
     "politicians": []
   },
   {
-    "sources": [
-      {
-        "title": "Agência Câmara: Câmara aprova regras para o uso de postes por empresas de energia e teles, 4/11/2026",
-        "url": "https://www.camara.leg.br/noticias/1315992-camara-aprova-regras-para-o-uso-de-postes-por-empresas-de-energia-e-teles"
-      }
-    ],
-    "proposal": "PL 3220/2019",
-    "date": "2026-11-04",
-    "title": "Câmara aprova regras para cabos em postes e livra de multa empresa que se regularizar",
-    "practical": "Por enquanto nada muda. Cabos que ofereçam risco à rede elétrica ou à população poderão ser retirados de imediato pela distribuidora, se o texto virar lei.",
     "id": "camara-postes-energia-teles",
     "status": "Aprovado com mudanças; volta ao Senado",
-    "house": "camara",
     "paragraphs": [
       "A Câmara aprovou em 4 de novembro o projeto que regula o uso dos postes de energia por empresas de telecomunicações. As empresas terão 180 dias para pedir a regularização dos cabos instalados sem contrato.",
       "Quem pedir no prazo não leva multa, mas terá de pagar pelo uso e fazer as adequações técnicas.",
       "A Aneel e a Anatel, agências federais de energia e de telecomunicações, terão 30 meses para definir um valor máximo pelo uso dos postes. A regularização pode levar cinco anos, prorrogáveis por mais cinco.",
       "O deputado responsável pelo texto, Juscelino Filho (PSDB-MA), disse não prever impacto nas tarifas. Tarcísio Motta (Psol-RJ) disse temer que o perdão de multas caia \"sobre as costas do consumidor\" e criticou o uso de um fundo de infraestrutura social nesse tipo de gasto."
     ],
+    "house": "camara",
+    "title": "Câmara aprova regras para cabos em postes e livra de multa empresa que se regularizar",
+    "proposal": "PL 3220/2019",
+    "sources": [
+      {
+        "title": "Agência Câmara: Câmara aprova regras para o uso de postes por empresas de energia e teles, 4/11/2026",
+        "url": "https://www.camara.leg.br/noticias/1315992-camara-aprova-regras-para-o-uso-de-postes-por-empresas-de-energia-e-teles"
+      }
+    ],
     "next_step": "Como foi alterado pelos deputados, o projeto volta ao Senado.",
+    "practical": "Por enquanto nada muda. Cabos que ofereçam risco à rede elétrica ou à população poderão ser retirados de imediato pela distribuidora, se o texto virar lei.",
+    "date": "2026-11-04",
     "politicians": []
   },
   {
+    "id": "camara-drones-presidios",
+    "status": "Aprovado; vai ao Senado",
+    "paragraphs": [
+      "A Câmara aprovou em 4 de novembro um projeto que prevê prisão de 1 a 5 anos e multa para quem sobrevoar presídios com drones sem autorização. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
+      "O projeto é de Kim Kataguiri (Missão-SP), e o deputado encarregado de analisá-lo foi Nikolas Ferreira (PL-MG). Kataguiri afirmou que houve mais de 700 ocorrências em 20 estados desde 2018, número apresentado por ele e não conferido aqui.",
+      "Chico Alencar (Psol-RJ) questionou se alguém poderia ser punido por erro de manuseio do aparelho. Ferreira respondeu que, sem intenção, não há crime."
+    ],
+    "house": "camara",
+    "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
+    "proposal": "PL 5902/2023",
     "sources": [
       {
         "title": "Agência Câmara: Câmara aprova proposta que criminaliza sobrevoo não autorizado de drones perto de presídios, 4/11/2026",
         "url": "https://www.camara.leg.br/noticias/1315957-camara-aprova-proposta-que-criminaliza-sobrevoo-nao-autorizado-de-drones-perto-de-presidios"
       }
     ],
-    "proposal": "PL 5902/2023",
-    "date": "2026-11-04",
-    "title": "Câmara aprova até 5 anos de prisão para voo de drone sobre presídio",
-    "practical": "O projeto ainda não é lei e não muda nada até passar pelo Senado e pela assinatura do presidente.",
-    "id": "camara-drones-presidios",
-    "status": "Aprovado; vai ao Senado",
-    "house": "camara",
-    "paragraphs": [
-      "A Câmara aprovou em 4 de novembro um projeto que prevê prisão de 1 a 5 anos e multa para quem sobrevoar presídios com drones sem autorização. A pena aumenta em um terço se houver risco à segurança do presídio ou ao público.",
-      "O projeto é de Kim Kataguiri (Missão-SP), e o deputado encarregado de analisá-lo foi Nikolas Ferreira (PL-MG). Kataguiri afirmou que houve mais de 700 ocorrências em 20 estados desde 2018, número apresentado por ele e não conferido aqui.",
-      "Chico Alencar (Psol-RJ) questionou se alguém poderia ser punido por erro de manuseio do aparelho. Ferreira respondeu que, sem intenção, não há crime."
-    ],
     "next_step": "O texto vai ao Senado.",
+    "practical": "O projeto ainda não é lei e não muda nada até passar pelo Senado e pela assinatura do presidente.",
+    "date": "2026-11-04",
     "politicians": []
   },
   {
+    "id": "alesp-carreira-professores-adiada",
+    "status": "Em pauta, sem data para votar",
+    "paragraphs": [
+      "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro e está sem data. Segundo o InfoMoney, a análise foi adiada depois que professores e estudantes ocuparam a galeria da Assembleia Legislativa.",
+      "Pelo projeto, segundo o InfoMoney, o professor que faltar a duas aulas em uma data perde o dia inteiro de salário. Quem não atingir \"grau satisfatório\" na avaliação pode ser transferido de escola. O governo afirma que os critérios serão objetivos. A Apeoesp, sindicato da categoria, é contra."
+    ],
+    "house": "alesp",
+    "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
+    "proposal": "PL 1316/2025",
     "sources": [
       {
         "title": "InfoMoney: entenda PL que altera carreira de professor em SP, 4/11/2026",
@@ -104,21 +143,22 @@
         "url": "https://www.al.sp.gov.br/legis/docs/2026/11/3/310000012517.html"
       }
     ],
-    "proposal": "PL 1316/2025",
-    "date": "2026-11-04",
-    "title": "Projeto de Tarcísio sobre faltas de professores fica sem data de votação na Alesp",
-    "practical": "As regras atuais de faltas, transferência e promoção continuam valendo.",
-    "id": "alesp-carreira-professores-adiada",
-    "status": "Em pauta, sem data para votar",
-    "house": "alesp",
-    "paragraphs": [
-      "O projeto do governo Tarcísio de Freitas (Republicanos) que muda a carreira dos professores estaduais não foi votado em 3 e 4 de novembro e está sem data. Segundo o InfoMoney, a análise foi adiada depois que professores e estudantes ocuparam a galeria da Assembleia Legislativa.",
-      "Pelo projeto, segundo o InfoMoney, o professor que faltar a duas aulas em uma data perde o dia inteiro de salário. Quem não atingir \"grau satisfatório\" na avaliação pode ser transferido de escola. O governo afirma que os critérios serão objetivos. A Apeoesp, sindicato da categoria, é contra."
-    ],
     "next_step": "Não há data marcada para a votação.",
+    "practical": "As regras atuais de faltas, transferência e promoção continuam valendo.",
+    "date": "2026-11-04",
     "politicians": []
   },
   {
+    "id": "senado-adicional-fronteira-mp1375",
+    "status": "Aprovado; aguarda decisão do presidente",
+    "paragraphs": [
+      "Servidores federais que trabalham em localidades de fronteira vão receber R$ 191 por dia de trabalho a partir de janeiro de 2027, segundo o Senado. O texto aprovado pelos senadores em 28 de outubro também amplia as carreiras com direito ao pagamento.",
+      "Entram, entre outros, servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
+      "O texto nasceu de uma medida provisória, lei temporária do governo, e havia sido aprovado pela Câmara na véspera. O senador que o analisou foi Eduardo Gomes (PL-TO)."
+    ],
+    "house": "senado",
+    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais",
+    "proposal": "MPV 1375/2026",
     "sources": [
       {
         "title": "Senado: aprovação do adicional de fronteira, 28/10/2026",
@@ -129,22 +169,21 @@
         "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2637101-42"
       }
     ],
-    "proposal": "MPV 1375/2026",
-    "date": "2026-10-28",
-    "title": "Adicional de fronteira passa a R$ 191 por dia e chega a mais carreiras federais",
-    "practical": "Servidores das carreiras incluídas que trabalham em unidades de fronteira passam a receber o pagamento diário, conforme regras a serem definidas.",
-    "id": "senado-adicional-fronteira-mp1375",
-    "status": "Aprovado; aguarda decisão do presidente",
-    "house": "senado",
-    "paragraphs": [
-      "Servidores federais que trabalham em localidades de fronteira vão receber R$ 191 por dia de trabalho a partir de janeiro de 2027, segundo o Senado. O texto aprovado pelos senadores em 28 de outubro também amplia as carreiras com direito ao pagamento.",
-      "Entram, entre outros, servidores da Abin, da Funai, do INSS, das agências reguladoras e da Suframa.",
-      "O texto nasceu de uma medida provisória, lei temporária do governo, e havia sido aprovado pela Câmara na véspera. O senador que o analisou foi Eduardo Gomes (PL-TO)."
-    ],
     "next_step": "O texto aguarda a decisão do presidente da República, que pode assinar ou barrar.",
+    "practical": "Servidores das carreiras incluídas que trabalham em unidades de fronteira passam a receber o pagamento diário, conforme regras a serem definidas.",
+    "date": "2026-10-28",
     "politicians": []
   },
   {
+    "id": "camara-consulta-ginecologica-sus",
+    "status": "Aprovado na Câmara",
+    "paragraphs": [
+      "A Câmara aprovou em 27 de outubro um projeto que trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas. O texto segue para o Senado e ainda não vale.",
+      "O projeto é de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG), e a versão aprovada foi escrita por Flávia Morais (MDB-GO). A votação foi simbólica. O texto foi enviado ao Senado em 29 de outubro."
+    ],
+    "house": "camara",
+    "title": "Câmara aprova primeira consulta ginecológica no SUS a partir dos 10 anos",
+    "proposal": "PL 5239/2025",
     "sources": [
       {
         "title": "Câmara: ficha e tramitação do PL 5.239/2025",
@@ -155,69 +194,59 @@
         "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2572799-46"
       }
     ],
-    "proposal": "PL 5239/2025",
-    "date": "2026-10-27",
-    "title": "Câmara aprova primeira consulta ginecológica no SUS a partir dos 10 anos",
-    "practical": "A proposta só passa a valer se for aprovada pelo Senado e assinada pelo presidente. Até lá, o atendimento segue as regras atuais do SUS.",
-    "id": "camara-consulta-ginecologica-sus",
-    "status": "Aprovado na Câmara",
-    "house": "camara",
-    "paragraphs": [
-      "A Câmara aprovou em 27 de outubro um projeto que trata da primeira consulta ginecológica no SUS a partir dos 10 anos de idade, com foco na saúde reprodutiva e preventiva de meninas. O texto segue para o Senado e ainda não vale.",
-      "O projeto é de Adriana Ventura (Novo-SP) e Greyce Elias (PL-MG), e a versão aprovada foi escrita por Flávia Morais (MDB-GO). A votação foi simbólica. O texto foi enviado ao Senado em 29 de outubro."
-    ],
     "next_step": "O projeto será analisado no Senado.",
+    "practical": "A proposta só passa a valer se for aprovada pelo Senado e assinada pelo presidente. Até lá, o atendimento segue as regras atuais do SUS.",
+    "date": "2026-10-27",
     "politicians": []
   },
   {
+    "id": "alesp-adesao-transparencia-fiscal",
+    "status": "Aprovado em plenário",
+    "paragraphs": [
+      "A Assembleia Legislativa de São Paulo informou que aprovou, em 27 de outubro, um projeto do governo estadual que autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado por lei federal de 2021.",
+      "A notícia oficial informa a aprovação, mas não traz o voto de cada deputado. Não foram atribuídos votos a deputados com base em presença ou partido."
+    ],
+    "house": "alesp",
+    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
+    "proposal": "PL 869/2026",
     "sources": [
       {
         "title": "Alesp: notícia da aprovação do PL869/2026 em27/10",
         "url": "https://www.al.sp.gov.br/noticia/?id=515109"
       }
     ],
-    "proposal": "PL 869/2026",
-    "date": "2026-10-28",
-    "title": "Alesp aprova adesão de São Paulo a programa federal de transparência fiscal",
-    "practical": "O que foi aprovado é uma autorização para aderir a um programa sobre as contas do estado. A aprovação na Assembleia não equivale, por si, à publicação de uma nova lei em vigor.",
-    "id": "alesp-adesao-transparencia-fiscal",
-    "status": "Aprovado em plenário",
-    "house": "alesp",
-    "paragraphs": [
-      "A Assembleia Legislativa de São Paulo informou que aprovou, em 27 de outubro, um projeto do governo estadual que autoriza a adesão ao Programa de Acompanhamento e Transparência Fiscal, criado por lei federal de 2021.",
-      "A notícia oficial informa a aprovação, mas não traz o voto de cada deputado. Não foram atribuídos votos a deputados com base em presença ou partido."
-    ],
     "next_step": "Falta acompanhar a publicação da lei e os documentos com as obrigações assumidas pelo estado.",
+    "practical": "O que foi aprovado é uma autorização para aderir a um programa sobre as contas do estado. A aprovação na Assembleia não equivale, por si, à publicação de uma nova lei em vigor.",
+    "date": "2026-10-28",
     "politicians": []
   },
   {
-    "sources": [
-      {
-        "title": "Câmara de SP: decisão da Comissão de Educação, 21/10/2026",
-        "url": "https://www.saopaulo.sp.leg.br/blog/educacao-de-jovens-e-adultos-projeto-que-proibe-fechamento-de-turmas-presenciais-da-eja-avanca-na-comissao-de-educacao/"
-      }
-    ],
-    "proposal": "PL 14/2020",
-    "date": "2026-10-27",
-    "title": "Comissão de vereadores de SP apoia manter aulas presenciais para jovens e adultos",
-    "practical": "Se o projeto for aprovado e virar lei, manter as turmas presenciais passará a ser uma obrigação da prefeitura. O apoio da comissão, sozinho, ainda não cria essa garantia.",
     "id": "sp-turmas-presenciais-eja",
     "status": "Apoio em comissão",
-    "house": "cmsp",
     "paragraphs": [
       "Uma comissão da Câmara Municipal de São Paulo apoiou, em 21 de outubro, o projeto que obriga a prefeitura a manter turmas presenciais da Educação de Jovens e Adultos (EJA). São as turmas de quem volta à escola depois da idade prevista para concluir os estudos.",
       "O projeto é de Celso Giannazi (PSOL). O apoio da comissão é uma etapa: não transforma a obrigação proposta em lei.",
       "Giannazi criticou o fechamento de turmas pela Prefeitura, em declaração reproduzida na notícia oficial da Câmara. A afirmação é do vereador. O texto consultado não traz uma resposta da Secretaria de Educação nem um levantamento das turmas atingidas.",
       "A notícia registra a presença de Sonaira Fernandes (PL), Adrilles Jorge (União), George Hato (MDB) e Senival Moura (PT), além do autor. A relação de presentes não informa como cada um votou."
     ],
+    "house": "cmsp",
+    "title": "Comissão de vereadores de SP apoia manter aulas presenciais para jovens e adultos",
+    "proposal": "PL 14/2020",
+    "sources": [
+      {
+        "title": "Câmara de SP: decisão da Comissão de Educação, 21/10/2026",
+        "url": "https://www.saopaulo.sp.leg.br/blog/educacao-de-jovens-e-adultos-projeto-que-proibe-fechamento-de-turmas-presenciais-da-eja-avanca-na-comissao-de-educacao/"
+      }
+    ],
     "next_step": "A proposta ainda depende da votação de todos os vereadores. A notícia oficial não informa a data.",
+    "practical": "Se o projeto for aprovado e virar lei, manter as turmas presenciais passará a ser uma obrigação da prefeitura. O apoio da comissão, sozinho, ainda não cria essa garantia.",
+    "date": "2026-10-27",
     "politicians": [
       {
-        "name": "Celso Giannazi",
         "profile": "Vereador de São Paulo desde 2019 e servidor público concursado licenciado. Atua na Comissão de Educação e na oposição à gestão Ricardo Nunes. No plenário, criticou propostas orçamentárias do prefeito e defendeu a autonomia da Câmara.",
-        "role": "Autor do projeto",
         "uf": "SP",
-        "party": "PSOL",
+        "role": "Autor do projeto",
+        "name": "Celso Giannazi",
         "sources": [
           {
             "title": "Câmara de SP: perfil de Celso Giannazi",
@@ -227,37 +256,37 @@
             "title": "Registro parlamentar: debate de 09/04/2025",
             "url": "https://app-spregistroconsulta-prd.azurewebsites.net/Home/Html/a915a1a8-e996-44e6-8378-adc44dca8d1b"
           }
-        ]
+        ],
+        "party": "PSOL"
       }
     ]
   },
   {
+    "id": "alesp-propaganda-politica-escolas",
+    "status": "Apresentado; aberto a pedidos de mudança",
+    "paragraphs": [
+      "Um projeto publicado pela Assembleia Legislativa de São Paulo em 23 de outubro propõe regras contra propaganda de partidos e constrangimento de estudantes durante as aulas. A autora é Carla Morando (PSD). O projeto não foi votado e não criou nenhuma proibição.",
+      "Segundo o resumo oficial, a proposta prevê apuração com garantia de defesa e proteção de crianças e adolescentes. O afastamento preventivo dependeria de risco concreto, e punições automáticas seriam vedadas.",
+      "O projeto está na fase em que os deputados podem propor mudanças. O cadastro consultado não registra votação nem análise em comissão."
+    ],
+    "house": "alesp",
+    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
+    "proposal": "PL 889/2026",
     "sources": [
       {
         "title": "Alesp: ficha e tramitação do PL 889/2026",
         "url": "https://www.al.sp.gov.br/propositura/1100005018"
       }
     ],
-    "proposal": "PL 889/2026",
-    "date": "2026-10-27",
-    "title": "Projeto na Alesp propõe proibir propaganda partidária durante aulas",
-    "practical": "A proposta busca restringir a atuação em sala de aula e criar procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
-    "id": "alesp-propaganda-politica-escolas",
-    "status": "Apresentado; aberto a pedidos de mudança",
-    "house": "alesp",
-    "paragraphs": [
-      "Um projeto publicado pela Assembleia Legislativa de São Paulo em 23 de outubro propõe regras contra propaganda de partidos e constrangimento de estudantes durante as aulas. A autora é Carla Morando (PSD). O projeto não foi votado e não criou nenhuma proibição.",
-      "Segundo o resumo oficial, a proposta prevê apuração com garantia de defesa e proteção de crianças e adolescentes. O afastamento preventivo dependeria de risco concreto, e punições automáticas seriam vedadas.",
-      "O projeto está na fase em que os deputados podem propor mudanças. O cadastro consultado não registra votação nem análise em comissão."
-    ],
     "next_step": "Falta o envio às comissões. Estar na fase de pedidos de mudança não significa que há votação final marcada.",
+    "practical": "A proposta busca restringir a atuação em sala de aula e criar procedimentos de apuração. Por enquanto, a apresentação do projeto não muda as regras aplicáveis a professores e estudantes.",
+    "date": "2026-10-27",
     "politicians": [
       {
-        "name": "Carla Morando",
         "profile": "Deputada estadual de São Paulo, com base política no Grande ABC. Aliada do governador Tarcísio de Freitas, reafirmou esse alinhamento ao ingressar no PSD em abril de 2026, depois de deixar o PSDB.",
-        "role": "Autora do projeto",
         "uf": "SP",
-        "party": "PSD",
+        "role": "Autora do projeto",
+        "name": "Carla Morando",
         "sources": [
           {
             "title": "Alesp: cadastro e partido de Carla Morando",
@@ -267,11 +296,23 @@
             "title": "ABCdoABC: filiação ao PSD, 01/04/2026",
             "url": "https://www.abcdoabc.com.br/carla-morando-se-filia-ao-psd-projeta-votos/"
           }
-        ]
+        ],
+        "party": "PSD"
       }
     ]
   },
   {
+    "id": "camara-estacionamento-atendimento-pcd",
+    "status": "Apresentado",
+    "paragraphs": [
+      "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento de serviços de saúde e reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. Nada muda por enquanto: o projeto não foi aprovado.",
+      "O projeto é de Sóstenes Cavalcante (PL-RJ). Vale para estabelecimentos públicos e privados e limita a gratuidade ao período necessário para o atendimento.",
+      "O benefício não dependeria de o veículo ocupar uma vaga reservada. A condição da pessoa atendida poderia ser comprovada pela credencial prevista na Lei Brasileira de Inclusão ou por outro documento oficial.",
+      "Se o projeto for aprovado, a regra começaria a valer 180 dias depois da publicação da lei."
+    ],
+    "house": "camara",
+    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
+    "proposal": "PL 5662/2026",
     "sources": [
       {
         "title": "Câmara: ficha do PL 5662/2026",
@@ -282,27 +323,15 @@
         "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
       }
     ],
-    "proposal": "PL 5662/2026",
-    "date": "2026-10-27",
-    "title": "Projeto prevê estacionamento gratuito durante atendimento de pessoa com deficiência",
-    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
-    "id": "camara-estacionamento-atendimento-pcd",
-    "status": "Apresentado",
-    "house": "camara",
-    "paragraphs": [
-      "Um projeto apresentado à Câmara dos Deputados em 26 de outubro quer tornar gratuito o estacionamento de serviços de saúde e reabilitação para veículos que transportem pessoas com deficiência e comprometimento de mobilidade. Nada muda por enquanto: o projeto não foi aprovado.",
-      "O projeto é de Sóstenes Cavalcante (PL-RJ). Vale para estabelecimentos públicos e privados e limita a gratuidade ao período necessário para o atendimento.",
-      "O benefício não dependeria de o veículo ocupar uma vaga reservada. A condição da pessoa atendida poderia ser comprovada pela credencial prevista na Lei Brasileira de Inclusão ou por outro documento oficial.",
-      "Se o projeto for aprovado, a regra começaria a valer 180 dias depois da publicação da lei."
-    ],
     "next_step": "Falta a análise nas comissões da Câmara.",
+    "practical": "Quem leva uma pessoa com deficiência e mobilidade comprometida a uma consulta ou reabilitação deixaria de pagar o estacionamento durante o atendimento, se a proposta virar lei. O projeto apresentado ainda não autoriza exigir essa gratuidade.",
+    "date": "2026-10-27",
     "politicians": [
       {
-        "name": "Sóstenes Cavalcante",
         "profile": "Deputado federal pelo Rio de Janeiro e líder do PL na Câmara. Aliado de Jair Bolsonaro e de Flávio Bolsonaro, defendeu em entrevista ao SBT News de 8 de outubro de 2026 a participação do ex-presidente em um eventual governo do filho.",
-        "role": "Autor do projeto",
         "uf": "RJ",
-        "party": "PL",
+        "role": "Autor do projeto",
+        "name": "Sóstenes Cavalcante",
         "sources": [
           {
             "title": "SBT News: entrevista com Sóstenes, 08/10/2026",
@@ -312,7 +341,8 @@
             "title": "Câmara: íntegra do PL 5662/2026, de Sóstenes Cavalcante",
             "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3186028"
           }
-        ]
+        ],
+        "party": "PL"
       }
     ]
   }

@@ -14,11 +14,10 @@
     "topic": "Segurança pública",
     "politicians": [
       {
-        "name": "Carlos Portinho",
         "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "role": "Autor da Emenda 85",
         "uf": "RJ",
-        "party": "PL",
+        "role": "Autor da Emenda 85",
+        "name": "Carlos Portinho",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -32,14 +31,14 @@
             "title": "O Antagonista, 15/10/2026",
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
-        ]
+        ],
+        "party": "PL"
       },
       {
-        "name": "Rogério Carvalho",
         "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "role": "Relator no Senado",
         "uf": "SE",
-        "party": "PT",
+        "role": "Relator no Senado",
+        "name": "Rogério Carvalho",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -49,7 +48,8 @@
             "title": "Senado: tramitação da PEC 18/2025",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
-        ]
+        ],
+        "party": "PT"
       }
     ],
     "blocks": [
@@ -299,6 +299,17 @@
       }
     ],
     "updated_at": "2026-11-10T09:10:06.844000+00:00"
+  },
+  {
+    "id": "notas/camara-mp-dividas-rurais",
+    "title": "Câmara amplia renegociação de dívidas rurais; Senado ainda precisa votar",
+    "subtitle": "A Câmara aprovou em 10 de novembro, em votação simbólica, a medida provisória que abre linhas de crédito para produtores rurais quitarem ou trocarem dívidas de financiamento rural e de Cédulas de Produto Rural (CPR). O texto agora depende do Senado.",
+    "house": "camara",
+    "topic": "Notas",
+    "kind": "note",
+    "proposal": "MPV 1376/2026",
+    "edition_date": "2026-11-10",
+    "published_at": "2026-11-10"
   },
   {
     "id": "notas/cmsp-aumento-auditores-controladoria",
@@ -572,43 +583,43 @@
     "reading_minutes": 2,
     "politicians": [
       {
-        "name": "Pr. Marco Feliciano",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "uf": "SP",
-        "party": "PL",
+        "role": "Parlamentar citado",
+        "name": "Pr. Marco Feliciano",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ]
+        ],
+        "party": "PL"
       },
       {
-        "name": "Luiz Philippe de Orleans e Bragança",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "role": "Parlamentar citado",
         "uf": "SP",
-        "party": "PL",
+        "role": "Parlamentar citado",
+        "name": "Luiz Philippe de Orleans e Bragança",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ]
+        ],
+        "party": "PL"
       },
       {
-        "name": "Missionário José Olimpio",
         "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "role": "Parlamentar citado",
         "uf": "SP",
-        "party": "PL",
+        "role": "Parlamentar citado",
+        "name": "Missionário José Olimpio",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ]
+        ],
+        "party": "PL"
       }
     ],
     "blocks": [
@@ -811,11 +822,10 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
-        "name": "Oseias de Madureira",
         "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
-        "role": "Autor do projeto",
         "uf": "SP",
-        "party": "PL",
+        "role": "Autor do projeto",
+        "name": "Oseias de Madureira",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -825,20 +835,21 @@
             "title": "Metrópoles: PL filia deputados evangélicos que estavam no PSD, 16/3/2026",
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
-        ]
+        ],
+        "party": "PL"
       },
       {
-        "name": "Delegado Olim",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "role": "Relator na CCJR",
         "uf": "SP",
-        "party": "PP",
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "party": "PP"
       }
     ],
     "blocks": [
@@ -1438,30 +1449,30 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
-        "name": "Gil Diniz Bolsonaro",
         "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "role": "Autor do projeto",
         "uf": "SP",
-        "party": "PL",
+        "role": "Autor do projeto",
+        "name": "Gil Diniz Bolsonaro",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "party": "PL"
       },
       {
-        "name": "Delegado Olim",
         "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "role": "Relator na CCJR",
         "uf": "SP",
-        "party": "PP",
+        "role": "Relator na CCJR",
+        "name": "Delegado Olim",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ]
+        ],
+        "party": "PP"
       }
     ],
     "blocks": [
@@ -1719,11 +1730,10 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
-        "name": "Dorinaldo Malafaia",
         "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "role": "Autor do projeto",
         "uf": "AP",
-        "party": "PDT",
+        "role": "Autor do projeto",
+        "name": "Dorinaldo Malafaia",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1733,7 +1743,8 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ]
+        ],
+        "party": "PDT"
       }
     ],
     "blocks": [
