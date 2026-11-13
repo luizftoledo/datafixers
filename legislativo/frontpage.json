@@ -2,19 +2,23 @@
   {
     "proposal": "MP 1.376/2026",
     "edition_date": "2026-11-11",
-    "title": "Senado decide hoje socorro a produtores rurais endividados; texto amplia quem pode pedir",
+    "title": "Produtor rural com perda de safra poderá trocar dívida por empréstimo de até dez anos",
     "topic": "Economia e crédito rural",
     "trigger_date": "2026-11-10",
     "kind": "daily",
-    "subtitle": "Versão aprovada na Câmara inclui cigarros eletrônicos e não tem estimativa de custo; o prazo para votar termina nesta quarta-feira",
+    "subtitle": "Senado aprovou o texto na quarta-feira (11) e retirou trechos sobre cigarros eletrônicos e lojas francas; falta a assinatura do presidente",
     "house": "senado",
-    "status_label": "Aprovado na Câmara; vai ao Senado",
+    "status_label": "Aprovado no Congresso; aguarda o presidente",
     "published_at": "2026-11-11T14:24:15.447365+00:00",
     "id": "2026-11-11-senado-decide-hoje-socorro-a-produtores-rurais-endividados-texto-amplia-quem-pode-pedir",
     "reading_minutes": 4,
     "politicians": [
       {
         "name": "Paulo Pimenta",
+        "party": "PT",
+        "profile": "Deputado federal pelo Rio Grande do Sul e líder do governo na Câmara. Foi relator da comissão mista que analisou a medida provisória e redigiu a versão aprovada em 10/11/2026.",
+        "role": "Relator da comissão mista",
+        "uf": "RS",
         "sources": [
           {
             "title": "Câmara: cadastro de Paulo Pimenta (PT-RS)",
@@ -24,23 +28,25 @@
             "title": "InfoMoney: Pimenta como líder do governo e relator da MP, 11/11/2026",
             "url": "https://www.infomoney.com.br/politica/congresso-inclui-jabuti-para-liberar-vapes-em-medida-provisoria-de-dividas-rurais/"
           }
-        ],
-        "party": "PT",
-        "role": "Relator da comissão mista",
-        "profile": "Deputado federal pelo Rio Grande do Sul e líder do governo na Câmara. Foi relator da comissão mista que analisou a medida provisória e redigiu a versão aprovada em 10/11/2026.",
-        "uf": "RS"
+        ]
       }
     ],
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O Senado pode votar hoje o texto que permite a produtores rurais com perdas de safra trocar dívidas atrasadas por empréstimos de até dez anos, com juros de 5% a 12% ao ano. Se a votação não ocorrer até o fim do dia, as regras atuais perdem a validade.",
+        "text": "O Senado aprovou na quarta-feira (11) o texto que permite a produtores rurais com perdas de safra trocar dívidas atrasadas por empréstimos de até dez anos, com juros de 5% a 12% ao ano. Falta a assinatura do presidente da República, que pode barrar trechos.",
         "source_ids": [
           "S1",
-          "S11",
           "S3",
-          "S4",
-          "S7"
+          "S12",
+          "S13"
+        ]
+      },
+      {
+        "type": "correction",
+        "text": "Texto atualizado em 12/11/2026 com o resultado da votação no Senado. A versão de 11/11 informava que a votação estava marcada para aquele dia.",
+        "source_ids": [
+          "S12"
         ]
       },
       {
@@ -136,22 +142,25 @@
       },
       {
         "type": "heading",
-        "text": "O que mais entrou no texto",
+        "text": "O que saiu do texto",
         "source_ids": []
       },
       {
         "type": "paragraph",
-        "text": "A versão da Câmara inclui assuntos sem relação com crédito rural. Um trecho manda a Anvisa definir os requisitos para vender cigarros eletrônicos, proibidos no país desde 2009, segundo o InfoMoney. O texto também permite fabricá-los para exportação.",
+        "text": "O presidente do Senado, Davi Alcolumbre, retirou três trechos incluídos na Câmara sem relação com crédito rural. Um deles mandava a Anvisa definir os requisitos para vender cigarros eletrônicos, proibidos no país desde 2009, segundo o InfoMoney, e facilitava a fabricação para exportação.",
         "source_ids": [
-          "S10"
+          "S10",
+          "S12",
+          "S13"
         ]
       },
       {
         "type": "paragraph",
-        "text": "O texto dispensa lojas francas (duty free) de parte das exigências da importação comum. Fixa 30 de junho de 2027 como último dia para pedir à Caixa Econômica Federal habilitação de contratos do Fundo de Compensação de Variações Salariais. Saiu o trecho dos carros elétricos seminovos.",
+        "text": "Também saíram a dispensa de exigências de importação para lojas francas (duty free) e a mudança de prazo em dívidas do antigo sistema de financiamento habitacional. O trecho dos carros elétricos seminovos já havia sido retirado antes da votação na Câmara.",
         "source_ids": [
-          "S1",
-          "S3"
+          "S3",
+          "S12",
+          "S13"
         ]
       },
       {
@@ -161,9 +170,10 @@
       },
       {
         "type": "paragraph",
-        "text": "Na comissão mista, o deputado Afonso Hamm (PP-RS) votou contra e chamou as mudanças de avanços tímidos. Tereza Cristina e o senador Jaime Bagattoli (PL-RO) apoiam a medida, mas a chamam de insuficiente e cobram outro projeto, aprovado pelo Senado em junho e parado na Câmara.",
+        "text": "Na comissão mista, o deputado Afonso Hamm (PP-RS) votou contra e chamou as mudanças de avanços tímidos. No Senado, Jaime Bagattoli (PL-RO) apoiou a aprovação, mas chamou a medida de paliativo. Senadores cobraram outro projeto sobre dívidas rurais, aprovado pelo Senado em junho e parado na Câmara.",
         "source_ids": [
-          "S3"
+          "S3",
+          "S12"
         ]
       },
       {
@@ -175,11 +185,10 @@
       },
       {
         "type": "next",
-        "text": "O Senado tem sessão marcada para as 14h desta quarta-feira (11), último dia de validade da medida. Se aprovar o texto sem mudanças, ele segue para o presidente da República, que pode assinar ou vetar.",
+        "text": "O presidente da República pode assinar o texto ou barrar trechos. O prazo de 120 dias para contratar o crédito só começa quando o governo publicar as regras de aplicação da lei.",
         "source_ids": [
-          "S3",
-          "S4",
-          "S7"
+          "S12",
+          "S13"
         ]
       }
     ],
@@ -253,6 +262,213 @@
         "title": "Agência Senado: Congresso prorroga medidas provisórias sobre dívidas rurais, 8/9/2026",
         "kind": "press",
         "published_date": "2026-09-08"
+      },
+      {
+        "id": "S12",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/11/renegociacao-de-dividas-rurais-e-aprovada-pelo-senado-e-vai-a-sancao-presidencial",
+        "title": "Agência Senado: Renegociação de dívidas rurais é aprovada pelo Senado e vai à sanção presidencial, 11/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-11"
+      },
+      {
+        "id": "S13",
+        "url": "https://legis.senado.leg.br/dadosabertos/processo/9085603",
+        "title": "Senado: tramitação da MPV 1376/2026 após a votação (consulta de 12/11/2026)",
+        "kind": "primary",
+        "published_date": "2026-11-12"
+      }
+    ],
+    "updated_at": "2026-11-12T14:27:04.288199+00:00"
+  },
+  {
+    "id": "2026-11-12-corte-nos-descontos-de-imposto-de-empresas-pode-dobrar-em-2027-texto-passou-no-senado",
+    "title": "Corte nos descontos de imposto de empresas pode dobrar em 2027; texto passou no Senado",
+    "house": "senado",
+    "topic": "Economia e impostos",
+    "status_label": "Texto principal aprovado no Senado; faltam quatro votações e a Câmara",
+    "proposal": "PLP 299/2026",
+    "kind": "daily",
+    "reading_minutes": 2,
+    "trigger_date": "2026-11-12",
+    "published_at": "2026-11-13T01:20:33.045405+00:00",
+    "edition_date": "2026-11-12",
+    "subtitle": "Texto principal teve 45 votos a 31 e ainda depende da Câmara; compra de carro por pessoa com deficiência entra na lista dos que ficam fora do corte",
+    "politicians": [
+      {
+        "name": "Jaques Wagner",
+        "party": "PT",
+        "profile": "Senador pela Bahia, com mandato de 2019 a 2027. Apresentou o projeto em 11/11/2026; segundo a Agência O Globo, o texto foi escrito pela equipe econômica.",
+        "role": "Autor do projeto",
+        "uf": "BA",
+        "sources": [
+          {
+            "title": "Senado: cadastro de Jaques Wagner (PT-BA)",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/581"
+          },
+          {
+            "title": "InfoMoney (Agência O Globo): autoria do projeto de ajuste fiscal, 12/11/2026",
+            "url": "https://www.infomoney.com.br/politica/entenda-o-ajuste-fiscal-de-lula-de-ate-r-60-bi-que-o-senado-pode-votar-hoje/"
+          }
+        ]
+      },
+      {
+        "name": "Eduardo Braga",
+        "party": "MDB",
+        "profile": "Senador pelo Amazonas, com mandato de 2019 a 2027. Foi designado em 11/11/2026 para analisar o projeto e apresentou no mesmo dia uma nova versão do texto.",
+        "role": "Relator no Senado",
+        "uf": "AM",
+        "sources": [
+          {
+            "title": "Senado: cadastro de Eduardo Braga (MDB-AM)",
+            "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4994"
+          },
+          {
+            "title": "Senado: tramitação do PLP 299/2026",
+            "url": "https://legis.senado.leg.br/dadosabertos/processo/9127383"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O Senado aprovou na quinta-feira (12) o texto principal do projeto que dobra, de 10% para 20%, o corte nos descontos de impostos federais dados a empresas. Foram 45 votos a 31. Nada muda por enquanto: faltam quatro votações no Senado e a análise da Câmara dos Deputados.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O que muda",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Uma lei em vigor desde janeiro de 2026 reduziu em 10% benefícios de tributos federais, como o imposto de renda das empresas. Pelo projeto, quem tem isenção passaria a pagar 20% do imposto normal, em vez de 10%.",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Empresas que pagam imposto sobre um lucro estimado teriam essa estimativa aumentada em 20%, na parte da receita acima de R$ 5 milhões por ano. O texto também permite limitar o crescimento dos gastos federais a 2% ao ano acima da inflação, em vez de 2,5%.",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S6"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quem fica de fora",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Continuam fora do corte a Zona Franca de Manaus, os alimentos da cesta básica, o Minha Casa, Minha Vida e o Programa Universidade para Todos (Prouni). O texto aprovado inclui a compra de veículos por pessoas com deficiência ou autismo.",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quanto custa e quem paga",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O governo estima arrecadar R$ 15 bilhões a mais em 2027 com o corte maior. Com as outras medidas, as contas federais melhorariam de R$ 45,1 bilhões a R$ 56,1 bilhões no ano.",
+        "source_ids": [
+          "S7"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Por que foi proposto e quem é contra",
+        "source_ids": []
+      },
+      {
+        "type": "paragraph",
+        "text": "O projeto foi apresentado pelo senador **Jaques Wagner (PT-BA)** a pedido do governo, para equilibrar as contas. A votação em regime de urgência passou por 40 a 38. PL e Republicanos pediram votações separadas de quatro pontos.",
+        "source_ids": [
+          "S4",
+          "S6",
+          "S8"
+        ]
+      },
+      {
+        "type": "practical",
+        "text": "Na prática, uma venda antes isenta de um tributo de 10% paga 1% desde este ano. Com o projeto, pagaria 2%.",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "type": "next",
+        "text": "Os quatro pontos pendentes devem ser votados na terça-feira (17). Depois, o projeto segue para a Câmara. Se virar lei, o corte maior vale a partir de 1º de janeiro de 2027 para o imposto de renda.",
+        "source_ids": [
+          "S1",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/25422d5d-37f0-42c7-8687-628715161554",
+        "title": "Senado: Emenda nº 75 (texto substitutivo do senador Eduardo Braga ao PLP 299/2026, aprovado em 12/11/2026)",
+        "kind": "primary",
+        "published_date": "2026-11-12"
+      },
+      {
+        "id": "S2",
+        "url": "https://normas.leg.br/?urn=urn:lex:br:federal:lei.complementar:2025-12-26;224",
+        "title": "Lei Complementar 224, de 26/12/2025 (corte de benefícios tributários em vigor)",
+        "kind": "primary",
+        "published_date": "2025-12-26"
+      },
+      {
+        "id": "S4",
+        "url": "https://legis.senado.leg.br/dadosabertos/processo/9127383",
+        "title": "Senado: cadastro e tramitação do PLP 299/2026, com o registro da sessão de 12/11/2026 (consulta de 12/11/2026, 22h30)",
+        "kind": "primary",
+        "published_date": "2026-11-12"
+      },
+      {
+        "id": "S5",
+        "url": "https://www.infomoney.com.br/politica/entenda-o-ajuste-fiscal-de-lula-de-ate-r-60-bi-que-o-senado-pode-votar-hoje/",
+        "title": "InfoMoney (Agência O Globo): Entenda o ajuste fiscal de Lula de até R$ 60 bi que o Senado pode votar hoje, 12/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-12"
+      },
+      {
+        "id": "S6",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/texto-principal-do-ajuste-fiscal-e-aprovado-pelo-senado",
+        "title": "Agência Senado: Texto principal do ajuste fiscal é aprovado pelo Senado, 12/11/2026",
+        "kind": "press",
+        "published_date": "2026-11-12"
+      },
+      {
+        "id": "S7",
+        "url": "https://legis.senado.leg.br/sdleg-getter/dadosabertos/documento/238decdc-28db-4b0d-a49d-0554043232f8",
+        "title": "Senado: Parecer nº 221/2026 de Plenário, do senador Eduardo Braga, ao PLP 299/2026",
+        "kind": "primary",
+        "published_date": "2026-11-12"
+      },
+      {
+        "id": "S8",
+        "url": "https://legis.senado.leg.br/dadosabertos/processo/documento?idProcesso=9127383",
+        "title": "Senado: Requerimentos 775, 776, 780 e 783/2026, de votação em separado no PLP 299/2026",
+        "kind": "primary",
+        "published_date": "2026-11-12"
       }
     ]
   },
@@ -283,6 +499,10 @@
     "politicians": [
       {
         "name": "Carlos Portinho",
+        "party": "PL",
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "role": "Autor da Emenda 85",
+        "uf": "RJ",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -296,14 +516,14 @@
             "title": "O Antagonista, 15/10/2026",
             "url": "https://oantagonista.com.br/brasil/pl-cobra-seguranca-juridica-pec-seguranca-portinho/"
           }
-        ],
-        "party": "PL",
-        "role": "Autor da Emenda 85",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
-        "uf": "RJ"
+        ]
       },
       {
         "name": "Rogério Carvalho",
+        "party": "PT",
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "role": "Relator no Senado",
+        "uf": "SE",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -313,11 +533,7 @@
             "title": "Senado: tramitação da PEC 18/2025",
             "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997"
           }
-        ],
-        "party": "PT",
-        "role": "Relator no Senado",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
-        "uf": "SE"
+        ]
       }
     ],
     "blocks": [
@@ -841,42 +1057,42 @@
     "politicians": [
       {
         "name": "Pr. Marco Feliciano",
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160601"
           }
-        ],
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP"
+        ]
       },
       {
         "name": "Luiz Philippe de Orleans e Bragança",
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204526"
           }
-        ],
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
-        "uf": "SP"
+        ]
       },
       {
         "name": "Missionário José Olimpio",
+        "party": "PL",
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "role": "Parlamentar citado",
+        "uf": "SP",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
             "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/160561"
           }
-        ],
-        "party": "PL",
-        "role": "Parlamentar citado",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
-        "uf": "SP"
+        ]
       }
     ],
     "blocks": [
@@ -1080,6 +1296,10 @@
     "politicians": [
       {
         "name": "Oseias de Madureira",
+        "party": "PL",
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
+        "role": "Autor do projeto",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -1089,24 +1309,20 @@
             "title": "Metrópoles: PL filia deputados evangélicos que estavam no PSD, 16/3/2026",
             "url": "https://www.metropoles.com/sao-paulo/pl-filiacao-evangelicos-ex-kassab-sp"
           }
-        ],
-        "party": "PL",
-        "role": "Autor do projeto",
-        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
-        "uf": "SP"
+        ]
       },
       {
         "name": "Delegado Olim",
+        "party": "PP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "party": "PP",
-        "role": "Relator na CCJR",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP"
+        ]
       }
     ],
     "blocks": [
@@ -1707,29 +1923,29 @@
     "politicians": [
       {
         "name": "Gil Diniz Bolsonaro",
+        "party": "PL",
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "role": "Autor do projeto",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "party": "PL",
-        "role": "Autor do projeto",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
-        "uf": "SP"
+        ]
       },
       {
         "name": "Delegado Olim",
+        "party": "PP",
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "role": "Relator na CCJR",
+        "uf": "SP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
             "url": "https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml"
           }
-        ],
-        "party": "PP",
-        "role": "Relator na CCJR",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
-        "uf": "SP"
+        ]
       }
     ],
     "blocks": [
@@ -1988,6 +2204,10 @@
     "politicians": [
       {
         "name": "Dorinaldo Malafaia",
+        "party": "PDT",
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "role": "Autor do projeto",
+        "uf": "AP",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -1997,11 +2217,7 @@
             "title": "Câmara: cadastro do deputado",
             "url": "https://www.camara.leg.br/deputados/220573"
           }
-        ],
-        "party": "PDT",
-        "role": "Autor do projeto",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
-        "uf": "AP"
+        ]
       }
     ],
     "blocks": [
