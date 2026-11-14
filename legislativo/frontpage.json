@@ -14,6 +14,8 @@
     "subtitle": "Ministério da Saúde negou a oferta em janeiro por causa do preço; projeto ainda depende da Câmara e não fixa prazo para a vacina chegar aos postos",
     "politicians": [
       {
+        "profile": "Senadora por Alagoas, primeira suplente de Rodrigo Cunha, no exercício do mandato desde dezembro de 2024. Apresentou o projeto em setembro de 2025, quando era filiada ao PL; está no PSDB desde 31 de março de 2026.",
+        "party": "PSDB",
         "sources": [
           {
             "title": "Senado: filiações partidárias de Dra. Eudócia",
@@ -29,12 +31,12 @@
           }
         ],
         "uf": "AL",
-        "party": "PSDB",
-        "profile": "Senadora por Alagoas, primeira suplente de Rodrigo Cunha, no exercício do mandato desde dezembro de 2024. Apresentou o projeto em setembro de 2025, quando era filiada ao PL; está no PSDB desde 31 de março de 2026.",
         "name": "Dra. Eudócia",
         "role": "Autora do projeto"
       },
       {
+        "profile": "Senadora pelo Distrito Federal. Relatou o projeto na Comissão de Assuntos Sociais e votou pela aprovação da versão que estende a vacina a quem tem 50 anos ou mais. Em audiência de outubro de 2026 no Senado, apresentou-se como oposição ao governo federal.",
+        "party": "Republicanos",
         "sources": [
           {
             "title": "Senado: Parecer nº 78/2026 da Comissão de Assuntos Sociais",
@@ -46,8 +48,6 @@
           }
         ],
         "uf": "DF",
-        "party": "Republicanos",
-        "profile": "Senadora pelo Distrito Federal. Relatou o projeto na Comissão de Assuntos Sociais e votou pela aprovação da versão que estende a vacina a quem tem 50 anos ou mais. Em audiência de outubro de 2026 no Senado, apresentou-se como oposição ao governo federal.",
         "name": "Damares Alves",
         "role": "Relatora na Comissão de Assuntos Sociais"
       }
@@ -283,6 +283,8 @@
     "reading_minutes": 4,
     "politicians": [
       {
+        "profile": "Deputado federal pelo Rio Grande do Sul e líder do governo na Câmara. Foi relator da comissão mista que analisou a medida provisória e redigiu a versão aprovada em 10/11/2026.",
+        "party": "PT",
         "sources": [
           {
             "title": "Câmara: cadastro de Paulo Pimenta (PT-RS)",
@@ -294,8 +296,6 @@
           }
         ],
         "uf": "RS",
-        "party": "PT",
-        "profile": "Deputado federal pelo Rio Grande do Sul e líder do governo na Câmara. Foi relator da comissão mista que analisou a medida provisória e redigiu a versão aprovada em 10/11/2026.",
         "name": "Paulo Pimenta",
         "role": "Relator da comissão mista"
       }
@@ -564,6 +564,8 @@
     "subtitle": "Texto principal teve 45 votos a 31 e ainda depende da Câmara; compra de carro por pessoa com deficiência entra na lista dos que ficam fora do corte",
     "politicians": [
       {
+        "profile": "Senador pela Bahia, com mandato de 2019 a 2027. Apresentou o projeto em 11/11/2026; segundo a Agência O Globo, o texto foi escrito pela equipe econômica.",
+        "party": "PT",
         "sources": [
           {
             "title": "Senado: cadastro de Jaques Wagner (PT-BA)",
@@ -575,12 +577,12 @@
           }
         ],
         "uf": "BA",
-        "party": "PT",
-        "profile": "Senador pela Bahia, com mandato de 2019 a 2027. Apresentou o projeto em 11/11/2026; segundo a Agência O Globo, o texto foi escrito pela equipe econômica.",
         "name": "Jaques Wagner",
         "role": "Autor do projeto"
       },
       {
+        "profile": "Senador pelo Amazonas, com mandato de 2019 a 2027. Foi designado em 11/11/2026 para analisar o projeto e apresentou no mesmo dia uma nova versão do texto.",
+        "party": "MDB",
         "sources": [
           {
             "title": "Senado: cadastro de Eduardo Braga (MDB-AM)",
@@ -592,8 +594,6 @@
           }
         ],
         "uf": "AM",
-        "party": "MDB",
-        "profile": "Senador pelo Amazonas, com mandato de 2019 a 2027. Foi designado em 11/11/2026 para analisar o projeto e apresentou no mesmo dia uma nova versão do texto.",
         "name": "Eduardo Braga",
         "role": "Relator no Senado"
       }
@@ -767,6 +767,8 @@
     "topic": "Segurança pública",
     "politicians": [
       {
+        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
+        "party": "PL",
         "sources": [
           {
             "title": "Senado: perfil de Carlos Portinho",
@@ -782,12 +784,12 @@
           }
         ],
         "uf": "RJ",
-        "party": "PL",
-        "profile": "Senador pelo Rio de Janeiro e líder do PL no Senado, com mandato até janeiro de 2027. Em coletiva de 15 de outubro de 2026, defendeu a redução da maioridade penal como proposta do plano de governo de Flávio Bolsonaro, candidato do partido à Presidência. É o autor da Emenda 85 à PEC 18/2025.",
         "name": "Carlos Portinho",
         "role": "Autor da Emenda 85"
       },
       {
+        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
+        "party": "PT",
         "sources": [
           {
             "title": "Senado: perfil de Rogério Carvalho",
@@ -799,8 +801,6 @@
           }
         ],
         "uf": "SE",
-        "party": "PT",
-        "profile": "Senador por Sergipe, com mandato até janeiro de 2027. Foi designado relator da PEC 18/2025 na CCJ em agosto de 2026 e relatou as emendas de Plenário. A proposta é de iniciativa da Presidência da República, no governo Lula (PT).",
         "name": "Rogério Carvalho",
         "role": "Relator no Senado"
       }
@@ -1325,6 +1325,8 @@
     "reading_minutes": 2,
     "politicians": [
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -1332,12 +1334,12 @@
           }
         ],
         "uf": "SP",
-        "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "name": "Pr. Marco Feliciano",
         "role": "Parlamentar citado"
       },
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -1345,12 +1347,12 @@
           }
         ],
         "uf": "SP",
-        "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de titular.",
         "name": "Luiz Philippe de Orleans e Bragança",
         "role": "Parlamentar citado"
       },
       {
+        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
+        "party": "PL",
         "sources": [
           {
             "title": "Câmara: cadastro e situação do mandato",
@@ -1358,8 +1360,6 @@
           }
         ],
         "uf": "SP",
-        "party": "PL",
-        "profile": "Deputado federal do PL por São Paulo. O cadastro oficial da Câmara o registra em exercício, na condição de efetivado.",
         "name": "Missionário José Olimpio",
         "role": "Parlamentar citado"
       }
@@ -1564,6 +1564,8 @@
     "status_label": "Em análise nas comissões",
     "politicians": [
       {
+        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
+        "party": "PL",
         "sources": [
           {
             "title": "Alesp: autoria do PL 588/2026",
@@ -1575,12 +1577,12 @@
           }
         ],
         "uf": "SP",
-        "party": "PL",
-        "profile": "Deputado estadual de São Paulo pelo PL e pastor ligado à Assembleia de Deus Ministério de Madureira. Filiou-se ao partido em março de 2026, vindo do PSD, onde era líder da bancada na Assembleia, segundo o Metrópoles. É o autor do PL 588/2026.",
         "name": "Oseias de Madureira",
         "role": "Autor do projeto"
       },
       {
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "party": "PP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
@@ -1588,8 +1590,6 @@
           }
         ],
         "uf": "SP",
-        "party": "PP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "name": "Delegado Olim",
         "role": "Relator na CCJR"
       }
@@ -2191,6 +2191,8 @@
     "trigger_date": "2026-10-27",
     "politicians": [
       {
+        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
+        "party": "PL",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
@@ -2198,12 +2200,12 @@
           }
         ],
         "uf": "SP",
-        "party": "PL",
-        "profile": "Deputado estadual de São Paulo eleito em 2018 e reeleito em 2022 com 196.215 votos. A biografia publicada pela Alesp registra que foi assessor do deputado federal Eduardo Bolsonaro e que preside a Frente Parlamentar Católica.",
         "name": "Gil Diniz Bolsonaro",
         "role": "Autor do projeto"
       },
       {
+        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
+        "party": "PP",
         "sources": [
           {
             "title": "Alesp: dados abertos e biografia dos deputados",
@@ -2211,8 +2213,6 @@
           }
         ],
         "uf": "SP",
-        "party": "PP",
-        "profile": "Deputado estadual de São Paulo pelo PP, delegado de polícia desde 1992. Eleito em 2014 e reeleito em 2018 e 2022, está no terceiro mandato, segundo a biografia publicada pela Alesp.",
         "name": "Delegado Olim",
         "role": "Relator na CCJR"
       }
@@ -2472,6 +2472,8 @@
     "proposal": "PL 1956/2026",
     "politicians": [
       {
+        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
+        "party": "PDT",
         "sources": [
           {
             "title": "Câmara: biografia e atuação partidária",
@@ -2483,8 +2485,6 @@
           }
         ],
         "uf": "AP",
-        "party": "PDT",
-        "profile": "Enfermeiro e deputado pelo Amapá desde 2023. Foi secretário de Saúde de Macapá (2013–2014) e superintendente de Vigilância em Saúde no Amapá (2017–2022). A biografia da Câmara registra sua atuação como vice-líder do governo no Congresso desde fevereiro de 2023.",
         "name": "Dorinaldo Malafaia",
         "role": "Autor do projeto"
       }
